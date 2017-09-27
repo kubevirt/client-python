@@ -185,7 +185,7 @@ class V1StatusDetails(object):
     def retry_after_seconds(self):
         """
         Gets the retry_after_seconds of this V1StatusDetails.
-        If specified, the time in seconds before the operation should be retried.
+        If specified, the time in seconds before the operation should be retried. Some errors may indicate the client must take an alternate action - for those errors this field may indicate how long to wait before taking the alternate action.
 
         :return: The retry_after_seconds of this V1StatusDetails.
         :rtype: int
@@ -196,7 +196,7 @@ class V1StatusDetails(object):
     def retry_after_seconds(self, retry_after_seconds):
         """
         Sets the retry_after_seconds of this V1StatusDetails.
-        If specified, the time in seconds before the operation should be retried.
+        If specified, the time in seconds before the operation should be retried. Some errors may indicate the client must take an alternate action - for those errors this field may indicate how long to wait before taking the alternate action.
 
         :param retry_after_seconds: The retry_after_seconds of this V1StatusDetails.
         :type: int

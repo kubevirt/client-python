@@ -40,6 +40,8 @@ from .models.v1_channel import V1Channel
 from .models.v1_channel_source import V1ChannelSource
 from .models.v1_channel_target import V1ChannelTarget
 from .models.v1_clock import V1Clock
+from .models.v1_cloud_init_data_source_no_cloud import V1CloudInitDataSourceNoCloud
+from .models.v1_cloud_init_spec import V1CloudInitSpec
 from .models.v1_console import V1Console
 from .models.v1_console_target import V1ConsoleTarget
 from .models.v1_devices import V1Devices
@@ -81,14 +83,14 @@ from .models.v1_status import V1Status
 from .models.v1_status_cause import V1StatusCause
 from .models.v1_status_details import V1StatusDetails
 from .models.v1_sys_info import V1SysInfo
-from .models.v1_vm import V1VM
 from .models.v1_vm_condition import V1VMCondition
 from .models.v1_vm_graphics import V1VMGraphics
-from .models.v1_vm_list import V1VMList
 from .models.v1_vm_selector import V1VMSelector
 from .models.v1_vm_spec import V1VMSpec
 from .models.v1_vm_status import V1VMStatus
 from .models.v1_video import V1Video
+from .models.v1_virtual_machine import V1VirtualMachine
+from .models.v1_virtual_machine_list import V1VirtualMachineList
 
 # import apis into sdk package
 from .apis.apiskubevirtiovalpha_api import ApiskubevirtiovalphaApi

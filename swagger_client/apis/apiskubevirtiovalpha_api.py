@@ -123,7 +123,7 @@ class ApiskubevirtiovalphaApi(object):
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `console`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*}/console'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/console'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
@@ -514,7 +514,7 @@ class ApiskubevirtiovalphaApi(object):
         :param str name: Name of the resource (required)
         :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :return: V1VMList
+        :return: V1VirtualMachineList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -543,7 +543,7 @@ class ApiskubevirtiovalphaApi(object):
         :param str name: Name of the resource (required)
         :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :return: V1VMList
+        :return: V1VirtualMachineList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -565,7 +565,7 @@ class ApiskubevirtiovalphaApi(object):
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `func1_10`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines'.replace('{format}', 'json')
         path_params = {}
         if 'name' in params:
             path_params['name'] = params['name']
@@ -603,7 +603,7 @@ class ApiskubevirtiovalphaApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='V1VMList',
+                                            response_type='V1VirtualMachineList',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
@@ -627,7 +627,7 @@ class ApiskubevirtiovalphaApi(object):
         :param str name: Name of the resource (required)
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1VM
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -657,7 +657,7 @@ class ApiskubevirtiovalphaApi(object):
         :param str name: Name of the resource (required)
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1VM
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -682,7 +682,7 @@ class ApiskubevirtiovalphaApi(object):
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `func1_11`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
@@ -722,7 +722,7 @@ class ApiskubevirtiovalphaApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='V1VM',
+                                            response_type='V1VirtualMachine',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
@@ -742,10 +742,10 @@ class ApiskubevirtiovalphaApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VM body:  (required)
+        :param V1VirtualMachine body:  (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: V1VM
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -771,10 +771,10 @@ class ApiskubevirtiovalphaApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VM body:  (required)
+        :param V1VirtualMachine body:  (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: V1VM
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -802,7 +802,7 @@ class ApiskubevirtiovalphaApi(object):
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `func1_12`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
@@ -840,7 +840,7 @@ class ApiskubevirtiovalphaApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='V1VM',
+                                            response_type='V1VirtualMachine',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
@@ -915,7 +915,7 @@ class ApiskubevirtiovalphaApi(object):
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `func1_13`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
@@ -971,7 +971,7 @@ class ApiskubevirtiovalphaApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1VM
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -997,7 +997,7 @@ class ApiskubevirtiovalphaApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1VM
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1016,7 +1016,7 @@ class ApiskubevirtiovalphaApi(object):
             params[key] = val
         del params['kwargs']
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
         path_params = {}
 
         query_params = {}
@@ -1048,7 +1048,7 @@ class ApiskubevirtiovalphaApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='V1VM',
+                                            response_type='V1VirtualMachine',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
@@ -1123,7 +1123,7 @@ class ApiskubevirtiovalphaApi(object):
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `func1_15`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*}/spice'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/spice'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
@@ -1183,7 +1183,7 @@ class ApiskubevirtiovalphaApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VMList
+        :return: V1VirtualMachineList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1213,7 +1213,7 @@ class ApiskubevirtiovalphaApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VMList
+        :return: V1VirtualMachineList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1232,7 +1232,7 @@ class ApiskubevirtiovalphaApi(object):
             params[key] = val
         del params['kwargs']
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/vms'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/virtualmachines'.replace('{format}', 'json')
         path_params = {}
 
         query_params = {}
@@ -1272,7 +1272,7 @@ class ApiskubevirtiovalphaApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='V1VMList',
+                                            response_type='V1VirtualMachineList',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
@@ -1965,7 +1965,7 @@ class ApiskubevirtiovalphaApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VMList
+        :return: V1VirtualMachineList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1996,7 +1996,7 @@ class ApiskubevirtiovalphaApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VMList
+        :return: V1VirtualMachineList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2018,7 +2018,7 @@ class ApiskubevirtiovalphaApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `func1_8`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
@@ -2060,7 +2060,7 @@ class ApiskubevirtiovalphaApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='V1VMList',
+                                            response_type='V1VirtualMachineList',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
@@ -2080,9 +2080,9 @@ class ApiskubevirtiovalphaApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VM body:  (required)
+        :param V1VirtualMachine body:  (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1VM
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2108,9 +2108,9 @@ class ApiskubevirtiovalphaApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VM body:  (required)
+        :param V1VirtualMachine body:  (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1VM
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2135,7 +2135,7 @@ class ApiskubevirtiovalphaApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `func1_9`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
@@ -2171,7 +2171,7 @@ class ApiskubevirtiovalphaApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='V1VM',
+                                            response_type='V1VirtualMachine',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
@@ -2533,7 +2533,7 @@ class ApiskubevirtiovalphaApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VM
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2564,7 +2564,7 @@ class ApiskubevirtiovalphaApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VM
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2586,7 +2586,7 @@ class ApiskubevirtiovalphaApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `not_implemented_yet_1`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
@@ -2628,7 +2628,7 @@ class ApiskubevirtiovalphaApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='V1VM',
+                                            response_type='V1VirtualMachine',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
@@ -2653,7 +2653,7 @@ class ApiskubevirtiovalphaApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VM
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2684,7 +2684,7 @@ class ApiskubevirtiovalphaApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VM
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2706,7 +2706,7 @@ class ApiskubevirtiovalphaApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `not_implemented_yet_2`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/watch/vms'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/watch/virtualmachines'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
@@ -2748,7 +2748,7 @@ class ApiskubevirtiovalphaApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='V1VM',
+                                            response_type='V1VirtualMachine',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))

@@ -4,30 +4,30 @@ All URIs are relative to *http://localhost:8183/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**console**](ApiskubevirtiovalphaApi.md#console) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*}/console | Open a websocket connection to a serial console on the specified VM.
+[**console**](ApiskubevirtiovalphaApi.md#console) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/console | Open a websocket connection to a serial console on the specified VM.
 [**func1**](ApiskubevirtiovalphaApi.md#func1) | **GET** /apis/kubevirt.io/v1alpha1 |
 [**func1_0**](ApiskubevirtiovalphaApi.md#func1_0) | **GET** /apis/kubevirt.io/v1alpha1/migrations | test4
 [**func1_1**](ApiskubevirtiovalphaApi.md#func1_1) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations |
-[**func1_10**](ApiskubevirtiovalphaApi.md#func1_10) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms |
-[**func1_11**](ApiskubevirtiovalphaApi.md#func1_11) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*} | test4
-[**func1_12**](ApiskubevirtiovalphaApi.md#func1_12) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*} | test2
-[**func1_13**](ApiskubevirtiovalphaApi.md#func1_13) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*} | test3
-[**func1_14**](ApiskubevirtiovalphaApi.md#func1_14) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*} | test5
-[**func1_15**](ApiskubevirtiovalphaApi.md#func1_15) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*}/spice | Returns a remote-viewer configuration file. Run &#x60;man 1 remote-viewer&#x60; to learn more about the configuration format.
-[**func1_16**](ApiskubevirtiovalphaApi.md#func1_16) | **GET** /apis/kubevirt.io/v1alpha1/vms | test4
+[**func1_10**](ApiskubevirtiovalphaApi.md#func1_10) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines |
+[**func1_11**](ApiskubevirtiovalphaApi.md#func1_11) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | test4
+[**func1_12**](ApiskubevirtiovalphaApi.md#func1_12) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | test2
+[**func1_13**](ApiskubevirtiovalphaApi.md#func1_13) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | test3
+[**func1_14**](ApiskubevirtiovalphaApi.md#func1_14) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | test5
+[**func1_15**](ApiskubevirtiovalphaApi.md#func1_15) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/spice | Returns a remote-viewer configuration file. Run &#x60;man 1 remote-viewer&#x60; to learn more about the configuration format.
+[**func1_16**](ApiskubevirtiovalphaApi.md#func1_16) | **GET** /apis/kubevirt.io/v1alpha1/virtualmachines | test4
 [**func1_2**](ApiskubevirtiovalphaApi.md#func1_2) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations |
 [**func1_3**](ApiskubevirtiovalphaApi.md#func1_3) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations |
 [**func1_4**](ApiskubevirtiovalphaApi.md#func1_4) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*} | test4
 [**func1_5**](ApiskubevirtiovalphaApi.md#func1_5) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*} | test2
 [**func1_6**](ApiskubevirtiovalphaApi.md#func1_6) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*} | test3
 [**func1_7**](ApiskubevirtiovalphaApi.md#func1_7) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*} | test5
-[**func1_8**](ApiskubevirtiovalphaApi.md#func1_8) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms |
-[**func1_9**](ApiskubevirtiovalphaApi.md#func1_9) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms |
+[**func1_8**](ApiskubevirtiovalphaApi.md#func1_8) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines |
+[**func1_9**](ApiskubevirtiovalphaApi.md#func1_9) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines |
 [**kube_connection_healthz_func**](ApiskubevirtiovalphaApi.md#kube_connection_healthz_func) | **GET** /apis/kubevirt.io/v1alpha1/healthz | Health endpoint
 [**not_implemented_yet**](ApiskubevirtiovalphaApi.md#not_implemented_yet) | **GET** /apis/kubevirt.io/v1alpha1/watch/migrations |
 [**not_implemented_yet_0**](ApiskubevirtiovalphaApi.md#not_implemented_yet_0) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations |
-[**not_implemented_yet_1**](ApiskubevirtiovalphaApi.md#not_implemented_yet_1) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms |
-[**not_implemented_yet_2**](ApiskubevirtiovalphaApi.md#not_implemented_yet_2) | **GET** /apis/kubevirt.io/v1alpha1/watch/vms |
+[**not_implemented_yet_1**](ApiskubevirtiovalphaApi.md#not_implemented_yet_1) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines |
+[**not_implemented_yet_2**](ApiskubevirtiovalphaApi.md#not_implemented_yet_2) | **GET** /apis/kubevirt.io/v1alpha1/watch/virtualmachines |
 
 
 # **console**
@@ -222,7 +222,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **func1_10**
-> V1VMList func1_10(name, field_selector=field_selector, label_selector=label_selector)
+> V1VirtualMachineList func1_10(name, field_selector=field_selector, label_selector=label_selector)
 
 
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VMList**](V1VMList.md)
+[**V1VirtualMachineList**](V1VirtualMachineList.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **func1_11**
-> V1VM func1_11(namespace, name, export=export, exact=exact)
+> V1VirtualMachine func1_11(namespace, name, export=export, exact=exact)
 
 test4
 
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VM**](V1VM.md)
+[**V1VirtualMachine**](V1VirtualMachine.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **func1_12**
-> V1VM func1_12(body, namespace, name)
+> V1VirtualMachine func1_12(body, namespace, name)
 
 test2
 
@@ -334,7 +334,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ApiskubevirtiovalphaApi()
-body = swagger_client.V1VM() # V1VM |
+body = swagger_client.V1VirtualMachine() # V1VirtualMachine |
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 name = 'name_example' # str | Name of the resource
 
@@ -350,13 +350,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**V1VM**](V1VM.md)|  |
+ **body** | [**V1VirtualMachine**](V1VirtualMachine.md)|  |
  **namespace** | **str**| Object name and auth scope, such as for teams and projects |
  **name** | **str**| Name of the resource |
 
 ### Return type
 
-[**V1VM**](V1VM.md)
+[**V1VirtualMachine**](V1VirtualMachine.md)
 
 ### Authorization
 
@@ -417,7 +417,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **func1_14**
-> V1VM func1_14()
+> V1VirtualMachine func1_14()
 
 test5
 
@@ -444,7 +444,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**V1VM**](V1VM.md)
+[**V1VirtualMachine**](V1VirtualMachine.md)
 
 ### Authorization
 
@@ -504,7 +504,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **func1_16**
-> V1VMList func1_16(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
+> V1VirtualMachineList func1_16(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
 test4
 
@@ -541,7 +541,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VMList**](V1VMList.md)
+[**V1VirtualMachineList**](V1VirtualMachineList.md)
 
 ### Authorization
 
@@ -837,7 +837,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **func1_8**
-> V1VMList func1_8(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
+> V1VirtualMachineList func1_8(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
 
 
@@ -875,7 +875,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VMList**](V1VMList.md)
+[**V1VirtualMachineList**](V1VirtualMachineList.md)
 
 ### Authorization
 
@@ -889,7 +889,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **func1_9**
-> V1VM func1_9(body, namespace)
+> V1VirtualMachine func1_9(body, namespace)
 
 
 
@@ -902,7 +902,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ApiskubevirtiovalphaApi()
-body = swagger_client.V1VM() # V1VM |
+body = swagger_client.V1VirtualMachine() # V1VirtualMachine |
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 
 try:
@@ -916,12 +916,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**V1VM**](V1VM.md)|  |
+ **body** | [**V1VirtualMachine**](V1VirtualMachine.md)|  |
  **namespace** | **str**| Object name and auth scope, such as for teams and projects |
 
 ### Return type
 
-[**V1VM**](V1VM.md)
+[**V1VirtualMachine**](V1VirtualMachine.md)
 
 ### Authorization
 
@@ -1079,7 +1079,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **not_implemented_yet_1**
-> V1VM not_implemented_yet_1(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
+> V1VirtualMachine not_implemented_yet_1(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
 
 
@@ -1117,7 +1117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VM**](V1VM.md)
+[**V1VirtualMachine**](V1VirtualMachine.md)
 
 ### Authorization
 
@@ -1131,7 +1131,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **not_implemented_yet_2**
-> V1VM not_implemented_yet_2(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
+> V1VirtualMachine not_implemented_yet_2(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
 
 
@@ -1169,7 +1169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VM**](V1VM.md)
+[**V1VirtualMachine**](V1VirtualMachine.md)
 
 ### Authorization
 

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **driver** | [**V1DiskDriver**](V1DiskDriver.md) |  | [optional]
 **read_only** | [**V1ReadOnly**](V1ReadOnly.md) |  | [optional]
 **auth** | [**V1DiskAuth**](V1DiskAuth.md) |  | [optional]
+**cloudinit** | [**V1CloudInitSpec**](V1CloudInitSpec.md) |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

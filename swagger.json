@@ -24,16 +24,16 @@
     ]
    },
    {
-    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms",
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/virtualmachines",
     "description": "",
     "operations": [
      {
-      "type": "v1.VM",
+      "type": "v1.VirtualMachine",
       "method": "POST",
       "nickname": "func1",
       "parameters": [
        {
-        "type": "v1.VM",
+        "type": "v1.VirtualMachine",
         "paramType": "body",
         "name": "body",
         "description": "",
@@ -59,7 +59,7 @@
       ]
      },
      {
-      "type": "v1.VMList",
+      "type": "v1.VirtualMachineList",
       "method": "GET",
       "nickname": "func1",
       "parameters": [
@@ -110,7 +110,7 @@
       ]
      },
      {
-      "type": "v1.VMList",
+      "type": "v1.VirtualMachineList",
       "method": "DELETE",
       "nickname": "func1",
       "parameters": [
@@ -147,17 +147,17 @@
     ]
    },
    {
-    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms/{name:[a-z0-9][a-z0-9\\-]*}",
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\\-]*}",
     "description": "",
     "operations": [
      {
-      "type": "v1.VM",
+      "type": "v1.VirtualMachine",
       "method": "PUT",
       "summary": "test2",
       "nickname": "func1",
       "parameters": [
        {
-        "type": "v1.VM",
+        "type": "v1.VirtualMachine",
         "paramType": "body",
         "name": "body",
         "description": "",
@@ -223,7 +223,7 @@
       ]
      },
      {
-      "type": "v1.VM",
+      "type": "v1.VirtualMachine",
       "method": "GET",
       "summary": "test4",
       "nickname": "func1",
@@ -267,7 +267,7 @@
       ]
      },
      {
-      "type": "v1.VM",
+      "type": "v1.VirtualMachine",
       "method": "PATCH",
       "summary": "test5",
       "nickname": "func1",
@@ -279,11 +279,11 @@
     ]
    },
    {
-    "path": "/apis/kubevirt.io/v1alpha1/vms",
+    "path": "/apis/kubevirt.io/v1alpha1/virtualmachines",
     "description": "",
     "operations": [
      {
-      "type": "v1.VMList",
+      "type": "v1.VirtualMachineList",
       "method": "GET",
       "summary": "test4",
       "nickname": "func1",
@@ -329,11 +329,11 @@
     ]
    },
    {
-    "path": "/apis/kubevirt.io/v1alpha1/watch/vms",
+    "path": "/apis/kubevirt.io/v1alpha1/watch/virtualmachines",
     "description": "",
     "operations": [
      {
-      "type": "v1.VM",
+      "type": "v1.VirtualMachine",
       "method": "GET",
       "nickname": "NotImplementedYet",
       "parameters": [
@@ -385,11 +385,11 @@
     ]
    },
    {
-    "path": "/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms",
+    "path": "/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/virtualmachines",
     "description": "",
     "operations": [
      {
-      "type": "v1.VM",
+      "type": "v1.VirtualMachine",
       "method": "GET",
       "nickname": "NotImplementedYet",
       "parameters": [
@@ -858,7 +858,7 @@
     ]
    },
    {
-    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms/{name:[a-z0-9][a-z0-9\\-]*}/spice",
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\\-]*}/spice",
     "description": "",
     "operations": [
      {
@@ -893,7 +893,7 @@
     ]
    },
    {
-    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms/{name:[a-z0-9][a-z0-9\\-]*}/console",
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\\-]*}/console",
     "description": "",
     "operations": [
      {
@@ -1030,9 +1030,9 @@
      }
     }
    },
-   "v1.VM": {
-    "id": "v1.VM",
-    "description": "VM is *the* VM Definition. It represents a virtual machine in the runtime environment of kubernetes.",
+   "v1.VirtualMachine": {
+    "id": "v1.VirtualMachine",
+    "description": "VirtualMachine is *the* VM Definition. It represents a virtual machine in the runtime environment of kubernetes.",
     "required": [
      "status"
     ],
@@ -1288,7 +1288,7 @@
      "retryAfterSeconds": {
       "type": "integer",
       "format": "int32",
-      "description": "If specified, the time in seconds before the operation should be retried."
+      "description": "If specified, the time in seconds before the operation should be retried. Some errors may indicate the client must take an alternate action - for those errors this field may indicate how long to wait before taking the alternate action."
      }
     }
    },
@@ -1890,6 +1890,9 @@
      },
      "auth": {
       "$ref": "v1.DiskAuth"
+     },
+     "cloudinit": {
+      "$ref": "v1.CloudInitSpec"
      }
     }
    },
@@ -1991,6 +1994,42 @@
      },
      "usage": {
       "type": "string"
+     }
+    }
+   },
+   "v1.CloudInitSpec": {
+    "id": "v1.CloudInitSpec",
+    "description": "Only one of the fields in the CloudInitSpec can be set",
+    "required": [
+     "nocloud"
+    ],
+    "properties": {
+     "nocloud": {
+      "$ref": "v1.CloudInitDataSourceNoCloud",
+      "description": "Nocloud DataSource"
+     }
+    }
+   },
+   "v1.CloudInitDataSourceNoCloud": {
+    "id": "v1.CloudInitDataSourceNoCloud",
+    "description": "http://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html",
+    "required": [
+     "userDataSecretRef",
+     "userDataBase64",
+     "metaDataBase64"
+    ],
+    "properties": {
+     "userDataSecretRef": {
+      "type": "string",
+      "description": "Reference to a k8s secret that contains NoCloud userdata"
+     },
+     "userDataBase64": {
+      "type": "string",
+      "description": "The NoCloud cloud-init userdata as a base64 encoded string"
+     },
+     "metaDataBase64": {
+      "type": "string",
+      "description": "The NoCloud cloud-init metadata as a base64 encoded string"
      }
     }
    },
@@ -2130,9 +2169,9 @@
      }
     }
    },
-   "v1.VMList": {
-    "id": "v1.VMList",
-    "description": "VMList is a list of VMs",
+   "v1.VirtualMachineList": {
+    "id": "v1.VirtualMachineList",
+    "description": "VirtualMachineList is a list of VirtualMachines",
     "required": [
      "items"
     ],
@@ -2151,7 +2190,7 @@
      "items": {
       "type": "array",
       "items": {
-       "$ref": "v1.VM"
+       "$ref": "v1.VirtualMachine"
       }
      }
     }

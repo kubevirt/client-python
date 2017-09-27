@@ -1,0 +1,2254 @@
+{
+  "swaggerVersion": "1.2",
+  "apiVersion": "",
+  "basePath": "http://localhost:8183",
+  "resourcePath": "/apis/kubevirt.io/v1alpha1",
+  "info": {
+   "title": "",
+   "description": ""
+  },
+  "apis": [
+   {
+    "path": "/apis/kubevirt.io/v1alpha1",
+    "description": "",
+    "operations": [
+     {
+      "type": "v1.APIResourceList",
+      "method": "GET",
+      "nickname": "func1",
+      "parameters": [],
+      "produces": [
+       "application/json"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms",
+    "description": "",
+    "operations": [
+     {
+      "type": "v1.VM",
+      "method": "POST",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "v1.VM",
+        "paramType": "body",
+        "name": "body",
+        "description": "",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ],
+      "consumes": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.VMList",
+      "method": "GET",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "resourceVersion",
+        "description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "int",
+        "paramType": "query",
+        "name": "timeoutSeconds",
+        "description": "TimeoutSeconds for the list/watch call.",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.VMList",
+      "method": "DELETE",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "name",
+        "description": "Name of the resource",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms/{name:[a-z0-9][a-z0-9\\-]*}",
+    "description": "",
+    "operations": [
+     {
+      "type": "v1.VM",
+      "method": "PUT",
+      "summary": "test2",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "v1.VM",
+        "paramType": "body",
+        "name": "body",
+        "description": "",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "name",
+        "description": "Name of the resource",
+        "required": true,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ],
+      "consumes": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.Status",
+      "method": "DELETE",
+      "summary": "test3",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "name",
+        "description": "Name of the resource",
+        "required": true,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ],
+      "consumes": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.VM",
+      "method": "GET",
+      "summary": "test4",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "name",
+        "description": "Name of the resource",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "boolean",
+        "paramType": "query",
+        "name": "export",
+        "description": "Should this value be exported. Export strips fields that a user can not specify.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "boolean",
+        "paramType": "query",
+        "name": "exact",
+        "description": "Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.VM",
+      "method": "PATCH",
+      "summary": "test5",
+      "nickname": "func1",
+      "parameters": [],
+      "produces": [
+       "application/json-patch+json"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/vms",
+    "description": "",
+    "operations": [
+     {
+      "type": "v1.VMList",
+      "method": "GET",
+      "summary": "test4",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "resourceVersion",
+        "description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "int",
+        "paramType": "query",
+        "name": "timeoutSeconds",
+        "description": "TimeoutSeconds for the list/watch call.",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/watch/vms",
+    "description": "",
+    "operations": [
+     {
+      "type": "v1.VM",
+      "method": "GET",
+      "nickname": "NotImplementedYet",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "resourceVersion",
+        "description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "int",
+        "paramType": "query",
+        "name": "timeoutSeconds",
+        "description": "TimeoutSeconds for the list/watch call.",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms",
+    "description": "",
+    "operations": [
+     {
+      "type": "v1.VM",
+      "method": "GET",
+      "nickname": "NotImplementedYet",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "resourceVersion",
+        "description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "int",
+        "paramType": "query",
+        "name": "timeoutSeconds",
+        "description": "TimeoutSeconds for the list/watch call.",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/migrations",
+    "description": "",
+    "operations": [
+     {
+      "type": "v1.Migration",
+      "method": "POST",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "v1.Migration",
+        "paramType": "body",
+        "name": "body",
+        "description": "",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ],
+      "consumes": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.MigrationList",
+      "method": "GET",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "resourceVersion",
+        "description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "int",
+        "paramType": "query",
+        "name": "timeoutSeconds",
+        "description": "TimeoutSeconds for the list/watch call.",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.MigrationList",
+      "method": "DELETE",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "name",
+        "description": "Name of the resource",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/migrations/{name:[a-z0-9][a-z0-9\\-]*}",
+    "description": "",
+    "operations": [
+     {
+      "type": "v1.Migration",
+      "method": "PUT",
+      "summary": "test2",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "v1.Migration",
+        "paramType": "body",
+        "name": "body",
+        "description": "",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "name",
+        "description": "Name of the resource",
+        "required": true,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ],
+      "consumes": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.Status",
+      "method": "DELETE",
+      "summary": "test3",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "name",
+        "description": "Name of the resource",
+        "required": true,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ],
+      "consumes": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.Migration",
+      "method": "GET",
+      "summary": "test4",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "name",
+        "description": "Name of the resource",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "boolean",
+        "paramType": "query",
+        "name": "export",
+        "description": "Should this value be exported. Export strips fields that a user can not specify.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "boolean",
+        "paramType": "query",
+        "name": "exact",
+        "description": "Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.Migration",
+      "method": "PATCH",
+      "summary": "test5",
+      "nickname": "func1",
+      "parameters": [],
+      "produces": [
+       "application/json-patch+json"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/migrations",
+    "description": "",
+    "operations": [
+     {
+      "type": "v1.MigrationList",
+      "method": "GET",
+      "summary": "test4",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "resourceVersion",
+        "description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "int",
+        "paramType": "query",
+        "name": "timeoutSeconds",
+        "description": "TimeoutSeconds for the list/watch call.",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/watch/migrations",
+    "description": "",
+    "operations": [
+     {
+      "type": "v1.Migration",
+      "method": "GET",
+      "nickname": "NotImplementedYet",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "resourceVersion",
+        "description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "int",
+        "paramType": "query",
+        "name": "timeoutSeconds",
+        "description": "TimeoutSeconds for the list/watch call.",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/migrations",
+    "description": "",
+    "operations": [
+     {
+      "type": "v1.Migration",
+      "method": "GET",
+      "nickname": "NotImplementedYet",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "resourceVersion",
+        "description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "int",
+        "paramType": "query",
+        "name": "timeoutSeconds",
+        "description": "TimeoutSeconds for the list/watch call.",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms/{name:[a-z0-9][a-z0-9\\-]*}/spice",
+    "description": "",
+    "operations": [
+     {
+      "type": "void",
+      "method": "GET",
+      "summary": "Returns a remote-viewer configuration file. Run `man 1 remote-viewer` to learn more about the configuration format.",
+      "nickname": "func1",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "name",
+        "description": "Name of the resource",
+        "required": true,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "text/plain",
+       "application/json",
+       "application/yaml"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms/{name:[a-z0-9][a-z0-9\\-]*}/console",
+    "description": "",
+    "operations": [
+     {
+      "type": "void",
+      "method": "GET",
+      "summary": "Open a websocket connection to a serial console on the specified VM.",
+      "nickname": "Console",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "console",
+        "description": "Name of the serial console to connect to",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "name",
+        "description": "Name of the resource",
+        "required": true,
+        "allowMultiple": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/healthz",
+    "description": "",
+    "operations": [
+     {
+      "type": "void",
+      "method": "GET",
+      "summary": "Health endpoint",
+      "nickname": "KubeConnectionHealthzFunc",
+      "parameters": [],
+      "produces": [
+       "application/json"
+      ],
+      "consumes": [
+       "application/json"
+      ]
+     }
+    ]
+   }
+  ],
+  "models": {
+   "v1.APIResourceList": {
+    "id": "v1.APIResourceList",
+    "description": "APIResourceList is a list of APIResource, it is used to expose the name of the resources supported in a specific group and version, and if the resource is namespaced.",
+    "required": [
+     "groupVersion",
+     "resources"
+    ],
+    "properties": {
+     "kind": {
+      "type": "string",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds"
+     },
+     "apiVersion": {
+      "type": "string",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources"
+     },
+     "groupVersion": {
+      "type": "string",
+      "description": "groupVersion is the group and version this APIResourceList is for."
+     },
+     "resources": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.APIResource"
+      },
+      "description": "resources contains the name of the resources and if they are namespaced."
+     }
+    }
+   },
+   "v1.APIResource": {
+    "id": "v1.APIResource",
+    "description": "APIResource specifies the name of a resource and whether it is namespaced.",
+    "required": [
+     "name",
+     "singularName",
+     "namespaced",
+     "kind",
+     "verbs"
+    ],
+    "properties": {
+     "name": {
+      "type": "string",
+      "description": "name is the plural name of the resource."
+     },
+     "singularName": {
+      "type": "string",
+      "description": "singularName is the singular name of the resource.  This allows clients to handle plural and singular opaquely. The singularName is more correct for reporting status on a single item and both singular and plural are allowed from the kubectl CLI interface."
+     },
+     "namespaced": {
+      "type": "boolean",
+      "description": "namespaced indicates if a resource is namespaced or not."
+     },
+     "kind": {
+      "type": "string",
+      "description": "kind is the kind for the resource (e.g. 'Foo' is the kind for a resource 'foo')"
+     },
+     "verbs": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "description": "verbs is a list of supported kube verbs (this includes get, list, watch, create, update, patch, delete, deletecollection, and proxy)"
+     },
+     "shortNames": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "description": "shortNames is a list of suggested short names of the resource."
+     },
+     "categories": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "description": "categories is a list of the grouped resources this resource belongs to (e.g. 'all')"
+     }
+    }
+   },
+   "v1.VM": {
+    "id": "v1.VM",
+    "description": "VM is *the* VM Definition. It represents a virtual machine in the runtime environment of kubernetes.",
+    "required": [
+     "status"
+    ],
+    "properties": {
+     "kind": {
+      "type": "string",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds"
+     },
+     "apiVersion": {
+      "type": "string",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources"
+     },
+     "metadata": {
+      "$ref": "v1.ObjectMeta"
+     },
+     "spec": {
+      "$ref": "v1.VMSpec",
+      "description": "VM Spec contains the VM specification."
+     },
+     "status": {
+      "$ref": "v1.VMStatus",
+      "description": "Status is the high level overview of how the VM is doing. It contains information available to controllers and users."
+     }
+    }
+   },
+   "v1.ObjectMeta": {
+    "id": "v1.ObjectMeta",
+    "description": "ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.",
+    "properties": {
+     "name": {
+      "type": "string",
+      "description": "Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names"
+     },
+     "generateName": {
+      "type": "string",
+      "description": "GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency"
+     },
+     "namespace": {
+      "type": "string",
+      "description": "Namespace defines the space within each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\n\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces"
+     },
+     "selfLink": {
+      "type": "string",
+      "description": "SelfLink is a URL representing this object. Populated by the system. Read-only."
+     },
+     "uid": {
+      "type": "string",
+      "description": "UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.\n\nPopulated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids"
+     },
+     "resourceVersion": {
+      "type": "string",
+      "description": "An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency"
+     },
+     "generation": {
+      "type": "integer",
+      "format": "int64",
+      "description": "A sequence number representing a specific generation of the desired state. Populated by the system. Read-only."
+     },
+     "creationTimestamp": {
+      "type": "string",
+      "description": "CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.\n\nPopulated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata"
+     },
+     "deletionTimestamp": {
+      "type": "string",
+      "description": "DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field. Once set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.\n\nPopulated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata"
+     },
+     "deletionGracePeriodSeconds": {
+      "type": "integer",
+      "format": "int64",
+      "description": "Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only."
+     },
+     "labels": {
+      "type": "object",
+      "description": "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
+     },
+     "annotations": {
+      "type": "object",
+      "description": "Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
+     },
+     "ownerReferences": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.OwnerReference"
+      },
+      "description": "List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller."
+     },
+     "initializers": {
+      "$ref": "v1.Initializers",
+      "description": "An initializer is a controller which enforces some system invariant at object creation time. This field is a list of initializers that have not yet acted on this object. If nil or empty, this object has been completely initialized. Otherwise, the object is considered uninitialized and is hidden (in list/watch and get calls) from clients that haven't explicitly asked to observe uninitialized objects.\n\nWhen an object is created, the system will populate this list with the current set of initializers. Only privileged users may set or modify this list. Once it is empty, it may not be modified further by any user."
+     },
+     "finalizers": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "description": "Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed."
+     },
+     "clusterName": {
+      "type": "string",
+      "description": "The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request."
+     }
+    }
+   },
+   "v1.OwnerReference": {
+    "id": "v1.OwnerReference",
+    "description": "OwnerReference contains enough information to let you identify an owning object. Currently, an owning object must be in the same namespace, so there is no namespace field.",
+    "required": [
+     "apiVersion",
+     "kind",
+     "name",
+     "uid"
+    ],
+    "properties": {
+     "apiVersion": {
+      "type": "string",
+      "description": "API version of the referent."
+     },
+     "kind": {
+      "type": "string",
+      "description": "Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds"
+     },
+     "name": {
+      "type": "string",
+      "description": "Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names"
+     },
+     "uid": {
+      "type": "string",
+      "description": "UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids"
+     },
+     "controller": {
+      "type": "boolean",
+      "description": "If true, this reference points to the managing controller."
+     },
+     "blockOwnerDeletion": {
+      "type": "boolean",
+      "description": "If true, AND if the owner has the \"foregroundDeletion\" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs \"delete\" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned."
+     }
+    }
+   },
+   "v1.Initializers": {
+    "id": "v1.Initializers",
+    "description": "Initializers tracks the progress of initialization.",
+    "required": [
+     "pending"
+    ],
+    "properties": {
+     "pending": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.Initializer"
+      },
+      "description": "Pending is a list of initializers that must execute in order before this object is visible. When the last pending initializer is removed, and no failing result is set, the initializers struct will be set to nil and the object is considered as initialized and visible to all clients."
+     },
+     "result": {
+      "$ref": "v1.Status",
+      "description": "If result is set with the Failure field, the object will be persisted to storage and then deleted, ensuring that other clients can observe the deletion."
+     }
+    }
+   },
+   "v1.Initializer": {
+    "id": "v1.Initializer",
+    "description": "Initializer is information about an initializer that has not yet completed.",
+    "required": [
+     "name"
+    ],
+    "properties": {
+     "name": {
+      "type": "string",
+      "description": "name of the process that is responsible for initializing this object."
+     }
+    }
+   },
+   "v1.Status": {
+    "id": "v1.Status",
+    "description": "Status is a return value for calls that don't return other objects.",
+    "properties": {
+     "kind": {
+      "type": "string",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds"
+     },
+     "apiVersion": {
+      "type": "string",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources"
+     },
+     "metadata": {
+      "$ref": "v1.ListMeta",
+      "description": "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds"
+     },
+     "status": {
+      "type": "string",
+      "description": "Status of the operation. One of: \"Success\" or \"Failure\". More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status"
+     },
+     "message": {
+      "type": "string",
+      "description": "A human-readable description of the status of this operation."
+     },
+     "reason": {
+      "type": "string",
+      "description": "A machine-readable description of why this operation is in the \"Failure\" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it."
+     },
+     "details": {
+      "$ref": "v1.StatusDetails",
+      "description": "Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type."
+     },
+     "code": {
+      "type": "integer",
+      "format": "int32",
+      "description": "Suggested HTTP return code for this status, 0 if not set."
+     }
+    }
+   },
+   "v1.ListMeta": {
+    "id": "v1.ListMeta",
+    "description": "ListMeta describes metadata that synthetic resources must have, including lists and various status objects. A resource may have only one of {ObjectMeta, ListMeta}.",
+    "properties": {
+     "selfLink": {
+      "type": "string",
+      "description": "SelfLink is a URL representing this object. Populated by the system. Read-only."
+     },
+     "resourceVersion": {
+      "type": "string",
+      "description": "String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency"
+     }
+    }
+   },
+   "v1.StatusDetails": {
+    "id": "v1.StatusDetails",
+    "description": "StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.",
+    "properties": {
+     "name": {
+      "type": "string",
+      "description": "The name attribute of the resource associated with the status StatusReason (when there is a single name which can be described)."
+     },
+     "group": {
+      "type": "string",
+      "description": "The group attribute of the resource associated with the status StatusReason."
+     },
+     "kind": {
+      "type": "string",
+      "description": "The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds"
+     },
+     "uid": {
+      "type": "string",
+      "description": "UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids"
+     },
+     "causes": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.StatusCause"
+      },
+      "description": "The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes."
+     },
+     "retryAfterSeconds": {
+      "type": "integer",
+      "format": "int32",
+      "description": "If specified, the time in seconds before the operation should be retried."
+     }
+    }
+   },
+   "v1.StatusCause": {
+    "id": "v1.StatusCause",
+    "description": "StatusCause provides more information about an api.Status failure, including cases when multiple errors are encountered.",
+    "properties": {
+     "reason": {
+      "type": "string",
+      "description": "A machine-readable description of the cause of the error. If this value is empty there is no information available."
+     },
+     "message": {
+      "type": "string",
+      "description": "A human-readable description of the cause of the error.  This field may be presented as-is to a reader."
+     },
+     "field": {
+      "type": "string",
+      "description": "The field of the resource that has caused this error, as named by its JSON serialization. May include dot and postfix notation for nested attributes. Arrays are zero-indexed.  Fields may appear more than once in an array of causes due to fields having multiple errors. Optional.\n\nExamples:\n  \"name\" - the field \"name\" on the current resource\n  \"items[0].name\" - the field \"name\" on the first array entry in \"items\""
+     }
+    }
+   },
+   "v1.VMSpec": {
+    "id": "v1.VMSpec",
+    "description": "VMSpec is a description of a VM. Not to be confused with api.DomainSpec in virt-handler.\nIt is expected that v1.DomainSpec will be merged into this structure.",
+    "properties": {
+     "domain": {
+      "$ref": "v1.DomainSpec",
+      "description": "Domain is the actual libvirt domain."
+     },
+     "nodeSelector": {
+      "type": "object",
+      "description": "If labels are specified, only nodes marked with all of these labels are considered when scheduling the VM."
+     }
+    }
+   },
+   "v1.DomainSpec": {
+    "id": "v1.DomainSpec",
+    "required": [
+     "memory",
+     "type",
+     "os",
+     "devices"
+    ],
+    "properties": {
+     "memory": {
+      "$ref": "v1.Memory"
+     },
+     "type": {
+      "type": "string"
+     },
+     "os": {
+      "$ref": "v1.OS"
+     },
+     "sysInfo": {
+      "$ref": "v1.SysInfo"
+     },
+     "devices": {
+      "$ref": "v1.Devices"
+     },
+     "clock": {
+      "$ref": "v1.Clock"
+     }
+    }
+   },
+   "v1.Memory": {
+    "id": "v1.Memory",
+    "required": [
+     "value",
+     "unit"
+    ],
+    "properties": {
+     "value": {
+      "type": "integer",
+      "format": "integer"
+     },
+     "unit": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.OS": {
+    "id": "v1.OS",
+    "required": [
+     "type",
+     "bootOrder"
+    ],
+    "properties": {
+     "type": {
+      "$ref": "v1.OSType"
+     },
+     "smBIOS": {
+      "$ref": "v1.SMBios"
+     },
+     "bootOrder": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.Boot"
+      }
+     },
+     "bootMenu": {
+      "$ref": "v1.BootMenu"
+     },
+     "bios": {
+      "$ref": "v1.BIOS"
+     }
+    }
+   },
+   "v1.OSType": {
+    "id": "v1.OSType",
+    "required": [
+     "os"
+    ],
+    "properties": {
+     "os": {
+      "type": "string"
+     },
+     "arch": {
+      "type": "string"
+     },
+     "machine": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.SMBios": {
+    "id": "v1.SMBios",
+    "required": [
+     "mode"
+    ],
+    "properties": {
+     "mode": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.Boot": {
+    "id": "v1.Boot",
+    "required": [
+     "dev"
+    ],
+    "properties": {
+     "dev": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.BootMenu": {
+    "id": "v1.BootMenu",
+    "properties": {
+     "enabled": {
+      "type": "boolean"
+     },
+     "timeout": {
+      "type": "integer",
+      "format": "integer"
+     }
+    }
+   },
+   "v1.BIOS": {
+    "id": "v1.BIOS",
+    "properties": {}
+   },
+   "v1.SysInfo": {
+    "id": "v1.SysInfo",
+    "required": [
+     "type",
+     "system",
+     "bios",
+     "baseBoard"
+    ],
+    "properties": {
+     "type": {
+      "type": "string"
+     },
+     "system": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.Entry"
+      }
+     },
+     "bios": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.Entry"
+      }
+     },
+     "baseBoard": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.Entry"
+      }
+     }
+    }
+   },
+   "v1.Entry": {
+    "id": "v1.Entry",
+    "required": [
+     "name",
+     "value"
+    ],
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "value": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.Devices": {
+    "id": "v1.Devices",
+    "properties": {
+     "emulator": {
+      "type": "string"
+     },
+     "interfaces": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.Interface"
+      }
+     },
+     "channels": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.Channel"
+      }
+     },
+     "video": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.Video"
+      }
+     },
+     "graphics": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.Graphics"
+      }
+     },
+     "memballoon": {
+      "$ref": "v1.Ballooning"
+     },
+     "disks": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.Disk"
+      }
+     },
+     "serials": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.Serial"
+      }
+     },
+     "consoles": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.Console"
+      }
+     }
+    }
+   },
+   "v1.Interface": {
+    "id": "v1.Interface",
+    "required": [
+     "type",
+     "source"
+    ],
+    "properties": {
+     "address": {
+      "$ref": "v1.Address"
+     },
+     "type": {
+      "type": "string"
+     },
+     "source": {
+      "$ref": "v1.InterfaceSource"
+     },
+     "target": {
+      "$ref": "v1.InterfaceTarget"
+     },
+     "model": {
+      "$ref": "v1.Model"
+     },
+     "mac": {
+      "$ref": "v1.MAC"
+     },
+     "bandwidth": {
+      "$ref": "v1.BandWidth"
+     },
+     "boot": {
+      "$ref": "v1.BootOrder"
+     },
+     "link": {
+      "$ref": "v1.LinkState"
+     },
+     "filterRef": {
+      "$ref": "v1.FilterRef"
+     },
+     "alias": {
+      "$ref": "v1.Alias"
+     }
+    }
+   },
+   "v1.Address": {
+    "id": "v1.Address",
+    "required": [
+     "type",
+     "domain",
+     "bus",
+     "slot",
+     "function"
+    ],
+    "properties": {
+     "type": {
+      "type": "string"
+     },
+     "domain": {
+      "type": "string"
+     },
+     "bus": {
+      "type": "string"
+     },
+     "slot": {
+      "type": "string"
+     },
+     "function": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.InterfaceSource": {
+    "id": "v1.InterfaceSource",
+    "properties": {
+     "network": {
+      "type": "string"
+     },
+     "device": {
+      "type": "string"
+     },
+     "bridge": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.InterfaceTarget": {
+    "id": "v1.InterfaceTarget",
+    "required": [
+     "dev"
+    ],
+    "properties": {
+     "dev": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.Model": {
+    "id": "v1.Model",
+    "required": [
+     "type"
+    ],
+    "properties": {
+     "type": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.MAC": {
+    "id": "v1.MAC",
+    "required": [
+     "address"
+    ],
+    "properties": {
+     "address": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.BandWidth": {
+    "id": "v1.BandWidth",
+    "properties": {}
+   },
+   "v1.BootOrder": {
+    "id": "v1.BootOrder",
+    "required": [
+     "order"
+    ],
+    "properties": {
+     "order": {
+      "type": "integer",
+      "format": "integer"
+     }
+    }
+   },
+   "v1.LinkState": {
+    "id": "v1.LinkState",
+    "required": [
+     "state"
+    ],
+    "properties": {
+     "state": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.FilterRef": {
+    "id": "v1.FilterRef",
+    "required": [
+     "filter"
+    ],
+    "properties": {
+     "filter": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.Alias": {
+    "id": "v1.Alias",
+    "required": [
+     "name"
+    ],
+    "properties": {
+     "name": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.Channel": {
+    "id": "v1.Channel",
+    "required": [
+     "type"
+    ],
+    "properties": {
+     "type": {
+      "type": "string"
+     },
+     "source": {
+      "$ref": "v1.ChannelSource"
+     },
+     "target": {
+      "$ref": "v1.ChannelTarget"
+     }
+    }
+   },
+   "v1.ChannelSource": {
+    "id": "v1.ChannelSource",
+    "required": [
+     "mode",
+     "path"
+    ],
+    "properties": {
+     "mode": {
+      "type": "string"
+     },
+     "path": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.ChannelTarget": {
+    "id": "v1.ChannelTarget",
+    "required": [
+     "type"
+    ],
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "type": {
+      "type": "string"
+     },
+     "address": {
+      "type": "string"
+     },
+     "port": {
+      "type": "integer",
+      "format": "integer"
+     }
+    }
+   },
+   "v1.Video": {
+    "id": "v1.Video",
+    "required": [
+     "type"
+    ],
+    "properties": {
+     "type": {
+      "type": "string"
+     },
+     "heads": {
+      "type": "integer",
+      "format": "integer"
+     },
+     "ram": {
+      "type": "integer",
+      "format": "integer"
+     },
+     "vRam": {
+      "type": "integer",
+      "format": "integer"
+     },
+     "vgaMem": {
+      "type": "integer",
+      "format": "integer"
+     }
+    }
+   },
+   "v1.Graphics": {
+    "id": "v1.Graphics",
+    "required": [
+     "type"
+    ],
+    "properties": {
+     "autoPort": {
+      "type": "string"
+     },
+     "defaultMode": {
+      "type": "string"
+     },
+     "listen": {
+      "$ref": "v1.Listen"
+     },
+     "passwdValidTo": {
+      "type": "string"
+     },
+     "port": {
+      "type": "integer",
+      "format": "int32"
+     },
+     "tlsPort": {
+      "type": "integer",
+      "format": "int32"
+     },
+     "type": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.Listen": {
+    "id": "v1.Listen",
+    "required": [
+     "type"
+    ],
+    "properties": {
+     "type": {
+      "type": "string"
+     },
+     "address": {
+      "type": "string"
+     },
+     "network": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.Ballooning": {
+    "id": "v1.Ballooning",
+    "required": [
+     "model"
+    ],
+    "properties": {
+     "model": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.Disk": {
+    "id": "v1.Disk",
+    "required": [
+     "device",
+     "type",
+     "source",
+     "target"
+    ],
+    "properties": {
+     "device": {
+      "type": "string"
+     },
+     "snapshot": {
+      "type": "string"
+     },
+     "type": {
+      "type": "string"
+     },
+     "source": {
+      "$ref": "v1.DiskSource"
+     },
+     "target": {
+      "$ref": "v1.DiskTarget"
+     },
+     "serial": {
+      "type": "string"
+     },
+     "driver": {
+      "$ref": "v1.DiskDriver"
+     },
+     "readOnly": {
+      "$ref": "v1.ReadOnly"
+     },
+     "auth": {
+      "$ref": "v1.DiskAuth"
+     }
+    }
+   },
+   "v1.DiskSource": {
+    "id": "v1.DiskSource",
+    "properties": {
+     "file": {
+      "type": "string"
+     },
+     "startupPolicy": {
+      "type": "string"
+     },
+     "protocol": {
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     },
+     "host": {
+      "$ref": "v1.DiskSourceHost"
+     }
+    }
+   },
+   "v1.DiskSourceHost": {
+    "id": "v1.DiskSourceHost",
+    "required": [
+     "name"
+    ],
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "port": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.DiskTarget": {
+    "id": "v1.DiskTarget",
+    "required": [
+     "dev"
+    ],
+    "properties": {
+     "bus": {
+      "type": "string"
+     },
+     "dev": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.DiskDriver": {
+    "id": "v1.DiskDriver",
+    "properties": {
+     "cache": {
+      "type": "string"
+     },
+     "errorPolicy": {
+      "type": "string"
+     },
+     "io": {
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     },
+     "type": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.ReadOnly": {
+    "id": "v1.ReadOnly",
+    "properties": {}
+   },
+   "v1.DiskAuth": {
+    "id": "v1.DiskAuth",
+    "required": [
+     "username"
+    ],
+    "properties": {
+     "username": {
+      "type": "string"
+     },
+     "secret": {
+      "$ref": "v1.DiskSecret"
+     }
+    }
+   },
+   "v1.DiskSecret": {
+    "id": "v1.DiskSecret",
+    "required": [
+     "type",
+     "usage"
+    ],
+    "properties": {
+     "type": {
+      "type": "string"
+     },
+     "usage": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.Serial": {
+    "id": "v1.Serial",
+    "required": [
+     "type"
+    ],
+    "properties": {
+     "type": {
+      "type": "string"
+     },
+     "target": {
+      "$ref": "v1.SerialTarget"
+     }
+    }
+   },
+   "v1.SerialTarget": {
+    "id": "v1.SerialTarget",
+    "properties": {
+     "port": {
+      "type": "integer",
+      "format": "integer"
+     }
+    }
+   },
+   "v1.Console": {
+    "id": "v1.Console",
+    "required": [
+     "type"
+    ],
+    "properties": {
+     "type": {
+      "type": "string"
+     },
+     "target": {
+      "$ref": "v1.ConsoleTarget"
+     }
+    }
+   },
+   "v1.ConsoleTarget": {
+    "id": "v1.ConsoleTarget",
+    "properties": {
+     "type": {
+      "type": "string"
+     },
+     "port": {
+      "type": "integer",
+      "format": "integer"
+     }
+    }
+   },
+   "v1.Clock": {
+    "id": "v1.Clock",
+    "properties": {}
+   },
+   "v1.VMStatus": {
+    "id": "v1.VMStatus",
+    "description": "VMStatus represents information about the status of a VM. Status may trail the actual\nstate of a system.",
+    "required": [
+     "phase",
+     "graphics"
+    ],
+    "properties": {
+     "nodeName": {
+      "type": "string",
+      "description": "NodeName is the name where the VM is currently running."
+     },
+     "migrationNodeName": {
+      "type": "string",
+      "description": "MigrationNodeName is the node where the VM is live migrating to."
+     },
+     "conditions": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.VMCondition"
+      },
+      "description": "Conditions are specific points in VM's pod runtime."
+     },
+     "phase": {
+      "type": "string",
+      "description": "Phase is the status of the VM in kubernetes world. It is not the VM status, but partially correlates to it."
+     },
+     "graphics": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.VMGraphics"
+      },
+      "description": "Graphics represent the details of available graphical consoles."
+     }
+    }
+   },
+   "v1.VMCondition": {
+    "id": "v1.VMCondition",
+    "required": [
+     "type",
+     "status"
+    ],
+    "properties": {
+     "type": {
+      "type": "string"
+     },
+     "status": {
+      "type": "string"
+     },
+     "lastProbeTime": {
+      "type": "string"
+     },
+     "lastTransitionTime": {
+      "type": "string"
+     },
+     "reason": {
+      "type": "string"
+     },
+     "message": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.VMGraphics": {
+    "id": "v1.VMGraphics",
+    "required": [
+     "type",
+     "host",
+     "port"
+    ],
+    "properties": {
+     "type": {
+      "type": "string"
+     },
+     "host": {
+      "type": "string"
+     },
+     "port": {
+      "type": "integer",
+      "format": "int32"
+     }
+    }
+   },
+   "v1.VMList": {
+    "id": "v1.VMList",
+    "description": "VMList is a list of VMs",
+    "required": [
+     "items"
+    ],
+    "properties": {
+     "kind": {
+      "type": "string",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds"
+     },
+     "apiVersion": {
+      "type": "string",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources"
+     },
+     "metadata": {
+      "$ref": "v1.ListMeta"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.VM"
+      }
+     }
+    }
+   },
+   "v1.Migration": {
+    "id": "v1.Migration",
+    "description": "A Migration is a job that moves a Virtual Machine from one node to another",
+    "properties": {
+     "kind": {
+      "type": "string",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds"
+     },
+     "apiVersion": {
+      "type": "string",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources"
+     },
+     "metadata": {
+      "$ref": "v1.ObjectMeta"
+     },
+     "spec": {
+      "$ref": "v1.MigrationSpec"
+     },
+     "status": {
+      "$ref": "v1.MigrationStatus"
+     }
+    }
+   },
+   "v1.MigrationSpec": {
+    "id": "v1.MigrationSpec",
+    "description": "MigrationSpec is a description of a VM Migration\nFor example \"destinationNodeName\": \"testvm\" will migrate a VM called \"testvm\" in the namespace \"default\"",
+    "required": [
+     "selector"
+    ],
+    "properties": {
+     "selector": {
+      "$ref": "v1.VMSelector",
+      "description": "Criterias for selecting the VM to migrate.\nFor example\nselector:\n  name: testvm\nwill select the VM `testvm` for migration"
+     },
+     "nodeSelector": {
+      "type": "object",
+      "description": "Criteria to use when selecting the destination for the migration\nfor example, to select by the hostname, specify `kubernetes.io/hostname: master`\nother possible choices include the hardware required to run the vm or\nor lableing of the nodes to indicate their roles in larger applications.\nexamples:\ndisktype: ssd,\nrandomGenerator: /dev/random,\nrandomGenerator: superfastdevice,\napp: mysql,\nlicensedForServiceX: true\nNote that these selectors are additions to the node selectors on the VM itself and they must not exist on the VM.\nIf they are conflicting with the VM, no migration will be started."
+     }
+    }
+   },
+   "v1.VMSelector": {
+    "id": "v1.VMSelector",
+    "required": [
+     "name"
+    ],
+    "properties": {
+     "name": {
+      "type": "string",
+      "description": "Name of the VM to migrate"
+     }
+    }
+   },
+   "v1.MigrationStatus": {
+    "id": "v1.MigrationStatus",
+    "description": "MigrationStatus is the last reported status of a VM Migratrion. Status may trail the actual\nstate of a migration.",
+    "properties": {
+     "phase": {
+      "type": "string"
+     },
+     "instance": {
+      "$ref": "types.UID"
+     }
+    }
+   },
+   "types.UID": {
+    "id": "types.UID",
+    "properties": {}
+   },
+   "v1.MigrationList": {
+    "id": "v1.MigrationList",
+    "description": "A list of Migrations",
+    "required": [
+     "items"
+    ],
+    "properties": {
+     "kind": {
+      "type": "string",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds"
+     },
+     "apiVersion": {
+      "type": "string",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources"
+     },
+     "metadata": {
+      "$ref": "v1.ListMeta"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.Migration"
+      }
+     }
+    }
+   }
+  }
+ }

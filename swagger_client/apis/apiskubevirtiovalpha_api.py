@@ -168,7 +168,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def create_migration(self, body, namespace, **kwargs):
         """
-
+        Create a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -196,7 +196,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def create_migration_with_http_info(self, body, namespace, **kwargs):
         """
-
+        Create a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -279,7 +279,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def create_virtualmachine(self, body, namespace, **kwargs):
         """
-
+        Create a virtualmachine object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -307,7 +307,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def create_virtualmachine_with_http_info(self, body, namespace, **kwargs):
         """
-
+        Create a virtualmachine object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -390,7 +390,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def create_virtualmachinereplicaset(self, body, namespace, **kwargs):
         """
-
+        Create a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -418,7 +418,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def create_virtualmachinereplicaset_with_http_info(self, body, namespace, **kwargs):
         """
-
+        Create a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -501,7 +501,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def delete_migration(self, namespace, name, **kwargs):
         """
-        test3
+        Delete a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -529,7 +529,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def delete_migration_with_http_info(self, namespace, name, **kwargs):
         """
-        test3
+        Delete a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -612,7 +612,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def delete_migrations(self, name, **kwargs):
         """
-
+        Delete a list of migration objects.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -641,7 +641,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def delete_migrations_with_http_info(self, name, **kwargs):
         """
-
+        Delete a list of migration objects.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -724,7 +724,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def delete_virtualmachine(self, namespace, name, **kwargs):
         """
-        test3
+        Delete a virtualmachine object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -752,7 +752,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def delete_virtualmachine_with_http_info(self, namespace, name, **kwargs):
         """
-        test3
+        Delete a virtualmachine object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -835,7 +835,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def delete_virtualmachinereplicaset(self, namespace, name, **kwargs):
         """
-        test3
+        Delete a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -863,7 +863,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def delete_virtualmachinereplicaset_with_http_info(self, namespace, name, **kwargs):
         """
-        test3
+        Delete a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -946,7 +946,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def delete_virtualmachinereplicasets(self, name, **kwargs):
         """
-
+        Delete a list of virtualmachinereplicaset objects.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -975,7 +975,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def delete_virtualmachinereplicasets_with_http_info(self, name, **kwargs):
         """
-
+        Delete a list of virtualmachinereplicaset objects.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1058,7 +1058,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def delete_virtualmachines(self, name, **kwargs):
         """
-
+        Delete a list of virtualmachine objects.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1087,7 +1087,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def delete_virtualmachines_with_http_info(self, name, **kwargs):
         """
-
+        Delete a list of virtualmachine objects.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1267,7 +1267,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def get_migration(self, namespace, name, **kwargs):
         """
-        test4
+        Get a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1297,7 +1297,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def get_migration_with_http_info(self, namespace, name, **kwargs):
         """
-        test4
+        Get a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1386,7 +1386,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def get_virtualmachine(self, namespace, name, **kwargs):
         """
-        test4
+        Get a virtualmachine object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1416,7 +1416,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def get_virtualmachine_with_http_info(self, namespace, name, **kwargs):
         """
-        test4
+        Get a virtualmachine object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1505,7 +1505,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def get_virtualmachinereplicaset(self, namespace, name, **kwargs):
         """
-        test4
+        Get a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1535,7 +1535,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def get_virtualmachinereplicaset_with_http_info(self, namespace, name, **kwargs):
         """
-        test4
+        Get a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1721,7 +1721,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def list_all_migrations(self, **kwargs):
         """
-        test4
+        Get a list all of migration objects.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1751,7 +1751,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def list_all_migrations_with_http_info(self, **kwargs):
         """
-        test4
+        Get a list all of migration objects.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1834,7 +1834,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def list_all_virtualmachinereplicasets(self, **kwargs):
         """
-        test4
+        Get a list all of virtualmachinereplicaset objects.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1864,7 +1864,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def list_all_virtualmachinereplicasets_with_http_info(self, **kwargs):
         """
-        test4
+        Get a list all of virtualmachinereplicaset objects.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1947,7 +1947,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def list_all_virtualmachines(self, **kwargs):
         """
-        test4
+        Get a list all of virtualmachine objects.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1977,7 +1977,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def list_all_virtualmachines_with_http_info(self, **kwargs):
         """
-        test4
+        Get a list all of virtualmachine objects.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2060,7 +2060,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def list_migrations(self, namespace, **kwargs):
         """
-
+        Get a list of migration objects
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2091,7 +2091,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def list_migrations_with_http_info(self, namespace, **kwargs):
         """
-
+        Get a list of migration objects
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2180,7 +2180,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def list_virtualmachinereplicasets(self, namespace, **kwargs):
         """
-
+        Get a list of virtualmachinereplicaset objects
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2211,7 +2211,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def list_virtualmachinereplicasets_with_http_info(self, namespace, **kwargs):
         """
-
+        Get a list of virtualmachinereplicaset objects
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2300,7 +2300,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def list_virtualmachines(self, namespace, **kwargs):
         """
-
+        Get a list of virtualmachine objects
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2331,7 +2331,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def list_virtualmachines_with_http_info(self, namespace, **kwargs):
         """
-
+        Get a list of virtualmachine objects
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2420,7 +2420,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def patch_migration(self, **kwargs):
         """
-        test5
+        Patch a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2446,7 +2446,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def patch_migration_with_http_info(self, **kwargs):
         """
-        test5
+        Patch a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2517,7 +2517,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def patch_virtualmachine(self, **kwargs):
         """
-        test5
+        Patch a virtualmachine object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2543,7 +2543,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def patch_virtualmachine_with_http_info(self, **kwargs):
         """
-        test5
+        Patch a virtualmachine object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2614,7 +2614,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def patch_virtualmachinereplicaset(self, **kwargs):
         """
-        test5
+        Patch a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2640,7 +2640,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def patch_virtualmachinereplicaset_with_http_info(self, **kwargs):
         """
-        test5
+        Patch a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2822,7 +2822,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def update_migration(self, body, namespace, name, **kwargs):
         """
-        test2
+        Update a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2851,7 +2851,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def update_migration_with_http_info(self, body, namespace, name, **kwargs):
         """
-        test2
+        Update a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2940,7 +2940,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def update_virtualmachine(self, body, namespace, name, **kwargs):
         """
-        test2
+        Update a virtualmachine object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2969,7 +2969,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def update_virtualmachine_with_http_info(self, body, namespace, name, **kwargs):
         """
-        test2
+        Update a virtualmachine object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3058,7 +3058,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def update_virtualmachinereplicaset(self, body, namespace, name, **kwargs):
         """
-        test2
+        Update a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3087,7 +3087,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def update_virtualmachinereplicaset_with_http_info(self, body, namespace, name, **kwargs):
         """
-        test2
+        Update a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3176,7 +3176,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def watch_all_migrations(self, namespace, **kwargs):
         """
-
+        Watch a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3207,7 +3207,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def watch_all_migrations_with_http_info(self, namespace, **kwargs):
         """
-
+        Watch a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3296,7 +3296,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def watch_all_virtualmachinereplicasets(self, namespace, **kwargs):
         """
-
+        Watch a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3327,7 +3327,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def watch_all_virtualmachinereplicasets_with_http_info(self, namespace, **kwargs):
         """
-
+        Watch a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3416,7 +3416,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def watch_all_virtualmachines(self, namespace, **kwargs):
         """
-
+        Watch a virtualmachine object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3447,7 +3447,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def watch_all_virtualmachines_with_http_info(self, namespace, **kwargs):
         """
-
+        Watch a virtualmachine object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3536,7 +3536,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def watch_migrations(self, namespace, **kwargs):
         """
-
+        Watch a migrations collection.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3567,7 +3567,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def watch_migrations_with_http_info(self, namespace, **kwargs):
         """
-
+        Watch a migrations collection.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3656,7 +3656,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def watch_virtualmachinereplicasets(self, namespace, **kwargs):
         """
-
+        Watch a virtualmachinereplicasets collection.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3687,7 +3687,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def watch_virtualmachinereplicasets_with_http_info(self, namespace, **kwargs):
         """
-
+        Watch a virtualmachinereplicasets collection.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3776,7 +3776,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def watch_virtualmachines(self, namespace, **kwargs):
         """
-
+        Watch a virtualmachines collection.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -3807,7 +3807,7 @@ class ApiskubevirtiovalphaApi(object):
 
     def watch_virtualmachines_with_http_info(self, namespace, **kwargs):
         """
-
+        Watch a virtualmachines collection.
 
 
         This method makes a synchronous HTTP request by default. To make an

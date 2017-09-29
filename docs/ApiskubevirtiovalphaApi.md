@@ -5,39 +5,39 @@ All URIs are relative to *http://localhost:8183/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**console**](ApiskubevirtiovalphaApi.md#console) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/console | Open a websocket connection to a serial console on the specified VM.
-[**create_migration**](ApiskubevirtiovalphaApi.md#create_migration) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations |
-[**create_virtualmachine**](ApiskubevirtiovalphaApi.md#create_virtualmachine) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines |
-[**create_virtualmachinereplicaset**](ApiskubevirtiovalphaApi.md#create_virtualmachinereplicaset) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets |
-[**delete_migration**](ApiskubevirtiovalphaApi.md#delete_migration) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*} | test3
-[**delete_migrations**](ApiskubevirtiovalphaApi.md#delete_migrations) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations |
-[**delete_virtualmachine**](ApiskubevirtiovalphaApi.md#delete_virtualmachine) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | test3
-[**delete_virtualmachinereplicaset**](ApiskubevirtiovalphaApi.md#delete_virtualmachinereplicaset) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets/{name:[a-z0-9][a-z0-9\-]*} | test3
-[**delete_virtualmachinereplicasets**](ApiskubevirtiovalphaApi.md#delete_virtualmachinereplicasets) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets |
-[**delete_virtualmachines**](ApiskubevirtiovalphaApi.md#delete_virtualmachines) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines |
+[**create_migration**](ApiskubevirtiovalphaApi.md#create_migration) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations | Create a migration object.
+[**create_virtualmachine**](ApiskubevirtiovalphaApi.md#create_virtualmachine) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines | Create a virtualmachine object.
+[**create_virtualmachinereplicaset**](ApiskubevirtiovalphaApi.md#create_virtualmachinereplicaset) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets | Create a virtualmachinereplicaset object.
+[**delete_migration**](ApiskubevirtiovalphaApi.md#delete_migration) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*} | Delete a migration object.
+[**delete_migrations**](ApiskubevirtiovalphaApi.md#delete_migrations) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations | Delete a list of migration objects.
+[**delete_virtualmachine**](ApiskubevirtiovalphaApi.md#delete_virtualmachine) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | Delete a virtualmachine object.
+[**delete_virtualmachinereplicaset**](ApiskubevirtiovalphaApi.md#delete_virtualmachinereplicaset) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets/{name:[a-z0-9][a-z0-9\-]*} | Delete a virtualmachinereplicaset object.
+[**delete_virtualmachinereplicasets**](ApiskubevirtiovalphaApi.md#delete_virtualmachinereplicasets) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets | Delete a list of virtualmachinereplicaset objects.
+[**delete_virtualmachines**](ApiskubevirtiovalphaApi.md#delete_virtualmachines) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines | Delete a list of virtualmachine objects.
 [**func1**](ApiskubevirtiovalphaApi.md#func1) | **GET** /apis/kubevirt.io/v1alpha1 |
-[**get_migration**](ApiskubevirtiovalphaApi.md#get_migration) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*} | test4
-[**get_virtualmachine**](ApiskubevirtiovalphaApi.md#get_virtualmachine) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | test4
-[**get_virtualmachinereplicaset**](ApiskubevirtiovalphaApi.md#get_virtualmachinereplicaset) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets/{name:[a-z0-9][a-z0-9\-]*} | test4
+[**get_migration**](ApiskubevirtiovalphaApi.md#get_migration) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*} | Get a migration object.
+[**get_virtualmachine**](ApiskubevirtiovalphaApi.md#get_virtualmachine) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | Get a virtualmachine object.
+[**get_virtualmachinereplicaset**](ApiskubevirtiovalphaApi.md#get_virtualmachinereplicaset) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets/{name:[a-z0-9][a-z0-9\-]*} | Get a virtualmachinereplicaset object.
 [**kube_connection_healthz_func**](ApiskubevirtiovalphaApi.md#kube_connection_healthz_func) | **GET** /apis/kubevirt.io/v1alpha1/healthz | Health endpoint
-[**list_all_migrations**](ApiskubevirtiovalphaApi.md#list_all_migrations) | **GET** /apis/kubevirt.io/v1alpha1/migrations | test4
-[**list_all_virtualmachinereplicasets**](ApiskubevirtiovalphaApi.md#list_all_virtualmachinereplicasets) | **GET** /apis/kubevirt.io/v1alpha1/virtualmachinereplicasets | test4
-[**list_all_virtualmachines**](ApiskubevirtiovalphaApi.md#list_all_virtualmachines) | **GET** /apis/kubevirt.io/v1alpha1/virtualmachines | test4
-[**list_migrations**](ApiskubevirtiovalphaApi.md#list_migrations) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations |
-[**list_virtualmachinereplicasets**](ApiskubevirtiovalphaApi.md#list_virtualmachinereplicasets) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets |
-[**list_virtualmachines**](ApiskubevirtiovalphaApi.md#list_virtualmachines) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines |
-[**patch_migration**](ApiskubevirtiovalphaApi.md#patch_migration) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*} | test5
-[**patch_virtualmachine**](ApiskubevirtiovalphaApi.md#patch_virtualmachine) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | test5
-[**patch_virtualmachinereplicaset**](ApiskubevirtiovalphaApi.md#patch_virtualmachinereplicaset) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets/{name:[a-z0-9][a-z0-9\-]*} | test5
+[**list_all_migrations**](ApiskubevirtiovalphaApi.md#list_all_migrations) | **GET** /apis/kubevirt.io/v1alpha1/migrations | Get a list all of migration objects.
+[**list_all_virtualmachinereplicasets**](ApiskubevirtiovalphaApi.md#list_all_virtualmachinereplicasets) | **GET** /apis/kubevirt.io/v1alpha1/virtualmachinereplicasets | Get a list all of virtualmachinereplicaset objects.
+[**list_all_virtualmachines**](ApiskubevirtiovalphaApi.md#list_all_virtualmachines) | **GET** /apis/kubevirt.io/v1alpha1/virtualmachines | Get a list all of virtualmachine objects.
+[**list_migrations**](ApiskubevirtiovalphaApi.md#list_migrations) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations | Get a list of migration objects
+[**list_virtualmachinereplicasets**](ApiskubevirtiovalphaApi.md#list_virtualmachinereplicasets) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets | Get a list of virtualmachinereplicaset objects
+[**list_virtualmachines**](ApiskubevirtiovalphaApi.md#list_virtualmachines) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines | Get a list of virtualmachine objects
+[**patch_migration**](ApiskubevirtiovalphaApi.md#patch_migration) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*} | Patch a migration object.
+[**patch_virtualmachine**](ApiskubevirtiovalphaApi.md#patch_virtualmachine) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | Patch a virtualmachine object.
+[**patch_virtualmachinereplicaset**](ApiskubevirtiovalphaApi.md#patch_virtualmachinereplicaset) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets/{name:[a-z0-9][a-z0-9\-]*} | Patch a virtualmachinereplicaset object.
 [**spice**](ApiskubevirtiovalphaApi.md#spice) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/spice | Returns a remote-viewer configuration file. Run &#x60;man 1 remote-viewer&#x60; to learn more about the configuration format.
-[**update_migration**](ApiskubevirtiovalphaApi.md#update_migration) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*} | test2
-[**update_virtualmachine**](ApiskubevirtiovalphaApi.md#update_virtualmachine) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | test2
-[**update_virtualmachinereplicaset**](ApiskubevirtiovalphaApi.md#update_virtualmachinereplicaset) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets/{name:[a-z0-9][a-z0-9\-]*} | test2
-[**watch_all_migrations**](ApiskubevirtiovalphaApi.md#watch_all_migrations) | **GET** /apis/kubevirt.io/v1alpha1/watch/migrations |
-[**watch_all_virtualmachinereplicasets**](ApiskubevirtiovalphaApi.md#watch_all_virtualmachinereplicasets) | **GET** /apis/kubevirt.io/v1alpha1/watch/virtualmachinereplicasets |
-[**watch_all_virtualmachines**](ApiskubevirtiovalphaApi.md#watch_all_virtualmachines) | **GET** /apis/kubevirt.io/v1alpha1/watch/virtualmachines |
-[**watch_migrations**](ApiskubevirtiovalphaApi.md#watch_migrations) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations |
-[**watch_virtualmachinereplicasets**](ApiskubevirtiovalphaApi.md#watch_virtualmachinereplicasets) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets |
-[**watch_virtualmachines**](ApiskubevirtiovalphaApi.md#watch_virtualmachines) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines |
+[**update_migration**](ApiskubevirtiovalphaApi.md#update_migration) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*} | Update a migration object.
+[**update_virtualmachine**](ApiskubevirtiovalphaApi.md#update_virtualmachine) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | Update a virtualmachine object.
+[**update_virtualmachinereplicaset**](ApiskubevirtiovalphaApi.md#update_virtualmachinereplicaset) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets/{name:[a-z0-9][a-z0-9\-]*} | Update a virtualmachinereplicaset object.
+[**watch_all_migrations**](ApiskubevirtiovalphaApi.md#watch_all_migrations) | **GET** /apis/kubevirt.io/v1alpha1/watch/migrations | Watch a migration object.
+[**watch_all_virtualmachinereplicasets**](ApiskubevirtiovalphaApi.md#watch_all_virtualmachinereplicasets) | **GET** /apis/kubevirt.io/v1alpha1/watch/virtualmachinereplicasets | Watch a virtualmachinereplicaset object.
+[**watch_all_virtualmachines**](ApiskubevirtiovalphaApi.md#watch_all_virtualmachines) | **GET** /apis/kubevirt.io/v1alpha1/watch/virtualmachines | Watch a virtualmachine object.
+[**watch_migrations**](ApiskubevirtiovalphaApi.md#watch_migrations) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations | Watch a migrations collection.
+[**watch_virtualmachinereplicasets**](ApiskubevirtiovalphaApi.md#watch_virtualmachinereplicasets) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets | Watch a virtualmachinereplicasets collection.
+[**watch_virtualmachines**](ApiskubevirtiovalphaApi.md#watch_virtualmachines) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines | Watch a virtualmachines collection.
 
 
 # **console**
@@ -91,7 +91,7 @@ No authorization required
 # **create_migration**
 > V1Migration create_migration(body, namespace)
 
-
+Create a migration object.
 
 ### Example
 ```python
@@ -106,6 +106,7 @@ body = swagger_client.V1Migration() # V1Migration |
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 
 try:
+    # Create a migration object.
     api_response = api_instance.create_migration(body, namespace)
     pprint(api_response)
 except ApiException as e:
@@ -137,7 +138,7 @@ No authorization required
 # **create_virtualmachine**
 > V1VirtualMachine create_virtualmachine(body, namespace)
 
-
+Create a virtualmachine object.
 
 ### Example
 ```python
@@ -152,6 +153,7 @@ body = swagger_client.V1VirtualMachine() # V1VirtualMachine |
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 
 try:
+    # Create a virtualmachine object.
     api_response = api_instance.create_virtualmachine(body, namespace)
     pprint(api_response)
 except ApiException as e:
@@ -183,7 +185,7 @@ No authorization required
 # **create_virtualmachinereplicaset**
 > V1VirtualMachineReplicaSet create_virtualmachinereplicaset(body, namespace)
 
-
+Create a virtualmachinereplicaset object.
 
 ### Example
 ```python
@@ -198,6 +200,7 @@ body = swagger_client.V1VirtualMachineReplicaSet() # V1VirtualMachineReplicaSet 
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 
 try:
+    # Create a virtualmachinereplicaset object.
     api_response = api_instance.create_virtualmachinereplicaset(body, namespace)
     pprint(api_response)
 except ApiException as e:
@@ -229,7 +232,7 @@ No authorization required
 # **delete_migration**
 > V1Status delete_migration(namespace, name)
 
-test3
+Delete a migration object.
 
 ### Example
 ```python
@@ -244,7 +247,7 @@ namespace = 'namespace_example' # str | Object name and auth scope, such as for 
 name = 'name_example' # str | Name of the resource
 
 try:
-    # test3
+    # Delete a migration object.
     api_response = api_instance.delete_migration(namespace, name)
     pprint(api_response)
 except ApiException as e:
@@ -276,7 +279,7 @@ No authorization required
 # **delete_migrations**
 > V1MigrationList delete_migrations(name, field_selector=field_selector, label_selector=label_selector)
 
-
+Delete a list of migration objects.
 
 ### Example
 ```python
@@ -292,6 +295,7 @@ field_selector = 'field_selector_example' # str | A selector to restrict the lis
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
 
 try:
+    # Delete a list of migration objects.
     api_response = api_instance.delete_migrations(name, field_selector=field_selector, label_selector=label_selector)
     pprint(api_response)
 except ApiException as e:
@@ -324,7 +328,7 @@ No authorization required
 # **delete_virtualmachine**
 > V1Status delete_virtualmachine(namespace, name)
 
-test3
+Delete a virtualmachine object.
 
 ### Example
 ```python
@@ -339,7 +343,7 @@ namespace = 'namespace_example' # str | Object name and auth scope, such as for 
 name = 'name_example' # str | Name of the resource
 
 try:
-    # test3
+    # Delete a virtualmachine object.
     api_response = api_instance.delete_virtualmachine(namespace, name)
     pprint(api_response)
 except ApiException as e:
@@ -371,7 +375,7 @@ No authorization required
 # **delete_virtualmachinereplicaset**
 > V1Status delete_virtualmachinereplicaset(namespace, name)
 
-test3
+Delete a virtualmachinereplicaset object.
 
 ### Example
 ```python
@@ -386,7 +390,7 @@ namespace = 'namespace_example' # str | Object name and auth scope, such as for 
 name = 'name_example' # str | Name of the resource
 
 try:
-    # test3
+    # Delete a virtualmachinereplicaset object.
     api_response = api_instance.delete_virtualmachinereplicaset(namespace, name)
     pprint(api_response)
 except ApiException as e:
@@ -418,7 +422,7 @@ No authorization required
 # **delete_virtualmachinereplicasets**
 > V1VirtualMachineReplicaSetList delete_virtualmachinereplicasets(name, field_selector=field_selector, label_selector=label_selector)
 
-
+Delete a list of virtualmachinereplicaset objects.
 
 ### Example
 ```python
@@ -434,6 +438,7 @@ field_selector = 'field_selector_example' # str | A selector to restrict the lis
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
 
 try:
+    # Delete a list of virtualmachinereplicaset objects.
     api_response = api_instance.delete_virtualmachinereplicasets(name, field_selector=field_selector, label_selector=label_selector)
     pprint(api_response)
 except ApiException as e:
@@ -466,7 +471,7 @@ No authorization required
 # **delete_virtualmachines**
 > V1VirtualMachineList delete_virtualmachines(name, field_selector=field_selector, label_selector=label_selector)
 
-
+Delete a list of virtualmachine objects.
 
 ### Example
 ```python
@@ -482,6 +487,7 @@ field_selector = 'field_selector_example' # str | A selector to restrict the lis
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
 
 try:
+    # Delete a list of virtualmachine objects.
     api_response = api_instance.delete_virtualmachines(name, field_selector=field_selector, label_selector=label_selector)
     pprint(api_response)
 except ApiException as e:
@@ -554,7 +560,7 @@ No authorization required
 # **get_migration**
 > V1Migration get_migration(namespace, name, export=export, exact=exact)
 
-test4
+Get a migration object.
 
 ### Example
 ```python
@@ -571,7 +577,7 @@ export = true # bool | Should this value be exported. Export strips fields that 
 exact = true # bool | Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace' (optional)
 
 try:
-    # test4
+    # Get a migration object.
     api_response = api_instance.get_migration(namespace, name, export=export, exact=exact)
     pprint(api_response)
 except ApiException as e:
@@ -605,7 +611,7 @@ No authorization required
 # **get_virtualmachine**
 > V1VirtualMachine get_virtualmachine(namespace, name, export=export, exact=exact)
 
-test4
+Get a virtualmachine object.
 
 ### Example
 ```python
@@ -622,7 +628,7 @@ export = true # bool | Should this value be exported. Export strips fields that 
 exact = true # bool | Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace' (optional)
 
 try:
-    # test4
+    # Get a virtualmachine object.
     api_response = api_instance.get_virtualmachine(namespace, name, export=export, exact=exact)
     pprint(api_response)
 except ApiException as e:
@@ -656,7 +662,7 @@ No authorization required
 # **get_virtualmachinereplicaset**
 > V1VirtualMachineReplicaSet get_virtualmachinereplicaset(namespace, name, export=export, exact=exact)
 
-test4
+Get a virtualmachinereplicaset object.
 
 ### Example
 ```python
@@ -673,7 +679,7 @@ export = true # bool | Should this value be exported. Export strips fields that 
 exact = true # bool | Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace' (optional)
 
 try:
-    # test4
+    # Get a virtualmachinereplicaset object.
     api_response = api_instance.get_virtualmachinereplicaset(namespace, name, export=export, exact=exact)
     pprint(api_response)
 except ApiException as e:
@@ -747,7 +753,7 @@ No authorization required
 # **list_all_migrations**
 > V1MigrationList list_all_migrations(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
-test4
+Get a list all of migration objects.
 
 ### Example
 ```python
@@ -764,7 +770,7 @@ resource_version = 'resource_version_example' # str | When specified with a watc
 timeout_seconds = swagger_client.Object() # Object | TimeoutSeconds for the list/watch call. (optional)
 
 try:
-    # test4
+    # Get a list all of migration objects.
     api_response = api_instance.list_all_migrations(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
@@ -798,7 +804,7 @@ No authorization required
 # **list_all_virtualmachinereplicasets**
 > V1VirtualMachineReplicaSetList list_all_virtualmachinereplicasets(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
-test4
+Get a list all of virtualmachinereplicaset objects.
 
 ### Example
 ```python
@@ -815,7 +821,7 @@ resource_version = 'resource_version_example' # str | When specified with a watc
 timeout_seconds = swagger_client.Object() # Object | TimeoutSeconds for the list/watch call. (optional)
 
 try:
-    # test4
+    # Get a list all of virtualmachinereplicaset objects.
     api_response = api_instance.list_all_virtualmachinereplicasets(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
@@ -849,7 +855,7 @@ No authorization required
 # **list_all_virtualmachines**
 > V1VirtualMachineList list_all_virtualmachines(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
-test4
+Get a list all of virtualmachine objects.
 
 ### Example
 ```python
@@ -866,7 +872,7 @@ resource_version = 'resource_version_example' # str | When specified with a watc
 timeout_seconds = swagger_client.Object() # Object | TimeoutSeconds for the list/watch call. (optional)
 
 try:
-    # test4
+    # Get a list all of virtualmachine objects.
     api_response = api_instance.list_all_virtualmachines(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
@@ -900,7 +906,7 @@ No authorization required
 # **list_migrations**
 > V1MigrationList list_migrations(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
-
+Get a list of migration objects
 
 ### Example
 ```python
@@ -918,6 +924,7 @@ resource_version = 'resource_version_example' # str | When specified with a watc
 timeout_seconds = swagger_client.Object() # Object | TimeoutSeconds for the list/watch call. (optional)
 
 try:
+    # Get a list of migration objects
     api_response = api_instance.list_migrations(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
@@ -952,7 +959,7 @@ No authorization required
 # **list_virtualmachinereplicasets**
 > V1VirtualMachineReplicaSetList list_virtualmachinereplicasets(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
-
+Get a list of virtualmachinereplicaset objects
 
 ### Example
 ```python
@@ -970,6 +977,7 @@ resource_version = 'resource_version_example' # str | When specified with a watc
 timeout_seconds = swagger_client.Object() # Object | TimeoutSeconds for the list/watch call. (optional)
 
 try:
+    # Get a list of virtualmachinereplicaset objects
     api_response = api_instance.list_virtualmachinereplicasets(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
@@ -1004,7 +1012,7 @@ No authorization required
 # **list_virtualmachines**
 > V1VirtualMachineList list_virtualmachines(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
-
+Get a list of virtualmachine objects
 
 ### Example
 ```python
@@ -1022,6 +1030,7 @@ resource_version = 'resource_version_example' # str | When specified with a watc
 timeout_seconds = swagger_client.Object() # Object | TimeoutSeconds for the list/watch call. (optional)
 
 try:
+    # Get a list of virtualmachine objects
     api_response = api_instance.list_virtualmachines(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
@@ -1056,7 +1065,7 @@ No authorization required
 # **patch_migration**
 > V1Migration patch_migration()
 
-test5
+Patch a migration object.
 
 ### Example
 ```python
@@ -1069,7 +1078,7 @@ from pprint import pprint
 api_instance = swagger_client.ApiskubevirtiovalphaApi()
 
 try:
-    # test5
+    # Patch a migration object.
     api_response = api_instance.patch_migration()
     pprint(api_response)
 except ApiException as e:
@@ -1097,7 +1106,7 @@ No authorization required
 # **patch_virtualmachine**
 > V1VirtualMachine patch_virtualmachine()
 
-test5
+Patch a virtualmachine object.
 
 ### Example
 ```python
@@ -1110,7 +1119,7 @@ from pprint import pprint
 api_instance = swagger_client.ApiskubevirtiovalphaApi()
 
 try:
-    # test5
+    # Patch a virtualmachine object.
     api_response = api_instance.patch_virtualmachine()
     pprint(api_response)
 except ApiException as e:
@@ -1138,7 +1147,7 @@ No authorization required
 # **patch_virtualmachinereplicaset**
 > V1VirtualMachineReplicaSet patch_virtualmachinereplicaset()
 
-test5
+Patch a virtualmachinereplicaset object.
 
 ### Example
 ```python
@@ -1151,7 +1160,7 @@ from pprint import pprint
 api_instance = swagger_client.ApiskubevirtiovalphaApi()
 
 try:
-    # test5
+    # Patch a virtualmachinereplicaset object.
     api_response = api_instance.patch_virtualmachinereplicaset()
     pprint(api_response)
 except ApiException as e:
@@ -1225,7 +1234,7 @@ No authorization required
 # **update_migration**
 > V1Migration update_migration(body, namespace, name)
 
-test2
+Update a migration object.
 
 ### Example
 ```python
@@ -1241,7 +1250,7 @@ namespace = 'namespace_example' # str | Object name and auth scope, such as for 
 name = 'name_example' # str | Name of the resource
 
 try:
-    # test2
+    # Update a migration object.
     api_response = api_instance.update_migration(body, namespace, name)
     pprint(api_response)
 except ApiException as e:
@@ -1274,7 +1283,7 @@ No authorization required
 # **update_virtualmachine**
 > V1VirtualMachine update_virtualmachine(body, namespace, name)
 
-test2
+Update a virtualmachine object.
 
 ### Example
 ```python
@@ -1290,7 +1299,7 @@ namespace = 'namespace_example' # str | Object name and auth scope, such as for 
 name = 'name_example' # str | Name of the resource
 
 try:
-    # test2
+    # Update a virtualmachine object.
     api_response = api_instance.update_virtualmachine(body, namespace, name)
     pprint(api_response)
 except ApiException as e:
@@ -1323,7 +1332,7 @@ No authorization required
 # **update_virtualmachinereplicaset**
 > V1VirtualMachineReplicaSet update_virtualmachinereplicaset(body, namespace, name)
 
-test2
+Update a virtualmachinereplicaset object.
 
 ### Example
 ```python
@@ -1339,7 +1348,7 @@ namespace = 'namespace_example' # str | Object name and auth scope, such as for 
 name = 'name_example' # str | Name of the resource
 
 try:
-    # test2
+    # Update a virtualmachinereplicaset object.
     api_response = api_instance.update_virtualmachinereplicaset(body, namespace, name)
     pprint(api_response)
 except ApiException as e:
@@ -1372,7 +1381,7 @@ No authorization required
 # **watch_all_migrations**
 > V1Migration watch_all_migrations(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
-
+Watch a migration object.
 
 ### Example
 ```python
@@ -1390,6 +1399,7 @@ resource_version = 'resource_version_example' # str | When specified with a watc
 timeout_seconds = swagger_client.Object() # Object | TimeoutSeconds for the list/watch call. (optional)
 
 try:
+    # Watch a migration object.
     api_response = api_instance.watch_all_migrations(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
@@ -1424,7 +1434,7 @@ No authorization required
 # **watch_all_virtualmachinereplicasets**
 > V1VirtualMachineReplicaSet watch_all_virtualmachinereplicasets(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
-
+Watch a virtualmachinereplicaset object.
 
 ### Example
 ```python
@@ -1442,6 +1452,7 @@ resource_version = 'resource_version_example' # str | When specified with a watc
 timeout_seconds = swagger_client.Object() # Object | TimeoutSeconds for the list/watch call. (optional)
 
 try:
+    # Watch a virtualmachinereplicaset object.
     api_response = api_instance.watch_all_virtualmachinereplicasets(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
@@ -1476,7 +1487,7 @@ No authorization required
 # **watch_all_virtualmachines**
 > V1VirtualMachine watch_all_virtualmachines(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
-
+Watch a virtualmachine object.
 
 ### Example
 ```python
@@ -1494,6 +1505,7 @@ resource_version = 'resource_version_example' # str | When specified with a watc
 timeout_seconds = swagger_client.Object() # Object | TimeoutSeconds for the list/watch call. (optional)
 
 try:
+    # Watch a virtualmachine object.
     api_response = api_instance.watch_all_virtualmachines(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
@@ -1528,7 +1540,7 @@ No authorization required
 # **watch_migrations**
 > V1Migration watch_migrations(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
-
+Watch a migrations collection.
 
 ### Example
 ```python
@@ -1546,6 +1558,7 @@ resource_version = 'resource_version_example' # str | When specified with a watc
 timeout_seconds = swagger_client.Object() # Object | TimeoutSeconds for the list/watch call. (optional)
 
 try:
+    # Watch a migrations collection.
     api_response = api_instance.watch_migrations(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
@@ -1580,7 +1593,7 @@ No authorization required
 # **watch_virtualmachinereplicasets**
 > V1VirtualMachineReplicaSet watch_virtualmachinereplicasets(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
-
+Watch a virtualmachinereplicasets collection.
 
 ### Example
 ```python
@@ -1598,6 +1611,7 @@ resource_version = 'resource_version_example' # str | When specified with a watc
 timeout_seconds = swagger_client.Object() # Object | TimeoutSeconds for the list/watch call. (optional)
 
 try:
+    # Watch a virtualmachinereplicasets collection.
     api_response = api_instance.watch_virtualmachinereplicasets(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:
@@ -1632,7 +1646,7 @@ No authorization required
 # **watch_virtualmachines**
 > V1VirtualMachine watch_virtualmachines(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
 
-
+Watch a virtualmachines collection.
 
 ### Example
 ```python
@@ -1650,6 +1664,7 @@ resource_version = 'resource_version_example' # str | When specified with a watc
 timeout_seconds = swagger_client.Object() # Object | TimeoutSeconds for the list/watch call. (optional)
 
 try:
+    # Watch a virtualmachines collection.
     api_response = api_instance.watch_virtualmachines(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
     pprint(api_response)
 except ApiException as e:

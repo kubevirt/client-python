@@ -30,11 +30,11 @@ import unittest
 
 import swagger_client
 from swagger_client.rest import ApiException
-from swagger_client.models.v1_vm import V1VM
+from swagger_client.models.v1_virtual_machine_replica_set_list import V1VirtualMachineReplicaSetList
 
 
-class TestV1VM(unittest.TestCase):
-    """ V1VM unit test stubs """
+class TestV1VirtualMachineReplicaSetList(unittest.TestCase):
+    """ V1VirtualMachineReplicaSetList unit test stubs """
 
     def setUp(self):
         pass
@@ -42,11 +42,11 @@ class TestV1VM(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1VM(self):
+    def testV1VirtualMachineReplicaSetList(self):
         """
-        Test V1VM
+        Test V1VirtualMachineReplicaSetList
         """
-        model = swagger_client.models.v1_vm.V1VM()
+        model = swagger_client.models.v1_virtual_machine_replica_set_list.V1VirtualMachineReplicaSetList()
 
 
 if __name__ == '__main__':

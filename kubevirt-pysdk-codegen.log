@@ -1,203 +1,227 @@
-[main] INFO io.swagger.parser.Swagger20Parser - reading from /tmp/v1alpha1
-[main] INFO io.swagger.parser.Swagger20Parser - reading from /tmp/v1alpha1
+[main] INFO io.swagger.parser.Swagger20Parser - reading from swagger.json
+[main] INFO io.swagger.parser.Swagger20Parser - reading from swagger.json
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/types_uid.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_types_uid.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_types_uid.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//TypesUID.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_api_resource.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_api_resource.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_api_resource.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1APIResource.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_api_resource_list.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_api_resource_list.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_api_resource_list.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1APIResourceList.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_address.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_address.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_address.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Address.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_alias.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_alias.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_alias.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Alias.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_bios.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_bios.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_bios.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1BIOS.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_ballooning.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_ballooning.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_ballooning.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Ballooning.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_band_width.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_band_width.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_band_width.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1BandWidth.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_boot.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_boot.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_boot.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Boot.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_boot_menu.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_boot_menu.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_boot_menu.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1BootMenu.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_boot_order.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_boot_order.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_boot_order.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1BootOrder.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_channel.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_channel.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_channel.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Channel.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_channel_source.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_channel_source.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_channel_source.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1ChannelSource.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_channel_target.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_channel_target.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_channel_target.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1ChannelTarget.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_clock.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_clock.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_clock.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Clock.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_cloud_init_data_source_no_cloud.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_cloud_init_data_source_no_cloud.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_cloud_init_data_source_no_cloud.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1CloudInitDataSourceNoCloud.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_cloud_init_spec.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_cloud_init_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_cloud_init_spec.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1CloudInitSpec.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_console.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_console.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_console.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Console.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_console_target.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_console_target.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_console_target.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1ConsoleTarget.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_devices.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_devices.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_devices.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Devices.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_disk.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_disk.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_disk.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Disk.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_disk_auth.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_disk_auth.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_disk_auth.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1DiskAuth.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_disk_driver.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_disk_driver.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_disk_driver.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1DiskDriver.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_disk_secret.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_disk_secret.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_disk_secret.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1DiskSecret.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_disk_source.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_disk_source.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_disk_source.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1DiskSource.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_disk_source_host.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_disk_source_host.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_disk_source_host.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1DiskSourceHost.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_disk_target.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_disk_target.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_disk_target.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1DiskTarget.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_domain_spec.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_domain_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_domain_spec.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1DomainSpec.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_entry.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_entry.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_entry.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Entry.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_filter_ref.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_filter_ref.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_filter_ref.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1FilterRef.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_graphics.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_graphics.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_graphics.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Graphics.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_initializer.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_initializer.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_initializer.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Initializer.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_initializers.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_initializers.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_initializers.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Initializers.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_interface.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_interface.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_interface.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Interface.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_interface_source.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_interface_source.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_interface_source.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1InterfaceSource.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_interface_target.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_interface_target.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_interface_target.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1InterfaceTarget.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_label_selector.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_label_selector.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1LabelSelector.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_label_selector_requirement.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_label_selector_requirement.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1LabelSelectorRequirement.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_link_state.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_link_state.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_link_state.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1LinkState.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_list_meta.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_list_meta.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_list_meta.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1ListMeta.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_listen.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_listen.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_listen.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Listen.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_mac.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_mac.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_mac.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1MAC.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_memory.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_memory.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_memory.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Memory.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_migration.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_migration.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_migration.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Migration.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_migration_list.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_migration_list.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_migration_list.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1MigrationList.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_migration_spec.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_migration_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_migration_spec.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1MigrationSpec.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_migration_status.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_migration_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_migration_status.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1MigrationStatus.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_model.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_model.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_model.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Model.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_os.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_os.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_os.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1OS.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_os_type.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_os_type.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_os_type.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1OSType.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_object_meta.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_object_meta.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_object_meta.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1ObjectMeta.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_owner_reference.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_owner_reference.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_owner_reference.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1OwnerReference.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_read_only.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_read_only.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_read_only.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1ReadOnly.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_sm_bios.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_sm_bios.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_sm_bios.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1SMBios.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_serial.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_serial.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_serial.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Serial.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_serial_target.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_serial_target.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_serial_target.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1SerialTarget.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_status.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_status.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Status.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_status_cause.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_status_cause.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_status_cause.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1StatusCause.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_status_details.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_status_details.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_status_details.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1StatusDetails.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_sys_info.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_sys_info.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_sys_info.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1SysInfo.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_vm_condition.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_vm_condition.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_vm_condition.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1VMCondition.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_vm_graphics.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_vm_graphics.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_vm_graphics.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1VMGraphics.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_vm_replica_set_condition.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_vm_replica_set_condition.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1VMReplicaSetCondition.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_vm_replica_set_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_vm_replica_set_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1VMReplicaSetSpec.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_vm_replica_set_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_vm_replica_set_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1VMReplicaSetStatus.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_vm_selector.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_vm_selector.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_vm_selector.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1VMSelector.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_vm_spec.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_vm_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_vm_spec.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1VMSpec.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_vm_status.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_vm_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_vm_status.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1VMStatus.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_vm_template_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_vm_template_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1VMTemplateSpec.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_video.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_video.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_video.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1Video.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_virtual_machine.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_virtual_machine.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_virtual_machine.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1VirtualMachine.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_virtual_machine_list.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_virtual_machine_list.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_virtual_machine_list.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1VirtualMachineList.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_virtual_machine_replica_set.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_virtual_machine_replica_set.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1VirtualMachineReplicaSet.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/models/v1_virtual_machine_replica_set_list.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_v1_virtual_machine_replica_set_list.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//V1VirtualMachineReplicaSetList.md
 com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
 	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
 	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
@@ -218,304 +242,7 @@ com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerE
 	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
 Caused by: java.lang.NullPointerException
 	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
-	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:639)
-	... 13 more
-[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
-[main] ERROR io.swagger.codegen.DefaultCodegen - null
-java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
-	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1365)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
-[main] ERROR io.swagger.codegen.DefaultCodegen - null
-java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
-	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
-	at io.swagger.codegen.DefaultCodegen.getTypeDeclaration(DefaultCodegen.java:1119)
-	at io.swagger.codegen.languages.PythonClientCodegen.getTypeDeclaration(PythonClientCodegen.java:294)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1572)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
-[main] ERROR io.swagger.codegen.DefaultCodegen - null
-java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
-	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1583)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_0`
-com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
-	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
-	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
-	at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:187)
-	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:647)
-	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:152)
-	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:128)
-	at com.fasterxml.jackson.databind.ObjectWriter._configAndWriteValue(ObjectWriter.java:800)
-	at com.fasterxml.jackson.databind.ObjectWriter.writeValueAsString(ObjectWriter.java:676)
-	at io.swagger.util.Json.pretty(Json.java:23)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1361)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-Caused by: java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
-	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:639)
-	... 13 more
-[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
-[main] ERROR io.swagger.codegen.DefaultCodegen - null
-java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
-	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1365)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
-[main] ERROR io.swagger.codegen.DefaultCodegen - null
-java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
-	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
-	at io.swagger.codegen.DefaultCodegen.getTypeDeclaration(DefaultCodegen.java:1119)
-	at io.swagger.codegen.languages.PythonClientCodegen.getTypeDeclaration(PythonClientCodegen.java:294)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1572)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
-[main] ERROR io.swagger.codegen.DefaultCodegen - null
-java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
-	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1583)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_1`
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_2`
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_3`
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_4`
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_5`
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_6`
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_7`
-com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
-	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
-	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
-	at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:187)
-	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:647)
-	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:152)
-	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:128)
-	at com.fasterxml.jackson.databind.ObjectWriter._configAndWriteValue(ObjectWriter.java:800)
-	at com.fasterxml.jackson.databind.ObjectWriter.writeValueAsString(ObjectWriter.java:676)
-	at io.swagger.util.Json.pretty(Json.java:23)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1361)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-Caused by: java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
-	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:639)
-	... 13 more
-[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
-[main] ERROR io.swagger.codegen.DefaultCodegen - null
-java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
-	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1365)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
-[main] ERROR io.swagger.codegen.DefaultCodegen - null
-java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
-	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
-	at io.swagger.codegen.DefaultCodegen.getTypeDeclaration(DefaultCodegen.java:1119)
-	at io.swagger.codegen.languages.PythonClientCodegen.getTypeDeclaration(PythonClientCodegen.java:294)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1572)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
-[main] ERROR io.swagger.codegen.DefaultCodegen - null
-java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
-	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1583)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_8`
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_9`
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_10`
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_11`
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_12`
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_13`
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_14`
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_15`
-com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
-	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
-	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
-	at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:187)
-	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:647)
-	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:152)
-	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:128)
-	at com.fasterxml.jackson.databind.ObjectWriter._configAndWriteValue(ObjectWriter.java:800)
-	at com.fasterxml.jackson.databind.ObjectWriter.writeValueAsString(ObjectWriter.java:676)
-	at io.swagger.util.Json.pretty(Json.java:23)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1361)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-Caused by: java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
-	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:639)
-	... 13 more
-[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
-[main] ERROR io.swagger.codegen.DefaultCodegen - null
-java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
-	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1365)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
-[main] ERROR io.swagger.codegen.DefaultCodegen - null
-java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
-	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
-	at io.swagger.codegen.DefaultCodegen.getTypeDeclaration(DefaultCodegen.java:1119)
-	at io.swagger.codegen.languages.PythonClientCodegen.getTypeDeclaration(PythonClientCodegen.java:294)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1572)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
-[main] ERROR io.swagger.codegen.DefaultCodegen - null
-java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
-	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1583)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `func1_16`
-com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
-	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
-	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
-	at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:187)
-	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:647)
-	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:152)
-	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:128)
-	at com.fasterxml.jackson.databind.ObjectWriter._configAndWriteValue(ObjectWriter.java:800)
-	at com.fasterxml.jackson.databind.ObjectWriter.writeValueAsString(ObjectWriter.java:676)
-	at io.swagger.util.Json.pretty(Json.java:23)
-	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1361)
-	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
-	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
-	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
-	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
-	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
-	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
-	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-Caused by: java.lang.NullPointerException
-	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor38.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
@@ -585,7 +312,7 @@ com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerE
 	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
 Caused by: java.lang.NullPointerException
 	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor38.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
@@ -635,7 +362,6 @@ java.lang.NullPointerException
 	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
 	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
 	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `not_implemented_yet_0`
 com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
 	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
 	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
@@ -656,7 +382,7 @@ com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerE
 	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
 Caused by: java.lang.NullPointerException
 	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor38.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
@@ -706,7 +432,6 @@ java.lang.NullPointerException
 	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
 	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
 	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `not_implemented_yet_1`
 com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
 	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
 	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
@@ -727,7 +452,7 @@ com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerE
 	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
 Caused by: java.lang.NullPointerException
 	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
-	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor38.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
@@ -777,9 +502,568 @@ java.lang.NullPointerException
 	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
 	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
 	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
-[main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `not_implemented_yet_2`
+com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
+	at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:187)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:647)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:152)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:128)
+	at com.fasterxml.jackson.databind.ObjectWriter._configAndWriteValue(ObjectWriter.java:800)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValueAsString(ObjectWriter.java:676)
+	at io.swagger.util.Json.pretty(Json.java:23)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1361)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+Caused by: java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at sun.reflect.GeneratedMethodAccessor38.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:639)
+	... 13 more
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1365)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.getTypeDeclaration(DefaultCodegen.java:1119)
+	at io.swagger.codegen.languages.PythonClientCodegen.getTypeDeclaration(PythonClientCodegen.java:294)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1572)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1583)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
+	at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:187)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:647)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:152)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:128)
+	at com.fasterxml.jackson.databind.ObjectWriter._configAndWriteValue(ObjectWriter.java:800)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValueAsString(ObjectWriter.java:676)
+	at io.swagger.util.Json.pretty(Json.java:23)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1361)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+Caused by: java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at sun.reflect.GeneratedMethodAccessor38.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:639)
+	... 13 more
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1365)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.getTypeDeclaration(DefaultCodegen.java:1119)
+	at io.swagger.codegen.languages.PythonClientCodegen.getTypeDeclaration(PythonClientCodegen.java:294)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1572)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1583)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
+	at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:187)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:647)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:152)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:128)
+	at com.fasterxml.jackson.databind.ObjectWriter._configAndWriteValue(ObjectWriter.java:800)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValueAsString(ObjectWriter.java:676)
+	at io.swagger.util.Json.pretty(Json.java:23)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1361)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+Caused by: java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at sun.reflect.GeneratedMethodAccessor38.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:639)
+	... 13 more
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1365)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.getTypeDeclaration(DefaultCodegen.java:1119)
+	at io.swagger.codegen.languages.PythonClientCodegen.getTypeDeclaration(PythonClientCodegen.java:294)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1572)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1583)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
+	at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:187)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:647)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:152)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:128)
+	at com.fasterxml.jackson.databind.ObjectWriter._configAndWriteValue(ObjectWriter.java:800)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValueAsString(ObjectWriter.java:676)
+	at io.swagger.util.Json.pretty(Json.java:23)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1361)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+Caused by: java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at sun.reflect.GeneratedMethodAccessor38.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:639)
+	... 13 more
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1365)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.getTypeDeclaration(DefaultCodegen.java:1119)
+	at io.swagger.codegen.languages.PythonClientCodegen.getTypeDeclaration(PythonClientCodegen.java:294)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1572)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1583)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
+	at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:187)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:647)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:152)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:128)
+	at com.fasterxml.jackson.databind.ObjectWriter._configAndWriteValue(ObjectWriter.java:800)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValueAsString(ObjectWriter.java:676)
+	at io.swagger.util.Json.pretty(Json.java:23)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1361)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+Caused by: java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at sun.reflect.GeneratedMethodAccessor38.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:639)
+	... 13 more
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1365)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.getTypeDeclaration(DefaultCodegen.java:1119)
+	at io.swagger.codegen.languages.PythonClientCodegen.getTypeDeclaration(PythonClientCodegen.java:294)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1572)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1583)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
+	at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:187)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:647)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:152)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:128)
+	at com.fasterxml.jackson.databind.ObjectWriter._configAndWriteValue(ObjectWriter.java:800)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValueAsString(ObjectWriter.java:676)
+	at io.swagger.util.Json.pretty(Json.java:23)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1361)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+Caused by: java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at sun.reflect.GeneratedMethodAccessor38.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:639)
+	... 13 more
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1365)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.getTypeDeclaration(DefaultCodegen.java:1119)
+	at io.swagger.codegen.languages.PythonClientCodegen.getTypeDeclaration(PythonClientCodegen.java:294)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1572)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1583)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
+	at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:187)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:647)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:152)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:128)
+	at com.fasterxml.jackson.databind.ObjectWriter._configAndWriteValue(ObjectWriter.java:800)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValueAsString(ObjectWriter.java:676)
+	at io.swagger.util.Json.pretty(Json.java:23)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1361)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+Caused by: java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at sun.reflect.GeneratedMethodAccessor38.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:639)
+	... 13 more
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1365)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.getTypeDeclaration(DefaultCodegen.java:1119)
+	at io.swagger.codegen.languages.PythonClientCodegen.getTypeDeclaration(PythonClientCodegen.java:294)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1572)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1583)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+com.fasterxml.jackson.databind.JsonMappingException: (was java.lang.NullPointerException) (through reference chain: io.swagger.models.properties.RefProperty["$ref"])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:210)
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:177)
+	at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:187)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:647)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:152)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:128)
+	at com.fasterxml.jackson.databind.ObjectWriter._configAndWriteValue(ObjectWriter.java:800)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValueAsString(ObjectWriter.java:676)
+	at io.swagger.util.Json.pretty(Json.java:23)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1361)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+Caused by: java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at sun.reflect.GeneratedMethodAccessor38.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:466)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:639)
+	... 13 more
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1365)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.getTypeDeclaration(DefaultCodegen.java:1119)
+	at io.swagger.codegen.languages.PythonClientCodegen.getTypeDeclaration(PythonClientCodegen.java:294)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1572)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
+[main] WARN io.swagger.codegen.DefaultCodegen - Error obtaining the datatype from RefProperty:io.swagger.models.properties.RefProperty@e8fe9c77. Datatype default to Object
+[main] ERROR io.swagger.codegen.DefaultCodegen - null
+java.lang.NullPointerException
+	at io.swagger.models.properties.RefProperty.get$ref(RefProperty.java:52)
+	at io.swagger.codegen.DefaultCodegen.getSwaggerType(DefaultCodegen.java:1062)
+	at io.swagger.codegen.languages.PythonClientCodegen.getSwaggerType(PythonClientCodegen.java:299)
+	at io.swagger.codegen.DefaultCodegen.fromProperty(DefaultCodegen.java:1583)
+	at io.swagger.codegen.DefaultCodegen.fromParameter(DefaultCodegen.java:2195)
+	at io.swagger.codegen.DefaultCodegen.fromOperation(DefaultCodegen.java:1961)
+	at io.swagger.codegen.DefaultGenerator.processOperation(DefaultGenerator.java:744)
+	at io.swagger.codegen.DefaultGenerator.processPaths(DefaultGenerator.java:688)
+	at io.swagger.codegen.DefaultGenerator.generate(DefaultGenerator.java:376)
+	at io.swagger.codegen.cmd.Generate.run(Generate.java:223)
+	at io.swagger.codegen.SwaggerCodegen.main(SwaggerCodegen.java:36)
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./swagger_client/apis/apiskubevirtiovalpha_api.py
-[main] INFO io.swagger.codegen.DefaultGenerator - File exists. Skipped overwriting /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_apiskubevirtiovalpha_api.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./test/test_apiskubevirtiovalpha_api.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./docs//ApiskubevirtiovalphaApi.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./README.md
 [main] INFO io.swagger.codegen.DefaultGenerator - writing file /home/lbednar/work/kubevirt-org/kubevirt-pysdk-generated/./LICENSE

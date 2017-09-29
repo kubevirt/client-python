@@ -30,11 +30,11 @@ import unittest
 
 import swagger_client
 from swagger_client.rest import ApiException
-from swagger_client.models.v1_vm_list import V1VMList
+from swagger_client.models.v1_vm_template_spec import V1VMTemplateSpec
 
 
-class TestV1VMList(unittest.TestCase):
-    """ V1VMList unit test stubs """
+class TestV1VMTemplateSpec(unittest.TestCase):
+    """ V1VMTemplateSpec unit test stubs """
 
     def setUp(self):
         pass
@@ -42,11 +42,11 @@ class TestV1VMList(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1VMList(self):
+    def testV1VMTemplateSpec(self):
         """
-        Test V1VMList
+        Test V1VMTemplateSpec
         """
-        model = swagger_client.models.v1_vm_list.V1VMList()
+        model = swagger_client.models.v1_vm_template_spec.V1VMTemplateSpec()
 
 
 if __name__ == '__main__':

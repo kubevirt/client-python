@@ -10,7 +10,7 @@
   "apis": [
    {
     "path": "/apis/kubevirt.io/v1alpha1",
-    "description": "",
+    "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
       "type": "v1.APIResourceList",
@@ -24,16 +24,17 @@
     ]
    },
    {
-    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms",
-    "description": "",
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/virtualmachines",
+    "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
-      "type": "v1.VM",
+      "type": "v1.VirtualMachine",
       "method": "POST",
-      "nickname": "func1",
+      "summary": "Create a virtualmachine object.",
+      "nickname": "create_virtualmachine",
       "parameters": [
        {
-        "type": "v1.VM",
+        "type": "v1.VirtualMachine",
         "paramType": "body",
         "name": "body",
         "description": "",
@@ -59,9 +60,10 @@
       ]
      },
      {
-      "type": "v1.VMList",
+      "type": "v1.VirtualMachineList",
       "method": "GET",
-      "nickname": "func1",
+      "summary": "Get a list of virtualmachine objects",
+      "nickname": "list_virtualmachines",
       "parameters": [
        {
         "type": "string",
@@ -110,9 +112,10 @@
       ]
      },
      {
-      "type": "v1.VMList",
+      "type": "v1.VirtualMachineList",
       "method": "DELETE",
-      "nickname": "func1",
+      "summary": "Delete a list of virtualmachine objects.",
+      "nickname": "delete_virtualmachines",
       "parameters": [
        {
         "type": "string",
@@ -147,17 +150,17 @@
     ]
    },
    {
-    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms/{name:[a-z0-9][a-z0-9\\-]*}",
-    "description": "",
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\\-]*}",
+    "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
-      "type": "v1.VM",
+      "type": "v1.VirtualMachine",
       "method": "PUT",
-      "summary": "test2",
-      "nickname": "func1",
+      "summary": "Update a virtualmachine object.",
+      "nickname": "update_virtualmachine",
       "parameters": [
        {
-        "type": "v1.VM",
+        "type": "v1.VirtualMachine",
         "paramType": "body",
         "name": "body",
         "description": "",
@@ -193,8 +196,8 @@
      {
       "type": "v1.Status",
       "method": "DELETE",
-      "summary": "test3",
-      "nickname": "func1",
+      "summary": "Delete a virtualmachine object.",
+      "nickname": "delete_virtualmachine",
       "parameters": [
        {
         "type": "string",
@@ -223,10 +226,10 @@
       ]
      },
      {
-      "type": "v1.VM",
+      "type": "v1.VirtualMachine",
       "method": "GET",
-      "summary": "test4",
-      "nickname": "func1",
+      "summary": "Get a virtualmachine object.",
+      "nickname": "get_virtualmachine",
       "parameters": [
        {
         "type": "string",
@@ -267,10 +270,10 @@
       ]
      },
      {
-      "type": "v1.VM",
+      "type": "v1.VirtualMachine",
       "method": "PATCH",
-      "summary": "test5",
-      "nickname": "func1",
+      "summary": "Patch a virtualmachine object.",
+      "nickname": "patch_virtualmachine",
       "parameters": [],
       "produces": [
        "application/json-patch+json"
@@ -279,14 +282,14 @@
     ]
    },
    {
-    "path": "/apis/kubevirt.io/v1alpha1/vms",
-    "description": "",
+    "path": "/apis/kubevirt.io/v1alpha1/virtualmachines",
+    "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
-      "type": "v1.VMList",
+      "type": "v1.VirtualMachineList",
       "method": "GET",
-      "summary": "test4",
-      "nickname": "func1",
+      "summary": "Get a list all of virtualmachine objects.",
+      "nickname": "list_all_virtualmachines",
       "parameters": [
        {
         "type": "string",
@@ -329,13 +332,14 @@
     ]
    },
    {
-    "path": "/apis/kubevirt.io/v1alpha1/watch/vms",
-    "description": "",
+    "path": "/apis/kubevirt.io/v1alpha1/watch/virtualmachines",
+    "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
-      "type": "v1.VM",
+      "type": "v1.VirtualMachine",
       "method": "GET",
-      "nickname": "NotImplementedYet",
+      "summary": "Watch a virtualmachine object.",
+      "nickname": "watch_all_virtualmachines",
       "parameters": [
        {
         "type": "string",
@@ -385,13 +389,14 @@
     ]
    },
    {
-    "path": "/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms",
-    "description": "",
+    "path": "/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/virtualmachines",
+    "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
-      "type": "v1.VM",
+      "type": "v1.VirtualMachine",
       "method": "GET",
-      "nickname": "NotImplementedYet",
+      "summary": "Watch a virtualmachines collection.",
+      "nickname": "watch_virtualmachines",
       "parameters": [
        {
         "type": "string",
@@ -442,12 +447,13 @@
    },
    {
     "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/migrations",
-    "description": "",
+    "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
       "type": "v1.Migration",
       "method": "POST",
-      "nickname": "func1",
+      "summary": "Create a migration object.",
+      "nickname": "create_migration",
       "parameters": [
        {
         "type": "v1.Migration",
@@ -478,7 +484,8 @@
      {
       "type": "v1.MigrationList",
       "method": "GET",
-      "nickname": "func1",
+      "summary": "Get a list of migration objects",
+      "nickname": "list_migrations",
       "parameters": [
        {
         "type": "string",
@@ -529,7 +536,8 @@
      {
       "type": "v1.MigrationList",
       "method": "DELETE",
-      "nickname": "func1",
+      "summary": "Delete a list of migration objects.",
+      "nickname": "delete_migrations",
       "parameters": [
        {
         "type": "string",
@@ -565,13 +573,13 @@
    },
    {
     "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/migrations/{name:[a-z0-9][a-z0-9\\-]*}",
-    "description": "",
+    "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
       "type": "v1.Migration",
       "method": "PUT",
-      "summary": "test2",
-      "nickname": "func1",
+      "summary": "Update a migration object.",
+      "nickname": "update_migration",
       "parameters": [
        {
         "type": "v1.Migration",
@@ -610,8 +618,8 @@
      {
       "type": "v1.Status",
       "method": "DELETE",
-      "summary": "test3",
-      "nickname": "func1",
+      "summary": "Delete a migration object.",
+      "nickname": "delete_migration",
       "parameters": [
        {
         "type": "string",
@@ -642,8 +650,8 @@
      {
       "type": "v1.Migration",
       "method": "GET",
-      "summary": "test4",
-      "nickname": "func1",
+      "summary": "Get a migration object.",
+      "nickname": "get_migration",
       "parameters": [
        {
         "type": "string",
@@ -686,8 +694,8 @@
      {
       "type": "v1.Migration",
       "method": "PATCH",
-      "summary": "test5",
-      "nickname": "func1",
+      "summary": "Patch a migration object.",
+      "nickname": "patch_migration",
       "parameters": [],
       "produces": [
        "application/json-patch+json"
@@ -697,13 +705,13 @@
    },
    {
     "path": "/apis/kubevirt.io/v1alpha1/migrations",
-    "description": "",
+    "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
       "type": "v1.MigrationList",
       "method": "GET",
-      "summary": "test4",
-      "nickname": "func1",
+      "summary": "Get a list all of migration objects.",
+      "nickname": "list_all_migrations",
       "parameters": [
        {
         "type": "string",
@@ -747,12 +755,13 @@
    },
    {
     "path": "/apis/kubevirt.io/v1alpha1/watch/migrations",
-    "description": "",
+    "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
       "type": "v1.Migration",
       "method": "GET",
-      "nickname": "NotImplementedYet",
+      "summary": "Watch a migration object.",
+      "nickname": "watch_all_migrations",
       "parameters": [
        {
         "type": "string",
@@ -803,12 +812,13 @@
    },
    {
     "path": "/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/migrations",
-    "description": "",
+    "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
       "type": "v1.Migration",
       "method": "GET",
-      "nickname": "NotImplementedYet",
+      "summary": "Watch a migrations collection.",
+      "nickname": "watch_migrations",
       "parameters": [
        {
         "type": "string",
@@ -858,14 +868,436 @@
     ]
    },
    {
-    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms/{name:[a-z0-9][a-z0-9\\-]*}/spice",
-    "description": "",
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/virtualmachinereplicasets",
+    "description": "The KubeVirt API, a virtual machine management.",
+    "operations": [
+     {
+      "type": "v1.VirtualMachineReplicaSet",
+      "method": "POST",
+      "summary": "Create a virtualmachinereplicaset object.",
+      "nickname": "create_virtualmachinereplicaset",
+      "parameters": [
+       {
+        "type": "v1.VirtualMachineReplicaSet",
+        "paramType": "body",
+        "name": "body",
+        "description": "",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ],
+      "consumes": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.VirtualMachineReplicaSetList",
+      "method": "GET",
+      "summary": "Get a list of virtualmachinereplicaset objects",
+      "nickname": "list_virtualmachinereplicasets",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "resourceVersion",
+        "description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "int",
+        "paramType": "query",
+        "name": "timeoutSeconds",
+        "description": "TimeoutSeconds for the list/watch call.",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.VirtualMachineReplicaSetList",
+      "method": "DELETE",
+      "summary": "Delete a list of virtualmachinereplicaset objects.",
+      "nickname": "delete_virtualmachinereplicasets",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "name",
+        "description": "Name of the resource",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/virtualmachinereplicasets/{name:[a-z0-9][a-z0-9\\-]*}",
+    "description": "The KubeVirt API, a virtual machine management.",
+    "operations": [
+     {
+      "type": "v1.VirtualMachineReplicaSet",
+      "method": "PUT",
+      "summary": "Update a virtualmachinereplicaset object.",
+      "nickname": "update_virtualmachinereplicaset",
+      "parameters": [
+       {
+        "type": "v1.VirtualMachineReplicaSet",
+        "paramType": "body",
+        "name": "body",
+        "description": "",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "name",
+        "description": "Name of the resource",
+        "required": true,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ],
+      "consumes": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.Status",
+      "method": "DELETE",
+      "summary": "Delete a virtualmachinereplicaset object.",
+      "nickname": "delete_virtualmachinereplicaset",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "name",
+        "description": "Name of the resource",
+        "required": true,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ],
+      "consumes": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.VirtualMachineReplicaSet",
+      "method": "GET",
+      "summary": "Get a virtualmachinereplicaset object.",
+      "nickname": "get_virtualmachinereplicaset",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "name",
+        "description": "Name of the resource",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "boolean",
+        "paramType": "query",
+        "name": "export",
+        "description": "Should this value be exported. Export strips fields that a user can not specify.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "boolean",
+        "paramType": "query",
+        "name": "exact",
+        "description": "Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ]
+     },
+     {
+      "type": "v1.VirtualMachineReplicaSet",
+      "method": "PATCH",
+      "summary": "Patch a virtualmachinereplicaset object.",
+      "nickname": "patch_virtualmachinereplicaset",
+      "parameters": [],
+      "produces": [
+       "application/json-patch+json"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/virtualmachinereplicasets",
+    "description": "The KubeVirt API, a virtual machine management.",
+    "operations": [
+     {
+      "type": "v1.VirtualMachineReplicaSetList",
+      "method": "GET",
+      "summary": "Get a list all of virtualmachinereplicaset objects.",
+      "nickname": "list_all_virtualmachinereplicasets",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "resourceVersion",
+        "description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "int",
+        "paramType": "query",
+        "name": "timeoutSeconds",
+        "description": "TimeoutSeconds for the list/watch call.",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json",
+       "application/yaml"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/watch/virtualmachinereplicasets",
+    "description": "The KubeVirt API, a virtual machine management.",
+    "operations": [
+     {
+      "type": "v1.VirtualMachineReplicaSet",
+      "method": "GET",
+      "summary": "Watch a virtualmachinereplicaset object.",
+      "nickname": "watch_all_virtualmachinereplicasets",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "resourceVersion",
+        "description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "int",
+        "paramType": "query",
+        "name": "timeoutSeconds",
+        "description": "TimeoutSeconds for the list/watch call.",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/virtualmachinereplicasets",
+    "description": "The KubeVirt API, a virtual machine management.",
+    "operations": [
+     {
+      "type": "v1.VirtualMachineReplicaSet",
+      "method": "GET",
+      "summary": "Watch a virtualmachinereplicasets collection.",
+      "nickname": "watch_virtualmachinereplicasets",
+      "parameters": [
+       {
+        "type": "string",
+        "paramType": "path",
+        "name": "namespace",
+        "description": "Object name and auth scope, such as for teams and projects",
+        "required": true,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "fieldSelector",
+        "description": "A selector to restrict the list of returned objects by their fields. Defaults to everything.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "labelSelector",
+        "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "string",
+        "paramType": "query",
+        "name": "resourceVersion",
+        "description": "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.",
+        "required": false,
+        "allowMultiple": false
+       },
+       {
+        "type": "int",
+        "paramType": "query",
+        "name": "timeoutSeconds",
+        "description": "TimeoutSeconds for the list/watch call.",
+        "required": false,
+        "allowMultiple": false
+       }
+      ],
+      "produces": [
+       "application/json"
+      ]
+     }
+    ]
+   },
+   {
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\\-]*}/spice",
+    "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
       "type": "void",
       "method": "GET",
       "summary": "Returns a remote-viewer configuration file. Run `man 1 remote-viewer` to learn more about the configuration format.",
-      "nickname": "func1",
+      "nickname": "spice",
       "parameters": [
        {
         "type": "string",
@@ -893,14 +1325,14 @@
     ]
    },
    {
-    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/vms/{name:[a-z0-9][a-z0-9\\-]*}/console",
-    "description": "",
+    "path": "/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\\-]*}/console",
+    "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
       "type": "void",
       "method": "GET",
       "summary": "Open a websocket connection to a serial console on the specified VM.",
-      "nickname": "Console",
+      "nickname": "console",
       "parameters": [
        {
         "type": "string",
@@ -932,7 +1364,7 @@
    },
    {
     "path": "/apis/kubevirt.io/v1alpha1/healthz",
-    "description": "",
+    "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
       "type": "void",
@@ -1030,9 +1462,9 @@
      }
     }
    },
-   "v1.VM": {
-    "id": "v1.VM",
-    "description": "VM is *the* VM Definition. It represents a virtual machine in the runtime environment of kubernetes.",
+   "v1.VirtualMachine": {
+    "id": "v1.VirtualMachine",
+    "description": "VirtualMachine is *the* VM Definition. It represents a virtual machine in the runtime environment of kubernetes.",
     "required": [
      "status"
     ],
@@ -1288,7 +1720,7 @@
      "retryAfterSeconds": {
       "type": "integer",
       "format": "int32",
-      "description": "If specified, the time in seconds before the operation should be retried."
+      "description": "If specified, the time in seconds before the operation should be retried. Some errors may indicate the client must take an alternate action - for those errors this field may indicate how long to wait before taking the alternate action."
      }
     }
    },
@@ -1890,6 +2322,9 @@
      },
      "auth": {
       "$ref": "v1.DiskAuth"
+     },
+     "cloudinit": {
+      "$ref": "v1.CloudInitSpec"
      }
     }
    },
@@ -1991,6 +2426,42 @@
      },
      "usage": {
       "type": "string"
+     }
+    }
+   },
+   "v1.CloudInitSpec": {
+    "id": "v1.CloudInitSpec",
+    "description": "Only one of the fields in the CloudInitSpec can be set",
+    "required": [
+     "nocloud"
+    ],
+    "properties": {
+     "nocloud": {
+      "$ref": "v1.CloudInitDataSourceNoCloud",
+      "description": "Nocloud DataSource"
+     }
+    }
+   },
+   "v1.CloudInitDataSourceNoCloud": {
+    "id": "v1.CloudInitDataSourceNoCloud",
+    "description": "http://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html",
+    "required": [
+     "userDataSecretRef",
+     "userDataBase64",
+     "metaDataBase64"
+    ],
+    "properties": {
+     "userDataSecretRef": {
+      "type": "string",
+      "description": "Reference to a k8s secret that contains NoCloud userdata"
+     },
+     "userDataBase64": {
+      "type": "string",
+      "description": "The NoCloud cloud-init userdata as a base64 encoded string"
+     },
+     "metaDataBase64": {
+      "type": "string",
+      "description": "The NoCloud cloud-init metadata as a base64 encoded string"
      }
     }
    },
@@ -2130,9 +2601,9 @@
      }
     }
    },
-   "v1.VMList": {
-    "id": "v1.VMList",
-    "description": "VMList is a list of VMs",
+   "v1.VirtualMachineList": {
+    "id": "v1.VirtualMachineList",
+    "description": "VirtualMachineList is a list of VirtualMachines",
     "required": [
      "items"
     ],
@@ -2151,7 +2622,7 @@
      "items": {
       "type": "array",
       "items": {
-       "$ref": "v1.VM"
+       "$ref": "v1.VirtualMachine"
       }
      }
     }
@@ -2246,6 +2717,190 @@
       "type": "array",
       "items": {
        "$ref": "v1.Migration"
+      }
+     }
+    }
+   },
+   "v1.VirtualMachineReplicaSet": {
+    "id": "v1.VirtualMachineReplicaSet",
+    "description": "VM is *the* VM Definition. It represents a virtual machine in the runtime environment of kubernetes.",
+    "required": [
+     "status"
+    ],
+    "properties": {
+     "kind": {
+      "type": "string",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds"
+     },
+     "apiVersion": {
+      "type": "string",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources"
+     },
+     "metadata": {
+      "$ref": "v1.ObjectMeta"
+     },
+     "spec": {
+      "$ref": "v1.VMReplicaSetSpec",
+      "description": "VM Spec contains the VM specification."
+     },
+     "status": {
+      "$ref": "v1.VMReplicaSetStatus",
+      "description": "Status is the high level overview of how the VM is doing. It contains information available to controllers and users."
+     }
+    }
+   },
+   "v1.VMReplicaSetSpec": {
+    "id": "v1.VMReplicaSetSpec",
+    "required": [
+     "template"
+    ],
+    "properties": {
+     "replicas": {
+      "type": "integer",
+      "format": "int32",
+      "description": "Number of desired pods. This is a pointer to distinguish between explicit\nzero and not specified. Defaults to 1.\n+optional"
+     },
+     "selector": {
+      "$ref": "v1.LabelSelector",
+      "description": "Label selector for pods. Existing ReplicaSets whose pods are\nselected by this will be the ones affected by this deployment.\n+optional"
+     },
+     "template": {
+      "$ref": "v1.VMTemplateSpec",
+      "description": "Template describes the pods that will be created."
+     },
+     "paused": {
+      "type": "boolean",
+      "description": "Indicates that the replica set is paused.\n+optional"
+     }
+    }
+   },
+   "v1.LabelSelector": {
+    "id": "v1.LabelSelector",
+    "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.",
+    "properties": {
+     "matchLabels": {
+      "type": "object",
+      "description": "matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+     },
+     "matchExpressions": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.LabelSelectorRequirement"
+      },
+      "description": "matchExpressions is a list of label selector requirements. The requirements are ANDed."
+     }
+    }
+   },
+   "v1.LabelSelectorRequirement": {
+    "id": "v1.LabelSelectorRequirement",
+    "description": "A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.",
+    "required": [
+     "key",
+     "operator"
+    ],
+    "properties": {
+     "key": {
+      "type": "string",
+      "description": "key is the label key that the selector applies to."
+     },
+     "operator": {
+      "type": "string",
+      "description": "operator represents a key's relationship to a set of values. Valid operators ard In, NotIn, Exists and DoesNotExist."
+     },
+     "values": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+     }
+    }
+   },
+   "v1.VMTemplateSpec": {
+    "id": "v1.VMTemplateSpec",
+    "properties": {
+     "metadata": {
+      "$ref": "v1.ObjectMeta"
+     },
+     "spec": {
+      "$ref": "v1.VMSpec",
+      "description": "VM Spec contains the VM specification."
+     }
+    }
+   },
+   "v1.VMReplicaSetStatus": {
+    "id": "v1.VMReplicaSetStatus",
+    "required": [
+     "conditions"
+    ],
+    "properties": {
+     "replicas": {
+      "type": "integer",
+      "format": "int32",
+      "description": "Total number of non-terminated pods targeted by this deployment (their labels match the selector).\n+optional"
+     },
+     "readyReplicas": {
+      "type": "integer",
+      "format": "int32",
+      "description": "The number of ready replicas for this replica set.\n+optional"
+     },
+     "conditions": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.VMReplicaSetCondition"
+      }
+     }
+    }
+   },
+   "v1.VMReplicaSetCondition": {
+    "id": "v1.VMReplicaSetCondition",
+    "required": [
+     "type",
+     "status"
+    ],
+    "properties": {
+     "type": {
+      "type": "string"
+     },
+     "status": {
+      "type": "string"
+     },
+     "lastProbeTime": {
+      "type": "string"
+     },
+     "lastTransitionTime": {
+      "type": "string"
+     },
+     "reason": {
+      "type": "string"
+     },
+     "message": {
+      "type": "string"
+     }
+    }
+   },
+   "v1.VirtualMachineReplicaSetList": {
+    "id": "v1.VirtualMachineReplicaSetList",
+    "description": "VMList is a list of VMs",
+    "required": [
+     "items"
+    ],
+    "properties": {
+     "kind": {
+      "type": "string",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds"
+     },
+     "apiVersion": {
+      "type": "string",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources"
+     },
+     "metadata": {
+      "$ref": "v1.ListMeta"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "$ref": "v1.VirtualMachineReplicaSet"
       }
      }
     }

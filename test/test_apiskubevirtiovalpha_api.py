@@ -50,6 +50,78 @@ class TestApiskubevirtiovalphaApi(unittest.TestCase):
         """
         pass
 
+    def test_create_migration(self):
+        """
+        Test case for create_migration
+
+        Create a migration object.
+        """
+        pass
+
+    def test_create_virtualmachine(self):
+        """
+        Test case for create_virtualmachine
+
+        Create a virtualmachine object.
+        """
+        pass
+
+    def test_create_virtualmachinereplicaset(self):
+        """
+        Test case for create_virtualmachinereplicaset
+
+        Create a virtualmachinereplicaset object.
+        """
+        pass
+
+    def test_delete_migration(self):
+        """
+        Test case for delete_migration
+
+        Delete a migration object.
+        """
+        pass
+
+    def test_delete_migrations(self):
+        """
+        Test case for delete_migrations
+
+        Delete a list of migration objects.
+        """
+        pass
+
+    def test_delete_virtualmachine(self):
+        """
+        Test case for delete_virtualmachine
+
+        Delete a virtualmachine object.
+        """
+        pass
+
+    def test_delete_virtualmachinereplicaset(self):
+        """
+        Test case for delete_virtualmachinereplicaset
+
+        Delete a virtualmachinereplicaset object.
+        """
+        pass
+
+    def test_delete_virtualmachinereplicasets(self):
+        """
+        Test case for delete_virtualmachinereplicasets
+
+        Delete a list of virtualmachinereplicaset objects.
+        """
+        pass
+
+    def test_delete_virtualmachines(self):
+        """
+        Test case for delete_virtualmachines
+
+        Delete a list of virtualmachine objects.
+        """
+        pass
+
     def test_func1(self):
         """
         Test case for func1
@@ -58,139 +130,27 @@ class TestApiskubevirtiovalphaApi(unittest.TestCase):
         """
         pass
 
-    def test_func1_0(self):
+    def test_get_migration(self):
         """
-        Test case for func1_0
+        Test case for get_migration
 
-        test4
-        """
-        pass
-
-    def test_func1_1(self):
-        """
-        Test case for func1_1
-
-
+        Get a migration object.
         """
         pass
 
-    def test_func1_10(self):
+    def test_get_virtualmachine(self):
         """
-        Test case for func1_10
+        Test case for get_virtualmachine
 
-
-        """
-        pass
-
-    def test_func1_11(self):
-        """
-        Test case for func1_11
-
-        test4
+        Get a virtualmachine object.
         """
         pass
 
-    def test_func1_12(self):
+    def test_get_virtualmachinereplicaset(self):
         """
-        Test case for func1_12
+        Test case for get_virtualmachinereplicaset
 
-        test2
-        """
-        pass
-
-    def test_func1_13(self):
-        """
-        Test case for func1_13
-
-        test3
-        """
-        pass
-
-    def test_func1_14(self):
-        """
-        Test case for func1_14
-
-        test5
-        """
-        pass
-
-    def test_func1_15(self):
-        """
-        Test case for func1_15
-
-        Returns a remote-viewer configuration file. Run `man 1 remote-viewer` to learn more about the configuration format.
-        """
-        pass
-
-    def test_func1_16(self):
-        """
-        Test case for func1_16
-
-        test4
-        """
-        pass
-
-    def test_func1_2(self):
-        """
-        Test case for func1_2
-
-
-        """
-        pass
-
-    def test_func1_3(self):
-        """
-        Test case for func1_3
-
-
-        """
-        pass
-
-    def test_func1_4(self):
-        """
-        Test case for func1_4
-
-        test4
-        """
-        pass
-
-    def test_func1_5(self):
-        """
-        Test case for func1_5
-
-        test2
-        """
-        pass
-
-    def test_func1_6(self):
-        """
-        Test case for func1_6
-
-        test3
-        """
-        pass
-
-    def test_func1_7(self):
-        """
-        Test case for func1_7
-
-        test5
-        """
-        pass
-
-    def test_func1_8(self):
-        """
-        Test case for func1_8
-
-
-        """
-        pass
-
-    def test_func1_9(self):
-        """
-        Test case for func1_9
-
-
+        Get a virtualmachinereplicaset object.
         """
         pass
 
@@ -202,35 +162,155 @@ class TestApiskubevirtiovalphaApi(unittest.TestCase):
         """
         pass
 
-    def test_not_implemented_yet(self):
+    def test_list_all_migrations(self):
         """
-        Test case for not_implemented_yet
+        Test case for list_all_migrations
 
-
-        """
-        pass
-
-    def test_not_implemented_yet_0(self):
-        """
-        Test case for not_implemented_yet_0
-
-
+        Get a list all of migration objects.
         """
         pass
 
-    def test_not_implemented_yet_1(self):
+    def test_list_all_virtualmachinereplicasets(self):
         """
-        Test case for not_implemented_yet_1
+        Test case for list_all_virtualmachinereplicasets
 
-
+        Get a list all of virtualmachinereplicaset objects.
         """
         pass
 
-    def test_not_implemented_yet_2(self):
+    def test_list_all_virtualmachines(self):
         """
-        Test case for not_implemented_yet_2
+        Test case for list_all_virtualmachines
 
+        Get a list all of virtualmachine objects.
+        """
+        pass
 
+    def test_list_migrations(self):
+        """
+        Test case for list_migrations
+
+        Get a list of migration objects
+        """
+        pass
+
+    def test_list_virtualmachinereplicasets(self):
+        """
+        Test case for list_virtualmachinereplicasets
+
+        Get a list of virtualmachinereplicaset objects
+        """
+        pass
+
+    def test_list_virtualmachines(self):
+        """
+        Test case for list_virtualmachines
+
+        Get a list of virtualmachine objects
+        """
+        pass
+
+    def test_patch_migration(self):
+        """
+        Test case for patch_migration
+
+        Patch a migration object.
+        """
+        pass
+
+    def test_patch_virtualmachine(self):
+        """
+        Test case for patch_virtualmachine
+
+        Patch a virtualmachine object.
+        """
+        pass
+
+    def test_patch_virtualmachinereplicaset(self):
+        """
+        Test case for patch_virtualmachinereplicaset
+
+        Patch a virtualmachinereplicaset object.
+        """
+        pass
+
+    def test_spice(self):
+        """
+        Test case for spice
+
+        Returns a remote-viewer configuration file. Run `man 1 remote-viewer` to learn more about the configuration format.
+        """
+        pass
+
+    def test_update_migration(self):
+        """
+        Test case for update_migration
+
+        Update a migration object.
+        """
+        pass
+
+    def test_update_virtualmachine(self):
+        """
+        Test case for update_virtualmachine
+
+        Update a virtualmachine object.
+        """
+        pass
+
+    def test_update_virtualmachinereplicaset(self):
+        """
+        Test case for update_virtualmachinereplicaset
+
+        Update a virtualmachinereplicaset object.
+        """
+        pass
+
+    def test_watch_all_migrations(self):
+        """
+        Test case for watch_all_migrations
+
+        Watch a migration object.
+        """
+        pass
+
+    def test_watch_all_virtualmachinereplicasets(self):
+        """
+        Test case for watch_all_virtualmachinereplicasets
+
+        Watch a virtualmachinereplicaset object.
+        """
+        pass
+
+    def test_watch_all_virtualmachines(self):
+        """
+        Test case for watch_all_virtualmachines
+
+        Watch a virtualmachine object.
+        """
+        pass
+
+    def test_watch_migrations(self):
+        """
+        Test case for watch_migrations
+
+        Watch a migrations collection.
+        """
+        pass
+
+    def test_watch_virtualmachinereplicasets(self):
+        """
+        Test case for watch_virtualmachinereplicasets
+
+        Watch a virtualmachinereplicasets collection.
+        """
+        pass
+
+    def test_watch_virtualmachines(self):
+        """
+        Test case for watch_virtualmachines
+
+        Watch a virtualmachines collection.
         """
         pass
 

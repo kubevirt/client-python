@@ -40,6 +40,8 @@ from .v1_channel import V1Channel
 from .v1_channel_source import V1ChannelSource
 from .v1_channel_target import V1ChannelTarget
 from .v1_clock import V1Clock
+from .v1_cloud_init_data_source_no_cloud import V1CloudInitDataSourceNoCloud
+from .v1_cloud_init_spec import V1CloudInitSpec
 from .v1_console import V1Console
 from .v1_console_target import V1ConsoleTarget
 from .v1_devices import V1Devices
@@ -59,6 +61,8 @@ from .v1_initializers import V1Initializers
 from .v1_interface import V1Interface
 from .v1_interface_source import V1InterfaceSource
 from .v1_interface_target import V1InterfaceTarget
+from .v1_label_selector import V1LabelSelector
+from .v1_label_selector_requirement import V1LabelSelectorRequirement
 from .v1_link_state import V1LinkState
 from .v1_list_meta import V1ListMeta
 from .v1_listen import V1Listen
@@ -81,11 +85,17 @@ from .v1_status import V1Status
 from .v1_status_cause import V1StatusCause
 from .v1_status_details import V1StatusDetails
 from .v1_sys_info import V1SysInfo
-from .v1_vm import V1VM
 from .v1_vm_condition import V1VMCondition
 from .v1_vm_graphics import V1VMGraphics
-from .v1_vm_list import V1VMList
+from .v1_vm_replica_set_condition import V1VMReplicaSetCondition
+from .v1_vm_replica_set_spec import V1VMReplicaSetSpec
+from .v1_vm_replica_set_status import V1VMReplicaSetStatus
 from .v1_vm_selector import V1VMSelector
 from .v1_vm_spec import V1VMSpec
 from .v1_vm_status import V1VMStatus
+from .v1_vm_template_spec import V1VMTemplateSpec
 from .v1_video import V1Video
+from .v1_virtual_machine import V1VirtualMachine
+from .v1_virtual_machine_list import V1VirtualMachineList
+from .v1_virtual_machine_replica_set import V1VirtualMachineReplicaSet
+from .v1_virtual_machine_replica_set_list import V1VirtualMachineReplicaSetList

@@ -123,7 +123,7 @@ class ApiskubevirtiovalphaApi(object):
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `console`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*}/console'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/console'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
@@ -162,6 +162,1008 @@ class ApiskubevirtiovalphaApi(object):
                                             post_params=form_params,
                                             files=local_var_files,
                                             response_type=None,
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def create_migration(self, body, namespace, **kwargs):
+        """
+        Create a migration object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_migration(body, namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1Migration body:  (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: V1Migration
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_migration_with_http_info(body, namespace, **kwargs)
+        else:
+            (data) = self.create_migration_with_http_info(body, namespace, **kwargs)
+            return data
+
+    def create_migration_with_http_info(self, body, namespace, **kwargs):
+        """
+        Create a migration object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_migration_with_http_info(body, namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1Migration body:  (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: V1Migration
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'namespace']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_migration" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `create_migration`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `create_migration`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'application/yaml'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1Migration',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def create_virtualmachine(self, body, namespace, **kwargs):
+        """
+        Create a virtualmachine object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_virtualmachine(body, namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1VirtualMachine body:  (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: V1VirtualMachine
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_virtualmachine_with_http_info(body, namespace, **kwargs)
+        else:
+            (data) = self.create_virtualmachine_with_http_info(body, namespace, **kwargs)
+            return data
+
+    def create_virtualmachine_with_http_info(self, body, namespace, **kwargs):
+        """
+        Create a virtualmachine object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_virtualmachine_with_http_info(body, namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1VirtualMachine body:  (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: V1VirtualMachine
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'namespace']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_virtualmachine" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `create_virtualmachine`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `create_virtualmachine`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'application/yaml'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1VirtualMachine',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def create_virtualmachinereplicaset(self, body, namespace, **kwargs):
+        """
+        Create a virtualmachinereplicaset object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_virtualmachinereplicaset(body, namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1VirtualMachineReplicaSet body:  (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: V1VirtualMachineReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_virtualmachinereplicaset_with_http_info(body, namespace, **kwargs)
+        else:
+            (data) = self.create_virtualmachinereplicaset_with_http_info(body, namespace, **kwargs)
+            return data
+
+    def create_virtualmachinereplicaset_with_http_info(self, body, namespace, **kwargs):
+        """
+        Create a virtualmachinereplicaset object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_virtualmachinereplicaset_with_http_info(body, namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1VirtualMachineReplicaSet body:  (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: V1VirtualMachineReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'namespace']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_virtualmachinereplicaset" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `create_virtualmachinereplicaset`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `create_virtualmachinereplicaset`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'application/yaml'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1VirtualMachineReplicaSet',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_migration(self, namespace, name, **kwargs):
+        """
+        Delete a migration object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_migration(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: V1Status
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_migration_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.delete_migration_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def delete_migration_with_http_info(self, namespace, name, **kwargs):
+        """
+        Delete a migration object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_migration_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: V1Status
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_migration" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_migration`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `delete_migration`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'application/yaml'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1Status',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_migrations(self, name, **kwargs):
+        """
+        Delete a list of migration objects.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_migrations(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :return: V1MigrationList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_migrations_with_http_info(name, **kwargs)
+        else:
+            (data) = self.delete_migrations_with_http_info(name, **kwargs)
+            return data
+
+    def delete_migrations_with_http_info(self, name, **kwargs):
+        """
+        Delete a list of migration objects.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_migrations_with_http_info(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :return: V1MigrationList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'field_selector', 'label_selector']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_migrations" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `delete_migrations`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1MigrationList',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_virtualmachine(self, namespace, name, **kwargs):
+        """
+        Delete a virtualmachine object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_virtualmachine(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: V1Status
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_virtualmachine_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.delete_virtualmachine_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def delete_virtualmachine_with_http_info(self, namespace, name, **kwargs):
+        """
+        Delete a virtualmachine object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_virtualmachine_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: V1Status
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_virtualmachine" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_virtualmachine`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `delete_virtualmachine`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'application/yaml'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1Status',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_virtualmachinereplicaset(self, namespace, name, **kwargs):
+        """
+        Delete a virtualmachinereplicaset object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_virtualmachinereplicaset(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: V1Status
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_virtualmachinereplicaset_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.delete_virtualmachinereplicaset_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def delete_virtualmachinereplicaset_with_http_info(self, namespace, name, **kwargs):
+        """
+        Delete a virtualmachinereplicaset object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_virtualmachinereplicaset_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: V1Status
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_virtualmachinereplicaset" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_virtualmachinereplicaset`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `delete_virtualmachinereplicaset`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'application/yaml'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1Status',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_virtualmachinereplicasets(self, name, **kwargs):
+        """
+        Delete a list of virtualmachinereplicaset objects.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_virtualmachinereplicasets(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :return: V1VirtualMachineReplicaSetList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_virtualmachinereplicasets_with_http_info(name, **kwargs)
+        else:
+            (data) = self.delete_virtualmachinereplicasets_with_http_info(name, **kwargs)
+            return data
+
+    def delete_virtualmachinereplicasets_with_http_info(self, name, **kwargs):
+        """
+        Delete a list of virtualmachinereplicaset objects.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_virtualmachinereplicasets_with_http_info(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :return: V1VirtualMachineReplicaSetList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'field_selector', 'label_selector']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_virtualmachinereplicasets" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `delete_virtualmachinereplicasets`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1VirtualMachineReplicaSetList',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def delete_virtualmachines(self, name, **kwargs):
+        """
+        Delete a list of virtualmachine objects.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_virtualmachines(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :return: V1VirtualMachineList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_virtualmachines_with_http_info(name, **kwargs)
+        else:
+            (data) = self.delete_virtualmachines_with_http_info(name, **kwargs)
+            return data
+
+    def delete_virtualmachines_with_http_info(self, name, **kwargs):
+        """
+        Delete a list of virtualmachine objects.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_virtualmachines_with_http_info(name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :return: V1VirtualMachineList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'field_selector', 'label_selector']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_virtualmachines" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `delete_virtualmachines`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines'.replace('{format}', 'json')
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1VirtualMachineList',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
@@ -263,9 +1265,9 @@ class ApiskubevirtiovalphaApi(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def func1_0(self, **kwargs):
+    def get_migration(self, namespace, name, **kwargs):
         """
-        test4
+        Get a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -274,1244 +1276,7 @@ class ApiskubevirtiovalphaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.func1_0(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1MigrationList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.func1_0_with_http_info(**kwargs)
-        else:
-            (data) = self.func1_0_with_http_info(**kwargs)
-            return data
-
-    def func1_0_with_http_info(self, **kwargs):
-        """
-        test4
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_0_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1MigrationList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method func1_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        resource_path = '/apis/kubevirt.io/v1alpha1/migrations'.replace('{format}', 'json')
-        path_params = {}
-
-        query_params = {}
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1MigrationList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def func1_1(self, namespace, **kwargs):
-        """
-
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_1(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1MigrationList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.func1_1_with_http_info(namespace, **kwargs)
-        else:
-            (data) = self.func1_1_with_http_info(namespace, **kwargs)
-            return data
-
-    def func1_1_with_http_info(self, namespace, **kwargs):
-        """
-
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_1_with_http_info(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1MigrationList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method func1_1" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `func1_1`")
-
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-
-        query_params = {}
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1MigrationList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def func1_10(self, name, **kwargs):
-        """
-
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_10(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: Name of the resource (required)
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :return: V1VMList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.func1_10_with_http_info(name, **kwargs)
-        else:
-            (data) = self.func1_10_with_http_info(name, **kwargs)
-            return data
-
-    def func1_10_with_http_info(self, name, **kwargs):
-        """
-
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_10_with_http_info(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: Name of the resource (required)
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :return: V1VMList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['name', 'field_selector', 'label_selector']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method func1_10" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `func1_10`")
-
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms'.replace('{format}', 'json')
-        path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1VMList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def func1_11(self, namespace, name, **kwargs):
-        """
-        test4
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_11(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str name: Name of the resource (required)
-        :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1VM
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.func1_11_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.func1_11_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def func1_11_with_http_info(self, namespace, name, **kwargs):
-        """
-        test4
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_11_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str name: Name of the resource (required)
-        :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: V1VM
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name', 'export', 'exact']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method func1_11" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `func1_11`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `func1_11`")
-
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'export' in params:
-            query_params['export'] = params['export']
-        if 'exact' in params:
-            query_params['exact'] = params['exact']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1VM',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def func1_12(self, body, namespace, name, **kwargs):
-        """
-        test2
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_12(body, namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param V1VM body:  (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str name: Name of the resource (required)
-        :return: V1VM
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.func1_12_with_http_info(body, namespace, name, **kwargs)
-        else:
-            (data) = self.func1_12_with_http_info(body, namespace, name, **kwargs)
-            return data
-
-    def func1_12_with_http_info(self, body, namespace, name, **kwargs):
-        """
-        test2
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_12_with_http_info(body, namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param V1VM body:  (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str name: Name of the resource (required)
-        :return: V1VM
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['body', 'namespace', 'name']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method func1_12" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `func1_12`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `func1_12`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `func1_12`")
-
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/yaml'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'PUT',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1VM',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def func1_13(self, namespace, name, **kwargs):
-        """
-        test3
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_13(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str name: Name of the resource (required)
-        :return: V1Status
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.func1_13_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.func1_13_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def func1_13_with_http_info(self, namespace, name, **kwargs):
-        """
-        test3
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_13_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str name: Name of the resource (required)
-        :return: V1Status
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method func1_13" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `func1_13`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `func1_13`")
-
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/yaml'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1Status',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def func1_14(self, **kwargs):
-        """
-        test5
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_14(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :return: V1VM
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.func1_14_with_http_info(**kwargs)
-        else:
-            (data) = self.func1_14_with_http_info(**kwargs)
-            return data
-
-    def func1_14_with_http_info(self, **kwargs):
-        """
-        test5
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_14_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :return: V1VM
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method func1_14" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
-        path_params = {}
-
-        query_params = {}
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json-patch+json'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'PATCH',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1VM',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def func1_15(self, namespace, name, **kwargs):
-        """
-        Returns a remote-viewer configuration file. Run `man 1 remote-viewer` to learn more about the configuration format.
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_15(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str name: Name of the resource (required)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.func1_15_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.func1_15_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def func1_15_with_http_info(self, namespace, name, **kwargs):
-        """
-        Returns a remote-viewer configuration file. Run `man 1 remote-viewer` to learn more about the configuration format.
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_15_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str name: Name of the resource (required)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method func1_15" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `func1_15`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `func1_15`")
-
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms/{name:[a-z0-9][a-z0-9\-]*}/spice'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['text/plain', 'application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type=None,
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def func1_16(self, **kwargs):
-        """
-        test4
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_16(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VMList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.func1_16_with_http_info(**kwargs)
-        else:
-            (data) = self.func1_16_with_http_info(**kwargs)
-            return data
-
-    def func1_16_with_http_info(self, **kwargs):
-        """
-        test4
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_16_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VMList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method func1_16" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        resource_path = '/apis/kubevirt.io/v1alpha1/vms'.replace('{format}', 'json')
-        path_params = {}
-
-        query_params = {}
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1VMList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def func1_2(self, body, namespace, **kwargs):
-        """
-
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_2(body, namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param V1Migration body:  (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1Migration
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.func1_2_with_http_info(body, namespace, **kwargs)
-        else:
-            (data) = self.func1_2_with_http_info(body, namespace, **kwargs)
-            return data
-
-    def func1_2_with_http_info(self, body, namespace, **kwargs):
-        """
-
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_2_with_http_info(body, namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param V1Migration body:  (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1Migration
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['body', 'namespace']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method func1_2" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `func1_2`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `func1_2`")
-
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-
-        query_params = {}
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/yaml'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1Migration',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def func1_3(self, name, **kwargs):
-        """
-
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_3(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: Name of the resource (required)
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :return: V1MigrationList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.func1_3_with_http_info(name, **kwargs)
-        else:
-            (data) = self.func1_3_with_http_info(name, **kwargs)
-            return data
-
-    def func1_3_with_http_info(self, name, **kwargs):
-        """
-
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_3_with_http_info(name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str name: Name of the resource (required)
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :return: V1MigrationList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['name', 'field_selector', 'label_selector']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method func1_3" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `func1_3`")
-
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations'.replace('{format}', 'json')
-        path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1MigrationList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def func1_4(self, namespace, name, **kwargs):
-        """
-        test4
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_4(namespace, name, callback=callback_function)
+        >>> thread = api.get_migration(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1525,14 +1290,14 @@ class ApiskubevirtiovalphaApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.func1_4_with_http_info(namespace, name, **kwargs)
+            return self.get_migration_with_http_info(namespace, name, **kwargs)
         else:
-            (data) = self.func1_4_with_http_info(namespace, name, **kwargs)
+            (data) = self.get_migration_with_http_info(namespace, name, **kwargs)
             return data
 
-    def func1_4_with_http_info(self, namespace, name, **kwargs):
+    def get_migration_with_http_info(self, namespace, name, **kwargs):
         """
-        test4
+        Get a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1541,7 +1306,7 @@ class ApiskubevirtiovalphaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.func1_4_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.get_migration_with_http_info(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1563,16 +1328,16 @@ class ApiskubevirtiovalphaApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method func1_4" % key
+                    " to method get_migration" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `func1_4`")
+            raise ValueError("Missing the required parameter `namespace` when calling `get_migration`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `func1_4`")
+            raise ValueError("Missing the required parameter `name` when calling `get_migration`")
 
         resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
         path_params = {}
@@ -1619,9 +1384,9 @@ class ApiskubevirtiovalphaApi(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def func1_5(self, body, namespace, name, **kwargs):
+    def get_virtualmachine(self, namespace, name, **kwargs):
         """
-        test2
+        Get a virtualmachine object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1630,27 +1395,28 @@ class ApiskubevirtiovalphaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.func1_5(body, namespace, name, callback=callback_function)
+        >>> thread = api.get_virtualmachine(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1Migration body:  (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: V1Migration
+        :param bool export: Should this value be exported. Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.func1_5_with_http_info(body, namespace, name, **kwargs)
+            return self.get_virtualmachine_with_http_info(namespace, name, **kwargs)
         else:
-            (data) = self.func1_5_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.get_virtualmachine_with_http_info(namespace, name, **kwargs)
             return data
 
-    def func1_5_with_http_info(self, body, namespace, name, **kwargs):
+    def get_virtualmachine_with_http_info(self, namespace, name, **kwargs):
         """
-        test2
+        Get a virtualmachine object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -1659,19 +1425,20 @@ class ApiskubevirtiovalphaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.func1_5_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.get_virtualmachine_with_http_info(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1Migration body:  (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: V1Migration
+        :param bool export: Should this value be exported. Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name']
+        all_params = ['namespace', 'name', 'export', 'exact']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -1680,21 +1447,18 @@ class ApiskubevirtiovalphaApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method func1_5" % key
+                    " to method get_virtualmachine" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `func1_5`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `func1_5`")
+            raise ValueError("Missing the required parameter `namespace` when calling `get_virtualmachine`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `func1_5`")
+            raise ValueError("Missing the required parameter `name` when calling `get_virtualmachine`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
@@ -1702,336 +1466,10 @@ class ApiskubevirtiovalphaApi(object):
             path_params['name'] = params['name']
 
         query_params = {}
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/yaml'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'PUT',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1Migration',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def func1_6(self, namespace, name, **kwargs):
-        """
-        test3
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_6(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str name: Name of the resource (required)
-        :return: V1Status
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.func1_6_with_http_info(namespace, name, **kwargs)
-        else:
-            (data) = self.func1_6_with_http_info(namespace, name, **kwargs)
-            return data
-
-    def func1_6_with_http_info(self, namespace, name, **kwargs):
-        """
-        test3
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_6_with_http_info(namespace, name, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str name: Name of the resource (required)
-        :return: V1Status
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'name']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method func1_6" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `func1_6`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `func1_6`")
-
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
-
-        query_params = {}
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/yaml'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1Status',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def func1_7(self, **kwargs):
-        """
-        test5
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_7(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :return: V1Migration
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.func1_7_with_http_info(**kwargs)
-        else:
-            (data) = self.func1_7_with_http_info(**kwargs)
-            return data
-
-    def func1_7_with_http_info(self, **kwargs):
-        """
-        test5
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_7_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :return: V1Migration
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method func1_7" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
-        path_params = {}
-
-        query_params = {}
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json-patch+json'])
-        if not header_params['Accept']:
-            del header_params['Accept']
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'PATCH',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='V1Migration',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'))
-
-    def func1_8(self, namespace, **kwargs):
-        """
-
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_8(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VMList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.func1_8_with_http_info(namespace, **kwargs)
-        else:
-            (data) = self.func1_8_with_http_info(namespace, **kwargs)
-            return data
-
-    def func1_8_with_http_info(self, namespace, **kwargs):
-        """
-
-
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.func1_8_with_http_info(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VMList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method func1_8" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `func1_8`")
-
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms'.replace('{format}', 'json')
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-
-        query_params = {}
-        if 'field_selector' in params:
-            query_params['fieldSelector'] = params['field_selector']
-        if 'label_selector' in params:
-            query_params['labelSelector'] = params['label_selector']
-        if 'resource_version' in params:
-            query_params['resourceVersion'] = params['resource_version']
-        if 'timeout_seconds' in params:
-            query_params['timeoutSeconds'] = params['timeout_seconds']
+        if 'export' in params:
+            query_params['export'] = params['export']
+        if 'exact' in params:
+            query_params['exact'] = params['exact']
 
         header_params = {}
 
@@ -2060,14 +1498,14 @@ class ApiskubevirtiovalphaApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='V1VMList',
+                                            response_type='V1VirtualMachine',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def func1_9(self, body, namespace, **kwargs):
+    def get_virtualmachinereplicaset(self, namespace, name, **kwargs):
         """
-
+        Get a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2076,26 +1514,28 @@ class ApiskubevirtiovalphaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.func1_9(body, namespace, callback=callback_function)
+        >>> thread = api.get_virtualmachinereplicaset(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VM body:  (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1VM
+        :param str name: Name of the resource (required)
+        :param bool export: Should this value be exported. Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.func1_9_with_http_info(body, namespace, **kwargs)
+            return self.get_virtualmachinereplicaset_with_http_info(namespace, name, **kwargs)
         else:
-            (data) = self.func1_9_with_http_info(body, namespace, **kwargs)
+            (data) = self.get_virtualmachinereplicaset_with_http_info(namespace, name, **kwargs)
             return data
 
-    def func1_9_with_http_info(self, body, namespace, **kwargs):
+    def get_virtualmachinereplicaset_with_http_info(self, namespace, name, **kwargs):
         """
-
+        Get a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2104,18 +1544,20 @@ class ApiskubevirtiovalphaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.func1_9_with_http_info(body, namespace, callback=callback_function)
+        >>> thread = api.get_virtualmachinereplicaset_with_http_info(namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VM body:  (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1VM
+        :param str name: Name of the resource (required)
+        :param bool export: Should this value be exported. Export strips fields that a user can not specify.
+        :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace']
+        all_params = ['namespace', 'name', 'export', 'exact']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
 
@@ -2124,23 +1566,29 @@ class ApiskubevirtiovalphaApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method func1_9" % key
+                    " to method get_virtualmachinereplicaset" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `func1_9`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `func1_9`")
+            raise ValueError("Missing the required parameter `namespace` when calling `get_virtualmachinereplicaset`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `get_virtualmachinereplicaset`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
 
         query_params = {}
+        if 'export' in params:
+            query_params['export'] = params['export']
+        if 'exact' in params:
+            query_params['exact'] = params['exact']
 
         header_params = {}
 
@@ -2148,8 +1596,6 @@ class ApiskubevirtiovalphaApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
@@ -2159,19 +1605,19 @@ class ApiskubevirtiovalphaApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/yaml'])
+            select_header_content_type([])
 
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
                                             query_params,
                                             header_params,
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='V1VM',
+                                            response_type='V1VirtualMachineReplicaSet',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
@@ -2273,9 +1719,9 @@ class ApiskubevirtiovalphaApi(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def not_implemented_yet(self, namespace, **kwargs):
+    def list_all_migrations(self, **kwargs):
         """
-
+        Get a list all of migration objects.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2284,7 +1730,1462 @@ class ApiskubevirtiovalphaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.not_implemented_yet(namespace, callback=callback_function)
+        >>> thread = api.list_all_migrations(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1MigrationList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.list_all_migrations_with_http_info(**kwargs)
+        else:
+            (data) = self.list_all_migrations_with_http_info(**kwargs)
+            return data
+
+    def list_all_migrations_with_http_info(self, **kwargs):
+        """
+        Get a list all of migration objects.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_all_migrations_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1MigrationList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method list_all_migrations" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/migrations'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1MigrationList',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def list_all_virtualmachinereplicasets(self, **kwargs):
+        """
+        Get a list all of virtualmachinereplicaset objects.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_all_virtualmachinereplicasets(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineReplicaSetList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.list_all_virtualmachinereplicasets_with_http_info(**kwargs)
+        else:
+            (data) = self.list_all_virtualmachinereplicasets_with_http_info(**kwargs)
+            return data
+
+    def list_all_virtualmachinereplicasets_with_http_info(self, **kwargs):
+        """
+        Get a list all of virtualmachinereplicaset objects.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_all_virtualmachinereplicasets_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineReplicaSetList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method list_all_virtualmachinereplicasets" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/virtualmachinereplicasets'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1VirtualMachineReplicaSetList',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def list_all_virtualmachines(self, **kwargs):
+        """
+        Get a list all of virtualmachine objects.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_all_virtualmachines(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.list_all_virtualmachines_with_http_info(**kwargs)
+        else:
+            (data) = self.list_all_virtualmachines_with_http_info(**kwargs)
+            return data
+
+    def list_all_virtualmachines_with_http_info(self, **kwargs):
+        """
+        Get a list all of virtualmachine objects.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_all_virtualmachines_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method list_all_virtualmachines" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/virtualmachines'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1VirtualMachineList',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def list_migrations(self, namespace, **kwargs):
+        """
+        Get a list of migration objects
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_migrations(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1MigrationList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.list_migrations_with_http_info(namespace, **kwargs)
+        else:
+            (data) = self.list_migrations_with_http_info(namespace, **kwargs)
+            return data
+
+    def list_migrations_with_http_info(self, namespace, **kwargs):
+        """
+        Get a list of migration objects
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_migrations_with_http_info(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1MigrationList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method list_migrations" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `list_migrations`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = {}
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1MigrationList',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def list_virtualmachinereplicasets(self, namespace, **kwargs):
+        """
+        Get a list of virtualmachinereplicaset objects
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_virtualmachinereplicasets(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineReplicaSetList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.list_virtualmachinereplicasets_with_http_info(namespace, **kwargs)
+        else:
+            (data) = self.list_virtualmachinereplicasets_with_http_info(namespace, **kwargs)
+            return data
+
+    def list_virtualmachinereplicasets_with_http_info(self, namespace, **kwargs):
+        """
+        Get a list of virtualmachinereplicaset objects
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_virtualmachinereplicasets_with_http_info(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineReplicaSetList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method list_virtualmachinereplicasets" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `list_virtualmachinereplicasets`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = {}
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1VirtualMachineReplicaSetList',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def list_virtualmachines(self, namespace, **kwargs):
+        """
+        Get a list of virtualmachine objects
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_virtualmachines(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.list_virtualmachines_with_http_info(namespace, **kwargs)
+        else:
+            (data) = self.list_virtualmachines_with_http_info(namespace, **kwargs)
+            return data
+
+    def list_virtualmachines_with_http_info(self, namespace, **kwargs):
+        """
+        Get a list of virtualmachine objects
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.list_virtualmachines_with_http_info(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method list_virtualmachines" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `list_virtualmachines`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = {}
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1VirtualMachineList',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def patch_migration(self, **kwargs):
+        """
+        Patch a migration object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_migration(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: V1Migration
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.patch_migration_with_http_info(**kwargs)
+        else:
+            (data) = self.patch_migration_with_http_info(**kwargs)
+            return data
+
+    def patch_migration_with_http_info(self, **kwargs):
+        """
+        Patch a migration object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_migration_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: V1Migration
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_migration" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json-patch+json'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PATCH',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1Migration',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def patch_virtualmachine(self, **kwargs):
+        """
+        Patch a virtualmachine object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_virtualmachine(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: V1VirtualMachine
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.patch_virtualmachine_with_http_info(**kwargs)
+        else:
+            (data) = self.patch_virtualmachine_with_http_info(**kwargs)
+            return data
+
+    def patch_virtualmachine_with_http_info(self, **kwargs):
+        """
+        Patch a virtualmachine object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_virtualmachine_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: V1VirtualMachine
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_virtualmachine" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json-patch+json'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PATCH',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1VirtualMachine',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def patch_virtualmachinereplicaset(self, **kwargs):
+        """
+        Patch a virtualmachinereplicaset object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_virtualmachinereplicaset(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: V1VirtualMachineReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.patch_virtualmachinereplicaset_with_http_info(**kwargs)
+        else:
+            (data) = self.patch_virtualmachinereplicaset_with_http_info(**kwargs)
+            return data
+
+    def patch_virtualmachinereplicaset_with_http_info(self, **kwargs):
+        """
+        Patch a virtualmachinereplicaset object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_virtualmachinereplicaset_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: V1VirtualMachineReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_virtualmachinereplicaset" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json-patch+json'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PATCH',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1VirtualMachineReplicaSet',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def spice(self, namespace, name, **kwargs):
+        """
+        Returns a remote-viewer configuration file. Run `man 1 remote-viewer` to learn more about the configuration format.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.spice(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.spice_with_http_info(namespace, name, **kwargs)
+        else:
+            (data) = self.spice_with_http_info(namespace, name, **kwargs)
+            return data
+
+    def spice_with_http_info(self, namespace, name, **kwargs):
+        """
+        Returns a remote-viewer configuration file. Run `man 1 remote-viewer` to learn more about the configuration format.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.spice_with_http_info(namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method spice" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `spice`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `spice`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/spice'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['text/plain', 'application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type=None,
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def update_migration(self, body, namespace, name, **kwargs):
+        """
+        Update a migration object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_migration(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1Migration body:  (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: V1Migration
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_migration_with_http_info(body, namespace, name, **kwargs)
+        else:
+            (data) = self.update_migration_with_http_info(body, namespace, name, **kwargs)
+            return data
+
+    def update_migration_with_http_info(self, body, namespace, name, **kwargs):
+        """
+        Update a migration object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_migration_with_http_info(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1Migration body:  (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: V1Migration
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'namespace', 'name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_migration" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `update_migration`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `update_migration`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `update_migration`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'application/yaml'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1Migration',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def update_virtualmachine(self, body, namespace, name, **kwargs):
+        """
+        Update a virtualmachine object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_virtualmachine(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1VirtualMachine body:  (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: V1VirtualMachine
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_virtualmachine_with_http_info(body, namespace, name, **kwargs)
+        else:
+            (data) = self.update_virtualmachine_with_http_info(body, namespace, name, **kwargs)
+            return data
+
+    def update_virtualmachine_with_http_info(self, body, namespace, name, **kwargs):
+        """
+        Update a virtualmachine object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_virtualmachine_with_http_info(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1VirtualMachine body:  (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: V1VirtualMachine
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'namespace', 'name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_virtualmachine" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `update_virtualmachine`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `update_virtualmachine`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `update_virtualmachine`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'application/yaml'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1VirtualMachine',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def update_virtualmachinereplicaset(self, body, namespace, name, **kwargs):
+        """
+        Update a virtualmachinereplicaset object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_virtualmachinereplicaset(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1VirtualMachineReplicaSet body:  (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: V1VirtualMachineReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_virtualmachinereplicaset_with_http_info(body, namespace, name, **kwargs)
+        else:
+            (data) = self.update_virtualmachinereplicaset_with_http_info(body, namespace, name, **kwargs)
+            return data
+
+    def update_virtualmachinereplicaset_with_http_info(self, body, namespace, name, **kwargs):
+        """
+        Update a virtualmachinereplicaset object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_virtualmachinereplicaset_with_http_info(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1VirtualMachineReplicaSet body:  (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: V1VirtualMachineReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'namespace', 'name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_virtualmachinereplicaset" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `update_virtualmachinereplicaset`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `update_virtualmachinereplicaset`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `update_virtualmachinereplicaset`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets/{name:[a-z0-9][a-z0-9\-]*}'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'application/yaml'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1VirtualMachineReplicaSet',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def watch_all_migrations(self, namespace, **kwargs):
+        """
+        Watch a migration object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_all_migrations(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2299,14 +3200,14 @@ class ApiskubevirtiovalphaApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.not_implemented_yet_with_http_info(namespace, **kwargs)
+            return self.watch_all_migrations_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.not_implemented_yet_with_http_info(namespace, **kwargs)
+            (data) = self.watch_all_migrations_with_http_info(namespace, **kwargs)
             return data
 
-    def not_implemented_yet_with_http_info(self, namespace, **kwargs):
+    def watch_all_migrations_with_http_info(self, namespace, **kwargs):
         """
-
+        Watch a migration object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2315,7 +3216,7 @@ class ApiskubevirtiovalphaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.not_implemented_yet_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_all_migrations_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2338,13 +3239,13 @@ class ApiskubevirtiovalphaApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method not_implemented_yet" % key
+                    " to method watch_all_migrations" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `not_implemented_yet`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_all_migrations`")
 
         resource_path = '/apis/kubevirt.io/v1alpha1/watch/migrations'.replace('{format}', 'json')
         path_params = {}
@@ -2393,9 +3294,9 @@ class ApiskubevirtiovalphaApi(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def not_implemented_yet_0(self, namespace, **kwargs):
+    def watch_all_virtualmachinereplicasets(self, namespace, **kwargs):
         """
-
+        Watch a virtualmachinereplicaset object.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2404,7 +3305,247 @@ class ApiskubevirtiovalphaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.not_implemented_yet_0(namespace, callback=callback_function)
+        >>> thread = api.watch_all_virtualmachinereplicasets(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_all_virtualmachinereplicasets_with_http_info(namespace, **kwargs)
+        else:
+            (data) = self.watch_all_virtualmachinereplicasets_with_http_info(namespace, **kwargs)
+            return data
+
+    def watch_all_virtualmachinereplicasets_with_http_info(self, namespace, **kwargs):
+        """
+        Watch a virtualmachinereplicaset object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_all_virtualmachinereplicasets_with_http_info(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_all_virtualmachinereplicasets" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_all_virtualmachinereplicasets`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/watch/virtualmachinereplicasets'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = {}
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1VirtualMachineReplicaSet',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def watch_all_virtualmachines(self, namespace, **kwargs):
+        """
+        Watch a virtualmachine object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_all_virtualmachines(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachine
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_all_virtualmachines_with_http_info(namespace, **kwargs)
+        else:
+            (data) = self.watch_all_virtualmachines_with_http_info(namespace, **kwargs)
+            return data
+
+    def watch_all_virtualmachines_with_http_info(self, namespace, **kwargs):
+        """
+        Watch a virtualmachine object.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_all_virtualmachines_with_http_info(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachine
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_all_virtualmachines" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_all_virtualmachines`")
+
+        resource_path = '/apis/kubevirt.io/v1alpha1/watch/virtualmachines'.replace('{format}', 'json')
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = {}
+        if 'field_selector' in params:
+            query_params['fieldSelector'] = params['field_selector']
+        if 'label_selector' in params:
+            query_params['labelSelector'] = params['label_selector']
+        if 'resource_version' in params:
+            query_params['resourceVersion'] = params['resource_version']
+        if 'timeout_seconds' in params:
+            query_params['timeoutSeconds'] = params['timeout_seconds']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                            path_params,
+                                            query_params,
+                                            header_params,
+                                            body=body_params,
+                                            post_params=form_params,
+                                            files=local_var_files,
+                                            response_type='V1VirtualMachine',
+                                            auth_settings=auth_settings,
+                                            callback=params.get('callback'),
+                                            _return_http_data_only=params.get('_return_http_data_only'))
+
+    def watch_migrations(self, namespace, **kwargs):
+        """
+        Watch a migrations collection.
+
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_migrations(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2419,14 +3560,14 @@ class ApiskubevirtiovalphaApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.not_implemented_yet_0_with_http_info(namespace, **kwargs)
+            return self.watch_migrations_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.not_implemented_yet_0_with_http_info(namespace, **kwargs)
+            (data) = self.watch_migrations_with_http_info(namespace, **kwargs)
             return data
 
-    def not_implemented_yet_0_with_http_info(self, namespace, **kwargs):
+    def watch_migrations_with_http_info(self, namespace, **kwargs):
         """
-
+        Watch a migrations collection.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2435,7 +3576,7 @@ class ApiskubevirtiovalphaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.not_implemented_yet_0_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_migrations_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2458,13 +3599,13 @@ class ApiskubevirtiovalphaApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method not_implemented_yet_0" % key
+                    " to method watch_migrations" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `not_implemented_yet_0`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_migrations`")
 
         resource_path = '/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/migrations'.replace('{format}', 'json')
         path_params = {}
@@ -2513,9 +3654,9 @@ class ApiskubevirtiovalphaApi(object):
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def not_implemented_yet_1(self, namespace, **kwargs):
+    def watch_virtualmachinereplicasets(self, namespace, **kwargs):
         """
-
+        Watch a virtualmachinereplicasets collection.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2524,7 +3665,7 @@ class ApiskubevirtiovalphaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.not_implemented_yet_1(namespace, callback=callback_function)
+        >>> thread = api.watch_virtualmachinereplicasets(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2533,20 +3674,20 @@ class ApiskubevirtiovalphaApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VM
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.not_implemented_yet_1_with_http_info(namespace, **kwargs)
+            return self.watch_virtualmachinereplicasets_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.not_implemented_yet_1_with_http_info(namespace, **kwargs)
+            (data) = self.watch_virtualmachinereplicasets_with_http_info(namespace, **kwargs)
             return data
 
-    def not_implemented_yet_1_with_http_info(self, namespace, **kwargs):
+    def watch_virtualmachinereplicasets_with_http_info(self, namespace, **kwargs):
         """
-
+        Watch a virtualmachinereplicasets collection.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2555,7 +3696,7 @@ class ApiskubevirtiovalphaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.not_implemented_yet_1_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_virtualmachinereplicasets_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2564,7 +3705,7 @@ class ApiskubevirtiovalphaApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VM
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2578,15 +3719,15 @@ class ApiskubevirtiovalphaApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method not_implemented_yet_1" % key
+                    " to method watch_virtualmachinereplicasets" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `not_implemented_yet_1`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_virtualmachinereplicasets`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/vms'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinereplicasets'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
@@ -2628,14 +3769,14 @@ class ApiskubevirtiovalphaApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='V1VM',
+                                            response_type='V1VirtualMachineReplicaSet',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))
 
-    def not_implemented_yet_2(self, namespace, **kwargs):
+    def watch_virtualmachines(self, namespace, **kwargs):
         """
-
+        Watch a virtualmachines collection.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2644,7 +3785,7 @@ class ApiskubevirtiovalphaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.not_implemented_yet_2(namespace, callback=callback_function)
+        >>> thread = api.watch_virtualmachines(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2653,20 +3794,20 @@ class ApiskubevirtiovalphaApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VM
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.not_implemented_yet_2_with_http_info(namespace, **kwargs)
+            return self.watch_virtualmachines_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.not_implemented_yet_2_with_http_info(namespace, **kwargs)
+            (data) = self.watch_virtualmachines_with_http_info(namespace, **kwargs)
             return data
 
-    def not_implemented_yet_2_with_http_info(self, namespace, **kwargs):
+    def watch_virtualmachines_with_http_info(self, namespace, **kwargs):
         """
-
+        Watch a virtualmachines collection.
 
 
         This method makes a synchronous HTTP request by default. To make an
@@ -2675,7 +3816,7 @@ class ApiskubevirtiovalphaApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.not_implemented_yet_2_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_virtualmachines_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2684,7 +3825,7 @@ class ApiskubevirtiovalphaApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param Object timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: V1VM
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2698,15 +3839,15 @@ class ApiskubevirtiovalphaApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method not_implemented_yet_2" % key
+                    " to method watch_virtualmachines" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `not_implemented_yet_2`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_virtualmachines`")
 
-        resource_path = '/apis/kubevirt.io/v1alpha1/watch/vms'.replace('{format}', 'json')
+        resource_path = '/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines'.replace('{format}', 'json')
         path_params = {}
         if 'namespace' in params:
             path_params['namespace'] = params['namespace']
@@ -2748,7 +3889,7 @@ class ApiskubevirtiovalphaApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type='V1VM',
+                                            response_type='V1VirtualMachine',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))

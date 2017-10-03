@@ -15,7 +15,8 @@
      {
       "type": "v1.APIResourceList",
       "method": "GET",
-      "nickname": "func1",
+      "summary": "Get KubeVirt API Resources",
+      "nickname": "getAPIResources",
       "parameters": [],
       "produces": [
        "application/json"
@@ -30,8 +31,8 @@
      {
       "type": "v1.VirtualMachine",
       "method": "POST",
-      "summary": "Create a virtualmachine object.",
-      "nickname": "create_virtualmachine",
+      "summary": "Create a VirtualMachine object.",
+      "nickname": "createNamespacedVirtualMachine",
       "parameters": [
        {
         "type": "v1.VirtualMachine",
@@ -62,8 +63,8 @@
      {
       "type": "v1.VirtualMachineList",
       "method": "GET",
-      "summary": "Get a list of virtualmachine objects",
-      "nickname": "list_virtualmachines",
+      "summary": "Get a list of VirtualMachine objects.",
+      "nickname": "listNamespacedVirtualMachineList",
       "parameters": [
        {
         "type": "string",
@@ -98,7 +99,7 @@
         "allowMultiple": false
        },
        {
-        "type": "int",
+        "type": "integer",
         "paramType": "query",
         "name": "timeoutSeconds",
         "description": "TimeoutSeconds for the list/watch call.",
@@ -114,8 +115,8 @@
      {
       "type": "v1.VirtualMachineList",
       "method": "DELETE",
-      "summary": "Delete a list of virtualmachine objects.",
-      "nickname": "delete_virtualmachines",
+      "summary": "Delete a collection of VirtualMachine objects.",
+      "nickname": "deletecollectionNamespacedVirtualMachine",
       "parameters": [
        {
         "type": "string",
@@ -156,8 +157,8 @@
      {
       "type": "v1.VirtualMachine",
       "method": "PUT",
-      "summary": "Update a virtualmachine object.",
-      "nickname": "update_virtualmachine",
+      "summary": "Update a VirtualMachine object.",
+      "nickname": "replaceNamespacedVirtualMachine",
       "parameters": [
        {
         "type": "v1.VirtualMachine",
@@ -196,8 +197,8 @@
      {
       "type": "v1.Status",
       "method": "DELETE",
-      "summary": "Delete a virtualmachine object.",
-      "nickname": "delete_virtualmachine",
+      "summary": "Delete a VirtualMachine object.",
+      "nickname": "deleteNamespacedVirtualMachine",
       "parameters": [
        {
         "type": "string",
@@ -228,8 +229,8 @@
      {
       "type": "v1.VirtualMachine",
       "method": "GET",
-      "summary": "Get a virtualmachine object.",
-      "nickname": "get_virtualmachine",
+      "summary": "Get a VirtualMachine object.",
+      "nickname": "readNamespacedVirtualMachine",
       "parameters": [
        {
         "type": "string",
@@ -272,8 +273,8 @@
      {
       "type": "v1.VirtualMachine",
       "method": "PATCH",
-      "summary": "Patch a virtualmachine object.",
-      "nickname": "patch_virtualmachine",
+      "summary": "Patch a VirtualMachine object.",
+      "nickname": "updateNamespacedVirtualMachine",
       "parameters": [],
       "produces": [
        "application/json-patch+json"
@@ -288,8 +289,8 @@
      {
       "type": "v1.VirtualMachineList",
       "method": "GET",
-      "summary": "Get a list all of virtualmachine objects.",
-      "nickname": "list_all_virtualmachines",
+      "summary": "Get a list all of VirtualMachine objects.",
+      "nickname": "listVirtualMachineForAllNamespaces",
       "parameters": [
        {
         "type": "string",
@@ -316,7 +317,7 @@
         "allowMultiple": false
        },
        {
-        "type": "int",
+        "type": "integer",
         "paramType": "query",
         "name": "timeoutSeconds",
         "description": "TimeoutSeconds for the list/watch call.",
@@ -336,10 +337,10 @@
     "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
-      "type": "v1.VirtualMachine",
+      "type": "v1.VirtualMachineList",
       "method": "GET",
-      "summary": "Watch a virtualmachine object.",
-      "nickname": "watch_all_virtualmachines",
+      "summary": "Watch a VirtualMachineList object.",
+      "nickname": "watchVirtualMachineListForAllNamespaces",
       "parameters": [
        {
         "type": "string",
@@ -374,7 +375,7 @@
         "allowMultiple": false
        },
        {
-        "type": "int",
+        "type": "integer",
         "paramType": "query",
         "name": "timeoutSeconds",
         "description": "TimeoutSeconds for the list/watch call.",
@@ -395,8 +396,8 @@
      {
       "type": "v1.VirtualMachine",
       "method": "GET",
-      "summary": "Watch a virtualmachines collection.",
-      "nickname": "watch_virtualmachines",
+      "summary": "Watch a VirtualMachine object.",
+      "nickname": "watchNamespacedVirtualMachine",
       "parameters": [
        {
         "type": "string",
@@ -431,7 +432,7 @@
         "allowMultiple": false
        },
        {
-        "type": "int",
+        "type": "integer",
         "paramType": "query",
         "name": "timeoutSeconds",
         "description": "TimeoutSeconds for the list/watch call.",
@@ -452,8 +453,8 @@
      {
       "type": "v1.Migration",
       "method": "POST",
-      "summary": "Create a migration object.",
-      "nickname": "create_migration",
+      "summary": "Create a Migration object.",
+      "nickname": "createNamespacedMigration",
       "parameters": [
        {
         "type": "v1.Migration",
@@ -484,8 +485,8 @@
      {
       "type": "v1.MigrationList",
       "method": "GET",
-      "summary": "Get a list of migration objects",
-      "nickname": "list_migrations",
+      "summary": "Get a list of Migration objects.",
+      "nickname": "listNamespacedMigrationList",
       "parameters": [
        {
         "type": "string",
@@ -520,7 +521,7 @@
         "allowMultiple": false
        },
        {
-        "type": "int",
+        "type": "integer",
         "paramType": "query",
         "name": "timeoutSeconds",
         "description": "TimeoutSeconds for the list/watch call.",
@@ -536,8 +537,8 @@
      {
       "type": "v1.MigrationList",
       "method": "DELETE",
-      "summary": "Delete a list of migration objects.",
-      "nickname": "delete_migrations",
+      "summary": "Delete a collection of Migration objects.",
+      "nickname": "deletecollectionNamespacedMigration",
       "parameters": [
        {
         "type": "string",
@@ -578,8 +579,8 @@
      {
       "type": "v1.Migration",
       "method": "PUT",
-      "summary": "Update a migration object.",
-      "nickname": "update_migration",
+      "summary": "Update a Migration object.",
+      "nickname": "replaceNamespacedMigration",
       "parameters": [
        {
         "type": "v1.Migration",
@@ -618,8 +619,8 @@
      {
       "type": "v1.Status",
       "method": "DELETE",
-      "summary": "Delete a migration object.",
-      "nickname": "delete_migration",
+      "summary": "Delete a Migration object.",
+      "nickname": "deleteNamespacedMigration",
       "parameters": [
        {
         "type": "string",
@@ -650,8 +651,8 @@
      {
       "type": "v1.Migration",
       "method": "GET",
-      "summary": "Get a migration object.",
-      "nickname": "get_migration",
+      "summary": "Get a Migration object.",
+      "nickname": "readNamespacedMigration",
       "parameters": [
        {
         "type": "string",
@@ -694,8 +695,8 @@
      {
       "type": "v1.Migration",
       "method": "PATCH",
-      "summary": "Patch a migration object.",
-      "nickname": "patch_migration",
+      "summary": "Patch a Migration object.",
+      "nickname": "updateNamespacedMigration",
       "parameters": [],
       "produces": [
        "application/json-patch+json"
@@ -710,8 +711,8 @@
      {
       "type": "v1.MigrationList",
       "method": "GET",
-      "summary": "Get a list all of migration objects.",
-      "nickname": "list_all_migrations",
+      "summary": "Get a list all of Migration objects.",
+      "nickname": "listMigrationForAllNamespaces",
       "parameters": [
        {
         "type": "string",
@@ -738,7 +739,7 @@
         "allowMultiple": false
        },
        {
-        "type": "int",
+        "type": "integer",
         "paramType": "query",
         "name": "timeoutSeconds",
         "description": "TimeoutSeconds for the list/watch call.",
@@ -758,10 +759,10 @@
     "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
-      "type": "v1.Migration",
+      "type": "v1.MigrationList",
       "method": "GET",
-      "summary": "Watch a migration object.",
-      "nickname": "watch_all_migrations",
+      "summary": "Watch a MigrationList object.",
+      "nickname": "watchMigrationListForAllNamespaces",
       "parameters": [
        {
         "type": "string",
@@ -796,7 +797,7 @@
         "allowMultiple": false
        },
        {
-        "type": "int",
+        "type": "integer",
         "paramType": "query",
         "name": "timeoutSeconds",
         "description": "TimeoutSeconds for the list/watch call.",
@@ -817,8 +818,8 @@
      {
       "type": "v1.Migration",
       "method": "GET",
-      "summary": "Watch a migrations collection.",
-      "nickname": "watch_migrations",
+      "summary": "Watch a Migration object.",
+      "nickname": "watchNamespacedMigration",
       "parameters": [
        {
         "type": "string",
@@ -853,7 +854,7 @@
         "allowMultiple": false
        },
        {
-        "type": "int",
+        "type": "integer",
         "paramType": "query",
         "name": "timeoutSeconds",
         "description": "TimeoutSeconds for the list/watch call.",
@@ -874,8 +875,8 @@
      {
       "type": "v1.VirtualMachineReplicaSet",
       "method": "POST",
-      "summary": "Create a virtualmachinereplicaset object.",
-      "nickname": "create_virtualmachinereplicaset",
+      "summary": "Create a VirtualMachineReplicaSet object.",
+      "nickname": "createNamespacedVirtualMachineReplicaSet",
       "parameters": [
        {
         "type": "v1.VirtualMachineReplicaSet",
@@ -906,8 +907,8 @@
      {
       "type": "v1.VirtualMachineReplicaSetList",
       "method": "GET",
-      "summary": "Get a list of virtualmachinereplicaset objects",
-      "nickname": "list_virtualmachinereplicasets",
+      "summary": "Get a list of VirtualMachineReplicaSet objects.",
+      "nickname": "listNamespacedVirtualMachineReplicaSetList",
       "parameters": [
        {
         "type": "string",
@@ -942,7 +943,7 @@
         "allowMultiple": false
        },
        {
-        "type": "int",
+        "type": "integer",
         "paramType": "query",
         "name": "timeoutSeconds",
         "description": "TimeoutSeconds for the list/watch call.",
@@ -958,8 +959,8 @@
      {
       "type": "v1.VirtualMachineReplicaSetList",
       "method": "DELETE",
-      "summary": "Delete a list of virtualmachinereplicaset objects.",
-      "nickname": "delete_virtualmachinereplicasets",
+      "summary": "Delete a collection of VirtualMachineReplicaSet objects.",
+      "nickname": "deletecollectionNamespacedVirtualMachineReplicaSet",
       "parameters": [
        {
         "type": "string",
@@ -1000,8 +1001,8 @@
      {
       "type": "v1.VirtualMachineReplicaSet",
       "method": "PUT",
-      "summary": "Update a virtualmachinereplicaset object.",
-      "nickname": "update_virtualmachinereplicaset",
+      "summary": "Update a VirtualMachineReplicaSet object.",
+      "nickname": "replaceNamespacedVirtualMachineReplicaSet",
       "parameters": [
        {
         "type": "v1.VirtualMachineReplicaSet",
@@ -1040,8 +1041,8 @@
      {
       "type": "v1.Status",
       "method": "DELETE",
-      "summary": "Delete a virtualmachinereplicaset object.",
-      "nickname": "delete_virtualmachinereplicaset",
+      "summary": "Delete a VirtualMachineReplicaSet object.",
+      "nickname": "deleteNamespacedVirtualMachineReplicaSet",
       "parameters": [
        {
         "type": "string",
@@ -1072,8 +1073,8 @@
      {
       "type": "v1.VirtualMachineReplicaSet",
       "method": "GET",
-      "summary": "Get a virtualmachinereplicaset object.",
-      "nickname": "get_virtualmachinereplicaset",
+      "summary": "Get a VirtualMachineReplicaSet object.",
+      "nickname": "readNamespacedVirtualMachineReplicaSet",
       "parameters": [
        {
         "type": "string",
@@ -1116,8 +1117,8 @@
      {
       "type": "v1.VirtualMachineReplicaSet",
       "method": "PATCH",
-      "summary": "Patch a virtualmachinereplicaset object.",
-      "nickname": "patch_virtualmachinereplicaset",
+      "summary": "Patch a VirtualMachineReplicaSet object.",
+      "nickname": "updateNamespacedVirtualMachineReplicaSet",
       "parameters": [],
       "produces": [
        "application/json-patch+json"
@@ -1132,8 +1133,8 @@
      {
       "type": "v1.VirtualMachineReplicaSetList",
       "method": "GET",
-      "summary": "Get a list all of virtualmachinereplicaset objects.",
-      "nickname": "list_all_virtualmachinereplicasets",
+      "summary": "Get a list all of VirtualMachineReplicaSet objects.",
+      "nickname": "listVirtualMachineReplicaSetForAllNamespaces",
       "parameters": [
        {
         "type": "string",
@@ -1160,7 +1161,7 @@
         "allowMultiple": false
        },
        {
-        "type": "int",
+        "type": "integer",
         "paramType": "query",
         "name": "timeoutSeconds",
         "description": "TimeoutSeconds for the list/watch call.",
@@ -1180,10 +1181,10 @@
     "description": "The KubeVirt API, a virtual machine management.",
     "operations": [
      {
-      "type": "v1.VirtualMachineReplicaSet",
+      "type": "v1.VirtualMachineReplicaSetList",
       "method": "GET",
-      "summary": "Watch a virtualmachinereplicaset object.",
-      "nickname": "watch_all_virtualmachinereplicasets",
+      "summary": "Watch a VirtualMachineReplicaSetList object.",
+      "nickname": "watchVirtualMachineReplicaSetListForAllNamespaces",
       "parameters": [
        {
         "type": "string",
@@ -1218,7 +1219,7 @@
         "allowMultiple": false
        },
        {
-        "type": "int",
+        "type": "integer",
         "paramType": "query",
         "name": "timeoutSeconds",
         "description": "TimeoutSeconds for the list/watch call.",
@@ -1239,8 +1240,8 @@
      {
       "type": "v1.VirtualMachineReplicaSet",
       "method": "GET",
-      "summary": "Watch a virtualmachinereplicasets collection.",
-      "nickname": "watch_virtualmachinereplicasets",
+      "summary": "Watch a VirtualMachineReplicaSet object.",
+      "nickname": "watchNamespacedVirtualMachineReplicaSet",
       "parameters": [
        {
         "type": "string",
@@ -1275,7 +1276,7 @@
         "allowMultiple": false
        },
        {
-        "type": "int",
+        "type": "integer",
         "paramType": "query",
         "name": "timeoutSeconds",
         "description": "TimeoutSeconds for the list/watch call.",

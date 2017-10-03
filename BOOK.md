@@ -1,1 +1,1 @@
-<swagger>swagger.json</swagger>
+<swagger>swagger2.json</swagger>

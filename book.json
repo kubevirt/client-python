@@ -1,6 +1,0 @@
-{
-    "plugins": ["swagger"],
-    "structure": {
-        "readme": "BOOK.md"
-    }
-}

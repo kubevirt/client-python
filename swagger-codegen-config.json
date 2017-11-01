@@ -1,0 +1,5 @@
+{
+"packageName": "kubevirt",
+"projectName": "kubevirt-py",
+"packageUrl": "https://github.com/lukas-bednar/kubevirt-pysdk-generated"
+}

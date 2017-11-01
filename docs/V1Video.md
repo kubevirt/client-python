@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** |  |
 **heads** | **int** |  | [optional]
 **ram** | **int** |  | [optional]
+**type** | **str** |  |
 **v_ram** | **int** |  | [optional]
 **vga_mem** | **int** |  | [optional]
 

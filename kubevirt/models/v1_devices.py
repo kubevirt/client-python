@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KubeVirt API,
+    KubeVirt API, 
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -39,7 +39,8 @@ class V1Devices(object):
         'interfaces': 'list[V1Interface]',
         'memballoon': 'V1Ballooning',
         'serials': 'list[V1Serial]',
-        'video': 'list[V1Video]'
+        'video': 'list[V1Video]',
+        'watchdog': 'V1Watchdog'
     }
 
     attribute_map = {
@@ -51,10 +52,11 @@ class V1Devices(object):
         'interfaces': 'interfaces',
         'memballoon': 'memballoon',
         'serials': 'serials',
-        'video': 'video'
+        'video': 'video',
+        'watchdog': 'watchdog'
     }
 
-    def __init__(self, channels=None, consoles=None, disks=None, emulator=None, graphics=None, interfaces=None, memballoon=None, serials=None, video=None):
+    def __init__(self, channels=None, consoles=None, disks=None, emulator=None, graphics=None, interfaces=None, memballoon=None, serials=None, video=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -68,6 +70,7 @@ class V1Devices(object):
         self._memballoon = None
         self._serials = None
         self._video = None
+        self._watchdog = None
 
         if channels is not None:
           self.channels = channels
@@ -87,6 +90,8 @@ class V1Devices(object):
           self.serials = serials
         if video is not None:
           self.video = video
+        if watchdog is not None:
+          self.watchdog = watchdog
 
     @property
     def channels(self):
@@ -276,6 +281,27 @@ class V1Devices(object):
         """
 
         self._video = video
+
+    @property
+    def watchdog(self):
+        """
+        Gets the watchdog of this V1Devices.
+
+        :return: The watchdog of this V1Devices.
+        :rtype: V1Watchdog
+        """
+        return self._watchdog
+
+    @watchdog.setter
+    def watchdog(self, watchdog):
+        """
+        Sets the watchdog of this V1Devices.
+
+        :param watchdog: The watchdog of this V1Devices.
+        :type: V1Watchdog
+        """
+
+        self._watchdog = watchdog
 
     def to_dict(self):
         """

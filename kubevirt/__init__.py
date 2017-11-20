@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KubeVirt API,
+    KubeVirt API, 
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -92,6 +92,7 @@ from .models.v1_virtual_machine import V1VirtualMachine
 from .models.v1_virtual_machine_list import V1VirtualMachineList
 from .models.v1_virtual_machine_replica_set import V1VirtualMachineReplicaSet
 from .models.v1_virtual_machine_replica_set_list import V1VirtualMachineReplicaSetList
+from .models.v1_watchdog import V1Watchdog
 
 # import apis into sdk package
 from .apis.default_api import DefaultApi

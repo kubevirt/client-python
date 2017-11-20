@@ -24,7 +24,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import kubevirt
+import kubevirt 
 ```
 
 ### Setuptools
@@ -53,15 +53,12 @@ from kubevirt.rest import ApiException
 from pprint import pprint
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
-namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-name = 'name_example' # str | Name of the resource
-console = 'console_example' # str | Name of the serial console to connect to (optional)
 
 try:
-    # Open a websocket connection to a serial console on the specified VM.
-    api_instance.console(namespace, name, console=console)
+    # Health endpoint
+    api_instance.check_health()
 except ApiException as e:
-    print("Exception when calling DefaultApi->console: %s\n" % e)
+    print("Exception when calling DefaultApi->check_health: %s\n" % e)
 
 ```
 
@@ -71,6 +68,7 @@ All URIs are relative to *https://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*DefaultApi* | [**check_health**](docs/DefaultApi.md#check_health) | **GET** /apis/kubevirt.io/v1alpha1/healthz | Health endpoint
 *DefaultApi* | [**console**](docs/DefaultApi.md#console) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/console | Open a websocket connection to a serial console on the specified VM.
 *DefaultApi* | [**create_namespaced_migration**](docs/DefaultApi.md#create_namespaced_migration) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations | Create a Migration object.
 *DefaultApi* | [**create_namespaced_virtual_machine**](docs/DefaultApi.md#create_namespaced_virtual_machine) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Create a VirtualMachine object.
@@ -81,13 +79,12 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**deletecollection_namespaced_migration**](docs/DefaultApi.md#deletecollection_namespaced_migration) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations | Delete a collection of Migration objects.
 *DefaultApi* | [**deletecollection_namespaced_virtual_machine**](docs/DefaultApi.md#deletecollection_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Delete a collection of VirtualMachine objects.
 *DefaultApi* | [**deletecollection_namespaced_virtual_machine_replica_set**](docs/DefaultApi.md#deletecollection_namespaced_virtual_machine_replica_set) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets | Delete a collection of VirtualMachineReplicaSet objects.
-*DefaultApi* | [**func1**](docs/DefaultApi.md#func1) | **GET** /apis/kubevirt.io |
+*DefaultApi* | [**get_api_group**](docs/DefaultApi.md#get_api_group) | **GET** /apis/kubevirt.io | Get a KubeVirt API group
 *DefaultApi* | [**get_api_resources**](docs/DefaultApi.md#get_api_resources) | **GET** /apis/kubevirt.io/v1alpha1 | Get KubeVirt API Resources
-*DefaultApi* | [**kube_connection_healthz_func**](docs/DefaultApi.md#kube_connection_healthz_func) | **GET** /apis/kubevirt.io/v1alpha1/healthz | Health endpoint
 *DefaultApi* | [**list_migration_for_all_namespaces**](docs/DefaultApi.md#list_migration_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/migrations | Get a list of all Migration objects.
-*DefaultApi* | [**list_namespaced_migration_list**](docs/DefaultApi.md#list_namespaced_migration_list) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations | Get a list of Migration objects.
-*DefaultApi* | [**list_namespaced_virtual_machine_list**](docs/DefaultApi.md#list_namespaced_virtual_machine_list) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Get a list of VirtualMachine objects.
-*DefaultApi* | [**list_namespaced_virtual_machine_replica_set_list**](docs/DefaultApi.md#list_namespaced_virtual_machine_replica_set_list) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets | Get a list of VirtualMachineReplicaSet objects.
+*DefaultApi* | [**list_namespaced_migration**](docs/DefaultApi.md#list_namespaced_migration) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations | Get a list of Migration objects.
+*DefaultApi* | [**list_namespaced_virtual_machine**](docs/DefaultApi.md#list_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Get a list of VirtualMachine objects.
+*DefaultApi* | [**list_namespaced_virtual_machine_replica_set**](docs/DefaultApi.md#list_namespaced_virtual_machine_replica_set) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets | Get a list of VirtualMachineReplicaSet objects.
 *DefaultApi* | [**list_virtual_machine_for_all_namespaces**](docs/DefaultApi.md#list_virtual_machine_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/virtualmachines | Get a list of all VirtualMachine objects.
 *DefaultApi* | [**list_virtual_machine_replica_set_for_all_namespaces**](docs/DefaultApi.md#list_virtual_machine_replica_set_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/virtualmachinereplicasets | Get a list of all VirtualMachineReplicaSet objects.
 *DefaultApi* | [**read_namespaced_migration**](docs/DefaultApi.md#read_namespaced_migration) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations/{name} | Get a Migration object.
@@ -188,6 +185,7 @@ Class | Method | HTTP request | Description
  - [V1VirtualMachineList](docs/V1VirtualMachineList.md)
  - [V1VirtualMachineReplicaSet](docs/V1VirtualMachineReplicaSet.md)
  - [V1VirtualMachineReplicaSetList](docs/V1VirtualMachineReplicaSetList.md)
+ - [V1Watchdog](docs/V1Watchdog.md)
 
 
 ## Documentation For Authorization

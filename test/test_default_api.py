@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KubeVirt API,
+    KubeVirt API, 
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -29,6 +29,14 @@ class TestDefaultApi(unittest.TestCase):
         self.api = kubevirt.apis.default_api.DefaultApi()
 
     def tearDown(self):
+        pass
+
+    def test_check_health(self):
+        """
+        Test case for check_health
+
+        Health endpoint
+        """
         pass
 
     def test_console(self):
@@ -111,11 +119,11 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_func1(self):
+    def test_get_api_group(self):
         """
-        Test case for func1
+        Test case for get_api_group
 
-
+        Get a KubeVirt API group
         """
         pass
 
@@ -127,14 +135,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_kube_connection_healthz_func(self):
-        """
-        Test case for kube_connection_healthz_func
-
-        Health endpoint
-        """
-        pass
-
     def test_list_migration_for_all_namespaces(self):
         """
         Test case for list_migration_for_all_namespaces
@@ -143,25 +143,25 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_list_namespaced_migration_list(self):
+    def test_list_namespaced_migration(self):
         """
-        Test case for list_namespaced_migration_list
+        Test case for list_namespaced_migration
 
         Get a list of Migration objects.
         """
         pass
 
-    def test_list_namespaced_virtual_machine_list(self):
+    def test_list_namespaced_virtual_machine(self):
         """
-        Test case for list_namespaced_virtual_machine_list
+        Test case for list_namespaced_virtual_machine
 
         Get a list of VirtualMachine objects.
         """
         pass
 
-    def test_list_namespaced_virtual_machine_replica_set_list(self):
+    def test_list_namespaced_virtual_machine_replica_set(self):
         """
-        Test case for list_namespaced_virtual_machine_replica_set_list
+        Test case for list_namespaced_virtual_machine_replica_set
 
         Get a list of VirtualMachineReplicaSet objects.
         """

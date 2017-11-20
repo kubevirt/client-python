@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KubeVirt API,
+    KubeVirt API, 
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -61,7 +61,8 @@ class V1OS(object):
           self.bios = bios
         if boot_menu is not None:
           self.boot_menu = boot_menu
-        self.boot_order = boot_order
+        if boot_order is not None:
+          self.boot_order = boot_order
         if sm_bios is not None:
           self.sm_bios = sm_bios
         self.type = type
@@ -126,8 +127,6 @@ class V1OS(object):
         :param boot_order: The boot_order of this V1OS.
         :type: list[V1Boot]
         """
-        if boot_order is None:
-            raise ValueError("Invalid value for `boot_order`, must not be `None`")
 
         self._boot_order = boot_order
 

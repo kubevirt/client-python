@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1_mac import V1MAC
+from kubevirt.models.v1_watchdog import V1Watchdog
 
 
-class TestV1MAC(unittest.TestCase):
-    """ V1MAC unit test stubs """
+class TestV1Watchdog(unittest.TestCase):
+    """ V1Watchdog unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1MAC(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1MAC(self):
+    def testV1Watchdog(self):
         """
-        Test V1MAC
+        Test V1Watchdog
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1_mac.V1MAC()
+        #model = kubevirt.models.v1_watchdog.V1Watchdog()
         pass
 
 

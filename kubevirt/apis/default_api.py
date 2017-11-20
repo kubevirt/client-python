@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KubeVirt API,
+    KubeVirt API, 
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -39,6 +39,104 @@ class DefaultApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
+
+    def check_health(self, **kwargs):
+        """
+        Health endpoint
+        Health endpoint
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.check_health(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.check_health_with_http_info(**kwargs)
+        else:
+            (data) = self.check_health_with_http_info(**kwargs)
+            return data
+
+    def check_health_with_http_info(self, **kwargs):
+        """
+        Health endpoint
+        Health endpoint
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.check_health_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method check_health" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/healthz', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
 
     def console(self, namespace, name, **kwargs):
         """
@@ -169,7 +267,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param V1Migration body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: None
+        :return: V1Migration
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -196,7 +294,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param V1Migration body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: None
+        :return: V1Migration
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -260,7 +358,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1Migration',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -284,7 +382,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param V1VirtualMachine body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: None
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -311,7 +409,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param V1VirtualMachine body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: None
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -375,7 +473,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachine',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -399,7 +497,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param V1VirtualMachineReplicaSet body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: None
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -426,7 +524,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param V1VirtualMachineReplicaSet body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: None
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -490,7 +588,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachineReplicaSet',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -514,7 +612,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :return: V1Migration
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -541,7 +639,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :return: V1Migration
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -607,7 +705,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1Migration',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -631,7 +729,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -658,7 +756,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -724,7 +822,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachine',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -748,7 +846,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -775,7 +873,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -841,7 +939,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachineReplicaSet',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -865,7 +963,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :return: None
+        :return: V1MigrationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -892,7 +990,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :return: None
+        :return: V1MigrationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -944,7 +1042,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1MigrationList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -968,7 +1066,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :return: None
+        :return: V1VirtualMachineList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -995,7 +1093,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :return: None
+        :return: V1VirtualMachineList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1047,7 +1145,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachineList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1071,7 +1169,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :return: None
+        :return: V1VirtualMachineReplicaSetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1098,7 +1196,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :return: None
+        :return: V1VirtualMachineReplicaSetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1150,7 +1248,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachineReplicaSetList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1158,42 +1256,46 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def func1(self, **kwargs):
+    def get_api_group(self, **kwargs):
         """
+        Get a KubeVirt API group
+        Get a KubeVirt API group
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.func1(callback=callback_function)
+        >>> thread = api.get_api_group(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: None
+        :return: V1APIGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.func1_with_http_info(**kwargs)
+            return self.get_api_group_with_http_info(**kwargs)
         else:
-            (data) = self.func1_with_http_info(**kwargs)
+            (data) = self.get_api_group_with_http_info(**kwargs)
             return data
 
-    def func1_with_http_info(self, **kwargs):
+    def get_api_group_with_http_info(self, **kwargs):
         """
+        Get a KubeVirt API group
+        Get a KubeVirt API group
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.func1_with_http_info(callback=callback_function)
+        >>> thread = api.get_api_group_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: None
+        :return: V1APIGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1209,7 +1311,7 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method func1" % key
+                    " to method get_api_group" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -1240,7 +1342,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1APIGroup',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1262,7 +1364,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: None
+        :return: V1APIResourceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1287,7 +1389,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: None
+        :return: V1APIResourceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1334,105 +1436,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def kube_connection_healthz_func(self, **kwargs):
-        """
-        Health endpoint
-        Health endpoint
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.kube_connection_healthz_func(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.kube_connection_healthz_func_with_http_info(**kwargs)
-        else:
-            (data) = self.kube_connection_healthz_func_with_http_info(**kwargs)
-            return data
-
-    def kube_connection_healthz_func_with_http_info(self, **kwargs):
-        """
-        Health endpoint
-        Health endpoint
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.kube_connection_healthz_func_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method kube_connection_healthz_func" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/healthz', 'GET',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1APIResourceList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1458,7 +1462,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1MigrationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1487,7 +1491,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1MigrationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1543,7 +1547,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1MigrationList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1551,7 +1555,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def list_namespaced_migration_list(self, namespace, **kwargs):
+    def list_namespaced_migration(self, namespace, **kwargs):
         """
         Get a list of Migration objects.
         Get a list of Migration objects.
@@ -1561,25 +1565,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_migration_list(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_migration(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: None
+        :return: V1MigrationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_namespaced_migration_list_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_migration_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_namespaced_migration_list_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_migration_with_http_info(namespace, **kwargs)
             return data
 
-    def list_namespaced_migration_list_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_migration_with_http_info(self, namespace, **kwargs):
         """
         Get a list of Migration objects.
         Get a list of Migration objects.
@@ -1589,14 +1593,14 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_migration_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_migration_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: None
+        :return: V1MigrationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1612,16 +1616,16 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_migration_list" % key
+                    " to method list_namespaced_migration" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_migration_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_migration`")
 
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_migration_list`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_migration`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -1655,7 +1659,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1MigrationList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1663,7 +1667,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def list_namespaced_virtual_machine_list(self, namespace, **kwargs):
+    def list_namespaced_virtual_machine(self, namespace, **kwargs):
         """
         Get a list of VirtualMachine objects.
         Get a list of VirtualMachine objects.
@@ -1673,25 +1677,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_virtual_machine_list(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_virtual_machine(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: None
+        :return: V1VirtualMachineList
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_namespaced_virtual_machine_list_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_virtual_machine_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_namespaced_virtual_machine_list_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_virtual_machine_with_http_info(namespace, **kwargs)
             return data
 
-    def list_namespaced_virtual_machine_list_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_virtual_machine_with_http_info(self, namespace, **kwargs):
         """
         Get a list of VirtualMachine objects.
         Get a list of VirtualMachine objects.
@@ -1701,14 +1705,14 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_virtual_machine_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_virtual_machine_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: None
+        :return: V1VirtualMachineList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1724,16 +1728,16 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_virtual_machine_list" % key
+                    " to method list_namespaced_virtual_machine" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_virtual_machine_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_virtual_machine`")
 
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_virtual_machine_list`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -1767,7 +1771,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachineList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1775,7 +1779,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def list_namespaced_virtual_machine_replica_set_list(self, namespace, **kwargs):
+    def list_namespaced_virtual_machine_replica_set(self, namespace, **kwargs):
         """
         Get a list of VirtualMachineReplicaSet objects.
         Get a list of VirtualMachineReplicaSet objects.
@@ -1785,25 +1789,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_virtual_machine_replica_set_list(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_virtual_machine_replica_set(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: None
+        :return: V1VirtualMachineReplicaSetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_namespaced_virtual_machine_replica_set_list_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_virtual_machine_replica_set_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_namespaced_virtual_machine_replica_set_list_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_virtual_machine_replica_set_with_http_info(namespace, **kwargs)
             return data
 
-    def list_namespaced_virtual_machine_replica_set_list_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_virtual_machine_replica_set_with_http_info(self, namespace, **kwargs):
         """
         Get a list of VirtualMachineReplicaSet objects.
         Get a list of VirtualMachineReplicaSet objects.
@@ -1813,14 +1817,14 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_virtual_machine_replica_set_list_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_virtual_machine_replica_set_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: None
+        :return: V1VirtualMachineReplicaSetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1836,16 +1840,16 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_virtual_machine_replica_set_list" % key
+                    " to method list_namespaced_virtual_machine_replica_set" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_virtual_machine_replica_set_list`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_virtual_machine_replica_set`")
 
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_virtual_machine_replica_set_list`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_virtual_machine_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -1879,7 +1883,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachineReplicaSetList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1905,7 +1909,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1VirtualMachineList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1934,7 +1938,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1VirtualMachineList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1990,7 +1994,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachineList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2016,7 +2020,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1VirtualMachineReplicaSetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2045,7 +2049,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1VirtualMachineReplicaSetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2101,7 +2105,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachineReplicaSetList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2127,7 +2131,7 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: None
+        :return: V1Migration
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2156,7 +2160,7 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: None
+        :return: V1Migration
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2222,7 +2226,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1Migration',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2248,7 +2252,7 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: None
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2277,7 +2281,7 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: None
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2343,7 +2347,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachine',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2369,7 +2373,7 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: None
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2398,7 +2402,7 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'
-        :return: None
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2464,7 +2468,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachineReplicaSet',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2489,7 +2493,7 @@ class DefaultApi(object):
         :param V1Migration body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :return: V1Migration
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2517,7 +2521,7 @@ class DefaultApi(object):
         :param V1Migration body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :return: V1Migration
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2588,7 +2592,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1Migration',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2613,7 +2617,7 @@ class DefaultApi(object):
         :param V1VirtualMachine body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2641,7 +2645,7 @@ class DefaultApi(object):
         :param V1VirtualMachine body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2712,7 +2716,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachine',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2737,7 +2741,7 @@ class DefaultApi(object):
         :param V1VirtualMachineReplicaSet body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2765,7 +2769,7 @@ class DefaultApi(object):
         :param V1VirtualMachineReplicaSet body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2836,7 +2840,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachineReplicaSet',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2971,7 +2975,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: None
+        :return: V1Migration
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2996,7 +3000,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: None
+        :return: V1Migration
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3043,7 +3047,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1Migration',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3065,7 +3069,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: None
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3090,7 +3094,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: None
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3137,7 +3141,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachine',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3159,7 +3163,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: None
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3184,7 +3188,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: None
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3231,7 +3235,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachineReplicaSet',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3257,7 +3261,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1MigrationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3286,7 +3290,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1MigrationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3342,7 +3346,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1MigrationList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3369,7 +3373,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1Migration
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3399,7 +3403,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1Migration
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3462,7 +3466,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1Migration',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3489,7 +3493,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3519,7 +3523,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3582,7 +3586,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachine',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3609,7 +3613,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3639,7 +3643,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1VirtualMachineReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3702,7 +3706,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachineReplicaSet',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3728,7 +3732,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1VirtualMachineList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3757,7 +3761,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1VirtualMachineList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3813,7 +3817,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachineList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3839,7 +3843,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1VirtualMachineReplicaSetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3868,7 +3872,7 @@ class DefaultApi(object):
         :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :return: None
+        :return: V1VirtualMachineReplicaSetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3924,7 +3928,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='V1VirtualMachineReplicaSetList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

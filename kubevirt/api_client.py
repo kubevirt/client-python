@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-    KubeVirt API,
+    KubeVirt API, 
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -628,6 +628,6 @@ class ApiClient(object):
                 value = data[klass.attribute_map[attr]]
                 kwargs[attr] = self.__deserialize(value, attr_type)
 
-        instance = klass(**kwargs)
+        instance = klass(**kwargs)     
 
         return instance

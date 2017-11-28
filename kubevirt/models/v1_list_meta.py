@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KubeVirt API, 
+    KubeVirt API
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -31,27 +31,55 @@ class V1ListMeta(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        '_continue': 'str',
         'resource_version': 'str',
         'self_link': 'str'
     }
 
     attribute_map = {
+        '_continue': 'continue',
         'resource_version': 'resourceVersion',
         'self_link': 'selfLink'
     }
 
-    def __init__(self, resource_version=None, self_link=None):
+    def __init__(self, _continue=None, resource_version=None, self_link=None):
         """
         V1ListMeta - a model defined in Swagger
         """
 
+        self.__continue = None
         self._resource_version = None
         self._self_link = None
 
+        if _continue is not None:
+          self._continue = _continue
         if resource_version is not None:
           self.resource_version = resource_version
         if self_link is not None:
           self.self_link = self_link
+
+    @property
+    def _continue(self):
+        """
+        Gets the _continue of this V1ListMeta.
+        continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response.
+
+        :return: The _continue of this V1ListMeta.
+        :rtype: str
+        """
+        return self.__continue
+
+    @_continue.setter
+    def _continue(self, _continue):
+        """
+        Sets the _continue of this V1ListMeta.
+        continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response.
+
+        :param _continue: The _continue of this V1ListMeta.
+        :type: str
+        """
+
+        self.__continue = _continue
 
     @property
     def resource_version(self):
@@ -80,7 +108,7 @@ class V1ListMeta(object):
     def self_link(self):
         """
         Gets the self_link of this V1ListMeta.
-        SelfLink is a URL representing this object. Populated by the system. Read-only.
+        selfLink is a URL representing this object. Populated by the system. Read-only.
 
         :return: The self_link of this V1ListMeta.
         :rtype: str
@@ -91,7 +119,7 @@ class V1ListMeta(object):
     def self_link(self, self_link):
         """
         Sets the self_link of this V1ListMeta.
-        SelfLink is a URL representing this object. Populated by the system. Read-only.
+        selfLink is a URL representing this object. Populated by the system. Read-only.
 
         :param self_link: The self_link of this V1ListMeta.
         :type: str

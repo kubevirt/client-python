@@ -33,12 +33,6 @@ Method | HTTP request | Description
 [**update_namespaced_migration**](DefaultApi.md#update_namespaced_migration) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations/{name} | Patch a Migration object.
 [**update_namespaced_virtual_machine**](DefaultApi.md#update_namespaced_virtual_machine) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Patch a VirtualMachine object.
 [**update_namespaced_virtual_machine_replica_set**](DefaultApi.md#update_namespaced_virtual_machine_replica_set) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name} | Patch a VirtualMachineReplicaSet object.
-[**watch_migration_list_for_all_namespaces**](DefaultApi.md#watch_migration_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/watch/migrations | Watch a MigrationList object.
-[**watch_namespaced_migration**](DefaultApi.md#watch_namespaced_migration) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/migrations | Watch a Migration object.
-[**watch_namespaced_virtual_machine**](DefaultApi.md#watch_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachines | Watch a VirtualMachine object.
-[**watch_namespaced_virtual_machine_replica_set**](DefaultApi.md#watch_namespaced_virtual_machine_replica_set) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachinereplicasets | Watch a VirtualMachineReplicaSet object.
-[**watch_virtual_machine_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/watch/virtualmachines | Watch a VirtualMachineList object.
-[**watch_virtual_machine_replica_set_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_replica_set_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/watch/virtualmachinereplicasets | Watch a VirtualMachineReplicaSetList object.
 
 
 # **check_health**
@@ -674,7 +668,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_migration_for_all_namespaces**
-> V1MigrationList list_migration_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
+> V1MigrationList list_migration_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 Get a list of all Migration objects.
 
@@ -694,10 +688,11 @@ field_selector = 'field_selector_example' # str | A selector to restrict the lis
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
 resource_version = 'resource_version_example' # str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. (optional)
 timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
+watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
 try: 
     # Get a list of all Migration objects.
-    api_response = api_instance.list_migration_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
+    api_response = api_instance.list_migration_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->list_migration_for_all_namespaces: %s\n" % e)
@@ -711,6 +706,7 @@ Name | Type | Description  | Notes
  **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything | [optional] 
  **resource_version** | **str**| When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. | [optional] 
  **timeout_seconds** | **int**| TimeoutSeconds for the list/watch call. | [optional] 
+ **watch** | **bool**| Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. | [optional] 
 
 ### Return type
 
@@ -723,12 +719,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/yaml
+ - **Accept**: application/json, application/yaml, application/json;stream=watch
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_namespaced_migration**
-> V1MigrationList list_namespaced_migration(namespace, export=export, exact=exact)
+> V1MigrationList list_namespaced_migration(namespace, export=export, exact=exact, watch=watch)
 
 Get a list of Migration objects.
 
@@ -747,10 +743,11 @@ api_instance = kubevirt.DefaultApi()
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 export = true # bool | Should this value be exported. Export strips fields that a user can not specify. (optional)
 exact = true # bool | Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace' (optional)
+watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
 try: 
     # Get a list of Migration objects.
-    api_response = api_instance.list_namespaced_migration(namespace, export=export, exact=exact)
+    api_response = api_instance.list_namespaced_migration(namespace, export=export, exact=exact, watch=watch)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->list_namespaced_migration: %s\n" % e)
@@ -763,6 +760,7 @@ Name | Type | Description  | Notes
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
  **export** | **bool**| Should this value be exported. Export strips fields that a user can not specify. | [optional] 
  **exact** | **bool**| Should the export be exact. Exact export maintains cluster-specific fields like &#39;Namespace&#39; | [optional] 
+ **watch** | **bool**| Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. | [optional] 
 
 ### Return type
 
@@ -775,12 +773,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/yaml
+ - **Accept**: application/json, application/yaml, application/json;stream=watch
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_namespaced_virtual_machine**
-> V1VirtualMachineList list_namespaced_virtual_machine(namespace, export=export, exact=exact)
+> V1VirtualMachineList list_namespaced_virtual_machine(namespace, export=export, exact=exact, watch=watch)
 
 Get a list of VirtualMachine objects.
 
@@ -799,10 +797,11 @@ api_instance = kubevirt.DefaultApi()
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 export = true # bool | Should this value be exported. Export strips fields that a user can not specify. (optional)
 exact = true # bool | Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace' (optional)
+watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
 try: 
     # Get a list of VirtualMachine objects.
-    api_response = api_instance.list_namespaced_virtual_machine(namespace, export=export, exact=exact)
+    api_response = api_instance.list_namespaced_virtual_machine(namespace, export=export, exact=exact, watch=watch)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->list_namespaced_virtual_machine: %s\n" % e)
@@ -815,6 +814,7 @@ Name | Type | Description  | Notes
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
  **export** | **bool**| Should this value be exported. Export strips fields that a user can not specify. | [optional] 
  **exact** | **bool**| Should the export be exact. Exact export maintains cluster-specific fields like &#39;Namespace&#39; | [optional] 
+ **watch** | **bool**| Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. | [optional] 
 
 ### Return type
 
@@ -827,12 +827,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/yaml
+ - **Accept**: application/json, application/yaml, application/json;stream=watch
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_namespaced_virtual_machine_replica_set**
-> V1VirtualMachineReplicaSetList list_namespaced_virtual_machine_replica_set(namespace, export=export, exact=exact)
+> V1VirtualMachineReplicaSetList list_namespaced_virtual_machine_replica_set(namespace, export=export, exact=exact, watch=watch)
 
 Get a list of VirtualMachineReplicaSet objects.
 
@@ -851,10 +851,11 @@ api_instance = kubevirt.DefaultApi()
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 export = true # bool | Should this value be exported. Export strips fields that a user can not specify. (optional)
 exact = true # bool | Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace' (optional)
+watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
 try: 
     # Get a list of VirtualMachineReplicaSet objects.
-    api_response = api_instance.list_namespaced_virtual_machine_replica_set(namespace, export=export, exact=exact)
+    api_response = api_instance.list_namespaced_virtual_machine_replica_set(namespace, export=export, exact=exact, watch=watch)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->list_namespaced_virtual_machine_replica_set: %s\n" % e)
@@ -867,6 +868,7 @@ Name | Type | Description  | Notes
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
  **export** | **bool**| Should this value be exported. Export strips fields that a user can not specify. | [optional] 
  **exact** | **bool**| Should the export be exact. Exact export maintains cluster-specific fields like &#39;Namespace&#39; | [optional] 
+ **watch** | **bool**| Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. | [optional] 
 
 ### Return type
 
@@ -879,12 +881,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/yaml
+ - **Accept**: application/json, application/yaml, application/json;stream=watch
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_virtual_machine_for_all_namespaces**
-> V1VirtualMachineList list_virtual_machine_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
+> V1VirtualMachineList list_virtual_machine_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 Get a list of all VirtualMachine objects.
 
@@ -904,10 +906,11 @@ field_selector = 'field_selector_example' # str | A selector to restrict the lis
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
 resource_version = 'resource_version_example' # str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. (optional)
 timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
+watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
 try: 
     # Get a list of all VirtualMachine objects.
-    api_response = api_instance.list_virtual_machine_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
+    api_response = api_instance.list_virtual_machine_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->list_virtual_machine_for_all_namespaces: %s\n" % e)
@@ -921,6 +924,7 @@ Name | Type | Description  | Notes
  **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything | [optional] 
  **resource_version** | **str**| When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. | [optional] 
  **timeout_seconds** | **int**| TimeoutSeconds for the list/watch call. | [optional] 
+ **watch** | **bool**| Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. | [optional] 
 
 ### Return type
 
@@ -933,12 +937,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/yaml
+ - **Accept**: application/json, application/yaml, application/json;stream=watch
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_virtual_machine_replica_set_for_all_namespaces**
-> V1VirtualMachineReplicaSetList list_virtual_machine_replica_set_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
+> V1VirtualMachineReplicaSetList list_virtual_machine_replica_set_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 Get a list of all VirtualMachineReplicaSet objects.
 
@@ -958,10 +962,11 @@ field_selector = 'field_selector_example' # str | A selector to restrict the lis
 label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
 resource_version = 'resource_version_example' # str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. (optional)
 timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
+watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
 try: 
     # Get a list of all VirtualMachineReplicaSet objects.
-    api_response = api_instance.list_virtual_machine_replica_set_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
+    api_response = api_instance.list_virtual_machine_replica_set_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->list_virtual_machine_replica_set_for_all_namespaces: %s\n" % e)
@@ -975,6 +980,7 @@ Name | Type | Description  | Notes
  **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything | [optional] 
  **resource_version** | **str**| When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. | [optional] 
  **timeout_seconds** | **int**| TimeoutSeconds for the list/watch call. | [optional] 
+ **watch** | **bool**| Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. | [optional] 
 
 ### Return type
 
@@ -987,12 +993,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/yaml
+ - **Accept**: application/json, application/yaml, application/json;stream=watch
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **read_namespaced_migration**
-> V1Migration read_namespaced_migration(name, namespace, export=export, exact=exact)
+> V1Migration read_namespaced_migration(name, namespace, export=export, exact=exact, watch=watch)
 
 Get a Migration object.
 
@@ -1012,10 +1018,11 @@ name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 export = true # bool | Should this value be exported. Export strips fields that a user can not specify. (optional)
 exact = true # bool | Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace' (optional)
+watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
 try: 
     # Get a Migration object.
-    api_response = api_instance.read_namespaced_migration(name, namespace, export=export, exact=exact)
+    api_response = api_instance.read_namespaced_migration(name, namespace, export=export, exact=exact, watch=watch)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->read_namespaced_migration: %s\n" % e)
@@ -1029,6 +1036,7 @@ Name | Type | Description  | Notes
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
  **export** | **bool**| Should this value be exported. Export strips fields that a user can not specify. | [optional] 
  **exact** | **bool**| Should the export be exact. Exact export maintains cluster-specific fields like &#39;Namespace&#39; | [optional] 
+ **watch** | **bool**| Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. | [optional] 
 
 ### Return type
 
@@ -1041,12 +1049,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/yaml
+ - **Accept**: application/json, application/yaml, application/json;stream=watch
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **read_namespaced_virtual_machine**
-> V1VirtualMachine read_namespaced_virtual_machine(name, namespace, export=export, exact=exact)
+> V1VirtualMachine read_namespaced_virtual_machine(name, namespace, export=export, exact=exact, watch=watch)
 
 Get a VirtualMachine object.
 
@@ -1066,10 +1074,11 @@ name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 export = true # bool | Should this value be exported. Export strips fields that a user can not specify. (optional)
 exact = true # bool | Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace' (optional)
+watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
 try: 
     # Get a VirtualMachine object.
-    api_response = api_instance.read_namespaced_virtual_machine(name, namespace, export=export, exact=exact)
+    api_response = api_instance.read_namespaced_virtual_machine(name, namespace, export=export, exact=exact, watch=watch)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->read_namespaced_virtual_machine: %s\n" % e)
@@ -1083,6 +1092,7 @@ Name | Type | Description  | Notes
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
  **export** | **bool**| Should this value be exported. Export strips fields that a user can not specify. | [optional] 
  **exact** | **bool**| Should the export be exact. Exact export maintains cluster-specific fields like &#39;Namespace&#39; | [optional] 
+ **watch** | **bool**| Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. | [optional] 
 
 ### Return type
 
@@ -1095,12 +1105,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/yaml
+ - **Accept**: application/json, application/yaml, application/json;stream=watch
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **read_namespaced_virtual_machine_replica_set**
-> V1VirtualMachineReplicaSet read_namespaced_virtual_machine_replica_set(name, namespace, export=export, exact=exact)
+> V1VirtualMachineReplicaSet read_namespaced_virtual_machine_replica_set(name, namespace, export=export, exact=exact, watch=watch)
 
 Get a VirtualMachineReplicaSet object.
 
@@ -1120,10 +1130,11 @@ name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 export = true # bool | Should this value be exported. Export strips fields that a user can not specify. (optional)
 exact = true # bool | Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace' (optional)
+watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
 try: 
     # Get a VirtualMachineReplicaSet object.
-    api_response = api_instance.read_namespaced_virtual_machine_replica_set(name, namespace, export=export, exact=exact)
+    api_response = api_instance.read_namespaced_virtual_machine_replica_set(name, namespace, export=export, exact=exact, watch=watch)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->read_namespaced_virtual_machine_replica_set: %s\n" % e)
@@ -1137,6 +1148,7 @@ Name | Type | Description  | Notes
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
  **export** | **bool**| Should this value be exported. Export strips fields that a user can not specify. | [optional] 
  **exact** | **bool**| Should the export be exact. Exact export maintains cluster-specific fields like &#39;Namespace&#39; | [optional] 
+ **watch** | **bool**| Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. | [optional] 
 
 ### Return type
 
@@ -1149,7 +1161,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/yaml
+ - **Accept**: application/json, application/yaml, application/json;stream=watch
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1487,336 +1499,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: application/json-patch+json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **watch_migration_list_for_all_namespaces**
-> V1MigrationList watch_migration_list_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
-
-Watch a MigrationList object.
-
-Watch a MigrationList object.
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import kubevirt
-from kubevirt.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = kubevirt.DefaultApi()
-field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
-label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
-resource_version = 'resource_version_example' # str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. (optional)
-timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
-
-try: 
-    # Watch a MigrationList object.
-    api_response = api_instance.watch_migration_list_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->watch_migration_list_for_all_namespaces: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **field_selector** | **str**| A selector to restrict the list of returned objects by their fields. Defaults to everything. | [optional] 
- **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything | [optional] 
- **resource_version** | **str**| When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. | [optional] 
- **timeout_seconds** | **int**| TimeoutSeconds for the list/watch call. | [optional] 
-
-### Return type
-
-[**V1MigrationList**](V1MigrationList.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **watch_namespaced_migration**
-> V1Migration watch_namespaced_migration(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
-
-Watch a Migration object.
-
-Watch a Migration object.
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import kubevirt
-from kubevirt.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = kubevirt.DefaultApi()
-namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
-label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
-resource_version = 'resource_version_example' # str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. (optional)
-timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
-
-try: 
-    # Watch a Migration object.
-    api_response = api_instance.watch_namespaced_migration(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->watch_namespaced_migration: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **field_selector** | **str**| A selector to restrict the list of returned objects by their fields. Defaults to everything. | [optional] 
- **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything | [optional] 
- **resource_version** | **str**| When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. | [optional] 
- **timeout_seconds** | **int**| TimeoutSeconds for the list/watch call. | [optional] 
-
-### Return type
-
-[**V1Migration**](V1Migration.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **watch_namespaced_virtual_machine**
-> V1VirtualMachine watch_namespaced_virtual_machine(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
-
-Watch a VirtualMachine object.
-
-Watch a VirtualMachine object.
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import kubevirt
-from kubevirt.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = kubevirt.DefaultApi()
-namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
-label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
-resource_version = 'resource_version_example' # str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. (optional)
-timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
-
-try: 
-    # Watch a VirtualMachine object.
-    api_response = api_instance.watch_namespaced_virtual_machine(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->watch_namespaced_virtual_machine: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **field_selector** | **str**| A selector to restrict the list of returned objects by their fields. Defaults to everything. | [optional] 
- **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything | [optional] 
- **resource_version** | **str**| When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. | [optional] 
- **timeout_seconds** | **int**| TimeoutSeconds for the list/watch call. | [optional] 
-
-### Return type
-
-[**V1VirtualMachine**](V1VirtualMachine.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **watch_namespaced_virtual_machine_replica_set**
-> V1VirtualMachineReplicaSet watch_namespaced_virtual_machine_replica_set(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
-
-Watch a VirtualMachineReplicaSet object.
-
-Watch a VirtualMachineReplicaSet object.
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import kubevirt
-from kubevirt.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = kubevirt.DefaultApi()
-namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
-label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
-resource_version = 'resource_version_example' # str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. (optional)
-timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
-
-try: 
-    # Watch a VirtualMachineReplicaSet object.
-    api_response = api_instance.watch_namespaced_virtual_machine_replica_set(namespace, field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->watch_namespaced_virtual_machine_replica_set: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **field_selector** | **str**| A selector to restrict the list of returned objects by their fields. Defaults to everything. | [optional] 
- **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything | [optional] 
- **resource_version** | **str**| When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. | [optional] 
- **timeout_seconds** | **int**| TimeoutSeconds for the list/watch call. | [optional] 
-
-### Return type
-
-[**V1VirtualMachineReplicaSet**](V1VirtualMachineReplicaSet.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **watch_virtual_machine_list_for_all_namespaces**
-> V1VirtualMachineList watch_virtual_machine_list_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
-
-Watch a VirtualMachineList object.
-
-Watch a VirtualMachineList object.
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import kubevirt
-from kubevirt.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = kubevirt.DefaultApi()
-field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
-label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
-resource_version = 'resource_version_example' # str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. (optional)
-timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
-
-try: 
-    # Watch a VirtualMachineList object.
-    api_response = api_instance.watch_virtual_machine_list_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->watch_virtual_machine_list_for_all_namespaces: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **field_selector** | **str**| A selector to restrict the list of returned objects by their fields. Defaults to everything. | [optional] 
- **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything | [optional] 
- **resource_version** | **str**| When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. | [optional] 
- **timeout_seconds** | **int**| TimeoutSeconds for the list/watch call. | [optional] 
-
-### Return type
-
-[**V1VirtualMachineList**](V1VirtualMachineList.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **watch_virtual_machine_replica_set_list_for_all_namespaces**
-> V1VirtualMachineReplicaSetList watch_virtual_machine_replica_set_list_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
-
-Watch a VirtualMachineReplicaSetList object.
-
-Watch a VirtualMachineReplicaSetList object.
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import kubevirt
-from kubevirt.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = kubevirt.DefaultApi()
-field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
-label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
-resource_version = 'resource_version_example' # str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. (optional)
-timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
-
-try: 
-    # Watch a VirtualMachineReplicaSetList object.
-    api_response = api_instance.watch_virtual_machine_replica_set_list_for_all_namespaces(field_selector=field_selector, label_selector=label_selector, resource_version=resource_version, timeout_seconds=timeout_seconds)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->watch_virtual_machine_replica_set_list_for_all_namespaces: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **field_selector** | **str**| A selector to restrict the list of returned objects by their fields. Defaults to everything. | [optional] 
- **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything | [optional] 
- **resource_version** | **str**| When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. | [optional] 
- **timeout_seconds** | **int**| TimeoutSeconds for the list/watch call. | [optional] 
-
-### Return type
-
-[**V1VirtualMachineReplicaSetList**](V1VirtualMachineReplicaSetList.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

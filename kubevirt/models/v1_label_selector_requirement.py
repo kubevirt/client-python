@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KubeVirt API, 
+    KubeVirt API
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -85,7 +85,7 @@ class V1LabelSelectorRequirement(object):
     def operator(self):
         """
         Gets the operator of this V1LabelSelectorRequirement.
-        operator represents a key's relationship to a set of values. Valid operators ard In, NotIn, Exists and DoesNotExist.
+        operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
 
         :return: The operator of this V1LabelSelectorRequirement.
         :rtype: str
@@ -96,7 +96,7 @@ class V1LabelSelectorRequirement(object):
     def operator(self, operator):
         """
         Sets the operator of this V1LabelSelectorRequirement.
-        operator represents a key's relationship to a set of values. Valid operators ard In, NotIn, Exists and DoesNotExist.
+        operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
 
         :param operator: The operator of this V1LabelSelectorRequirement.
         :type: str

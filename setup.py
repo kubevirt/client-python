@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KubeVirt API, 
+    KubeVirt API
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -28,10 +28,10 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 setup(
     name=NAME,
     version=VERSION,
-    description="KubeVirt API, ",
+    description="KubeVirt API",
     author_email="kubevirt-dev@googlegroups.com",
     url="https://github.com/lukas-bednar/kubevirt-pysdk-generated",
-    keywords=["Swagger", "KubeVirt API, "],
+    keywords=["Swagger", "KubeVirt API"],
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KubeVirt API, 
+    KubeVirt API
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -51,9 +51,11 @@ class V1CloudInitDataSourceNoCloud(object):
         self._user_data_base64 = None
         self._user_data_secret_ref = None
 
-        self.meta_data_base64 = meta_data_base64
+        if meta_data_base64 is not None:
+          self.meta_data_base64 = meta_data_base64
         self.user_data_base64 = user_data_base64
-        self.user_data_secret_ref = user_data_secret_ref
+        if user_data_secret_ref is not None:
+          self.user_data_secret_ref = user_data_secret_ref
 
     @property
     def meta_data_base64(self):
@@ -75,8 +77,6 @@ class V1CloudInitDataSourceNoCloud(object):
         :param meta_data_base64: The meta_data_base64 of this V1CloudInitDataSourceNoCloud.
         :type: str
         """
-        if meta_data_base64 is None:
-            raise ValueError("Invalid value for `meta_data_base64`, must not be `None`")
 
         self._meta_data_base64 = meta_data_base64
 
@@ -125,8 +125,6 @@ class V1CloudInitDataSourceNoCloud(object):
         :param user_data_secret_ref: The user_data_secret_ref of this V1CloudInitDataSourceNoCloud.
         :type: str
         """
-        if user_data_secret_ref is None:
-            raise ValueError("Invalid value for `user_data_secret_ref`, must not be `None`")
 
         self._user_data_secret_ref = user_data_secret_ref
 

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KubeVirt API, 
+    KubeVirt API
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -51,7 +51,8 @@ class V1VMReplicaSetStatus(object):
         self._ready_replicas = None
         self._replicas = None
 
-        self.conditions = conditions
+        if conditions is not None:
+          self.conditions = conditions
         if ready_replicas is not None:
           self.ready_replicas = ready_replicas
         if replicas is not None:
@@ -75,8 +76,6 @@ class V1VMReplicaSetStatus(object):
         :param conditions: The conditions of this V1VMReplicaSetStatus.
         :type: list[V1VMReplicaSetCondition]
         """
-        if conditions is None:
-            raise ValueError("Invalid value for `conditions`, must not be `None`")
 
         self._conditions = conditions
 

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KubeVirt API, 
+    KubeVirt API
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -59,12 +59,14 @@ class V1VMStatus(object):
 
         if conditions is not None:
           self.conditions = conditions
-        self.graphics = graphics
+        if graphics is not None:
+          self.graphics = graphics
         if migration_node_name is not None:
           self.migration_node_name = migration_node_name
         if node_name is not None:
           self.node_name = node_name
-        self.phase = phase
+        if phase is not None:
+          self.phase = phase
 
     @property
     def conditions(self):
@@ -109,8 +111,6 @@ class V1VMStatus(object):
         :param graphics: The graphics of this V1VMStatus.
         :type: list[V1VMGraphics]
         """
-        if graphics is None:
-            raise ValueError("Invalid value for `graphics`, must not be `None`")
 
         self._graphics = graphics
 
@@ -180,8 +180,6 @@ class V1VMStatus(object):
         :param phase: The phase of this V1VMStatus.
         :type: str
         """
-        if phase is None:
-            raise ValueError("Invalid value for `phase`, must not be `None`")
 
         self._phase = phase
 

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KubeVirt API, 
+    KubeVirt API
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -76,7 +76,8 @@ class V1Disk(object):
           self.auth = auth
         if cloudinit is not None:
           self.cloudinit = cloudinit
-        self.device = device
+        if device is not None:
+          self.device = device
         if driver is not None:
           self.driver = driver
         if read_only is not None:
@@ -85,7 +86,8 @@ class V1Disk(object):
           self.serial = serial
         if snapshot is not None:
           self.snapshot = snapshot
-        self.source = source
+        if source is not None:
+          self.source = source
         self.target = target
         self.type = type
 
@@ -149,8 +151,6 @@ class V1Disk(object):
         :param device: The device of this V1Disk.
         :type: str
         """
-        if device is None:
-            raise ValueError("Invalid value for `device`, must not be `None`")
 
         self._device = device
 
@@ -256,8 +256,6 @@ class V1Disk(object):
         :param source: The source of this V1Disk.
         :type: V1DiskSource
         """
-        if source is None:
-            raise ValueError("Invalid value for `source`, must not be `None`")
 
         self._source = source
 

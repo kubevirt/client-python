@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KubeVirt API, 
+    KubeVirt API
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -65,7 +65,8 @@ class V1VirtualMachine(object):
           self.metadata = metadata
         if spec is not None:
           self.spec = spec
-        self.status = status
+        if status is not None:
+          self.status = status
 
     @property
     def api_version(self):
@@ -177,8 +178,6 @@ class V1VirtualMachine(object):
         :param status: The status of this V1VirtualMachine.
         :type: V1VMStatus
         """
-        if status is None:
-            raise ValueError("Invalid value for `status`, must not be `None`")
 
         self._status = status
 

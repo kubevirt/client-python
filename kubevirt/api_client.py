@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-    KubeVirt API, 
+    KubeVirt API
 
     This is KubeVirt API an add-on for Kubernetes.
 

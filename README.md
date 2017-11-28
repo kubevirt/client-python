@@ -97,6 +97,12 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**update_namespaced_migration**](docs/DefaultApi.md#update_namespaced_migration) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations/{name} | Patch a Migration object.
 *DefaultApi* | [**update_namespaced_virtual_machine**](docs/DefaultApi.md#update_namespaced_virtual_machine) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Patch a VirtualMachine object.
 *DefaultApi* | [**update_namespaced_virtual_machine_replica_set**](docs/DefaultApi.md#update_namespaced_virtual_machine_replica_set) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name} | Patch a VirtualMachineReplicaSet object.
+*DefaultApi* | [**watch_migration_list_for_all_namespaces**](docs/DefaultApi.md#watch_migration_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/watch/migrations | Watch a MigrationList object.
+*DefaultApi* | [**watch_namespaced_migration**](docs/DefaultApi.md#watch_namespaced_migration) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/migrations | Watch a Migration object.
+*DefaultApi* | [**watch_namespaced_virtual_machine**](docs/DefaultApi.md#watch_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachines | Watch a VirtualMachine object.
+*DefaultApi* | [**watch_namespaced_virtual_machine_replica_set**](docs/DefaultApi.md#watch_namespaced_virtual_machine_replica_set) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachinereplicasets | Watch a VirtualMachineReplicaSet object.
+*DefaultApi* | [**watch_virtual_machine_list_for_all_namespaces**](docs/DefaultApi.md#watch_virtual_machine_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/watch/virtualmachines | Watch a VirtualMachineList object.
+*DefaultApi* | [**watch_virtual_machine_replica_set_list_for_all_namespaces**](docs/DefaultApi.md#watch_virtual_machine_replica_set_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/watch/virtualmachinereplicasets | Watch a VirtualMachineReplicaSetList object.
 
 
 ## Documentation For Models

@@ -3278,3 +3278,696 @@ class DefaultApi(object):
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
+
+    def watch_migration_list_for_all_namespaces(self, **kwargs):
+        """
+        Watch a MigrationList object.
+        Watch a MigrationList object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_migration_list_for_all_namespaces(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1MigrationList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_migration_list_for_all_namespaces_with_http_info(**kwargs)
+        else:
+            (data) = self.watch_migration_list_for_all_namespaces_with_http_info(**kwargs)
+            return data
+
+    def watch_migration_list_for_all_namespaces_with_http_info(self, **kwargs):
+        """
+        Watch a MigrationList object.
+        Watch a MigrationList object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_migration_list_for_all_namespaces_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1MigrationList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_migration_list_for_all_namespaces" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'field_selector' in params:
+            query_params.append(('fieldSelector', params['field_selector']))
+        if 'label_selector' in params:
+            query_params.append(('labelSelector', params['label_selector']))
+        if 'resource_version' in params:
+            query_params.append(('resourceVersion', params['resource_version']))
+        if 'timeout_seconds' in params:
+            query_params.append(('timeoutSeconds', params['timeout_seconds']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/migrations', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='V1MigrationList',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def watch_namespaced_migration(self, namespace, **kwargs):
+        """
+        Watch a Migration object.
+        Watch a Migration object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_namespaced_migration(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1Migration
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_namespaced_migration_with_http_info(namespace, **kwargs)
+        else:
+            (data) = self.watch_namespaced_migration_with_http_info(namespace, **kwargs)
+            return data
+
+    def watch_namespaced_migration_with_http_info(self, namespace, **kwargs):
+        """
+        Watch a Migration object.
+        Watch a Migration object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_namespaced_migration_with_http_info(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1Migration
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_namespaced_migration" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_migration`")
+
+        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
+            raise ValueError("Invalid value for parameter `namespace` when calling `watch_namespaced_migration`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = []
+        if 'field_selector' in params:
+            query_params.append(('fieldSelector', params['field_selector']))
+        if 'label_selector' in params:
+            query_params.append(('labelSelector', params['label_selector']))
+        if 'resource_version' in params:
+            query_params.append(('resourceVersion', params['resource_version']))
+        if 'timeout_seconds' in params:
+            query_params.append(('timeoutSeconds', params['timeout_seconds']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/migrations', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='V1Migration',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def watch_namespaced_virtual_machine(self, namespace, **kwargs):
+        """
+        Watch a VirtualMachine object.
+        Watch a VirtualMachine object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_namespaced_virtual_machine(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachine
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_namespaced_virtual_machine_with_http_info(namespace, **kwargs)
+        else:
+            (data) = self.watch_namespaced_virtual_machine_with_http_info(namespace, **kwargs)
+            return data
+
+    def watch_namespaced_virtual_machine_with_http_info(self, namespace, **kwargs):
+        """
+        Watch a VirtualMachine object.
+        Watch a VirtualMachine object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_namespaced_virtual_machine_with_http_info(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachine
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_namespaced_virtual_machine" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_virtual_machine`")
+
+        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
+            raise ValueError("Invalid value for parameter `namespace` when calling `watch_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = []
+        if 'field_selector' in params:
+            query_params.append(('fieldSelector', params['field_selector']))
+        if 'label_selector' in params:
+            query_params.append(('labelSelector', params['label_selector']))
+        if 'resource_version' in params:
+            query_params.append(('resourceVersion', params['resource_version']))
+        if 'timeout_seconds' in params:
+            query_params.append(('timeoutSeconds', params['timeout_seconds']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachines', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='V1VirtualMachine',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def watch_namespaced_virtual_machine_replica_set(self, namespace, **kwargs):
+        """
+        Watch a VirtualMachineReplicaSet object.
+        Watch a VirtualMachineReplicaSet object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_namespaced_virtual_machine_replica_set(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_namespaced_virtual_machine_replica_set_with_http_info(namespace, **kwargs)
+        else:
+            (data) = self.watch_namespaced_virtual_machine_replica_set_with_http_info(namespace, **kwargs)
+            return data
+
+    def watch_namespaced_virtual_machine_replica_set_with_http_info(self, namespace, **kwargs):
+        """
+        Watch a VirtualMachineReplicaSet object.
+        Watch a VirtualMachineReplicaSet object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_namespaced_virtual_machine_replica_set_with_http_info(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', 'field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_namespaced_virtual_machine_replica_set" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_virtual_machine_replica_set`")
+
+        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
+            raise ValueError("Invalid value for parameter `namespace` when calling `watch_namespaced_virtual_machine_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = []
+        if 'field_selector' in params:
+            query_params.append(('fieldSelector', params['field_selector']))
+        if 'label_selector' in params:
+            query_params.append(('labelSelector', params['label_selector']))
+        if 'resource_version' in params:
+            query_params.append(('resourceVersion', params['resource_version']))
+        if 'timeout_seconds' in params:
+            query_params.append(('timeoutSeconds', params['timeout_seconds']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachinereplicasets', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='V1VirtualMachineReplicaSet',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def watch_virtual_machine_list_for_all_namespaces(self, **kwargs):
+        """
+        Watch a VirtualMachineList object.
+        Watch a VirtualMachineList object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_virtual_machine_list_for_all_namespaces(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_virtual_machine_list_for_all_namespaces_with_http_info(**kwargs)
+        else:
+            (data) = self.watch_virtual_machine_list_for_all_namespaces_with_http_info(**kwargs)
+            return data
+
+    def watch_virtual_machine_list_for_all_namespaces_with_http_info(self, **kwargs):
+        """
+        Watch a VirtualMachineList object.
+        Watch a VirtualMachineList object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_virtual_machine_list_for_all_namespaces_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_virtual_machine_list_for_all_namespaces" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'field_selector' in params:
+            query_params.append(('fieldSelector', params['field_selector']))
+        if 'label_selector' in params:
+            query_params.append(('labelSelector', params['label_selector']))
+        if 'resource_version' in params:
+            query_params.append(('resourceVersion', params['resource_version']))
+        if 'timeout_seconds' in params:
+            query_params.append(('timeoutSeconds', params['timeout_seconds']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/virtualmachines', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='V1VirtualMachineList',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def watch_virtual_machine_replica_set_list_for_all_namespaces(self, **kwargs):
+        """
+        Watch a VirtualMachineReplicaSetList object.
+        Watch a VirtualMachineReplicaSetList object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_virtual_machine_replica_set_list_for_all_namespaces(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineReplicaSetList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_virtual_machine_replica_set_list_for_all_namespaces_with_http_info(**kwargs)
+        else:
+            (data) = self.watch_virtual_machine_replica_set_list_for_all_namespaces_with_http_info(**kwargs)
+            return data
+
+    def watch_virtual_machine_replica_set_list_for_all_namespaces_with_http_info(self, **kwargs):
+        """
+        Watch a VirtualMachineReplicaSetList object.
+        Watch a VirtualMachineReplicaSetList object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_virtual_machine_replica_set_list_for_all_namespaces_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :return: V1VirtualMachineReplicaSetList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['field_selector', 'label_selector', 'resource_version', 'timeout_seconds']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_virtual_machine_replica_set_list_for_all_namespaces" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'field_selector' in params:
+            query_params.append(('fieldSelector', params['field_selector']))
+        if 'label_selector' in params:
+            query_params.append(('labelSelector', params['label_selector']))
+        if 'resource_version' in params:
+            query_params.append(('resourceVersion', params['resource_version']))
+        if 'timeout_seconds' in params:
+            query_params.append(('timeoutSeconds', params['timeout_seconds']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/virtualmachinereplicasets', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='V1VirtualMachineReplicaSetList',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)

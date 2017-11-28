@@ -34,8 +34,6 @@ var/
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Swagger bin
-swagger-codegen-cli.jar
 # Unit test / coverage reports
 htmlcov/
 .tox/
@@ -55,7 +53,6 @@ venv/
 
 # Django stuff:
 *.log
-!kubevirt-pysdk-codegen.log
 
 # Sphinx documentation
 docs/_build/

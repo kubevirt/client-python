@@ -52,7 +52,7 @@ class V1Affinity(object):
     def node_affinity(self):
         """
         Gets the node_affinity of this V1Affinity.
-        Host affinity support
+        Node affinity support
 
         :return: The node_affinity of this V1Affinity.
         :rtype: V1NodeAffinity
@@ -63,7 +63,7 @@ class V1Affinity(object):
     def node_affinity(self, node_affinity):
         """
         Sets the node_affinity of this V1Affinity.
-        Host affinity support
+        Node affinity support
 
         :param node_affinity: The node_affinity of this V1Affinity.
         :type: V1NodeAffinity

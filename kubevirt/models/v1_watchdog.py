@@ -31,75 +31,74 @@ class V1Watchdog(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'action': 'str',
-        'model': 'str'
+        'i6300esb': 'V1I6300ESBWatchdog',
+        'name': 'str'
     }
 
     attribute_map = {
-        'action': 'action',
-        'model': 'model'
+        'i6300esb': 'i6300esb',
+        'name': 'name'
     }
 
-    def __init__(self, action=None, model=None):
+    def __init__(self, i6300esb=None, name=None):
         """
         V1Watchdog - a model defined in Swagger
         """
 
-        self._action = None
-        self._model = None
+        self._i6300esb = None
+        self._name = None
 
-        self.action = action
-        self.model = model
-
-    @property
-    def action(self):
-        """
-        Gets the action of this V1Watchdog.
-        The action to take. poweroff, reset, shutdown, pause, dump.
-
-        :return: The action of this V1Watchdog.
-        :rtype: str
-        """
-        return self._action
-
-    @action.setter
-    def action(self, action):
-        """
-        Sets the action of this V1Watchdog.
-        The action to take. poweroff, reset, shutdown, pause, dump.
-
-        :param action: The action of this V1Watchdog.
-        :type: str
-        """
-        if action is None:
-            raise ValueError("Invalid value for `action`, must not be `None`")
-
-        self._action = action
+        if i6300esb is not None:
+          self.i6300esb = i6300esb
+        self.name = name
 
     @property
-    def model(self):
+    def i6300esb(self):
         """
-        Gets the model of this V1Watchdog.
-        Defines what watchdog model to use, typically 'i6300esb'
+        Gets the i6300esb of this V1Watchdog.
+        i6300esb watchdog device +optional
 
-        :return: The model of this V1Watchdog.
+        :return: The i6300esb of this V1Watchdog.
+        :rtype: V1I6300ESBWatchdog
+        """
+        return self._i6300esb
+
+    @i6300esb.setter
+    def i6300esb(self, i6300esb):
+        """
+        Sets the i6300esb of this V1Watchdog.
+        i6300esb watchdog device +optional
+
+        :param i6300esb: The i6300esb of this V1Watchdog.
+        :type: V1I6300ESBWatchdog
+        """
+
+        self._i6300esb = i6300esb
+
+    @property
+    def name(self):
+        """
+        Gets the name of this V1Watchdog.
+        Name of the watchdog
+
+        :return: The name of this V1Watchdog.
         :rtype: str
         """
-        return self._model
+        return self._name
 
-    @model.setter
-    def model(self, model):
+    @name.setter
+    def name(self, name):
         """
-        Sets the model of this V1Watchdog.
-        Defines what watchdog model to use, typically 'i6300esb'
+        Sets the name of this V1Watchdog.
+        Name of the watchdog
 
-        :param model: The model of this V1Watchdog.
+        :param name: The name of this V1Watchdog.
         :type: str
         """
-        if model is None:
-            raise ValueError("Invalid value for `model`, must not be `None`")
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")
 
-        self._model = model
+        self._name = name
 
     def to_dict(self):
         """

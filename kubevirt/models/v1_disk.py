@@ -31,279 +31,187 @@ class V1Disk(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'auth': 'V1DiskAuth',
-        'cloudinit': 'V1CloudInitSpec',
-        'device': 'str',
-        'driver': 'V1DiskDriver',
-        'read_only': 'V1ReadOnly',
-        'serial': 'str',
-        'snapshot': 'str',
-        'source': 'V1DiskSource',
-        'target': 'V1DiskTarget',
-        'type': 'str'
+        'cdrom': 'V1CDRomTarget',
+        'disk': 'V1DiskTarget',
+        'floppy': 'V1FloppyTarget',
+        'lun': 'V1LunTarget',
+        'name': 'str',
+        'volume_name': 'str'
     }
 
     attribute_map = {
-        'auth': 'auth',
-        'cloudinit': 'cloudinit',
-        'device': 'device',
-        'driver': 'driver',
-        'read_only': 'readOnly',
-        'serial': 'serial',
-        'snapshot': 'snapshot',
-        'source': 'source',
-        'target': 'target',
-        'type': 'type'
+        'cdrom': 'cdrom',
+        'disk': 'disk',
+        'floppy': 'floppy',
+        'lun': 'lun',
+        'name': 'name',
+        'volume_name': 'volumeName'
     }
 
-    def __init__(self, auth=None, cloudinit=None, device=None, driver=None, read_only=None, serial=None, snapshot=None, source=None, target=None, type=None):
+    def __init__(self, cdrom=None, disk=None, floppy=None, lun=None, name=None, volume_name=None):
         """
         V1Disk - a model defined in Swagger
         """
 
-        self._auth = None
-        self._cloudinit = None
-        self._device = None
-        self._driver = None
-        self._read_only = None
-        self._serial = None
-        self._snapshot = None
-        self._source = None
-        self._target = None
-        self._type = None
+        self._cdrom = None
+        self._disk = None
+        self._floppy = None
+        self._lun = None
+        self._name = None
+        self._volume_name = None
 
-        if auth is not None:
-          self.auth = auth
-        if cloudinit is not None:
-          self.cloudinit = cloudinit
-        if device is not None:
-          self.device = device
-        if driver is not None:
-          self.driver = driver
-        if read_only is not None:
-          self.read_only = read_only
-        if serial is not None:
-          self.serial = serial
-        if snapshot is not None:
-          self.snapshot = snapshot
-        if source is not None:
-          self.source = source
-        self.target = target
-        self.type = type
+        if cdrom is not None:
+          self.cdrom = cdrom
+        if disk is not None:
+          self.disk = disk
+        if floppy is not None:
+          self.floppy = floppy
+        if lun is not None:
+          self.lun = lun
+        self.name = name
+        self.volume_name = volume_name
 
     @property
-    def auth(self):
+    def cdrom(self):
         """
-        Gets the auth of this V1Disk.
+        Gets the cdrom of this V1Disk.
+        Attach a volume as a cdrom to the vm
 
-        :return: The auth of this V1Disk.
-        :rtype: V1DiskAuth
+        :return: The cdrom of this V1Disk.
+        :rtype: V1CDRomTarget
         """
-        return self._auth
+        return self._cdrom
 
-    @auth.setter
-    def auth(self, auth):
+    @cdrom.setter
+    def cdrom(self, cdrom):
         """
-        Sets the auth of this V1Disk.
+        Sets the cdrom of this V1Disk.
+        Attach a volume as a cdrom to the vm
 
-        :param auth: The auth of this V1Disk.
-        :type: V1DiskAuth
+        :param cdrom: The cdrom of this V1Disk.
+        :type: V1CDRomTarget
         """
 
-        self._auth = auth
+        self._cdrom = cdrom
 
     @property
-    def cloudinit(self):
+    def disk(self):
         """
-        Gets the cloudinit of this V1Disk.
+        Gets the disk of this V1Disk.
+        Attach a volume as a disk to the vm
 
-        :return: The cloudinit of this V1Disk.
-        :rtype: V1CloudInitSpec
-        """
-        return self._cloudinit
-
-    @cloudinit.setter
-    def cloudinit(self, cloudinit):
-        """
-        Sets the cloudinit of this V1Disk.
-
-        :param cloudinit: The cloudinit of this V1Disk.
-        :type: V1CloudInitSpec
-        """
-
-        self._cloudinit = cloudinit
-
-    @property
-    def device(self):
-        """
-        Gets the device of this V1Disk.
-
-        :return: The device of this V1Disk.
-        :rtype: str
-        """
-        return self._device
-
-    @device.setter
-    def device(self, device):
-        """
-        Sets the device of this V1Disk.
-
-        :param device: The device of this V1Disk.
-        :type: str
-        """
-
-        self._device = device
-
-    @property
-    def driver(self):
-        """
-        Gets the driver of this V1Disk.
-
-        :return: The driver of this V1Disk.
-        :rtype: V1DiskDriver
-        """
-        return self._driver
-
-    @driver.setter
-    def driver(self, driver):
-        """
-        Sets the driver of this V1Disk.
-
-        :param driver: The driver of this V1Disk.
-        :type: V1DiskDriver
-        """
-
-        self._driver = driver
-
-    @property
-    def read_only(self):
-        """
-        Gets the read_only of this V1Disk.
-
-        :return: The read_only of this V1Disk.
-        :rtype: V1ReadOnly
-        """
-        return self._read_only
-
-    @read_only.setter
-    def read_only(self, read_only):
-        """
-        Sets the read_only of this V1Disk.
-
-        :param read_only: The read_only of this V1Disk.
-        :type: V1ReadOnly
-        """
-
-        self._read_only = read_only
-
-    @property
-    def serial(self):
-        """
-        Gets the serial of this V1Disk.
-
-        :return: The serial of this V1Disk.
-        :rtype: str
-        """
-        return self._serial
-
-    @serial.setter
-    def serial(self, serial):
-        """
-        Sets the serial of this V1Disk.
-
-        :param serial: The serial of this V1Disk.
-        :type: str
-        """
-
-        self._serial = serial
-
-    @property
-    def snapshot(self):
-        """
-        Gets the snapshot of this V1Disk.
-
-        :return: The snapshot of this V1Disk.
-        :rtype: str
-        """
-        return self._snapshot
-
-    @snapshot.setter
-    def snapshot(self, snapshot):
-        """
-        Sets the snapshot of this V1Disk.
-
-        :param snapshot: The snapshot of this V1Disk.
-        :type: str
-        """
-
-        self._snapshot = snapshot
-
-    @property
-    def source(self):
-        """
-        Gets the source of this V1Disk.
-
-        :return: The source of this V1Disk.
-        :rtype: V1DiskSource
-        """
-        return self._source
-
-    @source.setter
-    def source(self, source):
-        """
-        Sets the source of this V1Disk.
-
-        :param source: The source of this V1Disk.
-        :type: V1DiskSource
-        """
-
-        self._source = source
-
-    @property
-    def target(self):
-        """
-        Gets the target of this V1Disk.
-
-        :return: The target of this V1Disk.
+        :return: The disk of this V1Disk.
         :rtype: V1DiskTarget
         """
-        return self._target
+        return self._disk
 
-    @target.setter
-    def target(self, target):
+    @disk.setter
+    def disk(self, disk):
         """
-        Sets the target of this V1Disk.
+        Sets the disk of this V1Disk.
+        Attach a volume as a disk to the vm
 
-        :param target: The target of this V1Disk.
+        :param disk: The disk of this V1Disk.
         :type: V1DiskTarget
         """
-        if target is None:
-            raise ValueError("Invalid value for `target`, must not be `None`")
 
-        self._target = target
+        self._disk = disk
 
     @property
-    def type(self):
+    def floppy(self):
         """
-        Gets the type of this V1Disk.
+        Gets the floppy of this V1Disk.
+        Attach a volume as a floppy to the vm
 
-        :return: The type of this V1Disk.
+        :return: The floppy of this V1Disk.
+        :rtype: V1FloppyTarget
+        """
+        return self._floppy
+
+    @floppy.setter
+    def floppy(self, floppy):
+        """
+        Sets the floppy of this V1Disk.
+        Attach a volume as a floppy to the vm
+
+        :param floppy: The floppy of this V1Disk.
+        :type: V1FloppyTarget
+        """
+
+        self._floppy = floppy
+
+    @property
+    def lun(self):
+        """
+        Gets the lun of this V1Disk.
+        Attach a volume as a LUN to the vm
+
+        :return: The lun of this V1Disk.
+        :rtype: V1LunTarget
+        """
+        return self._lun
+
+    @lun.setter
+    def lun(self, lun):
+        """
+        Sets the lun of this V1Disk.
+        Attach a volume as a LUN to the vm
+
+        :param lun: The lun of this V1Disk.
+        :type: V1LunTarget
+        """
+
+        self._lun = lun
+
+    @property
+    def name(self):
+        """
+        Gets the name of this V1Disk.
+        Name is the device name
+
+        :return: The name of this V1Disk.
         :rtype: str
         """
-        return self._type
+        return self._name
 
-    @type.setter
-    def type(self, type):
+    @name.setter
+    def name(self, name):
         """
-        Sets the type of this V1Disk.
+        Sets the name of this V1Disk.
+        Name is the device name
 
-        :param type: The type of this V1Disk.
+        :param name: The name of this V1Disk.
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")
 
-        self._type = type
+        self._name = name
+
+    @property
+    def volume_name(self):
+        """
+        Gets the volume_name of this V1Disk.
+        Name of the volume which is referenced Must match the Name of a Volume.
+
+        :return: The volume_name of this V1Disk.
+        :rtype: str
+        """
+        return self._volume_name
+
+    @volume_name.setter
+    def volume_name(self, volume_name):
+        """
+        Sets the volume_name of this V1Disk.
+        Name of the volume which is referenced Must match the Name of a Volume.
+
+        :param volume_name: The volume_name of this V1Disk.
+        :type: str
+        """
+        if volume_name is None:
+            raise ValueError("Invalid value for `volume_name`, must not be `None`")
+
+        self._volume_name = volume_name
 
     def to_dict(self):
         """

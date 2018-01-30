@@ -69,16 +69,15 @@ All URIs are relative to *https://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**check_health**](docs/DefaultApi.md#check_health) | **GET** /apis/kubevirt.io/v1alpha1/healthz | Health endpoint
-*DefaultApi* | [**console**](docs/DefaultApi.md#console) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/console | Open a websocket connection to a serial console on the specified VM.
 *DefaultApi* | [**create_namespaced_migration**](docs/DefaultApi.md#create_namespaced_migration) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations | Create a Migration object.
 *DefaultApi* | [**create_namespaced_virtual_machine**](docs/DefaultApi.md#create_namespaced_virtual_machine) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Create a VirtualMachine object.
 *DefaultApi* | [**create_namespaced_virtual_machine_replica_set**](docs/DefaultApi.md#create_namespaced_virtual_machine_replica_set) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets | Create a VirtualMachineReplicaSet object.
+*DefaultApi* | [**delete_collection_namespaced_migration**](docs/DefaultApi.md#delete_collection_namespaced_migration) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations | Delete a collection of Migration objects.
+*DefaultApi* | [**delete_collection_namespaced_virtual_machine**](docs/DefaultApi.md#delete_collection_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Delete a collection of VirtualMachine objects.
+*DefaultApi* | [**delete_collection_namespaced_virtual_machine_replica_set**](docs/DefaultApi.md#delete_collection_namespaced_virtual_machine_replica_set) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets | Delete a collection of VirtualMachineReplicaSet objects.
 *DefaultApi* | [**delete_namespaced_migration**](docs/DefaultApi.md#delete_namespaced_migration) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations/{name} | Delete a Migration object.
 *DefaultApi* | [**delete_namespaced_virtual_machine**](docs/DefaultApi.md#delete_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Delete a VirtualMachine object.
 *DefaultApi* | [**delete_namespaced_virtual_machine_replica_set**](docs/DefaultApi.md#delete_namespaced_virtual_machine_replica_set) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name} | Delete a VirtualMachineReplicaSet object.
-*DefaultApi* | [**deletecollection_namespaced_migration**](docs/DefaultApi.md#deletecollection_namespaced_migration) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations | Delete a collection of Migration objects.
-*DefaultApi* | [**deletecollection_namespaced_virtual_machine**](docs/DefaultApi.md#deletecollection_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Delete a collection of VirtualMachine objects.
-*DefaultApi* | [**deletecollection_namespaced_virtual_machine_replica_set**](docs/DefaultApi.md#deletecollection_namespaced_virtual_machine_replica_set) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets | Delete a collection of VirtualMachineReplicaSet objects.
 *DefaultApi* | [**get_api_group**](docs/DefaultApi.md#get_api_group) | **GET** /apis/kubevirt.io | Get a KubeVirt API group
 *DefaultApi* | [**get_api_resources**](docs/DefaultApi.md#get_api_resources) | **GET** /apis/kubevirt.io/v1alpha1 | Get KubeVirt API Resources
 *DefaultApi* | [**list_migration_for_all_namespaces**](docs/DefaultApi.md#list_migration_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/migrations | Get a list of all Migration objects.
@@ -87,16 +86,15 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**list_namespaced_virtual_machine_replica_set**](docs/DefaultApi.md#list_namespaced_virtual_machine_replica_set) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets | Get a list of VirtualMachineReplicaSet objects.
 *DefaultApi* | [**list_virtual_machine_for_all_namespaces**](docs/DefaultApi.md#list_virtual_machine_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/virtualmachines | Get a list of all VirtualMachine objects.
 *DefaultApi* | [**list_virtual_machine_replica_set_for_all_namespaces**](docs/DefaultApi.md#list_virtual_machine_replica_set_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/virtualmachinereplicasets | Get a list of all VirtualMachineReplicaSet objects.
+*DefaultApi* | [**patch_namespaced_migration**](docs/DefaultApi.md#patch_namespaced_migration) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations/{name} | Patch a Migration object.
+*DefaultApi* | [**patch_namespaced_virtual_machine**](docs/DefaultApi.md#patch_namespaced_virtual_machine) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Patch a VirtualMachine object.
+*DefaultApi* | [**patch_namespaced_virtual_machine_replica_set**](docs/DefaultApi.md#patch_namespaced_virtual_machine_replica_set) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name} | Patch a VirtualMachineReplicaSet object.
 *DefaultApi* | [**read_namespaced_migration**](docs/DefaultApi.md#read_namespaced_migration) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations/{name} | Get a Migration object.
 *DefaultApi* | [**read_namespaced_virtual_machine**](docs/DefaultApi.md#read_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Get a VirtualMachine object.
 *DefaultApi* | [**read_namespaced_virtual_machine_replica_set**](docs/DefaultApi.md#read_namespaced_virtual_machine_replica_set) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name} | Get a VirtualMachineReplicaSet object.
 *DefaultApi* | [**replace_namespaced_migration**](docs/DefaultApi.md#replace_namespaced_migration) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations/{name} | Update a Migration object.
 *DefaultApi* | [**replace_namespaced_virtual_machine**](docs/DefaultApi.md#replace_namespaced_virtual_machine) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Update a VirtualMachine object.
 *DefaultApi* | [**replace_namespaced_virtual_machine_replica_set**](docs/DefaultApi.md#replace_namespaced_virtual_machine_replica_set) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name} | Update a VirtualMachineReplicaSet object.
-*DefaultApi* | [**spice**](docs/DefaultApi.md#spice) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/spice | Returns a remote-viewer configuration file. Run &#x60;man 1 remote-viewer&#x60; to learn more about the configuration format.
-*DefaultApi* | [**update_namespaced_migration**](docs/DefaultApi.md#update_namespaced_migration) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/migrations/{name} | Patch a Migration object.
-*DefaultApi* | [**update_namespaced_virtual_machine**](docs/DefaultApi.md#update_namespaced_virtual_machine) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Patch a VirtualMachine object.
-*DefaultApi* | [**update_namespaced_virtual_machine_replica_set**](docs/DefaultApi.md#update_namespaced_virtual_machine_replica_set) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name} | Patch a VirtualMachineReplicaSet object.
 *DefaultApi* | [**watch_migration_list_for_all_namespaces**](docs/DefaultApi.md#watch_migration_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/watch/migrations | Watch a MigrationList object.
 *DefaultApi* | [**watch_namespaced_migration**](docs/DefaultApi.md#watch_namespaced_migration) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/migrations | Watch a Migration object.
 *DefaultApi* | [**watch_namespaced_virtual_machine**](docs/DefaultApi.md#watch_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachines | Watch a VirtualMachine object.
@@ -110,81 +108,74 @@ Class | Method | HTTP request | Description
  - [V1APIGroup](docs/V1APIGroup.md)
  - [V1APIResource](docs/V1APIResource.md)
  - [V1APIResourceList](docs/V1APIResourceList.md)
- - [V1Address](docs/V1Address.md)
  - [V1Affinity](docs/V1Affinity.md)
- - [V1Alias](docs/V1Alias.md)
- - [V1Ballooning](docs/V1Ballooning.md)
- - [V1Boot](docs/V1Boot.md)
- - [V1BootMenu](docs/V1BootMenu.md)
- - [V1BootOrder](docs/V1BootOrder.md)
- - [V1Channel](docs/V1Channel.md)
- - [V1ChannelSource](docs/V1ChannelSource.md)
- - [V1ChannelTarget](docs/V1ChannelTarget.md)
- - [V1CloudInitDataSourceNoCloud](docs/V1CloudInitDataSourceNoCloud.md)
- - [V1CloudInitSpec](docs/V1CloudInitSpec.md)
- - [V1Console](docs/V1Console.md)
- - [V1ConsoleTarget](docs/V1ConsoleTarget.md)
+ - [V1CDRomTarget](docs/V1CDRomTarget.md)
+ - [V1CPU](docs/V1CPU.md)
+ - [V1Clock](docs/V1Clock.md)
+ - [V1ClockOffsetUTC](docs/V1ClockOffsetUTC.md)
+ - [V1CloudInitNoCloudSource](docs/V1CloudInitNoCloudSource.md)
+ - [V1DeleteOptions](docs/V1DeleteOptions.md)
  - [V1Devices](docs/V1Devices.md)
  - [V1Disk](docs/V1Disk.md)
- - [V1DiskAuth](docs/V1DiskAuth.md)
- - [V1DiskDriver](docs/V1DiskDriver.md)
- - [V1DiskSecret](docs/V1DiskSecret.md)
- - [V1DiskSource](docs/V1DiskSource.md)
- - [V1DiskSourceHost](docs/V1DiskSourceHost.md)
  - [V1DiskTarget](docs/V1DiskTarget.md)
  - [V1DomainSpec](docs/V1DomainSpec.md)
- - [V1Entry](docs/V1Entry.md)
- - [V1FilterRef](docs/V1FilterRef.md)
- - [V1Graphics](docs/V1Graphics.md)
+ - [V1FeatureHyperv](docs/V1FeatureHyperv.md)
+ - [V1FeatureSpinlocks](docs/V1FeatureSpinlocks.md)
+ - [V1FeatureState](docs/V1FeatureState.md)
+ - [V1FeatureVendorID](docs/V1FeatureVendorID.md)
+ - [V1Features](docs/V1Features.md)
+ - [V1Firmware](docs/V1Firmware.md)
+ - [V1FloppyTarget](docs/V1FloppyTarget.md)
  - [V1GroupVersionForDiscovery](docs/V1GroupVersionForDiscovery.md)
+ - [V1HPETTimer](docs/V1HPETTimer.md)
+ - [V1HypervTimer](docs/V1HypervTimer.md)
+ - [V1I6300ESBWatchdog](docs/V1I6300ESBWatchdog.md)
+ - [V1ISCSIVolumeSource](docs/V1ISCSIVolumeSource.md)
  - [V1Initializer](docs/V1Initializer.md)
  - [V1Initializers](docs/V1Initializers.md)
- - [V1Interface](docs/V1Interface.md)
- - [V1InterfaceSource](docs/V1InterfaceSource.md)
- - [V1InterfaceTarget](docs/V1InterfaceTarget.md)
+ - [V1KVMTimer](docs/V1KVMTimer.md)
  - [V1LabelSelector](docs/V1LabelSelector.md)
  - [V1LabelSelectorRequirement](docs/V1LabelSelectorRequirement.md)
- - [V1LinkState](docs/V1LinkState.md)
  - [V1ListMeta](docs/V1ListMeta.md)
- - [V1Listen](docs/V1Listen.md)
- - [V1MAC](docs/V1MAC.md)
- - [V1Memory](docs/V1Memory.md)
+ - [V1LocalObjectReference](docs/V1LocalObjectReference.md)
+ - [V1LunTarget](docs/V1LunTarget.md)
+ - [V1Machine](docs/V1Machine.md)
  - [V1Migration](docs/V1Migration.md)
  - [V1MigrationList](docs/V1MigrationList.md)
  - [V1MigrationSpec](docs/V1MigrationSpec.md)
  - [V1MigrationStatus](docs/V1MigrationStatus.md)
- - [V1Model](docs/V1Model.md)
  - [V1NodeAffinity](docs/V1NodeAffinity.md)
  - [V1NodeSelector](docs/V1NodeSelector.md)
  - [V1NodeSelectorRequirement](docs/V1NodeSelectorRequirement.md)
  - [V1NodeSelectorTerm](docs/V1NodeSelectorTerm.md)
- - [V1OS](docs/V1OS.md)
- - [V1OSType](docs/V1OSType.md)
  - [V1ObjectMeta](docs/V1ObjectMeta.md)
  - [V1OwnerReference](docs/V1OwnerReference.md)
+ - [V1PITTimer](docs/V1PITTimer.md)
+ - [V1PersistentVolumeClaimVolumeSource](docs/V1PersistentVolumeClaimVolumeSource.md)
+ - [V1Preconditions](docs/V1Preconditions.md)
  - [V1PreferredSchedulingTerm](docs/V1PreferredSchedulingTerm.md)
- - [V1SMBios](docs/V1SMBios.md)
- - [V1Serial](docs/V1Serial.md)
- - [V1SerialTarget](docs/V1SerialTarget.md)
+ - [V1RTCTimer](docs/V1RTCTimer.md)
+ - [V1RegistryDiskSource](docs/V1RegistryDiskSource.md)
+ - [V1ResourceRequirements](docs/V1ResourceRequirements.md)
  - [V1ServerAddressByClientCIDR](docs/V1ServerAddressByClientCIDR.md)
  - [V1Status](docs/V1Status.md)
  - [V1StatusCause](docs/V1StatusCause.md)
  - [V1StatusDetails](docs/V1StatusDetails.md)
- - [V1SysInfo](docs/V1SysInfo.md)
- - [V1VMCondition](docs/V1VMCondition.md)
- - [V1VMGraphics](docs/V1VMGraphics.md)
+ - [V1Timer](docs/V1Timer.md)
  - [V1VMReplicaSetCondition](docs/V1VMReplicaSetCondition.md)
  - [V1VMReplicaSetSpec](docs/V1VMReplicaSetSpec.md)
  - [V1VMReplicaSetStatus](docs/V1VMReplicaSetStatus.md)
  - [V1VMSelector](docs/V1VMSelector.md)
- - [V1VMSpec](docs/V1VMSpec.md)
- - [V1VMStatus](docs/V1VMStatus.md)
  - [V1VMTemplateSpec](docs/V1VMTemplateSpec.md)
- - [V1Video](docs/V1Video.md)
  - [V1VirtualMachine](docs/V1VirtualMachine.md)
+ - [V1VirtualMachineCondition](docs/V1VirtualMachineCondition.md)
  - [V1VirtualMachineList](docs/V1VirtualMachineList.md)
  - [V1VirtualMachineReplicaSet](docs/V1VirtualMachineReplicaSet.md)
  - [V1VirtualMachineReplicaSetList](docs/V1VirtualMachineReplicaSetList.md)
+ - [V1VirtualMachineSpec](docs/V1VirtualMachineSpec.md)
+ - [V1VirtualMachineStatus](docs/V1VirtualMachineStatus.md)
+ - [V1Volume](docs/V1Volume.md)
+ - [V1WatchEvent](docs/V1WatchEvent.md)
  - [V1Watchdog](docs/V1Watchdog.md)
 
 

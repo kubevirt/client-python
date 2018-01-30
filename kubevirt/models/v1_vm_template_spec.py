@@ -32,7 +32,7 @@ class V1VMTemplateSpec(object):
     """
     swagger_types = {
         'metadata': 'V1ObjectMeta',
-        'spec': 'V1VMSpec'
+        'spec': 'V1VirtualMachineSpec'
     }
 
     attribute_map = {
@@ -81,7 +81,7 @@ class V1VMTemplateSpec(object):
         VM Spec contains the VM specification.
 
         :return: The spec of this V1VMTemplateSpec.
-        :rtype: V1VMSpec
+        :rtype: V1VirtualMachineSpec
         """
         return self._spec
 
@@ -92,7 +92,7 @@ class V1VMTemplateSpec(object):
         VM Spec contains the VM specification.
 
         :param spec: The spec of this V1VMTemplateSpec.
-        :type: V1VMSpec
+        :type: V1VirtualMachineSpec
         """
 
         self._spec = spec

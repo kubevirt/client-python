@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    KubeVirt API, 
+    KubeVirt API
 
     This is KubeVirt API an add-on for Kubernetes.
 
@@ -39,14 +39,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_console(self):
-        """
-        Test case for console
-
-        Open a websocket connection to a serial console on the specified VM.
-        """
-        pass
-
     def test_create_namespaced_migration(self):
         """
         Test case for create_namespaced_migration
@@ -71,6 +63,30 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_collection_namespaced_migration(self):
+        """
+        Test case for delete_collection_namespaced_migration
+
+        Delete a collection of Migration objects.
+        """
+        pass
+
+    def test_delete_collection_namespaced_virtual_machine(self):
+        """
+        Test case for delete_collection_namespaced_virtual_machine
+
+        Delete a collection of VirtualMachine objects.
+        """
+        pass
+
+    def test_delete_collection_namespaced_virtual_machine_replica_set(self):
+        """
+        Test case for delete_collection_namespaced_virtual_machine_replica_set
+
+        Delete a collection of VirtualMachineReplicaSet objects.
+        """
+        pass
+
     def test_delete_namespaced_migration(self):
         """
         Test case for delete_namespaced_migration
@@ -92,30 +108,6 @@ class TestDefaultApi(unittest.TestCase):
         Test case for delete_namespaced_virtual_machine_replica_set
 
         Delete a VirtualMachineReplicaSet object.
-        """
-        pass
-
-    def test_deletecollection_namespaced_migration(self):
-        """
-        Test case for deletecollection_namespaced_migration
-
-        Delete a collection of Migration objects.
-        """
-        pass
-
-    def test_deletecollection_namespaced_virtual_machine(self):
-        """
-        Test case for deletecollection_namespaced_virtual_machine
-
-        Delete a collection of VirtualMachine objects.
-        """
-        pass
-
-    def test_deletecollection_namespaced_virtual_machine_replica_set(self):
-        """
-        Test case for deletecollection_namespaced_virtual_machine_replica_set
-
-        Delete a collection of VirtualMachineReplicaSet objects.
         """
         pass
 
@@ -183,6 +175,30 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_namespaced_migration(self):
+        """
+        Test case for patch_namespaced_migration
+
+        Patch a Migration object.
+        """
+        pass
+
+    def test_patch_namespaced_virtual_machine(self):
+        """
+        Test case for patch_namespaced_virtual_machine
+
+        Patch a VirtualMachine object.
+        """
+        pass
+
+    def test_patch_namespaced_virtual_machine_replica_set(self):
+        """
+        Test case for patch_namespaced_virtual_machine_replica_set
+
+        Patch a VirtualMachineReplicaSet object.
+        """
+        pass
+
     def test_read_namespaced_migration(self):
         """
         Test case for read_namespaced_migration
@@ -228,38 +244,6 @@ class TestDefaultApi(unittest.TestCase):
         Test case for replace_namespaced_virtual_machine_replica_set
 
         Update a VirtualMachineReplicaSet object.
-        """
-        pass
-
-    def test_spice(self):
-        """
-        Test case for spice
-
-        Returns a remote-viewer configuration file. Run `man 1 remote-viewer` to learn more about the configuration format.
-        """
-        pass
-
-    def test_update_namespaced_migration(self):
-        """
-        Test case for update_namespaced_migration
-
-        Patch a Migration object.
-        """
-        pass
-
-    def test_update_namespaced_virtual_machine(self):
-        """
-        Test case for update_namespaced_virtual_machine
-
-        Patch a VirtualMachine object.
-        """
-        pass
-
-    def test_update_namespaced_virtual_machine_replica_set(self):
-        """
-        Test case for update_namespaced_virtual_machine_replica_set
-
-        Patch a VirtualMachineReplicaSet object.
         """
         pass
 

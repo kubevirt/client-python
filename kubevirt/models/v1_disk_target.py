@@ -31,52 +31,33 @@ class V1DiskTarget(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'bus': 'str',
-        'dev': 'str'
+        'dev': 'str',
+        'readonly': 'bool'
     }
 
     attribute_map = {
-        'bus': 'bus',
-        'dev': 'dev'
+        'dev': 'dev',
+        'readonly': 'readonly'
     }
 
-    def __init__(self, bus=None, dev=None):
+    def __init__(self, dev=None, readonly=None):
         """
         V1DiskTarget - a model defined in Swagger
         """
 
-        self._bus = None
         self._dev = None
+        self._readonly = None
 
-        if bus is not None:
-          self.bus = bus
-        self.dev = dev
-
-    @property
-    def bus(self):
-        """
-        Gets the bus of this V1DiskTarget.
-
-        :return: The bus of this V1DiskTarget.
-        :rtype: str
-        """
-        return self._bus
-
-    @bus.setter
-    def bus(self, bus):
-        """
-        Sets the bus of this V1DiskTarget.
-
-        :param bus: The bus of this V1DiskTarget.
-        :type: str
-        """
-
-        self._bus = bus
+        if dev is not None:
+          self.dev = dev
+        if readonly is not None:
+          self.readonly = readonly
 
     @property
     def dev(self):
         """
         Gets the dev of this V1DiskTarget.
+        Device indicates the \"logical\" device name. The actual device name specified is not guaranteed to map to the device name in the guest OS. Treat it as a device ordering hint.
 
         :return: The dev of this V1DiskTarget.
         :rtype: str
@@ -87,14 +68,36 @@ class V1DiskTarget(object):
     def dev(self, dev):
         """
         Sets the dev of this V1DiskTarget.
+        Device indicates the \"logical\" device name. The actual device name specified is not guaranteed to map to the device name in the guest OS. Treat it as a device ordering hint.
 
         :param dev: The dev of this V1DiskTarget.
         :type: str
         """
-        if dev is None:
-            raise ValueError("Invalid value for `dev`, must not be `None`")
 
         self._dev = dev
+
+    @property
+    def readonly(self):
+        """
+        Gets the readonly of this V1DiskTarget.
+        ReadOnly Defaults to false
+
+        :return: The readonly of this V1DiskTarget.
+        :rtype: bool
+        """
+        return self._readonly
+
+    @readonly.setter
+    def readonly(self, readonly):
+        """
+        Sets the readonly of this V1DiskTarget.
+        ReadOnly Defaults to false
+
+        :param readonly: The readonly of this V1DiskTarget.
+        :type: bool
+        """
+
+        self._readonly = readonly
 
     def to_dict(self):
         """

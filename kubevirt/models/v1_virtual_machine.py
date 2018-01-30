@@ -34,8 +34,8 @@ class V1VirtualMachine(object):
         'api_version': 'str',
         'kind': 'str',
         'metadata': 'V1ObjectMeta',
-        'spec': 'V1VMSpec',
-        'status': 'V1VMStatus'
+        'spec': 'V1VirtualMachineSpec',
+        'status': 'V1VirtualMachineStatus'
     }
 
     attribute_map = {
@@ -142,7 +142,7 @@ class V1VirtualMachine(object):
         VM Spec contains the VM specification.
 
         :return: The spec of this V1VirtualMachine.
-        :rtype: V1VMSpec
+        :rtype: V1VirtualMachineSpec
         """
         return self._spec
 
@@ -153,7 +153,7 @@ class V1VirtualMachine(object):
         VM Spec contains the VM specification.
 
         :param spec: The spec of this V1VirtualMachine.
-        :type: V1VMSpec
+        :type: V1VirtualMachineSpec
         """
 
         self._spec = spec
@@ -165,7 +165,7 @@ class V1VirtualMachine(object):
         Status is the high level overview of how the VM is doing. It contains information available to controllers and users.
 
         :return: The status of this V1VirtualMachine.
-        :rtype: V1VMStatus
+        :rtype: V1VirtualMachineStatus
         """
         return self._status
 
@@ -176,7 +176,7 @@ class V1VirtualMachine(object):
         Status is the high level overview of how the VM is doing. It contains information available to controllers and users.
 
         :param status: The status of this V1VirtualMachine.
-        :type: V1VMStatus
+        :type: V1VirtualMachineStatus
         """
 
         self._status = status

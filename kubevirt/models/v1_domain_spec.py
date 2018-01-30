@@ -32,47 +32,56 @@ class V1DomainSpec(object):
     """
     swagger_types = {
         'clock': 'V1Clock',
+        'cpu': 'V1CPU',
         'devices': 'V1Devices',
-        'memory': 'V1Memory',
-        'os': 'V1OS',
-        'sys_info': 'V1SysInfo',
-        'type': 'str'
+        'features': 'V1Features',
+        'firmware': 'V1Firmware',
+        'machine': 'V1Machine',
+        'resources': 'V1ResourceRequirements'
     }
 
     attribute_map = {
         'clock': 'clock',
+        'cpu': 'cpu',
         'devices': 'devices',
-        'memory': 'memory',
-        'os': 'os',
-        'sys_info': 'sysInfo',
-        'type': 'type'
+        'features': 'features',
+        'firmware': 'firmware',
+        'machine': 'machine',
+        'resources': 'resources'
     }
 
-    def __init__(self, clock=None, devices=None, memory=None, os=None, sys_info=None, type=None):
+    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, resources=None):
         """
         V1DomainSpec - a model defined in Swagger
         """
 
         self._clock = None
+        self._cpu = None
         self._devices = None
-        self._memory = None
-        self._os = None
-        self._sys_info = None
-        self._type = None
+        self._features = None
+        self._firmware = None
+        self._machine = None
+        self._resources = None
 
         if clock is not None:
           self.clock = clock
+        if cpu is not None:
+          self.cpu = cpu
         self.devices = devices
-        self.memory = memory
-        self.os = os
-        if sys_info is not None:
-          self.sys_info = sys_info
-        self.type = type
+        if features is not None:
+          self.features = features
+        if firmware is not None:
+          self.firmware = firmware
+        if machine is not None:
+          self.machine = machine
+        if resources is not None:
+          self.resources = resources
 
     @property
     def clock(self):
         """
         Gets the clock of this V1DomainSpec.
+        Clock sets the clock and timers of the vm. +optional
 
         :return: The clock of this V1DomainSpec.
         :rtype: V1Clock
@@ -83,6 +92,7 @@ class V1DomainSpec(object):
     def clock(self, clock):
         """
         Sets the clock of this V1DomainSpec.
+        Clock sets the clock and timers of the vm. +optional
 
         :param clock: The clock of this V1DomainSpec.
         :type: V1Clock
@@ -91,9 +101,33 @@ class V1DomainSpec(object):
         self._clock = clock
 
     @property
+    def cpu(self):
+        """
+        Gets the cpu of this V1DomainSpec.
+        CPU allow specified the detailed CPU topology inside the vm. +optional
+
+        :return: The cpu of this V1DomainSpec.
+        :rtype: V1CPU
+        """
+        return self._cpu
+
+    @cpu.setter
+    def cpu(self, cpu):
+        """
+        Sets the cpu of this V1DomainSpec.
+        CPU allow specified the detailed CPU topology inside the vm. +optional
+
+        :param cpu: The cpu of this V1DomainSpec.
+        :type: V1CPU
+        """
+
+        self._cpu = cpu
+
+    @property
     def devices(self):
         """
         Gets the devices of this V1DomainSpec.
+        Devices allows adding disks, network interfaces, ...
 
         :return: The devices of this V1DomainSpec.
         :rtype: V1Devices
@@ -104,6 +138,7 @@ class V1DomainSpec(object):
     def devices(self, devices):
         """
         Sets the devices of this V1DomainSpec.
+        Devices allows adding disks, network interfaces, ...
 
         :param devices: The devices of this V1DomainSpec.
         :type: V1Devices
@@ -114,94 +149,96 @@ class V1DomainSpec(object):
         self._devices = devices
 
     @property
-    def memory(self):
+    def features(self):
         """
-        Gets the memory of this V1DomainSpec.
+        Gets the features of this V1DomainSpec.
+        Features like acpi, apic, hyperv +optional
 
-        :return: The memory of this V1DomainSpec.
-        :rtype: V1Memory
+        :return: The features of this V1DomainSpec.
+        :rtype: V1Features
         """
-        return self._memory
+        return self._features
 
-    @memory.setter
-    def memory(self, memory):
+    @features.setter
+    def features(self, features):
         """
-        Sets the memory of this V1DomainSpec.
+        Sets the features of this V1DomainSpec.
+        Features like acpi, apic, hyperv +optional
 
-        :param memory: The memory of this V1DomainSpec.
-        :type: V1Memory
+        :param features: The features of this V1DomainSpec.
+        :type: V1Features
         """
-        if memory is None:
-            raise ValueError("Invalid value for `memory`, must not be `None`")
 
-        self._memory = memory
+        self._features = features
 
     @property
-    def os(self):
+    def firmware(self):
         """
-        Gets the os of this V1DomainSpec.
+        Gets the firmware of this V1DomainSpec.
+        Firmware +optional
 
-        :return: The os of this V1DomainSpec.
-        :rtype: V1OS
+        :return: The firmware of this V1DomainSpec.
+        :rtype: V1Firmware
         """
-        return self._os
+        return self._firmware
 
-    @os.setter
-    def os(self, os):
+    @firmware.setter
+    def firmware(self, firmware):
         """
-        Sets the os of this V1DomainSpec.
+        Sets the firmware of this V1DomainSpec.
+        Firmware +optional
 
-        :param os: The os of this V1DomainSpec.
-        :type: V1OS
+        :param firmware: The firmware of this V1DomainSpec.
+        :type: V1Firmware
         """
-        if os is None:
-            raise ValueError("Invalid value for `os`, must not be `None`")
 
-        self._os = os
+        self._firmware = firmware
 
     @property
-    def sys_info(self):
+    def machine(self):
         """
-        Gets the sys_info of this V1DomainSpec.
+        Gets the machine of this V1DomainSpec.
+        Machine type +optional
 
-        :return: The sys_info of this V1DomainSpec.
-        :rtype: V1SysInfo
+        :return: The machine of this V1DomainSpec.
+        :rtype: V1Machine
         """
-        return self._sys_info
+        return self._machine
 
-    @sys_info.setter
-    def sys_info(self, sys_info):
+    @machine.setter
+    def machine(self, machine):
         """
-        Sets the sys_info of this V1DomainSpec.
+        Sets the machine of this V1DomainSpec.
+        Machine type +optional
 
-        :param sys_info: The sys_info of this V1DomainSpec.
-        :type: V1SysInfo
+        :param machine: The machine of this V1DomainSpec.
+        :type: V1Machine
         """
 
-        self._sys_info = sys_info
+        self._machine = machine
 
     @property
-    def type(self):
+    def resources(self):
         """
-        Gets the type of this V1DomainSpec.
+        Gets the resources of this V1DomainSpec.
+        Resources describes the Compute Resources required by this vm.
 
-        :return: The type of this V1DomainSpec.
-        :rtype: str
+        :return: The resources of this V1DomainSpec.
+        :rtype: V1ResourceRequirements
         """
-        return self._type
+        return self._resources
 
-    @type.setter
-    def type(self, type):
+    @resources.setter
+    def resources(self, resources):
         """
-        Sets the type of this V1DomainSpec.
+        Sets the resources of this V1DomainSpec.
+        Resources describes the Compute Resources required by this vm.
 
-        :param type: The type of this V1DomainSpec.
-        :type: str
+        :param resources: The resources of this V1DomainSpec.
+        :type: V1ResourceRequirements
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")
 
-        self._type = type
+        self._resources = resources
 
     def to_dict(self):
         """

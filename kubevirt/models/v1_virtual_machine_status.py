@@ -32,32 +32,32 @@ class V1VirtualMachineStatus(object):
     """
     swagger_types = {
         'conditions': 'list[V1VirtualMachineCondition]',
-        'migration_node_name': 'str',
+        'interfaces': 'list[V1VirtualMachineNetworkInterface]',
         'node_name': 'str',
         'phase': 'str'
     }
 
     attribute_map = {
         'conditions': 'conditions',
-        'migration_node_name': 'migrationNodeName',
+        'interfaces': 'interfaces',
         'node_name': 'nodeName',
         'phase': 'phase'
     }
 
-    def __init__(self, conditions=None, migration_node_name=None, node_name=None, phase=None):
+    def __init__(self, conditions=None, interfaces=None, node_name=None, phase=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
 
         self._conditions = None
-        self._migration_node_name = None
+        self._interfaces = None
         self._node_name = None
         self._phase = None
 
         if conditions is not None:
           self.conditions = conditions
-        if migration_node_name is not None:
-          self.migration_node_name = migration_node_name
+        if interfaces is not None:
+          self.interfaces = interfaces
         if node_name is not None:
           self.node_name = node_name
         if phase is not None:
@@ -87,27 +87,27 @@ class V1VirtualMachineStatus(object):
         self._conditions = conditions
 
     @property
-    def migration_node_name(self):
+    def interfaces(self):
         """
-        Gets the migration_node_name of this V1VirtualMachineStatus.
-        MigrationNodeName is the node where the VM is live migrating to.
+        Gets the interfaces of this V1VirtualMachineStatus.
+        Interfaces represent the details of available network interfaces.
 
-        :return: The migration_node_name of this V1VirtualMachineStatus.
-        :rtype: str
+        :return: The interfaces of this V1VirtualMachineStatus.
+        :rtype: list[V1VirtualMachineNetworkInterface]
         """
-        return self._migration_node_name
+        return self._interfaces
 
-    @migration_node_name.setter
-    def migration_node_name(self, migration_node_name):
+    @interfaces.setter
+    def interfaces(self, interfaces):
         """
-        Sets the migration_node_name of this V1VirtualMachineStatus.
-        MigrationNodeName is the node where the VM is live migrating to.
+        Sets the interfaces of this V1VirtualMachineStatus.
+        Interfaces represent the details of available network interfaces.
 
-        :param migration_node_name: The migration_node_name of this V1VirtualMachineStatus.
-        :type: str
+        :param interfaces: The interfaces of this V1VirtualMachineStatus.
+        :type: list[V1VirtualMachineNetworkInterface]
         """
 
-        self._migration_node_name = migration_node_name
+        self._interfaces = interfaces
 
     @property
     def node_name(self):

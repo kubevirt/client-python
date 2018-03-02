@@ -15,7 +15,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "kubevirt-py"
-VERSION = "1.0.0"
+VERSION = "v0.2.0-377-g328e13bb"
 # To install the library, run the following
 #
 # python setup.py install
@@ -30,7 +30,7 @@ setup(
     version=VERSION,
     description="KubeVirt API",
     author_email="kubevirt-dev@googlegroups.com",
-    url="https://github.com/lukas-bednar/kubevirt-pysdk-generated",
+    url="https://github.com/kubevirt/client-python",
     keywords=["Swagger", "KubeVirt API"],
     install_requires=REQUIRES,
     packages=find_packages(),

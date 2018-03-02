@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1_vm_selector import V1VMSelector
+from kubevirt.models.v1_virtual_machine_network_interface import V1VirtualMachineNetworkInterface
 
 
-class TestV1VMSelector(unittest.TestCase):
-    """ V1VMSelector unit test stubs """
+class TestV1VirtualMachineNetworkInterface(unittest.TestCase):
+    """ V1VirtualMachineNetworkInterface unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1VMSelector(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1VMSelector(self):
+    def testV1VirtualMachineNetworkInterface(self):
         """
-        Test V1VMSelector
+        Test V1VirtualMachineNetworkInterface
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1_vm_selector.V1VMSelector()
+        #model = kubevirt.models.v1_virtual_machine_network_interface.V1VirtualMachineNetworkInterface()
         pass
 
 

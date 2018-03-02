@@ -230,7 +230,7 @@ class V1FeatureHyperv(object):
     def vapic(self):
         """
         Gets the vapic of this V1FeatureHyperv.
-        VAPIC indicates weather virtual APIC is enabled Defaults to the machine type setting +optional
+        VAPIC indicates whether virtual APIC is enabled Defaults to the machine type setting +optional
 
         :return: The vapic of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -241,7 +241,7 @@ class V1FeatureHyperv(object):
     def vapic(self, vapic):
         """
         Sets the vapic of this V1FeatureHyperv.
-        VAPIC indicates weather virtual APIC is enabled Defaults to the machine type setting +optional
+        VAPIC indicates whether virtual APIC is enabled Defaults to the machine type setting +optional
 
         :param vapic: The vapic of this V1FeatureHyperv.
         :type: V1FeatureState

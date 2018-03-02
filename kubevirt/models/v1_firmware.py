@@ -31,45 +31,45 @@ class V1Firmware(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'uid': 'str'
+        'uuid': 'str'
     }
 
     attribute_map = {
-        'uid': 'uid'
+        'uuid': 'uuid'
     }
 
-    def __init__(self, uid=None):
+    def __init__(self, uuid=None):
         """
         V1Firmware - a model defined in Swagger
         """
 
-        self._uid = None
+        self._uuid = None
 
-        if uid is not None:
-          self.uid = uid
+        if uuid is not None:
+          self.uuid = uuid
 
     @property
-    def uid(self):
+    def uuid(self):
         """
-        Gets the uid of this V1Firmware.
-        UID reported by the vm bios Defaults to a random generated uid
+        Gets the uuid of this V1Firmware.
+        UUID reported by the vm bios Defaults to a random generated uid
 
-        :return: The uid of this V1Firmware.
+        :return: The uuid of this V1Firmware.
         :rtype: str
         """
-        return self._uid
+        return self._uuid
 
-    @uid.setter
-    def uid(self, uid):
+    @uuid.setter
+    def uuid(self, uuid):
         """
-        Sets the uid of this V1Firmware.
-        UID reported by the vm bios Defaults to a random generated uid
+        Sets the uuid of this V1Firmware.
+        UUID reported by the vm bios Defaults to a random generated uid
 
-        :param uid: The uid of this V1Firmware.
+        :param uuid: The uuid of this V1Firmware.
         :type: str
         """
 
-        self._uid = uid
+        self._uuid = uuid
 
     def to_dict(self):
         """

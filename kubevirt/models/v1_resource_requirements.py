@@ -31,22 +31,50 @@ class V1ResourceRequirements(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'limits': 'object',
         'requests': 'object'
     }
 
     attribute_map = {
+        'limits': 'limits',
         'requests': 'requests'
     }
 
-    def __init__(self, requests=None):
+    def __init__(self, limits=None, requests=None):
         """
         V1ResourceRequirements - a model defined in Swagger
         """
 
+        self._limits = None
         self._requests = None
 
+        if limits is not None:
+          self.limits = limits
         if requests is not None:
           self.requests = requests
+
+    @property
+    def limits(self):
+        """
+        Gets the limits of this V1ResourceRequirements.
+        Limits describes the maximum amount of compute resources allowed. Valid resource keys are \"memory\" and \"cpu\". +optional
+
+        :return: The limits of this V1ResourceRequirements.
+        :rtype: object
+        """
+        return self._limits
+
+    @limits.setter
+    def limits(self, limits):
+        """
+        Sets the limits of this V1ResourceRequirements.
+        Limits describes the maximum amount of compute resources allowed. Valid resource keys are \"memory\" and \"cpu\". +optional
+
+        :param limits: The limits of this V1ResourceRequirements.
+        :type: object
+        """
+
+        self._limits = limits
 
     @property
     def requests(self):

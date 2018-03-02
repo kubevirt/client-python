@@ -32,7 +32,7 @@ class V1Volume(object):
     """
     swagger_types = {
         'cloud_init_no_cloud': 'V1CloudInitNoCloudSource',
-        'iscsi': 'V1ISCSIVolumeSource',
+        'ephemeral': 'V1EphemeralVolumeSource',
         'name': 'str',
         'persistent_volume_claim': 'V1PersistentVolumeClaimVolumeSource',
         'registry_disk': 'V1RegistryDiskSource'
@@ -40,27 +40,27 @@ class V1Volume(object):
 
     attribute_map = {
         'cloud_init_no_cloud': 'cloudInitNoCloud',
-        'iscsi': 'iscsi',
+        'ephemeral': 'ephemeral',
         'name': 'name',
         'persistent_volume_claim': 'persistentVolumeClaim',
         'registry_disk': 'registryDisk'
     }
 
-    def __init__(self, cloud_init_no_cloud=None, iscsi=None, name=None, persistent_volume_claim=None, registry_disk=None):
+    def __init__(self, cloud_init_no_cloud=None, ephemeral=None, name=None, persistent_volume_claim=None, registry_disk=None):
         """
         V1Volume - a model defined in Swagger
         """
 
         self._cloud_init_no_cloud = None
-        self._iscsi = None
+        self._ephemeral = None
         self._name = None
         self._persistent_volume_claim = None
         self._registry_disk = None
 
         if cloud_init_no_cloud is not None:
           self.cloud_init_no_cloud = cloud_init_no_cloud
-        if iscsi is not None:
-          self.iscsi = iscsi
+        if ephemeral is not None:
+          self.ephemeral = ephemeral
         self.name = name
         if persistent_volume_claim is not None:
           self.persistent_volume_claim = persistent_volume_claim
@@ -91,27 +91,27 @@ class V1Volume(object):
         self._cloud_init_no_cloud = cloud_init_no_cloud
 
     @property
-    def iscsi(self):
+    def ephemeral(self):
         """
-        Gets the iscsi of this V1Volume.
-        ISCSI represents an ISCSI Disk resource which is directly attached to the vm via qemu. +optional
+        Gets the ephemeral of this V1Volume.
+        Ephemeral is a special volume source that \"wraps\" specified source and provides copy-on-write image on top of it. +optional
 
-        :return: The iscsi of this V1Volume.
-        :rtype: V1ISCSIVolumeSource
+        :return: The ephemeral of this V1Volume.
+        :rtype: V1EphemeralVolumeSource
         """
-        return self._iscsi
+        return self._ephemeral
 
-    @iscsi.setter
-    def iscsi(self, iscsi):
+    @ephemeral.setter
+    def ephemeral(self, ephemeral):
         """
-        Sets the iscsi of this V1Volume.
-        ISCSI represents an ISCSI Disk resource which is directly attached to the vm via qemu. +optional
+        Sets the ephemeral of this V1Volume.
+        Ephemeral is a special volume source that \"wraps\" specified source and provides copy-on-write image on top of it. +optional
 
-        :param iscsi: The iscsi of this V1Volume.
-        :type: V1ISCSIVolumeSource
+        :param ephemeral: The ephemeral of this V1Volume.
+        :type: V1EphemeralVolumeSource
         """
 
-        self._iscsi = iscsi
+        self._ephemeral = ephemeral
 
     @property
     def name(self):

@@ -1,5 +1,6 @@
 {
 "packageName": "kubevirt",
 "projectName": "kubevirt-py",
-"packageUrl": "https://github.com/lukas-bednar/kubevirt-pysdk-generated"
+"packageUrl": "https://github.com/kubevirt/client-python",
+"packageVersion": "v0.2.0-377-g328e13bb"
 }

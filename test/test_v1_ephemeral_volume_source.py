@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1_migration_status import V1MigrationStatus
+from kubevirt.models.v1_ephemeral_volume_source import V1EphemeralVolumeSource
 
 
-class TestV1MigrationStatus(unittest.TestCase):
-    """ V1MigrationStatus unit test stubs """
+class TestV1EphemeralVolumeSource(unittest.TestCase):
+    """ V1EphemeralVolumeSource unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1MigrationStatus(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1MigrationStatus(self):
+    def testV1EphemeralVolumeSource(self):
         """
-        Test V1MigrationStatus
+        Test V1EphemeralVolumeSource
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1_migration_status.V1MigrationStatus()
+        #model = kubevirt.models.v1_ephemeral_volume_source.V1EphemeralVolumeSource()
         pass
 
 

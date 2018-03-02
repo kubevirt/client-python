@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1_iscsi_volume_source import V1ISCSIVolumeSource
+from kubevirt.models.v1_feature_apic import V1FeatureAPIC
 
 
-class TestV1ISCSIVolumeSource(unittest.TestCase):
-    """ V1ISCSIVolumeSource unit test stubs """
+class TestV1FeatureAPIC(unittest.TestCase):
+    """ V1FeatureAPIC unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1ISCSIVolumeSource(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1ISCSIVolumeSource(self):
+    def testV1FeatureAPIC(self):
         """
-        Test V1ISCSIVolumeSource
+        Test V1FeatureAPIC
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1_iscsi_volume_source.V1ISCSIVolumeSource()
+        #model = kubevirt.models.v1_feature_apic.V1FeatureAPIC()
         pass
 
 

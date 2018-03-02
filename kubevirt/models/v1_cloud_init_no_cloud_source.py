@@ -32,24 +32,29 @@ class V1CloudInitNoCloudSource(object):
     """
     swagger_types = {
         'secret_ref': 'V1LocalObjectReference',
+        'user_data': 'str',
         'user_data_base64': 'str'
     }
 
     attribute_map = {
         'secret_ref': 'secretRef',
+        'user_data': 'userData',
         'user_data_base64': 'userDataBase64'
     }
 
-    def __init__(self, secret_ref=None, user_data_base64=None):
+    def __init__(self, secret_ref=None, user_data=None, user_data_base64=None):
         """
         V1CloudInitNoCloudSource - a model defined in Swagger
         """
 
         self._secret_ref = None
+        self._user_data = None
         self._user_data_base64 = None
 
         if secret_ref is not None:
           self.secret_ref = secret_ref
+        if user_data is not None:
+          self.user_data = user_data
         if user_data_base64 is not None:
           self.user_data_base64 = user_data_base64
 
@@ -75,6 +80,29 @@ class V1CloudInitNoCloudSource(object):
         """
 
         self._secret_ref = secret_ref
+
+    @property
+    def user_data(self):
+        """
+        Gets the user_data of this V1CloudInitNoCloudSource.
+        UserData contains NoCloud inline cloud-init userdata + optional
+
+        :return: The user_data of this V1CloudInitNoCloudSource.
+        :rtype: str
+        """
+        return self._user_data
+
+    @user_data.setter
+    def user_data(self, user_data):
+        """
+        Sets the user_data of this V1CloudInitNoCloudSource.
+        UserData contains NoCloud inline cloud-init userdata + optional
+
+        :param user_data: The user_data of this V1CloudInitNoCloudSource.
+        :type: str
+        """
+
+        self._user_data = user_data
 
     @property
     def user_data_base64(self):

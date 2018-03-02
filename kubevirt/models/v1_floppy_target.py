@@ -31,55 +31,27 @@ class V1FloppyTarget(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'dev': 'str',
         'readonly': 'bool',
         'tray': 'str'
     }
 
     attribute_map = {
-        'dev': 'dev',
         'readonly': 'readonly',
         'tray': 'tray'
     }
 
-    def __init__(self, dev=None, readonly=None, tray=None):
+    def __init__(self, readonly=None, tray=None):
         """
         V1FloppyTarget - a model defined in Swagger
         """
 
-        self._dev = None
         self._readonly = None
         self._tray = None
 
-        if dev is not None:
-          self.dev = dev
         if readonly is not None:
           self.readonly = readonly
         if tray is not None:
           self.tray = tray
-
-    @property
-    def dev(self):
-        """
-        Gets the dev of this V1FloppyTarget.
-        Device indicates the \"logical\" device name. The actual device name specified is not guaranteed to map to the device name in the guest OS. Treat it as a device ordering hint.
-
-        :return: The dev of this V1FloppyTarget.
-        :rtype: str
-        """
-        return self._dev
-
-    @dev.setter
-    def dev(self, dev):
-        """
-        Sets the dev of this V1FloppyTarget.
-        Device indicates the \"logical\" device name. The actual device name specified is not guaranteed to map to the device name in the guest OS. Treat it as a device ordering hint.
-
-        :param dev: The dev of this V1FloppyTarget.
-        :type: str
-        """
-
-        self._dev = dev
 
     @property
     def readonly(self):

@@ -39,17 +39,17 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_create_namespaced_migration(self):
-        """
-        Test case for create_namespaced_migration
-
-        Create a Migration object.
-        """
-        pass
-
     def test_create_namespaced_virtual_machine(self):
         """
         Test case for create_namespaced_virtual_machine
+
+        Create a VirtualMachine object.
+        """
+        pass
+
+    def test_create_namespaced_virtual_machine_0(self):
+        """
+        Test case for create_namespaced_virtual_machine_0
 
         Create a VirtualMachine object.
         """
@@ -63,17 +63,17 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_collection_namespaced_migration(self):
-        """
-        Test case for delete_collection_namespaced_migration
-
-        Delete a collection of Migration objects.
-        """
-        pass
-
     def test_delete_collection_namespaced_virtual_machine(self):
         """
         Test case for delete_collection_namespaced_virtual_machine
+
+        Delete a collection of VirtualMachine objects.
+        """
+        pass
+
+    def test_delete_collection_namespaced_virtual_machine_0(self):
+        """
+        Test case for delete_collection_namespaced_virtual_machine_0
 
         Delete a collection of VirtualMachine objects.
         """
@@ -87,17 +87,17 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_namespaced_migration(self):
-        """
-        Test case for delete_namespaced_migration
-
-        Delete a Migration object.
-        """
-        pass
-
     def test_delete_namespaced_virtual_machine(self):
         """
         Test case for delete_namespaced_virtual_machine
+
+        Delete a VirtualMachine object.
+        """
+        pass
+
+    def test_delete_namespaced_virtual_machine_0(self):
+        """
+        Test case for delete_namespaced_virtual_machine_0
 
         Delete a VirtualMachine object.
         """
@@ -127,25 +127,17 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_list_migration_for_all_namespaces(self):
-        """
-        Test case for list_migration_for_all_namespaces
-
-        Get a list of all Migration objects.
-        """
-        pass
-
-    def test_list_namespaced_migration(self):
-        """
-        Test case for list_namespaced_migration
-
-        Get a list of Migration objects.
-        """
-        pass
-
     def test_list_namespaced_virtual_machine(self):
         """
         Test case for list_namespaced_virtual_machine
+
+        Get a list of VirtualMachine objects.
+        """
+        pass
+
+    def test_list_namespaced_virtual_machine_0(self):
+        """
+        Test case for list_namespaced_virtual_machine_0
 
         Get a list of VirtualMachine objects.
         """
@@ -167,6 +159,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_list_virtual_machine_for_all_namespaces_0(self):
+        """
+        Test case for list_virtual_machine_for_all_namespaces_0
+
+        Get a list of all VirtualMachine objects.
+        """
+        pass
+
     def test_list_virtual_machine_replica_set_for_all_namespaces(self):
         """
         Test case for list_virtual_machine_replica_set_for_all_namespaces
@@ -175,17 +175,17 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_patch_namespaced_migration(self):
-        """
-        Test case for patch_namespaced_migration
-
-        Patch a Migration object.
-        """
-        pass
-
     def test_patch_namespaced_virtual_machine(self):
         """
         Test case for patch_namespaced_virtual_machine
+
+        Patch a VirtualMachine object.
+        """
+        pass
+
+    def test_patch_namespaced_virtual_machine_0(self):
+        """
+        Test case for patch_namespaced_virtual_machine_0
 
         Patch a VirtualMachine object.
         """
@@ -199,17 +199,17 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_read_namespaced_migration(self):
-        """
-        Test case for read_namespaced_migration
-
-        Get a Migration object.
-        """
-        pass
-
     def test_read_namespaced_virtual_machine(self):
         """
         Test case for read_namespaced_virtual_machine
+
+        Get a VirtualMachine object.
+        """
+        pass
+
+    def test_read_namespaced_virtual_machine_0(self):
+        """
+        Test case for read_namespaced_virtual_machine_0
 
         Get a VirtualMachine object.
         """
@@ -223,17 +223,17 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_replace_namespaced_migration(self):
-        """
-        Test case for replace_namespaced_migration
-
-        Update a Migration object.
-        """
-        pass
-
     def test_replace_namespaced_virtual_machine(self):
         """
         Test case for replace_namespaced_virtual_machine
+
+        Update a VirtualMachine object.
+        """
+        pass
+
+    def test_replace_namespaced_virtual_machine_0(self):
+        """
+        Test case for replace_namespaced_virtual_machine_0
 
         Update a VirtualMachine object.
         """
@@ -247,25 +247,17 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_watch_migration_list_for_all_namespaces(self):
-        """
-        Test case for watch_migration_list_for_all_namespaces
-
-        Watch a MigrationList object.
-        """
-        pass
-
-    def test_watch_namespaced_migration(self):
-        """
-        Test case for watch_namespaced_migration
-
-        Watch a Migration object.
-        """
-        pass
-
     def test_watch_namespaced_virtual_machine(self):
         """
         Test case for watch_namespaced_virtual_machine
+
+        Watch a VirtualMachine object.
+        """
+        pass
+
+    def test_watch_namespaced_virtual_machine_0(self):
+        """
+        Test case for watch_namespaced_virtual_machine_0
 
         Watch a VirtualMachine object.
         """
@@ -282,6 +274,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_watch_virtual_machine_list_for_all_namespaces(self):
         """
         Test case for watch_virtual_machine_list_for_all_namespaces
+
+        Watch a VirtualMachineList object.
+        """
+        pass
+
+    def test_watch_virtual_machine_list_for_all_namespaces_0(self):
+        """
+        Test case for watch_virtual_machine_list_for_all_namespaces_0
 
         Watch a VirtualMachineList object.
         """

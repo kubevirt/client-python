@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1_migration import V1Migration
+from kubevirt.models.v1_virtual_machine_preset_spec import V1VirtualMachinePresetSpec
 
 
-class TestV1Migration(unittest.TestCase):
-    """ V1Migration unit test stubs """
+class TestV1VirtualMachinePresetSpec(unittest.TestCase):
+    """ V1VirtualMachinePresetSpec unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1Migration(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1Migration(self):
+    def testV1VirtualMachinePresetSpec(self):
         """
-        Test V1Migration
+        Test V1VirtualMachinePresetSpec
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1_migration.V1Migration()
+        #model = kubevirt.models.v1_virtual_machine_preset_spec.V1VirtualMachinePresetSpec()
         pass
 
 

@@ -31,50 +31,50 @@ class V1DiskTarget(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'dev': 'str',
+        'bus': 'str',
         'readonly': 'bool'
     }
 
     attribute_map = {
-        'dev': 'dev',
+        'bus': 'bus',
         'readonly': 'readonly'
     }
 
-    def __init__(self, dev=None, readonly=None):
+    def __init__(self, bus=None, readonly=None):
         """
         V1DiskTarget - a model defined in Swagger
         """
 
-        self._dev = None
+        self._bus = None
         self._readonly = None
 
-        if dev is not None:
-          self.dev = dev
+        if bus is not None:
+          self.bus = bus
         if readonly is not None:
           self.readonly = readonly
 
     @property
-    def dev(self):
+    def bus(self):
         """
-        Gets the dev of this V1DiskTarget.
-        Device indicates the \"logical\" device name. The actual device name specified is not guaranteed to map to the device name in the guest OS. Treat it as a device ordering hint.
+        Gets the bus of this V1DiskTarget.
+        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, ide
 
-        :return: The dev of this V1DiskTarget.
+        :return: The bus of this V1DiskTarget.
         :rtype: str
         """
-        return self._dev
+        return self._bus
 
-    @dev.setter
-    def dev(self, dev):
+    @bus.setter
+    def bus(self, bus):
         """
-        Sets the dev of this V1DiskTarget.
-        Device indicates the \"logical\" device name. The actual device name specified is not guaranteed to map to the device name in the guest OS. Treat it as a device ordering hint.
+        Sets the bus of this V1DiskTarget.
+        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, ide
 
-        :param dev: The dev of this V1DiskTarget.
+        :param bus: The bus of this V1DiskTarget.
         :type: str
         """
 
-        self._dev = dev
+        self._bus = bus
 
     @property
     def readonly(self):

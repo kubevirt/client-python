@@ -31,21 +31,26 @@ class V1RegistryDiskSource(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'image': 'str'
+        'image': 'str',
+        'image_pull_secret': 'str'
     }
 
     attribute_map = {
-        'image': 'image'
+        'image': 'image',
+        'image_pull_secret': 'imagePullSecret'
     }
 
-    def __init__(self, image=None):
+    def __init__(self, image=None, image_pull_secret=None):
         """
         V1RegistryDiskSource - a model defined in Swagger
         """
 
         self._image = None
+        self._image_pull_secret = None
 
         self.image = image
+        if image_pull_secret is not None:
+          self.image_pull_secret = image_pull_secret
 
     @property
     def image(self):
@@ -71,6 +76,29 @@ class V1RegistryDiskSource(object):
             raise ValueError("Invalid value for `image`, must not be `None`")
 
         self._image = image
+
+    @property
+    def image_pull_secret(self):
+        """
+        Gets the image_pull_secret of this V1RegistryDiskSource.
+        ImagePullSecret is the name of the Docker registry secret required to pull the image. The secret must already exist.
+
+        :return: The image_pull_secret of this V1RegistryDiskSource.
+        :rtype: str
+        """
+        return self._image_pull_secret
+
+    @image_pull_secret.setter
+    def image_pull_secret(self, image_pull_secret):
+        """
+        Sets the image_pull_secret of this V1RegistryDiskSource.
+        ImagePullSecret is the name of the Docker registry secret required to pull the image. The secret must already exist.
+
+        :param image_pull_secret: The image_pull_secret of this V1RegistryDiskSource.
+        :type: str
+        """
+
+        self._image_pull_secret = image_pull_secret
 
     def to_dict(self):
         """

@@ -56,6 +56,11 @@ from .v1_node_selector import V1NodeSelector
 from .v1_node_selector_requirement import V1NodeSelectorRequirement
 from .v1_node_selector_term import V1NodeSelectorTerm
 from .v1_object_meta import V1ObjectMeta
+from .v1_offline_virtual_machine import V1OfflineVirtualMachine
+from .v1_offline_virtual_machine_condition import V1OfflineVirtualMachineCondition
+from .v1_offline_virtual_machine_list import V1OfflineVirtualMachineList
+from .v1_offline_virtual_machine_spec import V1OfflineVirtualMachineSpec
+from .v1_offline_virtual_machine_status import V1OfflineVirtualMachineStatus
 from .v1_owner_reference import V1OwnerReference
 from .v1_pit_timer import V1PITTimer
 from .v1_persistent_volume_claim_volume_source import V1PersistentVolumeClaimVolumeSource

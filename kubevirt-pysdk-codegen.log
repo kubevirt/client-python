@@ -128,6 +128,21 @@
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_object_meta.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_object_meta.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1ObjectMeta.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_offline_virtual_machine.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_offline_virtual_machine.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1OfflineVirtualMachine.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_offline_virtual_machine_condition.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_offline_virtual_machine_condition.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1OfflineVirtualMachineCondition.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_offline_virtual_machine_list.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_offline_virtual_machine_list.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1OfflineVirtualMachineList.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_offline_virtual_machine_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_offline_virtual_machine_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1OfflineVirtualMachineSpec.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_offline_virtual_machine_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_offline_virtual_machine_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1OfflineVirtualMachineStatus.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_owner_reference.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_owner_reference.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1OwnerReference.md
@@ -233,6 +248,11 @@
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `list_namespaced_virtual_machine_0`
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `create_namespaced_virtual_machine_0`
@@ -244,6 +264,7 @@
 [main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `delete_namespaced_virtual_machine_0`
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `patch_namespaced_virtual_machine_0`
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.

@@ -47,6 +47,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_create_namespaced_offline_virtual_machine(self):
+        """
+        Test case for create_namespaced_offline_virtual_machine
+
+        Create a OfflineVirtualMachine object.
+        """
+        pass
+
     def test_create_namespaced_virtual_machine(self):
         """
         Test case for create_namespaced_virtual_machine
@@ -71,6 +79,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_collection_namespaced_offline_virtual_machine(self):
+        """
+        Test case for delete_collection_namespaced_offline_virtual_machine
+
+        Delete a collection of OfflineVirtualMachine objects.
+        """
+        pass
+
     def test_delete_collection_namespaced_virtual_machine(self):
         """
         Test case for delete_collection_namespaced_virtual_machine
@@ -92,6 +108,14 @@ class TestDefaultApi(unittest.TestCase):
         Test case for delete_collection_namespaced_virtual_machine_replica_set
 
         Delete a collection of VirtualMachineReplicaSet objects.
+        """
+        pass
+
+    def test_delete_namespaced_offline_virtual_machine(self):
+        """
+        Test case for delete_namespaced_offline_virtual_machine
+
+        Delete a OfflineVirtualMachine object.
         """
         pass
 
@@ -159,6 +183,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_list_namespaced_offline_virtual_machine(self):
+        """
+        Test case for list_namespaced_offline_virtual_machine
+
+        Get a list of OfflineVirtualMachine objects.
+        """
+        pass
+
     def test_list_namespaced_virtual_machine(self):
         """
         Test case for list_namespaced_virtual_machine
@@ -180,6 +212,14 @@ class TestDefaultApi(unittest.TestCase):
         Test case for list_namespaced_virtual_machine_replica_set
 
         Get a list of VirtualMachineReplicaSet objects.
+        """
+        pass
+
+    def test_list_offline_virtual_machine_for_all_namespaces(self):
+        """
+        Test case for list_offline_virtual_machine_for_all_namespaces
+
+        Get a list of all OfflineVirtualMachine objects.
         """
         pass
 
@@ -207,6 +247,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_namespaced_offline_virtual_machine(self):
+        """
+        Test case for patch_namespaced_offline_virtual_machine
+
+        Patch a OfflineVirtualMachine object.
+        """
+        pass
+
     def test_patch_namespaced_virtual_machine(self):
         """
         Test case for patch_namespaced_virtual_machine
@@ -231,6 +279,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_read_namespaced_offline_virtual_machine(self):
+        """
+        Test case for read_namespaced_offline_virtual_machine
+
+        Get a OfflineVirtualMachine object.
+        """
+        pass
+
     def test_read_namespaced_virtual_machine(self):
         """
         Test case for read_namespaced_virtual_machine
@@ -252,6 +308,14 @@ class TestDefaultApi(unittest.TestCase):
         Test case for read_namespaced_virtual_machine_replica_set
 
         Get a VirtualMachineReplicaSet object.
+        """
+        pass
+
+    def test_replace_namespaced_offline_virtual_machine(self):
+        """
+        Test case for replace_namespaced_offline_virtual_machine
+
+        Update a OfflineVirtualMachine object.
         """
         pass
 
@@ -295,6 +359,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_watch_namespaced_offline_virtual_machine(self):
+        """
+        Test case for watch_namespaced_offline_virtual_machine
+
+        Watch a OfflineVirtualMachine object.
+        """
+        pass
+
     def test_watch_namespaced_virtual_machine(self):
         """
         Test case for watch_namespaced_virtual_machine
@@ -316,6 +388,14 @@ class TestDefaultApi(unittest.TestCase):
         Test case for watch_namespaced_virtual_machine_replica_set
 
         Watch a VirtualMachineReplicaSet object.
+        """
+        pass
+
+    def test_watch_offline_virtual_machine_list_for_all_namespaces(self):
+        """
+        Test case for watch_offline_virtual_machine_list_for_all_namespaces
+
+        Watch a OfflineVirtualMachineList object.
         """
         pass
 

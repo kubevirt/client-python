@@ -39,6 +39,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_console(self):
+        """
+        Test case for console
+
+        Open a websocket connection to a serial console on the specified VM.
+        """
+        pass
+
     def test_create_namespaced_virtual_machine(self):
         """
         Test case for create_namespaced_virtual_machine
@@ -115,7 +123,23 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for get_api_group
 
+        Get a KubeVirt API GroupList
+        """
+        pass
+
+    def test_get_api_group_0(self):
+        """
+        Test case for get_api_group_0
+
         Get a KubeVirt API group
+        """
+        pass
+
+    def test_get_api_group_1(self):
+        """
+        Test case for get_api_group_1
+
+        Get a KubeVirt API Group
         """
         pass
 
@@ -124,6 +148,14 @@ class TestDefaultApi(unittest.TestCase):
         Test case for get_api_resources
 
         Get KubeVirt API Resources
+        """
+        pass
+
+    def test_get_api_resources_0(self):
+        """
+        Test case for get_api_resources_0
+
+        Get a KubeVirt API resources
         """
         pass
 
@@ -244,6 +276,22 @@ class TestDefaultApi(unittest.TestCase):
         Test case for replace_namespaced_virtual_machine_replica_set
 
         Update a VirtualMachineReplicaSet object.
+        """
+        pass
+
+    def test_test(self):
+        """
+        Test case for test
+
+        Test endpoint verifying apiserver connectivity.
+        """
+        pass
+
+    def test_vnc(self):
+        """
+        Test case for vnc
+
+        Open a websocket connection to connect to VNC on the specified VM.
         """
         pass
 

@@ -15,6 +15,7 @@ from __future__ import absolute_import
 
 # import models into sdk package
 from .models.v1_api_group import V1APIGroup
+from .models.v1_api_group_list import V1APIGroupList
 from .models.v1_api_resource import V1APIResource
 from .models.v1_api_resource_list import V1APIResourceList
 from .models.v1_affinity import V1Affinity

@@ -5,6 +5,7 @@ All URIs are relative to *https://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**check_health**](DefaultApi.md#check_health) | **GET** /apis/kubevirt.io/v1alpha1/healthz | Health endpoint
+[**console**](DefaultApi.md#console) | **GET** /apis/subresources.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/console | Open a websocket connection to a serial console on the specified VM.
 [**create_namespaced_virtual_machine**](DefaultApi.md#create_namespaced_virtual_machine) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets | Create a VirtualMachine object.
 [**create_namespaced_virtual_machine_0**](DefaultApi.md#create_namespaced_virtual_machine_0) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Create a VirtualMachine object.
 [**create_namespaced_virtual_machine_replica_set**](DefaultApi.md#create_namespaced_virtual_machine_replica_set) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets | Create a VirtualMachineReplicaSet object.
@@ -14,8 +15,11 @@ Method | HTTP request | Description
 [**delete_namespaced_virtual_machine**](DefaultApi.md#delete_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name} | Delete a VirtualMachine object.
 [**delete_namespaced_virtual_machine_0**](DefaultApi.md#delete_namespaced_virtual_machine_0) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Delete a VirtualMachine object.
 [**delete_namespaced_virtual_machine_replica_set**](DefaultApi.md#delete_namespaced_virtual_machine_replica_set) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name} | Delete a VirtualMachineReplicaSet object.
-[**get_api_group**](DefaultApi.md#get_api_group) | **GET** /apis/kubevirt.io | Get a KubeVirt API group
+[**get_api_group**](DefaultApi.md#get_api_group) | **GET** /apis | Get a KubeVirt API GroupList
+[**get_api_group_0**](DefaultApi.md#get_api_group_0) | **GET** /apis/kubevirt.io | Get a KubeVirt API group
+[**get_api_group_1**](DefaultApi.md#get_api_group_1) | **GET** /apis/subresources.kubevirt.io | Get a KubeVirt API Group
 [**get_api_resources**](DefaultApi.md#get_api_resources) | **GET** /apis/kubevirt.io/v1alpha1 | Get KubeVirt API Resources
+[**get_api_resources_0**](DefaultApi.md#get_api_resources_0) | **GET** /apis/subresources.kubevirt.io/v1alpha1 | Get a KubeVirt API resources
 [**list_namespaced_virtual_machine**](DefaultApi.md#list_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets | Get a list of VirtualMachine objects.
 [**list_namespaced_virtual_machine_0**](DefaultApi.md#list_namespaced_virtual_machine_0) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Get a list of VirtualMachine objects.
 [**list_namespaced_virtual_machine_replica_set**](DefaultApi.md#list_namespaced_virtual_machine_replica_set) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets | Get a list of VirtualMachineReplicaSet objects.
@@ -31,6 +35,8 @@ Method | HTTP request | Description
 [**replace_namespaced_virtual_machine**](DefaultApi.md#replace_namespaced_virtual_machine) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name} | Update a VirtualMachine object.
 [**replace_namespaced_virtual_machine_0**](DefaultApi.md#replace_namespaced_virtual_machine_0) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Update a VirtualMachine object.
 [**replace_namespaced_virtual_machine_replica_set**](DefaultApi.md#replace_namespaced_virtual_machine_replica_set) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name} | Update a VirtualMachineReplicaSet object.
+[**test**](DefaultApi.md#test) | **GET** /apis/subresources.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/test | Test endpoint verifying apiserver connectivity.
+[**vnc**](DefaultApi.md#vnc) | **GET** /apis/subresources.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/vnc | Open a websocket connection to connect to VNC on the specified VM.
 [**watch_namespaced_virtual_machine**](DefaultApi.md#watch_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachinepresets | Watch a VirtualMachine object.
 [**watch_namespaced_virtual_machine_0**](DefaultApi.md#watch_namespaced_virtual_machine_0) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachines | Watch a VirtualMachine object.
 [**watch_namespaced_virtual_machine_replica_set**](DefaultApi.md#watch_namespaced_virtual_machine_replica_set) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachinereplicasets | Watch a VirtualMachineReplicaSet object.
@@ -77,6 +83,53 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **console**
+> console(namespace, name)
+
+Open a websocket connection to a serial console on the specified VM.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+name = 'name_example' # str | Name of the resource
+
+try: 
+    # Open a websocket connection to a serial console on the specified VM.
+    api_instance.console(namespace, name)
+except ApiException as e:
+    print("Exception when calling DefaultApi->console: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **name** | **str**| Name of the resource | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -573,7 +626,49 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_api_group**
-> V1APIGroup get_api_group()
+> V1APIGroupList get_api_group()
+
+Get a KubeVirt API GroupList
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+
+try: 
+    # Get a KubeVirt API GroupList
+    api_response = api_instance.get_api_group()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->get_api_group: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**V1APIGroupList**](V1APIGroupList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_api_group_0**
+> V1APIGroup get_api_group_0()
 
 Get a KubeVirt API group
 
@@ -590,10 +685,52 @@ api_instance = kubevirt.DefaultApi()
 
 try: 
     # Get a KubeVirt API group
-    api_response = api_instance.get_api_group()
+    api_response = api_instance.get_api_group_0()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->get_api_group: %s\n" % e)
+    print("Exception when calling DefaultApi->get_api_group_0: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**V1APIGroup**](V1APIGroup.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_api_group_1**
+> V1APIGroup get_api_group_1()
+
+Get a KubeVirt API Group
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+
+try: 
+    # Get a KubeVirt API Group
+    api_response = api_instance.get_api_group_1()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->get_api_group_1: %s\n" % e)
 ```
 
 ### Parameters
@@ -636,6 +773,48 @@ try:
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->get_api_resources: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**V1APIResourceList**](V1APIResourceList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_api_resources_0**
+> V1APIResourceList get_api_resources_0()
+
+Get a KubeVirt API resources
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+
+try: 
+    # Get a KubeVirt API resources
+    api_response = api_instance.get_api_resources_0()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->get_api_resources_0: %s\n" % e)
 ```
 
 ### Parameters
@@ -1463,6 +1642,100 @@ No authorization required
 
  - **Content-Type**: application/json, application/yaml
  - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **test**
+> test(namespace, name)
+
+Test endpoint verifying apiserver connectivity.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+name = 'name_example' # str | Name of the resource
+
+try: 
+    # Test endpoint verifying apiserver connectivity.
+    api_instance.test(namespace, name)
+except ApiException as e:
+    print("Exception when calling DefaultApi->test: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **name** | **str**| Name of the resource | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **vnc**
+> vnc(namespace, name)
+
+Open a websocket connection to connect to VNC on the specified VM.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+name = 'name_example' # str | Name of the resource
+
+try: 
+    # Open a websocket connection to connect to VNC on the specified VM.
+    api_instance.vnc(namespace, name)
+except ApiException as e:
+    print("Exception when calling DefaultApi->vnc: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **name** | **str**| Name of the resource | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

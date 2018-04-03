@@ -32,6 +32,7 @@ class V1Volume(object):
     """
     swagger_types = {
         'cloud_init_no_cloud': 'V1CloudInitNoCloudSource',
+        'empty_disk': 'V1EmptyDiskSource',
         'ephemeral': 'V1EphemeralVolumeSource',
         'name': 'str',
         'persistent_volume_claim': 'V1PersistentVolumeClaimVolumeSource',
@@ -40,18 +41,20 @@ class V1Volume(object):
 
     attribute_map = {
         'cloud_init_no_cloud': 'cloudInitNoCloud',
+        'empty_disk': 'emptyDisk',
         'ephemeral': 'ephemeral',
         'name': 'name',
         'persistent_volume_claim': 'persistentVolumeClaim',
         'registry_disk': 'registryDisk'
     }
 
-    def __init__(self, cloud_init_no_cloud=None, ephemeral=None, name=None, persistent_volume_claim=None, registry_disk=None):
+    def __init__(self, cloud_init_no_cloud=None, empty_disk=None, ephemeral=None, name=None, persistent_volume_claim=None, registry_disk=None):
         """
         V1Volume - a model defined in Swagger
         """
 
         self._cloud_init_no_cloud = None
+        self._empty_disk = None
         self._ephemeral = None
         self._name = None
         self._persistent_volume_claim = None
@@ -59,6 +62,8 @@ class V1Volume(object):
 
         if cloud_init_no_cloud is not None:
           self.cloud_init_no_cloud = cloud_init_no_cloud
+        if empty_disk is not None:
+          self.empty_disk = empty_disk
         if ephemeral is not None:
           self.ephemeral = ephemeral
         self.name = name
@@ -89,6 +94,29 @@ class V1Volume(object):
         """
 
         self._cloud_init_no_cloud = cloud_init_no_cloud
+
+    @property
+    def empty_disk(self):
+        """
+        Gets the empty_disk of this V1Volume.
+        EmptyDisk represents a temporary disk which shares the vms lifecycle More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html +optional
+
+        :return: The empty_disk of this V1Volume.
+        :rtype: V1EmptyDiskSource
+        """
+        return self._empty_disk
+
+    @empty_disk.setter
+    def empty_disk(self, empty_disk):
+        """
+        Sets the empty_disk of this V1Volume.
+        EmptyDisk represents a temporary disk which shares the vms lifecycle More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html +optional
+
+        :param empty_disk: The empty_disk of this V1Volume.
+        :type: V1EmptyDiskSource
+        """
+
+        self._empty_disk = empty_disk
 
     @property
     def ephemeral(self):

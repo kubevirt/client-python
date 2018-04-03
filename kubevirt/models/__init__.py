@@ -29,6 +29,7 @@ from .v1_devices import V1Devices
 from .v1_disk import V1Disk
 from .v1_disk_target import V1DiskTarget
 from .v1_domain_spec import V1DomainSpec
+from .v1_empty_disk_source import V1EmptyDiskSource
 from .v1_ephemeral_volume_source import V1EphemeralVolumeSource
 from .v1_feature_apic import V1FeatureAPIC
 from .v1_feature_hyperv import V1FeatureHyperv

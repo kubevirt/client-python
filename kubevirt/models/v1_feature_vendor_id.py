@@ -50,7 +50,8 @@ class V1FeatureVendorID(object):
 
         if enabled is not None:
           self.enabled = enabled
-        self.vendorid = vendorid
+        if vendorid is not None:
+          self.vendorid = vendorid
 
     @property
     def enabled(self):
@@ -95,8 +96,6 @@ class V1FeatureVendorID(object):
         :param vendorid: The vendorid of this V1FeatureVendorID.
         :type: str
         """
-        if vendorid is None:
-            raise ValueError("Invalid value for `vendorid`, must not be `None`")
 
         self._vendorid = vendorid
 

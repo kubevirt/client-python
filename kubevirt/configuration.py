@@ -207,6 +207,13 @@ class Configuration(object):
         :return: The Auth Settings information dict.
         """
         return {
+            'BearerToken':
+                {
+                    'type': 'api_key',
+                    'in': 'header',
+                    'key': 'authorization',
+                    'value': self.get_api_key_with_prefix('authorization')
+                },
 
         }
 
@@ -220,5 +227,5 @@ class Configuration(object):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 1.0.0\n"\
-               "SDK Package Version: v0.4.1-84-g332e5ad3".\
+               "SDK Package Version: v0.4.1-128-ge628ae3c".\
                format(env=sys.platform, pyversion=sys.version)

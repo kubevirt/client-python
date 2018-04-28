@@ -119,7 +119,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/healthz', 'GET',
                                         path_params,
@@ -226,7 +226,7 @@ class DefaultApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/console', 'GET',
                                         path_params,
@@ -339,7 +339,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines', 'POST',
                                         path_params,
@@ -452,7 +452,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets', 'POST',
                                         path_params,
@@ -565,7 +565,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines', 'POST',
                                         path_params,
@@ -678,7 +678,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets', 'POST',
                                         path_params,
@@ -803,7 +803,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines', 'DELETE',
                                         path_params,
@@ -928,7 +928,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets', 'DELETE',
                                         path_params,
@@ -1053,7 +1053,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines', 'DELETE',
                                         path_params,
@@ -1178,7 +1178,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets', 'DELETE',
                                         path_params,
@@ -1312,7 +1312,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines/{name}', 'DELETE',
                                         path_params,
@@ -1446,7 +1446,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name}', 'DELETE',
                                         path_params,
@@ -1580,7 +1580,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}', 'DELETE',
                                         path_params,
@@ -1714,7 +1714,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name}', 'DELETE',
                                         path_params,
@@ -1806,7 +1806,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis', 'GET',
                                         path_params,
@@ -1898,7 +1898,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io', 'GET',
                                         path_params,
@@ -1990,7 +1990,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/subresources.kubevirt.io', 'GET',
                                         path_params,
@@ -2082,7 +2082,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1', 'GET',
                                         path_params,
@@ -2174,7 +2174,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha1', 'GET',
                                         path_params,
@@ -2308,7 +2308,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines', 'GET',
                                         path_params,
@@ -2442,7 +2442,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets', 'GET',
                                         path_params,
@@ -2576,7 +2576,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines', 'GET',
                                         path_params,
@@ -2710,7 +2710,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets', 'GET',
                                         path_params,
@@ -2835,7 +2835,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/offlinevirtualmachines', 'GET',
                                         path_params,
@@ -2960,7 +2960,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/virtualmachinepresets', 'GET',
                                         path_params,
@@ -3085,7 +3085,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/virtualmachines', 'GET',
                                         path_params,
@@ -3210,7 +3210,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/virtualmachinereplicasets', 'GET',
                                         path_params,
@@ -3314,7 +3314,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json-patch+json', 'application/merge-patch+json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines/{name}', 'PATCH',
                                         path_params,
@@ -3418,7 +3418,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json-patch+json', 'application/merge-patch+json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name}', 'PATCH',
                                         path_params,
@@ -3522,7 +3522,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json-patch+json', 'application/merge-patch+json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}', 'PATCH',
                                         path_params,
@@ -3626,7 +3626,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json-patch+json', 'application/merge-patch+json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name}', 'PATCH',
                                         path_params,
@@ -3745,7 +3745,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines/{name}', 'GET',
                                         path_params,
@@ -3864,7 +3864,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name}', 'GET',
                                         path_params,
@@ -3983,7 +3983,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}', 'GET',
                                         path_params,
@@ -4102,7 +4102,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name}', 'GET',
                                         path_params,
@@ -4224,7 +4224,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines/{name}', 'PUT',
                                         path_params,
@@ -4346,7 +4346,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name}', 'PUT',
                                         path_params,
@@ -4468,7 +4468,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}', 'PUT',
                                         path_params,
@@ -4590,7 +4590,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name}', 'PUT',
                                         path_params,
@@ -4697,7 +4697,7 @@ class DefaultApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/test', 'GET',
                                         path_params,
@@ -4804,7 +4804,7 @@ class DefaultApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/vnc', 'GET',
                                         path_params,
@@ -4938,7 +4938,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/offlinevirtualmachines', 'GET',
                                         path_params,
@@ -5072,7 +5072,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachinepresets', 'GET',
                                         path_params,
@@ -5206,7 +5206,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachines', 'GET',
                                         path_params,
@@ -5340,7 +5340,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachinereplicasets', 'GET',
                                         path_params,
@@ -5465,7 +5465,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/offlinevirtualmachines', 'GET',
                                         path_params,
@@ -5590,7 +5590,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/virtualmachinepresets', 'GET',
                                         path_params,
@@ -5715,7 +5715,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/virtualmachines', 'GET',
                                         path_params,
@@ -5840,7 +5840,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['BearerToken']
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/virtualmachinereplicasets', 'GET',
                                         path_params,

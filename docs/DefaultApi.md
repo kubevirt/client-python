@@ -68,6 +68,11 @@ import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
 
@@ -87,7 +92,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -108,6 +113,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -134,7 +144,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -155,6 +165,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -182,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -203,6 +218,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -230,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -251,6 +271,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -278,7 +303,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -299,6 +324,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -326,7 +356,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -347,6 +377,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -386,7 +421,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -407,6 +442,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -446,7 +486,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -467,6 +507,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -506,7 +551,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -527,6 +572,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -566,7 +616,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -587,6 +637,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -622,7 +677,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -643,6 +698,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -678,7 +738,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -699,6 +759,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -734,7 +799,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -755,6 +820,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -790,7 +860,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -812,6 +882,11 @@ import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
 
@@ -832,7 +907,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -854,6 +929,11 @@ import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
 
@@ -874,7 +954,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -896,6 +976,11 @@ import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
 
@@ -916,7 +1001,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -938,6 +1023,11 @@ import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
 
@@ -958,7 +1048,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -980,6 +1070,11 @@ import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
 
@@ -1000,7 +1095,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1021,6 +1116,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1062,7 +1162,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1083,6 +1183,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1124,7 +1229,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1145,6 +1250,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1186,7 +1296,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1207,6 +1317,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1248,7 +1363,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1269,6 +1384,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1308,7 +1428,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1329,6 +1449,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1368,7 +1493,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1389,6 +1514,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1428,7 +1558,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1449,6 +1579,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1488,7 +1623,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1509,6 +1644,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1534,7 +1674,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1555,6 +1695,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1580,7 +1725,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1601,6 +1746,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1626,7 +1776,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1647,6 +1797,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1672,7 +1827,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1693,6 +1848,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1724,7 +1884,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1745,6 +1905,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1776,7 +1941,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1797,6 +1962,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1828,7 +1998,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1849,6 +2019,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1880,7 +2055,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1901,6 +2076,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1930,7 +2110,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -1951,6 +2131,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -1980,7 +2165,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -2001,6 +2186,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -2030,7 +2220,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -2051,6 +2241,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -2080,7 +2275,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -2101,6 +2296,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -2127,7 +2327,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -2148,6 +2348,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -2174,7 +2379,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -2195,6 +2400,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -2236,7 +2446,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -2257,6 +2467,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -2298,7 +2513,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -2319,6 +2534,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -2360,7 +2580,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -2381,6 +2601,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -2422,7 +2647,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -2443,6 +2668,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -2482,7 +2712,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -2503,6 +2733,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -2542,7 +2777,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -2563,6 +2798,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -2602,7 +2842,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -2623,6 +2863,11 @@ import time
 import kubevirt
 from kubevirt.rest import ApiException
 from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
@@ -2662,7 +2907,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 

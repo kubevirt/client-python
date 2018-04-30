@@ -7,16 +7,16 @@ Method | HTTP request | Description
 [**check_health**](DefaultApi.md#check_health) | **GET** /apis/kubevirt.io/v1alpha1/healthz | Health endpoint
 [**console**](DefaultApi.md#console) | **GET** /apis/subresources.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/console | Open a websocket connection to a serial console on the specified VM.
 [**create_namespaced_offline_virtual_machine**](DefaultApi.md#create_namespaced_offline_virtual_machine) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines | Create a OfflineVirtualMachine object.
-[**create_namespaced_virtual_machine**](DefaultApi.md#create_namespaced_virtual_machine) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets | Create a VirtualMachine object.
-[**create_namespaced_virtual_machine_0**](DefaultApi.md#create_namespaced_virtual_machine_0) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Create a VirtualMachine object.
+[**create_namespaced_virtual_machine**](DefaultApi.md#create_namespaced_virtual_machine) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Create a VirtualMachine object.
+[**create_namespaced_virtual_machine_preset**](DefaultApi.md#create_namespaced_virtual_machine_preset) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets | Create a VirtualMachinePreset object.
 [**create_namespaced_virtual_machine_replica_set**](DefaultApi.md#create_namespaced_virtual_machine_replica_set) | **POST** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets | Create a VirtualMachineReplicaSet object.
 [**delete_collection_namespaced_offline_virtual_machine**](DefaultApi.md#delete_collection_namespaced_offline_virtual_machine) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines | Delete a collection of OfflineVirtualMachine objects.
-[**delete_collection_namespaced_virtual_machine**](DefaultApi.md#delete_collection_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets | Delete a collection of VirtualMachine objects.
-[**delete_collection_namespaced_virtual_machine_0**](DefaultApi.md#delete_collection_namespaced_virtual_machine_0) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Delete a collection of VirtualMachine objects.
+[**delete_collection_namespaced_virtual_machine**](DefaultApi.md#delete_collection_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Delete a collection of VirtualMachine objects.
+[**delete_collection_namespaced_virtual_machine_preset**](DefaultApi.md#delete_collection_namespaced_virtual_machine_preset) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets | Delete a collection of VirtualMachinePreset objects.
 [**delete_collection_namespaced_virtual_machine_replica_set**](DefaultApi.md#delete_collection_namespaced_virtual_machine_replica_set) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets | Delete a collection of VirtualMachineReplicaSet objects.
 [**delete_namespaced_offline_virtual_machine**](DefaultApi.md#delete_namespaced_offline_virtual_machine) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines/{name} | Delete a OfflineVirtualMachine object.
-[**delete_namespaced_virtual_machine**](DefaultApi.md#delete_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name} | Delete a VirtualMachine object.
-[**delete_namespaced_virtual_machine_0**](DefaultApi.md#delete_namespaced_virtual_machine_0) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Delete a VirtualMachine object.
+[**delete_namespaced_virtual_machine**](DefaultApi.md#delete_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Delete a VirtualMachine object.
+[**delete_namespaced_virtual_machine_preset**](DefaultApi.md#delete_namespaced_virtual_machine_preset) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name} | Delete a VirtualMachinePreset object.
 [**delete_namespaced_virtual_machine_replica_set**](DefaultApi.md#delete_namespaced_virtual_machine_replica_set) | **DELETE** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name} | Delete a VirtualMachineReplicaSet object.
 [**get_api_group**](DefaultApi.md#get_api_group) | **GET** /apis | Get a KubeVirt API GroupList
 [**get_api_group_0**](DefaultApi.md#get_api_group_0) | **GET** /apis/kubevirt.io | Get a KubeVirt API group
@@ -24,34 +24,34 @@ Method | HTTP request | Description
 [**get_api_resources**](DefaultApi.md#get_api_resources) | **GET** /apis/kubevirt.io/v1alpha1 | Get KubeVirt API Resources
 [**get_api_resources_0**](DefaultApi.md#get_api_resources_0) | **GET** /apis/subresources.kubevirt.io/v1alpha1 | Get a KubeVirt API resources
 [**list_namespaced_offline_virtual_machine**](DefaultApi.md#list_namespaced_offline_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines | Get a list of OfflineVirtualMachine objects.
-[**list_namespaced_virtual_machine**](DefaultApi.md#list_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets | Get a list of VirtualMachine objects.
-[**list_namespaced_virtual_machine_0**](DefaultApi.md#list_namespaced_virtual_machine_0) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Get a list of VirtualMachine objects.
+[**list_namespaced_virtual_machine**](DefaultApi.md#list_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines | Get a list of VirtualMachine objects.
+[**list_namespaced_virtual_machine_preset**](DefaultApi.md#list_namespaced_virtual_machine_preset) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets | Get a list of VirtualMachinePreset objects.
 [**list_namespaced_virtual_machine_replica_set**](DefaultApi.md#list_namespaced_virtual_machine_replica_set) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets | Get a list of VirtualMachineReplicaSet objects.
 [**list_offline_virtual_machine_for_all_namespaces**](DefaultApi.md#list_offline_virtual_machine_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/offlinevirtualmachines | Get a list of all OfflineVirtualMachine objects.
-[**list_virtual_machine_for_all_namespaces**](DefaultApi.md#list_virtual_machine_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/virtualmachinepresets | Get a list of all VirtualMachine objects.
-[**list_virtual_machine_for_all_namespaces_0**](DefaultApi.md#list_virtual_machine_for_all_namespaces_0) | **GET** /apis/kubevirt.io/v1alpha1/virtualmachines | Get a list of all VirtualMachine objects.
+[**list_virtual_machine_for_all_namespaces**](DefaultApi.md#list_virtual_machine_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/virtualmachines | Get a list of all VirtualMachine objects.
+[**list_virtual_machine_preset_for_all_namespaces**](DefaultApi.md#list_virtual_machine_preset_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/virtualmachinepresets | Get a list of all VirtualMachinePreset objects.
 [**list_virtual_machine_replica_set_for_all_namespaces**](DefaultApi.md#list_virtual_machine_replica_set_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/virtualmachinereplicasets | Get a list of all VirtualMachineReplicaSet objects.
 [**patch_namespaced_offline_virtual_machine**](DefaultApi.md#patch_namespaced_offline_virtual_machine) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines/{name} | Patch a OfflineVirtualMachine object.
-[**patch_namespaced_virtual_machine**](DefaultApi.md#patch_namespaced_virtual_machine) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name} | Patch a VirtualMachine object.
-[**patch_namespaced_virtual_machine_0**](DefaultApi.md#patch_namespaced_virtual_machine_0) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Patch a VirtualMachine object.
+[**patch_namespaced_virtual_machine**](DefaultApi.md#patch_namespaced_virtual_machine) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Patch a VirtualMachine object.
+[**patch_namespaced_virtual_machine_preset**](DefaultApi.md#patch_namespaced_virtual_machine_preset) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name} | Patch a VirtualMachinePreset object.
 [**patch_namespaced_virtual_machine_replica_set**](DefaultApi.md#patch_namespaced_virtual_machine_replica_set) | **PATCH** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name} | Patch a VirtualMachineReplicaSet object.
 [**read_namespaced_offline_virtual_machine**](DefaultApi.md#read_namespaced_offline_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines/{name} | Get a OfflineVirtualMachine object.
-[**read_namespaced_virtual_machine**](DefaultApi.md#read_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name} | Get a VirtualMachine object.
-[**read_namespaced_virtual_machine_0**](DefaultApi.md#read_namespaced_virtual_machine_0) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Get a VirtualMachine object.
+[**read_namespaced_virtual_machine**](DefaultApi.md#read_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Get a VirtualMachine object.
+[**read_namespaced_virtual_machine_preset**](DefaultApi.md#read_namespaced_virtual_machine_preset) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name} | Get a VirtualMachinePreset object.
 [**read_namespaced_virtual_machine_replica_set**](DefaultApi.md#read_namespaced_virtual_machine_replica_set) | **GET** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name} | Get a VirtualMachineReplicaSet object.
 [**replace_namespaced_offline_virtual_machine**](DefaultApi.md#replace_namespaced_offline_virtual_machine) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines/{name} | Update a OfflineVirtualMachine object.
-[**replace_namespaced_virtual_machine**](DefaultApi.md#replace_namespaced_virtual_machine) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name} | Update a VirtualMachine object.
-[**replace_namespaced_virtual_machine_0**](DefaultApi.md#replace_namespaced_virtual_machine_0) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Update a VirtualMachine object.
+[**replace_namespaced_virtual_machine**](DefaultApi.md#replace_namespaced_virtual_machine) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name} | Update a VirtualMachine object.
+[**replace_namespaced_virtual_machine_preset**](DefaultApi.md#replace_namespaced_virtual_machine_preset) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name} | Update a VirtualMachinePreset object.
 [**replace_namespaced_virtual_machine_replica_set**](DefaultApi.md#replace_namespaced_virtual_machine_replica_set) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name} | Update a VirtualMachineReplicaSet object.
 [**test**](DefaultApi.md#test) | **GET** /apis/subresources.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/test | Test endpoint verifying apiserver connectivity.
 [**vnc**](DefaultApi.md#vnc) | **GET** /apis/subresources.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/vnc | Open a websocket connection to connect to VNC on the specified VM.
 [**watch_namespaced_offline_virtual_machine**](DefaultApi.md#watch_namespaced_offline_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/offlinevirtualmachines | Watch a OfflineVirtualMachine object.
-[**watch_namespaced_virtual_machine**](DefaultApi.md#watch_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachinepresets | Watch a VirtualMachine object.
-[**watch_namespaced_virtual_machine_0**](DefaultApi.md#watch_namespaced_virtual_machine_0) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachines | Watch a VirtualMachine object.
+[**watch_namespaced_virtual_machine**](DefaultApi.md#watch_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachines | Watch a VirtualMachine object.
+[**watch_namespaced_virtual_machine_preset**](DefaultApi.md#watch_namespaced_virtual_machine_preset) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachinepresets | Watch a VirtualMachinePreset object.
 [**watch_namespaced_virtual_machine_replica_set**](DefaultApi.md#watch_namespaced_virtual_machine_replica_set) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachinereplicasets | Watch a VirtualMachineReplicaSet object.
 [**watch_offline_virtual_machine_list_for_all_namespaces**](DefaultApi.md#watch_offline_virtual_machine_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/watch/offlinevirtualmachines | Watch a OfflineVirtualMachineList object.
-[**watch_virtual_machine_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/watch/virtualmachinepresets | Watch a VirtualMachineList object.
-[**watch_virtual_machine_list_for_all_namespaces_0**](DefaultApi.md#watch_virtual_machine_list_for_all_namespaces_0) | **GET** /apis/kubevirt.io/v1alpha1/watch/virtualmachines | Watch a VirtualMachineList object.
+[**watch_virtual_machine_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/watch/virtualmachines | Watch a VirtualMachineList object.
+[**watch_virtual_machine_preset_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_preset_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/watch/virtualmachinepresets | Watch a VirtualMachinePresetList object.
 [**watch_virtual_machine_replica_set_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_replica_set_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1alpha1/watch/virtualmachinereplicasets | Watch a VirtualMachineReplicaSetList object.
 
 
@@ -207,60 +207,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_namespaced_virtual_machine**
-> V1VirtualMachinePreset create_namespaced_virtual_machine(body, namespace)
-
-Create a VirtualMachine object.
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import kubevirt
-from kubevirt.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: BearerToken
-kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = kubevirt.DefaultApi()
-body = kubevirt.V1VirtualMachinePreset() # V1VirtualMachinePreset | 
-namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-
-try: 
-    # Create a VirtualMachine object.
-    api_response = api_instance.create_namespaced_virtual_machine(body, namespace)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->create_namespaced_virtual_machine: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1VirtualMachinePreset**](V1VirtualMachinePreset.md)|  | 
- **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
-
-### Return type
-
-[**V1VirtualMachinePreset**](V1VirtualMachinePreset.md)
-
-### Authorization
-
-[BearerToken](../README.md#BearerToken)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/yaml
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **create_namespaced_virtual_machine_0**
-> V1VirtualMachine create_namespaced_virtual_machine_0(body, namespace)
+> V1VirtualMachine create_namespaced_virtual_machine(body, namespace)
 
 Create a VirtualMachine object.
 
@@ -284,10 +231,10 @@ namespace = 'namespace_example' # str | Object name and auth scope, such as for 
 
 try: 
     # Create a VirtualMachine object.
-    api_response = api_instance.create_namespaced_virtual_machine_0(body, namespace)
+    api_response = api_instance.create_namespaced_virtual_machine(body, namespace)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->create_namespaced_virtual_machine_0: %s\n" % e)
+    print("Exception when calling DefaultApi->create_namespaced_virtual_machine: %s\n" % e)
 ```
 
 ### Parameters
@@ -300,6 +247,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V1VirtualMachine**](V1VirtualMachine.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/yaml
+ - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_namespaced_virtual_machine_preset**
+> V1VirtualMachinePreset create_namespaced_virtual_machine_preset(body, namespace)
+
+Create a VirtualMachinePreset object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+body = kubevirt.V1VirtualMachinePreset() # V1VirtualMachinePreset | 
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+
+try: 
+    # Create a VirtualMachinePreset object.
+    api_response = api_instance.create_namespaced_virtual_machine_preset(body, namespace)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->create_namespaced_virtual_machine_preset: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**V1VirtualMachinePreset**](V1VirtualMachinePreset.md)|  | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+
+### Return type
+
+[**V1VirtualMachinePreset**](V1VirtualMachinePreset.md)
 
 ### Authorization
 
@@ -495,10 +495,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_collection_namespaced_virtual_machine_0**
-> V1Status delete_collection_namespaced_virtual_machine_0(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+# **delete_collection_namespaced_virtual_machine_preset**
+> V1Status delete_collection_namespaced_virtual_machine_preset(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
-Delete a collection of VirtualMachine objects.
+Delete a collection of VirtualMachinePreset objects.
 
 ### Example 
 ```python
@@ -525,11 +525,11 @@ timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
 watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
 try: 
-    # Delete a collection of VirtualMachine objects.
-    api_response = api_instance.delete_collection_namespaced_virtual_machine_0(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+    # Delete a collection of VirtualMachinePreset objects.
+    api_response = api_instance.delete_collection_namespaced_virtual_machine_preset(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->delete_collection_namespaced_virtual_machine_0: %s\n" % e)
+    print("Exception when calling DefaultApi->delete_collection_namespaced_virtual_machine_preset: %s\n" % e)
 ```
 
 ### Parameters
@@ -747,10 +747,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_namespaced_virtual_machine_0**
-> V1Status delete_namespaced_virtual_machine_0(body, namespace, name, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
+# **delete_namespaced_virtual_machine_preset**
+> V1Status delete_namespaced_virtual_machine_preset(body, namespace, name, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
 
-Delete a VirtualMachine object.
+Delete a VirtualMachinePreset object.
 
 ### Example 
 ```python
@@ -775,11 +775,11 @@ orphan_dependents = true # bool | Deprecated: please use the PropagationPolicy, 
 propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
 
 try: 
-    # Delete a VirtualMachine object.
-    api_response = api_instance.delete_namespaced_virtual_machine_0(body, namespace, name, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
+    # Delete a VirtualMachinePreset object.
+    api_response = api_instance.delete_namespaced_virtual_machine_preset(body, namespace, name, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->delete_namespaced_virtual_machine_0: %s\n" % e)
+    print("Exception when calling DefaultApi->delete_namespaced_virtual_machine_preset: %s\n" % e)
 ```
 
 ### Parameters
@@ -1172,7 +1172,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_namespaced_virtual_machine**
-> V1VirtualMachinePresetList list_namespaced_virtual_machine(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> V1VirtualMachineList list_namespaced_virtual_machine(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 Get a list of VirtualMachine objects.
 
@@ -1225,7 +1225,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VirtualMachinePresetList**](V1VirtualMachinePresetList.md)
+[**V1VirtualMachineList**](V1VirtualMachineList.md)
 
 ### Authorization
 
@@ -1238,10 +1238,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_namespaced_virtual_machine_0**
-> V1VirtualMachineList list_namespaced_virtual_machine_0(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+# **list_namespaced_virtual_machine_preset**
+> V1VirtualMachinePresetList list_namespaced_virtual_machine_preset(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
-Get a list of VirtualMachine objects.
+Get a list of VirtualMachinePreset objects.
 
 ### Example 
 ```python
@@ -1269,11 +1269,11 @@ timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
 watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
 try: 
-    # Get a list of VirtualMachine objects.
-    api_response = api_instance.list_namespaced_virtual_machine_0(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+    # Get a list of VirtualMachinePreset objects.
+    api_response = api_instance.list_namespaced_virtual_machine_preset(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->list_namespaced_virtual_machine_0: %s\n" % e)
+    print("Exception when calling DefaultApi->list_namespaced_virtual_machine_preset: %s\n" % e)
 ```
 
 ### Parameters
@@ -1292,7 +1292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VirtualMachineList**](V1VirtualMachineList.md)
+[**V1VirtualMachinePresetList**](V1VirtualMachinePresetList.md)
 
 ### Authorization
 
@@ -1438,7 +1438,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_virtual_machine_for_all_namespaces**
-> V1VirtualMachinePresetList list_virtual_machine_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> V1VirtualMachineList list_virtual_machine_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 Get a list of all VirtualMachine objects.
 
@@ -1489,7 +1489,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VirtualMachinePresetList**](V1VirtualMachinePresetList.md)
+[**V1VirtualMachineList**](V1VirtualMachineList.md)
 
 ### Authorization
 
@@ -1502,10 +1502,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_virtual_machine_for_all_namespaces_0**
-> V1VirtualMachineList list_virtual_machine_for_all_namespaces_0(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+# **list_virtual_machine_preset_for_all_namespaces**
+> V1VirtualMachinePresetList list_virtual_machine_preset_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
-Get a list of all VirtualMachine objects.
+Get a list of all VirtualMachinePreset objects.
 
 ### Example 
 ```python
@@ -1532,11 +1532,11 @@ timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
 watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
 try: 
-    # Get a list of all VirtualMachine objects.
-    api_response = api_instance.list_virtual_machine_for_all_namespaces_0(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+    # Get a list of all VirtualMachinePreset objects.
+    api_response = api_instance.list_virtual_machine_preset_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->list_virtual_machine_for_all_namespaces_0: %s\n" % e)
+    print("Exception when calling DefaultApi->list_virtual_machine_preset_for_all_namespaces: %s\n" % e)
 ```
 
 ### Parameters
@@ -1554,7 +1554,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VirtualMachineList**](V1VirtualMachineList.md)
+[**V1VirtualMachinePresetList**](V1VirtualMachinePresetList.md)
 
 ### Authorization
 
@@ -1684,7 +1684,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_namespaced_virtual_machine**
-> V1VirtualMachinePreset patch_namespaced_virtual_machine(body)
+> V1VirtualMachine patch_namespaced_virtual_machine(body)
 
 Patch a VirtualMachine object.
 
@@ -1721,7 +1721,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VirtualMachinePreset**](V1VirtualMachinePreset.md)
+[**V1VirtualMachine**](V1VirtualMachine.md)
 
 ### Authorization
 
@@ -1734,10 +1734,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_namespaced_virtual_machine_0**
-> V1VirtualMachine patch_namespaced_virtual_machine_0(body)
+# **patch_namespaced_virtual_machine_preset**
+> V1VirtualMachinePreset patch_namespaced_virtual_machine_preset(body)
 
-Patch a VirtualMachine object.
+Patch a VirtualMachinePreset object.
 
 ### Example 
 ```python
@@ -1757,11 +1757,11 @@ api_instance = kubevirt.DefaultApi()
 body = kubevirt.V1Patch() # V1Patch | 
 
 try: 
-    # Patch a VirtualMachine object.
-    api_response = api_instance.patch_namespaced_virtual_machine_0(body)
+    # Patch a VirtualMachinePreset object.
+    api_response = api_instance.patch_namespaced_virtual_machine_preset(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->patch_namespaced_virtual_machine_0: %s\n" % e)
+    print("Exception when calling DefaultApi->patch_namespaced_virtual_machine_preset: %s\n" % e)
 ```
 
 ### Parameters
@@ -1772,7 +1772,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VirtualMachine**](V1VirtualMachine.md)
+[**V1VirtualMachinePreset**](V1VirtualMachinePreset.md)
 
 ### Authorization
 
@@ -1894,7 +1894,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **read_namespaced_virtual_machine**
-> V1VirtualMachinePreset read_namespaced_virtual_machine(name, namespace, exact=exact, export=export)
+> V1VirtualMachine read_namespaced_virtual_machine(name, namespace, exact=exact, export=export)
 
 Get a VirtualMachine object.
 
@@ -1937,7 +1937,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VirtualMachinePreset**](V1VirtualMachinePreset.md)
+[**V1VirtualMachine**](V1VirtualMachine.md)
 
 ### Authorization
 
@@ -1950,10 +1950,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **read_namespaced_virtual_machine_0**
-> V1VirtualMachine read_namespaced_virtual_machine_0(name, namespace, exact=exact, export=export)
+# **read_namespaced_virtual_machine_preset**
+> V1VirtualMachinePreset read_namespaced_virtual_machine_preset(name, namespace, exact=exact, export=export)
 
-Get a VirtualMachine object.
+Get a VirtualMachinePreset object.
 
 ### Example 
 ```python
@@ -1976,11 +1976,11 @@ exact = true # bool | Should the export be exact. Exact export maintains cluster
 export = true # bool | Should this value be exported. Export strips fields that a user can not specify. (optional)
 
 try: 
-    # Get a VirtualMachine object.
-    api_response = api_instance.read_namespaced_virtual_machine_0(name, namespace, exact=exact, export=export)
+    # Get a VirtualMachinePreset object.
+    api_response = api_instance.read_namespaced_virtual_machine_preset(name, namespace, exact=exact, export=export)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->read_namespaced_virtual_machine_0: %s\n" % e)
+    print("Exception when calling DefaultApi->read_namespaced_virtual_machine_preset: %s\n" % e)
 ```
 
 ### Parameters
@@ -1994,7 +1994,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VirtualMachine**](V1VirtualMachine.md)
+[**V1VirtualMachinePreset**](V1VirtualMachinePreset.md)
 
 ### Authorization
 
@@ -2120,62 +2120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **replace_namespaced_virtual_machine**
-> V1VirtualMachinePreset replace_namespaced_virtual_machine(body, namespace, name)
-
-Update a VirtualMachine object.
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import kubevirt
-from kubevirt.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: BearerToken
-kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = kubevirt.DefaultApi()
-body = kubevirt.V1VirtualMachinePreset() # V1VirtualMachinePreset | 
-namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-name = 'name_example' # str | Name of the resource
-
-try: 
-    # Update a VirtualMachine object.
-    api_response = api_instance.replace_namespaced_virtual_machine(body, namespace, name)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->replace_namespaced_virtual_machine: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**V1VirtualMachinePreset**](V1VirtualMachinePreset.md)|  | 
- **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **name** | **str**| Name of the resource | 
-
-### Return type
-
-[**V1VirtualMachinePreset**](V1VirtualMachinePreset.md)
-
-### Authorization
-
-[BearerToken](../README.md#BearerToken)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/yaml
- - **Accept**: application/json, application/yaml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replace_namespaced_virtual_machine_0**
-> V1VirtualMachine replace_namespaced_virtual_machine_0(body, namespace, name)
+> V1VirtualMachine replace_namespaced_virtual_machine(body, namespace, name)
 
 Update a VirtualMachine object.
 
@@ -2200,10 +2145,10 @@ name = 'name_example' # str | Name of the resource
 
 try: 
     # Update a VirtualMachine object.
-    api_response = api_instance.replace_namespaced_virtual_machine_0(body, namespace, name)
+    api_response = api_instance.replace_namespaced_virtual_machine(body, namespace, name)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->replace_namespaced_virtual_machine_0: %s\n" % e)
+    print("Exception when calling DefaultApi->replace_namespaced_virtual_machine: %s\n" % e)
 ```
 
 ### Parameters
@@ -2217,6 +2162,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V1VirtualMachine**](V1VirtualMachine.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/yaml
+ - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **replace_namespaced_virtual_machine_preset**
+> V1VirtualMachinePreset replace_namespaced_virtual_machine_preset(body, namespace, name)
+
+Update a VirtualMachinePreset object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+body = kubevirt.V1VirtualMachinePreset() # V1VirtualMachinePreset | 
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+name = 'name_example' # str | Name of the resource
+
+try: 
+    # Update a VirtualMachinePreset object.
+    api_response = api_instance.replace_namespaced_virtual_machine_preset(body, namespace, name)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->replace_namespaced_virtual_machine_preset: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**V1VirtualMachinePreset**](V1VirtualMachinePreset.md)|  | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **name** | **str**| Name of the resource | 
+
+### Return type
+
+[**V1VirtualMachinePreset**](V1VirtualMachinePreset.md)
 
 ### Authorization
 
@@ -2522,10 +2522,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **watch_namespaced_virtual_machine_0**
-> V1WatchEvent watch_namespaced_virtual_machine_0(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+# **watch_namespaced_virtual_machine_preset**
+> V1WatchEvent watch_namespaced_virtual_machine_preset(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
-Watch a VirtualMachine object.
+Watch a VirtualMachinePreset object.
 
 ### Example 
 ```python
@@ -2553,11 +2553,11 @@ timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
 watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
 try: 
-    # Watch a VirtualMachine object.
-    api_response = api_instance.watch_namespaced_virtual_machine_0(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+    # Watch a VirtualMachinePreset object.
+    api_response = api_instance.watch_namespaced_virtual_machine_preset(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->watch_namespaced_virtual_machine_0: %s\n" % e)
+    print("Exception when calling DefaultApi->watch_namespaced_virtual_machine_preset: %s\n" % e)
 ```
 
 ### Parameters
@@ -2786,10 +2786,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **watch_virtual_machine_list_for_all_namespaces_0**
-> V1WatchEvent watch_virtual_machine_list_for_all_namespaces_0(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+# **watch_virtual_machine_preset_list_for_all_namespaces**
+> V1WatchEvent watch_virtual_machine_preset_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
-Watch a VirtualMachineList object.
+Watch a VirtualMachinePresetList object.
 
 ### Example 
 ```python
@@ -2816,11 +2816,11 @@ timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
 watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
 try: 
-    # Watch a VirtualMachineList object.
-    api_response = api_instance.watch_virtual_machine_list_for_all_namespaces_0(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+    # Watch a VirtualMachinePresetList object.
+    api_response = api_instance.watch_virtual_machine_preset_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->watch_virtual_machine_list_for_all_namespaces_0: %s\n" % e)
+    print("Exception when calling DefaultApi->watch_virtual_machine_preset_list_for_all_namespaces: %s\n" % e)
 ```
 
 ### Parameters

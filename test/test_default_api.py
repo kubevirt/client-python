@@ -63,11 +63,11 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_create_namespaced_virtual_machine_0(self):
+    def test_create_namespaced_virtual_machine_preset(self):
         """
-        Test case for create_namespaced_virtual_machine_0
+        Test case for create_namespaced_virtual_machine_preset
 
-        Create a VirtualMachine object.
+        Create a VirtualMachinePreset object.
         """
         pass
 
@@ -95,11 +95,11 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_collection_namespaced_virtual_machine_0(self):
+    def test_delete_collection_namespaced_virtual_machine_preset(self):
         """
-        Test case for delete_collection_namespaced_virtual_machine_0
+        Test case for delete_collection_namespaced_virtual_machine_preset
 
-        Delete a collection of VirtualMachine objects.
+        Delete a collection of VirtualMachinePreset objects.
         """
         pass
 
@@ -127,11 +127,11 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_namespaced_virtual_machine_0(self):
+    def test_delete_namespaced_virtual_machine_preset(self):
         """
-        Test case for delete_namespaced_virtual_machine_0
+        Test case for delete_namespaced_virtual_machine_preset
 
-        Delete a VirtualMachine object.
+        Delete a VirtualMachinePreset object.
         """
         pass
 
@@ -199,11 +199,11 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_list_namespaced_virtual_machine_0(self):
+    def test_list_namespaced_virtual_machine_preset(self):
         """
-        Test case for list_namespaced_virtual_machine_0
+        Test case for list_namespaced_virtual_machine_preset
 
-        Get a list of VirtualMachine objects.
+        Get a list of VirtualMachinePreset objects.
         """
         pass
 
@@ -231,11 +231,11 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_list_virtual_machine_for_all_namespaces_0(self):
+    def test_list_virtual_machine_preset_for_all_namespaces(self):
         """
-        Test case for list_virtual_machine_for_all_namespaces_0
+        Test case for list_virtual_machine_preset_for_all_namespaces
 
-        Get a list of all VirtualMachine objects.
+        Get a list of all VirtualMachinePreset objects.
         """
         pass
 
@@ -263,11 +263,11 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_patch_namespaced_virtual_machine_0(self):
+    def test_patch_namespaced_virtual_machine_preset(self):
         """
-        Test case for patch_namespaced_virtual_machine_0
+        Test case for patch_namespaced_virtual_machine_preset
 
-        Patch a VirtualMachine object.
+        Patch a VirtualMachinePreset object.
         """
         pass
 
@@ -295,11 +295,11 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_read_namespaced_virtual_machine_0(self):
+    def test_read_namespaced_virtual_machine_preset(self):
         """
-        Test case for read_namespaced_virtual_machine_0
+        Test case for read_namespaced_virtual_machine_preset
 
-        Get a VirtualMachine object.
+        Get a VirtualMachinePreset object.
         """
         pass
 
@@ -327,11 +327,11 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_replace_namespaced_virtual_machine_0(self):
+    def test_replace_namespaced_virtual_machine_preset(self):
         """
-        Test case for replace_namespaced_virtual_machine_0
+        Test case for replace_namespaced_virtual_machine_preset
 
-        Update a VirtualMachine object.
+        Update a VirtualMachinePreset object.
         """
         pass
 
@@ -375,11 +375,11 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_watch_namespaced_virtual_machine_0(self):
+    def test_watch_namespaced_virtual_machine_preset(self):
         """
-        Test case for watch_namespaced_virtual_machine_0
+        Test case for watch_namespaced_virtual_machine_preset
 
-        Watch a VirtualMachine object.
+        Watch a VirtualMachinePreset object.
         """
         pass
 
@@ -407,11 +407,11 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_watch_virtual_machine_list_for_all_namespaces_0(self):
+    def test_watch_virtual_machine_preset_list_for_all_namespaces(self):
         """
-        Test case for watch_virtual_machine_list_for_all_namespaces_0
+        Test case for watch_virtual_machine_preset_list_for_all_namespaces
 
-        Watch a VirtualMachineList object.
+        Watch a VirtualMachinePresetList object.
         """
         pass
 

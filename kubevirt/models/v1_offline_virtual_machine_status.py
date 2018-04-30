@@ -31,22 +31,32 @@ class V1OfflineVirtualMachineStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'conditions': 'list[V1OfflineVirtualMachineCondition]'
+        'conditions': 'list[V1OfflineVirtualMachineCondition]',
+        'created': 'bool',
+        'ready': 'bool'
     }
 
     attribute_map = {
-        'conditions': 'conditions'
+        'conditions': 'conditions',
+        'created': 'created',
+        'ready': 'ready'
     }
 
-    def __init__(self, conditions=None):
+    def __init__(self, conditions=None, created=None, ready=None):
         """
         V1OfflineVirtualMachineStatus - a model defined in Swagger
         """
 
         self._conditions = None
+        self._created = None
+        self._ready = None
 
         if conditions is not None:
           self.conditions = conditions
+        if created is not None:
+          self.created = created
+        if ready is not None:
+          self.ready = ready
 
     @property
     def conditions(self):
@@ -70,6 +80,52 @@ class V1OfflineVirtualMachineStatus(object):
         """
 
         self._conditions = conditions
+
+    @property
+    def created(self):
+        """
+        Gets the created of this V1OfflineVirtualMachineStatus.
+        Created indicates if the virtual machine is created in the cluster
+
+        :return: The created of this V1OfflineVirtualMachineStatus.
+        :rtype: bool
+        """
+        return self._created
+
+    @created.setter
+    def created(self, created):
+        """
+        Sets the created of this V1OfflineVirtualMachineStatus.
+        Created indicates if the virtual machine is created in the cluster
+
+        :param created: The created of this V1OfflineVirtualMachineStatus.
+        :type: bool
+        """
+
+        self._created = created
+
+    @property
+    def ready(self):
+        """
+        Gets the ready of this V1OfflineVirtualMachineStatus.
+        Ready indicates if the virtual machine is running and ready
+
+        :return: The ready of this V1OfflineVirtualMachineStatus.
+        :rtype: bool
+        """
+        return self._ready
+
+    @ready.setter
+    def ready(self, ready):
+        """
+        Sets the ready of this V1OfflineVirtualMachineStatus.
+        Ready indicates if the virtual machine is running and ready
+
+        :param ready: The ready of this V1OfflineVirtualMachineStatus.
+        :type: bool
+        """
+
+        self._ready = ready
 
     def to_dict(self):
         """

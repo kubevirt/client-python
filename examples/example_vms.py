@@ -8,46 +8,44 @@ This script demostrates lifecycle of VM
 """
 from pprint import pprint
 
-from kubernetes import watch
 from kubevirt import V1DeleteOptions
 
-from examplelib import get_client, read_yaml_file
+import examplelib as el
 
 
 NAMESPACE = "default"
 
 
 def main():
-    api = get_client()
+    api = el.get_client()
 
     # List existing VMs
-    pprint(api.list_namespaced_virtual_machine_0(NAMESPACE))
+    pprint(api.list_namespaced_virtual_machine(NAMESPACE))
 
     # Create new one
-    vm_body = read_yaml_file("vm-ephemeral.yaml")
-    pprint(api.create_namespaced_virtual_machine_0(vm_body, NAMESPACE))
+    vm = el.read_yaml_file("vm-ephemeral.yaml")
+    pprint(api.create_namespaced_virtual_machine(vm, NAMESPACE))
 
     # Wait until VM is running
-    def event_source(**kw):
-        if '_request_timeout' not in kw:
-            kw['_request_timeout'] = 60
-        return api.list_namespaced_virtual_machine_0(NAMESPACE, **kw)
-
-    w = watch.Watch()
-    for event in w.stream(event_source):
-        pprint(event)
-        if event['object']['metadata']['name'] != vm_body['metadata']['name']:
-            # This is not our VM
-            continue
-        if event['type'] == 'MODIFIED':
-            if event['object']['status'].get('phase', "") == "Running":
-                break  # VM is running
-    w.stop()
+    try:
+        w = el.Watch(api.list_namespaced_virtual_machine, NAMESPACE)
+        vm = w.wait_for_item(
+            el.get_name(vm), timeout=60,
+            success_condition=lambda e:
+                el.get_status(e['object']) == "Running"
+        )
+    except el.WaitForTimeout:
+        vm = el.read_namespaced_virtual_machine(el.get_name(vm), NAMESPACE)
+        raise Exception(
+            "VM is not in expected state: %s != %s" % (
+                el.get_status(vm), "Running"
+            )
+        )
 
     # Delete VM
     pprint(
-        api.delete_namespaced_virtual_machine_0(
-            V1DeleteOptions(), NAMESPACE, vm_body['metadata']['name']
+        api.delete_namespaced_virtual_machine(
+            V1DeleteOptions(), NAMESPACE, el.get_name(vm)
         )
     )
 

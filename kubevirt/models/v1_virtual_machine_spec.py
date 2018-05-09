@@ -33,7 +33,9 @@ class V1VirtualMachineSpec(object):
     swagger_types = {
         'affinity': 'V1Affinity',
         'domain': 'V1DomainSpec',
+        'hostname': 'str',
         'node_selector': 'object',
+        'subdomain': 'str',
         'termination_grace_period_seconds': 'int',
         'volumes': 'list[V1Volume]'
     }
@@ -41,27 +43,35 @@ class V1VirtualMachineSpec(object):
     attribute_map = {
         'affinity': 'affinity',
         'domain': 'domain',
+        'hostname': 'hostname',
         'node_selector': 'nodeSelector',
+        'subdomain': 'subdomain',
         'termination_grace_period_seconds': 'terminationGracePeriodSeconds',
         'volumes': 'volumes'
     }
 
-    def __init__(self, affinity=None, domain=None, node_selector=None, termination_grace_period_seconds=None, volumes=None):
+    def __init__(self, affinity=None, domain=None, hostname=None, node_selector=None, subdomain=None, termination_grace_period_seconds=None, volumes=None):
         """
         V1VirtualMachineSpec - a model defined in Swagger
         """
 
         self._affinity = None
         self._domain = None
+        self._hostname = None
         self._node_selector = None
+        self._subdomain = None
         self._termination_grace_period_seconds = None
         self._volumes = None
 
         if affinity is not None:
           self.affinity = affinity
         self.domain = domain
+        if hostname is not None:
+          self.hostname = hostname
         if node_selector is not None:
           self.node_selector = node_selector
+        if subdomain is not None:
+          self.subdomain = subdomain
         if termination_grace_period_seconds is not None:
           self.termination_grace_period_seconds = termination_grace_period_seconds
         if volumes is not None:
@@ -116,6 +126,29 @@ class V1VirtualMachineSpec(object):
         self._domain = domain
 
     @property
+    def hostname(self):
+        """
+        Gets the hostname of this V1VirtualMachineSpec.
+        Specifies the hostname of the vm If not specified, the hostname will be set to the name of the vm, if dhcp or cloud-init is configured properly. +optional
+
+        :return: The hostname of this V1VirtualMachineSpec.
+        :rtype: str
+        """
+        return self._hostname
+
+    @hostname.setter
+    def hostname(self, hostname):
+        """
+        Sets the hostname of this V1VirtualMachineSpec.
+        Specifies the hostname of the vm If not specified, the hostname will be set to the name of the vm, if dhcp or cloud-init is configured properly. +optional
+
+        :param hostname: The hostname of this V1VirtualMachineSpec.
+        :type: str
+        """
+
+        self._hostname = hostname
+
+    @property
     def node_selector(self):
         """
         Gets the node_selector of this V1VirtualMachineSpec.
@@ -137,6 +170,29 @@ class V1VirtualMachineSpec(object):
         """
 
         self._node_selector = node_selector
+
+    @property
+    def subdomain(self):
+        """
+        Gets the subdomain of this V1VirtualMachineSpec.
+        If specified, the fully qualified vm hostname will be \"<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>\". If not specified, the vm will not have a domainname at all. The DNS entry will resolve to the vm, no matter if the vm itself can pick up a hostname. +optional
+
+        :return: The subdomain of this V1VirtualMachineSpec.
+        :rtype: str
+        """
+        return self._subdomain
+
+    @subdomain.setter
+    def subdomain(self, subdomain):
+        """
+        Sets the subdomain of this V1VirtualMachineSpec.
+        If specified, the fully qualified vm hostname will be \"<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>\". If not specified, the vm will not have a domainname at all. The DNS entry will resolve to the vm, no matter if the vm itself can pick up a hostname. +optional
+
+        :param subdomain: The subdomain of this V1VirtualMachineSpec.
+        :type: str
+        """
+
+        self._subdomain = subdomain
 
     @property
     def termination_grace_period_seconds(self):

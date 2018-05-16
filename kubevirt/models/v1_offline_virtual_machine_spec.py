@@ -55,7 +55,7 @@ class V1OfflineVirtualMachineSpec(object):
     def running(self):
         """
         Gets the running of this V1OfflineVirtualMachineSpec.
-        Running controlls whether the associatied VirtualMachine is created or not
+        Running controls whether the associatied VirtualMachine is created or not
 
         :return: The running of this V1OfflineVirtualMachineSpec.
         :rtype: bool
@@ -66,7 +66,7 @@ class V1OfflineVirtualMachineSpec(object):
     def running(self, running):
         """
         Sets the running of this V1OfflineVirtualMachineSpec.
-        Running controlls whether the associatied VirtualMachine is created or not
+        Running controls whether the associatied VirtualMachine is created or not
 
         :param running: The running of this V1OfflineVirtualMachineSpec.
         :type: bool

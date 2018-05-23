@@ -58,8 +58,7 @@ class V1VMReplicaSetSpec(object):
           self.paused = paused
         if replicas is not None:
           self.replicas = replicas
-        if selector is not None:
-          self.selector = selector
+        self.selector = selector
         self.template = template
 
     @property
@@ -112,7 +111,7 @@ class V1VMReplicaSetSpec(object):
     def selector(self):
         """
         Gets the selector of this V1VMReplicaSetSpec.
-        Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment. +optional
+        Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment.
 
         :return: The selector of this V1VMReplicaSetSpec.
         :rtype: V1LabelSelector
@@ -123,11 +122,13 @@ class V1VMReplicaSetSpec(object):
     def selector(self, selector):
         """
         Sets the selector of this V1VMReplicaSetSpec.
-        Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment. +optional
+        Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment.
 
         :param selector: The selector of this V1VMReplicaSetSpec.
         :type: V1LabelSelector
         """
+        if selector is None:
+            raise ValueError("Invalid value for `selector`, must not be `None`")
 
         self._selector = selector
 

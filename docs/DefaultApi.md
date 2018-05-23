@@ -44,6 +44,7 @@ Method | HTTP request | Description
 [**replace_namespaced_virtual_machine_preset**](DefaultApi.md#replace_namespaced_virtual_machine_preset) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name} | Update a VirtualMachinePreset object.
 [**replace_namespaced_virtual_machine_replica_set**](DefaultApi.md#replace_namespaced_virtual_machine_replica_set) | **PUT** /apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name} | Update a VirtualMachineReplicaSet object.
 [**test**](DefaultApi.md#test) | **GET** /apis/subresources.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/test | Test endpoint verifying apiserver connectivity.
+[**version**](DefaultApi.md#version) | **GET** /apis/subresources.kubevirt.io/v1alpha1/version | 
 [**vnc**](DefaultApi.md#vnc) | **GET** /apis/subresources.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/vnc | Open a websocket connection to connect to VNC on the specified VM.
 [**watch_namespaced_offline_virtual_machine**](DefaultApi.md#watch_namespaced_offline_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/offlinevirtualmachines | Watch a OfflineVirtualMachine object.
 [**watch_namespaced_virtual_machine**](DefaultApi.md#watch_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachines | Watch a VirtualMachine object.
@@ -2333,6 +2334,51 @@ void (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **version**
+> version()
+
+
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+
+try: 
+    api_instance.version()
+except ApiException as e:
+    print("Exception when calling DefaultApi->version: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

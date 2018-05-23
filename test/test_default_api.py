@@ -351,6 +351,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_version(self):
+        """
+        Test case for version
+
+        
+        """
+        pass
+
     def test_vnc(self):
         """
         Test case for vnc

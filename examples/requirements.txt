@@ -1,0 +1,3 @@
+# We need this module for issue #2
+kubernetes
+git+https://github.com/kubevirt/client-python.git

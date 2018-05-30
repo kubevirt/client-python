@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**boot_order** | **int** | BootOrder is an integer value &gt; 0, used to determine ordering of boot devices. Lower values take precedence. Disks without a boot order are not tried if a disk with a boot order exists. +optional | [optional] 
 **cdrom** | [**V1CDRomTarget**](V1CDRomTarget.md) | Attach a volume as a cdrom to the vm | [optional] 
 **disk** | [**V1DiskTarget**](V1DiskTarget.md) | Attach a volume as a disk to the vm | [optional] 
 **floppy** | [**V1FloppyTarget**](V1FloppyTarget.md) | Attach a volume as a floppy to the vm | [optional] 

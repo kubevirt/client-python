@@ -31,6 +31,7 @@ class V1Disk(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'boot_order': 'int',
         'cdrom': 'V1CDRomTarget',
         'disk': 'V1DiskTarget',
         'floppy': 'V1FloppyTarget',
@@ -40,6 +41,7 @@ class V1Disk(object):
     }
 
     attribute_map = {
+        'boot_order': 'bootOrder',
         'cdrom': 'cdrom',
         'disk': 'disk',
         'floppy': 'floppy',
@@ -48,11 +50,12 @@ class V1Disk(object):
         'volume_name': 'volumeName'
     }
 
-    def __init__(self, cdrom=None, disk=None, floppy=None, lun=None, name=None, volume_name=None):
+    def __init__(self, boot_order=None, cdrom=None, disk=None, floppy=None, lun=None, name=None, volume_name=None):
         """
         V1Disk - a model defined in Swagger
         """
 
+        self._boot_order = None
         self._cdrom = None
         self._disk = None
         self._floppy = None
@@ -60,6 +63,8 @@ class V1Disk(object):
         self._name = None
         self._volume_name = None
 
+        if boot_order is not None:
+          self.boot_order = boot_order
         if cdrom is not None:
           self.cdrom = cdrom
         if disk is not None:
@@ -70,6 +75,29 @@ class V1Disk(object):
           self.lun = lun
         self.name = name
         self.volume_name = volume_name
+
+    @property
+    def boot_order(self):
+        """
+        Gets the boot_order of this V1Disk.
+        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Disks without a boot order are not tried if a disk with a boot order exists. +optional
+
+        :return: The boot_order of this V1Disk.
+        :rtype: int
+        """
+        return self._boot_order
+
+    @boot_order.setter
+    def boot_order(self, boot_order):
+        """
+        Sets the boot_order of this V1Disk.
+        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Disks without a boot order are not tried if a disk with a boot order exists. +optional
+
+        :param boot_order: The boot_order of this V1Disk.
+        :type: int
+        """
+
+        self._boot_order = boot_order
 
     @property
     def cdrom(self):

@@ -45,6 +45,7 @@ from .models.v1_hyperv_timer import V1HypervTimer
 from .models.v1_i6300_esb_watchdog import V1I6300ESBWatchdog
 from .models.v1_initializer import V1Initializer
 from .models.v1_initializers import V1Initializers
+from .models.v1_interface import V1Interface
 from .models.v1_kvm_timer import V1KVMTimer
 from .models.v1_label_selector import V1LabelSelector
 from .models.v1_label_selector_requirement import V1LabelSelectorRequirement
@@ -52,6 +53,7 @@ from .models.v1_list_meta import V1ListMeta
 from .models.v1_local_object_reference import V1LocalObjectReference
 from .models.v1_lun_target import V1LunTarget
 from .models.v1_machine import V1Machine
+from .models.v1_network import V1Network
 from .models.v1_node_affinity import V1NodeAffinity
 from .models.v1_node_selector import V1NodeSelector
 from .models.v1_node_selector_requirement import V1NodeSelectorRequirement

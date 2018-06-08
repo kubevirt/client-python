@@ -34,6 +34,7 @@ class V1VirtualMachineSpec(object):
         'affinity': 'V1Affinity',
         'domain': 'V1DomainSpec',
         'hostname': 'str',
+        'networks': 'list[V1Network]',
         'node_selector': 'object',
         'subdomain': 'str',
         'termination_grace_period_seconds': 'int',
@@ -44,13 +45,14 @@ class V1VirtualMachineSpec(object):
         'affinity': 'affinity',
         'domain': 'domain',
         'hostname': 'hostname',
+        'networks': 'networks',
         'node_selector': 'nodeSelector',
         'subdomain': 'subdomain',
         'termination_grace_period_seconds': 'terminationGracePeriodSeconds',
         'volumes': 'volumes'
     }
 
-    def __init__(self, affinity=None, domain=None, hostname=None, node_selector=None, subdomain=None, termination_grace_period_seconds=None, volumes=None):
+    def __init__(self, affinity=None, domain=None, hostname=None, networks=None, node_selector=None, subdomain=None, termination_grace_period_seconds=None, volumes=None):
         """
         V1VirtualMachineSpec - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class V1VirtualMachineSpec(object):
         self._affinity = None
         self._domain = None
         self._hostname = None
+        self._networks = None
         self._node_selector = None
         self._subdomain = None
         self._termination_grace_period_seconds = None
@@ -68,6 +71,8 @@ class V1VirtualMachineSpec(object):
         self.domain = domain
         if hostname is not None:
           self.hostname = hostname
+        if networks is not None:
+          self.networks = networks
         if node_selector is not None:
           self.node_selector = node_selector
         if subdomain is not None:
@@ -147,6 +152,29 @@ class V1VirtualMachineSpec(object):
         """
 
         self._hostname = hostname
+
+    @property
+    def networks(self):
+        """
+        Gets the networks of this V1VirtualMachineSpec.
+        List of networks that can be attached to a vm's virtual interface.
+
+        :return: The networks of this V1VirtualMachineSpec.
+        :rtype: list[V1Network]
+        """
+        return self._networks
+
+    @networks.setter
+    def networks(self, networks):
+        """
+        Sets the networks of this V1VirtualMachineSpec.
+        List of networks that can be attached to a vm's virtual interface.
+
+        :param networks: The networks of this V1VirtualMachineSpec.
+        :type: list[V1Network]
+        """
+
+        self._networks = networks
 
     @property
     def node_selector(self):

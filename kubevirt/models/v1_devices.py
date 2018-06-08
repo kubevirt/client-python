@@ -32,24 +32,29 @@ class V1Devices(object):
     """
     swagger_types = {
         'disks': 'list[V1Disk]',
+        'interfaces': 'list[V1Interface]',
         'watchdog': 'V1Watchdog'
     }
 
     attribute_map = {
         'disks': 'disks',
+        'interfaces': 'interfaces',
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, disks=None, watchdog=None):
+    def __init__(self, disks=None, interfaces=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
 
         self._disks = None
+        self._interfaces = None
         self._watchdog = None
 
         if disks is not None:
           self.disks = disks
+        if interfaces is not None:
+          self.interfaces = interfaces
         if watchdog is not None:
           self.watchdog = watchdog
 
@@ -75,6 +80,29 @@ class V1Devices(object):
         """
 
         self._disks = disks
+
+    @property
+    def interfaces(self):
+        """
+        Gets the interfaces of this V1Devices.
+        Interfaces describe network interfaces which are added to the vm
+
+        :return: The interfaces of this V1Devices.
+        :rtype: list[V1Interface]
+        """
+        return self._interfaces
+
+    @interfaces.setter
+    def interfaces(self, interfaces):
+        """
+        Sets the interfaces of this V1Devices.
+        Interfaces describe network interfaces which are added to the vm
+
+        :param interfaces: The interfaces of this V1Devices.
+        :type: list[V1Interface]
+        """
+
+        self._interfaces = interfaces
 
     @property
     def watchdog(self):

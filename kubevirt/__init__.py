@@ -67,6 +67,9 @@ from .models.v1_offline_virtual_machine_status import V1OfflineVirtualMachineSta
 from .models.v1_owner_reference import V1OwnerReference
 from .models.v1_pit_timer import V1PITTimer
 from .models.v1_persistent_volume_claim_volume_source import V1PersistentVolumeClaimVolumeSource
+from .models.v1_pod_affinity import V1PodAffinity
+from .models.v1_pod_affinity_term import V1PodAffinityTerm
+from .models.v1_pod_anti_affinity import V1PodAntiAffinity
 from .models.v1_preconditions import V1Preconditions
 from .models.v1_preferred_scheduling_term import V1PreferredSchedulingTerm
 from .models.v1_rtc_timer import V1RTCTimer
@@ -95,6 +98,7 @@ from .models.v1_virtual_machine_status import V1VirtualMachineStatus
 from .models.v1_volume import V1Volume
 from .models.v1_watch_event import V1WatchEvent
 from .models.v1_watchdog import V1Watchdog
+from .models.v1_weighted_pod_affinity_term import V1WeightedPodAffinityTerm
 
 # import apis into sdk package
 from .apis.default_api import DefaultApi

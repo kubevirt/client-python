@@ -67,6 +67,9 @@ from .v1_offline_virtual_machine_status import V1OfflineVirtualMachineStatus
 from .v1_owner_reference import V1OwnerReference
 from .v1_pit_timer import V1PITTimer
 from .v1_persistent_volume_claim_volume_source import V1PersistentVolumeClaimVolumeSource
+from .v1_pod_affinity import V1PodAffinity
+from .v1_pod_affinity_term import V1PodAffinityTerm
+from .v1_pod_anti_affinity import V1PodAntiAffinity
 from .v1_preconditions import V1Preconditions
 from .v1_preferred_scheduling_term import V1PreferredSchedulingTerm
 from .v1_rtc_timer import V1RTCTimer
@@ -95,3 +98,4 @@ from .v1_virtual_machine_status import V1VirtualMachineStatus
 from .v1_volume import V1Volume
 from .v1_watch_event import V1WatchEvent
 from .v1_watchdog import V1Watchdog
+from .v1_weighted_pod_affinity_term import V1WeightedPodAffinityTerm

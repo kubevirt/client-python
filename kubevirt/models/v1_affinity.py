@@ -31,22 +31,32 @@ class V1Affinity(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'node_affinity': 'V1NodeAffinity'
+        'node_affinity': 'V1NodeAffinity',
+        'pod_affinity': 'V1PodAffinity',
+        'pod_anti_affinity': 'V1PodAntiAffinity'
     }
 
     attribute_map = {
-        'node_affinity': 'nodeAffinity'
+        'node_affinity': 'nodeAffinity',
+        'pod_affinity': 'podAffinity',
+        'pod_anti_affinity': 'podAntiAffinity'
     }
 
-    def __init__(self, node_affinity=None):
+    def __init__(self, node_affinity=None, pod_affinity=None, pod_anti_affinity=None):
         """
         V1Affinity - a model defined in Swagger
         """
 
         self._node_affinity = None
+        self._pod_affinity = None
+        self._pod_anti_affinity = None
 
         if node_affinity is not None:
           self.node_affinity = node_affinity
+        if pod_affinity is not None:
+          self.pod_affinity = pod_affinity
+        if pod_anti_affinity is not None:
+          self.pod_anti_affinity = pod_anti_affinity
 
     @property
     def node_affinity(self):
@@ -70,6 +80,52 @@ class V1Affinity(object):
         """
 
         self._node_affinity = node_affinity
+
+    @property
+    def pod_affinity(self):
+        """
+        Gets the pod_affinity of this V1Affinity.
+        Pod affinity support
+
+        :return: The pod_affinity of this V1Affinity.
+        :rtype: V1PodAffinity
+        """
+        return self._pod_affinity
+
+    @pod_affinity.setter
+    def pod_affinity(self, pod_affinity):
+        """
+        Sets the pod_affinity of this V1Affinity.
+        Pod affinity support
+
+        :param pod_affinity: The pod_affinity of this V1Affinity.
+        :type: V1PodAffinity
+        """
+
+        self._pod_affinity = pod_affinity
+
+    @property
+    def pod_anti_affinity(self):
+        """
+        Gets the pod_anti_affinity of this V1Affinity.
+        Pod anti-affinity support
+
+        :return: The pod_anti_affinity of this V1Affinity.
+        :rtype: V1PodAntiAffinity
+        """
+        return self._pod_anti_affinity
+
+    @pod_anti_affinity.setter
+    def pod_anti_affinity(self, pod_anti_affinity):
+        """
+        Sets the pod_anti_affinity of this V1Affinity.
+        Pod anti-affinity support
+
+        :param pod_anti_affinity: The pod_anti_affinity of this V1Affinity.
+        :type: V1PodAntiAffinity
+        """
+
+        self._pod_anti_affinity = pod_anti_affinity
 
     def to_dict(self):
         """

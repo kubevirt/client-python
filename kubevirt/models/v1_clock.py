@@ -61,7 +61,7 @@ class V1Clock(object):
     def timer(self):
         """
         Gets the timer of this V1Clock.
-        Timer specifies whih timers are attached to the vm
+        Timer specifies whih timers are attached to the vmi
 
         :return: The timer of this V1Clock.
         :rtype: V1Timer
@@ -72,7 +72,7 @@ class V1Clock(object):
     def timer(self, timer):
         """
         Sets the timer of this V1Clock.
-        Timer specifies whih timers are attached to the vm
+        Timer specifies whih timers are attached to the vmi
 
         :param timer: The timer of this V1Clock.
         :type: V1Timer

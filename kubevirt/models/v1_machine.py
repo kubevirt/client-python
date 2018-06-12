@@ -51,7 +51,7 @@ class V1Machine(object):
     def type(self):
         """
         Gets the type of this V1Machine.
-        QEMU machine type is the actual chipset of the VM.
+        QEMU machine type is the actual chipset of the VirtualMachineInstance.
 
         :return: The type of this V1Machine.
         :rtype: str
@@ -62,7 +62,7 @@ class V1Machine(object):
     def type(self, type):
         """
         Sets the type of this V1Machine.
-        QEMU machine type is the actual chipset of the VM.
+        QEMU machine type is the actual chipset of the VirtualMachineInstance.
 
         :param type: The type of this V1Machine.
         :type: str

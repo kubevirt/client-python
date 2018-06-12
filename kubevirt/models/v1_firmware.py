@@ -52,7 +52,7 @@ class V1Firmware(object):
     def uuid(self):
         """
         Gets the uuid of this V1Firmware.
-        UUID reported by the vm bios Defaults to a random generated uid
+        UUID reported by the vmi bios Defaults to a random generated uid
 
         :return: The uuid of this V1Firmware.
         :rtype: str
@@ -63,7 +63,7 @@ class V1Firmware(object):
     def uuid(self, uuid):
         """
         Sets the uuid of this V1Firmware.
-        UUID reported by the vm bios Defaults to a random generated uid
+        UUID reported by the vmi bios Defaults to a random generated uid
 
         :param uuid: The uuid of this V1Firmware.
         :type: str

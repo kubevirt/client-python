@@ -121,7 +121,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/healthz', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/healthz', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -138,7 +138,7 @@ class DefaultApi(object):
 
     def console(self, namespace, name, **kwargs):
         """
-        Open a websocket connection to a serial console on the specified VM.
+        Open a websocket connection to a serial console on the specified VirtualMachineInstance.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -164,7 +164,7 @@ class DefaultApi(object):
 
     def console_with_http_info(self, namespace, name, **kwargs):
         """
-        Open a websocket connection to a serial console on the specified VM.
+        Open a websocket connection to a serial console on the specified VirtualMachineInstance.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -228,7 +228,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/console', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}/console', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -236,119 +236,6 @@ class DefaultApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type=None,
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def create_namespaced_offline_virtual_machine(self, body, namespace, **kwargs):
-        """
-        Create a OfflineVirtualMachine object.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.create_namespaced_offline_virtual_machine(body, namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param V1OfflineVirtualMachine body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1OfflineVirtualMachine
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.create_namespaced_offline_virtual_machine_with_http_info(body, namespace, **kwargs)
-        else:
-            (data) = self.create_namespaced_offline_virtual_machine_with_http_info(body, namespace, **kwargs)
-            return data
-
-    def create_namespaced_offline_virtual_machine_with_http_info(self, body, namespace, **kwargs):
-        """
-        Create a OfflineVirtualMachine object.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.create_namespaced_offline_virtual_machine_with_http_info(body, namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param V1OfflineVirtualMachine body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1OfflineVirtualMachine
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['body', 'namespace']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method create_namespaced_offline_virtual_machine" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_offline_virtual_machine`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_offline_virtual_machine`")
-
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `create_namespaced_offline_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/yaml'])
-
-        # Authentication setting
-        auth_settings = ['BearerToken']
-
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines', 'POST',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='V1OfflineVirtualMachine',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -454,7 +341,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines', 'POST',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -469,48 +356,48 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def create_namespaced_virtual_machine_preset(self, body, namespace, **kwargs):
+    def create_namespaced_virtual_machine_instance(self, body, namespace, **kwargs):
         """
-        Create a VirtualMachinePreset object.
+        Create a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_namespaced_virtual_machine_preset(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_virtual_machine_instance(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachinePreset body: (required)
+        :param V1VirtualMachineInstance body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1VirtualMachinePreset
+        :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_namespaced_virtual_machine_preset_with_http_info(body, namespace, **kwargs)
+            return self.create_namespaced_virtual_machine_instance_with_http_info(body, namespace, **kwargs)
         else:
-            (data) = self.create_namespaced_virtual_machine_preset_with_http_info(body, namespace, **kwargs)
+            (data) = self.create_namespaced_virtual_machine_instance_with_http_info(body, namespace, **kwargs)
             return data
 
-    def create_namespaced_virtual_machine_preset_with_http_info(self, body, namespace, **kwargs):
+    def create_namespaced_virtual_machine_instance_with_http_info(self, body, namespace, **kwargs):
         """
-        Create a VirtualMachinePreset object.
+        Create a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_namespaced_virtual_machine_preset_with_http_info(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_virtual_machine_instance_with_http_info(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachinePreset body: (required)
+        :param V1VirtualMachineInstance body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1VirtualMachinePreset
+        :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -526,19 +413,19 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_namespaced_virtual_machine_preset" % key
+                    " to method create_namespaced_virtual_machine_instance" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_virtual_machine_preset`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_virtual_machine_instance`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_virtual_machine_preset`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_virtual_machine_instance`")
 
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `create_namespaced_virtual_machine_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `create_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -567,14 +454,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets', 'POST',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1VirtualMachinePreset',
+                                        response_type='V1VirtualMachineInstance',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -582,48 +469,48 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def create_namespaced_virtual_machine_replica_set(self, body, namespace, **kwargs):
+    def create_namespaced_virtual_machine_instance_preset(self, body, namespace, **kwargs):
         """
-        Create a VirtualMachineReplicaSet object.
+        Create a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_namespaced_virtual_machine_replica_set(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_virtual_machine_instance_preset(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachineReplicaSet body: (required)
+        :param V1VirtualMachineInstancePreset body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1VirtualMachineReplicaSet
+        :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_namespaced_virtual_machine_replica_set_with_http_info(body, namespace, **kwargs)
+            return self.create_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, **kwargs)
         else:
-            (data) = self.create_namespaced_virtual_machine_replica_set_with_http_info(body, namespace, **kwargs)
+            (data) = self.create_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, **kwargs)
             return data
 
-    def create_namespaced_virtual_machine_replica_set_with_http_info(self, body, namespace, **kwargs):
+    def create_namespaced_virtual_machine_instance_preset_with_http_info(self, body, namespace, **kwargs):
         """
-        Create a VirtualMachineReplicaSet object.
+        Create a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_namespaced_virtual_machine_replica_set_with_http_info(body, namespace, callback=callback_function)
+        >>> thread = api.create_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachineReplicaSet body: (required)
+        :param V1VirtualMachineInstancePreset body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1VirtualMachineReplicaSet
+        :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -639,19 +526,19 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_namespaced_virtual_machine_replica_set" % key
+                    " to method create_namespaced_virtual_machine_instance_preset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_virtual_machine_replica_set`")
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_virtual_machine_instance_preset`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_virtual_machine_replica_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_virtual_machine_instance_preset`")
 
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `create_namespaced_virtual_machine_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `create_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -680,14 +567,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets', 'POST',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1VirtualMachineReplicaSet',
+                                        response_type='V1VirtualMachineInstancePreset',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -695,65 +582,53 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_collection_namespaced_offline_virtual_machine(self, **kwargs):
+    def create_namespaced_virtual_machine_instance_replica_set(self, body, namespace, **kwargs):
         """
-        Delete a collection of OfflineVirtualMachine objects.
+        Create a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_collection_namespaced_offline_virtual_machine(callback=callback_function)
+        >>> thread = api.create_namespaced_virtual_machine_instance_replica_set(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :param V1VirtualMachineInstanceReplicaSet body: (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: V1VirtualMachineInstanceReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_collection_namespaced_offline_virtual_machine_with_http_info(**kwargs)
+            return self.create_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, **kwargs)
         else:
-            (data) = self.delete_collection_namespaced_offline_virtual_machine_with_http_info(**kwargs)
+            (data) = self.create_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, **kwargs)
             return data
 
-    def delete_collection_namespaced_offline_virtual_machine_with_http_info(self, **kwargs):
+    def create_namespaced_virtual_machine_instance_replica_set_with_http_info(self, body, namespace, **kwargs):
         """
-        Delete a collection of OfflineVirtualMachine objects.
+        Create a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_collection_namespaced_offline_virtual_machine_with_http_info(callback=callback_function)
+        >>> thread = api.create_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :param V1VirtualMachineInstanceReplicaSet body: (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: V1VirtualMachineInstanceReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['_continue', 'field_selector', 'include_uninitialized', 'label_selector', 'limit', 'resource_version', 'timeout_seconds', 'watch']
+        all_params = ['body', 'namespace']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -764,33 +639,27 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_collection_namespaced_offline_virtual_machine" % key
+                    " to method create_namespaced_virtual_machine_instance_replica_set" % key
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `create_namespaced_virtual_machine_instance_replica_set`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_virtual_machine_instance_replica_set`")
 
+        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
+            raise ValueError("Invalid value for parameter `namespace` when calling `create_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
-        if '_continue' in params:
-            query_params.append(('continue', params['_continue']))
-        if 'field_selector' in params:
-            query_params.append(('fieldSelector', params['field_selector']))
-        if 'include_uninitialized' in params:
-            query_params.append(('includeUninitialized', params['include_uninitialized']))
-        if 'label_selector' in params:
-            query_params.append(('labelSelector', params['label_selector']))
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))
-        if 'resource_version' in params:
-            query_params.append(('resourceVersion', params['resource_version']))
-        if 'timeout_seconds' in params:
-            query_params.append(('timeoutSeconds', params['timeout_seconds']))
-        if 'watch' in params:
-            query_params.append(('watch', params['watch']))
 
         header_params = {}
 
@@ -798,21 +667,27 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json', 'application/yaml'])
 
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'application/yaml'])
+
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='V1VirtualMachineInstanceReplicaSet',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -930,7 +805,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -945,16 +820,16 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_collection_namespaced_virtual_machine_preset(self, **kwargs):
+    def delete_collection_namespaced_virtual_machine_instance(self, **kwargs):
         """
-        Delete a collection of VirtualMachinePreset objects.
+        Delete a collection of VirtualMachineInstance objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_collection_namespaced_virtual_machine_preset(callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_virtual_machine_instance(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -972,21 +847,21 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_collection_namespaced_virtual_machine_preset_with_http_info(**kwargs)
+            return self.delete_collection_namespaced_virtual_machine_instance_with_http_info(**kwargs)
         else:
-            (data) = self.delete_collection_namespaced_virtual_machine_preset_with_http_info(**kwargs)
+            (data) = self.delete_collection_namespaced_virtual_machine_instance_with_http_info(**kwargs)
             return data
 
-    def delete_collection_namespaced_virtual_machine_preset_with_http_info(self, **kwargs):
+    def delete_collection_namespaced_virtual_machine_instance_with_http_info(self, **kwargs):
         """
-        Delete a collection of VirtualMachinePreset objects.
+        Delete a collection of VirtualMachineInstance objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_collection_namespaced_virtual_machine_preset_with_http_info(callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_virtual_machine_instance_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1014,7 +889,7 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_collection_namespaced_virtual_machine_preset" % key
+                    " to method delete_collection_namespaced_virtual_machine_instance" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -1055,7 +930,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1070,16 +945,16 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_collection_namespaced_virtual_machine_replica_set(self, **kwargs):
+    def delete_collection_namespaced_virtual_machine_instance_preset(self, **kwargs):
         """
-        Delete a collection of VirtualMachineReplicaSet objects.
+        Delete a collection of VirtualMachineInstancePreset objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_collection_namespaced_virtual_machine_replica_set(callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_virtual_machine_instance_preset(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1097,21 +972,21 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_collection_namespaced_virtual_machine_replica_set_with_http_info(**kwargs)
+            return self.delete_collection_namespaced_virtual_machine_instance_preset_with_http_info(**kwargs)
         else:
-            (data) = self.delete_collection_namespaced_virtual_machine_replica_set_with_http_info(**kwargs)
+            (data) = self.delete_collection_namespaced_virtual_machine_instance_preset_with_http_info(**kwargs)
             return data
 
-    def delete_collection_namespaced_virtual_machine_replica_set_with_http_info(self, **kwargs):
+    def delete_collection_namespaced_virtual_machine_instance_preset_with_http_info(self, **kwargs):
         """
-        Delete a collection of VirtualMachineReplicaSet objects.
+        Delete a collection of VirtualMachineInstancePreset objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_collection_namespaced_virtual_machine_replica_set_with_http_info(callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_virtual_machine_instance_preset_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1139,7 +1014,7 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_collection_namespaced_virtual_machine_replica_set" % key
+                    " to method delete_collection_namespaced_virtual_machine_instance_preset" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -1180,7 +1055,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1195,61 +1070,65 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_namespaced_offline_virtual_machine(self, body, namespace, name, **kwargs):
+    def delete_collection_namespaced_virtual_machine_instance_replica_set(self, **kwargs):
         """
-        Delete a OfflineVirtualMachine object.
+        Delete a collection of VirtualMachineInstanceReplicaSet objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_offline_virtual_machine(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_virtual_machine_instance_replica_set(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1DeleteOptions body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str name: Name of the resource (required)
-        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
-        :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
-        :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
+        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
         :return: V1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_namespaced_offline_virtual_machine_with_http_info(body, namespace, name, **kwargs)
+            return self.delete_collection_namespaced_virtual_machine_instance_replica_set_with_http_info(**kwargs)
         else:
-            (data) = self.delete_namespaced_offline_virtual_machine_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.delete_collection_namespaced_virtual_machine_instance_replica_set_with_http_info(**kwargs)
             return data
 
-    def delete_namespaced_offline_virtual_machine_with_http_info(self, body, namespace, name, **kwargs):
+    def delete_collection_namespaced_virtual_machine_instance_replica_set_with_http_info(self, **kwargs):
         """
-        Delete a OfflineVirtualMachine object.
+        Delete a collection of VirtualMachineInstanceReplicaSet objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_offline_virtual_machine_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_collection_namespaced_virtual_machine_instance_replica_set_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1DeleteOptions body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str name: Name of the resource (required)
-        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
-        :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
-        :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
+        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
         :return: V1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name', 'grace_period_seconds', 'orphan_dependents', 'propagation_policy']
+        all_params = ['_continue', 'field_selector', 'include_uninitialized', 'label_selector', 'limit', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1260,40 +1139,33 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_namespaced_offline_virtual_machine" % key
+                    " to method delete_collection_namespaced_virtual_machine_instance_replica_set" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_offline_virtual_machine`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_offline_virtual_machine`")
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_offline_virtual_machine`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `delete_namespaced_offline_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `delete_namespaced_offline_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-        if 'name' in params:
-            path_params['name'] = params['name']
 
         query_params = []
-        if 'grace_period_seconds' in params:
-            query_params.append(('gracePeriodSeconds', params['grace_period_seconds']))
-        if 'orphan_dependents' in params:
-            query_params.append(('orphanDependents', params['orphan_dependents']))
-        if 'propagation_policy' in params:
-            query_params.append(('propagationPolicy', params['propagation_policy']))
+        if '_continue' in params:
+            query_params.append(('continue', params['_continue']))
+        if 'field_selector' in params:
+            query_params.append(('fieldSelector', params['field_selector']))
+        if 'include_uninitialized' in params:
+            query_params.append(('includeUninitialized', params['include_uninitialized']))
+        if 'label_selector' in params:
+            query_params.append(('labelSelector', params['label_selector']))
+        if 'limit' in params:
+            query_params.append(('limit', params['limit']))
+        if 'resource_version' in params:
+            query_params.append(('resourceVersion', params['resource_version']))
+        if 'timeout_seconds' in params:
+            query_params.append(('timeoutSeconds', params['timeout_seconds']))
+        if 'watch' in params:
+            query_params.append(('watch', params['watch']))
 
         header_params = {}
 
@@ -1301,20 +1173,14 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json', 'application/yaml'])
 
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/yaml'])
-
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1448,7 +1314,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines/{name}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1463,16 +1329,16 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_namespaced_virtual_machine_preset(self, body, namespace, name, **kwargs):
+    def delete_namespaced_virtual_machine_instance(self, body, namespace, name, **kwargs):
         """
-        Delete a VirtualMachinePreset object.
+        Delete a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_virtual_machine_preset(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_virtual_machine_instance(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1488,21 +1354,21 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_namespaced_virtual_machine_preset_with_http_info(body, namespace, name, **kwargs)
+            return self.delete_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.delete_namespaced_virtual_machine_preset_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.delete_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def delete_namespaced_virtual_machine_preset_with_http_info(self, body, namespace, name, **kwargs):
+    def delete_namespaced_virtual_machine_instance_with_http_info(self, body, namespace, name, **kwargs):
         """
-        Delete a VirtualMachinePreset object.
+        Delete a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_virtual_machine_preset_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1528,24 +1394,24 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_namespaced_virtual_machine_preset" % key
+                    " to method delete_namespaced_virtual_machine_instance" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine_preset`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine_instance`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine_preset`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine_instance`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_virtual_machine_preset`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_virtual_machine_instance`")
 
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `delete_namespaced_virtual_machine_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `delete_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
         if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `delete_namespaced_virtual_machine_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `name` when calling `delete_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -1582,7 +1448,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1597,16 +1463,16 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_namespaced_virtual_machine_replica_set(self, body, namespace, name, **kwargs):
+    def delete_namespaced_virtual_machine_instance_preset(self, body, namespace, name, **kwargs):
         """
-        Delete a VirtualMachineReplicaSet object.
+        Delete a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_virtual_machine_replica_set(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_virtual_machine_instance_preset(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1622,21 +1488,21 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_namespaced_virtual_machine_replica_set_with_http_info(body, namespace, name, **kwargs)
+            return self.delete_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.delete_namespaced_virtual_machine_replica_set_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.delete_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def delete_namespaced_virtual_machine_replica_set_with_http_info(self, body, namespace, name, **kwargs):
+    def delete_namespaced_virtual_machine_instance_preset_with_http_info(self, body, namespace, name, **kwargs):
         """
-        Delete a VirtualMachineReplicaSet object.
+        Delete a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_virtual_machine_replica_set_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -1662,24 +1528,24 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_namespaced_virtual_machine_replica_set" % key
+                    " to method delete_namespaced_virtual_machine_instance_preset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine_replica_set`")
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine_instance_preset`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine_replica_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine_instance_preset`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_virtual_machine_replica_set`")
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_virtual_machine_instance_preset`")
 
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `delete_namespaced_virtual_machine_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `delete_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
         if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `delete_namespaced_virtual_machine_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `name` when calling `delete_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -1716,7 +1582,141 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='V1Status',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def delete_namespaced_virtual_machine_instance_replica_set(self, body, namespace, name, **kwargs):
+        """
+        Delete a VirtualMachineInstanceReplicaSet object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_virtual_machine_instance_replica_set(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1DeleteOptions body: (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
+        :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
+        :return: V1Status
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, **kwargs)
+        else:
+            (data) = self.delete_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, **kwargs)
+            return data
+
+    def delete_namespaced_virtual_machine_instance_replica_set_with_http_info(self, body, namespace, name, **kwargs):
+        """
+        Delete a VirtualMachineInstanceReplicaSet object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1DeleteOptions body: (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
+        :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
+        :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
+        :return: V1Status
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'namespace', 'name', 'grace_period_seconds', 'orphan_dependents', 'propagation_policy']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_namespaced_virtual_machine_instance_replica_set" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine_instance_replica_set`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine_instance_replica_set`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_virtual_machine_instance_replica_set`")
+
+        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
+            raise ValueError("Invalid value for parameter `namespace` when calling `delete_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
+            raise ValueError("Invalid value for parameter `name` when calling `delete_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = []
+        if 'grace_period_seconds' in params:
+            query_params.append(('gracePeriodSeconds', params['grace_period_seconds']))
+        if 'orphan_dependents' in params:
+            query_params.append(('orphanDependents', params['orphan_dependents']))
+        if 'propagation_policy' in params:
+            query_params.append(('propagationPolicy', params['propagation_policy']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'application/yaml'])
+
+        # Authentication setting
+        auth_settings = ['BearerToken']
+
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2084,7 +2084,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2176,7 +2176,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha1', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha2', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2184,140 +2184,6 @@ class DefaultApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='V1APIResourceList',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def list_namespaced_offline_virtual_machine(self, namespace, **kwargs):
-        """
-        Get a list of OfflineVirtualMachine objects.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.list_namespaced_offline_virtual_machine(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1OfflineVirtualMachineList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.list_namespaced_offline_virtual_machine_with_http_info(namespace, **kwargs)
-        else:
-            (data) = self.list_namespaced_offline_virtual_machine_with_http_info(namespace, **kwargs)
-            return data
-
-    def list_namespaced_offline_virtual_machine_with_http_info(self, namespace, **kwargs):
-        """
-        Get a list of OfflineVirtualMachine objects.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.list_namespaced_offline_virtual_machine_with_http_info(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1OfflineVirtualMachineList
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', '_continue', 'field_selector', 'include_uninitialized', 'label_selector', 'limit', 'resource_version', 'timeout_seconds', 'watch']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_offline_virtual_machine" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_offline_virtual_machine`")
-
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_offline_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-
-        query_params = []
-        if '_continue' in params:
-            query_params.append(('continue', params['_continue']))
-        if 'field_selector' in params:
-            query_params.append(('fieldSelector', params['field_selector']))
-        if 'include_uninitialized' in params:
-            query_params.append(('includeUninitialized', params['include_uninitialized']))
-        if 'label_selector' in params:
-            query_params.append(('labelSelector', params['label_selector']))
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))
-        if 'resource_version' in params:
-            query_params.append(('resourceVersion', params['resource_version']))
-        if 'timeout_seconds' in params:
-            query_params.append(('timeoutSeconds', params['timeout_seconds']))
-        if 'watch' in params:
-            query_params.append(('watch', params['watch']))
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
-
-        # Authentication setting
-        auth_settings = ['BearerToken']
-
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines', 'GET',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='V1OfflineVirtualMachineList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2444,7 +2310,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2459,16 +2325,16 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def list_namespaced_virtual_machine_preset(self, namespace, **kwargs):
+    def list_namespaced_virtual_machine_instance(self, namespace, **kwargs):
         """
-        Get a list of VirtualMachinePreset objects.
+        Get a list of VirtualMachineInstance objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_virtual_machine_preset(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_virtual_machine_instance(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2481,27 +2347,27 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1VirtualMachinePresetList
+        :return: V1VirtualMachineInstanceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_namespaced_virtual_machine_preset_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_virtual_machine_instance_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_namespaced_virtual_machine_preset_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_virtual_machine_instance_with_http_info(namespace, **kwargs)
             return data
 
-    def list_namespaced_virtual_machine_preset_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_virtual_machine_instance_with_http_info(self, namespace, **kwargs):
         """
-        Get a list of VirtualMachinePreset objects.
+        Get a list of VirtualMachineInstance objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_virtual_machine_preset_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_virtual_machine_instance_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2514,7 +2380,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1VirtualMachinePresetList
+        :return: V1VirtualMachineInstanceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2530,16 +2396,16 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_virtual_machine_preset" % key
+                    " to method list_namespaced_virtual_machine_instance" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_virtual_machine_preset`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_virtual_machine_instance`")
 
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_virtual_machine_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -2578,14 +2444,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1VirtualMachinePresetList',
+                                        response_type='V1VirtualMachineInstanceList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2593,16 +2459,16 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def list_namespaced_virtual_machine_replica_set(self, namespace, **kwargs):
+    def list_namespaced_virtual_machine_instance_preset(self, namespace, **kwargs):
         """
-        Get a list of VirtualMachineReplicaSet objects.
+        Get a list of VirtualMachineInstancePreset objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_virtual_machine_replica_set(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_virtual_machine_instance_preset(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2615,27 +2481,27 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1VirtualMachineReplicaSetList
+        :return: V1VirtualMachineInstancePresetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_namespaced_virtual_machine_replica_set_with_http_info(namespace, **kwargs)
+            return self.list_namespaced_virtual_machine_instance_preset_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_namespaced_virtual_machine_replica_set_with_http_info(namespace, **kwargs)
+            (data) = self.list_namespaced_virtual_machine_instance_preset_with_http_info(namespace, **kwargs)
             return data
 
-    def list_namespaced_virtual_machine_replica_set_with_http_info(self, namespace, **kwargs):
+    def list_namespaced_virtual_machine_instance_preset_with_http_info(self, namespace, **kwargs):
         """
-        Get a list of VirtualMachineReplicaSet objects.
+        Get a list of VirtualMachineInstancePreset objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_namespaced_virtual_machine_replica_set_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.list_namespaced_virtual_machine_instance_preset_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2648,7 +2514,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1VirtualMachineReplicaSetList
+        :return: V1VirtualMachineInstancePresetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2664,16 +2530,16 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_namespaced_virtual_machine_replica_set" % key
+                    " to method list_namespaced_virtual_machine_instance_preset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_virtual_machine_replica_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_virtual_machine_instance_preset`")
 
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_virtual_machine_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -2712,14 +2578,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1VirtualMachineReplicaSetList',
+                                        response_type='V1VirtualMachineInstancePresetList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2727,19 +2593,20 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def list_offline_virtual_machine_for_all_namespaces(self, **kwargs):
+    def list_namespaced_virtual_machine_instance_replica_set(self, namespace, **kwargs):
         """
-        Get a list of all OfflineVirtualMachine objects.
+        Get a list of VirtualMachineInstanceReplicaSet objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_offline_virtual_machine_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_namespaced_virtual_machine_instance_replica_set(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
         :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
         :param bool include_uninitialized: If true, partially initialized resources are included in the response.
@@ -2748,30 +2615,31 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1OfflineVirtualMachineList
+        :return: V1VirtualMachineInstanceReplicaSetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_offline_virtual_machine_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_namespaced_virtual_machine_instance_replica_set_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.list_offline_virtual_machine_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_namespaced_virtual_machine_instance_replica_set_with_http_info(namespace, **kwargs)
             return data
 
-    def list_offline_virtual_machine_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_namespaced_virtual_machine_instance_replica_set_with_http_info(self, namespace, **kwargs):
         """
-        Get a list of all OfflineVirtualMachine objects.
+        Get a list of VirtualMachineInstanceReplicaSet objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_offline_virtual_machine_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_namespaced_virtual_machine_instance_replica_set_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
         :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
         :param bool include_uninitialized: If true, partially initialized resources are included in the response.
@@ -2780,12 +2648,12 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1OfflineVirtualMachineList
+        :return: V1VirtualMachineInstanceReplicaSetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['_continue', 'field_selector', 'include_uninitialized', 'label_selector', 'limit', 'resource_version', 'timeout_seconds', 'watch']
+        all_params = ['namespace', '_continue', 'field_selector', 'include_uninitialized', 'label_selector', 'limit', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2796,15 +2664,22 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_offline_virtual_machine_for_all_namespaces" % key
+                    " to method list_namespaced_virtual_machine_instance_replica_set" % key
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_virtual_machine_instance_replica_set`")
 
+        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
+            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
         if '_continue' in params:
@@ -2837,14 +2712,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/offlinevirtualmachines', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1OfflineVirtualMachineList',
+                                        response_type='V1VirtualMachineInstanceReplicaSetList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2962,7 +2837,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/virtualmachines', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/virtualmachines', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2977,16 +2852,16 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def list_virtual_machine_preset_for_all_namespaces(self, **kwargs):
+    def list_virtual_machine_instance_for_all_namespaces(self, **kwargs):
         """
-        Get a list of all VirtualMachinePreset objects.
+        Get a list of all VirtualMachineInstance objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_virtual_machine_preset_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_virtual_machine_instance_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2998,27 +2873,27 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1VirtualMachinePresetList
+        :return: V1VirtualMachineInstanceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_virtual_machine_preset_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_virtual_machine_instance_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.list_virtual_machine_preset_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_virtual_machine_instance_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def list_virtual_machine_preset_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_virtual_machine_instance_for_all_namespaces_with_http_info(self, **kwargs):
         """
-        Get a list of all VirtualMachinePreset objects.
+        Get a list of all VirtualMachineInstance objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_virtual_machine_preset_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_virtual_machine_instance_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3030,7 +2905,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1VirtualMachinePresetList
+        :return: V1VirtualMachineInstanceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3046,7 +2921,7 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_virtual_machine_preset_for_all_namespaces" % key
+                    " to method list_virtual_machine_instance_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -3087,14 +2962,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/virtualmachinepresets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/virtualmachineinstances', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1VirtualMachinePresetList',
+                                        response_type='V1VirtualMachineInstanceList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3102,16 +2977,16 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def list_virtual_machine_replica_set_for_all_namespaces(self, **kwargs):
+    def list_virtual_machine_instance_preset_for_all_namespaces(self, **kwargs):
         """
-        Get a list of all VirtualMachineReplicaSet objects.
+        Get a list of all VirtualMachineInstancePreset objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_virtual_machine_replica_set_for_all_namespaces(callback=callback_function)
+        >>> thread = api.list_virtual_machine_instance_preset_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3123,27 +2998,27 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1VirtualMachineReplicaSetList
+        :return: V1VirtualMachineInstancePresetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.list_virtual_machine_replica_set_for_all_namespaces_with_http_info(**kwargs)
+            return self.list_virtual_machine_instance_preset_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.list_virtual_machine_replica_set_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.list_virtual_machine_instance_preset_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def list_virtual_machine_replica_set_for_all_namespaces_with_http_info(self, **kwargs):
+    def list_virtual_machine_instance_preset_for_all_namespaces_with_http_info(self, **kwargs):
         """
-        Get a list of all VirtualMachineReplicaSet objects.
+        Get a list of all VirtualMachineInstancePreset objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.list_virtual_machine_replica_set_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.list_virtual_machine_instance_preset_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3155,7 +3030,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1VirtualMachineReplicaSetList
+        :return: V1VirtualMachineInstancePresetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3171,7 +3046,7 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_virtual_machine_replica_set_for_all_namespaces" % key
+                    " to method list_virtual_machine_instance_preset_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -3212,14 +3087,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/virtualmachinereplicasets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/virtualmachineinstancepresets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1VirtualMachineReplicaSetList',
+                                        response_type='V1VirtualMachineInstancePresetList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3227,51 +3102,65 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_namespaced_offline_virtual_machine(self, body, **kwargs):
+    def list_virtual_machine_instance_replica_set_for_all_namespaces(self, **kwargs):
         """
-        Patch a OfflineVirtualMachine object.
+        Get a list of all VirtualMachineInstanceReplicaSet objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_offline_virtual_machine(body, callback=callback_function)
+        >>> thread = api.list_virtual_machine_instance_replica_set_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1Patch body: (required)
-        :return: V1OfflineVirtualMachine
+        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :return: V1VirtualMachineInstanceReplicaSetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_offline_virtual_machine_with_http_info(body, **kwargs)
+            return self.list_virtual_machine_instance_replica_set_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.patch_namespaced_offline_virtual_machine_with_http_info(body, **kwargs)
+            (data) = self.list_virtual_machine_instance_replica_set_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def patch_namespaced_offline_virtual_machine_with_http_info(self, body, **kwargs):
+    def list_virtual_machine_instance_replica_set_for_all_namespaces_with_http_info(self, **kwargs):
         """
-        Patch a OfflineVirtualMachine object.
+        Get a list of all VirtualMachineInstanceReplicaSet objects.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_offline_virtual_machine_with_http_info(body, callback=callback_function)
+        >>> thread = api.list_virtual_machine_instance_replica_set_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1Patch body: (required)
-        :return: V1OfflineVirtualMachine
+        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :return: V1VirtualMachineInstanceReplicaSetList
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body']
+        all_params = ['_continue', 'field_selector', 'include_uninitialized', 'label_selector', 'limit', 'resource_version', 'timeout_seconds', 'watch']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3282,13 +3171,10 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_namespaced_offline_virtual_machine" % key
+                    " to method list_virtual_machine_instance_replica_set_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_offline_virtual_machine`")
 
 
         collection_formats = {}
@@ -3296,6 +3182,22 @@ class DefaultApi(object):
         path_params = {}
 
         query_params = []
+        if '_continue' in params:
+            query_params.append(('continue', params['_continue']))
+        if 'field_selector' in params:
+            query_params.append(('fieldSelector', params['field_selector']))
+        if 'include_uninitialized' in params:
+            query_params.append(('includeUninitialized', params['include_uninitialized']))
+        if 'label_selector' in params:
+            query_params.append(('labelSelector', params['label_selector']))
+        if 'limit' in params:
+            query_params.append(('limit', params['limit']))
+        if 'resource_version' in params:
+            query_params.append(('resourceVersion', params['resource_version']))
+        if 'timeout_seconds' in params:
+            query_params.append(('timeoutSeconds', params['timeout_seconds']))
+        if 'watch' in params:
+            query_params.append(('watch', params['watch']))
 
         header_params = {}
 
@@ -3303,27 +3205,21 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json-patch+json', 'application/merge-patch+json'])
+            select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/virtualmachineinstancereplicasets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1OfflineVirtualMachine',
+                                        response_type='V1VirtualMachineInstanceReplicaSetList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3420,7 +3316,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines/{name}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3435,46 +3331,46 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_namespaced_virtual_machine_preset(self, body, **kwargs):
+    def patch_namespaced_virtual_machine_instance(self, body, **kwargs):
         """
-        Patch a VirtualMachinePreset object.
+        Patch a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_preset(body, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param V1Patch body: (required)
-        :return: V1VirtualMachinePreset
+        :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_virtual_machine_preset_with_http_info(body, **kwargs)
+            return self.patch_namespaced_virtual_machine_instance_with_http_info(body, **kwargs)
         else:
-            (data) = self.patch_namespaced_virtual_machine_preset_with_http_info(body, **kwargs)
+            (data) = self.patch_namespaced_virtual_machine_instance_with_http_info(body, **kwargs)
             return data
 
-    def patch_namespaced_virtual_machine_preset_with_http_info(self, body, **kwargs):
+    def patch_namespaced_virtual_machine_instance_with_http_info(self, body, **kwargs):
         """
-        Patch a VirtualMachinePreset object.
+        Patch a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_preset_with_http_info(body, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_with_http_info(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param V1Patch body: (required)
-        :return: V1VirtualMachinePreset
+        :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3490,13 +3386,13 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_namespaced_virtual_machine_preset" % key
+                    " to method patch_namespaced_virtual_machine_instance" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_preset`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_instance`")
 
 
         collection_formats = {}
@@ -3524,14 +3420,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1VirtualMachinePreset',
+                                        response_type='V1VirtualMachineInstance',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3539,46 +3435,46 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_namespaced_virtual_machine_replica_set(self, body, **kwargs):
+    def patch_namespaced_virtual_machine_instance_preset(self, body, **kwargs):
         """
-        Patch a VirtualMachineReplicaSet object.
+        Patch a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_replica_set(body, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_preset(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param V1Patch body: (required)
-        :return: V1VirtualMachineReplicaSet
+        :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_virtual_machine_replica_set_with_http_info(body, **kwargs)
+            return self.patch_namespaced_virtual_machine_instance_preset_with_http_info(body, **kwargs)
         else:
-            (data) = self.patch_namespaced_virtual_machine_replica_set_with_http_info(body, **kwargs)
+            (data) = self.patch_namespaced_virtual_machine_instance_preset_with_http_info(body, **kwargs)
             return data
 
-    def patch_namespaced_virtual_machine_replica_set_with_http_info(self, body, **kwargs):
+    def patch_namespaced_virtual_machine_instance_preset_with_http_info(self, body, **kwargs):
         """
-        Patch a VirtualMachineReplicaSet object.
+        Patch a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_replica_set_with_http_info(body, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_preset_with_http_info(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param V1Patch body: (required)
-        :return: V1VirtualMachineReplicaSet
+        :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3594,13 +3490,13 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method patch_namespaced_virtual_machine_replica_set" % key
+                    " to method patch_namespaced_virtual_machine_instance_preset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_replica_set`")
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_instance_preset`")
 
 
         collection_formats = {}
@@ -3628,14 +3524,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1VirtualMachineReplicaSet',
+                                        response_type='V1VirtualMachineInstancePreset',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3643,57 +3539,51 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def read_namespaced_offline_virtual_machine(self, name, namespace, **kwargs):
+    def patch_namespaced_virtual_machine_instance_replica_set(self, body, **kwargs):
         """
-        Get a OfflineVirtualMachine object.
+        Patch a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_namespaced_offline_virtual_machine(name, namespace, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_replica_set(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str name: Name of the resource (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
-        :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1OfflineVirtualMachine
+        :param V1Patch body: (required)
+        :return: V1VirtualMachineInstanceReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_namespaced_offline_virtual_machine_with_http_info(name, namespace, **kwargs)
+            return self.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(body, **kwargs)
         else:
-            (data) = self.read_namespaced_offline_virtual_machine_with_http_info(name, namespace, **kwargs)
+            (data) = self.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(body, **kwargs)
             return data
 
-    def read_namespaced_offline_virtual_machine_with_http_info(self, name, namespace, **kwargs):
+    def patch_namespaced_virtual_machine_instance_replica_set_with_http_info(self, body, **kwargs):
         """
-        Get a OfflineVirtualMachine object.
+        Patch a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_namespaced_offline_virtual_machine_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str name: Name of the resource (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
-        :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1OfflineVirtualMachine
+        :param V1Patch body: (required)
+        :return: V1VirtualMachineInstanceReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace', 'exact', 'export']
+        all_params = ['body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3704,35 +3594,20 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_namespaced_offline_virtual_machine" % key
+                    " to method patch_namespaced_virtual_machine_instance_replica_set" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'name' is set
-        if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_offline_virtual_machine`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_offline_virtual_machine`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_instance_replica_set`")
 
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `read_namespaced_offline_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `read_namespaced_offline_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'name' in params:
-            path_params['name'] = params['name']
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
 
         query_params = []
-        if 'exact' in params:
-            query_params.append(('exact', params['exact']))
-        if 'export' in params:
-            query_params.append(('export', params['export']))
 
         header_params = {}
 
@@ -3740,21 +3615,27 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
+            select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json-patch+json', 'application/merge-patch+json'])
 
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines/{name}', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1OfflineVirtualMachine',
+                                        response_type='V1VirtualMachineInstanceReplicaSet',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3866,7 +3747,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines/{name}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3881,16 +3762,16 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def read_namespaced_virtual_machine_preset(self, name, namespace, **kwargs):
+    def read_namespaced_virtual_machine_instance(self, name, namespace, **kwargs):
         """
-        Get a VirtualMachinePreset object.
+        Get a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_namespaced_virtual_machine_preset(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_virtual_machine_instance(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3898,27 +3779,27 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1VirtualMachinePreset
+        :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_namespaced_virtual_machine_preset_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_virtual_machine_instance_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_namespaced_virtual_machine_preset_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_virtual_machine_instance_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_namespaced_virtual_machine_preset_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_virtual_machine_instance_with_http_info(self, name, namespace, **kwargs):
         """
-        Get a VirtualMachinePreset object.
+        Get a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_namespaced_virtual_machine_preset_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_virtual_machine_instance_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3926,7 +3807,7 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1VirtualMachinePreset
+        :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3942,21 +3823,21 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_namespaced_virtual_machine_preset" % key
+                    " to method read_namespaced_virtual_machine_instance" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_virtual_machine_preset`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_virtual_machine_instance`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_virtual_machine_preset`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_virtual_machine_instance`")
 
         if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `read_namespaced_virtual_machine_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `name` when calling `read_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `read_namespaced_virtual_machine_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `read_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -3985,14 +3866,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name}', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1VirtualMachinePreset',
+                                        response_type='V1VirtualMachineInstance',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4000,16 +3881,16 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def read_namespaced_virtual_machine_replica_set(self, name, namespace, **kwargs):
+    def read_namespaced_virtual_machine_instance_preset(self, name, namespace, **kwargs):
         """
-        Get a VirtualMachineReplicaSet object.
+        Get a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_namespaced_virtual_machine_replica_set(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_virtual_machine_instance_preset(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4017,27 +3898,27 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1VirtualMachineReplicaSet
+        :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.read_namespaced_virtual_machine_replica_set_with_http_info(name, namespace, **kwargs)
+            return self.read_namespaced_virtual_machine_instance_preset_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.read_namespaced_virtual_machine_replica_set_with_http_info(name, namespace, **kwargs)
+            (data) = self.read_namespaced_virtual_machine_instance_preset_with_http_info(name, namespace, **kwargs)
             return data
 
-    def read_namespaced_virtual_machine_replica_set_with_http_info(self, name, namespace, **kwargs):
+    def read_namespaced_virtual_machine_instance_preset_with_http_info(self, name, namespace, **kwargs):
         """
-        Get a VirtualMachineReplicaSet object.
+        Get a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.read_namespaced_virtual_machine_replica_set_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.read_namespaced_virtual_machine_instance_preset_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -4045,7 +3926,7 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1VirtualMachineReplicaSet
+        :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4061,21 +3942,21 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method read_namespaced_virtual_machine_replica_set" % key
+                    " to method read_namespaced_virtual_machine_instance_preset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_virtual_machine_replica_set`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_virtual_machine_instance_preset`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_virtual_machine_replica_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_virtual_machine_instance_preset`")
 
         if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `read_namespaced_virtual_machine_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `name` when calling `read_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `read_namespaced_virtual_machine_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `read_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -4104,14 +3985,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name}', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1VirtualMachineReplicaSet',
+                                        response_type='V1VirtualMachineInstancePreset',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4119,55 +4000,57 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def replace_namespaced_offline_virtual_machine(self, body, namespace, name, **kwargs):
+    def read_namespaced_virtual_machine_instance_replica_set(self, name, namespace, **kwargs):
         """
-        Update a OfflineVirtualMachine object.
+        Get a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_offline_virtual_machine(body, namespace, name, callback=callback_function)
+        >>> thread = api.read_namespaced_virtual_machine_instance_replica_set(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1OfflineVirtualMachine body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: V1OfflineVirtualMachine
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
+        :param bool export: Should this value be exported. Export strips fields that a user can not specify.
+        :return: V1VirtualMachineInstanceReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_offline_virtual_machine_with_http_info(body, namespace, name, **kwargs)
+            return self.read_namespaced_virtual_machine_instance_replica_set_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.replace_namespaced_offline_virtual_machine_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.read_namespaced_virtual_machine_instance_replica_set_with_http_info(name, namespace, **kwargs)
             return data
 
-    def replace_namespaced_offline_virtual_machine_with_http_info(self, body, namespace, name, **kwargs):
+    def read_namespaced_virtual_machine_instance_replica_set_with_http_info(self, name, namespace, **kwargs):
         """
-        Update a OfflineVirtualMachine object.
+        Get a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_offline_virtual_machine_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.read_namespaced_virtual_machine_instance_replica_set_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1OfflineVirtualMachine body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: V1OfflineVirtualMachine
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
+        :param bool export: Should this value be exported. Export strips fields that a user can not specify.
+        :return: V1VirtualMachineInstanceReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name']
+        all_params = ['name', 'namespace', 'exact', 'export']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4178,34 +4061,35 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_namespaced_offline_virtual_machine" % key
+                    " to method read_namespaced_virtual_machine_instance_replica_set" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_offline_virtual_machine`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_offline_virtual_machine`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_offline_virtual_machine`")
+            raise ValueError("Missing the required parameter `name` when calling `read_namespaced_virtual_machine_instance_replica_set`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_virtual_machine_instance_replica_set`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `replace_namespaced_offline_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
         if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `replace_namespaced_offline_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `name` when calling `read_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
+            raise ValueError("Invalid value for parameter `namespace` when calling `read_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
+        if 'exact' in params:
+            query_params.append(('exact', params['exact']))
+        if 'export' in params:
+            query_params.append(('export', params['export']))
 
         header_params = {}
 
@@ -4213,27 +4097,21 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/yaml'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/yaml'])
+            select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/offlinevirtualmachines/{name}', 'PUT',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1OfflineVirtualMachine',
+                                        response_type='V1VirtualMachineInstanceReplicaSet',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4348,7 +4226,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}', 'PUT',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines/{name}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4363,50 +4241,50 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def replace_namespaced_virtual_machine_preset(self, body, namespace, name, **kwargs):
+    def replace_namespaced_virtual_machine_instance(self, body, namespace, name, **kwargs):
         """
-        Update a VirtualMachinePreset object.
+        Update a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_virtual_machine_preset(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_virtual_machine_instance(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachinePreset body: (required)
+        :param V1VirtualMachineInstance body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: V1VirtualMachinePreset
+        :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_virtual_machine_preset_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.replace_namespaced_virtual_machine_preset_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def replace_namespaced_virtual_machine_preset_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_virtual_machine_instance_with_http_info(self, body, namespace, name, **kwargs):
         """
-        Update a VirtualMachinePreset object.
+        Update a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_virtual_machine_preset_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachinePreset body: (required)
+        :param V1VirtualMachineInstance body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: V1VirtualMachinePreset
+        :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4422,24 +4300,24 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_namespaced_virtual_machine_preset" % key
+                    " to method replace_namespaced_virtual_machine_instance" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine_preset`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine_instance`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine_preset`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine_instance`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_virtual_machine_preset`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_virtual_machine_instance`")
 
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `replace_namespaced_virtual_machine_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `replace_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
         if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `replace_namespaced_virtual_machine_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `name` when calling `replace_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -4470,14 +4348,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinepresets/{name}', 'PUT',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1VirtualMachinePreset',
+                                        response_type='V1VirtualMachineInstance',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4485,50 +4363,50 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def replace_namespaced_virtual_machine_replica_set(self, body, namespace, name, **kwargs):
+    def replace_namespaced_virtual_machine_instance_preset(self, body, namespace, name, **kwargs):
         """
-        Update a VirtualMachineReplicaSet object.
+        Update a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_virtual_machine_replica_set(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_virtual_machine_instance_preset(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachineReplicaSet body: (required)
+        :param V1VirtualMachineInstancePreset body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: V1VirtualMachineReplicaSet
+        :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_virtual_machine_replica_set_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.replace_namespaced_virtual_machine_replica_set_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def replace_namespaced_virtual_machine_replica_set_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_virtual_machine_instance_preset_with_http_info(self, body, namespace, name, **kwargs):
         """
-        Update a VirtualMachineReplicaSet object.
+        Update a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_virtual_machine_replica_set_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachineReplicaSet body: (required)
+        :param V1VirtualMachineInstancePreset body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: V1VirtualMachineReplicaSet
+        :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4544,24 +4422,24 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method replace_namespaced_virtual_machine_replica_set" % key
+                    " to method replace_namespaced_virtual_machine_instance_preset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine_replica_set`")
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine_instance_preset`")
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine_replica_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine_instance_preset`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_virtual_machine_replica_set`")
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_virtual_machine_instance_preset`")
 
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `replace_namespaced_virtual_machine_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `replace_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
         if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `replace_namespaced_virtual_machine_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `name` when calling `replace_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -4592,14 +4470,136 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinereplicasets/{name}', 'PUT',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1VirtualMachineReplicaSet',
+                                        response_type='V1VirtualMachineInstancePreset',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def replace_namespaced_virtual_machine_instance_replica_set(self, body, namespace, name, **kwargs):
+        """
+        Update a VirtualMachineInstanceReplicaSet object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.replace_namespaced_virtual_machine_instance_replica_set(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1VirtualMachineInstanceReplicaSet body: (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: V1VirtualMachineInstanceReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.replace_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, **kwargs)
+        else:
+            (data) = self.replace_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, **kwargs)
+            return data
+
+    def replace_namespaced_virtual_machine_instance_replica_set_with_http_info(self, body, namespace, name, **kwargs):
+        """
+        Update a VirtualMachineInstanceReplicaSet object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.replace_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param V1VirtualMachineInstanceReplicaSet body: (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
+        :return: V1VirtualMachineInstanceReplicaSet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'namespace', 'name']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method replace_namespaced_virtual_machine_instance_replica_set" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine_instance_replica_set`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine_instance_replica_set`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_virtual_machine_instance_replica_set`")
+
+        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
+            raise ValueError("Invalid value for parameter `namespace` when calling `replace_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
+            raise ValueError("Invalid value for parameter `name` when calling `replace_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json', 'application/yaml'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'application/yaml'])
+
+        # Authentication setting
+        auth_settings = ['BearerToken']
+
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='V1VirtualMachineInstanceReplicaSet',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4699,7 +4699,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/test', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}/test', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4789,7 +4789,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha1/version', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha2/version', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4806,7 +4806,7 @@ class DefaultApi(object):
 
     def vnc(self, namespace, name, **kwargs):
         """
-        Open a websocket connection to connect to VNC on the specified VM.
+        Open a websocket connection to connect to VNC on the specified VirtualMachineInstance.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4832,7 +4832,7 @@ class DefaultApi(object):
 
     def vnc_with_http_info(self, namespace, name, **kwargs):
         """
-        Open a websocket connection to connect to VNC on the specified VM.
+        Open a websocket connection to connect to VNC on the specified VirtualMachineInstance.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4896,7 +4896,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachines/{name}/vnc', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}/vnc', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4904,140 +4904,6 @@ class DefaultApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type=None,
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def watch_namespaced_offline_virtual_machine(self, namespace, **kwargs):
-        """
-        Watch a OfflineVirtualMachine object.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_namespaced_offline_virtual_machine(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.watch_namespaced_offline_virtual_machine_with_http_info(namespace, **kwargs)
-        else:
-            (data) = self.watch_namespaced_offline_virtual_machine_with_http_info(namespace, **kwargs)
-            return data
-
-    def watch_namespaced_offline_virtual_machine_with_http_info(self, namespace, **kwargs):
-        """
-        Watch a OfflineVirtualMachine object.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_namespaced_offline_virtual_machine_with_http_info(namespace, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['namespace', '_continue', 'field_selector', 'include_uninitialized', 'label_selector', 'limit', 'resource_version', 'timeout_seconds', 'watch']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_offline_virtual_machine" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_offline_virtual_machine`")
-
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `watch_namespaced_offline_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
-
-        query_params = []
-        if '_continue' in params:
-            query_params.append(('continue', params['_continue']))
-        if 'field_selector' in params:
-            query_params.append(('fieldSelector', params['field_selector']))
-        if 'include_uninitialized' in params:
-            query_params.append(('includeUninitialized', params['include_uninitialized']))
-        if 'label_selector' in params:
-            query_params.append(('labelSelector', params['label_selector']))
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))
-        if 'resource_version' in params:
-            query_params.append(('resourceVersion', params['resource_version']))
-        if 'timeout_seconds' in params:
-            query_params.append(('timeoutSeconds', params['timeout_seconds']))
-        if 'watch' in params:
-            query_params.append(('watch', params['watch']))
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-
-        # Authentication setting
-        auth_settings = ['BearerToken']
-
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/offlinevirtualmachines', 'GET',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='V1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -5164,7 +5030,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachines', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/namespaces/{namespace}/virtualmachines', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5179,16 +5045,16 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def watch_namespaced_virtual_machine_preset(self, namespace, **kwargs):
+    def watch_namespaced_virtual_machine_instance(self, namespace, **kwargs):
         """
-        Watch a VirtualMachinePreset object.
+        Watch a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_virtual_machine_preset(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_virtual_machine_instance(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5207,21 +5073,21 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_virtual_machine_preset_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_virtual_machine_instance_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_namespaced_virtual_machine_preset_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_virtual_machine_instance_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_namespaced_virtual_machine_preset_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_virtual_machine_instance_with_http_info(self, namespace, **kwargs):
         """
-        Watch a VirtualMachinePreset object.
+        Watch a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_virtual_machine_preset_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_virtual_machine_instance_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5250,16 +5116,16 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_virtual_machine_preset" % key
+                    " to method watch_namespaced_virtual_machine_instance" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_virtual_machine_preset`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_virtual_machine_instance`")
 
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `watch_namespaced_virtual_machine_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `watch_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -5298,7 +5164,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachinepresets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/namespaces/{namespace}/virtualmachineinstances', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5313,16 +5179,16 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def watch_namespaced_virtual_machine_replica_set(self, namespace, **kwargs):
+    def watch_namespaced_virtual_machine_instance_preset(self, namespace, **kwargs):
         """
-        Watch a VirtualMachineReplicaSet object.
+        Watch a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_virtual_machine_replica_set(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_virtual_machine_instance_preset(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5341,21 +5207,21 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_namespaced_virtual_machine_replica_set_with_http_info(namespace, **kwargs)
+            return self.watch_namespaced_virtual_machine_instance_preset_with_http_info(namespace, **kwargs)
         else:
-            (data) = self.watch_namespaced_virtual_machine_replica_set_with_http_info(namespace, **kwargs)
+            (data) = self.watch_namespaced_virtual_machine_instance_preset_with_http_info(namespace, **kwargs)
             return data
 
-    def watch_namespaced_virtual_machine_replica_set_with_http_info(self, namespace, **kwargs):
+    def watch_namespaced_virtual_machine_instance_preset_with_http_info(self, namespace, **kwargs):
         """
-        Watch a VirtualMachineReplicaSet object.
+        Watch a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_namespaced_virtual_machine_replica_set_with_http_info(namespace, callback=callback_function)
+        >>> thread = api.watch_namespaced_virtual_machine_instance_preset_with_http_info(namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5384,16 +5250,16 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_namespaced_virtual_machine_replica_set" % key
+                    " to method watch_namespaced_virtual_machine_instance_preset" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_virtual_machine_replica_set`")
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_virtual_machine_instance_preset`")
 
         if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `watch_namespaced_virtual_machine_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+            raise ValueError("Invalid value for parameter `namespace` when calling `watch_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -5432,7 +5298,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachinereplicasets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/namespaces/{namespace}/virtualmachineinstancepresets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5447,16 +5313,150 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def watch_offline_virtual_machine_list_for_all_namespaces(self, **kwargs):
+    def watch_namespaced_virtual_machine_instance_replica_set(self, namespace, **kwargs):
         """
-        Watch a OfflineVirtualMachineList object.
+        Watch a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_offline_virtual_machine_list_for_all_namespaces(callback=callback_function)
+        >>> thread = api.watch_namespaced_virtual_machine_instance_replica_set(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :return: V1WatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_namespaced_virtual_machine_instance_replica_set_with_http_info(namespace, **kwargs)
+        else:
+            (data) = self.watch_namespaced_virtual_machine_instance_replica_set_with_http_info(namespace, **kwargs)
+            return data
+
+    def watch_namespaced_virtual_machine_instance_replica_set_with_http_info(self, namespace, **kwargs):
+        """
+        Watch a VirtualMachineInstanceReplicaSet object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_namespaced_virtual_machine_instance_replica_set_with_http_info(namespace, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :return: V1WatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['namespace', '_continue', 'field_selector', 'include_uninitialized', 'label_selector', 'limit', 'resource_version', 'timeout_seconds', 'watch']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_namespaced_virtual_machine_instance_replica_set" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_virtual_machine_instance_replica_set`")
+
+        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
+            raise ValueError("Invalid value for parameter `namespace` when calling `watch_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = []
+        if '_continue' in params:
+            query_params.append(('continue', params['_continue']))
+        if 'field_selector' in params:
+            query_params.append(('fieldSelector', params['field_selector']))
+        if 'include_uninitialized' in params:
+            query_params.append(('includeUninitialized', params['include_uninitialized']))
+        if 'label_selector' in params:
+            query_params.append(('labelSelector', params['label_selector']))
+        if 'limit' in params:
+            query_params.append(('limit', params['limit']))
+        if 'resource_version' in params:
+            query_params.append(('resourceVersion', params['resource_version']))
+        if 'timeout_seconds' in params:
+            query_params.append(('timeoutSeconds', params['timeout_seconds']))
+        if 'watch' in params:
+            query_params.append(('watch', params['watch']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = ['BearerToken']
+
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/namespaces/{namespace}/virtualmachineinstancereplicasets', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='V1WatchEvent',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def watch_virtual_machine_instance_list_for_all_namespaces(self, **kwargs):
+        """
+        Watch a VirtualMachineInstanceList object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_virtual_machine_instance_list_for_all_namespaces(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5474,21 +5474,21 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.watch_offline_virtual_machine_list_for_all_namespaces_with_http_info(**kwargs)
+            return self.watch_virtual_machine_instance_list_for_all_namespaces_with_http_info(**kwargs)
         else:
-            (data) = self.watch_offline_virtual_machine_list_for_all_namespaces_with_http_info(**kwargs)
+            (data) = self.watch_virtual_machine_instance_list_for_all_namespaces_with_http_info(**kwargs)
             return data
 
-    def watch_offline_virtual_machine_list_for_all_namespaces_with_http_info(self, **kwargs):
+    def watch_virtual_machine_instance_list_for_all_namespaces_with_http_info(self, **kwargs):
         """
-        Watch a OfflineVirtualMachineList object.
+        Watch a VirtualMachineInstanceList object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.watch_offline_virtual_machine_list_for_all_namespaces_with_http_info(callback=callback_function)
+        >>> thread = api.watch_virtual_machine_instance_list_for_all_namespaces_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -5516,7 +5516,7 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method watch_offline_virtual_machine_list_for_all_namespaces" % key
+                    " to method watch_virtual_machine_instance_list_for_all_namespaces" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -5557,7 +5557,257 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/offlinevirtualmachines', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/virtualmachineinstances', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='V1WatchEvent',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def watch_virtual_machine_instance_preset_list_for_all_namespaces(self, **kwargs):
+        """
+        Watch a VirtualMachineInstancePresetList object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_virtual_machine_instance_preset_list_for_all_namespaces(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :return: V1WatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_virtual_machine_instance_preset_list_for_all_namespaces_with_http_info(**kwargs)
+        else:
+            (data) = self.watch_virtual_machine_instance_preset_list_for_all_namespaces_with_http_info(**kwargs)
+            return data
+
+    def watch_virtual_machine_instance_preset_list_for_all_namespaces_with_http_info(self, **kwargs):
+        """
+        Watch a VirtualMachineInstancePresetList object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_virtual_machine_instance_preset_list_for_all_namespaces_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :return: V1WatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['_continue', 'field_selector', 'include_uninitialized', 'label_selector', 'limit', 'resource_version', 'timeout_seconds', 'watch']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_virtual_machine_instance_preset_list_for_all_namespaces" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if '_continue' in params:
+            query_params.append(('continue', params['_continue']))
+        if 'field_selector' in params:
+            query_params.append(('fieldSelector', params['field_selector']))
+        if 'include_uninitialized' in params:
+            query_params.append(('includeUninitialized', params['include_uninitialized']))
+        if 'label_selector' in params:
+            query_params.append(('labelSelector', params['label_selector']))
+        if 'limit' in params:
+            query_params.append(('limit', params['limit']))
+        if 'resource_version' in params:
+            query_params.append(('resourceVersion', params['resource_version']))
+        if 'timeout_seconds' in params:
+            query_params.append(('timeoutSeconds', params['timeout_seconds']))
+        if 'watch' in params:
+            query_params.append(('watch', params['watch']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = ['BearerToken']
+
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/virtualmachineinstancepresets', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='V1WatchEvent',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def watch_virtual_machine_instance_replica_set_list_for_all_namespaces(self, **kwargs):
+        """
+        Watch a VirtualMachineInstanceReplicaSetList object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_virtual_machine_instance_replica_set_list_for_all_namespaces(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :return: V1WatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.watch_virtual_machine_instance_replica_set_list_for_all_namespaces_with_http_info(**kwargs)
+        else:
+            (data) = self.watch_virtual_machine_instance_replica_set_list_for_all_namespaces_with_http_info(**kwargs)
+            return data
+
+    def watch_virtual_machine_instance_replica_set_list_for_all_namespaces_with_http_info(self, **kwargs):
+        """
+        Watch a VirtualMachineInstanceReplicaSetList object.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.watch_virtual_machine_instance_replica_set_list_for_all_namespaces_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
+        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
+        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
+        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
+        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
+        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
+        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
+        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
+        :return: V1WatchEvent
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['_continue', 'field_selector', 'include_uninitialized', 'label_selector', 'limit', 'resource_version', 'timeout_seconds', 'watch']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method watch_virtual_machine_instance_replica_set_list_for_all_namespaces" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if '_continue' in params:
+            query_params.append(('continue', params['_continue']))
+        if 'field_selector' in params:
+            query_params.append(('fieldSelector', params['field_selector']))
+        if 'include_uninitialized' in params:
+            query_params.append(('includeUninitialized', params['include_uninitialized']))
+        if 'label_selector' in params:
+            query_params.append(('labelSelector', params['label_selector']))
+        if 'limit' in params:
+            query_params.append(('limit', params['limit']))
+        if 'resource_version' in params:
+            query_params.append(('resourceVersion', params['resource_version']))
+        if 'timeout_seconds' in params:
+            query_params.append(('timeoutSeconds', params['timeout_seconds']))
+        if 'watch' in params:
+            query_params.append(('watch', params['watch']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = ['BearerToken']
+
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/virtualmachineinstancereplicasets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5682,257 +5932,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/virtualmachines', 'GET',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='V1WatchEvent',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def watch_virtual_machine_preset_list_for_all_namespaces(self, **kwargs):
-        """
-        Watch a VirtualMachinePresetList object.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_virtual_machine_preset_list_for_all_namespaces(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.watch_virtual_machine_preset_list_for_all_namespaces_with_http_info(**kwargs)
-        else:
-            (data) = self.watch_virtual_machine_preset_list_for_all_namespaces_with_http_info(**kwargs)
-            return data
-
-    def watch_virtual_machine_preset_list_for_all_namespaces_with_http_info(self, **kwargs):
-        """
-        Watch a VirtualMachinePresetList object.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_virtual_machine_preset_list_for_all_namespaces_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['_continue', 'field_selector', 'include_uninitialized', 'label_selector', 'limit', 'resource_version', 'timeout_seconds', 'watch']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method watch_virtual_machine_preset_list_for_all_namespaces" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-        if '_continue' in params:
-            query_params.append(('continue', params['_continue']))
-        if 'field_selector' in params:
-            query_params.append(('fieldSelector', params['field_selector']))
-        if 'include_uninitialized' in params:
-            query_params.append(('includeUninitialized', params['include_uninitialized']))
-        if 'label_selector' in params:
-            query_params.append(('labelSelector', params['label_selector']))
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))
-        if 'resource_version' in params:
-            query_params.append(('resourceVersion', params['resource_version']))
-        if 'timeout_seconds' in params:
-            query_params.append(('timeoutSeconds', params['timeout_seconds']))
-        if 'watch' in params:
-            query_params.append(('watch', params['watch']))
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-
-        # Authentication setting
-        auth_settings = ['BearerToken']
-
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/virtualmachinepresets', 'GET',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='V1WatchEvent',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def watch_virtual_machine_replica_set_list_for_all_namespaces(self, **kwargs):
-        """
-        Watch a VirtualMachineReplicaSetList object.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_virtual_machine_replica_set_list_for_all_namespaces(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.watch_virtual_machine_replica_set_list_for_all_namespaces_with_http_info(**kwargs)
-        else:
-            (data) = self.watch_virtual_machine_replica_set_list_for_all_namespaces_with_http_info(**kwargs)
-            return data
-
-    def watch_virtual_machine_replica_set_list_for_all_namespaces_with_http_info(self, **kwargs):
-        """
-        Watch a VirtualMachineReplicaSetList object.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.watch_virtual_machine_replica_set_list_for_all_namespaces_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str _continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :param str field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :param bool include_uninitialized: If true, partially initialized resources are included in the response.
-        :param str label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything
-        :param int limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
-        :param int timeout_seconds: TimeoutSeconds for the list/watch call.
-        :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['_continue', 'field_selector', 'include_uninitialized', 'label_selector', 'limit', 'resource_version', 'timeout_seconds', 'watch']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method watch_virtual_machine_replica_set_list_for_all_namespaces" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-        if '_continue' in params:
-            query_params.append(('continue', params['_continue']))
-        if 'field_selector' in params:
-            query_params.append(('fieldSelector', params['field_selector']))
-        if 'include_uninitialized' in params:
-            query_params.append(('includeUninitialized', params['include_uninitialized']))
-        if 'label_selector' in params:
-            query_params.append(('labelSelector', params['label_selector']))
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))
-        if 'resource_version' in params:
-            query_params.append(('resourceVersion', params['resource_version']))
-        if 'timeout_seconds' in params:
-            query_params.append(('timeoutSeconds', params['timeout_seconds']))
-        if 'watch' in params:
-            query_params.append(('watch', params['watch']))
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-
-        # Authentication setting
-        auth_settings = ['BearerToken']
-
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha1/watch/virtualmachinereplicasets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/virtualmachines', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

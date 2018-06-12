@@ -32,42 +32,37 @@ class V1VirtualMachineStatus(object):
     """
     swagger_types = {
         'conditions': 'list[V1VirtualMachineCondition]',
-        'interfaces': 'list[V1VirtualMachineNetworkInterface]',
-        'node_name': 'str',
-        'phase': 'str'
+        'created': 'bool',
+        'ready': 'bool'
     }
 
     attribute_map = {
         'conditions': 'conditions',
-        'interfaces': 'interfaces',
-        'node_name': 'nodeName',
-        'phase': 'phase'
+        'created': 'created',
+        'ready': 'ready'
     }
 
-    def __init__(self, conditions=None, interfaces=None, node_name=None, phase=None):
+    def __init__(self, conditions=None, created=None, ready=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
 
         self._conditions = None
-        self._interfaces = None
-        self._node_name = None
-        self._phase = None
+        self._created = None
+        self._ready = None
 
         if conditions is not None:
           self.conditions = conditions
-        if interfaces is not None:
-          self.interfaces = interfaces
-        if node_name is not None:
-          self.node_name = node_name
-        if phase is not None:
-          self.phase = phase
+        if created is not None:
+          self.created = created
+        if ready is not None:
+          self.ready = ready
 
     @property
     def conditions(self):
         """
         Gets the conditions of this V1VirtualMachineStatus.
-        Conditions are specific points in VM's pod runtime.
+        Hold the state information of the VirtualMachine and its VirtualMachineInstance
 
         :return: The conditions of this V1VirtualMachineStatus.
         :rtype: list[V1VirtualMachineCondition]
@@ -78,7 +73,7 @@ class V1VirtualMachineStatus(object):
     def conditions(self, conditions):
         """
         Sets the conditions of this V1VirtualMachineStatus.
-        Conditions are specific points in VM's pod runtime.
+        Hold the state information of the VirtualMachine and its VirtualMachineInstance
 
         :param conditions: The conditions of this V1VirtualMachineStatus.
         :type: list[V1VirtualMachineCondition]
@@ -87,73 +82,50 @@ class V1VirtualMachineStatus(object):
         self._conditions = conditions
 
     @property
-    def interfaces(self):
+    def created(self):
         """
-        Gets the interfaces of this V1VirtualMachineStatus.
-        Interfaces represent the details of available network interfaces.
+        Gets the created of this V1VirtualMachineStatus.
+        Created indicates if the virtual machine is created in the cluster
 
-        :return: The interfaces of this V1VirtualMachineStatus.
-        :rtype: list[V1VirtualMachineNetworkInterface]
+        :return: The created of this V1VirtualMachineStatus.
+        :rtype: bool
         """
-        return self._interfaces
+        return self._created
 
-    @interfaces.setter
-    def interfaces(self, interfaces):
+    @created.setter
+    def created(self, created):
         """
-        Sets the interfaces of this V1VirtualMachineStatus.
-        Interfaces represent the details of available network interfaces.
+        Sets the created of this V1VirtualMachineStatus.
+        Created indicates if the virtual machine is created in the cluster
 
-        :param interfaces: The interfaces of this V1VirtualMachineStatus.
-        :type: list[V1VirtualMachineNetworkInterface]
+        :param created: The created of this V1VirtualMachineStatus.
+        :type: bool
         """
 
-        self._interfaces = interfaces
+        self._created = created
 
     @property
-    def node_name(self):
+    def ready(self):
         """
-        Gets the node_name of this V1VirtualMachineStatus.
-        NodeName is the name where the VM is currently running.
+        Gets the ready of this V1VirtualMachineStatus.
+        Ready indicates if the virtual machine is running and ready
 
-        :return: The node_name of this V1VirtualMachineStatus.
-        :rtype: str
+        :return: The ready of this V1VirtualMachineStatus.
+        :rtype: bool
         """
-        return self._node_name
+        return self._ready
 
-    @node_name.setter
-    def node_name(self, node_name):
+    @ready.setter
+    def ready(self, ready):
         """
-        Sets the node_name of this V1VirtualMachineStatus.
-        NodeName is the name where the VM is currently running.
+        Sets the ready of this V1VirtualMachineStatus.
+        Ready indicates if the virtual machine is running and ready
 
-        :param node_name: The node_name of this V1VirtualMachineStatus.
-        :type: str
-        """
-
-        self._node_name = node_name
-
-    @property
-    def phase(self):
-        """
-        Gets the phase of this V1VirtualMachineStatus.
-        Phase is the status of the VM in kubernetes world. It is not the VM status, but partially correlates to it.
-
-        :return: The phase of this V1VirtualMachineStatus.
-        :rtype: str
-        """
-        return self._phase
-
-    @phase.setter
-    def phase(self, phase):
-        """
-        Sets the phase of this V1VirtualMachineStatus.
-        Phase is the status of the VM in kubernetes world. It is not the VM status, but partially correlates to it.
-
-        :param phase: The phase of this V1VirtualMachineStatus.
-        :type: str
+        :param ready: The ready of this V1VirtualMachineStatus.
+        :type: bool
         """
 
-        self._phase = phase
+        self._ready = ready
 
     def to_dict(self):
         """

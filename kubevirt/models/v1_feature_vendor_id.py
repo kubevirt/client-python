@@ -80,7 +80,7 @@ class V1FeatureVendorID(object):
     def vendorid(self):
         """
         Gets the vendorid of this V1FeatureVendorID.
-        VendorID sets the hypervisor vendor id, visible to the vm String up to twelve characters
+        VendorID sets the hypervisor vendor id, visible to the vmi String up to twelve characters
 
         :return: The vendorid of this V1FeatureVendorID.
         :rtype: str
@@ -91,7 +91,7 @@ class V1FeatureVendorID(object):
     def vendorid(self, vendorid):
         """
         Sets the vendorid of this V1FeatureVendorID.
-        VendorID sets the hypervisor vendor id, visible to the vm String up to twelve characters
+        VendorID sets the hypervisor vendor id, visible to the vmi String up to twelve characters
 
         :param vendorid: The vendorid of this V1FeatureVendorID.
         :type: str

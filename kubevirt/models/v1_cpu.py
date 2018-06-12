@@ -52,7 +52,7 @@ class V1CPU(object):
     def cores(self):
         """
         Gets the cores of this V1CPU.
-        Cores specifies the number of cores inside the vm. Must be a value greater or equal 1.
+        Cores specifies the number of cores inside the vmi. Must be a value greater or equal 1.
 
         :return: The cores of this V1CPU.
         :rtype: int
@@ -63,7 +63,7 @@ class V1CPU(object):
     def cores(self, cores):
         """
         Sets the cores of this V1CPU.
-        Cores specifies the number of cores inside the vm. Must be a value greater or equal 1.
+        Cores specifies the number of cores inside the vmi. Must be a value greater or equal 1.
 
         :param cores: The cores of this V1CPU.
         :type: int

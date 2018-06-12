@@ -76,7 +76,7 @@ class V1Volume(object):
     def cloud_init_no_cloud(self):
         """
         Gets the cloud_init_no_cloud of this V1Volume.
-        CloudInitNoCloud represents a cloud-init NoCloud user-data source. The NoCloud data will be added as a disk to the vm. A proper cloud-init installation is required inside the guest. More info: http://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html +optional
+        CloudInitNoCloud represents a cloud-init NoCloud user-data source. The NoCloud data will be added as a disk to the vmi. A proper cloud-init installation is required inside the guest. More info: http://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html +optional
 
         :return: The cloud_init_no_cloud of this V1Volume.
         :rtype: V1CloudInitNoCloudSource
@@ -87,7 +87,7 @@ class V1Volume(object):
     def cloud_init_no_cloud(self, cloud_init_no_cloud):
         """
         Sets the cloud_init_no_cloud of this V1Volume.
-        CloudInitNoCloud represents a cloud-init NoCloud user-data source. The NoCloud data will be added as a disk to the vm. A proper cloud-init installation is required inside the guest. More info: http://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html +optional
+        CloudInitNoCloud represents a cloud-init NoCloud user-data source. The NoCloud data will be added as a disk to the vmi. A proper cloud-init installation is required inside the guest. More info: http://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html +optional
 
         :param cloud_init_no_cloud: The cloud_init_no_cloud of this V1Volume.
         :type: V1CloudInitNoCloudSource
@@ -99,7 +99,7 @@ class V1Volume(object):
     def empty_disk(self):
         """
         Gets the empty_disk of this V1Volume.
-        EmptyDisk represents a temporary disk which shares the vms lifecycle More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html +optional
+        EmptyDisk represents a temporary disk which shares the vmis lifecycle More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html +optional
 
         :return: The empty_disk of this V1Volume.
         :rtype: V1EmptyDiskSource
@@ -110,7 +110,7 @@ class V1Volume(object):
     def empty_disk(self, empty_disk):
         """
         Sets the empty_disk of this V1Volume.
-        EmptyDisk represents a temporary disk which shares the vms lifecycle More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html +optional
+        EmptyDisk represents a temporary disk which shares the vmis lifecycle More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html +optional
 
         :param empty_disk: The empty_disk of this V1Volume.
         :type: V1EmptyDiskSource
@@ -145,7 +145,7 @@ class V1Volume(object):
     def name(self):
         """
         Gets the name of this V1Volume.
-        Volume's name. Must be a DNS_LABEL and unique within the vm. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+        Volume's name. Must be a DNS_LABEL and unique within the vmi. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 
         :return: The name of this V1Volume.
         :rtype: str
@@ -156,7 +156,7 @@ class V1Volume(object):
     def name(self, name):
         """
         Sets the name of this V1Volume.
-        Volume's name. Must be a DNS_LABEL and unique within the vm. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+        Volume's name. Must be a DNS_LABEL and unique within the vmi. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 
         :param name: The name of this V1Volume.
         :type: str
@@ -170,7 +170,7 @@ class V1Volume(object):
     def persistent_volume_claim(self):
         """
         Gets the persistent_volume_claim of this V1Volume.
-        PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vm via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims +optional
+        PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims +optional
 
         :return: The persistent_volume_claim of this V1Volume.
         :rtype: V1PersistentVolumeClaimVolumeSource
@@ -181,7 +181,7 @@ class V1Volume(object):
     def persistent_volume_claim(self, persistent_volume_claim):
         """
         Sets the persistent_volume_claim of this V1Volume.
-        PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vm via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims +optional
+        PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims +optional
 
         :param persistent_volume_claim: The persistent_volume_claim of this V1Volume.
         :type: V1PersistentVolumeClaimVolumeSource

@@ -62,7 +62,7 @@ class V1Devices(object):
     def disks(self):
         """
         Gets the disks of this V1Devices.
-        Disks describes disks, cdroms, floppy and luns which are connected to the vm
+        Disks describes disks, cdroms, floppy and luns which are connected to the vmi
 
         :return: The disks of this V1Devices.
         :rtype: list[V1Disk]
@@ -73,7 +73,7 @@ class V1Devices(object):
     def disks(self, disks):
         """
         Sets the disks of this V1Devices.
-        Disks describes disks, cdroms, floppy and luns which are connected to the vm
+        Disks describes disks, cdroms, floppy and luns which are connected to the vmi
 
         :param disks: The disks of this V1Devices.
         :type: list[V1Disk]
@@ -108,7 +108,7 @@ class V1Devices(object):
     def watchdog(self):
         """
         Gets the watchdog of this V1Devices.
-        Watchdog describes a watchdog device which can be added to the vm
+        Watchdog describes a watchdog device which can be added to the vmi
 
         :return: The watchdog of this V1Devices.
         :rtype: V1Watchdog
@@ -119,7 +119,7 @@ class V1Devices(object):
     def watchdog(self, watchdog):
         """
         Sets the watchdog of this V1Devices.
-        Watchdog describes a watchdog device which can be added to the vm
+        Watchdog describes a watchdog device which can be added to the vmi
 
         :param watchdog: The watchdog of this V1Devices.
         :type: V1Watchdog

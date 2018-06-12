@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **relaxed** | [**V1FeatureState**](V1FeatureState.md) | Relaxed relaxes constraints on timer Defaults to the machine type setting +optional | [optional] 
-**reset** | [**V1FeatureState**](V1FeatureState.md) | Reset enables Hyperv reboot/reset for the vm Defaults to the machine type setting +optional | [optional] 
+**reset** | [**V1FeatureState**](V1FeatureState.md) | Reset enables Hyperv reboot/reset for the vmi Defaults to the machine type setting +optional | [optional] 
 **runtime** | [**V1FeatureState**](V1FeatureState.md) | Runtime Defaults to the machine type setting +optional | [optional] 
 **spinlocks** | [**V1FeatureSpinlocks**](V1FeatureSpinlocks.md) | Spinlocks indicates if spinlocks should be made available to the guest +optional | [optional] 
 **synic** | [**V1FeatureState**](V1FeatureState.md) | SyNIC enable Synthetic Interrupt Controller Defaults to the machine type setting +optional | [optional] 

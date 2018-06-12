@@ -31,242 +31,75 @@ class V1VirtualMachineSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'affinity': 'V1Affinity',
-        'domain': 'V1DomainSpec',
-        'hostname': 'str',
-        'networks': 'list[V1Network]',
-        'node_selector': 'object',
-        'subdomain': 'str',
-        'termination_grace_period_seconds': 'int',
-        'volumes': 'list[V1Volume]'
+        'running': 'bool',
+        'template': 'V1VirtualMachineInstanceTemplateSpec'
     }
 
     attribute_map = {
-        'affinity': 'affinity',
-        'domain': 'domain',
-        'hostname': 'hostname',
-        'networks': 'networks',
-        'node_selector': 'nodeSelector',
-        'subdomain': 'subdomain',
-        'termination_grace_period_seconds': 'terminationGracePeriodSeconds',
-        'volumes': 'volumes'
+        'running': 'running',
+        'template': 'template'
     }
 
-    def __init__(self, affinity=None, domain=None, hostname=None, networks=None, node_selector=None, subdomain=None, termination_grace_period_seconds=None, volumes=None):
+    def __init__(self, running=None, template=None):
         """
         V1VirtualMachineSpec - a model defined in Swagger
         """
 
-        self._affinity = None
-        self._domain = None
-        self._hostname = None
-        self._networks = None
-        self._node_selector = None
-        self._subdomain = None
-        self._termination_grace_period_seconds = None
-        self._volumes = None
+        self._running = None
+        self._template = None
 
-        if affinity is not None:
-          self.affinity = affinity
-        self.domain = domain
-        if hostname is not None:
-          self.hostname = hostname
-        if networks is not None:
-          self.networks = networks
-        if node_selector is not None:
-          self.node_selector = node_selector
-        if subdomain is not None:
-          self.subdomain = subdomain
-        if termination_grace_period_seconds is not None:
-          self.termination_grace_period_seconds = termination_grace_period_seconds
-        if volumes is not None:
-          self.volumes = volumes
+        self.running = running
+        self.template = template
 
     @property
-    def affinity(self):
+    def running(self):
         """
-        Gets the affinity of this V1VirtualMachineSpec.
-        If affinity is specifies, obey all the affinity rules
+        Gets the running of this V1VirtualMachineSpec.
+        Running controls whether the associatied VirtualMachineInstance is created or not
 
-        :return: The affinity of this V1VirtualMachineSpec.
-        :rtype: V1Affinity
+        :return: The running of this V1VirtualMachineSpec.
+        :rtype: bool
         """
-        return self._affinity
+        return self._running
 
-    @affinity.setter
-    def affinity(self, affinity):
+    @running.setter
+    def running(self, running):
         """
-        Sets the affinity of this V1VirtualMachineSpec.
-        If affinity is specifies, obey all the affinity rules
+        Sets the running of this V1VirtualMachineSpec.
+        Running controls whether the associatied VirtualMachineInstance is created or not
 
-        :param affinity: The affinity of this V1VirtualMachineSpec.
-        :type: V1Affinity
+        :param running: The running of this V1VirtualMachineSpec.
+        :type: bool
         """
+        if running is None:
+            raise ValueError("Invalid value for `running`, must not be `None`")
 
-        self._affinity = affinity
+        self._running = running
 
     @property
-    def domain(self):
+    def template(self):
         """
-        Gets the domain of this V1VirtualMachineSpec.
-        Specification of the desired behavior of the VirtualMachine on the host.
+        Gets the template of this V1VirtualMachineSpec.
+        Template is the direct specification of VirtualMachineInstance
 
-        :return: The domain of this V1VirtualMachineSpec.
-        :rtype: V1DomainSpec
+        :return: The template of this V1VirtualMachineSpec.
+        :rtype: V1VirtualMachineInstanceTemplateSpec
         """
-        return self._domain
+        return self._template
 
-    @domain.setter
-    def domain(self, domain):
+    @template.setter
+    def template(self, template):
         """
-        Sets the domain of this V1VirtualMachineSpec.
-        Specification of the desired behavior of the VirtualMachine on the host.
+        Sets the template of this V1VirtualMachineSpec.
+        Template is the direct specification of VirtualMachineInstance
 
-        :param domain: The domain of this V1VirtualMachineSpec.
-        :type: V1DomainSpec
+        :param template: The template of this V1VirtualMachineSpec.
+        :type: V1VirtualMachineInstanceTemplateSpec
         """
-        if domain is None:
-            raise ValueError("Invalid value for `domain`, must not be `None`")
+        if template is None:
+            raise ValueError("Invalid value for `template`, must not be `None`")
 
-        self._domain = domain
-
-    @property
-    def hostname(self):
-        """
-        Gets the hostname of this V1VirtualMachineSpec.
-        Specifies the hostname of the vm If not specified, the hostname will be set to the name of the vm, if dhcp or cloud-init is configured properly. +optional
-
-        :return: The hostname of this V1VirtualMachineSpec.
-        :rtype: str
-        """
-        return self._hostname
-
-    @hostname.setter
-    def hostname(self, hostname):
-        """
-        Sets the hostname of this V1VirtualMachineSpec.
-        Specifies the hostname of the vm If not specified, the hostname will be set to the name of the vm, if dhcp or cloud-init is configured properly. +optional
-
-        :param hostname: The hostname of this V1VirtualMachineSpec.
-        :type: str
-        """
-
-        self._hostname = hostname
-
-    @property
-    def networks(self):
-        """
-        Gets the networks of this V1VirtualMachineSpec.
-        List of networks that can be attached to a vm's virtual interface.
-
-        :return: The networks of this V1VirtualMachineSpec.
-        :rtype: list[V1Network]
-        """
-        return self._networks
-
-    @networks.setter
-    def networks(self, networks):
-        """
-        Sets the networks of this V1VirtualMachineSpec.
-        List of networks that can be attached to a vm's virtual interface.
-
-        :param networks: The networks of this V1VirtualMachineSpec.
-        :type: list[V1Network]
-        """
-
-        self._networks = networks
-
-    @property
-    def node_selector(self):
-        """
-        Gets the node_selector of this V1VirtualMachineSpec.
-        NodeSelector is a selector which must be true for the vm to fit on a node. Selector which must match a node's labels for the vm to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/ +optional
-
-        :return: The node_selector of this V1VirtualMachineSpec.
-        :rtype: object
-        """
-        return self._node_selector
-
-    @node_selector.setter
-    def node_selector(self, node_selector):
-        """
-        Sets the node_selector of this V1VirtualMachineSpec.
-        NodeSelector is a selector which must be true for the vm to fit on a node. Selector which must match a node's labels for the vm to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/ +optional
-
-        :param node_selector: The node_selector of this V1VirtualMachineSpec.
-        :type: object
-        """
-
-        self._node_selector = node_selector
-
-    @property
-    def subdomain(self):
-        """
-        Gets the subdomain of this V1VirtualMachineSpec.
-        If specified, the fully qualified vm hostname will be \"<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>\". If not specified, the vm will not have a domainname at all. The DNS entry will resolve to the vm, no matter if the vm itself can pick up a hostname. +optional
-
-        :return: The subdomain of this V1VirtualMachineSpec.
-        :rtype: str
-        """
-        return self._subdomain
-
-    @subdomain.setter
-    def subdomain(self, subdomain):
-        """
-        Sets the subdomain of this V1VirtualMachineSpec.
-        If specified, the fully qualified vm hostname will be \"<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>\". If not specified, the vm will not have a domainname at all. The DNS entry will resolve to the vm, no matter if the vm itself can pick up a hostname. +optional
-
-        :param subdomain: The subdomain of this V1VirtualMachineSpec.
-        :type: str
-        """
-
-        self._subdomain = subdomain
-
-    @property
-    def termination_grace_period_seconds(self):
-        """
-        Gets the termination_grace_period_seconds of this V1VirtualMachineSpec.
-        Grace period observed after signalling a VM to stop after which the VM is force terminated.
-
-        :return: The termination_grace_period_seconds of this V1VirtualMachineSpec.
-        :rtype: int
-        """
-        return self._termination_grace_period_seconds
-
-    @termination_grace_period_seconds.setter
-    def termination_grace_period_seconds(self, termination_grace_period_seconds):
-        """
-        Sets the termination_grace_period_seconds of this V1VirtualMachineSpec.
-        Grace period observed after signalling a VM to stop after which the VM is force terminated.
-
-        :param termination_grace_period_seconds: The termination_grace_period_seconds of this V1VirtualMachineSpec.
-        :type: int
-        """
-
-        self._termination_grace_period_seconds = termination_grace_period_seconds
-
-    @property
-    def volumes(self):
-        """
-        Gets the volumes of this V1VirtualMachineSpec.
-        List of volumes that can be mounted by disks belonging to the vm.
-
-        :return: The volumes of this V1VirtualMachineSpec.
-        :rtype: list[V1Volume]
-        """
-        return self._volumes
-
-    @volumes.setter
-    def volumes(self, volumes):
-        """
-        Sets the volumes of this V1VirtualMachineSpec.
-        List of volumes that can be mounted by disks belonging to the vm.
-
-        :param volumes: The volumes of this V1VirtualMachineSpec.
-        :type: list[V1Volume]
-        """
-
-        self._volumes = volumes
+        self._template = template
 
     def to_dict(self):
         """

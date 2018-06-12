@@ -59,8 +59,7 @@ class V1VirtualMachineList(object):
         self.items = items
         if kind is not None:
           self.kind = kind
-        if metadata is not None:
-          self.metadata = metadata
+        self.metadata = metadata
 
     @property
     def api_version(self):
@@ -89,6 +88,7 @@ class V1VirtualMachineList(object):
     def items(self):
         """
         Gets the items of this V1VirtualMachineList.
+        Items is a list of VirtualMachines
 
         :return: The items of this V1VirtualMachineList.
         :rtype: list[V1VirtualMachine]
@@ -99,6 +99,7 @@ class V1VirtualMachineList(object):
     def items(self, items):
         """
         Sets the items of this V1VirtualMachineList.
+        Items is a list of VirtualMachines
 
         :param items: The items of this V1VirtualMachineList.
         :type: list[V1VirtualMachine]
@@ -149,6 +150,8 @@ class V1VirtualMachineList(object):
         :param metadata: The metadata of this V1VirtualMachineList.
         :type: V1ListMeta
         """
+        if metadata is None:
+            raise ValueError("Invalid value for `metadata`, must not be `None`")
 
         self._metadata = metadata
 

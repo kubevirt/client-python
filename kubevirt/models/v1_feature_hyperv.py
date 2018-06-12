@@ -115,7 +115,7 @@ class V1FeatureHyperv(object):
     def reset(self):
         """
         Gets the reset of this V1FeatureHyperv.
-        Reset enables Hyperv reboot/reset for the vm Defaults to the machine type setting +optional
+        Reset enables Hyperv reboot/reset for the vmi Defaults to the machine type setting +optional
 
         :return: The reset of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -126,7 +126,7 @@ class V1FeatureHyperv(object):
     def reset(self, reset):
         """
         Sets the reset of this V1FeatureHyperv.
-        Reset enables Hyperv reboot/reset for the vm Defaults to the machine type setting +optional
+        Reset enables Hyperv reboot/reset for the vmi Defaults to the machine type setting +optional
 
         :param reset: The reset of this V1FeatureHyperv.
         :type: V1FeatureState

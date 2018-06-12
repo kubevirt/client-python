@@ -139,7 +139,7 @@ class V1VirtualMachine(object):
     def spec(self):
         """
         Gets the spec of this V1VirtualMachine.
-        VM Spec contains the VM specification.
+        Spec contains the specification of VirtualMachineInstance created
 
         :return: The spec of this V1VirtualMachine.
         :rtype: V1VirtualMachineSpec
@@ -150,7 +150,7 @@ class V1VirtualMachine(object):
     def spec(self, spec):
         """
         Sets the spec of this V1VirtualMachine.
-        VM Spec contains the VM specification.
+        Spec contains the specification of VirtualMachineInstance created
 
         :param spec: The spec of this V1VirtualMachine.
         :type: V1VirtualMachineSpec
@@ -162,7 +162,7 @@ class V1VirtualMachine(object):
     def status(self):
         """
         Gets the status of this V1VirtualMachine.
-        Status is the high level overview of how the VM is doing. It contains information available to controllers and users.
+        Status holds the current state of the controller and brief information about its associated VirtualMachineInstance
 
         :return: The status of this V1VirtualMachine.
         :rtype: V1VirtualMachineStatus
@@ -173,7 +173,7 @@ class V1VirtualMachine(object):
     def status(self, status):
         """
         Sets the status of this V1VirtualMachine.
-        Status is the high level overview of how the VM is doing. It contains information available to controllers and users.
+        Status holds the current state of the controller and brief information about its associated VirtualMachineInstance
 
         :param status: The status of this V1VirtualMachine.
         :type: V1VirtualMachineStatus

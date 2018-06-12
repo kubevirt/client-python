@@ -43,15 +43,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for console
 
-        Open a websocket connection to a serial console on the specified VM.
-        """
-        pass
-
-    def test_create_namespaced_offline_virtual_machine(self):
-        """
-        Test case for create_namespaced_offline_virtual_machine
-
-        Create a OfflineVirtualMachine object.
+        Open a websocket connection to a serial console on the specified VirtualMachineInstance.
         """
         pass
 
@@ -63,27 +55,27 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_create_namespaced_virtual_machine_preset(self):
+    def test_create_namespaced_virtual_machine_instance(self):
         """
-        Test case for create_namespaced_virtual_machine_preset
+        Test case for create_namespaced_virtual_machine_instance
 
-        Create a VirtualMachinePreset object.
-        """
-        pass
-
-    def test_create_namespaced_virtual_machine_replica_set(self):
-        """
-        Test case for create_namespaced_virtual_machine_replica_set
-
-        Create a VirtualMachineReplicaSet object.
+        Create a VirtualMachineInstance object.
         """
         pass
 
-    def test_delete_collection_namespaced_offline_virtual_machine(self):
+    def test_create_namespaced_virtual_machine_instance_preset(self):
         """
-        Test case for delete_collection_namespaced_offline_virtual_machine
+        Test case for create_namespaced_virtual_machine_instance_preset
 
-        Delete a collection of OfflineVirtualMachine objects.
+        Create a VirtualMachineInstancePreset object.
+        """
+        pass
+
+    def test_create_namespaced_virtual_machine_instance_replica_set(self):
+        """
+        Test case for create_namespaced_virtual_machine_instance_replica_set
+
+        Create a VirtualMachineInstanceReplicaSet object.
         """
         pass
 
@@ -95,27 +87,27 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_collection_namespaced_virtual_machine_preset(self):
+    def test_delete_collection_namespaced_virtual_machine_instance(self):
         """
-        Test case for delete_collection_namespaced_virtual_machine_preset
+        Test case for delete_collection_namespaced_virtual_machine_instance
 
-        Delete a collection of VirtualMachinePreset objects.
-        """
-        pass
-
-    def test_delete_collection_namespaced_virtual_machine_replica_set(self):
-        """
-        Test case for delete_collection_namespaced_virtual_machine_replica_set
-
-        Delete a collection of VirtualMachineReplicaSet objects.
+        Delete a collection of VirtualMachineInstance objects.
         """
         pass
 
-    def test_delete_namespaced_offline_virtual_machine(self):
+    def test_delete_collection_namespaced_virtual_machine_instance_preset(self):
         """
-        Test case for delete_namespaced_offline_virtual_machine
+        Test case for delete_collection_namespaced_virtual_machine_instance_preset
 
-        Delete a OfflineVirtualMachine object.
+        Delete a collection of VirtualMachineInstancePreset objects.
+        """
+        pass
+
+    def test_delete_collection_namespaced_virtual_machine_instance_replica_set(self):
+        """
+        Test case for delete_collection_namespaced_virtual_machine_instance_replica_set
+
+        Delete a collection of VirtualMachineInstanceReplicaSet objects.
         """
         pass
 
@@ -127,19 +119,27 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_namespaced_virtual_machine_preset(self):
+    def test_delete_namespaced_virtual_machine_instance(self):
         """
-        Test case for delete_namespaced_virtual_machine_preset
+        Test case for delete_namespaced_virtual_machine_instance
 
-        Delete a VirtualMachinePreset object.
+        Delete a VirtualMachineInstance object.
         """
         pass
 
-    def test_delete_namespaced_virtual_machine_replica_set(self):
+    def test_delete_namespaced_virtual_machine_instance_preset(self):
         """
-        Test case for delete_namespaced_virtual_machine_replica_set
+        Test case for delete_namespaced_virtual_machine_instance_preset
 
-        Delete a VirtualMachineReplicaSet object.
+        Delete a VirtualMachineInstancePreset object.
+        """
+        pass
+
+    def test_delete_namespaced_virtual_machine_instance_replica_set(self):
+        """
+        Test case for delete_namespaced_virtual_machine_instance_replica_set
+
+        Delete a VirtualMachineInstanceReplicaSet object.
         """
         pass
 
@@ -183,14 +183,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_list_namespaced_offline_virtual_machine(self):
-        """
-        Test case for list_namespaced_offline_virtual_machine
-
-        Get a list of OfflineVirtualMachine objects.
-        """
-        pass
-
     def test_list_namespaced_virtual_machine(self):
         """
         Test case for list_namespaced_virtual_machine
@@ -199,27 +191,27 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_list_namespaced_virtual_machine_preset(self):
+    def test_list_namespaced_virtual_machine_instance(self):
         """
-        Test case for list_namespaced_virtual_machine_preset
+        Test case for list_namespaced_virtual_machine_instance
 
-        Get a list of VirtualMachinePreset objects.
-        """
-        pass
-
-    def test_list_namespaced_virtual_machine_replica_set(self):
-        """
-        Test case for list_namespaced_virtual_machine_replica_set
-
-        Get a list of VirtualMachineReplicaSet objects.
+        Get a list of VirtualMachineInstance objects.
         """
         pass
 
-    def test_list_offline_virtual_machine_for_all_namespaces(self):
+    def test_list_namespaced_virtual_machine_instance_preset(self):
         """
-        Test case for list_offline_virtual_machine_for_all_namespaces
+        Test case for list_namespaced_virtual_machine_instance_preset
 
-        Get a list of all OfflineVirtualMachine objects.
+        Get a list of VirtualMachineInstancePreset objects.
+        """
+        pass
+
+    def test_list_namespaced_virtual_machine_instance_replica_set(self):
+        """
+        Test case for list_namespaced_virtual_machine_instance_replica_set
+
+        Get a list of VirtualMachineInstanceReplicaSet objects.
         """
         pass
 
@@ -231,27 +223,27 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_list_virtual_machine_preset_for_all_namespaces(self):
+    def test_list_virtual_machine_instance_for_all_namespaces(self):
         """
-        Test case for list_virtual_machine_preset_for_all_namespaces
+        Test case for list_virtual_machine_instance_for_all_namespaces
 
-        Get a list of all VirtualMachinePreset objects.
-        """
-        pass
-
-    def test_list_virtual_machine_replica_set_for_all_namespaces(self):
-        """
-        Test case for list_virtual_machine_replica_set_for_all_namespaces
-
-        Get a list of all VirtualMachineReplicaSet objects.
+        Get a list of all VirtualMachineInstance objects.
         """
         pass
 
-    def test_patch_namespaced_offline_virtual_machine(self):
+    def test_list_virtual_machine_instance_preset_for_all_namespaces(self):
         """
-        Test case for patch_namespaced_offline_virtual_machine
+        Test case for list_virtual_machine_instance_preset_for_all_namespaces
 
-        Patch a OfflineVirtualMachine object.
+        Get a list of all VirtualMachineInstancePreset objects.
+        """
+        pass
+
+    def test_list_virtual_machine_instance_replica_set_for_all_namespaces(self):
+        """
+        Test case for list_virtual_machine_instance_replica_set_for_all_namespaces
+
+        Get a list of all VirtualMachineInstanceReplicaSet objects.
         """
         pass
 
@@ -263,27 +255,27 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_patch_namespaced_virtual_machine_preset(self):
+    def test_patch_namespaced_virtual_machine_instance(self):
         """
-        Test case for patch_namespaced_virtual_machine_preset
+        Test case for patch_namespaced_virtual_machine_instance
 
-        Patch a VirtualMachinePreset object.
-        """
-        pass
-
-    def test_patch_namespaced_virtual_machine_replica_set(self):
-        """
-        Test case for patch_namespaced_virtual_machine_replica_set
-
-        Patch a VirtualMachineReplicaSet object.
+        Patch a VirtualMachineInstance object.
         """
         pass
 
-    def test_read_namespaced_offline_virtual_machine(self):
+    def test_patch_namespaced_virtual_machine_instance_preset(self):
         """
-        Test case for read_namespaced_offline_virtual_machine
+        Test case for patch_namespaced_virtual_machine_instance_preset
 
-        Get a OfflineVirtualMachine object.
+        Patch a VirtualMachineInstancePreset object.
+        """
+        pass
+
+    def test_patch_namespaced_virtual_machine_instance_replica_set(self):
+        """
+        Test case for patch_namespaced_virtual_machine_instance_replica_set
+
+        Patch a VirtualMachineInstanceReplicaSet object.
         """
         pass
 
@@ -295,27 +287,27 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_read_namespaced_virtual_machine_preset(self):
+    def test_read_namespaced_virtual_machine_instance(self):
         """
-        Test case for read_namespaced_virtual_machine_preset
+        Test case for read_namespaced_virtual_machine_instance
 
-        Get a VirtualMachinePreset object.
-        """
-        pass
-
-    def test_read_namespaced_virtual_machine_replica_set(self):
-        """
-        Test case for read_namespaced_virtual_machine_replica_set
-
-        Get a VirtualMachineReplicaSet object.
+        Get a VirtualMachineInstance object.
         """
         pass
 
-    def test_replace_namespaced_offline_virtual_machine(self):
+    def test_read_namespaced_virtual_machine_instance_preset(self):
         """
-        Test case for replace_namespaced_offline_virtual_machine
+        Test case for read_namespaced_virtual_machine_instance_preset
 
-        Update a OfflineVirtualMachine object.
+        Get a VirtualMachineInstancePreset object.
+        """
+        pass
+
+    def test_read_namespaced_virtual_machine_instance_replica_set(self):
+        """
+        Test case for read_namespaced_virtual_machine_instance_replica_set
+
+        Get a VirtualMachineInstanceReplicaSet object.
         """
         pass
 
@@ -327,19 +319,27 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_replace_namespaced_virtual_machine_preset(self):
+    def test_replace_namespaced_virtual_machine_instance(self):
         """
-        Test case for replace_namespaced_virtual_machine_preset
+        Test case for replace_namespaced_virtual_machine_instance
 
-        Update a VirtualMachinePreset object.
+        Update a VirtualMachineInstance object.
         """
         pass
 
-    def test_replace_namespaced_virtual_machine_replica_set(self):
+    def test_replace_namespaced_virtual_machine_instance_preset(self):
         """
-        Test case for replace_namespaced_virtual_machine_replica_set
+        Test case for replace_namespaced_virtual_machine_instance_preset
 
-        Update a VirtualMachineReplicaSet object.
+        Update a VirtualMachineInstancePreset object.
+        """
+        pass
+
+    def test_replace_namespaced_virtual_machine_instance_replica_set(self):
+        """
+        Test case for replace_namespaced_virtual_machine_instance_replica_set
+
+        Update a VirtualMachineInstanceReplicaSet object.
         """
         pass
 
@@ -363,15 +363,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for vnc
 
-        Open a websocket connection to connect to VNC on the specified VM.
-        """
-        pass
-
-    def test_watch_namespaced_offline_virtual_machine(self):
-        """
-        Test case for watch_namespaced_offline_virtual_machine
-
-        Watch a OfflineVirtualMachine object.
+        Open a websocket connection to connect to VNC on the specified VirtualMachineInstance.
         """
         pass
 
@@ -383,27 +375,51 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_watch_namespaced_virtual_machine_preset(self):
+    def test_watch_namespaced_virtual_machine_instance(self):
         """
-        Test case for watch_namespaced_virtual_machine_preset
+        Test case for watch_namespaced_virtual_machine_instance
 
-        Watch a VirtualMachinePreset object.
-        """
-        pass
-
-    def test_watch_namespaced_virtual_machine_replica_set(self):
-        """
-        Test case for watch_namespaced_virtual_machine_replica_set
-
-        Watch a VirtualMachineReplicaSet object.
+        Watch a VirtualMachineInstance object.
         """
         pass
 
-    def test_watch_offline_virtual_machine_list_for_all_namespaces(self):
+    def test_watch_namespaced_virtual_machine_instance_preset(self):
         """
-        Test case for watch_offline_virtual_machine_list_for_all_namespaces
+        Test case for watch_namespaced_virtual_machine_instance_preset
 
-        Watch a OfflineVirtualMachineList object.
+        Watch a VirtualMachineInstancePreset object.
+        """
+        pass
+
+    def test_watch_namespaced_virtual_machine_instance_replica_set(self):
+        """
+        Test case for watch_namespaced_virtual_machine_instance_replica_set
+
+        Watch a VirtualMachineInstanceReplicaSet object.
+        """
+        pass
+
+    def test_watch_virtual_machine_instance_list_for_all_namespaces(self):
+        """
+        Test case for watch_virtual_machine_instance_list_for_all_namespaces
+
+        Watch a VirtualMachineInstanceList object.
+        """
+        pass
+
+    def test_watch_virtual_machine_instance_preset_list_for_all_namespaces(self):
+        """
+        Test case for watch_virtual_machine_instance_preset_list_for_all_namespaces
+
+        Watch a VirtualMachineInstancePresetList object.
+        """
+        pass
+
+    def test_watch_virtual_machine_instance_replica_set_list_for_all_namespaces(self):
+        """
+        Test case for watch_virtual_machine_instance_replica_set_list_for_all_namespaces
+
+        Watch a VirtualMachineInstanceReplicaSetList object.
         """
         pass
 
@@ -412,22 +428,6 @@ class TestDefaultApi(unittest.TestCase):
         Test case for watch_virtual_machine_list_for_all_namespaces
 
         Watch a VirtualMachineList object.
-        """
-        pass
-
-    def test_watch_virtual_machine_preset_list_for_all_namespaces(self):
-        """
-        Test case for watch_virtual_machine_preset_list_for_all_namespaces
-
-        Watch a VirtualMachinePresetList object.
-        """
-        pass
-
-    def test_watch_virtual_machine_replica_set_list_for_all_namespaces(self):
-        """
-        Test case for watch_virtual_machine_replica_set_list_for_all_namespaces
-
-        Watch a VirtualMachineReplicaSetList object.
         """
         pass
 

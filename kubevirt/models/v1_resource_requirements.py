@@ -80,7 +80,7 @@ class V1ResourceRequirements(object):
     def requests(self):
         """
         Gets the requests of this V1ResourceRequirements.
-        Requests is a description of the initial vm resources. Valid resource keys are \"memory\" and \"cpu\". +optional
+        Requests is a description of the initial vmi resources. Valid resource keys are \"memory\" and \"cpu\". +optional
 
         :return: The requests of this V1ResourceRequirements.
         :rtype: object
@@ -91,7 +91,7 @@ class V1ResourceRequirements(object):
     def requests(self, requests):
         """
         Sets the requests of this V1ResourceRequirements.
-        Requests is a description of the initial vm resources. Valid resource keys are \"memory\" and \"cpu\". +optional
+        Requests is a description of the initial vmi resources. Valid resource keys are \"memory\" and \"cpu\". +optional
 
         :param requests: The requests of this V1ResourceRequirements.
         :type: object

@@ -81,7 +81,7 @@ class V1DomainSpec(object):
     def clock(self):
         """
         Gets the clock of this V1DomainSpec.
-        Clock sets the clock and timers of the vm. +optional
+        Clock sets the clock and timers of the vmi. +optional
 
         :return: The clock of this V1DomainSpec.
         :rtype: V1Clock
@@ -92,7 +92,7 @@ class V1DomainSpec(object):
     def clock(self, clock):
         """
         Sets the clock of this V1DomainSpec.
-        Clock sets the clock and timers of the vm. +optional
+        Clock sets the clock and timers of the vmi. +optional
 
         :param clock: The clock of this V1DomainSpec.
         :type: V1Clock
@@ -104,7 +104,7 @@ class V1DomainSpec(object):
     def cpu(self):
         """
         Gets the cpu of this V1DomainSpec.
-        CPU allow specified the detailed CPU topology inside the vm. +optional
+        CPU allow specified the detailed CPU topology inside the vmi. +optional
 
         :return: The cpu of this V1DomainSpec.
         :rtype: V1CPU
@@ -115,7 +115,7 @@ class V1DomainSpec(object):
     def cpu(self, cpu):
         """
         Sets the cpu of this V1DomainSpec.
-        CPU allow specified the detailed CPU topology inside the vm. +optional
+        CPU allow specified the detailed CPU topology inside the vmi. +optional
 
         :param cpu: The cpu of this V1DomainSpec.
         :type: V1CPU
@@ -221,7 +221,7 @@ class V1DomainSpec(object):
     def resources(self):
         """
         Gets the resources of this V1DomainSpec.
-        Resources describes the Compute Resources required by this vm.
+        Resources describes the Compute Resources required by this vmi.
 
         :return: The resources of this V1DomainSpec.
         :rtype: V1ResourceRequirements
@@ -232,7 +232,7 @@ class V1DomainSpec(object):
     def resources(self, resources):
         """
         Sets the resources of this V1DomainSpec.
-        Resources describes the Compute Resources required by this vm.
+        Resources describes the Compute Resources required by this vmi.
 
         :param resources: The resources of this V1DomainSpec.
         :type: V1ResourceRequirements

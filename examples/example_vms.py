@@ -42,6 +42,11 @@ def main():
             )
         )
 
+    # Update memory of VM
+    vm['spec']['domain']['resources']['requests']['memory'] = '512M'
+    vm = api.replace_namespaced_virtual_machine(vm, NAMESPACE, el.get_name(vm))
+    pprint(vm)
+
     # Delete VM
     pprint(
         api.delete_namespaced_virtual_machine(

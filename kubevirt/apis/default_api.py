@@ -3227,7 +3227,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_namespaced_virtual_machine(self, body, **kwargs):
+    def patch_namespaced_virtual_machine(self, body, namespace, name, **kwargs):
         """
         Patch a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -3236,23 +3236,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine(body, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param V1Patch body: (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
         :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_virtual_machine_with_http_info(body, **kwargs)
+            return self.patch_namespaced_virtual_machine_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.patch_namespaced_virtual_machine_with_http_info(body, **kwargs)
+            (data) = self.patch_namespaced_virtual_machine_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def patch_namespaced_virtual_machine_with_http_info(self, body, **kwargs):
+    def patch_namespaced_virtual_machine_with_http_info(self, body, namespace, name, **kwargs):
         """
         Patch a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -3261,17 +3263,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_with_http_info(body, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param V1Patch body: (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
         :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body']
+        all_params = ['body', 'namespace', 'name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3289,11 +3293,25 @@ class DefaultApi(object):
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_virtual_machine`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_virtual_machine`")
 
+        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
+            raise ValueError("Invalid value for parameter `namespace` when calling `patch_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
+            raise ValueError("Invalid value for parameter `name` when calling `patch_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
 
         query_params = []
 
@@ -3331,7 +3349,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_namespaced_virtual_machine_instance(self, body, **kwargs):
+    def patch_namespaced_virtual_machine_instance(self, body, namespace, name, **kwargs):
         """
         Patch a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -3340,23 +3358,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_instance(body, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param V1Patch body: (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
         :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_virtual_machine_instance_with_http_info(body, **kwargs)
+            return self.patch_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.patch_namespaced_virtual_machine_instance_with_http_info(body, **kwargs)
+            (data) = self.patch_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def patch_namespaced_virtual_machine_instance_with_http_info(self, body, **kwargs):
+    def patch_namespaced_virtual_machine_instance_with_http_info(self, body, namespace, name, **kwargs):
         """
         Patch a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -3365,17 +3385,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_instance_with_http_info(body, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param V1Patch body: (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
         :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body']
+        all_params = ['body', 'namespace', 'name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3393,11 +3415,25 @@ class DefaultApi(object):
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_instance`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_virtual_machine_instance`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_virtual_machine_instance`")
 
+        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
+            raise ValueError("Invalid value for parameter `namespace` when calling `patch_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
+            raise ValueError("Invalid value for parameter `name` when calling `patch_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
 
         query_params = []
 
@@ -3435,7 +3471,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_namespaced_virtual_machine_instance_preset(self, body, **kwargs):
+    def patch_namespaced_virtual_machine_instance_preset(self, body, namespace, name, **kwargs):
         """
         Patch a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
@@ -3444,23 +3480,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_instance_preset(body, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_preset(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param V1Patch body: (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
         :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_virtual_machine_instance_preset_with_http_info(body, **kwargs)
+            return self.patch_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.patch_namespaced_virtual_machine_instance_preset_with_http_info(body, **kwargs)
+            (data) = self.patch_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def patch_namespaced_virtual_machine_instance_preset_with_http_info(self, body, **kwargs):
+    def patch_namespaced_virtual_machine_instance_preset_with_http_info(self, body, namespace, name, **kwargs):
         """
         Patch a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
@@ -3469,17 +3507,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_instance_preset_with_http_info(body, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param V1Patch body: (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
         :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body']
+        all_params = ['body', 'namespace', 'name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3497,11 +3537,25 @@ class DefaultApi(object):
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_instance_preset`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_virtual_machine_instance_preset`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_virtual_machine_instance_preset`")
 
+        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
+            raise ValueError("Invalid value for parameter `namespace` when calling `patch_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
+            raise ValueError("Invalid value for parameter `name` when calling `patch_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
 
         query_params = []
 
@@ -3539,7 +3593,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_namespaced_virtual_machine_instance_replica_set(self, body, **kwargs):
+    def patch_namespaced_virtual_machine_instance_replica_set(self, body, namespace, name, **kwargs):
         """
         Patch a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
@@ -3548,23 +3602,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_instance_replica_set(body, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_replica_set(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param V1Patch body: (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
         :return: V1VirtualMachineInstanceReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(body, **kwargs)
+            return self.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, **kwargs)
         else:
-            (data) = self.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(body, **kwargs)
+            (data) = self.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, **kwargs)
             return data
 
-    def patch_namespaced_virtual_machine_instance_replica_set_with_http_info(self, body, **kwargs):
+    def patch_namespaced_virtual_machine_instance_replica_set_with_http_info(self, body, namespace, name, **kwargs):
         """
         Patch a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
@@ -3573,17 +3629,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(body, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param V1Patch body: (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str name: Name of the resource (required)
         :return: V1VirtualMachineInstanceReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body']
+        all_params = ['body', 'namespace', 'name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3601,11 +3659,25 @@ class DefaultApi(object):
         # verify the required parameter 'body' is set
         if ('body' not in params) or (params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_instance_replica_set`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_virtual_machine_instance_replica_set`")
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_virtual_machine_instance_replica_set`")
 
+        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
+            raise ValueError("Invalid value for parameter `namespace` when calling `patch_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
+        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
+            raise ValueError("Invalid value for parameter `name` when calling `patch_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'name' in params:
+            path_params['name'] = params['name']
 
         query_params = []
 

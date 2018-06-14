@@ -1634,7 +1634,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_namespaced_virtual_machine**
-> V1VirtualMachine patch_namespaced_virtual_machine(body)
+> V1VirtualMachine patch_namespaced_virtual_machine(body, namespace, name)
 
 Patch a VirtualMachine object.
 
@@ -1654,10 +1654,12 @@ kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
 body = kubevirt.V1Patch() # V1Patch | 
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+name = 'name_example' # str | Name of the resource
 
 try: 
     # Patch a VirtualMachine object.
-    api_response = api_instance.patch_namespaced_virtual_machine(body)
+    api_response = api_instance.patch_namespaced_virtual_machine(body, namespace, name)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->patch_namespaced_virtual_machine: %s\n" % e)
@@ -1668,6 +1670,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**V1Patch**](V1Patch.md)|  | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **name** | **str**| Name of the resource | 
 
 ### Return type
 
@@ -1685,7 +1689,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_namespaced_virtual_machine_instance**
-> V1VirtualMachineInstance patch_namespaced_virtual_machine_instance(body)
+> V1VirtualMachineInstance patch_namespaced_virtual_machine_instance(body, namespace, name)
 
 Patch a VirtualMachineInstance object.
 
@@ -1705,10 +1709,12 @@ kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
 body = kubevirt.V1Patch() # V1Patch | 
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+name = 'name_example' # str | Name of the resource
 
 try: 
     # Patch a VirtualMachineInstance object.
-    api_response = api_instance.patch_namespaced_virtual_machine_instance(body)
+    api_response = api_instance.patch_namespaced_virtual_machine_instance(body, namespace, name)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->patch_namespaced_virtual_machine_instance: %s\n" % e)
@@ -1719,6 +1725,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**V1Patch**](V1Patch.md)|  | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **name** | **str**| Name of the resource | 
 
 ### Return type
 
@@ -1736,7 +1744,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_namespaced_virtual_machine_instance_preset**
-> V1VirtualMachineInstancePreset patch_namespaced_virtual_machine_instance_preset(body)
+> V1VirtualMachineInstancePreset patch_namespaced_virtual_machine_instance_preset(body, namespace, name)
 
 Patch a VirtualMachineInstancePreset object.
 
@@ -1756,10 +1764,12 @@ kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
 body = kubevirt.V1Patch() # V1Patch | 
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+name = 'name_example' # str | Name of the resource
 
 try: 
     # Patch a VirtualMachineInstancePreset object.
-    api_response = api_instance.patch_namespaced_virtual_machine_instance_preset(body)
+    api_response = api_instance.patch_namespaced_virtual_machine_instance_preset(body, namespace, name)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->patch_namespaced_virtual_machine_instance_preset: %s\n" % e)
@@ -1770,6 +1780,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**V1Patch**](V1Patch.md)|  | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **name** | **str**| Name of the resource | 
 
 ### Return type
 
@@ -1787,7 +1799,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_namespaced_virtual_machine_instance_replica_set**
-> V1VirtualMachineInstanceReplicaSet patch_namespaced_virtual_machine_instance_replica_set(body)
+> V1VirtualMachineInstanceReplicaSet patch_namespaced_virtual_machine_instance_replica_set(body, namespace, name)
 
 Patch a VirtualMachineInstanceReplicaSet object.
 
@@ -1807,10 +1819,12 @@ kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
 body = kubevirt.V1Patch() # V1Patch | 
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+name = 'name_example' # str | Name of the resource
 
 try: 
     # Patch a VirtualMachineInstanceReplicaSet object.
-    api_response = api_instance.patch_namespaced_virtual_machine_instance_replica_set(body)
+    api_response = api_instance.patch_namespaced_virtual_machine_instance_replica_set(body, namespace, name)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->patch_namespaced_virtual_machine_instance_replica_set: %s\n" % e)
@@ -1821,6 +1835,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**V1Patch**](V1Patch.md)|  | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **name** | **str**| Name of the resource | 
 
 ### Return type
 

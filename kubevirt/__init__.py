@@ -41,6 +41,7 @@ from .models.v1_firmware import V1Firmware
 from .models.v1_floppy_target import V1FloppyTarget
 from .models.v1_group_version_for_discovery import V1GroupVersionForDiscovery
 from .models.v1_hpet_timer import V1HPETTimer
+from .models.v1_hugepages import V1Hugepages
 from .models.v1_hyperv_timer import V1HypervTimer
 from .models.v1_i6300_esb_watchdog import V1I6300ESBWatchdog
 from .models.v1_initializer import V1Initializer
@@ -53,6 +54,7 @@ from .models.v1_list_meta import V1ListMeta
 from .models.v1_local_object_reference import V1LocalObjectReference
 from .models.v1_lun_target import V1LunTarget
 from .models.v1_machine import V1Machine
+from .models.v1_memory import V1Memory
 from .models.v1_network import V1Network
 from .models.v1_node_affinity import V1NodeAffinity
 from .models.v1_node_selector import V1NodeSelector

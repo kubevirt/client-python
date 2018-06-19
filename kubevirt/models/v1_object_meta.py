@@ -31,7 +31,7 @@ class V1ObjectMeta(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'annotations': 'object',
+        'annotations': 'dict(str, str)',
         'cluster_name': 'str',
         'creation_timestamp': 'str',
         'deletion_grace_period_seconds': 'int',
@@ -40,7 +40,7 @@ class V1ObjectMeta(object):
         'generate_name': 'str',
         'generation': 'int',
         'initializers': 'V1Initializers',
-        'labels': 'object',
+        'labels': 'dict(str, str)',
         'name': 'str',
         'namespace': 'str',
         'owner_references': 'list[V1OwnerReference]',
@@ -130,7 +130,7 @@ class V1ObjectMeta(object):
         Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
 
         :return: The annotations of this V1ObjectMeta.
-        :rtype: object
+        :rtype: dict(str, str)
         """
         return self._annotations
 
@@ -141,7 +141,7 @@ class V1ObjectMeta(object):
         Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
 
         :param annotations: The annotations of this V1ObjectMeta.
-        :type: object
+        :type: dict(str, str)
         """
 
         self._annotations = annotations
@@ -337,7 +337,7 @@ class V1ObjectMeta(object):
         Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
 
         :return: The labels of this V1ObjectMeta.
-        :rtype: object
+        :rtype: dict(str, str)
         """
         return self._labels
 
@@ -348,7 +348,7 @@ class V1ObjectMeta(object):
         Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
 
         :param labels: The labels of this V1ObjectMeta.
-        :type: object
+        :type: dict(str, str)
         """
 
         self._labels = labels

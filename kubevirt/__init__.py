@@ -14,6 +14,11 @@
 from __future__ import absolute_import
 
 # import models into sdk package
+from .models.big_int import BigInt
+from .models.inf_dec import InfDec
+from .models.resource_inf_dec_amount import ResourceInfDecAmount
+from .models.resource_int64_amount import ResourceInt64Amount
+from .models.resource_quantity import ResourceQuantity
 from .models.v1_api_group import V1APIGroup
 from .models.v1_api_group_list import V1APIGroupList
 from .models.v1_api_resource import V1APIResource

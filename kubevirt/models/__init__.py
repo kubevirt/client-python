@@ -14,6 +14,11 @@
 from __future__ import absolute_import
 
 # import models into model package
+from .big_int import BigInt
+from .inf_dec import InfDec
+from .resource_inf_dec_amount import ResourceInfDecAmount
+from .resource_int64_amount import ResourceInt64Amount
+from .resource_quantity import ResourceQuantity
 from .v1_api_group import V1APIGroup
 from .v1_api_group_list import V1APIGroupList
 from .v1_api_resource import V1APIResource

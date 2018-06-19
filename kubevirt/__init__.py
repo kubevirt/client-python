@@ -28,6 +28,7 @@ from .models.v1_delete_options import V1DeleteOptions
 from .models.v1_devices import V1Devices
 from .models.v1_disk import V1Disk
 from .models.v1_disk_target import V1DiskTarget
+from .models.v1_domain_preset_spec import V1DomainPresetSpec
 from .models.v1_domain_spec import V1DomainSpec
 from .models.v1_empty_disk_source import V1EmptyDiskSource
 from .models.v1_ephemeral_volume_source import V1EphemeralVolumeSource

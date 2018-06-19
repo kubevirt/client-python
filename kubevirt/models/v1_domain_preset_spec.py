@@ -37,6 +37,7 @@ class V1DomainPresetSpec(object):
         'features': 'V1Features',
         'firmware': 'V1Firmware',
         'machine': 'V1Machine',
+        'memory': 'V1Memory',
         'resources': 'V1ResourceRequirements'
     }
 
@@ -47,10 +48,11 @@ class V1DomainPresetSpec(object):
         'features': 'features',
         'firmware': 'firmware',
         'machine': 'machine',
+        'memory': 'memory',
         'resources': 'resources'
     }
 
-    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, resources=None):
+    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, memory=None, resources=None):
         """
         V1DomainPresetSpec - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class V1DomainPresetSpec(object):
         self._features = None
         self._firmware = None
         self._machine = None
+        self._memory = None
         self._resources = None
 
         if clock is not None:
@@ -75,6 +78,8 @@ class V1DomainPresetSpec(object):
           self.firmware = firmware
         if machine is not None:
           self.machine = machine
+        if memory is not None:
+          self.memory = memory
         if resources is not None:
           self.resources = resources
 
@@ -215,6 +220,29 @@ class V1DomainPresetSpec(object):
         """
 
         self._machine = machine
+
+    @property
+    def memory(self):
+        """
+        Gets the memory of this V1DomainPresetSpec.
+        Memory allow specifying the VMI memory features. +optional
+
+        :return: The memory of this V1DomainPresetSpec.
+        :rtype: V1Memory
+        """
+        return self._memory
+
+    @memory.setter
+    def memory(self, memory):
+        """
+        Sets the memory of this V1DomainPresetSpec.
+        Memory allow specifying the VMI memory features. +optional
+
+        :param memory: The memory of this V1DomainPresetSpec.
+        :type: V1Memory
+        """
+
+        self._memory = memory
 
     @property
     def resources(self):

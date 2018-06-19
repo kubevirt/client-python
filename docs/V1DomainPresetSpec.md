@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **features** | [**V1Features**](V1Features.md) | Features like acpi, apic, hyperv +optional | [optional] 
 **firmware** | [**V1Firmware**](V1Firmware.md) | Firmware +optional | [optional] 
 **machine** | [**V1Machine**](V1Machine.md) | Machine type +optional | [optional] 
+**memory** | [**V1Memory**](V1Memory.md) | Memory allow specifying the VMI memory features. +optional | [optional] 
 **resources** | [**V1ResourceRequirements**](V1ResourceRequirements.md) | Resources describes the Compute Resources required by this vmi. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

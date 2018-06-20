@@ -33,16 +33,18 @@ class V1Interface(object):
     swagger_types = {
         'bridge': 'V1InterfaceBridge',
         'model': 'str',
-        'name': 'str'
+        'name': 'str',
+        'slirp': 'V1InterfaceSlirp'
     }
 
     attribute_map = {
         'bridge': 'bridge',
         'model': 'model',
-        'name': 'name'
+        'name': 'name',
+        'slirp': 'slirp'
     }
 
-    def __init__(self, bridge=None, model=None, name=None):
+    def __init__(self, bridge=None, model=None, name=None, slirp=None):
         """
         V1Interface - a model defined in Swagger
         """
@@ -50,12 +52,15 @@ class V1Interface(object):
         self._bridge = None
         self._model = None
         self._name = None
+        self._slirp = None
 
         if bridge is not None:
           self.bridge = bridge
         if model is not None:
           self.model = model
         self.name = name
+        if slirp is not None:
+          self.slirp = slirp
 
     @property
     def bridge(self):
@@ -105,7 +110,7 @@ class V1Interface(object):
     def name(self):
         """
         Gets the name of this V1Interface.
-        Logical name of the interface as well as a reference to the associated networks Must match the Name of a Network
+        Logical name of the interface as well as a reference to the associated networks. Must match the Name of a Network.
 
         :return: The name of this V1Interface.
         :rtype: str
@@ -116,7 +121,7 @@ class V1Interface(object):
     def name(self, name):
         """
         Sets the name of this V1Interface.
-        Logical name of the interface as well as a reference to the associated networks Must match the Name of a Network
+        Logical name of the interface as well as a reference to the associated networks. Must match the Name of a Network.
 
         :param name: The name of this V1Interface.
         :type: str
@@ -125,6 +130,27 @@ class V1Interface(object):
             raise ValueError("Invalid value for `name`, must not be `None`")
 
         self._name = name
+
+    @property
+    def slirp(self):
+        """
+        Gets the slirp of this V1Interface.
+
+        :return: The slirp of this V1Interface.
+        :rtype: V1InterfaceSlirp
+        """
+        return self._slirp
+
+    @slirp.setter
+    def slirp(self, slirp):
+        """
+        Sets the slirp of this V1Interface.
+
+        :param slirp: The slirp of this V1Interface.
+        :type: V1InterfaceSlirp
+        """
+
+        self._slirp = slirp
 
     def to_dict(self):
         """

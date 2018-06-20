@@ -53,6 +53,7 @@ from .v1_i6300_esb_watchdog import V1I6300ESBWatchdog
 from .v1_initializer import V1Initializer
 from .v1_initializers import V1Initializers
 from .v1_interface import V1Interface
+from .v1_interface_slirp import V1InterfaceSlirp
 from .v1_kvm_timer import V1KVMTimer
 from .v1_label_selector import V1LabelSelector
 from .v1_label_selector_requirement import V1LabelSelectorRequirement
@@ -73,6 +74,8 @@ from .v1_persistent_volume_claim_volume_source import V1PersistentVolumeClaimVol
 from .v1_pod_affinity import V1PodAffinity
 from .v1_pod_affinity_term import V1PodAffinityTerm
 from .v1_pod_anti_affinity import V1PodAntiAffinity
+from .v1_pod_network import V1PodNetwork
+from .v1_port import V1Port
 from .v1_preconditions import V1Preconditions
 from .v1_preferred_scheduling_term import V1PreferredSchedulingTerm
 from .v1_rtc_timer import V1RTCTimer

@@ -1,10 +1,9 @@
-# V1Network
+# V1PodNetwork
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | Network name. Must be a DNS_LABEL and unique within the vm. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names | 
-**pod** | [**V1PodNetwork**](V1PodNetwork.md) |  | [optional] 
+**vm_network_cidr** | **str** | CIDR for vm network. Default 10.0.2.0/24 if not specified. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

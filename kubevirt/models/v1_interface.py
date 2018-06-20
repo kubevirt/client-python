@@ -32,24 +32,29 @@ class V1Interface(object):
     """
     swagger_types = {
         'bridge': 'V1InterfaceBridge',
+        'model': 'str',
         'name': 'str'
     }
 
     attribute_map = {
         'bridge': 'bridge',
+        'model': 'model',
         'name': 'name'
     }
 
-    def __init__(self, bridge=None, name=None):
+    def __init__(self, bridge=None, model=None, name=None):
         """
         V1Interface - a model defined in Swagger
         """
 
         self._bridge = None
+        self._model = None
         self._name = None
 
         if bridge is not None:
           self.bridge = bridge
+        if model is not None:
+          self.model = model
         self.name = name
 
     @property
@@ -72,6 +77,29 @@ class V1Interface(object):
         """
 
         self._bridge = bridge
+
+    @property
+    def model(self):
+        """
+        Gets the model of this V1Interface.
+        Interface model. One of: e1000, e1000e, ne2k_pci, pcnet, rtl8139, virtio. Defaults to virtio.
+
+        :return: The model of this V1Interface.
+        :rtype: str
+        """
+        return self._model
+
+    @model.setter
+    def model(self, model):
+        """
+        Sets the model of this V1Interface.
+        Interface model. One of: e1000, e1000e, ne2k_pci, pcnet, rtl8139, virtio. Defaults to virtio.
+
+        :param model: The model of this V1Interface.
+        :type: str
+        """
+
+        self._model = model
 
     @property
     def name(self):

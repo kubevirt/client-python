@@ -62,7 +62,7 @@ class V1Features(object):
     def acpi(self):
         """
         Gets the acpi of this V1Features.
-        ACPI enables/disables ACPI insidejsondata guest Defaults to enabled +optional
+        ACPI enables/disables ACPI insidejsondata guest. Defaults to enabled. +optional
 
         :return: The acpi of this V1Features.
         :rtype: V1FeatureState
@@ -73,7 +73,7 @@ class V1Features(object):
     def acpi(self, acpi):
         """
         Sets the acpi of this V1Features.
-        ACPI enables/disables ACPI insidejsondata guest Defaults to enabled +optional
+        ACPI enables/disables ACPI insidejsondata guest. Defaults to enabled. +optional
 
         :param acpi: The acpi of this V1Features.
         :type: V1FeatureState
@@ -85,7 +85,7 @@ class V1Features(object):
     def apic(self):
         """
         Gets the apic of this V1Features.
-        Defaults to the machine type setting +optional
+        Defaults to the machine type setting. +optional
 
         :return: The apic of this V1Features.
         :rtype: V1FeatureAPIC
@@ -96,7 +96,7 @@ class V1Features(object):
     def apic(self, apic):
         """
         Sets the apic of this V1Features.
-        Defaults to the machine type setting +optional
+        Defaults to the machine type setting. +optional
 
         :param apic: The apic of this V1Features.
         :type: V1FeatureAPIC
@@ -108,7 +108,7 @@ class V1Features(object):
     def hyperv(self):
         """
         Gets the hyperv of this V1Features.
-        Defaults to the machine type setting +optional
+        Defaults to the machine type setting. +optional
 
         :return: The hyperv of this V1Features.
         :rtype: V1FeatureHyperv
@@ -119,7 +119,7 @@ class V1Features(object):
     def hyperv(self, hyperv):
         """
         Sets the hyperv of this V1Features.
-        Defaults to the machine type setting +optional
+        Defaults to the machine type setting. +optional
 
         :param hyperv: The hyperv of this V1Features.
         :type: V1FeatureHyperv

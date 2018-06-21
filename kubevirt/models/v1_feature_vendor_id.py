@@ -57,7 +57,7 @@ class V1FeatureVendorID(object):
     def enabled(self):
         """
         Gets the enabled of this V1FeatureVendorID.
-        Enabled determines if the feature should be enabled or disabled on the guest Defaults to true +optional
+        Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true. +optional
 
         :return: The enabled of this V1FeatureVendorID.
         :rtype: bool
@@ -68,7 +68,7 @@ class V1FeatureVendorID(object):
     def enabled(self, enabled):
         """
         Sets the enabled of this V1FeatureVendorID.
-        Enabled determines if the feature should be enabled or disabled on the guest Defaults to true +optional
+        Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true. +optional
 
         :param enabled: The enabled of this V1FeatureVendorID.
         :type: bool
@@ -80,7 +80,7 @@ class V1FeatureVendorID(object):
     def vendorid(self):
         """
         Gets the vendorid of this V1FeatureVendorID.
-        VendorID sets the hypervisor vendor id, visible to the vmi String up to twelve characters
+        VendorID sets the hypervisor vendor id, visible to the vmi. String up to twelve characters.
 
         :return: The vendorid of this V1FeatureVendorID.
         :rtype: str
@@ -91,7 +91,7 @@ class V1FeatureVendorID(object):
     def vendorid(self, vendorid):
         """
         Sets the vendorid of this V1FeatureVendorID.
-        VendorID sets the hypervisor vendor id, visible to the vmi String up to twelve characters
+        VendorID sets the hypervisor vendor id, visible to the vmi. String up to twelve characters.
 
         :param vendorid: The vendorid of this V1FeatureVendorID.
         :type: str

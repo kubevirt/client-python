@@ -99,7 +99,7 @@ class V1Volume(object):
     def empty_disk(self):
         """
         Gets the empty_disk of this V1Volume.
-        EmptyDisk represents a temporary disk which shares the vmis lifecycle More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html +optional
+        EmptyDisk represents a temporary disk which shares the vmis lifecycle. More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html +optional
 
         :return: The empty_disk of this V1Volume.
         :rtype: V1EmptyDiskSource
@@ -110,7 +110,7 @@ class V1Volume(object):
     def empty_disk(self, empty_disk):
         """
         Sets the empty_disk of this V1Volume.
-        EmptyDisk represents a temporary disk which shares the vmis lifecycle More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html +optional
+        EmptyDisk represents a temporary disk which shares the vmis lifecycle. More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html +optional
 
         :param empty_disk: The empty_disk of this V1Volume.
         :type: V1EmptyDiskSource
@@ -193,7 +193,7 @@ class V1Volume(object):
     def registry_disk(self):
         """
         Gets the registry_disk of this V1Volume.
-        RegistryDisk references a docker image, embedding a qcow or raw disk More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html +optional
+        RegistryDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html +optional
 
         :return: The registry_disk of this V1Volume.
         :rtype: V1RegistryDiskSource
@@ -204,7 +204,7 @@ class V1Volume(object):
     def registry_disk(self, registry_disk):
         """
         Sets the registry_disk of this V1Volume.
-        RegistryDisk references a docker image, embedding a qcow or raw disk More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html +optional
+        RegistryDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html +optional
 
         :param registry_disk: The registry_disk of this V1Volume.
         :type: V1RegistryDiskSource

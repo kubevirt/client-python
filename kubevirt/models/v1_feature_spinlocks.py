@@ -57,7 +57,7 @@ class V1FeatureSpinlocks(object):
     def enabled(self):
         """
         Gets the enabled of this V1FeatureSpinlocks.
-        Enabled determines if the feature should be enabled or disabled on the guest Defaults to true +optional
+        Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true. +optional
 
         :return: The enabled of this V1FeatureSpinlocks.
         :rtype: bool
@@ -68,7 +68,7 @@ class V1FeatureSpinlocks(object):
     def enabled(self, enabled):
         """
         Sets the enabled of this V1FeatureSpinlocks.
-        Enabled determines if the feature should be enabled or disabled on the guest Defaults to true +optional
+        Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true. +optional
 
         :param enabled: The enabled of this V1FeatureSpinlocks.
         :type: bool
@@ -80,7 +80,7 @@ class V1FeatureSpinlocks(object):
     def spinlocks(self):
         """
         Gets the spinlocks of this V1FeatureSpinlocks.
-        Retries indicates the number of retries Must be a value greater or equal 4096 Defaults to 4096 +optional
+        Retries indicates the number of retries. Must be a value greater or equal 4096. Defaults to 4096. +optional
 
         :return: The spinlocks of this V1FeatureSpinlocks.
         :rtype: int
@@ -91,7 +91,7 @@ class V1FeatureSpinlocks(object):
     def spinlocks(self, spinlocks):
         """
         Sets the spinlocks of this V1FeatureSpinlocks.
-        Retries indicates the number of retries Must be a value greater or equal 4096 Defaults to 4096 +optional
+        Retries indicates the number of retries. Must be a value greater or equal 4096. Defaults to 4096. +optional
 
         :param spinlocks: The spinlocks of this V1FeatureSpinlocks.
         :type: int

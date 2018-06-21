@@ -62,7 +62,7 @@ class V1CDRomTarget(object):
     def bus(self):
         """
         Gets the bus of this V1CDRomTarget.
-        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, ide
+        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, ide.
 
         :return: The bus of this V1CDRomTarget.
         :rtype: str
@@ -73,7 +73,7 @@ class V1CDRomTarget(object):
     def bus(self, bus):
         """
         Sets the bus of this V1CDRomTarget.
-        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, ide
+        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, ide.
 
         :param bus: The bus of this V1CDRomTarget.
         :type: str
@@ -85,7 +85,7 @@ class V1CDRomTarget(object):
     def readonly(self):
         """
         Gets the readonly of this V1CDRomTarget.
-        ReadOnly Defaults to true
+        ReadOnly. Defaults to true.
 
         :return: The readonly of this V1CDRomTarget.
         :rtype: bool
@@ -96,7 +96,7 @@ class V1CDRomTarget(object):
     def readonly(self, readonly):
         """
         Sets the readonly of this V1CDRomTarget.
-        ReadOnly Defaults to true
+        ReadOnly. Defaults to true.
 
         :param readonly: The readonly of this V1CDRomTarget.
         :type: bool
@@ -108,7 +108,7 @@ class V1CDRomTarget(object):
     def tray(self):
         """
         Gets the tray of this V1CDRomTarget.
-        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\" Defaults to closed +optional
+        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\". Defaults to closed. +optional
 
         :return: The tray of this V1CDRomTarget.
         :rtype: str
@@ -119,7 +119,7 @@ class V1CDRomTarget(object):
     def tray(self, tray):
         """
         Sets the tray of this V1CDRomTarget.
-        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\" Defaults to closed +optional
+        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\". Defaults to closed. +optional
 
         :param tray: The tray of this V1CDRomTarget.
         :type: str

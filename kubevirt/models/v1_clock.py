@@ -61,7 +61,7 @@ class V1Clock(object):
     def timer(self):
         """
         Gets the timer of this V1Clock.
-        Timer specifies whih timers are attached to the vmi
+        Timer specifies whih timers are attached to the vmi.
 
         :return: The timer of this V1Clock.
         :rtype: V1Timer
@@ -72,7 +72,7 @@ class V1Clock(object):
     def timer(self, timer):
         """
         Sets the timer of this V1Clock.
-        Timer specifies whih timers are attached to the vmi
+        Timer specifies whih timers are attached to the vmi.
 
         :param timer: The timer of this V1Clock.
         :type: V1Timer
@@ -86,7 +86,7 @@ class V1Clock(object):
     def timezone(self):
         """
         Gets the timezone of this V1Clock.
-        Timezone sets the guest clock to the specified timezone. Zone name follows the TZ environment variable format (e.g. 'America/New_York')
+        Timezone sets the guest clock to the specified timezone. Zone name follows the TZ environment variable format (e.g. 'America/New_York').
 
         :return: The timezone of this V1Clock.
         :rtype: V1ClockOffsetTimezone
@@ -97,7 +97,7 @@ class V1Clock(object):
     def timezone(self, timezone):
         """
         Sets the timezone of this V1Clock.
-        Timezone sets the guest clock to the specified timezone. Zone name follows the TZ environment variable format (e.g. 'America/New_York')
+        Timezone sets the guest clock to the specified timezone. Zone name follows the TZ environment variable format (e.g. 'America/New_York').
 
         :param timezone: The timezone of this V1Clock.
         :type: V1ClockOffsetTimezone

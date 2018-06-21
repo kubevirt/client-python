@@ -62,7 +62,7 @@ class V1RTCTimer(object):
     def present(self):
         """
         Gets the present of this V1RTCTimer.
-        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true +optional
+        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true. +optional
 
         :return: The present of this V1RTCTimer.
         :rtype: bool
@@ -73,7 +73,7 @@ class V1RTCTimer(object):
     def present(self, present):
         """
         Sets the present of this V1RTCTimer.
-        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true +optional
+        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true. +optional
 
         :param present: The present of this V1RTCTimer.
         :type: bool
@@ -85,7 +85,7 @@ class V1RTCTimer(object):
     def tick_policy(self):
         """
         Gets the tick_policy of this V1RTCTimer.
-        TickPolicy determines what happens when QEMU misses a deadline for injecting a tick to the guest One of \"delay\", \"catchup\"
+        TickPolicy determines what happens when QEMU misses a deadline for injecting a tick to the guest. One of \"delay\", \"catchup\".
 
         :return: The tick_policy of this V1RTCTimer.
         :rtype: str
@@ -96,7 +96,7 @@ class V1RTCTimer(object):
     def tick_policy(self, tick_policy):
         """
         Sets the tick_policy of this V1RTCTimer.
-        TickPolicy determines what happens when QEMU misses a deadline for injecting a tick to the guest One of \"delay\", \"catchup\"
+        TickPolicy determines what happens when QEMU misses a deadline for injecting a tick to the guest. One of \"delay\", \"catchup\".
 
         :param tick_policy: The tick_policy of this V1RTCTimer.
         :type: str
@@ -108,7 +108,7 @@ class V1RTCTimer(object):
     def track(self):
         """
         Gets the track of this V1RTCTimer.
-        Track the guest or the wall clock
+        Track the guest or the wall clock.
 
         :return: The track of this V1RTCTimer.
         :rtype: str
@@ -119,7 +119,7 @@ class V1RTCTimer(object):
     def track(self, track):
         """
         Sets the track of this V1RTCTimer.
-        Track the guest or the wall clock
+        Track the guest or the wall clock.
 
         :param track: The track of this V1RTCTimer.
         :type: str

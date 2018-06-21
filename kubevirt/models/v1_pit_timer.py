@@ -57,7 +57,7 @@ class V1PITTimer(object):
     def present(self):
         """
         Gets the present of this V1PITTimer.
-        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true +optional
+        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true. +optional
 
         :return: The present of this V1PITTimer.
         :rtype: bool
@@ -68,7 +68,7 @@ class V1PITTimer(object):
     def present(self, present):
         """
         Sets the present of this V1PITTimer.
-        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true +optional
+        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true. +optional
 
         :param present: The present of this V1PITTimer.
         :type: bool
@@ -80,7 +80,7 @@ class V1PITTimer(object):
     def tick_policy(self):
         """
         Gets the tick_policy of this V1PITTimer.
-        TickPolicy determines what happens when QEMU misses a deadline for injecting a tick to the guest One of \"delay\", \"catchup\", \"discard\"
+        TickPolicy determines what happens when QEMU misses a deadline for injecting a tick to the guest. One of \"delay\", \"catchup\", \"discard\".
 
         :return: The tick_policy of this V1PITTimer.
         :rtype: str
@@ -91,7 +91,7 @@ class V1PITTimer(object):
     def tick_policy(self, tick_policy):
         """
         Sets the tick_policy of this V1PITTimer.
-        TickPolicy determines what happens when QEMU misses a deadline for injecting a tick to the guest One of \"delay\", \"catchup\", \"discard\"
+        TickPolicy determines what happens when QEMU misses a deadline for injecting a tick to the guest. One of \"delay\", \"catchup\", \"discard\".
 
         :param tick_policy: The tick_policy of this V1PITTimer.
         :type: str

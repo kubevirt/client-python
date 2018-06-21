@@ -52,7 +52,7 @@ class V1HypervTimer(object):
     def present(self):
         """
         Gets the present of this V1HypervTimer.
-        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true +optional
+        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true. +optional
 
         :return: The present of this V1HypervTimer.
         :rtype: bool
@@ -63,7 +63,7 @@ class V1HypervTimer(object):
     def present(self, present):
         """
         Sets the present of this V1HypervTimer.
-        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true +optional
+        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true. +optional
 
         :param present: The present of this V1HypervTimer.
         :type: bool

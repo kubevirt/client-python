@@ -56,7 +56,7 @@ class V1Watchdog(object):
     def i6300esb(self):
         """
         Gets the i6300esb of this V1Watchdog.
-        i6300esb watchdog device +optional
+        i6300esb watchdog device. +optional
 
         :return: The i6300esb of this V1Watchdog.
         :rtype: V1I6300ESBWatchdog
@@ -67,7 +67,7 @@ class V1Watchdog(object):
     def i6300esb(self, i6300esb):
         """
         Sets the i6300esb of this V1Watchdog.
-        i6300esb watchdog device +optional
+        i6300esb watchdog device. +optional
 
         :param i6300esb: The i6300esb of this V1Watchdog.
         :type: V1I6300ESBWatchdog
@@ -79,7 +79,7 @@ class V1Watchdog(object):
     def name(self):
         """
         Gets the name of this V1Watchdog.
-        Name of the watchdog
+        Name of the watchdog.
 
         :return: The name of this V1Watchdog.
         :rtype: str
@@ -90,7 +90,7 @@ class V1Watchdog(object):
     def name(self, name):
         """
         Sets the name of this V1Watchdog.
-        Name of the watchdog
+        Name of the watchdog.
 
         :param name: The name of this V1Watchdog.
         :type: str

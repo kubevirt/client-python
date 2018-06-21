@@ -57,7 +57,7 @@ class V1FloppyTarget(object):
     def readonly(self):
         """
         Gets the readonly of this V1FloppyTarget.
-        ReadOnly Defaults to false
+        ReadOnly. Defaults to false.
 
         :return: The readonly of this V1FloppyTarget.
         :rtype: bool
@@ -68,7 +68,7 @@ class V1FloppyTarget(object):
     def readonly(self, readonly):
         """
         Sets the readonly of this V1FloppyTarget.
-        ReadOnly Defaults to false
+        ReadOnly. Defaults to false.
 
         :param readonly: The readonly of this V1FloppyTarget.
         :type: bool
@@ -80,7 +80,7 @@ class V1FloppyTarget(object):
     def tray(self):
         """
         Gets the tray of this V1FloppyTarget.
-        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\" Defaults to closed +optional
+        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\". Defaults to closed. +optional
 
         :return: The tray of this V1FloppyTarget.
         :rtype: str
@@ -91,7 +91,7 @@ class V1FloppyTarget(object):
     def tray(self, tray):
         """
         Sets the tray of this V1FloppyTarget.
-        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\" Defaults to closed +optional
+        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\". Defaults to closed. +optional
 
         :param tray: The tray of this V1FloppyTarget.
         :type: str

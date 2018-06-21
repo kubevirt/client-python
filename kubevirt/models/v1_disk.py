@@ -103,7 +103,7 @@ class V1Disk(object):
     def cdrom(self):
         """
         Gets the cdrom of this V1Disk.
-        Attach a volume as a cdrom to the vmi
+        Attach a volume as a cdrom to the vmi.
 
         :return: The cdrom of this V1Disk.
         :rtype: V1CDRomTarget
@@ -114,7 +114,7 @@ class V1Disk(object):
     def cdrom(self, cdrom):
         """
         Sets the cdrom of this V1Disk.
-        Attach a volume as a cdrom to the vmi
+        Attach a volume as a cdrom to the vmi.
 
         :param cdrom: The cdrom of this V1Disk.
         :type: V1CDRomTarget
@@ -126,7 +126,7 @@ class V1Disk(object):
     def disk(self):
         """
         Gets the disk of this V1Disk.
-        Attach a volume as a disk to the vmi
+        Attach a volume as a disk to the vmi.
 
         :return: The disk of this V1Disk.
         :rtype: V1DiskTarget
@@ -137,7 +137,7 @@ class V1Disk(object):
     def disk(self, disk):
         """
         Sets the disk of this V1Disk.
-        Attach a volume as a disk to the vmi
+        Attach a volume as a disk to the vmi.
 
         :param disk: The disk of this V1Disk.
         :type: V1DiskTarget
@@ -149,7 +149,7 @@ class V1Disk(object):
     def floppy(self):
         """
         Gets the floppy of this V1Disk.
-        Attach a volume as a floppy to the vmi
+        Attach a volume as a floppy to the vmi.
 
         :return: The floppy of this V1Disk.
         :rtype: V1FloppyTarget
@@ -160,7 +160,7 @@ class V1Disk(object):
     def floppy(self, floppy):
         """
         Sets the floppy of this V1Disk.
-        Attach a volume as a floppy to the vmi
+        Attach a volume as a floppy to the vmi.
 
         :param floppy: The floppy of this V1Disk.
         :type: V1FloppyTarget
@@ -172,7 +172,7 @@ class V1Disk(object):
     def lun(self):
         """
         Gets the lun of this V1Disk.
-        Attach a volume as a LUN to the vmi
+        Attach a volume as a LUN to the vmi.
 
         :return: The lun of this V1Disk.
         :rtype: V1LunTarget
@@ -183,7 +183,7 @@ class V1Disk(object):
     def lun(self, lun):
         """
         Sets the lun of this V1Disk.
-        Attach a volume as a LUN to the vmi
+        Attach a volume as a LUN to the vmi.
 
         :param lun: The lun of this V1Disk.
         :type: V1LunTarget
@@ -220,7 +220,7 @@ class V1Disk(object):
     def volume_name(self):
         """
         Gets the volume_name of this V1Disk.
-        Name of the volume which is referenced Must match the Name of a Volume.
+        Name of the volume which is referenced. Must match the Name of a Volume.
 
         :return: The volume_name of this V1Disk.
         :rtype: str
@@ -231,7 +231,7 @@ class V1Disk(object):
     def volume_name(self, volume_name):
         """
         Sets the volume_name of this V1Disk.
-        Name of the volume which is referenced Must match the Name of a Volume.
+        Name of the volume which is referenced. Must match the Name of a Volume.
 
         :param volume_name: The volume_name of this V1Disk.
         :type: str

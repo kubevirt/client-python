@@ -57,7 +57,7 @@ class V1LunTarget(object):
     def bus(self):
         """
         Gets the bus of this V1LunTarget.
-        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, ide
+        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, ide.
 
         :return: The bus of this V1LunTarget.
         :rtype: str
@@ -68,7 +68,7 @@ class V1LunTarget(object):
     def bus(self, bus):
         """
         Sets the bus of this V1LunTarget.
-        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, ide
+        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, ide.
 
         :param bus: The bus of this V1LunTarget.
         :type: str
@@ -80,7 +80,7 @@ class V1LunTarget(object):
     def readonly(self):
         """
         Gets the readonly of this V1LunTarget.
-        ReadOnly Defaults to false
+        ReadOnly. Defaults to false.
 
         :return: The readonly of this V1LunTarget.
         :rtype: bool
@@ -91,7 +91,7 @@ class V1LunTarget(object):
     def readonly(self, readonly):
         """
         Sets the readonly of this V1LunTarget.
-        ReadOnly Defaults to false
+        ReadOnly. Defaults to false.
 
         :param readonly: The readonly of this V1LunTarget.
         :type: bool

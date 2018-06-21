@@ -157,7 +157,7 @@ class V1DomainSpec(object):
     def features(self):
         """
         Gets the features of this V1DomainSpec.
-        Features like acpi, apic, hyperv +optional
+        Features like acpi, apic, hyperv. +optional
 
         :return: The features of this V1DomainSpec.
         :rtype: V1Features
@@ -168,7 +168,7 @@ class V1DomainSpec(object):
     def features(self, features):
         """
         Sets the features of this V1DomainSpec.
-        Features like acpi, apic, hyperv +optional
+        Features like acpi, apic, hyperv. +optional
 
         :param features: The features of this V1DomainSpec.
         :type: V1Features
@@ -180,7 +180,7 @@ class V1DomainSpec(object):
     def firmware(self):
         """
         Gets the firmware of this V1DomainSpec.
-        Firmware +optional
+        Firmware. +optional
 
         :return: The firmware of this V1DomainSpec.
         :rtype: V1Firmware
@@ -191,7 +191,7 @@ class V1DomainSpec(object):
     def firmware(self, firmware):
         """
         Sets the firmware of this V1DomainSpec.
-        Firmware +optional
+        Firmware. +optional
 
         :param firmware: The firmware of this V1DomainSpec.
         :type: V1Firmware
@@ -203,7 +203,7 @@ class V1DomainSpec(object):
     def machine(self):
         """
         Gets the machine of this V1DomainSpec.
-        Machine type +optional
+        Machine type. +optional
 
         :return: The machine of this V1DomainSpec.
         :rtype: V1Machine
@@ -214,7 +214,7 @@ class V1DomainSpec(object):
     def machine(self, machine):
         """
         Sets the machine of this V1DomainSpec.
-        Machine type +optional
+        Machine type. +optional
 
         :param machine: The machine of this V1DomainSpec.
         :type: V1Machine

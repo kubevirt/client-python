@@ -52,7 +52,7 @@ class V1I6300ESBWatchdog(object):
     def action(self):
         """
         Gets the action of this V1I6300ESBWatchdog.
-        The action to take. Valid values are poweroff, reset, shutdown. Defaults to reset
+        The action to take. Valid values are poweroff, reset, shutdown. Defaults to reset.
 
         :return: The action of this V1I6300ESBWatchdog.
         :rtype: str
@@ -63,7 +63,7 @@ class V1I6300ESBWatchdog(object):
     def action(self, action):
         """
         Sets the action of this V1I6300ESBWatchdog.
-        The action to take. Valid values are poweroff, reset, shutdown. Defaults to reset
+        The action to take. Valid values are poweroff, reset, shutdown. Defaults to reset.
 
         :param action: The action of this V1I6300ESBWatchdog.
         :type: str

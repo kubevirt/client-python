@@ -56,7 +56,7 @@ class V1RegistryDiskSource(object):
     def image(self):
         """
         Gets the image of this V1RegistryDiskSource.
-        Image is the name of the image with the embedded disk
+        Image is the name of the image with the embedded disk.
 
         :return: The image of this V1RegistryDiskSource.
         :rtype: str
@@ -67,7 +67,7 @@ class V1RegistryDiskSource(object):
     def image(self, image):
         """
         Sets the image of this V1RegistryDiskSource.
-        Image is the name of the image with the embedded disk
+        Image is the name of the image with the embedded disk.
 
         :param image: The image of this V1RegistryDiskSource.
         :type: str

@@ -57,7 +57,7 @@ class V1FeatureAPIC(object):
     def enabled(self):
         """
         Gets the enabled of this V1FeatureAPIC.
-        Enabled determines if the feature should be enabled or disabled on the guest Defaults to true +optional
+        Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true. +optional
 
         :return: The enabled of this V1FeatureAPIC.
         :rtype: bool
@@ -68,7 +68,7 @@ class V1FeatureAPIC(object):
     def enabled(self, enabled):
         """
         Sets the enabled of this V1FeatureAPIC.
-        Enabled determines if the feature should be enabled or disabled on the guest Defaults to true +optional
+        Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true. +optional
 
         :param enabled: The enabled of this V1FeatureAPIC.
         :type: bool
@@ -80,7 +80,7 @@ class V1FeatureAPIC(object):
     def end_of_interrupt(self):
         """
         Gets the end_of_interrupt of this V1FeatureAPIC.
-        EndOfInterrupt enables the end of interrupt notification in the guest Defaults to false +optional
+        EndOfInterrupt enables the end of interrupt notification in the guest. Defaults to false. +optional
 
         :return: The end_of_interrupt of this V1FeatureAPIC.
         :rtype: bool
@@ -91,7 +91,7 @@ class V1FeatureAPIC(object):
     def end_of_interrupt(self, end_of_interrupt):
         """
         Sets the end_of_interrupt of this V1FeatureAPIC.
-        EndOfInterrupt enables the end of interrupt notification in the guest Defaults to false +optional
+        EndOfInterrupt enables the end of interrupt notification in the guest. Defaults to false. +optional
 
         :param end_of_interrupt: The end_of_interrupt of this V1FeatureAPIC.
         :type: bool

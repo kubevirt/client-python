@@ -92,7 +92,7 @@ class V1FeatureHyperv(object):
     def relaxed(self):
         """
         Gets the relaxed of this V1FeatureHyperv.
-        Relaxed relaxes constraints on timer Defaults to the machine type setting +optional
+        Relaxed relaxes constraints on timer. Defaults to the machine type setting. +optional
 
         :return: The relaxed of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -103,7 +103,7 @@ class V1FeatureHyperv(object):
     def relaxed(self, relaxed):
         """
         Sets the relaxed of this V1FeatureHyperv.
-        Relaxed relaxes constraints on timer Defaults to the machine type setting +optional
+        Relaxed relaxes constraints on timer. Defaults to the machine type setting. +optional
 
         :param relaxed: The relaxed of this V1FeatureHyperv.
         :type: V1FeatureState
@@ -115,7 +115,7 @@ class V1FeatureHyperv(object):
     def reset(self):
         """
         Gets the reset of this V1FeatureHyperv.
-        Reset enables Hyperv reboot/reset for the vmi Defaults to the machine type setting +optional
+        Reset enables Hyperv reboot/reset for the vmi. Defaults to the machine type setting. +optional
 
         :return: The reset of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -126,7 +126,7 @@ class V1FeatureHyperv(object):
     def reset(self, reset):
         """
         Sets the reset of this V1FeatureHyperv.
-        Reset enables Hyperv reboot/reset for the vmi Defaults to the machine type setting +optional
+        Reset enables Hyperv reboot/reset for the vmi. Defaults to the machine type setting. +optional
 
         :param reset: The reset of this V1FeatureHyperv.
         :type: V1FeatureState
@@ -138,7 +138,7 @@ class V1FeatureHyperv(object):
     def runtime(self):
         """
         Gets the runtime of this V1FeatureHyperv.
-        Runtime Defaults to the machine type setting +optional
+        Runtime. Defaults to the machine type setting. +optional
 
         :return: The runtime of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -149,7 +149,7 @@ class V1FeatureHyperv(object):
     def runtime(self, runtime):
         """
         Sets the runtime of this V1FeatureHyperv.
-        Runtime Defaults to the machine type setting +optional
+        Runtime. Defaults to the machine type setting. +optional
 
         :param runtime: The runtime of this V1FeatureHyperv.
         :type: V1FeatureState
@@ -161,7 +161,7 @@ class V1FeatureHyperv(object):
     def spinlocks(self):
         """
         Gets the spinlocks of this V1FeatureHyperv.
-        Spinlocks indicates if spinlocks should be made available to the guest +optional
+        Spinlocks indicates if spinlocks should be made available to the guest. +optional
 
         :return: The spinlocks of this V1FeatureHyperv.
         :rtype: V1FeatureSpinlocks
@@ -172,7 +172,7 @@ class V1FeatureHyperv(object):
     def spinlocks(self, spinlocks):
         """
         Sets the spinlocks of this V1FeatureHyperv.
-        Spinlocks indicates if spinlocks should be made available to the guest +optional
+        Spinlocks indicates if spinlocks should be made available to the guest. +optional
 
         :param spinlocks: The spinlocks of this V1FeatureHyperv.
         :type: V1FeatureSpinlocks
@@ -184,7 +184,7 @@ class V1FeatureHyperv(object):
     def synic(self):
         """
         Gets the synic of this V1FeatureHyperv.
-        SyNIC enable Synthetic Interrupt Controller Defaults to the machine type setting +optional
+        SyNIC enable Synthetic Interrupt Controller. Defaults to the machine type setting. +optional
 
         :return: The synic of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -195,7 +195,7 @@ class V1FeatureHyperv(object):
     def synic(self, synic):
         """
         Sets the synic of this V1FeatureHyperv.
-        SyNIC enable Synthetic Interrupt Controller Defaults to the machine type setting +optional
+        SyNIC enable Synthetic Interrupt Controller. Defaults to the machine type setting. +optional
 
         :param synic: The synic of this V1FeatureHyperv.
         :type: V1FeatureState
@@ -207,7 +207,7 @@ class V1FeatureHyperv(object):
     def synictimer(self):
         """
         Gets the synictimer of this V1FeatureHyperv.
-        SyNICTimer enable Synthetic Interrupt Controller timer Defaults to the machine type setting +optional
+        SyNICTimer enable Synthetic Interrupt Controller timer. Defaults to the machine type setting. +optional
 
         :return: The synictimer of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -218,7 +218,7 @@ class V1FeatureHyperv(object):
     def synictimer(self, synictimer):
         """
         Sets the synictimer of this V1FeatureHyperv.
-        SyNICTimer enable Synthetic Interrupt Controller timer Defaults to the machine type setting +optional
+        SyNICTimer enable Synthetic Interrupt Controller timer. Defaults to the machine type setting. +optional
 
         :param synictimer: The synictimer of this V1FeatureHyperv.
         :type: V1FeatureState
@@ -230,7 +230,7 @@ class V1FeatureHyperv(object):
     def vapic(self):
         """
         Gets the vapic of this V1FeatureHyperv.
-        VAPIC indicates whether virtual APIC is enabled Defaults to the machine type setting +optional
+        VAPIC indicates whether virtual APIC is enabled. Defaults to the machine type setting. +optional
 
         :return: The vapic of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -241,7 +241,7 @@ class V1FeatureHyperv(object):
     def vapic(self, vapic):
         """
         Sets the vapic of this V1FeatureHyperv.
-        VAPIC indicates whether virtual APIC is enabled Defaults to the machine type setting +optional
+        VAPIC indicates whether virtual APIC is enabled. Defaults to the machine type setting. +optional
 
         :param vapic: The vapic of this V1FeatureHyperv.
         :type: V1FeatureState
@@ -253,7 +253,7 @@ class V1FeatureHyperv(object):
     def vendorid(self):
         """
         Gets the vendorid of this V1FeatureHyperv.
-        VendorID allows setting the hypervisor vendor id Defaults to the machine type setting +optional
+        VendorID allows setting the hypervisor vendor id. Defaults to the machine type setting. +optional
 
         :return: The vendorid of this V1FeatureHyperv.
         :rtype: V1FeatureVendorID
@@ -264,7 +264,7 @@ class V1FeatureHyperv(object):
     def vendorid(self, vendorid):
         """
         Sets the vendorid of this V1FeatureHyperv.
-        VendorID allows setting the hypervisor vendor id Defaults to the machine type setting +optional
+        VendorID allows setting the hypervisor vendor id. Defaults to the machine type setting. +optional
 
         :param vendorid: The vendorid of this V1FeatureHyperv.
         :type: V1FeatureVendorID
@@ -276,7 +276,7 @@ class V1FeatureHyperv(object):
     def vpindex(self):
         """
         Gets the vpindex of this V1FeatureHyperv.
-        VPIndex enables the Virtual Processor Index to help windows identifying virtual processors Defaults to the machine type setting +optional
+        VPIndex enables the Virtual Processor Index to help windows identifying virtual processors. Defaults to the machine type setting. +optional
 
         :return: The vpindex of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -287,7 +287,7 @@ class V1FeatureHyperv(object):
     def vpindex(self, vpindex):
         """
         Sets the vpindex of this V1FeatureHyperv.
-        VPIndex enables the Virtual Processor Index to help windows identifying virtual processors Defaults to the machine type setting +optional
+        VPIndex enables the Virtual Processor Index to help windows identifying virtual processors. Defaults to the machine type setting. +optional
 
         :param vpindex: The vpindex of this V1FeatureHyperv.
         :type: V1FeatureState

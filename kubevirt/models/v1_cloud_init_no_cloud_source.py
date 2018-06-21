@@ -62,7 +62,7 @@ class V1CloudInitNoCloudSource(object):
     def secret_ref(self):
         """
         Gets the secret_ref of this V1CloudInitNoCloudSource.
-        UserDataSecretRef references a k8s secret that contains NoCloud userdata + optional
+        UserDataSecretRef references a k8s secret that contains NoCloud userdata. + optional
 
         :return: The secret_ref of this V1CloudInitNoCloudSource.
         :rtype: V1LocalObjectReference
@@ -73,7 +73,7 @@ class V1CloudInitNoCloudSource(object):
     def secret_ref(self, secret_ref):
         """
         Sets the secret_ref of this V1CloudInitNoCloudSource.
-        UserDataSecretRef references a k8s secret that contains NoCloud userdata + optional
+        UserDataSecretRef references a k8s secret that contains NoCloud userdata. + optional
 
         :param secret_ref: The secret_ref of this V1CloudInitNoCloudSource.
         :type: V1LocalObjectReference
@@ -85,7 +85,7 @@ class V1CloudInitNoCloudSource(object):
     def user_data(self):
         """
         Gets the user_data of this V1CloudInitNoCloudSource.
-        UserData contains NoCloud inline cloud-init userdata + optional
+        UserData contains NoCloud inline cloud-init userdata. + optional
 
         :return: The user_data of this V1CloudInitNoCloudSource.
         :rtype: str
@@ -96,7 +96,7 @@ class V1CloudInitNoCloudSource(object):
     def user_data(self, user_data):
         """
         Sets the user_data of this V1CloudInitNoCloudSource.
-        UserData contains NoCloud inline cloud-init userdata + optional
+        UserData contains NoCloud inline cloud-init userdata. + optional
 
         :param user_data: The user_data of this V1CloudInitNoCloudSource.
         :type: str
@@ -108,7 +108,7 @@ class V1CloudInitNoCloudSource(object):
     def user_data_base64(self):
         """
         Gets the user_data_base64 of this V1CloudInitNoCloudSource.
-        UserDataBase64 contains NoCloud cloud-init userdata as a base64 encoded string + optional
+        UserDataBase64 contains NoCloud cloud-init userdata as a base64 encoded string. + optional
 
         :return: The user_data_base64 of this V1CloudInitNoCloudSource.
         :rtype: str
@@ -119,7 +119,7 @@ class V1CloudInitNoCloudSource(object):
     def user_data_base64(self, user_data_base64):
         """
         Sets the user_data_base64 of this V1CloudInitNoCloudSource.
-        UserDataBase64 contains NoCloud cloud-init userdata as a base64 encoded string + optional
+        UserDataBase64 contains NoCloud cloud-init userdata as a base64 encoded string. + optional
 
         :param user_data_base64: The user_data_base64 of this V1CloudInitNoCloudSource.
         :type: str

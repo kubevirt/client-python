@@ -37,6 +37,7 @@ class V1Disk(object):
         'floppy': 'V1FloppyTarget',
         'lun': 'V1LunTarget',
         'name': 'str',
+        'serial': 'str',
         'volume_name': 'str'
     }
 
@@ -47,10 +48,11 @@ class V1Disk(object):
         'floppy': 'floppy',
         'lun': 'lun',
         'name': 'name',
+        'serial': 'serial',
         'volume_name': 'volumeName'
     }
 
-    def __init__(self, boot_order=None, cdrom=None, disk=None, floppy=None, lun=None, name=None, volume_name=None):
+    def __init__(self, boot_order=None, cdrom=None, disk=None, floppy=None, lun=None, name=None, serial=None, volume_name=None):
         """
         V1Disk - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class V1Disk(object):
         self._floppy = None
         self._lun = None
         self._name = None
+        self._serial = None
         self._volume_name = None
 
         if boot_order is not None:
@@ -74,6 +77,8 @@ class V1Disk(object):
         if lun is not None:
           self.lun = lun
         self.name = name
+        if serial is not None:
+          self.serial = serial
         self.volume_name = volume_name
 
     @property
@@ -215,6 +220,29 @@ class V1Disk(object):
             raise ValueError("Invalid value for `name`, must not be `None`")
 
         self._name = name
+
+    @property
+    def serial(self):
+        """
+        Gets the serial of this V1Disk.
+        Serial provides the ability to specify a serial number for the disk device. +optional
+
+        :return: The serial of this V1Disk.
+        :rtype: str
+        """
+        return self._serial
+
+    @serial.setter
+    def serial(self, serial):
+        """
+        Sets the serial of this V1Disk.
+        Serial provides the ability to specify a serial number for the disk device. +optional
+
+        :param serial: The serial of this V1Disk.
+        :type: str
+        """
+
+        self._serial = serial
 
     @property
     def volume_name(self):

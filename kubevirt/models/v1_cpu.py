@@ -31,22 +31,27 @@ class V1CPU(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'cores': 'int'
+        'cores': 'int',
+        'model': 'str'
     }
 
     attribute_map = {
-        'cores': 'cores'
+        'cores': 'cores',
+        'model': 'model'
     }
 
-    def __init__(self, cores=None):
+    def __init__(self, cores=None, model=None):
         """
         V1CPU - a model defined in Swagger
         """
 
         self._cores = None
+        self._model = None
 
         if cores is not None:
           self.cores = cores
+        if model is not None:
+          self.model = model
 
     @property
     def cores(self):
@@ -70,6 +75,29 @@ class V1CPU(object):
         """
 
         self._cores = cores
+
+    @property
+    def model(self):
+        """
+        Gets the model of this V1CPU.
+        Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/blob/master/src/cpu/cpu_map.xml. +optional
+
+        :return: The model of this V1CPU.
+        :rtype: str
+        """
+        return self._model
+
+    @model.setter
+    def model(self, model):
+        """
+        Sets the model of this V1CPU.
+        Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/blob/master/src/cpu/cpu_map.xml. +optional
+
+        :param model: The model of this V1CPU.
+        :type: str
+        """
+
+        self._model = model
 
     def to_dict(self):
         """

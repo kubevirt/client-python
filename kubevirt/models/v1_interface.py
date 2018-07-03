@@ -32,6 +32,7 @@ class V1Interface(object):
     """
     swagger_types = {
         'bridge': 'V1InterfaceBridge',
+        'mac_address': 'str',
         'model': 'str',
         'name': 'str',
         'slirp': 'V1InterfaceSlirp'
@@ -39,23 +40,27 @@ class V1Interface(object):
 
     attribute_map = {
         'bridge': 'bridge',
+        'mac_address': 'macAddress',
         'model': 'model',
         'name': 'name',
         'slirp': 'slirp'
     }
 
-    def __init__(self, bridge=None, model=None, name=None, slirp=None):
+    def __init__(self, bridge=None, mac_address=None, model=None, name=None, slirp=None):
         """
         V1Interface - a model defined in Swagger
         """
 
         self._bridge = None
+        self._mac_address = None
         self._model = None
         self._name = None
         self._slirp = None
 
         if bridge is not None:
           self.bridge = bridge
+        if mac_address is not None:
+          self.mac_address = mac_address
         if model is not None:
           self.model = model
         self.name = name
@@ -82,6 +87,29 @@ class V1Interface(object):
         """
 
         self._bridge = bridge
+
+    @property
+    def mac_address(self):
+        """
+        Gets the mac_address of this V1Interface.
+        Interface MAC address. For example: de:ad:00:00:be:af or DE-AD-00-00-BE-AF.
+
+        :return: The mac_address of this V1Interface.
+        :rtype: str
+        """
+        return self._mac_address
+
+    @mac_address.setter
+    def mac_address(self, mac_address):
+        """
+        Sets the mac_address of this V1Interface.
+        Interface MAC address. For example: de:ad:00:00:be:af or DE-AD-00-00-BE-AF.
+
+        :param mac_address: The mac_address of this V1Interface.
+        :type: str
+        """
+
+        self._mac_address = mac_address
 
     @property
     def model(self):

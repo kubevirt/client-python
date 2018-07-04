@@ -35,6 +35,7 @@ class V1Interface(object):
         'mac_address': 'str',
         'model': 'str',
         'name': 'str',
+        'ports': 'list[V1Port]',
         'slirp': 'V1InterfaceSlirp'
     }
 
@@ -43,10 +44,11 @@ class V1Interface(object):
         'mac_address': 'macAddress',
         'model': 'model',
         'name': 'name',
+        'ports': 'ports',
         'slirp': 'slirp'
     }
 
-    def __init__(self, bridge=None, mac_address=None, model=None, name=None, slirp=None):
+    def __init__(self, bridge=None, mac_address=None, model=None, name=None, ports=None, slirp=None):
         """
         V1Interface - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class V1Interface(object):
         self._mac_address = None
         self._model = None
         self._name = None
+        self._ports = None
         self._slirp = None
 
         if bridge is not None:
@@ -64,6 +67,8 @@ class V1Interface(object):
         if model is not None:
           self.model = model
         self.name = name
+        if ports is not None:
+          self.ports = ports
         if slirp is not None:
           self.slirp = slirp
 
@@ -158,6 +163,29 @@ class V1Interface(object):
             raise ValueError("Invalid value for `name`, must not be `None`")
 
         self._name = name
+
+    @property
+    def ports(self):
+        """
+        Gets the ports of this V1Interface.
+        List of ports to be forwarded to the virtual machine.
+
+        :return: The ports of this V1Interface.
+        :rtype: list[V1Port]
+        """
+        return self._ports
+
+    @ports.setter
+    def ports(self, ports):
+        """
+        Sets the ports of this V1Interface.
+        List of ports to be forwarded to the virtual machine.
+
+        :param ports: The ports of this V1Interface.
+        :type: list[V1Port]
+        """
+
+        self._ports = ports
 
     @property
     def slirp(self):

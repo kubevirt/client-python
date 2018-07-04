@@ -119,9 +119,6 @@
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_interface.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_interface.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1Interface.md
-[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_interface_slirp.py
-[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_interface_slirp.py
-[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1InterfaceSlirp.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_kvm_timer.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_kvm_timer.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1KVMTimer.md
@@ -291,6 +288,30 @@
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_weighted_pod_affinity_term.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1WeightedPodAffinityTerm.md
 [main] WARN io.swagger.codegen.DefaultCodegen - generated unique operationId `get_api_group_0`
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.

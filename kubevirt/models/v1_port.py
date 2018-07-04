@@ -32,32 +32,27 @@ class V1Port(object):
     """
     swagger_types = {
         'name': 'str',
-        'pod_port': 'int',
         'port': 'int',
         'protocol': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'pod_port': 'podPort',
         'port': 'port',
         'protocol': 'protocol'
     }
 
-    def __init__(self, name=None, pod_port=None, port=None, protocol=None):
+    def __init__(self, name=None, port=None, protocol=None):
         """
         V1Port - a model defined in Swagger
         """
 
         self._name = None
-        self._pod_port = None
         self._port = None
         self._protocol = None
 
         if name is not None:
           self.name = name
-        if pod_port is not None:
-          self.pod_port = pod_port
         self.port = port
         if protocol is not None:
           self.protocol = protocol
@@ -66,6 +61,7 @@ class V1Port(object):
     def name(self):
         """
         Gets the name of this V1Port.
+        If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services. +optional
 
         :return: The name of this V1Port.
         :rtype: str
@@ -76,6 +72,7 @@ class V1Port(object):
     def name(self, name):
         """
         Sets the name of this V1Port.
+        If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services. +optional
 
         :param name: The name of this V1Port.
         :type: str
@@ -84,30 +81,10 @@ class V1Port(object):
         self._name = name
 
     @property
-    def pod_port(self):
-        """
-        Gets the pod_port of this V1Port.
-
-        :return: The pod_port of this V1Port.
-        :rtype: int
-        """
-        return self._pod_port
-
-    @pod_port.setter
-    def pod_port(self, pod_port):
-        """
-        Sets the pod_port of this V1Port.
-
-        :param pod_port: The pod_port of this V1Port.
-        :type: int
-        """
-
-        self._pod_port = pod_port
-
-    @property
     def port(self):
         """
         Gets the port of this V1Port.
+        Number of port to expose for the virtual machine. This must be a valid port number, 0 < x < 65536.
 
         :return: The port of this V1Port.
         :rtype: int
@@ -118,6 +95,7 @@ class V1Port(object):
     def port(self, port):
         """
         Sets the port of this V1Port.
+        Number of port to expose for the virtual machine. This must be a valid port number, 0 < x < 65536.
 
         :param port: The port of this V1Port.
         :type: int
@@ -131,6 +109,7 @@ class V1Port(object):
     def protocol(self):
         """
         Gets the protocol of this V1Port.
+        Protocol for port. Must be UDP or TCP. Defaults to \"TCP\". +optional
 
         :return: The protocol of this V1Port.
         :rtype: str
@@ -141,6 +120,7 @@ class V1Port(object):
     def protocol(self, protocol):
         """
         Sets the protocol of this V1Port.
+        Protocol for port. Must be UDP or TCP. Defaults to \"TCP\". +optional
 
         :param protocol: The protocol of this V1Port.
         :type: str

@@ -31,32 +31,60 @@ class V1Devices(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'autoattach_pod_interface': 'bool',
         'disks': 'list[V1Disk]',
         'interfaces': 'list[V1Interface]',
         'watchdog': 'V1Watchdog'
     }
 
     attribute_map = {
+        'autoattach_pod_interface': 'autoattachPodInterface',
         'disks': 'disks',
         'interfaces': 'interfaces',
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, disks=None, interfaces=None, watchdog=None):
+    def __init__(self, autoattach_pod_interface=None, disks=None, interfaces=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
 
+        self._autoattach_pod_interface = None
         self._disks = None
         self._interfaces = None
         self._watchdog = None
 
+        if autoattach_pod_interface is not None:
+          self.autoattach_pod_interface = autoattach_pod_interface
         if disks is not None:
           self.disks = disks
         if interfaces is not None:
           self.interfaces = interfaces
         if watchdog is not None:
           self.watchdog = watchdog
+
+    @property
+    def autoattach_pod_interface(self):
+        """
+        Gets the autoattach_pod_interface of this V1Devices.
+        Whether to attach a pod network interface. Defaults to true.
+
+        :return: The autoattach_pod_interface of this V1Devices.
+        :rtype: bool
+        """
+        return self._autoattach_pod_interface
+
+    @autoattach_pod_interface.setter
+    def autoattach_pod_interface(self, autoattach_pod_interface):
+        """
+        Sets the autoattach_pod_interface of this V1Devices.
+        Whether to attach a pod network interface. Defaults to true.
+
+        :param autoattach_pod_interface: The autoattach_pod_interface of this V1Devices.
+        :type: bool
+        """
+
+        self._autoattach_pod_interface = autoattach_pod_interface
 
     @property
     def disks(self):

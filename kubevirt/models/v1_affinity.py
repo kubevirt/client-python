@@ -62,7 +62,7 @@ class V1Affinity(object):
     def node_affinity(self):
         """
         Gets the node_affinity of this V1Affinity.
-        Node affinity support
+        Describes node affinity scheduling rules for the pod.
 
         :return: The node_affinity of this V1Affinity.
         :rtype: V1NodeAffinity
@@ -73,7 +73,7 @@ class V1Affinity(object):
     def node_affinity(self, node_affinity):
         """
         Sets the node_affinity of this V1Affinity.
-        Node affinity support
+        Describes node affinity scheduling rules for the pod.
 
         :param node_affinity: The node_affinity of this V1Affinity.
         :type: V1NodeAffinity
@@ -85,7 +85,7 @@ class V1Affinity(object):
     def pod_affinity(self):
         """
         Gets the pod_affinity of this V1Affinity.
-        Pod affinity support
+        Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).
 
         :return: The pod_affinity of this V1Affinity.
         :rtype: V1PodAffinity
@@ -96,7 +96,7 @@ class V1Affinity(object):
     def pod_affinity(self, pod_affinity):
         """
         Sets the pod_affinity of this V1Affinity.
-        Pod affinity support
+        Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).
 
         :param pod_affinity: The pod_affinity of this V1Affinity.
         :type: V1PodAffinity
@@ -108,7 +108,7 @@ class V1Affinity(object):
     def pod_anti_affinity(self):
         """
         Gets the pod_anti_affinity of this V1Affinity.
-        Pod anti-affinity support
+        Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).
 
         :return: The pod_anti_affinity of this V1Affinity.
         :rtype: V1PodAntiAffinity
@@ -119,7 +119,7 @@ class V1Affinity(object):
     def pod_anti_affinity(self, pod_anti_affinity):
         """
         Sets the pod_anti_affinity of this V1Affinity.
-        Pod anti-affinity support
+        Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).
 
         :param pod_anti_affinity: The pod_anti_affinity of this V1Affinity.
         :type: V1PodAntiAffinity

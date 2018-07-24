@@ -85,6 +85,7 @@ from .models.v1_status import V1Status
 from .models.v1_status_cause import V1StatusCause
 from .models.v1_status_details import V1StatusDetails
 from .models.v1_timer import V1Timer
+from .models.v1_toleration import V1Toleration
 from .models.v1_virtual_machine import V1VirtualMachine
 from .models.v1_virtual_machine_condition import V1VirtualMachineCondition
 from .models.v1_virtual_machine_instance import V1VirtualMachineInstance

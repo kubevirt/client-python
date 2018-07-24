@@ -38,6 +38,7 @@ class V1VirtualMachineInstanceSpec(object):
         'node_selector': 'dict(str, str)',
         'subdomain': 'str',
         'termination_grace_period_seconds': 'int',
+        'tolerations': 'list[V1Toleration]',
         'volumes': 'list[V1Volume]'
     }
 
@@ -49,10 +50,11 @@ class V1VirtualMachineInstanceSpec(object):
         'node_selector': 'nodeSelector',
         'subdomain': 'subdomain',
         'termination_grace_period_seconds': 'terminationGracePeriodSeconds',
+        'tolerations': 'tolerations',
         'volumes': 'volumes'
     }
 
-    def __init__(self, affinity=None, domain=None, hostname=None, networks=None, node_selector=None, subdomain=None, termination_grace_period_seconds=None, volumes=None):
+    def __init__(self, affinity=None, domain=None, hostname=None, networks=None, node_selector=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, volumes=None):
         """
         V1VirtualMachineInstanceSpec - a model defined in Swagger
         """
@@ -64,6 +66,7 @@ class V1VirtualMachineInstanceSpec(object):
         self._node_selector = None
         self._subdomain = None
         self._termination_grace_period_seconds = None
+        self._tolerations = None
         self._volumes = None
 
         if affinity is not None:
@@ -79,6 +82,8 @@ class V1VirtualMachineInstanceSpec(object):
           self.subdomain = subdomain
         if termination_grace_period_seconds is not None:
           self.termination_grace_period_seconds = termination_grace_period_seconds
+        if tolerations is not None:
+          self.tolerations = tolerations
         if volumes is not None:
           self.volumes = volumes
 
@@ -244,6 +249,29 @@ class V1VirtualMachineInstanceSpec(object):
         """
 
         self._termination_grace_period_seconds = termination_grace_period_seconds
+
+    @property
+    def tolerations(self):
+        """
+        Gets the tolerations of this V1VirtualMachineInstanceSpec.
+        If toleration is specified, obey all the toleration rules.
+
+        :return: The tolerations of this V1VirtualMachineInstanceSpec.
+        :rtype: list[V1Toleration]
+        """
+        return self._tolerations
+
+    @tolerations.setter
+    def tolerations(self, tolerations):
+        """
+        Sets the tolerations of this V1VirtualMachineInstanceSpec.
+        If toleration is specified, obey all the toleration rules.
+
+        :param tolerations: The tolerations of this V1VirtualMachineInstanceSpec.
+        :type: list[V1Toleration]
+        """
+
+        self._tolerations = tolerations
 
     @property
     def volumes(self):

@@ -80,7 +80,7 @@ class V1CPU(object):
     def model(self):
         """
         Gets the model of this V1CPU.
-        Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/blob/master/src/cpu/cpu_map.xml. You also can specify special cases like \"host-passthrough\" to get the same CPU as the node and \"host-model\" to get CPU closest to the node one. You can find more information under https://libvirt.org/formatdomain.html#elementsCPU. Defaults to host-model. +optional
+        Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/blob/master/src/cpu/cpu_map.xml. It is possible to specify special cases like \"host-passthrough\" to get the same CPU as the node and \"host-model\" to get CPU closest to the node one. For more information see https://libvirt.org/formatdomain.html#elementsCPU. Defaults to host-model. +optional
 
         :return: The model of this V1CPU.
         :rtype: str
@@ -91,7 +91,7 @@ class V1CPU(object):
     def model(self, model):
         """
         Sets the model of this V1CPU.
-        Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/blob/master/src/cpu/cpu_map.xml. You also can specify special cases like \"host-passthrough\" to get the same CPU as the node and \"host-model\" to get CPU closest to the node one. You can find more information under https://libvirt.org/formatdomain.html#elementsCPU. Defaults to host-model. +optional
+        Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/blob/master/src/cpu/cpu_map.xml. It is possible to specify special cases like \"host-passthrough\" to get the same CPU as the node and \"host-model\" to get CPU closest to the node one. For more information see https://libvirt.org/formatdomain.html#elementsCPU. Defaults to host-model. +optional
 
         :param model: The model of this V1CPU.
         :type: str

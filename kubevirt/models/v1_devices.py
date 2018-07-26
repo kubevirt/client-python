@@ -31,6 +31,7 @@ class V1Devices(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'autoattach_graphics_device': 'bool',
         'autoattach_pod_interface': 'bool',
         'disks': 'list[V1Disk]',
         'interfaces': 'list[V1Interface]',
@@ -38,22 +39,26 @@ class V1Devices(object):
     }
 
     attribute_map = {
+        'autoattach_graphics_device': 'autoattachGraphicsDevice',
         'autoattach_pod_interface': 'autoattachPodInterface',
         'disks': 'disks',
         'interfaces': 'interfaces',
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_pod_interface=None, disks=None, interfaces=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_pod_interface=None, disks=None, interfaces=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
 
+        self._autoattach_graphics_device = None
         self._autoattach_pod_interface = None
         self._disks = None
         self._interfaces = None
         self._watchdog = None
 
+        if autoattach_graphics_device is not None:
+          self.autoattach_graphics_device = autoattach_graphics_device
         if autoattach_pod_interface is not None:
           self.autoattach_pod_interface = autoattach_pod_interface
         if disks is not None:
@@ -62,6 +67,29 @@ class V1Devices(object):
           self.interfaces = interfaces
         if watchdog is not None:
           self.watchdog = watchdog
+
+    @property
+    def autoattach_graphics_device(self):
+        """
+        Gets the autoattach_graphics_device of this V1Devices.
+        Wheater to attach the default graphics device or not. VNC will not be available if set to false. Defaults to true.
+
+        :return: The autoattach_graphics_device of this V1Devices.
+        :rtype: bool
+        """
+        return self._autoattach_graphics_device
+
+    @autoattach_graphics_device.setter
+    def autoattach_graphics_device(self, autoattach_graphics_device):
+        """
+        Sets the autoattach_graphics_device of this V1Devices.
+        Wheater to attach the default graphics device or not. VNC will not be available if set to false. Defaults to true.
+
+        :param autoattach_graphics_device: The autoattach_graphics_device of this V1Devices.
+        :type: bool
+        """
+
+        self._autoattach_graphics_device = autoattach_graphics_device
 
     @property
     def autoattach_pod_interface(self):

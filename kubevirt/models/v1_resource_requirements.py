@@ -32,24 +32,29 @@ class V1ResourceRequirements(object):
     """
     swagger_types = {
         'limits': 'dict(str, ResourceQuantity)',
+        'overcommit_guest_overhead': 'bool',
         'requests': 'dict(str, ResourceQuantity)'
     }
 
     attribute_map = {
         'limits': 'limits',
+        'overcommit_guest_overhead': 'overcommitGuestOverhead',
         'requests': 'requests'
     }
 
-    def __init__(self, limits=None, requests=None):
+    def __init__(self, limits=None, overcommit_guest_overhead=None, requests=None):
         """
         V1ResourceRequirements - a model defined in Swagger
         """
 
         self._limits = None
+        self._overcommit_guest_overhead = None
         self._requests = None
 
         if limits is not None:
           self.limits = limits
+        if overcommit_guest_overhead is not None:
+          self.overcommit_guest_overhead = overcommit_guest_overhead
         if requests is not None:
           self.requests = requests
 
@@ -75,6 +80,29 @@ class V1ResourceRequirements(object):
         """
 
         self._limits = limits
+
+    @property
+    def overcommit_guest_overhead(self):
+        """
+        Gets the overcommit_guest_overhead of this V1ResourceRequirements.
+        Don't ask the scheduler to take the guest-management overhead into account. Instead put the overhead only into the requested memory limits. This can lead to crashes if all memory is in use on a node. Defaults to false.
+
+        :return: The overcommit_guest_overhead of this V1ResourceRequirements.
+        :rtype: bool
+        """
+        return self._overcommit_guest_overhead
+
+    @overcommit_guest_overhead.setter
+    def overcommit_guest_overhead(self, overcommit_guest_overhead):
+        """
+        Sets the overcommit_guest_overhead of this V1ResourceRequirements.
+        Don't ask the scheduler to take the guest-management overhead into account. Instead put the overhead only into the requested memory limits. This can lead to crashes if all memory is in use on a node. Defaults to false.
+
+        :param overcommit_guest_overhead: The overcommit_guest_overhead of this V1ResourceRequirements.
+        :type: bool
+        """
+
+        self._overcommit_guest_overhead = overcommit_guest_overhead
 
     @property
     def requests(self):

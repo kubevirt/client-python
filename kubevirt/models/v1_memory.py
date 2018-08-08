@@ -31,22 +31,50 @@ class V1Memory(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'guest': 'str',
         'hugepages': 'V1Hugepages'
     }
 
     attribute_map = {
+        'guest': 'guest',
         'hugepages': 'hugepages'
     }
 
-    def __init__(self, hugepages=None):
+    def __init__(self, guest=None, hugepages=None):
         """
         V1Memory - a model defined in Swagger
         """
 
+        self._guest = None
         self._hugepages = None
 
+        if guest is not None:
+          self.guest = guest
         if hugepages is not None:
           self.hugepages = hugepages
+
+    @property
+    def guest(self):
+        """
+        Gets the guest of this V1Memory.
+        Guest allows to specifying the amount of memory which is visible inside the Guest OS. The Guest must lie between Requests and Limits from the resources section. Defaults to the requested memory in the resources section if not specified. + optional
+
+        :return: The guest of this V1Memory.
+        :rtype: str
+        """
+        return self._guest
+
+    @guest.setter
+    def guest(self, guest):
+        """
+        Sets the guest of this V1Memory.
+        Guest allows to specifying the amount of memory which is visible inside the Guest OS. The Guest must lie between Requests and Limits from the resources section. Defaults to the requested memory in the resources section if not specified. + optional
+
+        :param guest: The guest of this V1Memory.
+        :type: str
+        """
+
+        self._guest = guest
 
     @property
     def hugepages(self):

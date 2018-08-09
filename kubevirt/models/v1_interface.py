@@ -31,6 +31,7 @@ class V1Interface(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'boot_order': 'int',
         'bridge': 'V1InterfaceBridge',
         'mac_address': 'str',
         'model': 'str',
@@ -40,6 +41,7 @@ class V1Interface(object):
     }
 
     attribute_map = {
+        'boot_order': 'bootOrder',
         'bridge': 'bridge',
         'mac_address': 'macAddress',
         'model': 'model',
@@ -48,11 +50,12 @@ class V1Interface(object):
         'slirp': 'slirp'
     }
 
-    def __init__(self, bridge=None, mac_address=None, model=None, name=None, ports=None, slirp=None):
+    def __init__(self, boot_order=None, bridge=None, mac_address=None, model=None, name=None, ports=None, slirp=None):
         """
         V1Interface - a model defined in Swagger
         """
 
+        self._boot_order = None
         self._bridge = None
         self._mac_address = None
         self._model = None
@@ -60,6 +63,8 @@ class V1Interface(object):
         self._ports = None
         self._slirp = None
 
+        if boot_order is not None:
+          self.boot_order = boot_order
         if bridge is not None:
           self.bridge = bridge
         if mac_address is not None:
@@ -71,6 +76,29 @@ class V1Interface(object):
           self.ports = ports
         if slirp is not None:
           self.slirp = slirp
+
+    @property
+    def boot_order(self):
+        """
+        Gets the boot_order of this V1Interface.
+        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Each interface or disk that has a boot order must have a unique value. Interfaces without a boot order are not tried. +optional
+
+        :return: The boot_order of this V1Interface.
+        :rtype: int
+        """
+        return self._boot_order
+
+    @boot_order.setter
+    def boot_order(self, boot_order):
+        """
+        Sets the boot_order of this V1Interface.
+        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Each interface or disk that has a boot order must have a unique value. Interfaces without a boot order are not tried. +optional
+
+        :param boot_order: The boot_order of this V1Interface.
+        :type: int
+        """
+
+        self._boot_order = boot_order
 
     @property
     def bridge(self):

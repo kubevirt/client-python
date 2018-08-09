@@ -85,7 +85,7 @@ class V1Disk(object):
     def boot_order(self):
         """
         Gets the boot_order of this V1Disk.
-        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Disks without a boot order are not tried if a disk with a boot order exists. +optional
+        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Each disk or interface that has a boot order must have a unique value. Disks without a boot order are not tried if a disk with a boot order exists. +optional
 
         :return: The boot_order of this V1Disk.
         :rtype: int
@@ -96,7 +96,7 @@ class V1Disk(object):
     def boot_order(self, boot_order):
         """
         Sets the boot_order of this V1Disk.
-        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Disks without a boot order are not tried if a disk with a boot order exists. +optional
+        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Each disk or interface that has a boot order must have a unique value. Disks without a boot order are not tried if a disk with a boot order exists. +optional
 
         :param boot_order: The boot_order of this V1Disk.
         :type: int

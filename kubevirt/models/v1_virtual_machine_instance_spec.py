@@ -35,7 +35,7 @@ class V1VirtualMachineInstanceSpec(object):
         'domain': 'V1DomainSpec',
         'hostname': 'str',
         'networks': 'list[V1Network]',
-        'node_selector': 'dict(str, str)',
+        'node_selector': 'object',
         'subdomain': 'str',
         'termination_grace_period_seconds': 'int',
         'tolerations': 'list[V1Toleration]',
@@ -188,7 +188,7 @@ class V1VirtualMachineInstanceSpec(object):
         NodeSelector is a selector which must be true for the vmi to fit on a node. Selector which must match a node's labels for the vmi to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/ +optional
 
         :return: The node_selector of this V1VirtualMachineInstanceSpec.
-        :rtype: dict(str, str)
+        :rtype: object
         """
         return self._node_selector
 
@@ -199,7 +199,7 @@ class V1VirtualMachineInstanceSpec(object):
         NodeSelector is a selector which must be true for the vmi to fit on a node. Selector which must match a node's labels for the vmi to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/ +optional
 
         :param node_selector: The node_selector of this V1VirtualMachineInstanceSpec.
-        :type: dict(str, str)
+        :type: object
         """
 
         self._node_selector = node_selector

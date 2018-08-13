@@ -31,9 +31,9 @@ class V1ResourceRequirements(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'limits': 'dict(str, ResourceQuantity)',
+        'limits': 'object',
         'overcommit_guest_overhead': 'bool',
-        'requests': 'dict(str, ResourceQuantity)'
+        'requests': 'object'
     }
 
     attribute_map = {
@@ -65,7 +65,7 @@ class V1ResourceRequirements(object):
         Limits describes the maximum amount of compute resources allowed. Valid resource keys are \"memory\" and \"cpu\". +optional
 
         :return: The limits of this V1ResourceRequirements.
-        :rtype: dict(str, ResourceQuantity)
+        :rtype: object
         """
         return self._limits
 
@@ -76,7 +76,7 @@ class V1ResourceRequirements(object):
         Limits describes the maximum amount of compute resources allowed. Valid resource keys are \"memory\" and \"cpu\". +optional
 
         :param limits: The limits of this V1ResourceRequirements.
-        :type: dict(str, ResourceQuantity)
+        :type: object
         """
 
         self._limits = limits
@@ -111,7 +111,7 @@ class V1ResourceRequirements(object):
         Requests is a description of the initial vmi resources. Valid resource keys are \"memory\" and \"cpu\". +optional
 
         :return: The requests of this V1ResourceRequirements.
-        :rtype: dict(str, ResourceQuantity)
+        :rtype: object
         """
         return self._requests
 
@@ -122,7 +122,7 @@ class V1ResourceRequirements(object):
         Requests is a description of the initial vmi resources. Valid resource keys are \"memory\" and \"cpu\". +optional
 
         :param requests: The requests of this V1ResourceRequirements.
-        :type: dict(str, ResourceQuantity)
+        :type: object
         """
 
         self._requests = requests

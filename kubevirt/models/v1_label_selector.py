@@ -32,7 +32,7 @@ class V1LabelSelector(object):
     """
     swagger_types = {
         'match_expressions': 'list[V1LabelSelectorRequirement]',
-        'match_labels': 'dict(str, str)'
+        'match_labels': 'object'
     }
 
     attribute_map = {
@@ -83,7 +83,7 @@ class V1LabelSelector(object):
         matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed.
 
         :return: The match_labels of this V1LabelSelector.
-        :rtype: dict(str, str)
+        :rtype: object
         """
         return self._match_labels
 
@@ -94,7 +94,7 @@ class V1LabelSelector(object):
         matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed.
 
         :param match_labels: The match_labels of this V1LabelSelector.
-        :type: dict(str, str)
+        :type: object
         """
 
         self._match_labels = match_labels

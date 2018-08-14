@@ -36,6 +36,7 @@ class V1Interface(object):
         'mac_address': 'str',
         'model': 'str',
         'name': 'str',
+        'pci_address': 'str',
         'ports': 'list[V1Port]',
         'slirp': 'V1InterfaceSlirp'
     }
@@ -46,11 +47,12 @@ class V1Interface(object):
         'mac_address': 'macAddress',
         'model': 'model',
         'name': 'name',
+        'pci_address': 'pciAddress',
         'ports': 'ports',
         'slirp': 'slirp'
     }
 
-    def __init__(self, boot_order=None, bridge=None, mac_address=None, model=None, name=None, ports=None, slirp=None):
+    def __init__(self, boot_order=None, bridge=None, mac_address=None, model=None, name=None, pci_address=None, ports=None, slirp=None):
         """
         V1Interface - a model defined in Swagger
         """
@@ -60,6 +62,7 @@ class V1Interface(object):
         self._mac_address = None
         self._model = None
         self._name = None
+        self._pci_address = None
         self._ports = None
         self._slirp = None
 
@@ -72,6 +75,8 @@ class V1Interface(object):
         if model is not None:
           self.model = model
         self.name = name
+        if pci_address is not None:
+          self.pci_address = pci_address
         if ports is not None:
           self.ports = ports
         if slirp is not None:
@@ -191,6 +196,29 @@ class V1Interface(object):
             raise ValueError("Invalid value for `name`, must not be `None`")
 
         self._name = name
+
+    @property
+    def pci_address(self):
+        """
+        Gets the pci_address of this V1Interface.
+        If specified, the virtual network interface will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10 +optional
+
+        :return: The pci_address of this V1Interface.
+        :rtype: str
+        """
+        return self._pci_address
+
+    @pci_address.setter
+    def pci_address(self, pci_address):
+        """
+        Sets the pci_address of this V1Interface.
+        If specified, the virtual network interface will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10 +optional
+
+        :param pci_address: The pci_address of this V1Interface.
+        :type: str
+        """
+
+        self._pci_address = pci_address
 
     @property
     def ports(self):

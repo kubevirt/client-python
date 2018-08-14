@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **mac_address** | **str** | Interface MAC address. For example: de:ad:00:00:be:af or DE-AD-00-00-BE-AF. | [optional] 
 **model** | **str** | Interface model. One of: e1000, e1000e, ne2k_pci, pcnet, rtl8139, virtio. Defaults to virtio. | [optional] 
 **name** | **str** | Logical name of the interface as well as a reference to the associated networks. Must match the Name of a Network. | 
+**pci_address** | **str** | If specified, the virtual network interface will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10 +optional | [optional] 
 **ports** | [**list[V1Port]**](V1Port.md) | List of ports to be forwarded to the virtual machine. | [optional] 
 **slirp** | [**V1InterfaceSlirp**](V1InterfaceSlirp.md) |  | [optional] 
 

@@ -105,3 +105,5 @@ from .v1_volume import V1Volume
 from .v1_watch_event import V1WatchEvent
 from .v1_watchdog import V1Watchdog
 from .v1_weighted_pod_affinity_term import V1WeightedPodAffinityTerm
+from .v1_interface_bridge import V1InterfaceBridge
+from .v1_interface_slirp import V1InterfaceSlirp

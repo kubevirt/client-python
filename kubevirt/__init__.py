@@ -115,3 +115,5 @@ from .api_client import ApiClient
 from .configuration import Configuration
 
 configuration = Configuration()
+from .models.v1_interface_bridge import V1InterfaceBridge
+from .models.v1_interface_slirp import V1InterfaceSlirp

@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 """
-This script demostrates lifecycle of VM
-* list existing VMs
-* create VM
-* wait until VM is running
-* delete VM
+This script demostrates lifecycle of VMI
+* list existing VMIs and VMs
+* create VMI
+* wait until VMI is running
+* update VMI
+* delete VMI
 """
 from pprint import pprint
 
@@ -22,35 +23,38 @@ def main():
     # List existing VMs
     pprint(api.list_namespaced_virtual_machine(NAMESPACE))
 
+    # List existing VMIs
+    pprint(api.list_namespaced_virtual_machine_instance(NAMESPACE))
+
     # Create new one
-    vm = el.read_yaml_file("vm-ephemeral.yaml")
-    pprint(api.create_namespaced_virtual_machine(vm, NAMESPACE))
+    vmi = el.read_yaml_file("vmi-ephemeral.yaml")
+    pprint(api.create_namespaced_virtual_machine_instance(vmi, NAMESPACE))
 
     # Wait until VM is running
     try:
-        w = el.Watch(api.list_namespaced_virtual_machine, NAMESPACE)
-        vm = w.wait_for_item(
-            el.get_name(vm), timeout=60,
+        w = el.Watch(api.list_namespaced_virtual_machine_instance, NAMESPACE)
+        vmi = w.wait_for_item(
+            el.get_name(vmi), timeout=60,
             success_condition=lambda e:
                 el.get_status(e['object']) == "Running"
         )
     except el.WaitForTimeout:
-        vm = el.read_namespaced_virtual_machine(el.get_name(vm), NAMESPACE)
+        vmi = api.read_namespaced_virtual_machine_instance(el.get_name(vmi), NAMESPACE)
         raise Exception(
-            "VM is not in expected state: %s != %s" % (
-                el.get_status(vm), "Running"
+            "VMI is not in expected state: %s != %s" % (
+                el.get_status(vmi), "Running"
             )
         )
 
     # Update memory of VM
-    vm['spec']['domain']['resources']['requests']['memory'] = '512M'
-    vm = api.replace_namespaced_virtual_machine(vm, NAMESPACE, el.get_name(vm))
-    pprint(vm)
+    vmi['spec']['domain']['resources']['requests']['memory'] = '512M'
+    vmi = api.replace_namespaced_virtual_machine_instance(vmi, NAMESPACE, el.get_name(vmi))
+    pprint(vmi)
 
     # Delete VM
     pprint(
-        api.delete_namespaced_virtual_machine(
-            V1DeleteOptions(), NAMESPACE, el.get_name(vm)
+        api.delete_namespaced_virtual_machine_instance(
+            V1DeleteOptions(), NAMESPACE, el.get_name(vmi)
         )
     )
 

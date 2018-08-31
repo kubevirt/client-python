@@ -32,6 +32,7 @@ class V1Volume(object):
     """
     swagger_types = {
         'cloud_init_no_cloud': 'V1CloudInitNoCloudSource',
+        'data_volume': 'V1DataVolumeSource',
         'empty_disk': 'V1EmptyDiskSource',
         'ephemeral': 'V1EphemeralVolumeSource',
         'name': 'str',
@@ -41,6 +42,7 @@ class V1Volume(object):
 
     attribute_map = {
         'cloud_init_no_cloud': 'cloudInitNoCloud',
+        'data_volume': 'dataVolume',
         'empty_disk': 'emptyDisk',
         'ephemeral': 'ephemeral',
         'name': 'name',
@@ -48,12 +50,13 @@ class V1Volume(object):
         'registry_disk': 'registryDisk'
     }
 
-    def __init__(self, cloud_init_no_cloud=None, empty_disk=None, ephemeral=None, name=None, persistent_volume_claim=None, registry_disk=None):
+    def __init__(self, cloud_init_no_cloud=None, data_volume=None, empty_disk=None, ephemeral=None, name=None, persistent_volume_claim=None, registry_disk=None):
         """
         V1Volume - a model defined in Swagger
         """
 
         self._cloud_init_no_cloud = None
+        self._data_volume = None
         self._empty_disk = None
         self._ephemeral = None
         self._name = None
@@ -62,6 +65,8 @@ class V1Volume(object):
 
         if cloud_init_no_cloud is not None:
           self.cloud_init_no_cloud = cloud_init_no_cloud
+        if data_volume is not None:
+          self.data_volume = data_volume
         if empty_disk is not None:
           self.empty_disk = empty_disk
         if ephemeral is not None:
@@ -94,6 +99,29 @@ class V1Volume(object):
         """
 
         self._cloud_init_no_cloud = cloud_init_no_cloud
+
+    @property
+    def data_volume(self):
+        """
+        Gets the data_volume of this V1Volume.
+        DataVolume represents the dynamic creation a PVC for this volume as well as the process of populating that PVC with a disk image. +optional
+
+        :return: The data_volume of this V1Volume.
+        :rtype: V1DataVolumeSource
+        """
+        return self._data_volume
+
+    @data_volume.setter
+    def data_volume(self, data_volume):
+        """
+        Sets the data_volume of this V1Volume.
+        DataVolume represents the dynamic creation a PVC for this volume as well as the process of populating that PVC with a disk image. +optional
+
+        :param data_volume: The data_volume of this V1Volume.
+        :type: V1DataVolumeSource
+        """
+
+        self._data_volume = data_volume
 
     @property
     def empty_disk(self):

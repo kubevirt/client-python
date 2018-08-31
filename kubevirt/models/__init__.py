@@ -24,6 +24,7 @@ from .v1_cpu import V1CPU
 from .v1_clock import V1Clock
 from .v1_clock_offset_utc import V1ClockOffsetUTC
 from .v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
+from .v1_data_volume_source import V1DataVolumeSource
 from .v1_delete_options import V1DeleteOptions
 from .v1_devices import V1Devices
 from .v1_disk import V1Disk
@@ -64,6 +65,7 @@ from .v1_node_selector_term import V1NodeSelectorTerm
 from .v1_object_meta import V1ObjectMeta
 from .v1_owner_reference import V1OwnerReference
 from .v1_pit_timer import V1PITTimer
+from .v1_persistent_volume_claim_spec import V1PersistentVolumeClaimSpec
 from .v1_persistent_volume_claim_volume_source import V1PersistentVolumeClaimVolumeSource
 from .v1_pod_affinity import V1PodAffinity
 from .v1_pod_affinity_term import V1PodAffinityTerm
@@ -105,5 +107,11 @@ from .v1_volume import V1Volume
 from .v1_watch_event import V1WatchEvent
 from .v1_watchdog import V1Watchdog
 from .v1_weighted_pod_affinity_term import V1WeightedPodAffinityTerm
+from .v1alpha1_data_volume import V1alpha1DataVolume
+from .v1alpha1_data_volume_source import V1alpha1DataVolumeSource
+from .v1alpha1_data_volume_source_http import V1alpha1DataVolumeSourceHTTP
+from .v1alpha1_data_volume_source_s3 import V1alpha1DataVolumeSourceS3
+from .v1alpha1_data_volume_spec import V1alpha1DataVolumeSpec
+from .v1alpha1_data_volume_status import V1alpha1DataVolumeStatus
 from .v1_interface_bridge import V1InterfaceBridge
 from .v1_interface_slirp import V1InterfaceSlirp

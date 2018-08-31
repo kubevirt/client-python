@@ -31,25 +31,53 @@ class V1VirtualMachineSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'data_volume_templates': 'list[V1alpha1DataVolume]',
         'running': 'bool',
         'template': 'V1VirtualMachineInstanceTemplateSpec'
     }
 
     attribute_map = {
+        'data_volume_templates': 'dataVolumeTemplates',
         'running': 'running',
         'template': 'template'
     }
 
-    def __init__(self, running=None, template=None):
+    def __init__(self, data_volume_templates=None, running=None, template=None):
         """
         V1VirtualMachineSpec - a model defined in Swagger
         """
 
+        self._data_volume_templates = None
         self._running = None
         self._template = None
 
+        if data_volume_templates is not None:
+          self.data_volume_templates = data_volume_templates
         self.running = running
         self.template = template
+
+    @property
+    def data_volume_templates(self):
+        """
+        Gets the data_volume_templates of this V1VirtualMachineSpec.
+        dataVolumeTemplates is a list of dataVolumes that the VirtualMachineInstance template can reference. DataVolumes in this list are dynamically created for the VirtualMachine and are tied to the VirtualMachine's life-cycle.
+
+        :return: The data_volume_templates of this V1VirtualMachineSpec.
+        :rtype: list[V1alpha1DataVolume]
+        """
+        return self._data_volume_templates
+
+    @data_volume_templates.setter
+    def data_volume_templates(self, data_volume_templates):
+        """
+        Sets the data_volume_templates of this V1VirtualMachineSpec.
+        dataVolumeTemplates is a list of dataVolumes that the VirtualMachineInstance template can reference. DataVolumes in this list are dynamically created for the VirtualMachine and are tied to the VirtualMachine's life-cycle.
+
+        :param data_volume_templates: The data_volume_templates of this V1VirtualMachineSpec.
+        :type: list[V1alpha1DataVolume]
+        """
+
+        self._data_volume_templates = data_volume_templates
 
     @property
     def running(self):

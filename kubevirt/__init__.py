@@ -24,6 +24,7 @@ from .models.v1_cpu import V1CPU
 from .models.v1_clock import V1Clock
 from .models.v1_clock_offset_utc import V1ClockOffsetUTC
 from .models.v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
+from .models.v1_data_volume_source import V1DataVolumeSource
 from .models.v1_delete_options import V1DeleteOptions
 from .models.v1_devices import V1Devices
 from .models.v1_disk import V1Disk
@@ -64,6 +65,7 @@ from .models.v1_node_selector_term import V1NodeSelectorTerm
 from .models.v1_object_meta import V1ObjectMeta
 from .models.v1_owner_reference import V1OwnerReference
 from .models.v1_pit_timer import V1PITTimer
+from .models.v1_persistent_volume_claim_spec import V1PersistentVolumeClaimSpec
 from .models.v1_persistent_volume_claim_volume_source import V1PersistentVolumeClaimVolumeSource
 from .models.v1_pod_affinity import V1PodAffinity
 from .models.v1_pod_affinity_term import V1PodAffinityTerm
@@ -105,6 +107,12 @@ from .models.v1_volume import V1Volume
 from .models.v1_watch_event import V1WatchEvent
 from .models.v1_watchdog import V1Watchdog
 from .models.v1_weighted_pod_affinity_term import V1WeightedPodAffinityTerm
+from .models.v1alpha1_data_volume import V1alpha1DataVolume
+from .models.v1alpha1_data_volume_source import V1alpha1DataVolumeSource
+from .models.v1alpha1_data_volume_source_http import V1alpha1DataVolumeSourceHTTP
+from .models.v1alpha1_data_volume_source_s3 import V1alpha1DataVolumeSourceS3
+from .models.v1alpha1_data_volume_spec import V1alpha1DataVolumeSpec
+from .models.v1alpha1_data_volume_status import V1alpha1DataVolumeStatus
 
 # import apis into sdk package
 from .apis.default_api import DefaultApi

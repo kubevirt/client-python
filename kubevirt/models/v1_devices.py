@@ -35,6 +35,7 @@ class V1Devices(object):
         'autoattach_pod_interface': 'bool',
         'disks': 'list[V1Disk]',
         'interfaces': 'list[V1Interface]',
+        'rng': 'V1Rng',
         'watchdog': 'V1Watchdog'
     }
 
@@ -43,10 +44,11 @@ class V1Devices(object):
         'autoattach_pod_interface': 'autoattachPodInterface',
         'disks': 'disks',
         'interfaces': 'interfaces',
+        'rng': 'rng',
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_pod_interface=None, disks=None, interfaces=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_pod_interface=None, disks=None, interfaces=None, rng=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class V1Devices(object):
         self._autoattach_pod_interface = None
         self._disks = None
         self._interfaces = None
+        self._rng = None
         self._watchdog = None
 
         if autoattach_graphics_device is not None:
@@ -65,6 +68,8 @@ class V1Devices(object):
           self.disks = disks
         if interfaces is not None:
           self.interfaces = interfaces
+        if rng is not None:
+          self.rng = rng
         if watchdog is not None:
           self.watchdog = watchdog
 
@@ -159,6 +164,29 @@ class V1Devices(object):
         """
 
         self._interfaces = interfaces
+
+    @property
+    def rng(self):
+        """
+        Gets the rng of this V1Devices.
+        Whether to have random number generator from host +optional
+
+        :return: The rng of this V1Devices.
+        :rtype: V1Rng
+        """
+        return self._rng
+
+    @rng.setter
+    def rng(self, rng):
+        """
+        Sets the rng of this V1Devices.
+        Whether to have random number generator from host +optional
+
+        :param rng: The rng of this V1Devices.
+        :type: V1Rng
+        """
+
+        self._rng = rng
 
     @property
     def watchdog(self):

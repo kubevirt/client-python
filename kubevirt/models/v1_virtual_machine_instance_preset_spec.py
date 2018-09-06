@@ -31,7 +31,7 @@ class V1VirtualMachineInstancePresetSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'domain': 'V1DomainPresetSpec',
+        'domain': 'V1DomainSpec',
         'selector': 'V1LabelSelector'
     }
 
@@ -59,7 +59,7 @@ class V1VirtualMachineInstancePresetSpec(object):
         Domain is the same object type as contained in VirtualMachineInstanceSpec
 
         :return: The domain of this V1VirtualMachineInstancePresetSpec.
-        :rtype: V1DomainPresetSpec
+        :rtype: V1DomainSpec
         """
         return self._domain
 
@@ -70,7 +70,7 @@ class V1VirtualMachineInstancePresetSpec(object):
         Domain is the same object type as contained in VirtualMachineInstanceSpec
 
         :param domain: The domain of this V1VirtualMachineInstancePresetSpec.
-        :type: V1DomainPresetSpec
+        :type: V1DomainSpec
         """
 
         self._domain = domain

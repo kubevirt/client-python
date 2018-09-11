@@ -24,6 +24,7 @@ from .models.v1_cpu import V1CPU
 from .models.v1_clock import V1Clock
 from .models.v1_clock_offset_utc import V1ClockOffsetUTC
 from .models.v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
+from .models.v1_config_map_volume_source import V1ConfigMapVolumeSource
 from .models.v1_data_volume_source import V1DataVolumeSource
 from .models.v1_delete_options import V1DeleteOptions
 from .models.v1_devices import V1Devices
@@ -42,6 +43,7 @@ from .models.v1_firmware import V1Firmware
 from .models.v1_floppy_target import V1FloppyTarget
 from .models.v1_group_version_for_discovery import V1GroupVersionForDiscovery
 from .models.v1_hpet_timer import V1HPETTimer
+from .models.v1_host_disk import V1HostDisk
 from .models.v1_hugepages import V1Hugepages
 from .models.v1_hyperv_timer import V1HypervTimer
 from .models.v1_i6300_esb_watchdog import V1I6300ESBWatchdog
@@ -77,6 +79,7 @@ from .models.v1_preferred_scheduling_term import V1PreferredSchedulingTerm
 from .models.v1_rtc_timer import V1RTCTimer
 from .models.v1_registry_disk_source import V1RegistryDiskSource
 from .models.v1_resource_requirements import V1ResourceRequirements
+from .models.v1_secret_volume_source import V1SecretVolumeSource
 from .models.v1_server_address_by_client_cidr import V1ServerAddressByClientCIDR
 from .models.v1_status import V1Status
 from .models.v1_status_cause import V1StatusCause

@@ -32,50 +32,65 @@ class V1Volume(object):
     """
     swagger_types = {
         'cloud_init_no_cloud': 'V1CloudInitNoCloudSource',
+        'config_map': 'V1ConfigMapVolumeSource',
         'data_volume': 'V1DataVolumeSource',
         'empty_disk': 'V1EmptyDiskSource',
         'ephemeral': 'V1EphemeralVolumeSource',
+        'host_disk': 'V1HostDisk',
         'name': 'str',
         'persistent_volume_claim': 'V1PersistentVolumeClaimVolumeSource',
-        'registry_disk': 'V1RegistryDiskSource'
+        'registry_disk': 'V1RegistryDiskSource',
+        'secret': 'V1SecretVolumeSource'
     }
 
     attribute_map = {
         'cloud_init_no_cloud': 'cloudInitNoCloud',
+        'config_map': 'configMap',
         'data_volume': 'dataVolume',
         'empty_disk': 'emptyDisk',
         'ephemeral': 'ephemeral',
+        'host_disk': 'hostDisk',
         'name': 'name',
         'persistent_volume_claim': 'persistentVolumeClaim',
-        'registry_disk': 'registryDisk'
+        'registry_disk': 'registryDisk',
+        'secret': 'secret'
     }
 
-    def __init__(self, cloud_init_no_cloud=None, data_volume=None, empty_disk=None, ephemeral=None, name=None, persistent_volume_claim=None, registry_disk=None):
+    def __init__(self, cloud_init_no_cloud=None, config_map=None, data_volume=None, empty_disk=None, ephemeral=None, host_disk=None, name=None, persistent_volume_claim=None, registry_disk=None, secret=None):
         """
         V1Volume - a model defined in Swagger
         """
 
         self._cloud_init_no_cloud = None
+        self._config_map = None
         self._data_volume = None
         self._empty_disk = None
         self._ephemeral = None
+        self._host_disk = None
         self._name = None
         self._persistent_volume_claim = None
         self._registry_disk = None
+        self._secret = None
 
         if cloud_init_no_cloud is not None:
           self.cloud_init_no_cloud = cloud_init_no_cloud
+        if config_map is not None:
+          self.config_map = config_map
         if data_volume is not None:
           self.data_volume = data_volume
         if empty_disk is not None:
           self.empty_disk = empty_disk
         if ephemeral is not None:
           self.ephemeral = ephemeral
+        if host_disk is not None:
+          self.host_disk = host_disk
         self.name = name
         if persistent_volume_claim is not None:
           self.persistent_volume_claim = persistent_volume_claim
         if registry_disk is not None:
           self.registry_disk = registry_disk
+        if secret is not None:
+          self.secret = secret
 
     @property
     def cloud_init_no_cloud(self):
@@ -99,6 +114,29 @@ class V1Volume(object):
         """
 
         self._cloud_init_no_cloud = cloud_init_no_cloud
+
+    @property
+    def config_map(self):
+        """
+        Gets the config_map of this V1Volume.
+        ConfigMapSource represents a reference to a ConfigMap in the same namespace. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/ +optional
+
+        :return: The config_map of this V1Volume.
+        :rtype: V1ConfigMapVolumeSource
+        """
+        return self._config_map
+
+    @config_map.setter
+    def config_map(self, config_map):
+        """
+        Sets the config_map of this V1Volume.
+        ConfigMapSource represents a reference to a ConfigMap in the same namespace. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/ +optional
+
+        :param config_map: The config_map of this V1Volume.
+        :type: V1ConfigMapVolumeSource
+        """
+
+        self._config_map = config_map
 
     @property
     def data_volume(self):
@@ -170,6 +208,29 @@ class V1Volume(object):
         self._ephemeral = ephemeral
 
     @property
+    def host_disk(self):
+        """
+        Gets the host_disk of this V1Volume.
+        HostDisk represents a disk created on the cluster level +optional
+
+        :return: The host_disk of this V1Volume.
+        :rtype: V1HostDisk
+        """
+        return self._host_disk
+
+    @host_disk.setter
+    def host_disk(self, host_disk):
+        """
+        Sets the host_disk of this V1Volume.
+        HostDisk represents a disk created on the cluster level +optional
+
+        :param host_disk: The host_disk of this V1Volume.
+        :type: V1HostDisk
+        """
+
+        self._host_disk = host_disk
+
+    @property
     def name(self):
         """
         Gets the name of this V1Volume.
@@ -239,6 +300,29 @@ class V1Volume(object):
         """
 
         self._registry_disk = registry_disk
+
+    @property
+    def secret(self):
+        """
+        Gets the secret of this V1Volume.
+        SecretVolumeSource represents a reference to a secret data in the same namespace. More info: https://kubernetes.io/docs/concepts/configuration/secret/ +optional
+
+        :return: The secret of this V1Volume.
+        :rtype: V1SecretVolumeSource
+        """
+        return self._secret
+
+    @secret.setter
+    def secret(self, secret):
+        """
+        Sets the secret of this V1Volume.
+        SecretVolumeSource represents a reference to a secret data in the same namespace. More info: https://kubernetes.io/docs/concepts/configuration/secret/ +optional
+
+        :param secret: The secret of this V1Volume.
+        :type: V1SecretVolumeSource
+        """
+
+        self._secret = secret
 
     def to_dict(self):
         """

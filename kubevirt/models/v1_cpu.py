@@ -32,24 +32,29 @@ class V1CPU(object):
     """
     swagger_types = {
         'cores': 'int',
+        'dedicated_cpu_placement': 'bool',
         'model': 'str'
     }
 
     attribute_map = {
         'cores': 'cores',
+        'dedicated_cpu_placement': 'dedicatedCpuPlacement',
         'model': 'model'
     }
 
-    def __init__(self, cores=None, model=None):
+    def __init__(self, cores=None, dedicated_cpu_placement=None, model=None):
         """
         V1CPU - a model defined in Swagger
         """
 
         self._cores = None
+        self._dedicated_cpu_placement = None
         self._model = None
 
         if cores is not None:
           self.cores = cores
+        if dedicated_cpu_placement is not None:
+          self.dedicated_cpu_placement = dedicated_cpu_placement
         if model is not None:
           self.model = model
 
@@ -75,6 +80,29 @@ class V1CPU(object):
         """
 
         self._cores = cores
+
+    @property
+    def dedicated_cpu_placement(self):
+        """
+        Gets the dedicated_cpu_placement of this V1CPU.
+        DedicatedCPUPlacement requests the scheduler to place the VirtualMachineInstance on a node with enough dedicated pCPUs and pin the vCPUs to it. +optional
+
+        :return: The dedicated_cpu_placement of this V1CPU.
+        :rtype: bool
+        """
+        return self._dedicated_cpu_placement
+
+    @dedicated_cpu_placement.setter
+    def dedicated_cpu_placement(self, dedicated_cpu_placement):
+        """
+        Sets the dedicated_cpu_placement of this V1CPU.
+        DedicatedCPUPlacement requests the scheduler to place the VirtualMachineInstance on a node with enough dedicated pCPUs and pin the vCPUs to it. +optional
+
+        :param dedicated_cpu_placement: The dedicated_cpu_placement of this V1CPU.
+        :type: bool
+        """
+
+        self._dedicated_cpu_placement = dedicated_cpu_placement
 
     @property
     def model(self):

@@ -34,17 +34,19 @@ class V1VirtualMachineInstanceStatus(object):
         'conditions': 'list[V1VirtualMachineInstanceCondition]',
         'interfaces': 'list[V1VirtualMachineInstanceNetworkInterface]',
         'node_name': 'str',
-        'phase': 'str'
+        'phase': 'str',
+        'reason': 'str'
     }
 
     attribute_map = {
         'conditions': 'conditions',
         'interfaces': 'interfaces',
         'node_name': 'nodeName',
-        'phase': 'phase'
+        'phase': 'phase',
+        'reason': 'reason'
     }
 
-    def __init__(self, conditions=None, interfaces=None, node_name=None, phase=None):
+    def __init__(self, conditions=None, interfaces=None, node_name=None, phase=None, reason=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._interfaces = None
         self._node_name = None
         self._phase = None
+        self._reason = None
 
         if conditions is not None:
           self.conditions = conditions
@@ -62,6 +65,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.node_name = node_name
         if phase is not None:
           self.phase = phase
+        if reason is not None:
+          self.reason = reason
 
     @property
     def conditions(self):
@@ -154,6 +159,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._phase = phase
+
+    @property
+    def reason(self):
+        """
+        Gets the reason of this V1VirtualMachineInstanceStatus.
+        A brief CamelCase message indicating details about why the VMI is in this state. e.g. 'NodeUnresponsive' +optional
+
+        :return: The reason of this V1VirtualMachineInstanceStatus.
+        :rtype: str
+        """
+        return self._reason
+
+    @reason.setter
+    def reason(self, reason):
+        """
+        Sets the reason of this V1VirtualMachineInstanceStatus.
+        A brief CamelCase message indicating details about why the VMI is in this state. e.g. 'NodeUnresponsive' +optional
+
+        :param reason: The reason of this V1VirtualMachineInstanceStatus.
+        :type: str
+        """
+
+        self._reason = reason
 
     def to_dict(self):
         """

@@ -1,10 +1,10 @@
-# V1alpha1DataVolumeSourceHTTP
+# V1alpha1DataVolumeSourcePVC
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**secret_ref** | **str** |  | [optional] 
-**url** | **str** |  | [optional] 
+**name** | **str** |  | [optional] 
+**namespace** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -31,22 +31,48 @@ class V1alpha1DataVolumeSourceHTTP(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'secret_ref': 'str',
         'url': 'str'
     }
 
     attribute_map = {
+        'secret_ref': 'secretRef',
         'url': 'url'
     }
 
-    def __init__(self, url=None):
+    def __init__(self, secret_ref=None, url=None):
         """
         V1alpha1DataVolumeSourceHTTP - a model defined in Swagger
         """
 
+        self._secret_ref = None
         self._url = None
 
+        if secret_ref is not None:
+          self.secret_ref = secret_ref
         if url is not None:
           self.url = url
+
+    @property
+    def secret_ref(self):
+        """
+        Gets the secret_ref of this V1alpha1DataVolumeSourceHTTP.
+
+        :return: The secret_ref of this V1alpha1DataVolumeSourceHTTP.
+        :rtype: str
+        """
+        return self._secret_ref
+
+    @secret_ref.setter
+    def secret_ref(self, secret_ref):
+        """
+        Sets the secret_ref of this V1alpha1DataVolumeSourceHTTP.
+
+        :param secret_ref: The secret_ref of this V1alpha1DataVolumeSourceHTTP.
+        :type: str
+        """
+
+        self._secret_ref = secret_ref
 
     @property
     def url(self):

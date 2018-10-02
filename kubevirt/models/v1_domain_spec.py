@@ -36,6 +36,7 @@ class V1DomainSpec(object):
         'devices': 'V1Devices',
         'features': 'V1Features',
         'firmware': 'V1Firmware',
+        'io_threads_policy': 'V1IOThreadsPolicy',
         'machine': 'V1Machine',
         'memory': 'V1Memory',
         'resources': 'V1ResourceRequirements'
@@ -47,12 +48,13 @@ class V1DomainSpec(object):
         'devices': 'devices',
         'features': 'features',
         'firmware': 'firmware',
+        'io_threads_policy': 'ioThreadsPolicy',
         'machine': 'machine',
         'memory': 'memory',
         'resources': 'resources'
     }
 
-    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, memory=None, resources=None):
+    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, io_threads_policy=None, machine=None, memory=None, resources=None):
         """
         V1DomainSpec - a model defined in Swagger
         """
@@ -62,6 +64,7 @@ class V1DomainSpec(object):
         self._devices = None
         self._features = None
         self._firmware = None
+        self._io_threads_policy = None
         self._machine = None
         self._memory = None
         self._resources = None
@@ -75,6 +78,8 @@ class V1DomainSpec(object):
           self.features = features
         if firmware is not None:
           self.firmware = firmware
+        if io_threads_policy is not None:
+          self.io_threads_policy = io_threads_policy
         if machine is not None:
           self.machine = machine
         if memory is not None:
@@ -198,6 +203,29 @@ class V1DomainSpec(object):
         """
 
         self._firmware = firmware
+
+    @property
+    def io_threads_policy(self):
+        """
+        Gets the io_threads_policy of this V1DomainSpec.
+        Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto +optional
+
+        :return: The io_threads_policy of this V1DomainSpec.
+        :rtype: V1IOThreadsPolicy
+        """
+        return self._io_threads_policy
+
+    @io_threads_policy.setter
+    def io_threads_policy(self, io_threads_policy):
+        """
+        Sets the io_threads_policy of this V1DomainSpec.
+        Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto +optional
+
+        :param io_threads_policy: The io_threads_policy of this V1DomainSpec.
+        :type: V1IOThreadsPolicy
+        """
+
+        self._io_threads_policy = io_threads_policy
 
     @property
     def machine(self):

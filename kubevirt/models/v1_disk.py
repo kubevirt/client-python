@@ -33,6 +33,7 @@ class V1Disk(object):
     swagger_types = {
         'boot_order': 'int',
         'cdrom': 'V1CDRomTarget',
+        'dedicated_io_thread': 'bool',
         'disk': 'V1DiskTarget',
         'floppy': 'V1FloppyTarget',
         'lun': 'V1LunTarget',
@@ -44,6 +45,7 @@ class V1Disk(object):
     attribute_map = {
         'boot_order': 'bootOrder',
         'cdrom': 'cdrom',
+        'dedicated_io_thread': 'dedicatedIOThread',
         'disk': 'disk',
         'floppy': 'floppy',
         'lun': 'lun',
@@ -52,13 +54,14 @@ class V1Disk(object):
         'volume_name': 'volumeName'
     }
 
-    def __init__(self, boot_order=None, cdrom=None, disk=None, floppy=None, lun=None, name=None, serial=None, volume_name=None):
+    def __init__(self, boot_order=None, cdrom=None, dedicated_io_thread=None, disk=None, floppy=None, lun=None, name=None, serial=None, volume_name=None):
         """
         V1Disk - a model defined in Swagger
         """
 
         self._boot_order = None
         self._cdrom = None
+        self._dedicated_io_thread = None
         self._disk = None
         self._floppy = None
         self._lun = None
@@ -70,6 +73,8 @@ class V1Disk(object):
           self.boot_order = boot_order
         if cdrom is not None:
           self.cdrom = cdrom
+        if dedicated_io_thread is not None:
+          self.dedicated_io_thread = dedicated_io_thread
         if disk is not None:
           self.disk = disk
         if floppy is not None:
@@ -126,6 +131,29 @@ class V1Disk(object):
         """
 
         self._cdrom = cdrom
+
+    @property
+    def dedicated_io_thread(self):
+        """
+        Gets the dedicated_io_thread of this V1Disk.
+        dedicatedIOThread indicates this disk should have an exclusive IO Thread. Enabling this implies useIOThreads = true. Defaults to false. +optional
+
+        :return: The dedicated_io_thread of this V1Disk.
+        :rtype: bool
+        """
+        return self._dedicated_io_thread
+
+    @dedicated_io_thread.setter
+    def dedicated_io_thread(self, dedicated_io_thread):
+        """
+        Sets the dedicated_io_thread of this V1Disk.
+        dedicatedIOThread indicates this disk should have an exclusive IO Thread. Enabling this implies useIOThreads = true. Defaults to false. +optional
+
+        :param dedicated_io_thread: The dedicated_io_thread of this V1Disk.
+        :type: bool
+        """
+
+        self._dedicated_io_thread = dedicated_io_thread
 
     @property
     def disk(self):

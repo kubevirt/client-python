@@ -77,7 +77,7 @@ class V1Devices(object):
     def autoattach_graphics_device(self):
         """
         Gets the autoattach_graphics_device of this V1Devices.
-        Wheater to attach the default graphics device or not. VNC will not be available if set to false. Defaults to true.
+        Whether to attach the default graphics device or not. VNC will not be available if set to false. Defaults to true.
 
         :return: The autoattach_graphics_device of this V1Devices.
         :rtype: bool
@@ -88,7 +88,7 @@ class V1Devices(object):
     def autoattach_graphics_device(self, autoattach_graphics_device):
         """
         Sets the autoattach_graphics_device of this V1Devices.
-        Wheater to attach the default graphics device or not. VNC will not be available if set to false. Defaults to true.
+        Whether to attach the default graphics device or not. VNC will not be available if set to false. Defaults to true.
 
         :param autoattach_graphics_device: The autoattach_graphics_device of this V1Devices.
         :type: bool
@@ -146,7 +146,7 @@ class V1Devices(object):
     def interfaces(self):
         """
         Gets the interfaces of this V1Devices.
-        Interfaces describe network interfaces which are added to the vm.
+        Interfaces describe network interfaces which are added to the vmi.
 
         :return: The interfaces of this V1Devices.
         :rtype: list[V1Interface]
@@ -157,7 +157,7 @@ class V1Devices(object):
     def interfaces(self, interfaces):
         """
         Sets the interfaces of this V1Devices.
-        Interfaces describe network interfaces which are added to the vm.
+        Interfaces describe network interfaces which are added to the vmi.
 
         :param interfaces: The interfaces of this V1Devices.
         :type: list[V1Interface]

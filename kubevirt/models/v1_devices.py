@@ -33,6 +33,7 @@ class V1Devices(object):
     swagger_types = {
         'autoattach_graphics_device': 'bool',
         'autoattach_pod_interface': 'bool',
+        'block_multi_queue': 'bool',
         'disks': 'list[V1Disk]',
         'interfaces': 'list[V1Interface]',
         'rng': 'V1Rng',
@@ -42,19 +43,21 @@ class V1Devices(object):
     attribute_map = {
         'autoattach_graphics_device': 'autoattachGraphicsDevice',
         'autoattach_pod_interface': 'autoattachPodInterface',
+        'block_multi_queue': 'blockMultiQueue',
         'disks': 'disks',
         'interfaces': 'interfaces',
         'rng': 'rng',
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_pod_interface=None, disks=None, interfaces=None, rng=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_pod_interface=None, block_multi_queue=None, disks=None, interfaces=None, rng=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
 
         self._autoattach_graphics_device = None
         self._autoattach_pod_interface = None
+        self._block_multi_queue = None
         self._disks = None
         self._interfaces = None
         self._rng = None
@@ -64,6 +67,8 @@ class V1Devices(object):
           self.autoattach_graphics_device = autoattach_graphics_device
         if autoattach_pod_interface is not None:
           self.autoattach_pod_interface = autoattach_pod_interface
+        if block_multi_queue is not None:
+          self.block_multi_queue = block_multi_queue
         if disks is not None:
           self.disks = disks
         if interfaces is not None:
@@ -118,6 +123,29 @@ class V1Devices(object):
         """
 
         self._autoattach_pod_interface = autoattach_pod_interface
+
+    @property
+    def block_multi_queue(self):
+        """
+        Gets the block_multi_queue of this V1Devices.
+        Whether or not to enable virtio multi-queue for block devices +optional
+
+        :return: The block_multi_queue of this V1Devices.
+        :rtype: bool
+        """
+        return self._block_multi_queue
+
+    @block_multi_queue.setter
+    def block_multi_queue(self, block_multi_queue):
+        """
+        Sets the block_multi_queue of this V1Devices.
+        Whether or not to enable virtio multi-queue for block devices +optional
+
+        :param block_multi_queue: The block_multi_queue of this V1Devices.
+        :type: bool
+        """
+
+        self._block_multi_queue = block_multi_queue
 
     @property
     def disks(self):

@@ -33,6 +33,7 @@ class V1VirtualMachineInstanceStatus(object):
     swagger_types = {
         'conditions': 'list[V1VirtualMachineInstanceCondition]',
         'interfaces': 'list[V1VirtualMachineInstanceNetworkInterface]',
+        'migration_state': 'V1VirtualMachineInstanceMigrationState',
         'node_name': 'str',
         'phase': 'str',
         'reason': 'str'
@@ -41,18 +42,20 @@ class V1VirtualMachineInstanceStatus(object):
     attribute_map = {
         'conditions': 'conditions',
         'interfaces': 'interfaces',
+        'migration_state': 'migrationState',
         'node_name': 'nodeName',
         'phase': 'phase',
         'reason': 'reason'
     }
 
-    def __init__(self, conditions=None, interfaces=None, node_name=None, phase=None, reason=None):
+    def __init__(self, conditions=None, interfaces=None, migration_state=None, node_name=None, phase=None, reason=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
 
         self._conditions = None
         self._interfaces = None
+        self._migration_state = None
         self._node_name = None
         self._phase = None
         self._reason = None
@@ -61,6 +64,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.conditions = conditions
         if interfaces is not None:
           self.interfaces = interfaces
+        if migration_state is not None:
+          self.migration_state = migration_state
         if node_name is not None:
           self.node_name = node_name
         if phase is not None:
@@ -113,6 +118,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._interfaces = interfaces
+
+    @property
+    def migration_state(self):
+        """
+        Gets the migration_state of this V1VirtualMachineInstanceStatus.
+        Represents the status of a live migration
+
+        :return: The migration_state of this V1VirtualMachineInstanceStatus.
+        :rtype: V1VirtualMachineInstanceMigrationState
+        """
+        return self._migration_state
+
+    @migration_state.setter
+    def migration_state(self, migration_state):
+        """
+        Sets the migration_state of this V1VirtualMachineInstanceStatus.
+        Represents the status of a live migration
+
+        :param migration_state: The migration_state of this V1VirtualMachineInstanceStatus.
+        :type: V1VirtualMachineInstanceMigrationState
+        """
+
+        self._migration_state = migration_state
 
     @property
     def node_name(self):

@@ -32,24 +32,29 @@ class V1DiskTarget(object):
     """
     swagger_types = {
         'bus': 'str',
+        'pci_address': 'str',
         'readonly': 'bool'
     }
 
     attribute_map = {
         'bus': 'bus',
+        'pci_address': 'pciAddress',
         'readonly': 'readonly'
     }
 
-    def __init__(self, bus=None, readonly=None):
+    def __init__(self, bus=None, pci_address=None, readonly=None):
         """
         V1DiskTarget - a model defined in Swagger
         """
 
         self._bus = None
+        self._pci_address = None
         self._readonly = None
 
         if bus is not None:
           self.bus = bus
+        if pci_address is not None:
+          self.pci_address = pci_address
         if readonly is not None:
           self.readonly = readonly
 
@@ -75,6 +80,29 @@ class V1DiskTarget(object):
         """
 
         self._bus = bus
+
+    @property
+    def pci_address(self):
+        """
+        Gets the pci_address of this V1DiskTarget.
+        If specified, the virtual disk will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10 +optional
+
+        :return: The pci_address of this V1DiskTarget.
+        :rtype: str
+        """
+        return self._pci_address
+
+    @pci_address.setter
+    def pci_address(self, pci_address):
+        """
+        Sets the pci_address of this V1DiskTarget.
+        If specified, the virtual disk will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10 +optional
+
+        :param pci_address: The pci_address of this V1DiskTarget.
+        :type: str
+        """
+
+        self._pci_address = pci_address
 
     @property
     def readonly(self):

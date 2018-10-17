@@ -40,7 +40,8 @@ class V1Volume(object):
         'name': 'str',
         'persistent_volume_claim': 'V1PersistentVolumeClaimVolumeSource',
         'registry_disk': 'V1RegistryDiskSource',
-        'secret': 'V1SecretVolumeSource'
+        'secret': 'V1SecretVolumeSource',
+        'service_account': 'V1ServiceAccountVolumeSource'
     }
 
     attribute_map = {
@@ -53,10 +54,11 @@ class V1Volume(object):
         'name': 'name',
         'persistent_volume_claim': 'persistentVolumeClaim',
         'registry_disk': 'registryDisk',
-        'secret': 'secret'
+        'secret': 'secret',
+        'service_account': 'serviceAccount'
     }
 
-    def __init__(self, cloud_init_no_cloud=None, config_map=None, data_volume=None, empty_disk=None, ephemeral=None, host_disk=None, name=None, persistent_volume_claim=None, registry_disk=None, secret=None):
+    def __init__(self, cloud_init_no_cloud=None, config_map=None, data_volume=None, empty_disk=None, ephemeral=None, host_disk=None, name=None, persistent_volume_claim=None, registry_disk=None, secret=None, service_account=None):
         """
         V1Volume - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class V1Volume(object):
         self._persistent_volume_claim = None
         self._registry_disk = None
         self._secret = None
+        self._service_account = None
 
         if cloud_init_no_cloud is not None:
           self.cloud_init_no_cloud = cloud_init_no_cloud
@@ -91,6 +94,8 @@ class V1Volume(object):
           self.registry_disk = registry_disk
         if secret is not None:
           self.secret = secret
+        if service_account is not None:
+          self.service_account = service_account
 
     @property
     def cloud_init_no_cloud(self):
@@ -323,6 +328,29 @@ class V1Volume(object):
         """
 
         self._secret = secret
+
+    @property
+    def service_account(self):
+        """
+        Gets the service_account of this V1Volume.
+        ServiceAccountVolumeSource represents a reference to a service account. There can only be one volume of this type! More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/ +optional
+
+        :return: The service_account of this V1Volume.
+        :rtype: V1ServiceAccountVolumeSource
+        """
+        return self._service_account
+
+    @service_account.setter
+    def service_account(self, service_account):
+        """
+        Sets the service_account of this V1Volume.
+        ServiceAccountVolumeSource represents a reference to a service account. There can only be one volume of this type! More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/ +optional
+
+        :param service_account: The service_account of this V1Volume.
+        :type: V1ServiceAccountVolumeSource
+        """
+
+        self._service_account = service_account
 
     def to_dict(self):
         """

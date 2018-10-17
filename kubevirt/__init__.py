@@ -81,6 +81,7 @@ from .models.v1_registry_disk_source import V1RegistryDiskSource
 from .models.v1_resource_requirements import V1ResourceRequirements
 from .models.v1_secret_volume_source import V1SecretVolumeSource
 from .models.v1_server_address_by_client_cidr import V1ServerAddressByClientCIDR
+from .models.v1_service_account_volume_source import V1ServiceAccountVolumeSource
 from .models.v1_status import V1Status
 from .models.v1_status_cause import V1StatusCause
 from .models.v1_status_details import V1StatusDetails

@@ -24,6 +24,7 @@ from .models.v1_cpu import V1CPU
 from .models.v1_clock import V1Clock
 from .models.v1_clock_offset_utc import V1ClockOffsetUTC
 from .models.v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
+from .models.v1_cni_network import V1CniNetwork
 from .models.v1_config_map_volume_source import V1ConfigMapVolumeSource
 from .models.v1_data_volume_source import V1DataVolumeSource
 from .models.v1_delete_options import V1DeleteOptions
@@ -58,7 +59,6 @@ from .models.v1_local_object_reference import V1LocalObjectReference
 from .models.v1_lun_target import V1LunTarget
 from .models.v1_machine import V1Machine
 from .models.v1_memory import V1Memory
-from .models.v1_multus_network import V1MultusNetwork
 from .models.v1_network import V1Network
 from .models.v1_node_affinity import V1NodeAffinity
 from .models.v1_node_selector import V1NodeSelector

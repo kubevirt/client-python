@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **block_multi_queue** | **bool** | Whether or not to enable virtio multi-queue for block devices +optional | [optional] 
 **disks** | [**list[V1Disk]**](V1Disk.md) | Disks describes disks, cdroms, floppy and luns which are connected to the vmi. | [optional] 
 **interfaces** | [**list[V1Interface]**](V1Interface.md) | Interfaces describe network interfaces which are added to the vmi. | [optional] 
+**network_interface_multiqueue** | **bool** | If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature +optional | [optional] 
 **rng** | [**V1Rng**](V1Rng.md) | Whether to have random number generator from host +optional | [optional] 
 **watchdog** | [**V1Watchdog**](V1Watchdog.md) | Watchdog describes a watchdog device which can be added to the vmi. | [optional] 
 

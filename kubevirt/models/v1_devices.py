@@ -36,6 +36,7 @@ class V1Devices(object):
         'block_multi_queue': 'bool',
         'disks': 'list[V1Disk]',
         'interfaces': 'list[V1Interface]',
+        'network_interface_multiqueue': 'bool',
         'rng': 'V1Rng',
         'watchdog': 'V1Watchdog'
     }
@@ -46,11 +47,12 @@ class V1Devices(object):
         'block_multi_queue': 'blockMultiQueue',
         'disks': 'disks',
         'interfaces': 'interfaces',
+        'network_interface_multiqueue': 'networkInterfaceMultiqueue',
         'rng': 'rng',
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_pod_interface=None, block_multi_queue=None, disks=None, interfaces=None, rng=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_pod_interface=None, block_multi_queue=None, disks=None, interfaces=None, network_interface_multiqueue=None, rng=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -60,6 +62,7 @@ class V1Devices(object):
         self._block_multi_queue = None
         self._disks = None
         self._interfaces = None
+        self._network_interface_multiqueue = None
         self._rng = None
         self._watchdog = None
 
@@ -73,6 +76,8 @@ class V1Devices(object):
           self.disks = disks
         if interfaces is not None:
           self.interfaces = interfaces
+        if network_interface_multiqueue is not None:
+          self.network_interface_multiqueue = network_interface_multiqueue
         if rng is not None:
           self.rng = rng
         if watchdog is not None:
@@ -192,6 +197,29 @@ class V1Devices(object):
         """
 
         self._interfaces = interfaces
+
+    @property
+    def network_interface_multiqueue(self):
+        """
+        Gets the network_interface_multiqueue of this V1Devices.
+        If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature +optional
+
+        :return: The network_interface_multiqueue of this V1Devices.
+        :rtype: bool
+        """
+        return self._network_interface_multiqueue
+
+    @network_interface_multiqueue.setter
+    def network_interface_multiqueue(self, network_interface_multiqueue):
+        """
+        Sets the network_interface_multiqueue of this V1Devices.
+        If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature +optional
+
+        :param network_interface_multiqueue: The network_interface_multiqueue of this V1Devices.
+        :type: bool
+        """
+
+        self._network_interface_multiqueue = network_interface_multiqueue
 
     @property
     def rng(self):

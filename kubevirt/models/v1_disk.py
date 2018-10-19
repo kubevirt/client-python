@@ -32,6 +32,7 @@ class V1Disk(object):
     """
     swagger_types = {
         'boot_order': 'int',
+        'cache': 'str',
         'cdrom': 'V1CDRomTarget',
         'dedicated_io_thread': 'bool',
         'disk': 'V1DiskTarget',
@@ -44,6 +45,7 @@ class V1Disk(object):
 
     attribute_map = {
         'boot_order': 'bootOrder',
+        'cache': 'cache',
         'cdrom': 'cdrom',
         'dedicated_io_thread': 'dedicatedIOThread',
         'disk': 'disk',
@@ -54,12 +56,13 @@ class V1Disk(object):
         'volume_name': 'volumeName'
     }
 
-    def __init__(self, boot_order=None, cdrom=None, dedicated_io_thread=None, disk=None, floppy=None, lun=None, name=None, serial=None, volume_name=None):
+    def __init__(self, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, floppy=None, lun=None, name=None, serial=None, volume_name=None):
         """
         V1Disk - a model defined in Swagger
         """
 
         self._boot_order = None
+        self._cache = None
         self._cdrom = None
         self._dedicated_io_thread = None
         self._disk = None
@@ -71,6 +74,8 @@ class V1Disk(object):
 
         if boot_order is not None:
           self.boot_order = boot_order
+        if cache is not None:
+          self.cache = cache
         if cdrom is not None:
           self.cdrom = cdrom
         if dedicated_io_thread is not None:
@@ -108,6 +113,29 @@ class V1Disk(object):
         """
 
         self._boot_order = boot_order
+
+    @property
+    def cache(self):
+        """
+        Gets the cache of this V1Disk.
+        Cache specifies which kvm disk cache mode should be used +optional
+
+        :return: The cache of this V1Disk.
+        :rtype: str
+        """
+        return self._cache
+
+    @cache.setter
+    def cache(self, cache):
+        """
+        Sets the cache of this V1Disk.
+        Cache specifies which kvm disk cache mode should be used +optional
+
+        :param cache: The cache of this V1Disk.
+        :type: str
+        """
+
+        self._cache = cache
 
     @property
     def cdrom(self):

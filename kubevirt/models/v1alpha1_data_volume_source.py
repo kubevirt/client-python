@@ -33,16 +33,18 @@ class V1alpha1DataVolumeSource(object):
     swagger_types = {
         'http': 'V1alpha1DataVolumeSourceHTTP',
         'pvc': 'V1alpha1DataVolumeSourcePVC',
-        's3': 'V1alpha1DataVolumeSourceS3'
+        's3': 'V1alpha1DataVolumeSourceS3',
+        'upload': 'V1alpha1DataVolumeSourceUpload'
     }
 
     attribute_map = {
         'http': 'http',
         'pvc': 'pvc',
-        's3': 's3'
+        's3': 's3',
+        'upload': 'upload'
     }
 
-    def __init__(self, http=None, pvc=None, s3=None):
+    def __init__(self, http=None, pvc=None, s3=None, upload=None):
         """
         V1alpha1DataVolumeSource - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class V1alpha1DataVolumeSource(object):
         self._http = None
         self._pvc = None
         self._s3 = None
+        self._upload = None
 
         if http is not None:
           self.http = http
@@ -57,6 +60,8 @@ class V1alpha1DataVolumeSource(object):
           self.pvc = pvc
         if s3 is not None:
           self.s3 = s3
+        if upload is not None:
+          self.upload = upload
 
     @property
     def http(self):
@@ -120,6 +125,27 @@ class V1alpha1DataVolumeSource(object):
         """
 
         self._s3 = s3
+
+    @property
+    def upload(self):
+        """
+        Gets the upload of this V1alpha1DataVolumeSource.
+
+        :return: The upload of this V1alpha1DataVolumeSource.
+        :rtype: V1alpha1DataVolumeSourceUpload
+        """
+        return self._upload
+
+    @upload.setter
+    def upload(self, upload):
+        """
+        Sets the upload of this V1alpha1DataVolumeSource.
+
+        :param upload: The upload of this V1alpha1DataVolumeSource.
+        :type: V1alpha1DataVolumeSourceUpload
+        """
+
+        self._upload = upload
 
     def to_dict(self):
         """

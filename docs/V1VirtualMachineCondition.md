@@ -3,8 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**last_probe_time** | **str** |  | [optional] 
-**last_transition_time** | **str** |  | [optional] 
 **message** | **str** |  | [optional] 
 **reason** | **str** |  | [optional] 
 **status** | **str** |  | 

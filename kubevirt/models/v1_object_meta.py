@@ -33,7 +33,6 @@ class V1ObjectMeta(object):
     swagger_types = {
         'annotations': 'object',
         'cluster_name': 'str',
-        'creation_timestamp': 'str',
         'deletion_grace_period_seconds': 'int',
         'deletion_timestamp': 'str',
         'finalizers': 'list[str]',
@@ -52,7 +51,6 @@ class V1ObjectMeta(object):
     attribute_map = {
         'annotations': 'annotations',
         'cluster_name': 'clusterName',
-        'creation_timestamp': 'creationTimestamp',
         'deletion_grace_period_seconds': 'deletionGracePeriodSeconds',
         'deletion_timestamp': 'deletionTimestamp',
         'finalizers': 'finalizers',
@@ -68,14 +66,13 @@ class V1ObjectMeta(object):
         'uid': 'uid'
     }
 
-    def __init__(self, annotations=None, cluster_name=None, creation_timestamp=None, deletion_grace_period_seconds=None, deletion_timestamp=None, finalizers=None, generate_name=None, generation=None, initializers=None, labels=None, name=None, namespace=None, owner_references=None, resource_version=None, self_link=None, uid=None):
+    def __init__(self, annotations=None, cluster_name=None, deletion_grace_period_seconds=None, deletion_timestamp=None, finalizers=None, generate_name=None, generation=None, initializers=None, labels=None, name=None, namespace=None, owner_references=None, resource_version=None, self_link=None, uid=None):
         """
         V1ObjectMeta - a model defined in Swagger
         """
 
         self._annotations = None
         self._cluster_name = None
-        self._creation_timestamp = None
         self._deletion_grace_period_seconds = None
         self._deletion_timestamp = None
         self._finalizers = None
@@ -94,8 +91,6 @@ class V1ObjectMeta(object):
           self.annotations = annotations
         if cluster_name is not None:
           self.cluster_name = cluster_name
-        if creation_timestamp is not None:
-          self.creation_timestamp = creation_timestamp
         if deletion_grace_period_seconds is not None:
           self.deletion_grace_period_seconds = deletion_grace_period_seconds
         if deletion_timestamp is not None:
@@ -168,29 +163,6 @@ class V1ObjectMeta(object):
         """
 
         self._cluster_name = cluster_name
-
-    @property
-    def creation_timestamp(self):
-        """
-        Gets the creation_timestamp of this V1ObjectMeta.
-        CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.  Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
-
-        :return: The creation_timestamp of this V1ObjectMeta.
-        :rtype: str
-        """
-        return self._creation_timestamp
-
-    @creation_timestamp.setter
-    def creation_timestamp(self, creation_timestamp):
-        """
-        Sets the creation_timestamp of this V1ObjectMeta.
-        CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.  Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
-
-        :param creation_timestamp: The creation_timestamp of this V1ObjectMeta.
-        :type: str
-        """
-
-        self._creation_timestamp = creation_timestamp
 
     @property
     def deletion_grace_period_seconds(self):

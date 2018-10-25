@@ -31,8 +31,6 @@ class V1VirtualMachineInstanceReplicaSetCondition(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'last_probe_time': 'str',
-        'last_transition_time': 'str',
         'message': 'str',
         'reason': 'str',
         'status': 'str',
@@ -40,78 +38,28 @@ class V1VirtualMachineInstanceReplicaSetCondition(object):
     }
 
     attribute_map = {
-        'last_probe_time': 'lastProbeTime',
-        'last_transition_time': 'lastTransitionTime',
         'message': 'message',
         'reason': 'reason',
         'status': 'status',
         'type': 'type'
     }
 
-    def __init__(self, last_probe_time=None, last_transition_time=None, message=None, reason=None, status=None, type=None):
+    def __init__(self, message=None, reason=None, status=None, type=None):
         """
         V1VirtualMachineInstanceReplicaSetCondition - a model defined in Swagger
         """
 
-        self._last_probe_time = None
-        self._last_transition_time = None
         self._message = None
         self._reason = None
         self._status = None
         self._type = None
 
-        if last_probe_time is not None:
-          self.last_probe_time = last_probe_time
-        if last_transition_time is not None:
-          self.last_transition_time = last_transition_time
         if message is not None:
           self.message = message
         if reason is not None:
           self.reason = reason
         self.status = status
         self.type = type
-
-    @property
-    def last_probe_time(self):
-        """
-        Gets the last_probe_time of this V1VirtualMachineInstanceReplicaSetCondition.
-
-        :return: The last_probe_time of this V1VirtualMachineInstanceReplicaSetCondition.
-        :rtype: str
-        """
-        return self._last_probe_time
-
-    @last_probe_time.setter
-    def last_probe_time(self, last_probe_time):
-        """
-        Sets the last_probe_time of this V1VirtualMachineInstanceReplicaSetCondition.
-
-        :param last_probe_time: The last_probe_time of this V1VirtualMachineInstanceReplicaSetCondition.
-        :type: str
-        """
-
-        self._last_probe_time = last_probe_time
-
-    @property
-    def last_transition_time(self):
-        """
-        Gets the last_transition_time of this V1VirtualMachineInstanceReplicaSetCondition.
-
-        :return: The last_transition_time of this V1VirtualMachineInstanceReplicaSetCondition.
-        :rtype: str
-        """
-        return self._last_transition_time
-
-    @last_transition_time.setter
-    def last_transition_time(self, last_transition_time):
-        """
-        Sets the last_transition_time of this V1VirtualMachineInstanceReplicaSetCondition.
-
-        :param last_transition_time: The last_transition_time of this V1VirtualMachineInstanceReplicaSetCondition.
-        :type: str
-        """
-
-        self._last_transition_time = last_transition_time
 
     @property
     def message(self):

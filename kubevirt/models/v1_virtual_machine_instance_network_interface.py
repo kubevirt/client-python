@@ -32,26 +32,31 @@ class V1VirtualMachineInstanceNetworkInterface(object):
     """
     swagger_types = {
         'ip_address': 'str',
-        'mac': 'str'
+        'mac': 'str',
+        'name': 'str'
     }
 
     attribute_map = {
         'ip_address': 'ipAddress',
-        'mac': 'mac'
+        'mac': 'mac',
+        'name': 'name'
     }
 
-    def __init__(self, ip_address=None, mac=None):
+    def __init__(self, ip_address=None, mac=None, name=None):
         """
         V1VirtualMachineInstanceNetworkInterface - a model defined in Swagger
         """
 
         self._ip_address = None
         self._mac = None
+        self._name = None
 
         if ip_address is not None:
           self.ip_address = ip_address
         if mac is not None:
           self.mac = mac
+        if name is not None:
+          self.name = name
 
     @property
     def ip_address(self):
@@ -98,6 +103,29 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         """
 
         self._mac = mac
+
+    @property
+    def name(self):
+        """
+        Gets the name of this V1VirtualMachineInstanceNetworkInterface.
+        Name of the interface, corresponds to name of the network assigned to the interface
+
+        :return: The name of this V1VirtualMachineInstanceNetworkInterface.
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """
+        Sets the name of this V1VirtualMachineInstanceNetworkInterface.
+        Name of the interface, corresponds to name of the network assigned to the interface
+
+        :param name: The name of this V1VirtualMachineInstanceNetworkInterface.
+        :type: str
+        """
+
+        self._name = name
 
     def to_dict(self):
         """

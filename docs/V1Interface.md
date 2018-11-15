@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **pci_address** | **str** | If specified, the virtual network interface will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10 +optional | [optional] 
 **ports** | [**list[V1Port]**](V1Port.md) | List of ports to be forwarded to the virtual machine. | [optional] 
 **slirp** | [**V1InterfaceSlirp**](V1InterfaceSlirp.md) |  | [optional] 
+**sriov** | [**V1InterfaceSRIOV**](V1InterfaceSRIOV.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

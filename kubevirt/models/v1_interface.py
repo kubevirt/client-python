@@ -38,7 +38,8 @@ class V1Interface(object):
         'name': 'str',
         'pci_address': 'str',
         'ports': 'list[V1Port]',
-        'slirp': 'V1InterfaceSlirp'
+        'slirp': 'V1InterfaceSlirp',
+        'sriov': 'V1InterfaceSRIOV'
     }
 
     attribute_map = {
@@ -49,10 +50,11 @@ class V1Interface(object):
         'name': 'name',
         'pci_address': 'pciAddress',
         'ports': 'ports',
-        'slirp': 'slirp'
+        'slirp': 'slirp',
+        'sriov': 'sriov'
     }
 
-    def __init__(self, boot_order=None, bridge=None, mac_address=None, model=None, name=None, pci_address=None, ports=None, slirp=None):
+    def __init__(self, boot_order=None, bridge=None, mac_address=None, model=None, name=None, pci_address=None, ports=None, slirp=None, sriov=None):
         """
         V1Interface - a model defined in Swagger
         """
@@ -65,6 +67,7 @@ class V1Interface(object):
         self._pci_address = None
         self._ports = None
         self._slirp = None
+        self._sriov = None
 
         if boot_order is not None:
           self.boot_order = boot_order
@@ -81,6 +84,8 @@ class V1Interface(object):
           self.ports = ports
         if slirp is not None:
           self.slirp = slirp
+        if sriov is not None:
+          self.sriov = sriov
 
     @property
     def boot_order(self):
@@ -263,6 +268,27 @@ class V1Interface(object):
         """
 
         self._slirp = slirp
+
+    @property
+    def sriov(self):
+        """
+        Gets the sriov of this V1Interface.
+
+        :return: The sriov of this V1Interface.
+        :rtype: V1InterfaceSRIOV
+        """
+        return self._sriov
+
+    @sriov.setter
+    def sriov(self, sriov):
+        """
+        Sets the sriov of this V1Interface.
+
+        :param sriov: The sriov of this V1Interface.
+        :type: V1InterfaceSRIOV
+        """
+
+        self._sriov = sriov
 
     def to_dict(self):
         """

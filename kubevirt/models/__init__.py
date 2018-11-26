@@ -26,6 +26,7 @@ from .v1_clock_offset_utc import V1ClockOffsetUTC
 from .v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
 from .v1_cni_network import V1CniNetwork
 from .v1_config_map_volume_source import V1ConfigMapVolumeSource
+from .v1_dhcp_options import V1DHCPOptions
 from .v1_data_volume_source import V1DataVolumeSource
 from .v1_delete_options import V1DeleteOptions
 from .v1_devices import V1Devices

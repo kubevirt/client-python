@@ -33,6 +33,7 @@ class V1Interface(object):
     swagger_types = {
         'boot_order': 'int',
         'bridge': 'V1InterfaceBridge',
+        'dhcp_options': 'V1DHCPOptions',
         'mac_address': 'str',
         'model': 'str',
         'name': 'str',
@@ -45,6 +46,7 @@ class V1Interface(object):
     attribute_map = {
         'boot_order': 'bootOrder',
         'bridge': 'bridge',
+        'dhcp_options': 'dhcpOptions',
         'mac_address': 'macAddress',
         'model': 'model',
         'name': 'name',
@@ -54,13 +56,14 @@ class V1Interface(object):
         'sriov': 'sriov'
     }
 
-    def __init__(self, boot_order=None, bridge=None, mac_address=None, model=None, name=None, pci_address=None, ports=None, slirp=None, sriov=None):
+    def __init__(self, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, model=None, name=None, pci_address=None, ports=None, slirp=None, sriov=None):
         """
         V1Interface - a model defined in Swagger
         """
 
         self._boot_order = None
         self._bridge = None
+        self._dhcp_options = None
         self._mac_address = None
         self._model = None
         self._name = None
@@ -73,6 +76,8 @@ class V1Interface(object):
           self.boot_order = boot_order
         if bridge is not None:
           self.bridge = bridge
+        if dhcp_options is not None:
+          self.dhcp_options = dhcp_options
         if mac_address is not None:
           self.mac_address = mac_address
         if model is not None:
@@ -130,6 +135,29 @@ class V1Interface(object):
         """
 
         self._bridge = bridge
+
+    @property
+    def dhcp_options(self):
+        """
+        Gets the dhcp_options of this V1Interface.
+        If specified the network interface will pass additional DHCP options to the VMI +optional
+
+        :return: The dhcp_options of this V1Interface.
+        :rtype: V1DHCPOptions
+        """
+        return self._dhcp_options
+
+    @dhcp_options.setter
+    def dhcp_options(self, dhcp_options):
+        """
+        Sets the dhcp_options of this V1Interface.
+        If specified the network interface will pass additional DHCP options to the VMI +optional
+
+        :param dhcp_options: The dhcp_options of this V1Interface.
+        :type: V1DHCPOptions
+        """
+
+        self._dhcp_options = dhcp_options
 
     @property
     def mac_address(self):

@@ -407,6 +407,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_restart(self):
+        """
+        Test case for restart
+
+        Restart a VM
+        """
+        pass
+
     def test_test(self):
         """
         Test case for test

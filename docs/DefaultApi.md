@@ -51,6 +51,7 @@ Method | HTTP request | Description
 [**replace_namespaced_virtual_machine_instance_migration**](DefaultApi.md#replace_namespaced_virtual_machine_instance_migration) | **PUT** /apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancemigrations/{name} | Update a VirtualMachineInstanceMigration object.
 [**replace_namespaced_virtual_machine_instance_preset**](DefaultApi.md#replace_namespaced_virtual_machine_instance_preset) | **PUT** /apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets/{name} | Update a VirtualMachineInstancePreset object.
 [**replace_namespaced_virtual_machine_instance_replica_set**](DefaultApi.md#replace_namespaced_virtual_machine_instance_replica_set) | **PUT** /apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets/{name} | Update a VirtualMachineInstanceReplicaSet object.
+[**restart**](DefaultApi.md#restart) | **PUT** /apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines/{name}/restart | Restart a VM
 [**test**](DefaultApi.md#test) | **GET** /apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}/test | Test endpoint verifying apiserver connectivity.
 [**version**](DefaultApi.md#version) | **GET** /apis/subresources.kubevirt.io/v1alpha2/version | 
 [**vnc**](DefaultApi.md#vnc) | **GET** /apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}/vnc | Open a websocket connection to connect to VNC on the specified VirtualMachineInstance.
@@ -2786,6 +2787,58 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json, application/yaml
  - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **restart**
+> restart(namespace, name)
+
+Restart a VM
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+name = 'name_example' # str | Name of the resource
+
+try: 
+    # Restart a VM
+    api_instance.restart(namespace, name)
+except ApiException as e:
+    print("Exception when calling DefaultApi->restart: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **name** | **str**| Name of the resource | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

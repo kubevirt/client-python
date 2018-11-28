@@ -33,13 +33,13 @@ class V1Volume(object):
     swagger_types = {
         'cloud_init_no_cloud': 'V1CloudInitNoCloudSource',
         'config_map': 'V1ConfigMapVolumeSource',
+        'container_disk': 'V1ContainerDiskSource',
         'data_volume': 'V1DataVolumeSource',
         'empty_disk': 'V1EmptyDiskSource',
         'ephemeral': 'V1EphemeralVolumeSource',
         'host_disk': 'V1HostDisk',
         'name': 'str',
         'persistent_volume_claim': 'V1PersistentVolumeClaimVolumeSource',
-        'registry_disk': 'V1RegistryDiskSource',
         'secret': 'V1SecretVolumeSource',
         'service_account': 'V1ServiceAccountVolumeSource'
     }
@@ -47,31 +47,31 @@ class V1Volume(object):
     attribute_map = {
         'cloud_init_no_cloud': 'cloudInitNoCloud',
         'config_map': 'configMap',
+        'container_disk': 'containerDisk',
         'data_volume': 'dataVolume',
         'empty_disk': 'emptyDisk',
         'ephemeral': 'ephemeral',
         'host_disk': 'hostDisk',
         'name': 'name',
         'persistent_volume_claim': 'persistentVolumeClaim',
-        'registry_disk': 'registryDisk',
         'secret': 'secret',
         'service_account': 'serviceAccount'
     }
 
-    def __init__(self, cloud_init_no_cloud=None, config_map=None, data_volume=None, empty_disk=None, ephemeral=None, host_disk=None, name=None, persistent_volume_claim=None, registry_disk=None, secret=None, service_account=None):
+    def __init__(self, cloud_init_no_cloud=None, config_map=None, container_disk=None, data_volume=None, empty_disk=None, ephemeral=None, host_disk=None, name=None, persistent_volume_claim=None, secret=None, service_account=None):
         """
         V1Volume - a model defined in Swagger
         """
 
         self._cloud_init_no_cloud = None
         self._config_map = None
+        self._container_disk = None
         self._data_volume = None
         self._empty_disk = None
         self._ephemeral = None
         self._host_disk = None
         self._name = None
         self._persistent_volume_claim = None
-        self._registry_disk = None
         self._secret = None
         self._service_account = None
 
@@ -79,6 +79,8 @@ class V1Volume(object):
           self.cloud_init_no_cloud = cloud_init_no_cloud
         if config_map is not None:
           self.config_map = config_map
+        if container_disk is not None:
+          self.container_disk = container_disk
         if data_volume is not None:
           self.data_volume = data_volume
         if empty_disk is not None:
@@ -90,8 +92,6 @@ class V1Volume(object):
         self.name = name
         if persistent_volume_claim is not None:
           self.persistent_volume_claim = persistent_volume_claim
-        if registry_disk is not None:
-          self.registry_disk = registry_disk
         if secret is not None:
           self.secret = secret
         if service_account is not None:
@@ -142,6 +142,29 @@ class V1Volume(object):
         """
 
         self._config_map = config_map
+
+    @property
+    def container_disk(self):
+        """
+        Gets the container_disk of this V1Volume.
+        ContainerDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html +optional
+
+        :return: The container_disk of this V1Volume.
+        :rtype: V1ContainerDiskSource
+        """
+        return self._container_disk
+
+    @container_disk.setter
+    def container_disk(self, container_disk):
+        """
+        Sets the container_disk of this V1Volume.
+        ContainerDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html +optional
+
+        :param container_disk: The container_disk of this V1Volume.
+        :type: V1ContainerDiskSource
+        """
+
+        self._container_disk = container_disk
 
     @property
     def data_volume(self):
@@ -282,29 +305,6 @@ class V1Volume(object):
         """
 
         self._persistent_volume_claim = persistent_volume_claim
-
-    @property
-    def registry_disk(self):
-        """
-        Gets the registry_disk of this V1Volume.
-        RegistryDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html +optional
-
-        :return: The registry_disk of this V1Volume.
-        :rtype: V1RegistryDiskSource
-        """
-        return self._registry_disk
-
-    @registry_disk.setter
-    def registry_disk(self, registry_disk):
-        """
-        Sets the registry_disk of this V1Volume.
-        RegistryDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html +optional
-
-        :param registry_disk: The registry_disk of this V1Volume.
-        :type: V1RegistryDiskSource
-        """
-
-        self._registry_disk = registry_disk
 
     @property
     def secret(self):

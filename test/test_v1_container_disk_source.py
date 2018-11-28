@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1_registry_disk_source import V1RegistryDiskSource
+from kubevirt.models.v1_container_disk_source import V1ContainerDiskSource
 
 
-class TestV1RegistryDiskSource(unittest.TestCase):
-    """ V1RegistryDiskSource unit test stubs """
+class TestV1ContainerDiskSource(unittest.TestCase):
+    """ V1ContainerDiskSource unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1RegistryDiskSource(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1RegistryDiskSource(self):
+    def testV1ContainerDiskSource(self):
         """
-        Test V1RegistryDiskSource
+        Test V1ContainerDiskSource
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1_registry_disk_source.V1RegistryDiskSource()
+        #model = kubevirt.models.v1_container_disk_source.V1ContainerDiskSource()
         pass
 
 

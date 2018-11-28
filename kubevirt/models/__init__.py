@@ -26,6 +26,7 @@ from .v1_clock_offset_utc import V1ClockOffsetUTC
 from .v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
 from .v1_cni_network import V1CniNetwork
 from .v1_config_map_volume_source import V1ConfigMapVolumeSource
+from .v1_container_disk_source import V1ContainerDiskSource
 from .v1_dhcp_options import V1DHCPOptions
 from .v1_data_volume_source import V1DataVolumeSource
 from .v1_delete_options import V1DeleteOptions
@@ -78,7 +79,6 @@ from .v1_port import V1Port
 from .v1_preconditions import V1Preconditions
 from .v1_preferred_scheduling_term import V1PreferredSchedulingTerm
 from .v1_rtc_timer import V1RTCTimer
-from .v1_registry_disk_source import V1RegistryDiskSource
 from .v1_resource_requirements import V1ResourceRequirements
 from .v1_secret_volume_source import V1SecretVolumeSource
 from .v1_server_address_by_client_cidr import V1ServerAddressByClientCIDR

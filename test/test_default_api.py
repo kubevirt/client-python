@@ -411,7 +411,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for restart
 
-        Restart a VM
+        Restart a VirtualMachine object.
         """
         pass
 

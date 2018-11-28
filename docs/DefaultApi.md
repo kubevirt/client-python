@@ -51,7 +51,7 @@ Method | HTTP request | Description
 [**replace_namespaced_virtual_machine_instance_migration**](DefaultApi.md#replace_namespaced_virtual_machine_instance_migration) | **PUT** /apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancemigrations/{name} | Update a VirtualMachineInstanceMigration object.
 [**replace_namespaced_virtual_machine_instance_preset**](DefaultApi.md#replace_namespaced_virtual_machine_instance_preset) | **PUT** /apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets/{name} | Update a VirtualMachineInstancePreset object.
 [**replace_namespaced_virtual_machine_instance_replica_set**](DefaultApi.md#replace_namespaced_virtual_machine_instance_replica_set) | **PUT** /apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets/{name} | Update a VirtualMachineInstanceReplicaSet object.
-[**restart**](DefaultApi.md#restart) | **PUT** /apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines/{name}/restart | Restart a VM
+[**restart**](DefaultApi.md#restart) | **PUT** /apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines/{name}/restart | Restart a VirtualMachine object.
 [**test**](DefaultApi.md#test) | **GET** /apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}/test | Test endpoint verifying apiserver connectivity.
 [**version**](DefaultApi.md#version) | **GET** /apis/subresources.kubevirt.io/v1alpha2/version | 
 [**vnc**](DefaultApi.md#vnc) | **GET** /apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}/vnc | Open a websocket connection to connect to VNC on the specified VirtualMachineInstance.
@@ -2793,7 +2793,7 @@ Name | Type | Description  | Notes
 # **restart**
 > restart(namespace, name)
 
-Restart a VM
+Restart a VirtualMachine object.
 
 ### Example 
 ```python
@@ -2814,7 +2814,7 @@ namespace = 'namespace_example' # str | Object name and auth scope, such as for 
 name = 'name_example' # str | Name of the resource
 
 try: 
-    # Restart a VM
+    # Restart a VirtualMachine object.
     api_instance.restart(namespace, name)
 except ApiException as e:
     print("Exception when calling DefaultApi->restart: %s\n" % e)

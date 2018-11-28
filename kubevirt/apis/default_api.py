@@ -5675,7 +5675,7 @@ class DefaultApi(object):
 
     def restart(self, namespace, name, **kwargs):
         """
-        Restart a VM
+        Restart a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5701,7 +5701,7 @@ class DefaultApi(object):
 
     def restart_with_http_info(self, namespace, name, **kwargs):
         """
-        Restart a VM
+        Restart a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

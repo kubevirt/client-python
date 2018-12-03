@@ -46,6 +46,8 @@ from .models.v1_firmware import V1Firmware
 from .models.v1_floppy_target import V1FloppyTarget
 from .models.v1_group_version_for_discovery import V1GroupVersionForDiscovery
 from .models.v1_hpet_timer import V1HPETTimer
+from .models.v1_http_get_action import V1HTTPGetAction
+from .models.v1_http_header import V1HTTPHeader
 from .models.v1_host_disk import V1HostDisk
 from .models.v1_hugepages import V1Hugepages
 from .models.v1_hyperv_timer import V1HypervTimer
@@ -78,6 +80,7 @@ from .models.v1_pod_network import V1PodNetwork
 from .models.v1_port import V1Port
 from .models.v1_preconditions import V1Preconditions
 from .models.v1_preferred_scheduling_term import V1PreferredSchedulingTerm
+from .models.v1_probe import V1Probe
 from .models.v1_rtc_timer import V1RTCTimer
 from .models.v1_resource_requirements import V1ResourceRequirements
 from .models.v1_secret_volume_source import V1SecretVolumeSource
@@ -86,6 +89,7 @@ from .models.v1_service_account_volume_source import V1ServiceAccountVolumeSourc
 from .models.v1_status import V1Status
 from .models.v1_status_cause import V1StatusCause
 from .models.v1_status_details import V1StatusDetails
+from .models.v1_tcp_socket_action import V1TCPSocketAction
 from .models.v1_timer import V1Timer
 from .models.v1_toleration import V1Toleration
 from .models.v1_virtual_machine import V1VirtualMachine

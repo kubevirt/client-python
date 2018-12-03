@@ -46,6 +46,8 @@ from .v1_firmware import V1Firmware
 from .v1_floppy_target import V1FloppyTarget
 from .v1_group_version_for_discovery import V1GroupVersionForDiscovery
 from .v1_hpet_timer import V1HPETTimer
+from .v1_http_get_action import V1HTTPGetAction
+from .v1_http_header import V1HTTPHeader
 from .v1_host_disk import V1HostDisk
 from .v1_hugepages import V1Hugepages
 from .v1_hyperv_timer import V1HypervTimer
@@ -78,6 +80,7 @@ from .v1_pod_network import V1PodNetwork
 from .v1_port import V1Port
 from .v1_preconditions import V1Preconditions
 from .v1_preferred_scheduling_term import V1PreferredSchedulingTerm
+from .v1_probe import V1Probe
 from .v1_rtc_timer import V1RTCTimer
 from .v1_resource_requirements import V1ResourceRequirements
 from .v1_secret_volume_source import V1SecretVolumeSource
@@ -86,6 +89,7 @@ from .v1_service_account_volume_source import V1ServiceAccountVolumeSource
 from .v1_status import V1Status
 from .v1_status_cause import V1StatusCause
 from .v1_status_details import V1StatusDetails
+from .v1_tcp_socket_action import V1TCPSocketAction
 from .v1_timer import V1Timer
 from .v1_toleration import V1Toleration
 from .v1_virtual_machine import V1VirtualMachine

@@ -34,8 +34,10 @@ class V1VirtualMachineInstanceSpec(object):
         'affinity': 'V1Affinity',
         'domain': 'V1DomainSpec',
         'hostname': 'str',
+        'liveness_probe': 'V1Probe',
         'networks': 'list[V1Network]',
         'node_selector': 'object',
+        'readiness_probe': 'V1Probe',
         'subdomain': 'str',
         'termination_grace_period_seconds': 'int',
         'tolerations': 'list[V1Toleration]',
@@ -46,15 +48,17 @@ class V1VirtualMachineInstanceSpec(object):
         'affinity': 'affinity',
         'domain': 'domain',
         'hostname': 'hostname',
+        'liveness_probe': 'livenessProbe',
         'networks': 'networks',
         'node_selector': 'nodeSelector',
+        'readiness_probe': 'readinessProbe',
         'subdomain': 'subdomain',
         'termination_grace_period_seconds': 'terminationGracePeriodSeconds',
         'tolerations': 'tolerations',
         'volumes': 'volumes'
     }
 
-    def __init__(self, affinity=None, domain=None, hostname=None, networks=None, node_selector=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, volumes=None):
+    def __init__(self, affinity=None, domain=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, readiness_probe=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, volumes=None):
         """
         V1VirtualMachineInstanceSpec - a model defined in Swagger
         """
@@ -62,8 +66,10 @@ class V1VirtualMachineInstanceSpec(object):
         self._affinity = None
         self._domain = None
         self._hostname = None
+        self._liveness_probe = None
         self._networks = None
         self._node_selector = None
+        self._readiness_probe = None
         self._subdomain = None
         self._termination_grace_period_seconds = None
         self._tolerations = None
@@ -74,10 +80,14 @@ class V1VirtualMachineInstanceSpec(object):
         self.domain = domain
         if hostname is not None:
           self.hostname = hostname
+        if liveness_probe is not None:
+          self.liveness_probe = liveness_probe
         if networks is not None:
           self.networks = networks
         if node_selector is not None:
           self.node_selector = node_selector
+        if readiness_probe is not None:
+          self.readiness_probe = readiness_probe
         if subdomain is not None:
           self.subdomain = subdomain
         if termination_grace_period_seconds is not None:
@@ -159,6 +169,29 @@ class V1VirtualMachineInstanceSpec(object):
         self._hostname = hostname
 
     @property
+    def liveness_probe(self):
+        """
+        Gets the liveness_probe of this V1VirtualMachineInstanceSpec.
+        Periodic probe of VirtualMachineInstance liveness. VirtualmachineInstances will be stopped if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+
+        :return: The liveness_probe of this V1VirtualMachineInstanceSpec.
+        :rtype: V1Probe
+        """
+        return self._liveness_probe
+
+    @liveness_probe.setter
+    def liveness_probe(self, liveness_probe):
+        """
+        Sets the liveness_probe of this V1VirtualMachineInstanceSpec.
+        Periodic probe of VirtualMachineInstance liveness. VirtualmachineInstances will be stopped if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+
+        :param liveness_probe: The liveness_probe of this V1VirtualMachineInstanceSpec.
+        :type: V1Probe
+        """
+
+        self._liveness_probe = liveness_probe
+
+    @property
     def networks(self):
         """
         Gets the networks of this V1VirtualMachineInstanceSpec.
@@ -203,6 +236,29 @@ class V1VirtualMachineInstanceSpec(object):
         """
 
         self._node_selector = node_selector
+
+    @property
+    def readiness_probe(self):
+        """
+        Gets the readiness_probe of this V1VirtualMachineInstanceSpec.
+        Periodic probe of VirtualMachineInstance service readiness. VirtualmachineInstances will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+
+        :return: The readiness_probe of this V1VirtualMachineInstanceSpec.
+        :rtype: V1Probe
+        """
+        return self._readiness_probe
+
+    @readiness_probe.setter
+    def readiness_probe(self, readiness_probe):
+        """
+        Sets the readiness_probe of this V1VirtualMachineInstanceSpec.
+        Periodic probe of VirtualMachineInstance service readiness. VirtualmachineInstances will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+
+        :param readiness_probe: The readiness_probe of this V1VirtualMachineInstanceSpec.
+        :type: V1Probe
+        """
+
+        self._readiness_probe = readiness_probe
 
     @property
     def subdomain(self):

@@ -51,7 +51,7 @@ class V1CniNetwork(object):
     def network_name(self):
         """
         Gets the network_name of this V1CniNetwork.
-        References to a NetworkAttachmentDefinition CRD object in the same namespace. In case of genie, it references the CNI plugin name.
+        References to a NetworkAttachmentDefinition CRD object. Format: <networkName>, <namespace>/<networkName>. If namespace is not specified, VMI namespace is assumed. In case of genie, it references the CNI plugin name.
 
         :return: The network_name of this V1CniNetwork.
         :rtype: str
@@ -62,7 +62,7 @@ class V1CniNetwork(object):
     def network_name(self, network_name):
         """
         Sets the network_name of this V1CniNetwork.
-        References to a NetworkAttachmentDefinition CRD object in the same namespace. In case of genie, it references the CNI plugin name.
+        References to a NetworkAttachmentDefinition CRD object. Format: <networkName>, <namespace>/<networkName>. If namespace is not specified, VMI namespace is assumed. In case of genie, it references the CNI plugin name.
 
         :param network_name: The network_name of this V1CniNetwork.
         :type: str

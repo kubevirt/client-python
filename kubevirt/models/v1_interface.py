@@ -35,6 +35,7 @@ class V1Interface(object):
         'bridge': 'V1InterfaceBridge',
         'dhcp_options': 'V1DHCPOptions',
         'mac_address': 'str',
+        'masquerade': 'V1InterfaceMasquerade',
         'model': 'str',
         'name': 'str',
         'pci_address': 'str',
@@ -48,6 +49,7 @@ class V1Interface(object):
         'bridge': 'bridge',
         'dhcp_options': 'dhcpOptions',
         'mac_address': 'macAddress',
+        'masquerade': 'masquerade',
         'model': 'model',
         'name': 'name',
         'pci_address': 'pciAddress',
@@ -56,7 +58,7 @@ class V1Interface(object):
         'sriov': 'sriov'
     }
 
-    def __init__(self, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, model=None, name=None, pci_address=None, ports=None, slirp=None, sriov=None):
+    def __init__(self, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, masquerade=None, model=None, name=None, pci_address=None, ports=None, slirp=None, sriov=None):
         """
         V1Interface - a model defined in Swagger
         """
@@ -65,6 +67,7 @@ class V1Interface(object):
         self._bridge = None
         self._dhcp_options = None
         self._mac_address = None
+        self._masquerade = None
         self._model = None
         self._name = None
         self._pci_address = None
@@ -80,6 +83,8 @@ class V1Interface(object):
           self.dhcp_options = dhcp_options
         if mac_address is not None:
           self.mac_address = mac_address
+        if masquerade is not None:
+          self.masquerade = masquerade
         if model is not None:
           self.model = model
         self.name = name
@@ -181,6 +186,27 @@ class V1Interface(object):
         """
 
         self._mac_address = mac_address
+
+    @property
+    def masquerade(self):
+        """
+        Gets the masquerade of this V1Interface.
+
+        :return: The masquerade of this V1Interface.
+        :rtype: V1InterfaceMasquerade
+        """
+        return self._masquerade
+
+    @masquerade.setter
+    def masquerade(self, masquerade):
+        """
+        Sets the masquerade of this V1Interface.
+
+        :param masquerade: The masquerade of this V1Interface.
+        :type: V1InterfaceMasquerade
+        """
+
+        self._masquerade = masquerade
 
     @property
     def model(self):

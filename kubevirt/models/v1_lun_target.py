@@ -57,7 +57,7 @@ class V1LunTarget(object):
     def bus(self):
         """
         Gets the bus of this V1LunTarget.
-        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, ide.
+        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi.
 
         :return: The bus of this V1LunTarget.
         :rtype: str
@@ -68,7 +68,7 @@ class V1LunTarget(object):
     def bus(self, bus):
         """
         Sets the bus of this V1LunTarget.
-        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, ide.
+        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi.
 
         :param bus: The bus of this V1LunTarget.
         :type: str

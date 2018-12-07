@@ -62,7 +62,7 @@ class V1CDRomTarget(object):
     def bus(self):
         """
         Gets the bus of this V1CDRomTarget.
-        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, ide.
+        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi.
 
         :return: The bus of this V1CDRomTarget.
         :rtype: str
@@ -73,7 +73,7 @@ class V1CDRomTarget(object):
     def bus(self, bus):
         """
         Sets the bus of this V1CDRomTarget.
-        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, ide.
+        Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi.
 
         :param bus: The bus of this V1CDRomTarget.
         :type: str

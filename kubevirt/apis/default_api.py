@@ -121,7 +121,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/healthz', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha2/healthz', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

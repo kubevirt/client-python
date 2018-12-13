@@ -4,7 +4,7 @@ All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**check_health**](DefaultApi.md#check_health) | **GET** /apis/kubevirt.io/v1alpha2/healthz | Health endpoint
+[**check_health**](DefaultApi.md#check_health) | **GET** /apis/subresources.kubevirt.io/v1alpha2/healthz | Health endpoint
 [**console**](DefaultApi.md#console) | **GET** /apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}/console | Open a websocket connection to a serial console on the specified VirtualMachineInstance.
 [**create_namespaced_virtual_machine**](DefaultApi.md#create_namespaced_virtual_machine) | **POST** /apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines | Create a VirtualMachine object.
 [**create_namespaced_virtual_machine_instance**](DefaultApi.md#create_namespaced_virtual_machine_instance) | **POST** /apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances | Create a VirtualMachineInstance object.

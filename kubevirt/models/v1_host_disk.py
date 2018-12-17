@@ -33,27 +33,32 @@ class V1HostDisk(object):
     swagger_types = {
         'capacity': 'str',
         'path': 'str',
+        'shared': 'bool',
         'type': 'str'
     }
 
     attribute_map = {
         'capacity': 'capacity',
         'path': 'path',
+        'shared': 'shared',
         'type': 'type'
     }
 
-    def __init__(self, capacity=None, path=None, type=None):
+    def __init__(self, capacity=None, path=None, shared=None, type=None):
         """
         V1HostDisk - a model defined in Swagger
         """
 
         self._capacity = None
         self._path = None
+        self._shared = None
         self._type = None
 
         if capacity is not None:
           self.capacity = capacity
         self.path = path
+        if shared is not None:
+          self.shared = shared
         self.type = type
 
     @property
@@ -103,6 +108,29 @@ class V1HostDisk(object):
             raise ValueError("Invalid value for `path`, must not be `None`")
 
         self._path = path
+
+    @property
+    def shared(self):
+        """
+        Gets the shared of this V1HostDisk.
+        Shared indicate whether the path is shared between nodes
+
+        :return: The shared of this V1HostDisk.
+        :rtype: bool
+        """
+        return self._shared
+
+    @shared.setter
+    def shared(self, shared):
+        """
+        Sets the shared of this V1HostDisk.
+        Shared indicate whether the path is shared between nodes
+
+        :param shared: The shared of this V1HostDisk.
+        :type: bool
+        """
+
+        self._shared = shared
 
     @property
     def type(self):

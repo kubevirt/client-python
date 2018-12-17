@@ -33,6 +33,7 @@ class V1VirtualMachineInstanceStatus(object):
     swagger_types = {
         'conditions': 'list[V1VirtualMachineInstanceCondition]',
         'interfaces': 'list[V1VirtualMachineInstanceNetworkInterface]',
+        'migration_method': 'str',
         'migration_state': 'V1VirtualMachineInstanceMigrationState',
         'node_name': 'str',
         'phase': 'str',
@@ -42,19 +43,21 @@ class V1VirtualMachineInstanceStatus(object):
     attribute_map = {
         'conditions': 'conditions',
         'interfaces': 'interfaces',
+        'migration_method': 'migrationMethod',
         'migration_state': 'migrationState',
         'node_name': 'nodeName',
         'phase': 'phase',
         'reason': 'reason'
     }
 
-    def __init__(self, conditions=None, interfaces=None, migration_state=None, node_name=None, phase=None, reason=None):
+    def __init__(self, conditions=None, interfaces=None, migration_method=None, migration_state=None, node_name=None, phase=None, reason=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
 
         self._conditions = None
         self._interfaces = None
+        self._migration_method = None
         self._migration_state = None
         self._node_name = None
         self._phase = None
@@ -64,6 +67,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.conditions = conditions
         if interfaces is not None:
           self.interfaces = interfaces
+        if migration_method is not None:
+          self.migration_method = migration_method
         if migration_state is not None:
           self.migration_state = migration_state
         if node_name is not None:
@@ -118,6 +123,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._interfaces = interfaces
+
+    @property
+    def migration_method(self):
+        """
+        Gets the migration_method of this V1VirtualMachineInstanceStatus.
+        Represents the method using which the vmi can be migrated: live migration or block migration
+
+        :return: The migration_method of this V1VirtualMachineInstanceStatus.
+        :rtype: str
+        """
+        return self._migration_method
+
+    @migration_method.setter
+    def migration_method(self, migration_method):
+        """
+        Sets the migration_method of this V1VirtualMachineInstanceStatus.
+        Represents the method using which the vmi can be migrated: live migration or block migration
+
+        :param migration_method: The migration_method of this V1VirtualMachineInstanceStatus.
+        :type: str
+        """
+
+        self._migration_method = migration_method
 
     @property
     def migration_state(self):

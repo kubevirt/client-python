@@ -31,32 +31,65 @@ class V1VirtualMachineInstanceNetworkInterface(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'interface_name': 'str',
         'ip_address': 'str',
+        'ip_addresses': 'list[str]',
         'mac': 'str',
         'name': 'str'
     }
 
     attribute_map = {
+        'interface_name': 'interfaceName',
         'ip_address': 'ipAddress',
+        'ip_addresses': 'ipAddresses',
         'mac': 'mac',
         'name': 'name'
     }
 
-    def __init__(self, ip_address=None, mac=None, name=None):
+    def __init__(self, interface_name=None, ip_address=None, ip_addresses=None, mac=None, name=None):
         """
         V1VirtualMachineInstanceNetworkInterface - a model defined in Swagger
         """
 
+        self._interface_name = None
         self._ip_address = None
+        self._ip_addresses = None
         self._mac = None
         self._name = None
 
+        if interface_name is not None:
+          self.interface_name = interface_name
         if ip_address is not None:
           self.ip_address = ip_address
+        if ip_addresses is not None:
+          self.ip_addresses = ip_addresses
         if mac is not None:
           self.mac = mac
         if name is not None:
           self.name = name
+
+    @property
+    def interface_name(self):
+        """
+        Gets the interface_name of this V1VirtualMachineInstanceNetworkInterface.
+        The interface name inside the Virtual Machine
+
+        :return: The interface_name of this V1VirtualMachineInstanceNetworkInterface.
+        :rtype: str
+        """
+        return self._interface_name
+
+    @interface_name.setter
+    def interface_name(self, interface_name):
+        """
+        Sets the interface_name of this V1VirtualMachineInstanceNetworkInterface.
+        The interface name inside the Virtual Machine
+
+        :param interface_name: The interface_name of this V1VirtualMachineInstanceNetworkInterface.
+        :type: str
+        """
+
+        self._interface_name = interface_name
 
     @property
     def ip_address(self):
@@ -80,6 +113,29 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         """
 
         self._ip_address = ip_address
+
+    @property
+    def ip_addresses(self):
+        """
+        Gets the ip_addresses of this V1VirtualMachineInstanceNetworkInterface.
+        List of all IP addresses of a Virtual Machine interface
+
+        :return: The ip_addresses of this V1VirtualMachineInstanceNetworkInterface.
+        :rtype: list[str]
+        """
+        return self._ip_addresses
+
+    @ip_addresses.setter
+    def ip_addresses(self, ip_addresses):
+        """
+        Sets the ip_addresses of this V1VirtualMachineInstanceNetworkInterface.
+        List of all IP addresses of a Virtual Machine interface
+
+        :param ip_addresses: The ip_addresses of this V1VirtualMachineInstanceNetworkInterface.
+        :type: list[str]
+        """
+
+        self._ip_addresses = ip_addresses
 
     @property
     def mac(self):

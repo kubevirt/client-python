@@ -57,6 +57,7 @@ class V1alpha1DataVolumeSourceS3(object):
     def secret_ref(self):
         """
         Gets the secret_ref of this V1alpha1DataVolumeSourceS3.
+        SecretRef provides the secret reference needed to access the S3 source
 
         :return: The secret_ref of this V1alpha1DataVolumeSourceS3.
         :rtype: str
@@ -67,6 +68,7 @@ class V1alpha1DataVolumeSourceS3(object):
     def secret_ref(self, secret_ref):
         """
         Sets the secret_ref of this V1alpha1DataVolumeSourceS3.
+        SecretRef provides the secret reference needed to access the S3 source
 
         :param secret_ref: The secret_ref of this V1alpha1DataVolumeSourceS3.
         :type: str
@@ -78,6 +80,7 @@ class V1alpha1DataVolumeSourceS3(object):
     def url(self):
         """
         Gets the url of this V1alpha1DataVolumeSourceS3.
+        URL is the url of the S3 source
 
         :return: The url of this V1alpha1DataVolumeSourceS3.
         :rtype: str
@@ -88,6 +91,7 @@ class V1alpha1DataVolumeSourceS3(object):
     def url(self, url):
         """
         Sets the url of this V1alpha1DataVolumeSourceS3.
+        URL is the url of the S3 source
 
         :param url: The url of this V1alpha1DataVolumeSourceS3.
         :type: str

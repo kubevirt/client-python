@@ -52,6 +52,7 @@ class V1alpha1DataVolumeStatus(object):
     def phase(self):
         """
         Gets the phase of this V1alpha1DataVolumeStatus.
+        Phase is the current phase of the data volume
 
         :return: The phase of this V1alpha1DataVolumeStatus.
         :rtype: str
@@ -62,6 +63,7 @@ class V1alpha1DataVolumeStatus(object):
     def phase(self, phase):
         """
         Sets the phase of this V1alpha1DataVolumeStatus.
+        Phase is the current phase of the data volume
 
         :param phase: The phase of this V1alpha1DataVolumeStatus.
         :type: str

@@ -32,24 +32,29 @@ class V1DHCPOptions(object):
     """
     swagger_types = {
         'boot_file_name': 'str',
+        'ntp_servers': 'list[str]',
         'tftp_server_name': 'str'
     }
 
     attribute_map = {
         'boot_file_name': 'bootFileName',
+        'ntp_servers': 'ntpServers',
         'tftp_server_name': 'tftpServerName'
     }
 
-    def __init__(self, boot_file_name=None, tftp_server_name=None):
+    def __init__(self, boot_file_name=None, ntp_servers=None, tftp_server_name=None):
         """
         V1DHCPOptions - a model defined in Swagger
         """
 
         self._boot_file_name = None
+        self._ntp_servers = None
         self._tftp_server_name = None
 
         if boot_file_name is not None:
           self.boot_file_name = boot_file_name
+        if ntp_servers is not None:
+          self.ntp_servers = ntp_servers
         if tftp_server_name is not None:
           self.tftp_server_name = tftp_server_name
 
@@ -75,6 +80,29 @@ class V1DHCPOptions(object):
         """
 
         self._boot_file_name = boot_file_name
+
+    @property
+    def ntp_servers(self):
+        """
+        Gets the ntp_servers of this V1DHCPOptions.
+        If specified will pass the configured NTP server to the VM via DHCP option 042. +optional
+
+        :return: The ntp_servers of this V1DHCPOptions.
+        :rtype: list[str]
+        """
+        return self._ntp_servers
+
+    @ntp_servers.setter
+    def ntp_servers(self, ntp_servers):
+        """
+        Sets the ntp_servers of this V1DHCPOptions.
+        If specified will pass the configured NTP server to the VM via DHCP option 042. +optional
+
+        :param ntp_servers: The ntp_servers of this V1DHCPOptions.
+        :type: list[str]
+        """
+
+        self._ntp_servers = ntp_servers
 
     @property
     def tftp_server_name(self):

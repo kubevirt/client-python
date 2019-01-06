@@ -31,37 +31,68 @@ class V1alpha1DataVolumeSource(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'blank': 'V1alpha1DataVolumeBlankImage',
         'http': 'V1alpha1DataVolumeSourceHTTP',
         'pvc': 'V1alpha1DataVolumeSourcePVC',
+        'registry': 'V1alpha1DataVolumeSourceRegistry',
         's3': 'V1alpha1DataVolumeSourceS3',
         'upload': 'V1alpha1DataVolumeSourceUpload'
     }
 
     attribute_map = {
+        'blank': 'blank',
         'http': 'http',
         'pvc': 'pvc',
+        'registry': 'registry',
         's3': 's3',
         'upload': 'upload'
     }
 
-    def __init__(self, http=None, pvc=None, s3=None, upload=None):
+    def __init__(self, blank=None, http=None, pvc=None, registry=None, s3=None, upload=None):
         """
         V1alpha1DataVolumeSource - a model defined in Swagger
         """
 
+        self._blank = None
         self._http = None
         self._pvc = None
+        self._registry = None
         self._s3 = None
         self._upload = None
 
+        if blank is not None:
+          self.blank = blank
         if http is not None:
           self.http = http
         if pvc is not None:
           self.pvc = pvc
+        if registry is not None:
+          self.registry = registry
         if s3 is not None:
           self.s3 = s3
         if upload is not None:
           self.upload = upload
+
+    @property
+    def blank(self):
+        """
+        Gets the blank of this V1alpha1DataVolumeSource.
+
+        :return: The blank of this V1alpha1DataVolumeSource.
+        :rtype: V1alpha1DataVolumeBlankImage
+        """
+        return self._blank
+
+    @blank.setter
+    def blank(self, blank):
+        """
+        Sets the blank of this V1alpha1DataVolumeSource.
+
+        :param blank: The blank of this V1alpha1DataVolumeSource.
+        :type: V1alpha1DataVolumeBlankImage
+        """
+
+        self._blank = blank
 
     @property
     def http(self):
@@ -104,6 +135,27 @@ class V1alpha1DataVolumeSource(object):
         """
 
         self._pvc = pvc
+
+    @property
+    def registry(self):
+        """
+        Gets the registry of this V1alpha1DataVolumeSource.
+
+        :return: The registry of this V1alpha1DataVolumeSource.
+        :rtype: V1alpha1DataVolumeSourceRegistry
+        """
+        return self._registry
+
+    @registry.setter
+    def registry(self, registry):
+        """
+        Sets the registry of this V1alpha1DataVolumeSource.
+
+        :param registry: The registry of this V1alpha1DataVolumeSource.
+        :type: V1alpha1DataVolumeSourceRegistry
+        """
+
+        self._registry = registry
 
     @property
     def s3(self):

@@ -125,6 +125,7 @@ from .models.v1alpha1_data_volume import V1alpha1DataVolume
 from .models.v1alpha1_data_volume_source import V1alpha1DataVolumeSource
 from .models.v1alpha1_data_volume_source_http import V1alpha1DataVolumeSourceHTTP
 from .models.v1alpha1_data_volume_source_pvc import V1alpha1DataVolumeSourcePVC
+from .models.v1alpha1_data_volume_source_registry import V1alpha1DataVolumeSourceRegistry
 from .models.v1alpha1_data_volume_source_s3 import V1alpha1DataVolumeSourceS3
 from .models.v1alpha1_data_volume_spec import V1alpha1DataVolumeSpec
 from .models.v1alpha1_data_volume_status import V1alpha1DataVolumeStatus

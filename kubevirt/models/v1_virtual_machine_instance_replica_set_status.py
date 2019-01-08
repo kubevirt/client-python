@@ -32,27 +32,32 @@ class V1VirtualMachineInstanceReplicaSetStatus(object):
     """
     swagger_types = {
         'conditions': 'list[V1VirtualMachineInstanceReplicaSetCondition]',
+        'label_selector': 'str',
         'ready_replicas': 'int',
         'replicas': 'int'
     }
 
     attribute_map = {
         'conditions': 'conditions',
+        'label_selector': 'labelSelector',
         'ready_replicas': 'readyReplicas',
         'replicas': 'replicas'
     }
 
-    def __init__(self, conditions=None, ready_replicas=None, replicas=None):
+    def __init__(self, conditions=None, label_selector=None, ready_replicas=None, replicas=None):
         """
         V1VirtualMachineInstanceReplicaSetStatus - a model defined in Swagger
         """
 
         self._conditions = None
+        self._label_selector = None
         self._ready_replicas = None
         self._replicas = None
 
         if conditions is not None:
           self.conditions = conditions
+        if label_selector is not None:
+          self.label_selector = label_selector
         if ready_replicas is not None:
           self.ready_replicas = ready_replicas
         if replicas is not None:
@@ -78,6 +83,29 @@ class V1VirtualMachineInstanceReplicaSetStatus(object):
         """
 
         self._conditions = conditions
+
+    @property
+    def label_selector(self):
+        """
+        Gets the label_selector of this V1VirtualMachineInstanceReplicaSetStatus.
+        Canonical form of the label selector for HPA which consumes it through the scale subresource.
+
+        :return: The label_selector of this V1VirtualMachineInstanceReplicaSetStatus.
+        :rtype: str
+        """
+        return self._label_selector
+
+    @label_selector.setter
+    def label_selector(self, label_selector):
+        """
+        Sets the label_selector of this V1VirtualMachineInstanceReplicaSetStatus.
+        Canonical form of the label selector for HPA which consumes it through the scale subresource.
+
+        :param label_selector: The label_selector of this V1VirtualMachineInstanceReplicaSetStatus.
+        :type: str
+        """
+
+        self._label_selector = label_selector
 
     @property
     def ready_replicas(self):

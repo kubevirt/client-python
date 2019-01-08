@@ -33,16 +33,20 @@ class V1CPU(object):
     swagger_types = {
         'cores': 'int',
         'dedicated_cpu_placement': 'bool',
-        'model': 'str'
+        'model': 'str',
+        'sockets': 'int',
+        'threads': 'int'
     }
 
     attribute_map = {
         'cores': 'cores',
         'dedicated_cpu_placement': 'dedicatedCpuPlacement',
-        'model': 'model'
+        'model': 'model',
+        'sockets': 'sockets',
+        'threads': 'threads'
     }
 
-    def __init__(self, cores=None, dedicated_cpu_placement=None, model=None):
+    def __init__(self, cores=None, dedicated_cpu_placement=None, model=None, sockets=None, threads=None):
         """
         V1CPU - a model defined in Swagger
         """
@@ -50,6 +54,8 @@ class V1CPU(object):
         self._cores = None
         self._dedicated_cpu_placement = None
         self._model = None
+        self._sockets = None
+        self._threads = None
 
         if cores is not None:
           self.cores = cores
@@ -57,6 +63,10 @@ class V1CPU(object):
           self.dedicated_cpu_placement = dedicated_cpu_placement
         if model is not None:
           self.model = model
+        if sockets is not None:
+          self.sockets = sockets
+        if threads is not None:
+          self.threads = threads
 
     @property
     def cores(self):
@@ -126,6 +136,52 @@ class V1CPU(object):
         """
 
         self._model = model
+
+    @property
+    def sockets(self):
+        """
+        Gets the sockets of this V1CPU.
+        Sockets specifies the number of sockets inside the vmi. Must be a value greater or equal 1.
+
+        :return: The sockets of this V1CPU.
+        :rtype: int
+        """
+        return self._sockets
+
+    @sockets.setter
+    def sockets(self, sockets):
+        """
+        Sets the sockets of this V1CPU.
+        Sockets specifies the number of sockets inside the vmi. Must be a value greater or equal 1.
+
+        :param sockets: The sockets of this V1CPU.
+        :type: int
+        """
+
+        self._sockets = sockets
+
+    @property
+    def threads(self):
+        """
+        Gets the threads of this V1CPU.
+        Threads specifies the number of threads inside the vmi. Must be a value greater or equal 1.
+
+        :return: The threads of this V1CPU.
+        :rtype: int
+        """
+        return self._threads
+
+    @threads.setter
+    def threads(self, threads):
+        """
+        Sets the threads of this V1CPU.
+        Threads specifies the number of threads inside the vmi. Must be a value greater or equal 1.
+
+        :param threads: The threads of this V1CPU.
+        :type: int
+        """
+
+        self._threads = threads
 
     def to_dict(self):
         """

@@ -21,9 +21,10 @@ Method | HTTP request | Description
 [**delete_namespaced_virtual_machine_instance_migration**](DefaultApi.md#delete_namespaced_virtual_machine_instance_migration) | **DELETE** /apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancemigrations/{name} | Delete a VirtualMachineInstanceMigration object.
 [**delete_namespaced_virtual_machine_instance_preset**](DefaultApi.md#delete_namespaced_virtual_machine_instance_preset) | **DELETE** /apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets/{name} | Delete a VirtualMachineInstancePreset object.
 [**delete_namespaced_virtual_machine_instance_replica_set**](DefaultApi.md#delete_namespaced_virtual_machine_instance_replica_set) | **DELETE** /apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets/{name} | Delete a VirtualMachineInstanceReplicaSet object.
-[**get_api_group**](DefaultApi.md#get_api_group) | **GET** /apis | Get a KubeVirt API GroupList
-[**get_api_group_0**](DefaultApi.md#get_api_group_0) | **GET** /apis/kubevirt.io | Get a KubeVirt API group
-[**get_api_group_1**](DefaultApi.md#get_api_group_1) | **GET** /apis/subresources.kubevirt.io | Get a KubeVirt API Group
+[**func7**](DefaultApi.md#func7) | **GET** /openapi/v2 | 
+[**get_api_group**](DefaultApi.md#get_api_group) | **GET** /apis/kubevirt.io | Get a KubeVirt API group
+[**get_api_group_0**](DefaultApi.md#get_api_group_0) | **GET** /apis/subresources.kubevirt.io | Get a KubeVirt API Group
+[**get_api_group_list**](DefaultApi.md#get_api_group_list) | **GET** /apis | Get a KubeVirt API GroupList
 [**get_api_resources**](DefaultApi.md#get_api_resources) | **GET** /apis/kubevirt.io/v1alpha2 | Get KubeVirt API Resources
 [**get_api_resources_0**](DefaultApi.md#get_api_resources_0) | **GET** /apis/subresources.kubevirt.io/v1alpha2 | Get a KubeVirt API resources
 [**list_namespaced_virtual_machine**](DefaultApi.md#list_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines | Get a list of VirtualMachine objects.
@@ -1060,10 +1061,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_api_group**
-> V1APIGroupList get_api_group()
+# **func7**
+> func7()
 
-Get a KubeVirt API GroupList
+
 
 ### Example 
 ```python
@@ -1082,11 +1083,9 @@ kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
 api_instance = kubevirt.DefaultApi()
 
 try: 
-    # Get a KubeVirt API GroupList
-    api_response = api_instance.get_api_group()
-    pprint(api_response)
+    api_instance.func7()
 except ApiException as e:
-    print("Exception when calling DefaultApi->get_api_group: %s\n" % e)
+    print("Exception when calling DefaultApi->func7: %s\n" % e)
 ```
 
 ### Parameters
@@ -1094,7 +1093,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**V1APIGroupList**](V1APIGroupList.md)
+void (empty response body)
 
 ### Authorization
 
@@ -1102,13 +1101,13 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_api_group_0**
-> V1APIGroup get_api_group_0()
+# **get_api_group**
+> V1APIGroup get_api_group()
 
 Get a KubeVirt API group
 
@@ -1130,6 +1129,53 @@ api_instance = kubevirt.DefaultApi()
 
 try: 
     # Get a KubeVirt API group
+    api_response = api_instance.get_api_group()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->get_api_group: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**V1APIGroup**](V1APIGroup.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_api_group_0**
+> V1APIGroup get_api_group_0()
+
+Get a KubeVirt API Group
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+
+try: 
+    # Get a KubeVirt API Group
     api_response = api_instance.get_api_group_0()
     pprint(api_response)
 except ApiException as e:
@@ -1154,10 +1200,10 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_api_group_1**
-> V1APIGroup get_api_group_1()
+# **get_api_group_list**
+> V1APIGroupList get_api_group_list()
 
-Get a KubeVirt API Group
+Get a KubeVirt API GroupList
 
 ### Example 
 ```python
@@ -1176,11 +1222,11 @@ kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
 api_instance = kubevirt.DefaultApi()
 
 try: 
-    # Get a KubeVirt API Group
-    api_response = api_instance.get_api_group_1()
+    # Get a KubeVirt API GroupList
+    api_response = api_instance.get_api_group_list()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->get_api_group_1: %s\n" % e)
+    print("Exception when calling DefaultApi->get_api_group_list: %s\n" % e)
 ```
 
 ### Parameters
@@ -1188,7 +1234,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**V1APIGroup**](V1APIGroup.md)
+[**V1APIGroupList**](V1APIGroupList.md)
 
 ### Authorization
 

@@ -83,6 +83,7 @@ from .models.v1_preferred_scheduling_term import V1PreferredSchedulingTerm
 from .models.v1_probe import V1Probe
 from .models.v1_rtc_timer import V1RTCTimer
 from .models.v1_resource_requirements import V1ResourceRequirements
+from .models.v1_root_paths import V1RootPaths
 from .models.v1_secret_volume_source import V1SecretVolumeSource
 from .models.v1_server_address_by_client_cidr import V1ServerAddressByClientCIDR
 from .models.v1_service_account_volume_source import V1ServiceAccountVolumeSource

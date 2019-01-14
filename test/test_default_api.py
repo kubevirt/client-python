@@ -167,11 +167,19 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_func7(self):
+        """
+        Test case for func7
+
+        
+        """
+        pass
+
     def test_get_api_group(self):
         """
         Test case for get_api_group
 
-        Get a KubeVirt API GroupList
+        Get a KubeVirt API group
         """
         pass
 
@@ -179,15 +187,15 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for get_api_group_0
 
-        Get a KubeVirt API group
+        Get a KubeVirt API Group
         """
         pass
 
-    def test_get_api_group_1(self):
+    def test_get_api_group_list(self):
         """
-        Test case for get_api_group_1
+        Test case for get_api_group_list
 
-        Get a KubeVirt API Group
+        Get a KubeVirt API GroupList
         """
         pass
 

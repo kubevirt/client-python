@@ -121,7 +121,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha2/healthz', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/healthz', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -228,7 +228,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}/console', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/console', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -341,7 +341,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines', 'POST',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -454,7 +454,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances', 'POST',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -567,7 +567,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancemigrations', 'POST',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -680,7 +680,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets', 'POST',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -793,7 +793,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets', 'POST',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -918,7 +918,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1043,7 +1043,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1168,7 +1168,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancemigrations', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1293,7 +1293,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1418,7 +1418,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1552,7 +1552,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1686,7 +1686,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1820,7 +1820,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancemigrations/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations/{name}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1954,7 +1954,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2088,7 +2088,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2550,7 +2550,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2642,7 +2642,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha2', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2776,7 +2776,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2910,7 +2910,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3044,7 +3044,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancemigrations', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3178,7 +3178,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3312,7 +3312,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3437,7 +3437,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/virtualmachines', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/virtualmachines', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3562,7 +3562,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/virtualmachineinstances', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/virtualmachineinstances', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3687,7 +3687,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/virtualmachineinstancemigrations', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/virtualmachineinstancemigrations', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3812,7 +3812,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/virtualmachineinstancepresets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/virtualmachineinstancepresets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3937,7 +3937,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/virtualmachineinstancereplicasets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/virtualmachineinstancereplicasets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4059,7 +4059,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4181,7 +4181,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4303,7 +4303,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancemigrations/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations/{name}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4425,7 +4425,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4547,7 +4547,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4666,7 +4666,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines/{name}', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4785,7 +4785,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4904,7 +4904,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancemigrations/{name}', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations/{name}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5023,7 +5023,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5142,7 +5142,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5264,7 +5264,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines/{name}', 'PUT',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5386,7 +5386,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}', 'PUT',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5508,7 +5508,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancemigrations/{name}', 'PUT',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations/{name}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5630,7 +5630,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'PUT',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5752,7 +5752,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'PUT',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5859,7 +5859,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachines/{name}/restart', 'PUT',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}/restart', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5966,7 +5966,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}/test', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/test', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -6056,7 +6056,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha2/version', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/version', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -6163,7 +6163,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha2/namespaces/{namespace}/virtualmachineinstances/{name}/vnc', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/vnc', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -6297,7 +6297,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/namespaces/{namespace}/virtualmachines', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace}/virtualmachines', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -6431,7 +6431,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/namespaces/{namespace}/virtualmachineinstances', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace}/virtualmachineinstances', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -6565,7 +6565,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/namespaces/{namespace}/virtualmachineinstancemigrations', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace}/virtualmachineinstancemigrations', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -6699,7 +6699,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/namespaces/{namespace}/virtualmachineinstancepresets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace}/virtualmachineinstancepresets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -6833,7 +6833,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/namespaces/{namespace}/virtualmachineinstancereplicasets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace}/virtualmachineinstancereplicasets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -6958,7 +6958,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/virtualmachineinstances', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/virtualmachineinstances', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -7083,7 +7083,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/virtualmachineinstancemigrations', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/virtualmachineinstancemigrations', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -7208,7 +7208,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/virtualmachineinstancepresets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/virtualmachineinstancepresets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -7333,7 +7333,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/virtualmachineinstancereplicasets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/virtualmachineinstancereplicasets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -7458,7 +7458,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = ['BearerToken']
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha2/watch/virtualmachines', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/virtualmachines', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

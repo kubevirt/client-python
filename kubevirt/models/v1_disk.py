@@ -39,8 +39,7 @@ class V1Disk(object):
         'floppy': 'V1FloppyTarget',
         'lun': 'V1LunTarget',
         'name': 'str',
-        'serial': 'str',
-        'volume_name': 'str'
+        'serial': 'str'
     }
 
     attribute_map = {
@@ -52,11 +51,10 @@ class V1Disk(object):
         'floppy': 'floppy',
         'lun': 'lun',
         'name': 'name',
-        'serial': 'serial',
-        'volume_name': 'volumeName'
+        'serial': 'serial'
     }
 
-    def __init__(self, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, floppy=None, lun=None, name=None, serial=None, volume_name=None):
+    def __init__(self, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, floppy=None, lun=None, name=None, serial=None):
         """
         V1Disk - a model defined in Swagger
         """
@@ -70,7 +68,6 @@ class V1Disk(object):
         self._lun = None
         self._name = None
         self._serial = None
-        self._volume_name = None
 
         if boot_order is not None:
           self.boot_order = boot_order
@@ -89,7 +86,6 @@ class V1Disk(object):
         self.name = name
         if serial is not None:
           self.serial = serial
-        self.volume_name = volume_name
 
     @property
     def boot_order(self):
@@ -299,31 +295,6 @@ class V1Disk(object):
         """
 
         self._serial = serial
-
-    @property
-    def volume_name(self):
-        """
-        Gets the volume_name of this V1Disk.
-        Name of the volume which is referenced. Must match the Name of a Volume.
-
-        :return: The volume_name of this V1Disk.
-        :rtype: str
-        """
-        return self._volume_name
-
-    @volume_name.setter
-    def volume_name(self, volume_name):
-        """
-        Sets the volume_name of this V1Disk.
-        Name of the volume which is referenced. Must match the Name of a Volume.
-
-        :param volume_name: The volume_name of this V1Disk.
-        :type: str
-        """
-        if volume_name is None:
-            raise ValueError("Invalid value for `volume_name`, must not be `None`")
-
-        self._volume_name = volume_name
 
     def to_dict(self):
         """

@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **lun** | [**V1LunTarget**](V1LunTarget.md) | Attach a volume as a LUN to the vmi. | [optional] 
 **name** | **str** | Name is the device name | 
 **serial** | **str** | Serial provides the ability to specify a serial number for the disk device. +optional | [optional] 
-**volume_name** | **str** | Name of the volume which is referenced. Must match the Name of a Volume. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

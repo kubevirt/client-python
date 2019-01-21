@@ -31,25 +31,53 @@ class V1alpha1DataVolumeSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'content_type': 'str',
         'pvc': 'V1PersistentVolumeClaimSpec',
         'source': 'V1alpha1DataVolumeSource'
     }
 
     attribute_map = {
+        'content_type': 'contentType',
         'pvc': 'pvc',
         'source': 'source'
     }
 
-    def __init__(self, pvc=None, source=None):
+    def __init__(self, content_type=None, pvc=None, source=None):
         """
         V1alpha1DataVolumeSpec - a model defined in Swagger
         """
 
+        self._content_type = None
         self._pvc = None
         self._source = None
 
+        if content_type is not None:
+          self.content_type = content_type
         self.pvc = pvc
         self.source = source
+
+    @property
+    def content_type(self):
+        """
+        Gets the content_type of this V1alpha1DataVolumeSpec.
+        DataVolumeContentType options: \"kubevirt\", \"archive\"
+
+        :return: The content_type of this V1alpha1DataVolumeSpec.
+        :rtype: str
+        """
+        return self._content_type
+
+    @content_type.setter
+    def content_type(self, content_type):
+        """
+        Sets the content_type of this V1alpha1DataVolumeSpec.
+        DataVolumeContentType options: \"kubevirt\", \"archive\"
+
+        :param content_type: The content_type of this V1alpha1DataVolumeSpec.
+        :type: str
+        """
+
+        self._content_type = content_type
 
     @property
     def pvc(self):

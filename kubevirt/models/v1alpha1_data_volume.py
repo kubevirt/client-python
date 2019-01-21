@@ -64,7 +64,8 @@ class V1alpha1DataVolume(object):
         if metadata is not None:
           self.metadata = metadata
         self.spec = spec
-        self.status = status
+        if status is not None:
+          self.status = status
 
     @property
     def api_version(self):
@@ -174,8 +175,6 @@ class V1alpha1DataVolume(object):
         :param status: The status of this V1alpha1DataVolume.
         :type: V1alpha1DataVolumeStatus
         """
-        if status is None:
-            raise ValueError("Invalid value for `status`, must not be `None`")
 
         self._status = status
 

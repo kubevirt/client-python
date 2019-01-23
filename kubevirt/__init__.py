@@ -93,6 +93,7 @@ from .models.v1_status_details import V1StatusDetails
 from .models.v1_tcp_socket_action import V1TCPSocketAction
 from .models.v1_timer import V1Timer
 from .models.v1_toleration import V1Toleration
+from .models.v1_typed_local_object_reference import V1TypedLocalObjectReference
 from .models.v1_virtual_machine import V1VirtualMachine
 from .models.v1_virtual_machine_condition import V1VirtualMachineCondition
 from .models.v1_virtual_machine_instance import V1VirtualMachineInstance

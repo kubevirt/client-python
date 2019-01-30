@@ -31,32 +31,116 @@ class V1CloudInitNoCloudSource(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'network_data': 'str',
+        'network_data_base64': 'str',
+        'network_data_secret_ref': 'V1LocalObjectReference',
         'secret_ref': 'V1LocalObjectReference',
         'user_data': 'str',
         'user_data_base64': 'str'
     }
 
     attribute_map = {
+        'network_data': 'networkData',
+        'network_data_base64': 'networkDataBase64',
+        'network_data_secret_ref': 'networkDataSecretRef',
         'secret_ref': 'secretRef',
         'user_data': 'userData',
         'user_data_base64': 'userDataBase64'
     }
 
-    def __init__(self, secret_ref=None, user_data=None, user_data_base64=None):
+    def __init__(self, network_data=None, network_data_base64=None, network_data_secret_ref=None, secret_ref=None, user_data=None, user_data_base64=None):
         """
         V1CloudInitNoCloudSource - a model defined in Swagger
         """
 
+        self._network_data = None
+        self._network_data_base64 = None
+        self._network_data_secret_ref = None
         self._secret_ref = None
         self._user_data = None
         self._user_data_base64 = None
 
+        if network_data is not None:
+          self.network_data = network_data
+        if network_data_base64 is not None:
+          self.network_data_base64 = network_data_base64
+        if network_data_secret_ref is not None:
+          self.network_data_secret_ref = network_data_secret_ref
         if secret_ref is not None:
           self.secret_ref = secret_ref
         if user_data is not None:
           self.user_data = user_data
         if user_data_base64 is not None:
           self.user_data_base64 = user_data_base64
+
+    @property
+    def network_data(self):
+        """
+        Gets the network_data of this V1CloudInitNoCloudSource.
+        NetworkData contains NoCloud inline cloud-init networkdata. + optional
+
+        :return: The network_data of this V1CloudInitNoCloudSource.
+        :rtype: str
+        """
+        return self._network_data
+
+    @network_data.setter
+    def network_data(self, network_data):
+        """
+        Sets the network_data of this V1CloudInitNoCloudSource.
+        NetworkData contains NoCloud inline cloud-init networkdata. + optional
+
+        :param network_data: The network_data of this V1CloudInitNoCloudSource.
+        :type: str
+        """
+
+        self._network_data = network_data
+
+    @property
+    def network_data_base64(self):
+        """
+        Gets the network_data_base64 of this V1CloudInitNoCloudSource.
+        NetworkDataBase64 contains NoCloud cloud-init networkdata as a base64 encoded string. + optional
+
+        :return: The network_data_base64 of this V1CloudInitNoCloudSource.
+        :rtype: str
+        """
+        return self._network_data_base64
+
+    @network_data_base64.setter
+    def network_data_base64(self, network_data_base64):
+        """
+        Sets the network_data_base64 of this V1CloudInitNoCloudSource.
+        NetworkDataBase64 contains NoCloud cloud-init networkdata as a base64 encoded string. + optional
+
+        :param network_data_base64: The network_data_base64 of this V1CloudInitNoCloudSource.
+        :type: str
+        """
+
+        self._network_data_base64 = network_data_base64
+
+    @property
+    def network_data_secret_ref(self):
+        """
+        Gets the network_data_secret_ref of this V1CloudInitNoCloudSource.
+        NetworkDataSecretRef references a k8s secret that contains NoCloud networkdata. + optional
+
+        :return: The network_data_secret_ref of this V1CloudInitNoCloudSource.
+        :rtype: V1LocalObjectReference
+        """
+        return self._network_data_secret_ref
+
+    @network_data_secret_ref.setter
+    def network_data_secret_ref(self, network_data_secret_ref):
+        """
+        Sets the network_data_secret_ref of this V1CloudInitNoCloudSource.
+        NetworkDataSecretRef references a k8s secret that contains NoCloud networkdata. + optional
+
+        :param network_data_secret_ref: The network_data_secret_ref of this V1CloudInitNoCloudSource.
+        :type: V1LocalObjectReference
+        """
+
+        self._network_data_secret_ref = network_data_secret_ref
 
     @property
     def secret_ref(self):

@@ -33,16 +33,18 @@ class V1Features(object):
     swagger_types = {
         'acpi': 'V1FeatureState',
         'apic': 'V1FeatureAPIC',
-        'hyperv': 'V1FeatureHyperv'
+        'hyperv': 'V1FeatureHyperv',
+        'smm': 'V1FeatureState'
     }
 
     attribute_map = {
         'acpi': 'acpi',
         'apic': 'apic',
-        'hyperv': 'hyperv'
+        'hyperv': 'hyperv',
+        'smm': 'smm'
     }
 
-    def __init__(self, acpi=None, apic=None, hyperv=None):
+    def __init__(self, acpi=None, apic=None, hyperv=None, smm=None):
         """
         V1Features - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class V1Features(object):
         self._acpi = None
         self._apic = None
         self._hyperv = None
+        self._smm = None
 
         if acpi is not None:
           self.acpi = acpi
@@ -57,6 +60,8 @@ class V1Features(object):
           self.apic = apic
         if hyperv is not None:
           self.hyperv = hyperv
+        if smm is not None:
+          self.smm = smm
 
     @property
     def acpi(self):
@@ -126,6 +131,29 @@ class V1Features(object):
         """
 
         self._hyperv = hyperv
+
+    @property
+    def smm(self):
+        """
+        Gets the smm of this V1Features.
+        SMM enables/disables System Management Mode. TSEG not yet implemented. +optional
+
+        :return: The smm of this V1Features.
+        :rtype: V1FeatureState
+        """
+        return self._smm
+
+    @smm.setter
+    def smm(self, smm):
+        """
+        Sets the smm of this V1Features.
+        SMM enables/disables System Management Mode. TSEG not yet implemented. +optional
+
+        :param smm: The smm of this V1Features.
+        :type: V1FeatureState
+        """
+
+        self._smm = smm
 
     def to_dict(self):
         """

@@ -19,6 +19,7 @@ from .v1_api_group_list import V1APIGroupList
 from .v1_api_resource import V1APIResource
 from .v1_api_resource_list import V1APIResourceList
 from .v1_affinity import V1Affinity
+from .v1_bootloader import V1Bootloader
 from .v1_cd_rom_target import V1CDRomTarget
 from .v1_cpu import V1CPU
 from .v1_clock import V1Clock

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **clock** | [**V1Clock**](V1Clock.md) | Clock sets the clock and timers of the vmi. +optional | [optional] 
 **cpu** | [**V1CPU**](V1CPU.md) | CPU allow specified the detailed CPU topology inside the vmi. +optional | [optional] 
 **devices** | [**V1Devices**](V1Devices.md) | Devices allows adding disks, network interfaces, ... | 
-**features** | [**V1Features**](V1Features.md) | Features like acpi, apic, hyperv. +optional | [optional] 
+**features** | [**V1Features**](V1Features.md) | Features like acpi, apic, hyperv, smm. +optional | [optional] 
 **firmware** | [**V1Firmware**](V1Firmware.md) | Firmware. +optional | [optional] 
 **io_threads_policy** | [**V1IOThreadsPolicy**](V1IOThreadsPolicy.md) | Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto +optional | [optional] 
 **machine** | [**V1Machine**](V1Machine.md) | Machine type. +optional | [optional] 

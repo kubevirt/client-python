@@ -162,7 +162,7 @@ class V1DomainSpec(object):
     def features(self):
         """
         Gets the features of this V1DomainSpec.
-        Features like acpi, apic, hyperv. +optional
+        Features like acpi, apic, hyperv, smm. +optional
 
         :return: The features of this V1DomainSpec.
         :rtype: V1Features
@@ -173,7 +173,7 @@ class V1DomainSpec(object):
     def features(self, features):
         """
         Sets the features of this V1DomainSpec.
-        Features like acpi, apic, hyperv. +optional
+        Features like acpi, apic, hyperv, smm. +optional
 
         :param features: The features of this V1DomainSpec.
         :type: V1Features

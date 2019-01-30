@@ -19,6 +19,7 @@ from .models.v1_api_group_list import V1APIGroupList
 from .models.v1_api_resource import V1APIResource
 from .models.v1_api_resource_list import V1APIResourceList
 from .models.v1_affinity import V1Affinity
+from .models.v1_bootloader import V1Bootloader
 from .models.v1_cd_rom_target import V1CDRomTarget
 from .models.v1_cpu import V1CPU
 from .models.v1_clock import V1Clock

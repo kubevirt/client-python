@@ -1,10 +1,10 @@
-# V1Firmware
+# V1Bootloader
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bootloader** | [**V1Bootloader**](V1Bootloader.md) | Settings to control the bootloader that is used. +optional | [optional] 
-**uuid** | **str** | UUID reported by the vmi bios. Defaults to a random generated uid. | [optional] 
+**bios** | [**V1BIOS**](V1BIOS.md) | If set (default), BIOS will be used. +optional | [optional] 
+**efi** | [**V1EFI**](V1EFI.md) | If set, EFI will be used instead of BIOS. +optional | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

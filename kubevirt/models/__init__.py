@@ -77,6 +77,8 @@ from .v1_persistent_volume_claim_volume_source import V1PersistentVolumeClaimVol
 from .v1_pod_affinity import V1PodAffinity
 from .v1_pod_affinity_term import V1PodAffinityTerm
 from .v1_pod_anti_affinity import V1PodAntiAffinity
+from .v1_pod_dns_config import V1PodDNSConfig
+from .v1_pod_dns_config_option import V1PodDNSConfigOption
 from .v1_pod_network import V1PodNetwork
 from .v1_port import V1Port
 from .v1_preconditions import V1Preconditions

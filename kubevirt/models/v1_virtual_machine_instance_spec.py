@@ -32,6 +32,8 @@ class V1VirtualMachineInstanceSpec(object):
     """
     swagger_types = {
         'affinity': 'V1Affinity',
+        'dns_config': 'V1PodDNSConfig',
+        'dns_policy': 'str',
         'domain': 'V1DomainSpec',
         'hostname': 'str',
         'liveness_probe': 'V1Probe',
@@ -46,6 +48,8 @@ class V1VirtualMachineInstanceSpec(object):
 
     attribute_map = {
         'affinity': 'affinity',
+        'dns_config': 'dnsConfig',
+        'dns_policy': 'dnsPolicy',
         'domain': 'domain',
         'hostname': 'hostname',
         'liveness_probe': 'livenessProbe',
@@ -58,12 +62,14 @@ class V1VirtualMachineInstanceSpec(object):
         'volumes': 'volumes'
     }
 
-    def __init__(self, affinity=None, domain=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, readiness_probe=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, volumes=None):
+    def __init__(self, affinity=None, dns_config=None, dns_policy=None, domain=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, readiness_probe=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, volumes=None):
         """
         V1VirtualMachineInstanceSpec - a model defined in Swagger
         """
 
         self._affinity = None
+        self._dns_config = None
+        self._dns_policy = None
         self._domain = None
         self._hostname = None
         self._liveness_probe = None
@@ -77,6 +83,10 @@ class V1VirtualMachineInstanceSpec(object):
 
         if affinity is not None:
           self.affinity = affinity
+        if dns_config is not None:
+          self.dns_config = dns_config
+        if dns_policy is not None:
+          self.dns_policy = dns_policy
         self.domain = domain
         if hostname is not None:
           self.hostname = hostname
@@ -119,6 +129,52 @@ class V1VirtualMachineInstanceSpec(object):
         """
 
         self._affinity = affinity
+
+    @property
+    def dns_config(self):
+        """
+        Gets the dns_config of this V1VirtualMachineInstanceSpec.
+        Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy. +optional
+
+        :return: The dns_config of this V1VirtualMachineInstanceSpec.
+        :rtype: V1PodDNSConfig
+        """
+        return self._dns_config
+
+    @dns_config.setter
+    def dns_config(self, dns_config):
+        """
+        Sets the dns_config of this V1VirtualMachineInstanceSpec.
+        Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy. +optional
+
+        :param dns_config: The dns_config of this V1VirtualMachineInstanceSpec.
+        :type: V1PodDNSConfig
+        """
+
+        self._dns_config = dns_config
+
+    @property
+    def dns_policy(self):
+        """
+        Gets the dns_policy of this V1VirtualMachineInstanceSpec.
+        Set DNS policy for the pod. Defaults to \"ClusterFirst\". Valid values are 'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to 'ClusterFirstWithHostNet'. +optional
+
+        :return: The dns_policy of this V1VirtualMachineInstanceSpec.
+        :rtype: str
+        """
+        return self._dns_policy
+
+    @dns_policy.setter
+    def dns_policy(self, dns_policy):
+        """
+        Sets the dns_policy of this V1VirtualMachineInstanceSpec.
+        Set DNS policy for the pod. Defaults to \"ClusterFirst\". Valid values are 'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to 'ClusterFirstWithHostNet'. +optional
+
+        :param dns_policy: The dns_policy of this V1VirtualMachineInstanceSpec.
+        :type: str
+        """
+
+        self._dns_policy = dns_policy
 
     @property
     def domain(self):

@@ -33,28 +33,33 @@ class V1DHCPOptions(object):
     swagger_types = {
         'boot_file_name': 'str',
         'ntp_servers': 'list[str]',
+        'private_options': 'list[V1DHCPPrivateOptions]',
         'tftp_server_name': 'str'
     }
 
     attribute_map = {
         'boot_file_name': 'bootFileName',
         'ntp_servers': 'ntpServers',
+        'private_options': 'privateOptions',
         'tftp_server_name': 'tftpServerName'
     }
 
-    def __init__(self, boot_file_name=None, ntp_servers=None, tftp_server_name=None):
+    def __init__(self, boot_file_name=None, ntp_servers=None, private_options=None, tftp_server_name=None):
         """
         V1DHCPOptions - a model defined in Swagger
         """
 
         self._boot_file_name = None
         self._ntp_servers = None
+        self._private_options = None
         self._tftp_server_name = None
 
         if boot_file_name is not None:
           self.boot_file_name = boot_file_name
         if ntp_servers is not None:
           self.ntp_servers = ntp_servers
+        if private_options is not None:
+          self.private_options = private_options
         if tftp_server_name is not None:
           self.tftp_server_name = tftp_server_name
 
@@ -103,6 +108,29 @@ class V1DHCPOptions(object):
         """
 
         self._ntp_servers = ntp_servers
+
+    @property
+    def private_options(self):
+        """
+        Gets the private_options of this V1DHCPOptions.
+        If specified will pass extra DHCP options for private use, range: 224-254 +optional
+
+        :return: The private_options of this V1DHCPOptions.
+        :rtype: list[V1DHCPPrivateOptions]
+        """
+        return self._private_options
+
+    @private_options.setter
+    def private_options(self, private_options):
+        """
+        Sets the private_options of this V1DHCPOptions.
+        If specified will pass extra DHCP options for private use, range: 224-254 +optional
+
+        :param private_options: The private_options of this V1DHCPOptions.
+        :type: list[V1DHCPPrivateOptions]
+        """
+
+        self._private_options = private_options
 
     @property
     def tftp_server_name(self):

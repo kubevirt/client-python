@@ -29,6 +29,7 @@ from .v1_cni_network import V1CniNetwork
 from .v1_config_map_volume_source import V1ConfigMapVolumeSource
 from .v1_container_disk_source import V1ContainerDiskSource
 from .v1_dhcp_options import V1DHCPOptions
+from .v1_dhcp_private_options import V1DHCPPrivateOptions
 from .v1_data_volume_source import V1DataVolumeSource
 from .v1_delete_options import V1DeleteOptions
 from .v1_devices import V1Devices

@@ -37,9 +37,11 @@ class V1VirtualMachineInstanceMigrationState(object):
         'migration_uid': 'str',
         'source_node': 'str',
         'start_timestamp': 'str',
+        'target_direct_migration_node_ports': 'object',
         'target_node': 'str',
         'target_node_address': 'str',
-        'target_node_domain_detected': 'bool'
+        'target_node_domain_detected': 'bool',
+        'target_pod': 'str'
     }
 
     attribute_map = {
@@ -49,12 +51,14 @@ class V1VirtualMachineInstanceMigrationState(object):
         'migration_uid': 'migrationUid',
         'source_node': 'sourceNode',
         'start_timestamp': 'startTimestamp',
+        'target_direct_migration_node_ports': 'targetDirectMigrationNodePorts',
         'target_node': 'targetNode',
         'target_node_address': 'targetNodeAddress',
-        'target_node_domain_detected': 'targetNodeDomainDetected'
+        'target_node_domain_detected': 'targetNodeDomainDetected',
+        'target_pod': 'targetPod'
     }
 
-    def __init__(self, completed=None, end_timestamp=None, failed=None, migration_uid=None, source_node=None, start_timestamp=None, target_node=None, target_node_address=None, target_node_domain_detected=None):
+    def __init__(self, completed=None, end_timestamp=None, failed=None, migration_uid=None, source_node=None, start_timestamp=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_pod=None):
         """
         V1VirtualMachineInstanceMigrationState - a model defined in Swagger
         """
@@ -65,9 +69,11 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._migration_uid = None
         self._source_node = None
         self._start_timestamp = None
+        self._target_direct_migration_node_ports = None
         self._target_node = None
         self._target_node_address = None
         self._target_node_domain_detected = None
+        self._target_pod = None
 
         if completed is not None:
           self.completed = completed
@@ -81,12 +87,16 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.source_node = source_node
         if start_timestamp is not None:
           self.start_timestamp = start_timestamp
+        if target_direct_migration_node_ports is not None:
+          self.target_direct_migration_node_ports = target_direct_migration_node_ports
         if target_node is not None:
           self.target_node = target_node
         if target_node_address is not None:
           self.target_node_address = target_node_address
         if target_node_domain_detected is not None:
           self.target_node_domain_detected = target_node_domain_detected
+        if target_pod is not None:
+          self.target_pod = target_pod
 
     @property
     def completed(self):
@@ -227,6 +237,29 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._start_timestamp = start_timestamp
 
     @property
+    def target_direct_migration_node_ports(self):
+        """
+        Gets the target_direct_migration_node_ports of this V1VirtualMachineInstanceMigrationState.
+        The list of ports opened for live migration on the destination node
+
+        :return: The target_direct_migration_node_ports of this V1VirtualMachineInstanceMigrationState.
+        :rtype: object
+        """
+        return self._target_direct_migration_node_ports
+
+    @target_direct_migration_node_ports.setter
+    def target_direct_migration_node_ports(self, target_direct_migration_node_ports):
+        """
+        Sets the target_direct_migration_node_ports of this V1VirtualMachineInstanceMigrationState.
+        The list of ports opened for live migration on the destination node
+
+        :param target_direct_migration_node_ports: The target_direct_migration_node_ports of this V1VirtualMachineInstanceMigrationState.
+        :type: object
+        """
+
+        self._target_direct_migration_node_ports = target_direct_migration_node_ports
+
+    @property
     def target_node(self):
         """
         Gets the target_node of this V1VirtualMachineInstanceMigrationState.
@@ -294,6 +327,29 @@ class V1VirtualMachineInstanceMigrationState(object):
         """
 
         self._target_node_domain_detected = target_node_domain_detected
+
+    @property
+    def target_pod(self):
+        """
+        Gets the target_pod of this V1VirtualMachineInstanceMigrationState.
+        The target pod that the VMI is moving to
+
+        :return: The target_pod of this V1VirtualMachineInstanceMigrationState.
+        :rtype: str
+        """
+        return self._target_pod
+
+    @target_pod.setter
+    def target_pod(self, target_pod):
+        """
+        Sets the target_pod of this V1VirtualMachineInstanceMigrationState.
+        The target pod that the VMI is moving to
+
+        :param target_pod: The target_pod of this V1VirtualMachineInstanceMigrationState.
+        :type: str
+        """
+
+        self._target_pod = target_pod
 
     def to_dict(self):
         """

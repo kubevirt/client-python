@@ -32,24 +32,29 @@ class V1Firmware(object):
     """
     swagger_types = {
         'bootloader': 'V1Bootloader',
+        'serial': 'str',
         'uuid': 'str'
     }
 
     attribute_map = {
         'bootloader': 'bootloader',
+        'serial': 'serial',
         'uuid': 'uuid'
     }
 
-    def __init__(self, bootloader=None, uuid=None):
+    def __init__(self, bootloader=None, serial=None, uuid=None):
         """
         V1Firmware - a model defined in Swagger
         """
 
         self._bootloader = None
+        self._serial = None
         self._uuid = None
 
         if bootloader is not None:
           self.bootloader = bootloader
+        if serial is not None:
+          self.serial = serial
         if uuid is not None:
           self.uuid = uuid
 
@@ -75,6 +80,29 @@ class V1Firmware(object):
         """
 
         self._bootloader = bootloader
+
+    @property
+    def serial(self):
+        """
+        Gets the serial of this V1Firmware.
+        The system-serial-number in SMBIOS
+
+        :return: The serial of this V1Firmware.
+        :rtype: str
+        """
+        return self._serial
+
+    @serial.setter
+    def serial(self, serial):
+        """
+        Sets the serial of this V1Firmware.
+        The system-serial-number in SMBIOS
+
+        :param serial: The serial of this V1Firmware.
+        :type: str
+        """
+
+        self._serial = serial
 
     @property
     def uuid(self):

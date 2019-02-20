@@ -35,6 +35,7 @@ class V1Devices(object):
         'autoattach_pod_interface': 'bool',
         'block_multi_queue': 'bool',
         'disks': 'list[V1Disk]',
+        'inputs': 'list[V1Input]',
         'interfaces': 'list[V1Interface]',
         'network_interface_multiqueue': 'bool',
         'rng': 'V1Rng',
@@ -46,13 +47,14 @@ class V1Devices(object):
         'autoattach_pod_interface': 'autoattachPodInterface',
         'block_multi_queue': 'blockMultiQueue',
         'disks': 'disks',
+        'inputs': 'inputs',
         'interfaces': 'interfaces',
         'network_interface_multiqueue': 'networkInterfaceMultiqueue',
         'rng': 'rng',
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_pod_interface=None, block_multi_queue=None, disks=None, interfaces=None, network_interface_multiqueue=None, rng=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_pod_interface=None, block_multi_queue=None, disks=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class V1Devices(object):
         self._autoattach_pod_interface = None
         self._block_multi_queue = None
         self._disks = None
+        self._inputs = None
         self._interfaces = None
         self._network_interface_multiqueue = None
         self._rng = None
@@ -74,6 +77,8 @@ class V1Devices(object):
           self.block_multi_queue = block_multi_queue
         if disks is not None:
           self.disks = disks
+        if inputs is not None:
+          self.inputs = inputs
         if interfaces is not None:
           self.interfaces = interfaces
         if network_interface_multiqueue is not None:
@@ -174,6 +179,29 @@ class V1Devices(object):
         """
 
         self._disks = disks
+
+    @property
+    def inputs(self):
+        """
+        Gets the inputs of this V1Devices.
+        Inputs describe input devices
+
+        :return: The inputs of this V1Devices.
+        :rtype: list[V1Input]
+        """
+        return self._inputs
+
+    @inputs.setter
+    def inputs(self, inputs):
+        """
+        Sets the inputs of this V1Devices.
+        Inputs describe input devices
+
+        :param inputs: The inputs of this V1Devices.
+        :type: list[V1Input]
+        """
+
+        self._inputs = inputs
 
     @property
     def interfaces(self):

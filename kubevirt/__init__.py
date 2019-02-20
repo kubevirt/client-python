@@ -56,6 +56,7 @@ from .models.v1_hyperv_timer import V1HypervTimer
 from .models.v1_i6300_esb_watchdog import V1I6300ESBWatchdog
 from .models.v1_initializer import V1Initializer
 from .models.v1_initializers import V1Initializers
+from .models.v1_input import V1Input
 from .models.v1_interface import V1Interface
 from .models.v1_kvm_timer import V1KVMTimer
 from .models.v1_label_selector import V1LabelSelector

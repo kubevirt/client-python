@@ -22,6 +22,7 @@ from .v1_affinity import V1Affinity
 from .v1_bootloader import V1Bootloader
 from .v1_cd_rom_target import V1CDRomTarget
 from .v1_cpu import V1CPU
+from .v1_cpu_feature import V1CPUFeature
 from .v1_clock import V1Clock
 from .v1_clock_offset_utc import V1ClockOffsetUTC
 from .v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource

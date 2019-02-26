@@ -33,6 +33,7 @@ class V1CPU(object):
     swagger_types = {
         'cores': 'int',
         'dedicated_cpu_placement': 'bool',
+        'features': 'list[V1CPUFeature]',
         'model': 'str',
         'sockets': 'int',
         'threads': 'int'
@@ -41,18 +42,20 @@ class V1CPU(object):
     attribute_map = {
         'cores': 'cores',
         'dedicated_cpu_placement': 'dedicatedCpuPlacement',
+        'features': 'features',
         'model': 'model',
         'sockets': 'sockets',
         'threads': 'threads'
     }
 
-    def __init__(self, cores=None, dedicated_cpu_placement=None, model=None, sockets=None, threads=None):
+    def __init__(self, cores=None, dedicated_cpu_placement=None, features=None, model=None, sockets=None, threads=None):
         """
         V1CPU - a model defined in Swagger
         """
 
         self._cores = None
         self._dedicated_cpu_placement = None
+        self._features = None
         self._model = None
         self._sockets = None
         self._threads = None
@@ -61,6 +64,8 @@ class V1CPU(object):
           self.cores = cores
         if dedicated_cpu_placement is not None:
           self.dedicated_cpu_placement = dedicated_cpu_placement
+        if features is not None:
+          self.features = features
         if model is not None:
           self.model = model
         if sockets is not None:
@@ -115,10 +120,33 @@ class V1CPU(object):
         self._dedicated_cpu_placement = dedicated_cpu_placement
 
     @property
+    def features(self):
+        """
+        Gets the features of this V1CPU.
+        Features specifies the CPU features list inside the VMI. +optional
+
+        :return: The features of this V1CPU.
+        :rtype: list[V1CPUFeature]
+        """
+        return self._features
+
+    @features.setter
+    def features(self, features):
+        """
+        Sets the features of this V1CPU.
+        Features specifies the CPU features list inside the VMI. +optional
+
+        :param features: The features of this V1CPU.
+        :type: list[V1CPUFeature]
+        """
+
+        self._features = features
+
+    @property
     def model(self):
         """
         Gets the model of this V1CPU.
-        Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/blob/master/src/cpu/cpu_map.xml. It is possible to specify special cases like \"host-passthrough\" to get the same CPU as the node and \"host-model\" to get CPU closest to the node one. For more information see https://libvirt.org/formatdomain.html#elementsCPU. Defaults to host-model. +optional
+        Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/blob/master/src/cpu/cpu_map.xml. It is possible to specify special cases like \"host-passthrough\" to get the same CPU as the node and \"host-model\" to get CPU closest to the node one. Defaults to host-model. +optional
 
         :return: The model of this V1CPU.
         :rtype: str
@@ -129,7 +157,7 @@ class V1CPU(object):
     def model(self, model):
         """
         Sets the model of this V1CPU.
-        Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/blob/master/src/cpu/cpu_map.xml. It is possible to specify special cases like \"host-passthrough\" to get the same CPU as the node and \"host-model\" to get CPU closest to the node one. For more information see https://libvirt.org/formatdomain.html#elementsCPU. Defaults to host-model. +optional
+        Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/blob/master/src/cpu/cpu_map.xml. It is possible to specify special cases like \"host-passthrough\" to get the same CPU as the node and \"host-model\" to get CPU closest to the node one. Defaults to host-model. +optional
 
         :param model: The model of this V1CPU.
         :type: str

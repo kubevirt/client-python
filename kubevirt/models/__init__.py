@@ -67,6 +67,7 @@ from .v1_local_object_reference import V1LocalObjectReference
 from .v1_lun_target import V1LunTarget
 from .v1_machine import V1Machine
 from .v1_memory import V1Memory
+from .v1_migration_config import V1MigrationConfig
 from .v1_network import V1Network
 from .v1_node_affinity import V1NodeAffinity
 from .v1_node_selector import V1NodeSelector

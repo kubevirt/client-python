@@ -34,6 +34,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'completed': 'bool',
         'end_timestamp': 'str',
         'failed': 'bool',
+        'migration_config': 'V1MigrationConfig',
         'migration_uid': 'str',
         'source_node': 'str',
         'start_timestamp': 'str',
@@ -48,6 +49,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'completed': 'completed',
         'end_timestamp': 'endTimestamp',
         'failed': 'failed',
+        'migration_config': 'migrationConfig',
         'migration_uid': 'migrationUid',
         'source_node': 'sourceNode',
         'start_timestamp': 'startTimestamp',
@@ -58,7 +60,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'target_pod': 'targetPod'
     }
 
-    def __init__(self, completed=None, end_timestamp=None, failed=None, migration_uid=None, source_node=None, start_timestamp=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_pod=None):
+    def __init__(self, completed=None, end_timestamp=None, failed=None, migration_config=None, migration_uid=None, source_node=None, start_timestamp=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_pod=None):
         """
         V1VirtualMachineInstanceMigrationState - a model defined in Swagger
         """
@@ -66,6 +68,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._completed = None
         self._end_timestamp = None
         self._failed = None
+        self._migration_config = None
         self._migration_uid = None
         self._source_node = None
         self._start_timestamp = None
@@ -81,6 +84,8 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.end_timestamp = end_timestamp
         if failed is not None:
           self.failed = failed
+        if migration_config is not None:
+          self.migration_config = migration_config
         if migration_uid is not None:
           self.migration_uid = migration_uid
         if source_node is not None:
@@ -166,6 +171,29 @@ class V1VirtualMachineInstanceMigrationState(object):
         """
 
         self._failed = failed
+
+    @property
+    def migration_config(self):
+        """
+        Gets the migration_config of this V1VirtualMachineInstanceMigrationState.
+        Config contains migration configuration options
+
+        :return: The migration_config of this V1VirtualMachineInstanceMigrationState.
+        :rtype: V1MigrationConfig
+        """
+        return self._migration_config
+
+    @migration_config.setter
+    def migration_config(self, migration_config):
+        """
+        Sets the migration_config of this V1VirtualMachineInstanceMigrationState.
+        Config contains migration configuration options
+
+        :param migration_config: The migration_config of this V1VirtualMachineInstanceMigrationState.
+        :type: V1MigrationConfig
+        """
+
+        self._migration_config = migration_config
 
     @property
     def migration_uid(self):

@@ -31,8 +31,8 @@ class V1Network(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'genie': 'V1CniNetwork',
-        'multus': 'V1CniNetwork',
+        'genie': 'V1GenieNetwork',
+        'multus': 'V1MultusNetwork',
         'name': 'str',
         'pod': 'V1PodNetwork'
     }
@@ -68,7 +68,7 @@ class V1Network(object):
         Gets the genie of this V1Network.
 
         :return: The genie of this V1Network.
-        :rtype: V1CniNetwork
+        :rtype: V1GenieNetwork
         """
         return self._genie
 
@@ -78,7 +78,7 @@ class V1Network(object):
         Sets the genie of this V1Network.
 
         :param genie: The genie of this V1Network.
-        :type: V1CniNetwork
+        :type: V1GenieNetwork
         """
 
         self._genie = genie
@@ -89,7 +89,7 @@ class V1Network(object):
         Gets the multus of this V1Network.
 
         :return: The multus of this V1Network.
-        :rtype: V1CniNetwork
+        :rtype: V1MultusNetwork
         """
         return self._multus
 
@@ -99,7 +99,7 @@ class V1Network(object):
         Sets the multus of this V1Network.
 
         :param multus: The multus of this V1Network.
-        :type: V1CniNetwork
+        :type: V1MultusNetwork
         """
 
         self._multus = multus

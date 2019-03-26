@@ -51,9 +51,6 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_cloud_init_no_cloud_source.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_cloud_init_no_cloud_source.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1CloudInitNoCloudSource.md
-[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_cni_network.py
-[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_cni_network.py
-[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1CniNetwork.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_config_map_volume_source.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_config_map_volume_source.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1ConfigMapVolumeSource.md
@@ -114,6 +111,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_floppy_target.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_floppy_target.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1FloppyTarget.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_genie_network.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_genie_network.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1GenieNetwork.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_group_version_for_discovery.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_group_version_for_discovery.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1GroupVersionForDiscovery.md
@@ -177,6 +177,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_migration_config.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_migration_config.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1MigrationConfig.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_multus_network.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_multus_network.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1MultusNetwork.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_network.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_network.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1Network.md

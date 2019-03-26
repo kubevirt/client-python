@@ -26,7 +26,6 @@ from .v1_cpu_feature import V1CPUFeature
 from .v1_clock import V1Clock
 from .v1_clock_offset_utc import V1ClockOffsetUTC
 from .v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
-from .v1_cni_network import V1CniNetwork
 from .v1_config_map_volume_source import V1ConfigMapVolumeSource
 from .v1_container_disk_source import V1ContainerDiskSource
 from .v1_dhcp_options import V1DHCPOptions
@@ -47,6 +46,7 @@ from .v1_feature_vendor_id import V1FeatureVendorID
 from .v1_features import V1Features
 from .v1_firmware import V1Firmware
 from .v1_floppy_target import V1FloppyTarget
+from .v1_genie_network import V1GenieNetwork
 from .v1_group_version_for_discovery import V1GroupVersionForDiscovery
 from .v1_hpet_timer import V1HPETTimer
 from .v1_http_get_action import V1HTTPGetAction
@@ -68,6 +68,7 @@ from .v1_lun_target import V1LunTarget
 from .v1_machine import V1Machine
 from .v1_memory import V1Memory
 from .v1_migration_config import V1MigrationConfig
+from .v1_multus_network import V1MultusNetwork
 from .v1_network import V1Network
 from .v1_node_affinity import V1NodeAffinity
 from .v1_node_selector import V1NodeSelector

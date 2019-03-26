@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1_cni_network import V1CniNetwork
+from kubevirt.models.v1_multus_network import V1MultusNetwork
 
 
-class TestV1CniNetwork(unittest.TestCase):
-    """ V1CniNetwork unit test stubs """
+class TestV1MultusNetwork(unittest.TestCase):
+    """ V1MultusNetwork unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1CniNetwork(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1CniNetwork(self):
+    def testV1MultusNetwork(self):
         """
-        Test V1CniNetwork
+        Test V1MultusNetwork
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1_cni_network.V1CniNetwork()
+        #model = kubevirt.models.v1_multus_network.V1MultusNetwork()
         pass
 
 

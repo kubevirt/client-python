@@ -31,6 +31,8 @@ class V1VirtualMachineInstanceMigrationState(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'abort_requested': 'bool',
+        'abort_status': 'str',
         'completed': 'bool',
         'end_timestamp': 'str',
         'failed': 'bool',
@@ -46,6 +48,8 @@ class V1VirtualMachineInstanceMigrationState(object):
     }
 
     attribute_map = {
+        'abort_requested': 'abortRequested',
+        'abort_status': 'abortStatus',
         'completed': 'completed',
         'end_timestamp': 'endTimestamp',
         'failed': 'failed',
@@ -60,11 +64,13 @@ class V1VirtualMachineInstanceMigrationState(object):
         'target_pod': 'targetPod'
     }
 
-    def __init__(self, completed=None, end_timestamp=None, failed=None, migration_config=None, migration_uid=None, source_node=None, start_timestamp=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_pod=None):
+    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, migration_config=None, migration_uid=None, source_node=None, start_timestamp=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_pod=None):
         """
         V1VirtualMachineInstanceMigrationState - a model defined in Swagger
         """
 
+        self._abort_requested = None
+        self._abort_status = None
         self._completed = None
         self._end_timestamp = None
         self._failed = None
@@ -78,6 +84,10 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._target_node_domain_detected = None
         self._target_pod = None
 
+        if abort_requested is not None:
+          self.abort_requested = abort_requested
+        if abort_status is not None:
+          self.abort_status = abort_status
         if completed is not None:
           self.completed = completed
         if end_timestamp is not None:
@@ -102,6 +112,52 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.target_node_domain_detected = target_node_domain_detected
         if target_pod is not None:
           self.target_pod = target_pod
+
+    @property
+    def abort_requested(self):
+        """
+        Gets the abort_requested of this V1VirtualMachineInstanceMigrationState.
+        Indicates that the migration has been requested to abort
+
+        :return: The abort_requested of this V1VirtualMachineInstanceMigrationState.
+        :rtype: bool
+        """
+        return self._abort_requested
+
+    @abort_requested.setter
+    def abort_requested(self, abort_requested):
+        """
+        Sets the abort_requested of this V1VirtualMachineInstanceMigrationState.
+        Indicates that the migration has been requested to abort
+
+        :param abort_requested: The abort_requested of this V1VirtualMachineInstanceMigrationState.
+        :type: bool
+        """
+
+        self._abort_requested = abort_requested
+
+    @property
+    def abort_status(self):
+        """
+        Gets the abort_status of this V1VirtualMachineInstanceMigrationState.
+        Indicates the final status of the live migration abortion
+
+        :return: The abort_status of this V1VirtualMachineInstanceMigrationState.
+        :rtype: str
+        """
+        return self._abort_status
+
+    @abort_status.setter
+    def abort_status(self, abort_status):
+        """
+        Sets the abort_status of this V1VirtualMachineInstanceMigrationState.
+        Indicates the final status of the live migration abortion
+
+        :param abort_status: The abort_status of this V1VirtualMachineInstanceMigrationState.
+        :type: str
+        """
+
+        self._abort_status = abort_status
 
     @property
     def completed(self):

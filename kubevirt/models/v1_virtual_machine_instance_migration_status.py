@@ -31,22 +31,48 @@ class V1VirtualMachineInstanceMigrationStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'conditions': 'list[V1VirtualMachineInstanceMigrationCondition]',
         'phase': 'str'
     }
 
     attribute_map = {
+        'conditions': 'conditions',
         'phase': 'phase'
     }
 
-    def __init__(self, phase=None):
+    def __init__(self, conditions=None, phase=None):
         """
         V1VirtualMachineInstanceMigrationStatus - a model defined in Swagger
         """
 
+        self._conditions = None
         self._phase = None
 
+        if conditions is not None:
+          self.conditions = conditions
         if phase is not None:
           self.phase = phase
+
+    @property
+    def conditions(self):
+        """
+        Gets the conditions of this V1VirtualMachineInstanceMigrationStatus.
+
+        :return: The conditions of this V1VirtualMachineInstanceMigrationStatus.
+        :rtype: list[V1VirtualMachineInstanceMigrationCondition]
+        """
+        return self._conditions
+
+    @conditions.setter
+    def conditions(self, conditions):
+        """
+        Sets the conditions of this V1VirtualMachineInstanceMigrationStatus.
+
+        :param conditions: The conditions of this V1VirtualMachineInstanceMigrationStatus.
+        :type: list[V1VirtualMachineInstanceMigrationCondition]
+        """
+
+        self._conditions = conditions
 
     @property
     def phase(self):

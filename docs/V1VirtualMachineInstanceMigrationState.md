@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**abort_requested** | **bool** | Indicates that the migration has been requested to abort | [optional] 
+**abort_status** | **str** | Indicates the final status of the live migration abortion | [optional] 
 **completed** | **bool** | Indicates the migration completed | [optional] 
 **end_timestamp** | **str** | The time the migration action ended | [optional] 
 **failed** | **bool** | Indicates that the migration failed | [optional] 

@@ -35,6 +35,7 @@ class V1VirtualMachineInstanceSpec(object):
         'dns_config': 'V1PodDNSConfig',
         'dns_policy': 'str',
         'domain': 'V1DomainSpec',
+        'eviction_strategy': 'V1EvictionStrategy',
         'hostname': 'str',
         'liveness_probe': 'V1Probe',
         'networks': 'list[V1Network]',
@@ -51,6 +52,7 @@ class V1VirtualMachineInstanceSpec(object):
         'dns_config': 'dnsConfig',
         'dns_policy': 'dnsPolicy',
         'domain': 'domain',
+        'eviction_strategy': 'evictionStrategy',
         'hostname': 'hostname',
         'liveness_probe': 'livenessProbe',
         'networks': 'networks',
@@ -62,7 +64,7 @@ class V1VirtualMachineInstanceSpec(object):
         'volumes': 'volumes'
     }
 
-    def __init__(self, affinity=None, dns_config=None, dns_policy=None, domain=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, readiness_probe=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, volumes=None):
+    def __init__(self, affinity=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, readiness_probe=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, volumes=None):
         """
         V1VirtualMachineInstanceSpec - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class V1VirtualMachineInstanceSpec(object):
         self._dns_config = None
         self._dns_policy = None
         self._domain = None
+        self._eviction_strategy = None
         self._hostname = None
         self._liveness_probe = None
         self._networks = None
@@ -88,6 +91,8 @@ class V1VirtualMachineInstanceSpec(object):
         if dns_policy is not None:
           self.dns_policy = dns_policy
         self.domain = domain
+        if eviction_strategy is not None:
+          self.eviction_strategy = eviction_strategy
         if hostname is not None:
           self.hostname = hostname
         if liveness_probe is not None:
@@ -200,6 +205,29 @@ class V1VirtualMachineInstanceSpec(object):
             raise ValueError("Invalid value for `domain`, must not be `None`")
 
         self._domain = domain
+
+    @property
+    def eviction_strategy(self):
+        """
+        Gets the eviction_strategy of this V1VirtualMachineInstanceSpec.
+        EvictionStrategy can be set to \"LiveMigrate\" if the VirtualMachineInstance should be migrated instead of shut-off in case of a node drain.
+
+        :return: The eviction_strategy of this V1VirtualMachineInstanceSpec.
+        :rtype: V1EvictionStrategy
+        """
+        return self._eviction_strategy
+
+    @eviction_strategy.setter
+    def eviction_strategy(self, eviction_strategy):
+        """
+        Sets the eviction_strategy of this V1VirtualMachineInstanceSpec.
+        EvictionStrategy can be set to \"LiveMigrate\" if the VirtualMachineInstance should be migrated instead of shut-off in case of a node drain.
+
+        :param eviction_strategy: The eviction_strategy of this V1VirtualMachineInstanceSpec.
+        :type: V1EvictionStrategy
+        """
+
+        self._eviction_strategy = eviction_strategy
 
     @property
     def hostname(self):

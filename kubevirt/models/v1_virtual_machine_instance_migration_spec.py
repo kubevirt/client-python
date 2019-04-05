@@ -31,48 +31,22 @@ class V1VirtualMachineInstanceMigrationSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'configuration': 'V1MigrationConfig',
         'vmi_name': 'str'
     }
 
     attribute_map = {
-        'configuration': 'configuration',
         'vmi_name': 'vmiName'
     }
 
-    def __init__(self, configuration=None, vmi_name=None):
+    def __init__(self, vmi_name=None):
         """
         V1VirtualMachineInstanceMigrationSpec - a model defined in Swagger
         """
 
-        self._configuration = None
         self._vmi_name = None
 
-        if configuration is not None:
-          self.configuration = configuration
         if vmi_name is not None:
           self.vmi_name = vmi_name
-
-    @property
-    def configuration(self):
-        """
-        Gets the configuration of this V1VirtualMachineInstanceMigrationSpec.
-
-        :return: The configuration of this V1VirtualMachineInstanceMigrationSpec.
-        :rtype: V1MigrationConfig
-        """
-        return self._configuration
-
-    @configuration.setter
-    def configuration(self, configuration):
-        """
-        Sets the configuration of this V1VirtualMachineInstanceMigrationSpec.
-
-        :param configuration: The configuration of this V1VirtualMachineInstanceMigrationSpec.
-        :type: V1MigrationConfig
-        """
-
-        self._configuration = configuration
 
     @property
     def vmi_name(self):

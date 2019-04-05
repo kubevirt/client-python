@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **completed** | **bool** | Indicates the migration completed | [optional] 
 **end_timestamp** | **str** | The time the migration action ended | [optional] 
 **failed** | **bool** | Indicates that the migration failed | [optional] 
-**migration_config** | [**V1MigrationConfig**](V1MigrationConfig.md) | Config contains migration configuration options | [optional] 
 **migration_uid** | **str** | The VirtualMachineInstanceMigration object associated with this migration | [optional] 
 **source_node** | **str** | The source node that the VMI originated on | [optional] 
 **start_timestamp** | **str** | The time the migration action began | [optional] 

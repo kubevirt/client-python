@@ -31,27 +31,55 @@ class V1alpha1DataVolumeSourceRegistry(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'cert_config_map': 'str',
         'secret_ref': 'str',
         'url': 'str'
     }
 
     attribute_map = {
+        'cert_config_map': 'certConfigMap',
         'secret_ref': 'secretRef',
         'url': 'url'
     }
 
-    def __init__(self, secret_ref=None, url=None):
+    def __init__(self, cert_config_map=None, secret_ref=None, url=None):
         """
         V1alpha1DataVolumeSourceRegistry - a model defined in Swagger
         """
 
+        self._cert_config_map = None
         self._secret_ref = None
         self._url = None
 
+        if cert_config_map is not None:
+          self.cert_config_map = cert_config_map
         if secret_ref is not None:
           self.secret_ref = secret_ref
         if url is not None:
           self.url = url
+
+    @property
+    def cert_config_map(self):
+        """
+        Gets the cert_config_map of this V1alpha1DataVolumeSourceRegistry.
+        CertConfigMap provides a reference to the Registry certs
+
+        :return: The cert_config_map of this V1alpha1DataVolumeSourceRegistry.
+        :rtype: str
+        """
+        return self._cert_config_map
+
+    @cert_config_map.setter
+    def cert_config_map(self, cert_config_map):
+        """
+        Sets the cert_config_map of this V1alpha1DataVolumeSourceRegistry.
+        CertConfigMap provides a reference to the Registry certs
+
+        :param cert_config_map: The cert_config_map of this V1alpha1DataVolumeSourceRegistry.
+        :type: str
+        """
+
+        self._cert_config_map = cert_config_map
 
     @property
     def secret_ref(self):

@@ -31,44 +31,67 @@ class V1FeatureHyperv(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'evmcs': 'V1FeatureState',
+        'frequencies': 'V1FeatureState',
+        'ipi': 'V1FeatureState',
+        'reenlightenment': 'V1FeatureState',
         'relaxed': 'V1FeatureState',
         'reset': 'V1FeatureState',
         'runtime': 'V1FeatureState',
         'spinlocks': 'V1FeatureSpinlocks',
         'synic': 'V1FeatureState',
         'synictimer': 'V1FeatureState',
+        'tlbflush': 'V1FeatureState',
         'vapic': 'V1FeatureState',
         'vendorid': 'V1FeatureVendorID',
         'vpindex': 'V1FeatureState'
     }
 
     attribute_map = {
+        'evmcs': 'evmcs',
+        'frequencies': 'frequencies',
+        'ipi': 'ipi',
+        'reenlightenment': 'reenlightenment',
         'relaxed': 'relaxed',
         'reset': 'reset',
         'runtime': 'runtime',
         'spinlocks': 'spinlocks',
         'synic': 'synic',
         'synictimer': 'synictimer',
+        'tlbflush': 'tlbflush',
         'vapic': 'vapic',
         'vendorid': 'vendorid',
         'vpindex': 'vpindex'
     }
 
-    def __init__(self, relaxed=None, reset=None, runtime=None, spinlocks=None, synic=None, synictimer=None, vapic=None, vendorid=None, vpindex=None):
+    def __init__(self, evmcs=None, frequencies=None, ipi=None, reenlightenment=None, relaxed=None, reset=None, runtime=None, spinlocks=None, synic=None, synictimer=None, tlbflush=None, vapic=None, vendorid=None, vpindex=None):
         """
         V1FeatureHyperv - a model defined in Swagger
         """
 
+        self._evmcs = None
+        self._frequencies = None
+        self._ipi = None
+        self._reenlightenment = None
         self._relaxed = None
         self._reset = None
         self._runtime = None
         self._spinlocks = None
         self._synic = None
         self._synictimer = None
+        self._tlbflush = None
         self._vapic = None
         self._vendorid = None
         self._vpindex = None
 
+        if evmcs is not None:
+          self.evmcs = evmcs
+        if frequencies is not None:
+          self.frequencies = frequencies
+        if ipi is not None:
+          self.ipi = ipi
+        if reenlightenment is not None:
+          self.reenlightenment = reenlightenment
         if relaxed is not None:
           self.relaxed = relaxed
         if reset is not None:
@@ -81,12 +104,106 @@ class V1FeatureHyperv(object):
           self.synic = synic
         if synictimer is not None:
           self.synictimer = synictimer
+        if tlbflush is not None:
+          self.tlbflush = tlbflush
         if vapic is not None:
           self.vapic = vapic
         if vendorid is not None:
           self.vendorid = vendorid
         if vpindex is not None:
           self.vpindex = vpindex
+
+    @property
+    def evmcs(self):
+        """
+        Gets the evmcs of this V1FeatureHyperv.
+        EVMCS Speeds up L2 vmexits, but disables other virtualization features. Requires vapic. Defaults to the machine type setting. +optional
+
+        :return: The evmcs of this V1FeatureHyperv.
+        :rtype: V1FeatureState
+        """
+        return self._evmcs
+
+    @evmcs.setter
+    def evmcs(self, evmcs):
+        """
+        Sets the evmcs of this V1FeatureHyperv.
+        EVMCS Speeds up L2 vmexits, but disables other virtualization features. Requires vapic. Defaults to the machine type setting. +optional
+
+        :param evmcs: The evmcs of this V1FeatureHyperv.
+        :type: V1FeatureState
+        """
+
+        self._evmcs = evmcs
+
+    @property
+    def frequencies(self):
+        """
+        Gets the frequencies of this V1FeatureHyperv.
+        Frequencies improve Hyper-V on KVM (TSC clock source). Defaults to the machine type setting. +optional
+
+        :return: The frequencies of this V1FeatureHyperv.
+        :rtype: V1FeatureState
+        """
+        return self._frequencies
+
+    @frequencies.setter
+    def frequencies(self, frequencies):
+        """
+        Sets the frequencies of this V1FeatureHyperv.
+        Frequencies improve Hyper-V on KVM (TSC clock source). Defaults to the machine type setting. +optional
+
+        :param frequencies: The frequencies of this V1FeatureHyperv.
+        :type: V1FeatureState
+        """
+
+        self._frequencies = frequencies
+
+    @property
+    def ipi(self):
+        """
+        Gets the ipi of this V1FeatureHyperv.
+        IPI improves performances in overcommited environments. Requires vpindex. Defaults to the machine type setting. +optional
+
+        :return: The ipi of this V1FeatureHyperv.
+        :rtype: V1FeatureState
+        """
+        return self._ipi
+
+    @ipi.setter
+    def ipi(self, ipi):
+        """
+        Sets the ipi of this V1FeatureHyperv.
+        IPI improves performances in overcommited environments. Requires vpindex. Defaults to the machine type setting. +optional
+
+        :param ipi: The ipi of this V1FeatureHyperv.
+        :type: V1FeatureState
+        """
+
+        self._ipi = ipi
+
+    @property
+    def reenlightenment(self):
+        """
+        Gets the reenlightenment of this V1FeatureHyperv.
+        Reenlightenment improve Hyper-V on KVM (TSC clock source). Defaults to the machine type setting. +optional
+
+        :return: The reenlightenment of this V1FeatureHyperv.
+        :rtype: V1FeatureState
+        """
+        return self._reenlightenment
+
+    @reenlightenment.setter
+    def reenlightenment(self, reenlightenment):
+        """
+        Sets the reenlightenment of this V1FeatureHyperv.
+        Reenlightenment improve Hyper-V on KVM (TSC clock source). Defaults to the machine type setting. +optional
+
+        :param reenlightenment: The reenlightenment of this V1FeatureHyperv.
+        :type: V1FeatureState
+        """
+
+        self._reenlightenment = reenlightenment
 
     @property
     def relaxed(self):
@@ -115,7 +232,7 @@ class V1FeatureHyperv(object):
     def reset(self):
         """
         Gets the reset of this V1FeatureHyperv.
-        Reset enables Hyperv reboot/reset for the vmi. Defaults to the machine type setting. +optional
+        Reset enables Hyperv reboot/reset for the vmi. Requires synic. Defaults to the machine type setting. +optional
 
         :return: The reset of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -126,7 +243,7 @@ class V1FeatureHyperv(object):
     def reset(self, reset):
         """
         Sets the reset of this V1FeatureHyperv.
-        Reset enables Hyperv reboot/reset for the vmi. Defaults to the machine type setting. +optional
+        Reset enables Hyperv reboot/reset for the vmi. Requires synic. Defaults to the machine type setting. +optional
 
         :param reset: The reset of this V1FeatureHyperv.
         :type: V1FeatureState
@@ -225,6 +342,29 @@ class V1FeatureHyperv(object):
         """
 
         self._synictimer = synictimer
+
+    @property
+    def tlbflush(self):
+        """
+        Gets the tlbflush of this V1FeatureHyperv.
+        TLBFlush improves performances in overcommited environments. Requires vpindex. Defaults to the machine type setting. +optional
+
+        :return: The tlbflush of this V1FeatureHyperv.
+        :rtype: V1FeatureState
+        """
+        return self._tlbflush
+
+    @tlbflush.setter
+    def tlbflush(self, tlbflush):
+        """
+        Sets the tlbflush of this V1FeatureHyperv.
+        TLBFlush improves performances in overcommited environments. Requires vpindex. Defaults to the machine type setting. +optional
+
+        :param tlbflush: The tlbflush of this V1FeatureHyperv.
+        :type: V1FeatureState
+        """
+
+        self._tlbflush = tlbflush
 
     @property
     def vapic(self):

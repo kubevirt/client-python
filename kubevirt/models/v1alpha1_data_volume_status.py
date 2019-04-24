@@ -31,22 +31,27 @@ class V1alpha1DataVolumeStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'phase': 'str'
+        'phase': 'str',
+        'progress': 'str'
     }
 
     attribute_map = {
-        'phase': 'phase'
+        'phase': 'phase',
+        'progress': 'progress'
     }
 
-    def __init__(self, phase=None):
+    def __init__(self, phase=None, progress=None):
         """
         V1alpha1DataVolumeStatus - a model defined in Swagger
         """
 
         self._phase = None
+        self._progress = None
 
         if phase is not None:
           self.phase = phase
+        if progress is not None:
+          self.progress = progress
 
     @property
     def phase(self):
@@ -70,6 +75,27 @@ class V1alpha1DataVolumeStatus(object):
         """
 
         self._phase = phase
+
+    @property
+    def progress(self):
+        """
+        Gets the progress of this V1alpha1DataVolumeStatus.
+
+        :return: The progress of this V1alpha1DataVolumeStatus.
+        :rtype: str
+        """
+        return self._progress
+
+    @progress.setter
+    def progress(self, progress):
+        """
+        Sets the progress of this V1alpha1DataVolumeStatus.
+
+        :param progress: The progress of this V1alpha1DataVolumeStatus.
+        :type: str
+        """
+
+        self._progress = progress
 
     def to_dict(self):
         """

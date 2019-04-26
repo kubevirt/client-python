@@ -32,28 +32,34 @@ class V1VirtualMachineSpec(object):
     """
     swagger_types = {
         'data_volume_templates': 'list[V1alpha1DataVolume]',
+        'run_strategy': 'V1VirtualMachineRunStrategy',
         'running': 'bool',
         'template': 'V1VirtualMachineInstanceTemplateSpec'
     }
 
     attribute_map = {
         'data_volume_templates': 'dataVolumeTemplates',
+        'run_strategy': 'runStrategy',
         'running': 'running',
         'template': 'template'
     }
 
-    def __init__(self, data_volume_templates=None, running=None, template=None):
+    def __init__(self, data_volume_templates=None, run_strategy=None, running=None, template=None):
         """
         V1VirtualMachineSpec - a model defined in Swagger
         """
 
         self._data_volume_templates = None
+        self._run_strategy = None
         self._running = None
         self._template = None
 
         if data_volume_templates is not None:
           self.data_volume_templates = data_volume_templates
-        self.running = running
+        if run_strategy is not None:
+          self.run_strategy = run_strategy
+        if running is not None:
+          self.running = running
         self.template = template
 
     @property
@@ -80,10 +86,33 @@ class V1VirtualMachineSpec(object):
         self._data_volume_templates = data_volume_templates
 
     @property
+    def run_strategy(self):
+        """
+        Gets the run_strategy of this V1VirtualMachineSpec.
+        Running state indicates the requested running state of the VirtualMachineInstance mutually exclusive with Running
+
+        :return: The run_strategy of this V1VirtualMachineSpec.
+        :rtype: V1VirtualMachineRunStrategy
+        """
+        return self._run_strategy
+
+    @run_strategy.setter
+    def run_strategy(self, run_strategy):
+        """
+        Sets the run_strategy of this V1VirtualMachineSpec.
+        Running state indicates the requested running state of the VirtualMachineInstance mutually exclusive with Running
+
+        :param run_strategy: The run_strategy of this V1VirtualMachineSpec.
+        :type: V1VirtualMachineRunStrategy
+        """
+
+        self._run_strategy = run_strategy
+
+    @property
     def running(self):
         """
         Gets the running of this V1VirtualMachineSpec.
-        Running controls whether the associatied VirtualMachineInstance is created or not
+        Running controls whether the associatied VirtualMachineInstance is created or not Mutually exclusive with RunStrategy
 
         :return: The running of this V1VirtualMachineSpec.
         :rtype: bool
@@ -94,13 +123,11 @@ class V1VirtualMachineSpec(object):
     def running(self, running):
         """
         Sets the running of this V1VirtualMachineSpec.
-        Running controls whether the associatied VirtualMachineInstance is created or not
+        Running controls whether the associatied VirtualMachineInstance is created or not Mutually exclusive with RunStrategy
 
         :param running: The running of this V1VirtualMachineSpec.
         :type: bool
         """
-        if running is None:
-            raise ValueError("Invalid value for `running`, must not be `None`")
 
         self._running = running
 

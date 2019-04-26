@@ -126,6 +126,7 @@ from .v1_virtual_machine_instance_status import V1VirtualMachineInstanceStatus
 from .v1_virtual_machine_instance_template_spec import V1VirtualMachineInstanceTemplateSpec
 from .v1_virtual_machine_list import V1VirtualMachineList
 from .v1_virtual_machine_spec import V1VirtualMachineSpec
+from .v1_virtual_machine_state_change_request import V1VirtualMachineStateChangeRequest
 from .v1_virtual_machine_status import V1VirtualMachineStatus
 from .v1_volume import V1Volume
 from .v1_watch_event import V1WatchEvent

@@ -33,16 +33,18 @@ class V1VirtualMachineStatus(object):
     swagger_types = {
         'conditions': 'list[V1VirtualMachineCondition]',
         'created': 'bool',
-        'ready': 'bool'
+        'ready': 'bool',
+        'state_change_requests': 'list[V1VirtualMachineStateChangeRequest]'
     }
 
     attribute_map = {
         'conditions': 'conditions',
         'created': 'created',
-        'ready': 'ready'
+        'ready': 'ready',
+        'state_change_requests': 'stateChangeRequests'
     }
 
-    def __init__(self, conditions=None, created=None, ready=None):
+    def __init__(self, conditions=None, created=None, ready=None, state_change_requests=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class V1VirtualMachineStatus(object):
         self._conditions = None
         self._created = None
         self._ready = None
+        self._state_change_requests = None
 
         if conditions is not None:
           self.conditions = conditions
@@ -57,6 +60,8 @@ class V1VirtualMachineStatus(object):
           self.created = created
         if ready is not None:
           self.ready = ready
+        if state_change_requests is not None:
+          self.state_change_requests = state_change_requests
 
     @property
     def conditions(self):
@@ -126,6 +131,29 @@ class V1VirtualMachineStatus(object):
         """
 
         self._ready = ready
+
+    @property
+    def state_change_requests(self):
+        """
+        Gets the state_change_requests of this V1VirtualMachineStatus.
+        StateChangeRequests indicates a list of actions that should be taken on a VMI e.g. stop a specific VMI then start a new one.
+
+        :return: The state_change_requests of this V1VirtualMachineStatus.
+        :rtype: list[V1VirtualMachineStateChangeRequest]
+        """
+        return self._state_change_requests
+
+    @state_change_requests.setter
+    def state_change_requests(self, state_change_requests):
+        """
+        Sets the state_change_requests of this V1VirtualMachineStatus.
+        StateChangeRequests indicates a list of actions that should be taken on a VMI e.g. stop a specific VMI then start a new one.
+
+        :param state_change_requests: The state_change_requests of this V1VirtualMachineStatus.
+        :type: list[V1VirtualMachineStateChangeRequest]
+        """
+
+        self._state_change_requests = state_change_requests
 
     def to_dict(self):
         """

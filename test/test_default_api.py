@@ -423,6 +423,22 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_start(self):
+        """
+        Test case for start
+
+        Start a VirtualMachine object.
+        """
+        pass
+
+    def test_stop(self):
+        """
+        Test case for stop
+
+        Stop a VirtualMachine object.
+        """
+        pass
+
     def test_test(self):
         """
         Test case for test

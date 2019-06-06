@@ -25,6 +25,7 @@ from .models.v1_cpu import V1CPU
 from .models.v1_cpu_feature import V1CPUFeature
 from .models.v1_clock import V1Clock
 from .models.v1_clock_offset_utc import V1ClockOffsetUTC
+from .models.v1_cloud_init_config_drive_source import V1CloudInitConfigDriveSource
 from .models.v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
 from .models.v1_config_map_volume_source import V1ConfigMapVolumeSource
 from .models.v1_container_disk_source import V1ContainerDiskSource

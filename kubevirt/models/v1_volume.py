@@ -31,6 +31,7 @@ class V1Volume(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'cloud_init_config_drive': 'V1CloudInitConfigDriveSource',
         'cloud_init_no_cloud': 'V1CloudInitNoCloudSource',
         'config_map': 'V1ConfigMapVolumeSource',
         'container_disk': 'V1ContainerDiskSource',
@@ -45,6 +46,7 @@ class V1Volume(object):
     }
 
     attribute_map = {
+        'cloud_init_config_drive': 'cloudInitConfigDrive',
         'cloud_init_no_cloud': 'cloudInitNoCloud',
         'config_map': 'configMap',
         'container_disk': 'containerDisk',
@@ -58,11 +60,12 @@ class V1Volume(object):
         'service_account': 'serviceAccount'
     }
 
-    def __init__(self, cloud_init_no_cloud=None, config_map=None, container_disk=None, data_volume=None, empty_disk=None, ephemeral=None, host_disk=None, name=None, persistent_volume_claim=None, secret=None, service_account=None):
+    def __init__(self, cloud_init_config_drive=None, cloud_init_no_cloud=None, config_map=None, container_disk=None, data_volume=None, empty_disk=None, ephemeral=None, host_disk=None, name=None, persistent_volume_claim=None, secret=None, service_account=None):
         """
         V1Volume - a model defined in Swagger
         """
 
+        self._cloud_init_config_drive = None
         self._cloud_init_no_cloud = None
         self._config_map = None
         self._container_disk = None
@@ -75,6 +78,8 @@ class V1Volume(object):
         self._secret = None
         self._service_account = None
 
+        if cloud_init_config_drive is not None:
+          self.cloud_init_config_drive = cloud_init_config_drive
         if cloud_init_no_cloud is not None:
           self.cloud_init_no_cloud = cloud_init_no_cloud
         if config_map is not None:
@@ -96,6 +101,29 @@ class V1Volume(object):
           self.secret = secret
         if service_account is not None:
           self.service_account = service_account
+
+    @property
+    def cloud_init_config_drive(self):
+        """
+        Gets the cloud_init_config_drive of this V1Volume.
+        CloudInitConfigDrive represents a cloud-init Config Drive user-data source. The Config Drive data will be added as a disk to the vmi. A proper cloud-init installation is required inside the guest. More info: https://cloudinit.readthedocs.io/en/latest/topics/datasources/configdrive.html +optional
+
+        :return: The cloud_init_config_drive of this V1Volume.
+        :rtype: V1CloudInitConfigDriveSource
+        """
+        return self._cloud_init_config_drive
+
+    @cloud_init_config_drive.setter
+    def cloud_init_config_drive(self, cloud_init_config_drive):
+        """
+        Sets the cloud_init_config_drive of this V1Volume.
+        CloudInitConfigDrive represents a cloud-init Config Drive user-data source. The Config Drive data will be added as a disk to the vmi. A proper cloud-init installation is required inside the guest. More info: https://cloudinit.readthedocs.io/en/latest/topics/datasources/configdrive.html +optional
+
+        :param cloud_init_config_drive: The cloud_init_config_drive of this V1Volume.
+        :type: V1CloudInitConfigDriveSource
+        """
+
+        self._cloud_init_config_drive = cloud_init_config_drive
 
     @property
     def cloud_init_no_cloud(self):

@@ -140,7 +140,7 @@ class V1FeatureHyperv(object):
     def frequencies(self):
         """
         Gets the frequencies of this V1FeatureHyperv.
-        Frequencies improve Hyper-V on KVM (TSC clock source). Defaults to the machine type setting. +optional
+        Frequencies improves the TSC clock source handling for Hyper-V on KVM. Defaults to the machine type setting. +optional
 
         :return: The frequencies of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -151,7 +151,7 @@ class V1FeatureHyperv(object):
     def frequencies(self, frequencies):
         """
         Sets the frequencies of this V1FeatureHyperv.
-        Frequencies improve Hyper-V on KVM (TSC clock source). Defaults to the machine type setting. +optional
+        Frequencies improves the TSC clock source handling for Hyper-V on KVM. Defaults to the machine type setting. +optional
 
         :param frequencies: The frequencies of this V1FeatureHyperv.
         :type: V1FeatureState
@@ -186,7 +186,7 @@ class V1FeatureHyperv(object):
     def reenlightenment(self):
         """
         Gets the reenlightenment of this V1FeatureHyperv.
-        Reenlightenment improve Hyper-V on KVM (TSC clock source). Defaults to the machine type setting. +optional
+        Reenlightenment enables the notifications on TSC frequency changes. Defaults to the machine type setting. +optional
 
         :return: The reenlightenment of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -197,7 +197,7 @@ class V1FeatureHyperv(object):
     def reenlightenment(self, reenlightenment):
         """
         Sets the reenlightenment of this V1FeatureHyperv.
-        Reenlightenment improve Hyper-V on KVM (TSC clock source). Defaults to the machine type setting. +optional
+        Reenlightenment enables the notifications on TSC frequency changes. Defaults to the machine type setting. +optional
 
         :param reenlightenment: The reenlightenment of this V1FeatureHyperv.
         :type: V1FeatureState
@@ -209,7 +209,7 @@ class V1FeatureHyperv(object):
     def relaxed(self):
         """
         Gets the relaxed of this V1FeatureHyperv.
-        Relaxed relaxes constraints on timer. Defaults to the machine type setting. +optional
+        Relaxed instructs the guest OS to disable watchdog timeouts. Defaults to the machine type setting. +optional
 
         :return: The relaxed of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -220,7 +220,7 @@ class V1FeatureHyperv(object):
     def relaxed(self, relaxed):
         """
         Sets the relaxed of this V1FeatureHyperv.
-        Relaxed relaxes constraints on timer. Defaults to the machine type setting. +optional
+        Relaxed instructs the guest OS to disable watchdog timeouts. Defaults to the machine type setting. +optional
 
         :param relaxed: The relaxed of this V1FeatureHyperv.
         :type: V1FeatureState
@@ -255,7 +255,7 @@ class V1FeatureHyperv(object):
     def runtime(self):
         """
         Gets the runtime of this V1FeatureHyperv.
-        Runtime. Defaults to the machine type setting. +optional
+        Runtime improves the time accounting to improve scheduling in the guest. Defaults to the machine type setting. +optional
 
         :return: The runtime of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -266,7 +266,7 @@ class V1FeatureHyperv(object):
     def runtime(self, runtime):
         """
         Sets the runtime of this V1FeatureHyperv.
-        Runtime. Defaults to the machine type setting. +optional
+        Runtime improves the time accounting to improve scheduling in the guest. Defaults to the machine type setting. +optional
 
         :param runtime: The runtime of this V1FeatureHyperv.
         :type: V1FeatureState
@@ -278,7 +278,7 @@ class V1FeatureHyperv(object):
     def spinlocks(self):
         """
         Gets the spinlocks of this V1FeatureHyperv.
-        Spinlocks indicates if spinlocks should be made available to the guest. +optional
+        Spinlocks allows to configure the spinlock retry attempts. +optional
 
         :return: The spinlocks of this V1FeatureHyperv.
         :rtype: V1FeatureSpinlocks
@@ -289,7 +289,7 @@ class V1FeatureHyperv(object):
     def spinlocks(self, spinlocks):
         """
         Sets the spinlocks of this V1FeatureHyperv.
-        Spinlocks indicates if spinlocks should be made available to the guest. +optional
+        Spinlocks allows to configure the spinlock retry attempts. +optional
 
         :param spinlocks: The spinlocks of this V1FeatureHyperv.
         :type: V1FeatureSpinlocks
@@ -301,7 +301,7 @@ class V1FeatureHyperv(object):
     def synic(self):
         """
         Gets the synic of this V1FeatureHyperv.
-        SyNIC enable Synthetic Interrupt Controller. Defaults to the machine type setting. +optional
+        SyNIC enables the Synthetic Interrupt Controller. Defaults to the machine type setting. +optional
 
         :return: The synic of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -312,7 +312,7 @@ class V1FeatureHyperv(object):
     def synic(self, synic):
         """
         Sets the synic of this V1FeatureHyperv.
-        SyNIC enable Synthetic Interrupt Controller. Defaults to the machine type setting. +optional
+        SyNIC enables the Synthetic Interrupt Controller. Defaults to the machine type setting. +optional
 
         :param synic: The synic of this V1FeatureHyperv.
         :type: V1FeatureState
@@ -324,7 +324,7 @@ class V1FeatureHyperv(object):
     def synictimer(self):
         """
         Gets the synictimer of this V1FeatureHyperv.
-        SyNICTimer enable Synthetic Interrupt Controller timer. Defaults to the machine type setting. +optional
+        SyNICTimer enables Synthetic Interrupt Controller Timers, reducing CPU load. Defaults to the machine type setting. +optional
 
         :return: The synictimer of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -335,7 +335,7 @@ class V1FeatureHyperv(object):
     def synictimer(self, synictimer):
         """
         Sets the synictimer of this V1FeatureHyperv.
-        SyNICTimer enable Synthetic Interrupt Controller timer. Defaults to the machine type setting. +optional
+        SyNICTimer enables Synthetic Interrupt Controller Timers, reducing CPU load. Defaults to the machine type setting. +optional
 
         :param synictimer: The synictimer of this V1FeatureHyperv.
         :type: V1FeatureState
@@ -370,7 +370,7 @@ class V1FeatureHyperv(object):
     def vapic(self):
         """
         Gets the vapic of this V1FeatureHyperv.
-        VAPIC indicates whether virtual APIC is enabled. Defaults to the machine type setting. +optional
+        VAPIC improves the paravirtualized handling of interrupts. Defaults to the machine type setting. +optional
 
         :return: The vapic of this V1FeatureHyperv.
         :rtype: V1FeatureState
@@ -381,7 +381,7 @@ class V1FeatureHyperv(object):
     def vapic(self, vapic):
         """
         Sets the vapic of this V1FeatureHyperv.
-        VAPIC indicates whether virtual APIC is enabled. Defaults to the machine type setting. +optional
+        VAPIC improves the paravirtualized handling of interrupts. Defaults to the machine type setting. +optional
 
         :param vapic: The vapic of this V1FeatureHyperv.
         :type: V1FeatureState

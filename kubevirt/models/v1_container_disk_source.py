@@ -32,26 +32,31 @@ class V1ContainerDiskSource(object):
     """
     swagger_types = {
         'image': 'str',
+        'image_pull_policy': 'str',
         'image_pull_secret': 'str',
         'path': 'str'
     }
 
     attribute_map = {
         'image': 'image',
+        'image_pull_policy': 'imagePullPolicy',
         'image_pull_secret': 'imagePullSecret',
         'path': 'path'
     }
 
-    def __init__(self, image=None, image_pull_secret=None, path=None):
+    def __init__(self, image=None, image_pull_policy=None, image_pull_secret=None, path=None):
         """
         V1ContainerDiskSource - a model defined in Swagger
         """
 
         self._image = None
+        self._image_pull_policy = None
         self._image_pull_secret = None
         self._path = None
 
         self.image = image
+        if image_pull_policy is not None:
+          self.image_pull_policy = image_pull_policy
         if image_pull_secret is not None:
           self.image_pull_secret = image_pull_secret
         if path is not None:
@@ -81,6 +86,29 @@ class V1ContainerDiskSource(object):
             raise ValueError("Invalid value for `image`, must not be `None`")
 
         self._image = image
+
+    @property
+    def image_pull_policy(self):
+        """
+        Gets the image_pull_policy of this V1ContainerDiskSource.
+        Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images +optional
+
+        :return: The image_pull_policy of this V1ContainerDiskSource.
+        :rtype: str
+        """
+        return self._image_pull_policy
+
+    @image_pull_policy.setter
+    def image_pull_policy(self, image_pull_policy):
+        """
+        Sets the image_pull_policy of this V1ContainerDiskSource.
+        Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images +optional
+
+        :param image_pull_policy: The image_pull_policy of this V1ContainerDiskSource.
+        :type: str
+        """
+
+        self._image_pull_policy = image_pull_policy
 
     @property
     def image_pull_secret(self):

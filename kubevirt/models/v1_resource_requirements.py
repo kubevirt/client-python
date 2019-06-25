@@ -85,7 +85,7 @@ class V1ResourceRequirements(object):
     def overcommit_guest_overhead(self):
         """
         Gets the overcommit_guest_overhead of this V1ResourceRequirements.
-        Don't ask the scheduler to take the guest-management overhead into account. Instead put the overhead only into the requested memory limits. This can lead to crashes if all memory is in use on a node. Defaults to false.
+        Don't ask the scheduler to take the guest-management overhead into account. Instead put the overhead only into the container's memory limit. This can lead to crashes if all memory is in use on a node. Defaults to false.
 
         :return: The overcommit_guest_overhead of this V1ResourceRequirements.
         :rtype: bool
@@ -96,7 +96,7 @@ class V1ResourceRequirements(object):
     def overcommit_guest_overhead(self, overcommit_guest_overhead):
         """
         Sets the overcommit_guest_overhead of this V1ResourceRequirements.
-        Don't ask the scheduler to take the guest-management overhead into account. Instead put the overhead only into the requested memory limits. This can lead to crashes if all memory is in use on a node. Defaults to false.
+        Don't ask the scheduler to take the guest-management overhead into account. Instead put the overhead only into the container's memory limit. This can lead to crashes if all memory is in use on a node. Defaults to false.
 
         :param overcommit_guest_overhead: The overcommit_guest_overhead of this V1ResourceRequirements.
         :type: bool

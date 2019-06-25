@@ -37,6 +37,7 @@ class V1VirtualMachineInstanceStatus(object):
         'migration_state': 'V1VirtualMachineInstanceMigrationState',
         'node_name': 'str',
         'phase': 'str',
+        'qos_class': 'V1PodQOSClass',
         'reason': 'str'
     }
 
@@ -47,10 +48,11 @@ class V1VirtualMachineInstanceStatus(object):
         'migration_state': 'migrationState',
         'node_name': 'nodeName',
         'phase': 'phase',
+        'qos_class': 'qosClass',
         'reason': 'reason'
     }
 
-    def __init__(self, conditions=None, interfaces=None, migration_method=None, migration_state=None, node_name=None, phase=None, reason=None):
+    def __init__(self, conditions=None, interfaces=None, migration_method=None, migration_state=None, node_name=None, phase=None, qos_class=None, reason=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._migration_state = None
         self._node_name = None
         self._phase = None
+        self._qos_class = None
         self._reason = None
 
         if conditions is not None:
@@ -75,6 +78,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.node_name = node_name
         if phase is not None:
           self.phase = phase
+        if qos_class is not None:
+          self.qos_class = qos_class
         if reason is not None:
           self.reason = reason
 
@@ -215,6 +220,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._phase = phase
+
+    @property
+    def qos_class(self):
+        """
+        Gets the qos_class of this V1VirtualMachineInstanceStatus.
+        The Quality of Service (QOS) classification assigned to the virtual machine instance based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md +optional
+
+        :return: The qos_class of this V1VirtualMachineInstanceStatus.
+        :rtype: V1PodQOSClass
+        """
+        return self._qos_class
+
+    @qos_class.setter
+    def qos_class(self, qos_class):
+        """
+        Sets the qos_class of this V1VirtualMachineInstanceStatus.
+        The Quality of Service (QOS) classification assigned to the virtual machine instance based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md +optional
+
+        :param qos_class: The qos_class of this V1VirtualMachineInstanceStatus.
+        :type: V1PodQOSClass
+        """
+
+        self._qos_class = qos_class
 
     @property
     def reason(self):

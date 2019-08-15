@@ -31,6 +31,7 @@ class V1DomainSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'chassis': 'V1Chassis',
         'clock': 'V1Clock',
         'cpu': 'V1CPU',
         'devices': 'V1Devices',
@@ -43,6 +44,7 @@ class V1DomainSpec(object):
     }
 
     attribute_map = {
+        'chassis': 'chassis',
         'clock': 'clock',
         'cpu': 'cpu',
         'devices': 'devices',
@@ -54,11 +56,12 @@ class V1DomainSpec(object):
         'resources': 'resources'
     }
 
-    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, io_threads_policy=None, machine=None, memory=None, resources=None):
+    def __init__(self, chassis=None, clock=None, cpu=None, devices=None, features=None, firmware=None, io_threads_policy=None, machine=None, memory=None, resources=None):
         """
         V1DomainSpec - a model defined in Swagger
         """
 
+        self._chassis = None
         self._clock = None
         self._cpu = None
         self._devices = None
@@ -69,6 +72,8 @@ class V1DomainSpec(object):
         self._memory = None
         self._resources = None
 
+        if chassis is not None:
+          self.chassis = chassis
         if clock is not None:
           self.clock = clock
         if cpu is not None:
@@ -86,6 +91,29 @@ class V1DomainSpec(object):
           self.memory = memory
         if resources is not None:
           self.resources = resources
+
+    @property
+    def chassis(self):
+        """
+        Gets the chassis of this V1DomainSpec.
+        Chassis specifies the chassis info passed to the domain. +optional
+
+        :return: The chassis of this V1DomainSpec.
+        :rtype: V1Chassis
+        """
+        return self._chassis
+
+    @chassis.setter
+    def chassis(self, chassis):
+        """
+        Sets the chassis of this V1DomainSpec.
+        Chassis specifies the chassis info passed to the domain. +optional
+
+        :param chassis: The chassis of this V1DomainSpec.
+        :type: V1Chassis
+        """
+
+        self._chassis = chassis
 
     @property
     def clock(self):

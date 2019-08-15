@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**chassis** | [**V1Chassis**](V1Chassis.md) | Chassis specifies the chassis info passed to the domain. +optional | [optional] 
 **clock** | [**V1Clock**](V1Clock.md) | Clock sets the clock and timers of the vmi. +optional | [optional] 
 **cpu** | [**V1CPU**](V1CPU.md) | CPU allow specified the detailed CPU topology inside the vmi. +optional | [optional] 
 **devices** | [**V1Devices**](V1Devices.md) | Devices allows adding disks, network interfaces, ... | 

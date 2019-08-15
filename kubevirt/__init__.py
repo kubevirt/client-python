@@ -23,6 +23,7 @@ from .models.v1_bootloader import V1Bootloader
 from .models.v1_cd_rom_target import V1CDRomTarget
 from .models.v1_cpu import V1CPU
 from .models.v1_cpu_feature import V1CPUFeature
+from .models.v1_chassis import V1Chassis
 from .models.v1_clock import V1Clock
 from .models.v1_clock_offset_utc import V1ClockOffsetUTC
 from .models.v1_cloud_init_config_drive_source import V1CloudInitConfigDriveSource

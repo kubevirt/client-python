@@ -295,6 +295,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_migrate(self):
+        """
+        Test case for migrate
+
+        Migrate a running VirtualMachine to another node.
+        """
+        pass
+
     def test_patch_namespaced_virtual_machine(self):
         """
         Test case for patch_namespaced_virtual_machine

@@ -35,6 +35,7 @@ class V1Devices(object):
         'autoattach_pod_interface': 'bool',
         'block_multi_queue': 'bool',
         'disks': 'list[V1Disk]',
+        'gpus': 'list[V1GPU]',
         'inputs': 'list[V1Input]',
         'interfaces': 'list[V1Interface]',
         'network_interface_multiqueue': 'bool',
@@ -47,6 +48,7 @@ class V1Devices(object):
         'autoattach_pod_interface': 'autoattachPodInterface',
         'block_multi_queue': 'blockMultiQueue',
         'disks': 'disks',
+        'gpus': 'gpus',
         'inputs': 'inputs',
         'interfaces': 'interfaces',
         'network_interface_multiqueue': 'networkInterfaceMultiqueue',
@@ -54,7 +56,7 @@ class V1Devices(object):
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_pod_interface=None, block_multi_queue=None, disks=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_pod_interface=None, block_multi_queue=None, disks=None, gpus=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class V1Devices(object):
         self._autoattach_pod_interface = None
         self._block_multi_queue = None
         self._disks = None
+        self._gpus = None
         self._inputs = None
         self._interfaces = None
         self._network_interface_multiqueue = None
@@ -77,6 +80,8 @@ class V1Devices(object):
           self.block_multi_queue = block_multi_queue
         if disks is not None:
           self.disks = disks
+        if gpus is not None:
+          self.gpus = gpus
         if inputs is not None:
           self.inputs = inputs
         if interfaces is not None:
@@ -179,6 +184,29 @@ class V1Devices(object):
         """
 
         self._disks = disks
+
+    @property
+    def gpus(self):
+        """
+        Gets the gpus of this V1Devices.
+        Whether to attach a GPU device to the vmi. +optional
+
+        :return: The gpus of this V1Devices.
+        :rtype: list[V1GPU]
+        """
+        return self._gpus
+
+    @gpus.setter
+    def gpus(self, gpus):
+        """
+        Sets the gpus of this V1Devices.
+        Whether to attach a GPU device to the vmi. +optional
+
+        :param gpus: The gpus of this V1Devices.
+        :type: list[V1GPU]
+        """
+
+        self._gpus = gpus
 
     @property
     def inputs(self):

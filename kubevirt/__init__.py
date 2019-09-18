@@ -48,6 +48,7 @@ from .models.v1_feature_vendor_id import V1FeatureVendorID
 from .models.v1_features import V1Features
 from .models.v1_firmware import V1Firmware
 from .models.v1_floppy_target import V1FloppyTarget
+from .models.v1_gpu import V1GPU
 from .models.v1_genie_network import V1GenieNetwork
 from .models.v1_group_version_for_discovery import V1GroupVersionForDiscovery
 from .models.v1_hpet_timer import V1HPETTimer

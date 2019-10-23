@@ -32,6 +32,7 @@ class V1VirtualMachineInstanceStatus(object):
     """
     swagger_types = {
         'conditions': 'list[V1VirtualMachineInstanceCondition]',
+        'guest_os_info': 'V1VirtualMachineInstanceGuestOSInfo',
         'interfaces': 'list[V1VirtualMachineInstanceNetworkInterface]',
         'migration_method': 'str',
         'migration_state': 'V1VirtualMachineInstanceMigrationState',
@@ -43,6 +44,7 @@ class V1VirtualMachineInstanceStatus(object):
 
     attribute_map = {
         'conditions': 'conditions',
+        'guest_os_info': 'guestOSInfo',
         'interfaces': 'interfaces',
         'migration_method': 'migrationMethod',
         'migration_state': 'migrationState',
@@ -52,12 +54,13 @@ class V1VirtualMachineInstanceStatus(object):
         'reason': 'reason'
     }
 
-    def __init__(self, conditions=None, interfaces=None, migration_method=None, migration_state=None, node_name=None, phase=None, qos_class=None, reason=None):
+    def __init__(self, conditions=None, guest_os_info=None, interfaces=None, migration_method=None, migration_state=None, node_name=None, phase=None, qos_class=None, reason=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
 
         self._conditions = None
+        self._guest_os_info = None
         self._interfaces = None
         self._migration_method = None
         self._migration_state = None
@@ -68,6 +71,8 @@ class V1VirtualMachineInstanceStatus(object):
 
         if conditions is not None:
           self.conditions = conditions
+        if guest_os_info is not None:
+          self.guest_os_info = guest_os_info
         if interfaces is not None:
           self.interfaces = interfaces
         if migration_method is not None:
@@ -105,6 +110,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._conditions = conditions
+
+    @property
+    def guest_os_info(self):
+        """
+        Gets the guest_os_info of this V1VirtualMachineInstanceStatus.
+        Guest OS Information
+
+        :return: The guest_os_info of this V1VirtualMachineInstanceStatus.
+        :rtype: V1VirtualMachineInstanceGuestOSInfo
+        """
+        return self._guest_os_info
+
+    @guest_os_info.setter
+    def guest_os_info(self, guest_os_info):
+        """
+        Sets the guest_os_info of this V1VirtualMachineInstanceStatus.
+        Guest OS Information
+
+        :param guest_os_info: The guest_os_info of this V1VirtualMachineInstanceStatus.
+        :type: V1VirtualMachineInstanceGuestOSInfo
+        """
+
+        self._guest_os_info = guest_os_info
 
     @property
     def interfaces(self):

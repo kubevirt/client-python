@@ -63,8 +63,7 @@ class V1VirtualMachineInstanceMigration(object):
           self.kind = kind
         if metadata is not None:
           self.metadata = metadata
-        if spec is not None:
-          self.spec = spec
+        self.spec = spec
         if status is not None:
           self.status = status
 
@@ -153,6 +152,8 @@ class V1VirtualMachineInstanceMigration(object):
         :param spec: The spec of this V1VirtualMachineInstanceMigration.
         :type: V1VirtualMachineInstanceMigrationSpec
         """
+        if spec is None:
+            raise ValueError("Invalid value for `spec`, must not be `None`")
 
         self._spec = spec
 

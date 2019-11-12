@@ -343,6 +343,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_pause(self):
+        """
+        Test case for pause
+
+        Pause a VirtualMachineInstance object.
+        """
+        pass
+
     def test_read_namespaced_virtual_machine(self):
         """
         Test case for read_namespaced_virtual_machine
@@ -452,6 +460,14 @@ class TestDefaultApi(unittest.TestCase):
         Test case for test
 
         Test endpoint verifying apiserver connectivity.
+        """
+        pass
+
+    def test_unpause(self):
+        """
+        Test case for unpause
+
+        Unpause a VirtualMachineInstance object.
         """
         pass
 

@@ -34,6 +34,7 @@ class V1CPU(object):
         'cores': 'int',
         'dedicated_cpu_placement': 'bool',
         'features': 'list[V1CPUFeature]',
+        'isolate_emulator_thread': 'bool',
         'model': 'str',
         'sockets': 'int',
         'threads': 'int'
@@ -43,12 +44,13 @@ class V1CPU(object):
         'cores': 'cores',
         'dedicated_cpu_placement': 'dedicatedCpuPlacement',
         'features': 'features',
+        'isolate_emulator_thread': 'isolateEmulatorThread',
         'model': 'model',
         'sockets': 'sockets',
         'threads': 'threads'
     }
 
-    def __init__(self, cores=None, dedicated_cpu_placement=None, features=None, model=None, sockets=None, threads=None):
+    def __init__(self, cores=None, dedicated_cpu_placement=None, features=None, isolate_emulator_thread=None, model=None, sockets=None, threads=None):
         """
         V1CPU - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class V1CPU(object):
         self._cores = None
         self._dedicated_cpu_placement = None
         self._features = None
+        self._isolate_emulator_thread = None
         self._model = None
         self._sockets = None
         self._threads = None
@@ -66,6 +69,8 @@ class V1CPU(object):
           self.dedicated_cpu_placement = dedicated_cpu_placement
         if features is not None:
           self.features = features
+        if isolate_emulator_thread is not None:
+          self.isolate_emulator_thread = isolate_emulator_thread
         if model is not None:
           self.model = model
         if sockets is not None:
@@ -141,6 +146,29 @@ class V1CPU(object):
         """
 
         self._features = features
+
+    @property
+    def isolate_emulator_thread(self):
+        """
+        Gets the isolate_emulator_thread of this V1CPU.
+        IsolateEmulatorThread requests one more dedicated pCPU to be allocated for the VMI to place the emulator thread on it. +optional
+
+        :return: The isolate_emulator_thread of this V1CPU.
+        :rtype: bool
+        """
+        return self._isolate_emulator_thread
+
+    @isolate_emulator_thread.setter
+    def isolate_emulator_thread(self, isolate_emulator_thread):
+        """
+        Sets the isolate_emulator_thread of this V1CPU.
+        IsolateEmulatorThread requests one more dedicated pCPU to be allocated for the VMI to place the emulator thread on it. +optional
+
+        :param isolate_emulator_thread: The isolate_emulator_thread of this V1CPU.
+        :type: bool
+        """
+
+        self._isolate_emulator_thread = isolate_emulator_thread
 
     @property
     def model(self):

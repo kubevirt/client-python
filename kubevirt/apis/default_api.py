@@ -5996,6 +5996,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param V1RestartOptions body:
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -6022,12 +6023,13 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param V1RestartOptions body:
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['namespace', 'name']
+        all_params = ['namespace', 'name', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6070,6 +6072,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # Authentication setting
         auth_settings = ['BearerToken']
 

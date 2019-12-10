@@ -93,6 +93,7 @@ from .v1_preferred_scheduling_term import V1PreferredSchedulingTerm
 from .v1_probe import V1Probe
 from .v1_rtc_timer import V1RTCTimer
 from .v1_resource_requirements import V1ResourceRequirements
+from .v1_restart_options import V1RestartOptions
 from .v1_root_paths import V1RootPaths
 from .v1_secret_volume_source import V1SecretVolumeSource
 from .v1_server_address_by_client_cidr import V1ServerAddressByClientCIDR

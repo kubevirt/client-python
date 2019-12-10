@@ -2946,7 +2946,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **restart**
-> restart(namespace, name)
+> restart(namespace, name, body=body)
 
 Restart a VirtualMachine object.
 
@@ -2967,10 +2967,11 @@ kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
 api_instance = kubevirt.DefaultApi()
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 name = 'name_example' # str | Name of the resource
+body = kubevirt.V1RestartOptions() # V1RestartOptions |  (optional)
 
 try: 
     # Restart a VirtualMachine object.
-    api_instance.restart(namespace, name)
+    api_instance.restart(namespace, name, body=body)
 except ApiException as e:
     print("Exception when calling DefaultApi->restart: %s\n" % e)
 ```
@@ -2981,6 +2982,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
  **name** | **str**| Name of the resource | 
+ **body** | [**V1RestartOptions**](V1RestartOptions.md)|  | [optional] 
 
 ### Return type
 

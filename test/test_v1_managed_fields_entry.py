@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1_initializer import V1Initializer
+from kubevirt.models.v1_managed_fields_entry import V1ManagedFieldsEntry
 
 
-class TestV1Initializer(unittest.TestCase):
-    """ V1Initializer unit test stubs """
+class TestV1ManagedFieldsEntry(unittest.TestCase):
+    """ V1ManagedFieldsEntry unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1Initializer(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1Initializer(self):
+    def testV1ManagedFieldsEntry(self):
         """
-        Test V1Initializer
+        Test V1ManagedFieldsEntry
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1_initializer.V1Initializer()
+        #model = kubevirt.models.v1_managed_fields_entry.V1ManagedFieldsEntry()
         pass
 
 

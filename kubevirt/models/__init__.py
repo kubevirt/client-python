@@ -58,8 +58,6 @@ from .v1_host_disk import V1HostDisk
 from .v1_hugepages import V1Hugepages
 from .v1_hyperv_timer import V1HypervTimer
 from .v1_i6300_esb_watchdog import V1I6300ESBWatchdog
-from .v1_initializer import V1Initializer
-from .v1_initializers import V1Initializers
 from .v1_input import V1Input
 from .v1_interface import V1Interface
 from .v1_kvm_timer import V1KVMTimer
@@ -69,6 +67,7 @@ from .v1_list_meta import V1ListMeta
 from .v1_local_object_reference import V1LocalObjectReference
 from .v1_lun_target import V1LunTarget
 from .v1_machine import V1Machine
+from .v1_managed_fields_entry import V1ManagedFieldsEntry
 from .v1_memory import V1Memory
 from .v1_multus_network import V1MultusNetwork
 from .v1_network import V1Network

@@ -75,7 +75,7 @@ class V1APIGroup(object):
     def api_version(self):
         """
         Gets the api_version of this V1APIGroup.
-        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
         :return: The api_version of this V1APIGroup.
         :rtype: str
@@ -86,7 +86,7 @@ class V1APIGroup(object):
     def api_version(self, api_version):
         """
         Sets the api_version of this V1APIGroup.
-        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
         :param api_version: The api_version of this V1APIGroup.
         :type: str
@@ -98,7 +98,7 @@ class V1APIGroup(object):
     def kind(self):
         """
         Gets the kind of this V1APIGroup.
-        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
         :return: The kind of this V1APIGroup.
         :rtype: str
@@ -109,7 +109,7 @@ class V1APIGroup(object):
     def kind(self, kind):
         """
         Sets the kind of this V1APIGroup.
-        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
         :param kind: The kind of this V1APIGroup.
         :type: str

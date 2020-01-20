@@ -32,27 +32,32 @@ class V1ListMeta(object):
     """
     swagger_types = {
         '_continue': 'str',
+        'remaining_item_count': 'int',
         'resource_version': 'str',
         'self_link': 'str'
     }
 
     attribute_map = {
         '_continue': 'continue',
+        'remaining_item_count': 'remainingItemCount',
         'resource_version': 'resourceVersion',
         'self_link': 'selfLink'
     }
 
-    def __init__(self, _continue=None, resource_version=None, self_link=None):
+    def __init__(self, _continue=None, remaining_item_count=None, resource_version=None, self_link=None):
         """
         V1ListMeta - a model defined in Swagger
         """
 
         self.__continue = None
+        self._remaining_item_count = None
         self._resource_version = None
         self._self_link = None
 
         if _continue is not None:
           self._continue = _continue
+        if remaining_item_count is not None:
+          self.remaining_item_count = remaining_item_count
         if resource_version is not None:
           self.resource_version = resource_version
         if self_link is not None:
@@ -82,10 +87,33 @@ class V1ListMeta(object):
         self.__continue = _continue
 
     @property
+    def remaining_item_count(self):
+        """
+        Gets the remaining_item_count of this V1ListMeta.
+        remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.
+
+        :return: The remaining_item_count of this V1ListMeta.
+        :rtype: int
+        """
+        return self._remaining_item_count
+
+    @remaining_item_count.setter
+    def remaining_item_count(self, remaining_item_count):
+        """
+        Sets the remaining_item_count of this V1ListMeta.
+        remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.
+
+        :param remaining_item_count: The remaining_item_count of this V1ListMeta.
+        :type: int
+        """
+
+        self._remaining_item_count = remaining_item_count
+
+    @property
     def resource_version(self):
         """
         Gets the resource_version of this V1ListMeta.
-        String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+        String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
 
         :return: The resource_version of this V1ListMeta.
         :rtype: str
@@ -96,7 +124,7 @@ class V1ListMeta(object):
     def resource_version(self, resource_version):
         """
         Sets the resource_version of this V1ListMeta.
-        String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+        String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
 
         :param resource_version: The resource_version of this V1ListMeta.
         :type: str
@@ -108,7 +136,7 @@ class V1ListMeta(object):
     def self_link(self):
         """
         Gets the self_link of this V1ListMeta.
-        selfLink is a URL representing this object. Populated by the system. Read-only.
+        selfLink is a URL representing this object. Populated by the system. Read-only.  DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
 
         :return: The self_link of this V1ListMeta.
         :rtype: str
@@ -119,7 +147,7 @@ class V1ListMeta(object):
     def self_link(self, self_link):
         """
         Sets the self_link of this V1ListMeta.
-        selfLink is a URL representing this object. Populated by the system. Read-only.
+        selfLink is a URL representing this object. Populated by the system. Read-only.  DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
 
         :param self_link: The self_link of this V1ListMeta.
         :type: str

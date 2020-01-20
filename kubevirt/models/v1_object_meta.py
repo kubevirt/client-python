@@ -38,8 +38,8 @@ class V1ObjectMeta(object):
         'finalizers': 'list[str]',
         'generate_name': 'str',
         'generation': 'int',
-        'initializers': 'V1Initializers',
         'labels': 'object',
+        'managed_fields': 'list[V1ManagedFieldsEntry]',
         'name': 'str',
         'namespace': 'str',
         'owner_references': 'list[V1OwnerReference]',
@@ -56,8 +56,8 @@ class V1ObjectMeta(object):
         'finalizers': 'finalizers',
         'generate_name': 'generateName',
         'generation': 'generation',
-        'initializers': 'initializers',
         'labels': 'labels',
+        'managed_fields': 'managedFields',
         'name': 'name',
         'namespace': 'namespace',
         'owner_references': 'ownerReferences',
@@ -66,7 +66,7 @@ class V1ObjectMeta(object):
         'uid': 'uid'
     }
 
-    def __init__(self, annotations=None, cluster_name=None, deletion_grace_period_seconds=None, deletion_timestamp=None, finalizers=None, generate_name=None, generation=None, initializers=None, labels=None, name=None, namespace=None, owner_references=None, resource_version=None, self_link=None, uid=None):
+    def __init__(self, annotations=None, cluster_name=None, deletion_grace_period_seconds=None, deletion_timestamp=None, finalizers=None, generate_name=None, generation=None, labels=None, managed_fields=None, name=None, namespace=None, owner_references=None, resource_version=None, self_link=None, uid=None):
         """
         V1ObjectMeta - a model defined in Swagger
         """
@@ -78,8 +78,8 @@ class V1ObjectMeta(object):
         self._finalizers = None
         self._generate_name = None
         self._generation = None
-        self._initializers = None
         self._labels = None
+        self._managed_fields = None
         self._name = None
         self._namespace = None
         self._owner_references = None
@@ -101,10 +101,10 @@ class V1ObjectMeta(object):
           self.generate_name = generate_name
         if generation is not None:
           self.generation = generation
-        if initializers is not None:
-          self.initializers = initializers
         if labels is not None:
           self.labels = labels
+        if managed_fields is not None:
+          self.managed_fields = managed_fields
         if name is not None:
           self.name = name
         if namespace is not None:
@@ -191,7 +191,7 @@ class V1ObjectMeta(object):
     def deletion_timestamp(self):
         """
         Gets the deletion_timestamp of this V1ObjectMeta.
-        DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.  Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+        DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.  Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
         :return: The deletion_timestamp of this V1ObjectMeta.
         :rtype: str
@@ -202,7 +202,7 @@ class V1ObjectMeta(object):
     def deletion_timestamp(self, deletion_timestamp):
         """
         Sets the deletion_timestamp of this V1ObjectMeta.
-        DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.  Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+        DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.  Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
         :param deletion_timestamp: The deletion_timestamp of this V1ObjectMeta.
         :type: str
@@ -237,7 +237,7 @@ class V1ObjectMeta(object):
     def generate_name(self):
         """
         Gets the generate_name of this V1ObjectMeta.
-        GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.  If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).  Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency
+        GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.  If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).  Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
 
         :return: The generate_name of this V1ObjectMeta.
         :rtype: str
@@ -248,7 +248,7 @@ class V1ObjectMeta(object):
     def generate_name(self, generate_name):
         """
         Sets the generate_name of this V1ObjectMeta.
-        GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.  If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).  Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency
+        GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.  If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).  Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
 
         :param generate_name: The generate_name of this V1ObjectMeta.
         :type: str
@@ -280,29 +280,6 @@ class V1ObjectMeta(object):
         self._generation = generation
 
     @property
-    def initializers(self):
-        """
-        Gets the initializers of this V1ObjectMeta.
-        An initializer is a controller which enforces some system invariant at object creation time. This field is a list of initializers that have not yet acted on this object. If nil or empty, this object has been completely initialized. Otherwise, the object is considered uninitialized and is hidden (in list/watch and get calls) from clients that haven't explicitly asked to observe uninitialized objects.  When an object is created, the system will populate this list with the current set of initializers. Only privileged users may set or modify this list. Once it is empty, it may not be modified further by any user.
-
-        :return: The initializers of this V1ObjectMeta.
-        :rtype: V1Initializers
-        """
-        return self._initializers
-
-    @initializers.setter
-    def initializers(self, initializers):
-        """
-        Sets the initializers of this V1ObjectMeta.
-        An initializer is a controller which enforces some system invariant at object creation time. This field is a list of initializers that have not yet acted on this object. If nil or empty, this object has been completely initialized. Otherwise, the object is considered uninitialized and is hidden (in list/watch and get calls) from clients that haven't explicitly asked to observe uninitialized objects.  When an object is created, the system will populate this list with the current set of initializers. Only privileged users may set or modify this list. Once it is empty, it may not be modified further by any user.
-
-        :param initializers: The initializers of this V1ObjectMeta.
-        :type: V1Initializers
-        """
-
-        self._initializers = initializers
-
-    @property
     def labels(self):
         """
         Gets the labels of this V1ObjectMeta.
@@ -324,6 +301,29 @@ class V1ObjectMeta(object):
         """
 
         self._labels = labels
+
+    @property
+    def managed_fields(self):
+        """
+        Gets the managed_fields of this V1ObjectMeta.
+        ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object.
+
+        :return: The managed_fields of this V1ObjectMeta.
+        :rtype: list[V1ManagedFieldsEntry]
+        """
+        return self._managed_fields
+
+    @managed_fields.setter
+    def managed_fields(self, managed_fields):
+        """
+        Sets the managed_fields of this V1ObjectMeta.
+        ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object.
+
+        :param managed_fields: The managed_fields of this V1ObjectMeta.
+        :type: list[V1ManagedFieldsEntry]
+        """
+
+        self._managed_fields = managed_fields
 
     @property
     def name(self):
@@ -398,7 +398,7 @@ class V1ObjectMeta(object):
     def resource_version(self):
         """
         Gets the resource_version of this V1ObjectMeta.
-        An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.  Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+        An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.  Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
 
         :return: The resource_version of this V1ObjectMeta.
         :rtype: str
@@ -409,7 +409,7 @@ class V1ObjectMeta(object):
     def resource_version(self, resource_version):
         """
         Sets the resource_version of this V1ObjectMeta.
-        An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.  Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+        An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.  Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
 
         :param resource_version: The resource_version of this V1ObjectMeta.
         :type: str
@@ -421,7 +421,7 @@ class V1ObjectMeta(object):
     def self_link(self):
         """
         Gets the self_link of this V1ObjectMeta.
-        SelfLink is a URL representing this object. Populated by the system. Read-only.
+        SelfLink is a URL representing this object. Populated by the system. Read-only.  DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
 
         :return: The self_link of this V1ObjectMeta.
         :rtype: str
@@ -432,7 +432,7 @@ class V1ObjectMeta(object):
     def self_link(self, self_link):
         """
         Sets the self_link of this V1ObjectMeta.
-        SelfLink is a URL representing this object. Populated by the system. Read-only.
+        SelfLink is a URL representing this object. Populated by the system. Read-only.  DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
 
         :param self_link: The self_link of this V1ObjectMeta.
         :type: str

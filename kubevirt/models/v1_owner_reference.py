@@ -144,7 +144,7 @@ class V1OwnerReference(object):
     def kind(self):
         """
         Gets the kind of this V1OwnerReference.
-        Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+        Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
         :return: The kind of this V1OwnerReference.
         :rtype: str
@@ -155,7 +155,7 @@ class V1OwnerReference(object):
     def kind(self, kind):
         """
         Sets the kind of this V1OwnerReference.
-        Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+        Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
         :param kind: The kind of this V1OwnerReference.
         :type: str

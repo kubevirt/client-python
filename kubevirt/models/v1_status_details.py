@@ -123,7 +123,7 @@ class V1StatusDetails(object):
     def kind(self):
         """
         Gets the kind of this V1StatusDetails.
-        The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+        The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
         :return: The kind of this V1StatusDetails.
         :rtype: str
@@ -134,7 +134,7 @@ class V1StatusDetails(object):
     def kind(self, kind):
         """
         Sets the kind of this V1StatusDetails.
-        The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+        The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
         :param kind: The kind of this V1StatusDetails.
         :type: str

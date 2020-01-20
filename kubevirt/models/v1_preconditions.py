@@ -31,22 +31,50 @@ class V1Preconditions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'resource_version': 'str',
         'uid': 'TypesUID'
     }
 
     attribute_map = {
+        'resource_version': 'resourceVersion',
         'uid': 'uid'
     }
 
-    def __init__(self, uid=None):
+    def __init__(self, resource_version=None, uid=None):
         """
         V1Preconditions - a model defined in Swagger
         """
 
+        self._resource_version = None
         self._uid = None
 
+        if resource_version is not None:
+          self.resource_version = resource_version
         if uid is not None:
           self.uid = uid
+
+    @property
+    def resource_version(self):
+        """
+        Gets the resource_version of this V1Preconditions.
+        Specifies the target ResourceVersion
+
+        :return: The resource_version of this V1Preconditions.
+        :rtype: str
+        """
+        return self._resource_version
+
+    @resource_version.setter
+    def resource_version(self, resource_version):
+        """
+        Sets the resource_version of this V1Preconditions.
+        Specifies the target ResourceVersion
+
+        :param resource_version: The resource_version of this V1Preconditions.
+        :type: str
+        """
+
+        self._resource_version = resource_version
 
     @property
     def uid(self):

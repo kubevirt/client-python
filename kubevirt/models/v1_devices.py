@@ -33,6 +33,7 @@ class V1Devices(object):
     swagger_types = {
         'autoattach_graphics_device': 'bool',
         'autoattach_pod_interface': 'bool',
+        'autoattach_serial_console': 'bool',
         'block_multi_queue': 'bool',
         'disks': 'list[V1Disk]',
         'gpus': 'list[V1GPU]',
@@ -46,6 +47,7 @@ class V1Devices(object):
     attribute_map = {
         'autoattach_graphics_device': 'autoattachGraphicsDevice',
         'autoattach_pod_interface': 'autoattachPodInterface',
+        'autoattach_serial_console': 'autoattachSerialConsole',
         'block_multi_queue': 'blockMultiQueue',
         'disks': 'disks',
         'gpus': 'gpus',
@@ -56,13 +58,14 @@ class V1Devices(object):
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_pod_interface=None, block_multi_queue=None, disks=None, gpus=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, disks=None, gpus=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
 
         self._autoattach_graphics_device = None
         self._autoattach_pod_interface = None
+        self._autoattach_serial_console = None
         self._block_multi_queue = None
         self._disks = None
         self._gpus = None
@@ -76,6 +79,8 @@ class V1Devices(object):
           self.autoattach_graphics_device = autoattach_graphics_device
         if autoattach_pod_interface is not None:
           self.autoattach_pod_interface = autoattach_pod_interface
+        if autoattach_serial_console is not None:
+          self.autoattach_serial_console = autoattach_serial_console
         if block_multi_queue is not None:
           self.block_multi_queue = block_multi_queue
         if disks is not None:
@@ -138,6 +143,29 @@ class V1Devices(object):
         """
 
         self._autoattach_pod_interface = autoattach_pod_interface
+
+    @property
+    def autoattach_serial_console(self):
+        """
+        Gets the autoattach_serial_console of this V1Devices.
+        Whether to attach the default serial console or not. Serial console access will not be available if set to false. Defaults to true.
+
+        :return: The autoattach_serial_console of this V1Devices.
+        :rtype: bool
+        """
+        return self._autoattach_serial_console
+
+    @autoattach_serial_console.setter
+    def autoattach_serial_console(self, autoattach_serial_console):
+        """
+        Sets the autoattach_serial_console of this V1Devices.
+        Whether to attach the default serial console or not. Serial console access will not be available if set to false. Defaults to true.
+
+        :param autoattach_serial_console: The autoattach_serial_console of this V1Devices.
+        :type: bool
+        """
+
+        self._autoattach_serial_console = autoattach_serial_console
 
     @property
     def block_multi_queue(self):

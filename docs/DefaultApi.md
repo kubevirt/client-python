@@ -27,6 +27,7 @@ Method | HTTP request | Description
 [**get_api_group_list**](DefaultApi.md#get_api_group_list) | **GET** /apis | Get a KubeVirt API GroupList
 [**get_api_resources**](DefaultApi.md#get_api_resources) | **GET** /apis/kubevirt.io/v1alpha3 | Get KubeVirt API Resources
 [**get_api_resources_0**](DefaultApi.md#get_api_resources_0) | **GET** /apis/subresources.kubevirt.io/v1alpha3 | Get a KubeVirt API resources
+[**guestosinfo**](DefaultApi.md#guestosinfo) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/guestosinfo | Get guest agent os information
 [**list_namespaced_virtual_machine**](DefaultApi.md#list_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines | Get a list of VirtualMachine objects.
 [**list_namespaced_virtual_machine_instance**](DefaultApi.md#list_namespaced_virtual_machine_instance) | **GET** /apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances | Get a list of VirtualMachineInstance objects.
 [**list_namespaced_virtual_machine_instance_migration**](DefaultApi.md#list_namespaced_virtual_machine_instance_migration) | **GET** /apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations | Get a list of VirtualMachineInstanceMigration objects.
@@ -1342,6 +1343,59 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **guestosinfo**
+> V1VirtualMachineInstanceGuestAgentInfo guestosinfo(namespace, name)
+
+Get guest agent os information
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+name = 'name_example' # str | Name of the resource
+
+try: 
+    # Get guest agent os information
+    api_response = api_instance.guestosinfo(namespace, name)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->guestosinfo: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **name** | **str**| Name of the resource | 
+
+### Return type
+
+[**V1VirtualMachineInstanceGuestAgentInfo**](V1VirtualMachineInstanceGuestAgentInfo.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

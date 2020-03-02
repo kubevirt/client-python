@@ -215,6 +215,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_guestosinfo(self):
+        """
+        Test case for guestosinfo
+
+        Get guest agent os information
+        """
+        pass
+
     def test_list_namespaced_virtual_machine(self):
         """
         Test case for list_namespaced_virtual_machine

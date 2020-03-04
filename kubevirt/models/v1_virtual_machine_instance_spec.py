@@ -40,6 +40,7 @@ class V1VirtualMachineInstanceSpec(object):
         'liveness_probe': 'V1Probe',
         'networks': 'list[V1Network]',
         'node_selector': 'object',
+        'priority_class_name': 'str',
         'readiness_probe': 'V1Probe',
         'subdomain': 'str',
         'termination_grace_period_seconds': 'int',
@@ -57,6 +58,7 @@ class V1VirtualMachineInstanceSpec(object):
         'liveness_probe': 'livenessProbe',
         'networks': 'networks',
         'node_selector': 'nodeSelector',
+        'priority_class_name': 'priorityClassName',
         'readiness_probe': 'readinessProbe',
         'subdomain': 'subdomain',
         'termination_grace_period_seconds': 'terminationGracePeriodSeconds',
@@ -64,7 +66,7 @@ class V1VirtualMachineInstanceSpec(object):
         'volumes': 'volumes'
     }
 
-    def __init__(self, affinity=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, readiness_probe=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, volumes=None):
+    def __init__(self, affinity=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, volumes=None):
         """
         V1VirtualMachineInstanceSpec - a model defined in Swagger
         """
@@ -78,6 +80,7 @@ class V1VirtualMachineInstanceSpec(object):
         self._liveness_probe = None
         self._networks = None
         self._node_selector = None
+        self._priority_class_name = None
         self._readiness_probe = None
         self._subdomain = None
         self._termination_grace_period_seconds = None
@@ -101,6 +104,8 @@ class V1VirtualMachineInstanceSpec(object):
           self.networks = networks
         if node_selector is not None:
           self.node_selector = node_selector
+        if priority_class_name is not None:
+          self.priority_class_name = priority_class_name
         if readiness_probe is not None:
           self.readiness_probe = readiness_probe
         if subdomain is not None:
@@ -320,6 +325,29 @@ class V1VirtualMachineInstanceSpec(object):
         """
 
         self._node_selector = node_selector
+
+    @property
+    def priority_class_name(self):
+        """
+        Gets the priority_class_name of this V1VirtualMachineInstanceSpec.
+        If specified, indicates the pod's priority. If not specified, the pod priority will be default or zero if there is no default. +optional
+
+        :return: The priority_class_name of this V1VirtualMachineInstanceSpec.
+        :rtype: str
+        """
+        return self._priority_class_name
+
+    @priority_class_name.setter
+    def priority_class_name(self, priority_class_name):
+        """
+        Sets the priority_class_name of this V1VirtualMachineInstanceSpec.
+        If specified, indicates the pod's priority. If not specified, the pod priority will be default or zero if there is no default. +optional
+
+        :param priority_class_name: The priority_class_name of this V1VirtualMachineInstanceSpec.
+        :type: str
+        """
+
+        self._priority_class_name = priority_class_name
 
     @property
     def readiness_probe(self):

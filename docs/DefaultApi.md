@@ -50,6 +50,7 @@ Method | HTTP request | Description
 [**read_namespaced_virtual_machine_instance_migration**](DefaultApi.md#read_namespaced_virtual_machine_instance_migration) | **GET** /apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations/{name} | Get a VirtualMachineInstanceMigration object.
 [**read_namespaced_virtual_machine_instance_preset**](DefaultApi.md#read_namespaced_virtual_machine_instance_preset) | **GET** /apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets/{name} | Get a VirtualMachineInstancePreset object.
 [**read_namespaced_virtual_machine_instance_replica_set**](DefaultApi.md#read_namespaced_virtual_machine_instance_replica_set) | **GET** /apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets/{name} | Get a VirtualMachineInstanceReplicaSet object.
+[**rename**](DefaultApi.md#rename) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}/rename | Rename a stopped VirtualMachine object.
 [**replace_namespaced_virtual_machine**](DefaultApi.md#replace_namespaced_virtual_machine) | **PUT** /apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name} | Update a VirtualMachine object.
 [**replace_namespaced_virtual_machine_instance**](DefaultApi.md#replace_namespaced_virtual_machine_instance) | **PUT** /apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name} | Update a VirtualMachineInstance object.
 [**replace_namespaced_virtual_machine_instance_migration**](DefaultApi.md#replace_namespaced_virtual_machine_instance_migration) | **PUT** /apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations/{name} | Update a VirtualMachineInstanceMigration object.
@@ -2721,6 +2722,58 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json, application/yaml, application/json;stream=watch
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **rename**
+> rename(namespace, name)
+
+Rename a stopped VirtualMachine object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+name = 'name_example' # str | Name of the resource
+
+try: 
+    # Rename a stopped VirtualMachine object.
+    api_instance.rename(namespace, name)
+except ApiException as e:
+    print("Exception when calling DefaultApi->rename: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **name** | **str**| Name of the resource | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

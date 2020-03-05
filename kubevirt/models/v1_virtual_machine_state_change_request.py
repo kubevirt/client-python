@@ -32,23 +32,28 @@ class V1VirtualMachineStateChangeRequest(object):
     """
     swagger_types = {
         'action': 'str',
+        'data': 'object',
         'uid': 'TypesUID'
     }
 
     attribute_map = {
         'action': 'action',
+        'data': 'data',
         'uid': 'uid'
     }
 
-    def __init__(self, action=None, uid=None):
+    def __init__(self, action=None, data=None, uid=None):
         """
         V1VirtualMachineStateChangeRequest - a model defined in Swagger
         """
 
         self._action = None
+        self._data = None
         self._uid = None
 
         self.action = action
+        if data is not None:
+          self.data = data
         if uid is not None:
           self.uid = uid
 
@@ -76,6 +81,29 @@ class V1VirtualMachineStateChangeRequest(object):
             raise ValueError("Invalid value for `action`, must not be `None`")
 
         self._action = action
+
+    @property
+    def data(self):
+        """
+        Gets the data of this V1VirtualMachineStateChangeRequest.
+        Provides additional data in order to perform the Action
+
+        :return: The data of this V1VirtualMachineStateChangeRequest.
+        :rtype: object
+        """
+        return self._data
+
+    @data.setter
+    def data(self, data):
+        """
+        Sets the data of this V1VirtualMachineStateChangeRequest.
+        Provides additional data in order to perform the Action
+
+        :param data: The data of this V1VirtualMachineStateChangeRequest.
+        :type: object
+        """
+
+        self._data = data
 
     @property
     def uid(self):

@@ -399,6 +399,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_rename(self):
+        """
+        Test case for rename
+
+        Rename a stopped VirtualMachine object.
+        """
+        pass
+
     def test_replace_namespaced_virtual_machine(self):
         """
         Test case for replace_namespaced_virtual_machine

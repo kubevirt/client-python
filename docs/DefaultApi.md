@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**delete_namespaced_virtual_machine_instance_migration**](DefaultApi.md#delete_namespaced_virtual_machine_instance_migration) | **DELETE** /apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations/{name} | Delete a VirtualMachineInstanceMigration object.
 [**delete_namespaced_virtual_machine_instance_preset**](DefaultApi.md#delete_namespaced_virtual_machine_instance_preset) | **DELETE** /apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets/{name} | Delete a VirtualMachineInstancePreset object.
 [**delete_namespaced_virtual_machine_instance_replica_set**](DefaultApi.md#delete_namespaced_virtual_machine_instance_replica_set) | **DELETE** /apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets/{name} | Delete a VirtualMachineInstanceReplicaSet object.
+[**filesystemlist**](DefaultApi.md#filesystemlist) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/filesystemlist | Get list of active filesystems on guest machine via guest agent
 [**func7**](DefaultApi.md#func7) | **GET** /openapi/v2 | 
 [**get_api_group**](DefaultApi.md#get_api_group) | **GET** /apis/kubevirt.io | Get a KubeVirt API group
 [**get_api_group_0**](DefaultApi.md#get_api_group_0) | **GET** /apis/subresources.kubevirt.io | Get a KubeVirt API Group
@@ -61,6 +62,7 @@ Method | HTTP request | Description
 [**stop**](DefaultApi.md#stop) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}/stop | Stop a VirtualMachine object.
 [**test**](DefaultApi.md#test) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/test | Test endpoint verifying apiserver connectivity.
 [**unpause**](DefaultApi.md#unpause) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/unpause | Unpause a VirtualMachineInstance object.
+[**userlist**](DefaultApi.md#userlist) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/userlist | Get list of active users via guest agent
 [**version**](DefaultApi.md#version) | **GET** /apis/subresources.kubevirt.io/v1alpha3/version | 
 [**vnc**](DefaultApi.md#vnc) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/vnc | Open a websocket connection to connect to VNC on the specified VirtualMachineInstance.
 [**watch_namespaced_virtual_machine**](DefaultApi.md#watch_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace}/virtualmachines | Watch a VirtualMachine object.
@@ -1065,6 +1067,53 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json, application/yaml
  - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **filesystemlist**
+> V1VirtualMachineInstanceFileSystemList filesystemlist()
+
+Get list of active filesystems on guest machine via guest agent
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+
+try: 
+    # Get list of active filesystems on guest machine via guest agent
+    api_response = api_instance.filesystemlist()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->filesystemlist: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**V1VirtualMachineInstanceFileSystemList**](V1VirtualMachineInstanceFileSystemList.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3311,6 +3360,53 @@ void (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **userlist**
+> V1VirtualMachineInstanceGuestOSUserList userlist()
+
+Get list of active users via guest agent
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: BearerToken
+kubevirt.configuration.api_key['authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# kubevirt.configuration.api_key_prefix['authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+
+try: 
+    # Get list of active users via guest agent
+    api_response = api_instance.userlist()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->userlist: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**V1VirtualMachineInstanceGuestOSUserList**](V1VirtualMachineInstanceGuestOSUserList.md)
+
+### Authorization
+
+[BearerToken](../README.md#BearerToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

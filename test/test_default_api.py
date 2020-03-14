@@ -167,6 +167,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_filesystemlist(self):
+        """
+        Test case for filesystemlist
+
+        Get list of active filesystems on guest machine via guest agent
+        """
+        pass
+
     def test_func7(self):
         """
         Test case for func7
@@ -484,6 +492,14 @@ class TestDefaultApi(unittest.TestCase):
         Test case for unpause
 
         Unpause a VirtualMachineInstance object.
+        """
+        pass
+
+    def test_userlist(self):
+        """
+        Test case for userlist
+
+        Get list of active users via guest agent
         """
         pass
 

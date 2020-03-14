@@ -32,7 +32,7 @@ class V1VirtualMachineInstanceGuestOSUser(object):
     """
     swagger_types = {
         'domain': 'str',
-        'login_time': 'int',
+        'login_time': 'float',
         'user_name': 'str'
     }
 
@@ -84,7 +84,7 @@ class V1VirtualMachineInstanceGuestOSUser(object):
         Gets the login_time of this V1VirtualMachineInstanceGuestOSUser.
 
         :return: The login_time of this V1VirtualMachineInstanceGuestOSUser.
-        :rtype: int
+        :rtype: float
         """
         return self._login_time
 
@@ -94,7 +94,7 @@ class V1VirtualMachineInstanceGuestOSUser(object):
         Sets the login_time of this V1VirtualMachineInstanceGuestOSUser.
 
         :param login_time: The login_time of this V1VirtualMachineInstanceGuestOSUser.
-        :type: int
+        :type: float
         """
 
         self._login_time = login_time

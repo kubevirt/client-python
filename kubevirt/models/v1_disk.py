@@ -39,7 +39,8 @@ class V1Disk(object):
         'floppy': 'V1FloppyTarget',
         'lun': 'V1LunTarget',
         'name': 'str',
-        'serial': 'str'
+        'serial': 'str',
+        'tag': 'str'
     }
 
     attribute_map = {
@@ -51,10 +52,11 @@ class V1Disk(object):
         'floppy': 'floppy',
         'lun': 'lun',
         'name': 'name',
-        'serial': 'serial'
+        'serial': 'serial',
+        'tag': 'tag'
     }
 
-    def __init__(self, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, floppy=None, lun=None, name=None, serial=None):
+    def __init__(self, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, floppy=None, lun=None, name=None, serial=None, tag=None):
         """
         V1Disk - a model defined in Swagger
         """
@@ -68,6 +70,7 @@ class V1Disk(object):
         self._lun = None
         self._name = None
         self._serial = None
+        self._tag = None
 
         if boot_order is not None:
           self.boot_order = boot_order
@@ -86,6 +89,8 @@ class V1Disk(object):
         self.name = name
         if serial is not None:
           self.serial = serial
+        if tag is not None:
+          self.tag = tag
 
     @property
     def boot_order(self):
@@ -295,6 +300,29 @@ class V1Disk(object):
         """
 
         self._serial = serial
+
+    @property
+    def tag(self):
+        """
+        Gets the tag of this V1Disk.
+        If specified, disk address and its tag will be provided to the guest via config drive metadata +optional
+
+        :return: The tag of this V1Disk.
+        :rtype: str
+        """
+        return self._tag
+
+    @tag.setter
+    def tag(self, tag):
+        """
+        Sets the tag of this V1Disk.
+        If specified, disk address and its tag will be provided to the guest via config drive metadata +optional
+
+        :param tag: The tag of this V1Disk.
+        :type: str
+        """
+
+        self._tag = tag
 
     def to_dict(self):
         """

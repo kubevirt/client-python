@@ -41,7 +41,8 @@ class V1Interface(object):
         'pci_address': 'str',
         'ports': 'list[V1Port]',
         'slirp': 'V1InterfaceSlirp',
-        'sriov': 'V1InterfaceSRIOV'
+        'sriov': 'V1InterfaceSRIOV',
+        'tag': 'str'
     }
 
     attribute_map = {
@@ -55,10 +56,11 @@ class V1Interface(object):
         'pci_address': 'pciAddress',
         'ports': 'ports',
         'slirp': 'slirp',
-        'sriov': 'sriov'
+        'sriov': 'sriov',
+        'tag': 'tag'
     }
 
-    def __init__(self, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, masquerade=None, model=None, name=None, pci_address=None, ports=None, slirp=None, sriov=None):
+    def __init__(self, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, masquerade=None, model=None, name=None, pci_address=None, ports=None, slirp=None, sriov=None, tag=None):
         """
         V1Interface - a model defined in Swagger
         """
@@ -74,6 +76,7 @@ class V1Interface(object):
         self._ports = None
         self._slirp = None
         self._sriov = None
+        self._tag = None
 
         if boot_order is not None:
           self.boot_order = boot_order
@@ -96,6 +99,8 @@ class V1Interface(object):
           self.slirp = slirp
         if sriov is not None:
           self.sriov = sriov
+        if tag is not None:
+          self.tag = tag
 
     @property
     def boot_order(self):
@@ -343,6 +348,29 @@ class V1Interface(object):
         """
 
         self._sriov = sriov
+
+    @property
+    def tag(self):
+        """
+        Gets the tag of this V1Interface.
+        If specified, the virtual network interface address and its tag will be provided to the guest via config drive +optional
+
+        :return: The tag of this V1Interface.
+        :rtype: str
+        """
+        return self._tag
+
+    @tag.setter
+    def tag(self, tag):
+        """
+        Sets the tag of this V1Interface.
+        If specified, the virtual network interface address and its tag will be provided to the guest via config drive +optional
+
+        :param tag: The tag of this V1Interface.
+        :type: str
+        """
+
+        self._tag = tag
 
     def to_dict(self):
         """

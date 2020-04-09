@@ -31,57 +31,31 @@ class V1Network(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'genie': 'V1GenieNetwork',
         'multus': 'V1MultusNetwork',
         'name': 'str',
         'pod': 'V1PodNetwork'
     }
 
     attribute_map = {
-        'genie': 'genie',
         'multus': 'multus',
         'name': 'name',
         'pod': 'pod'
     }
 
-    def __init__(self, genie=None, multus=None, name=None, pod=None):
+    def __init__(self, multus=None, name=None, pod=None):
         """
         V1Network - a model defined in Swagger
         """
 
-        self._genie = None
         self._multus = None
         self._name = None
         self._pod = None
 
-        if genie is not None:
-          self.genie = genie
         if multus is not None:
           self.multus = multus
         self.name = name
         if pod is not None:
           self.pod = pod
-
-    @property
-    def genie(self):
-        """
-        Gets the genie of this V1Network.
-
-        :return: The genie of this V1Network.
-        :rtype: V1GenieNetwork
-        """
-        return self._genie
-
-    @genie.setter
-    def genie(self, genie):
-        """
-        Sets the genie of this V1Network.
-
-        :param genie: The genie of this V1Network.
-        :type: V1GenieNetwork
-        """
-
-        self._genie = genie
 
     @property
     def multus(self):

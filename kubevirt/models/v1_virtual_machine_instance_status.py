@@ -31,6 +31,7 @@ class V1VirtualMachineInstanceStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'active_pods': 'object',
         'conditions': 'list[V1VirtualMachineInstanceCondition]',
         'guest_os_info': 'V1VirtualMachineInstanceGuestOSInfo',
         'interfaces': 'list[V1VirtualMachineInstanceNetworkInterface]',
@@ -43,6 +44,7 @@ class V1VirtualMachineInstanceStatus(object):
     }
 
     attribute_map = {
+        'active_pods': 'activePods',
         'conditions': 'conditions',
         'guest_os_info': 'guestOSInfo',
         'interfaces': 'interfaces',
@@ -54,11 +56,12 @@ class V1VirtualMachineInstanceStatus(object):
         'reason': 'reason'
     }
 
-    def __init__(self, conditions=None, guest_os_info=None, interfaces=None, migration_method=None, migration_state=None, node_name=None, phase=None, qos_class=None, reason=None):
+    def __init__(self, active_pods=None, conditions=None, guest_os_info=None, interfaces=None, migration_method=None, migration_state=None, node_name=None, phase=None, qos_class=None, reason=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
 
+        self._active_pods = None
         self._conditions = None
         self._guest_os_info = None
         self._interfaces = None
@@ -69,6 +72,8 @@ class V1VirtualMachineInstanceStatus(object):
         self._qos_class = None
         self._reason = None
 
+        if active_pods is not None:
+          self.active_pods = active_pods
         if conditions is not None:
           self.conditions = conditions
         if guest_os_info is not None:
@@ -87,6 +92,29 @@ class V1VirtualMachineInstanceStatus(object):
           self.qos_class = qos_class
         if reason is not None:
           self.reason = reason
+
+    @property
+    def active_pods(self):
+        """
+        Gets the active_pods of this V1VirtualMachineInstanceStatus.
+        ActivePods is a mapping of pod UID to node name. It is possible for multiple pods to be running for a single VMI during migration.
+
+        :return: The active_pods of this V1VirtualMachineInstanceStatus.
+        :rtype: object
+        """
+        return self._active_pods
+
+    @active_pods.setter
+    def active_pods(self, active_pods):
+        """
+        Sets the active_pods of this V1VirtualMachineInstanceStatus.
+        ActivePods is a mapping of pod UID to node name. It is possible for multiple pods to be running for a single VMI during migration.
+
+        :param active_pods: The active_pods of this V1VirtualMachineInstanceStatus.
+        :type: object
+        """
+
+        self._active_pods = active_pods
 
     @property
     def conditions(self):

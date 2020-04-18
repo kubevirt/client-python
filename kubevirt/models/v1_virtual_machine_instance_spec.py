@@ -42,6 +42,7 @@ class V1VirtualMachineInstanceSpec(object):
         'node_selector': 'object',
         'priority_class_name': 'str',
         'readiness_probe': 'V1Probe',
+        'scheduler_name': 'str',
         'subdomain': 'str',
         'termination_grace_period_seconds': 'int',
         'tolerations': 'list[V1Toleration]',
@@ -60,13 +61,14 @@ class V1VirtualMachineInstanceSpec(object):
         'node_selector': 'nodeSelector',
         'priority_class_name': 'priorityClassName',
         'readiness_probe': 'readinessProbe',
+        'scheduler_name': 'schedulerName',
         'subdomain': 'subdomain',
         'termination_grace_period_seconds': 'terminationGracePeriodSeconds',
         'tolerations': 'tolerations',
         'volumes': 'volumes'
     }
 
-    def __init__(self, affinity=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, volumes=None):
+    def __init__(self, affinity=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, scheduler_name=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, volumes=None):
         """
         V1VirtualMachineInstanceSpec - a model defined in Swagger
         """
@@ -82,6 +84,7 @@ class V1VirtualMachineInstanceSpec(object):
         self._node_selector = None
         self._priority_class_name = None
         self._readiness_probe = None
+        self._scheduler_name = None
         self._subdomain = None
         self._termination_grace_period_seconds = None
         self._tolerations = None
@@ -108,6 +111,8 @@ class V1VirtualMachineInstanceSpec(object):
           self.priority_class_name = priority_class_name
         if readiness_probe is not None:
           self.readiness_probe = readiness_probe
+        if scheduler_name is not None:
+          self.scheduler_name = scheduler_name
         if subdomain is not None:
           self.subdomain = subdomain
         if termination_grace_period_seconds is not None:
@@ -371,6 +376,29 @@ class V1VirtualMachineInstanceSpec(object):
         """
 
         self._readiness_probe = readiness_probe
+
+    @property
+    def scheduler_name(self):
+        """
+        Gets the scheduler_name of this V1VirtualMachineInstanceSpec.
+        If specified, the VMI will be dispatched by specified scheduler. If not specified, the VMI will be dispatched by default scheduler. +optional
+
+        :return: The scheduler_name of this V1VirtualMachineInstanceSpec.
+        :rtype: str
+        """
+        return self._scheduler_name
+
+    @scheduler_name.setter
+    def scheduler_name(self, scheduler_name):
+        """
+        Sets the scheduler_name of this V1VirtualMachineInstanceSpec.
+        If specified, the VMI will be dispatched by specified scheduler. If not specified, the VMI will be dispatched by default scheduler. +optional
+
+        :param scheduler_name: The scheduler_name of this V1VirtualMachineInstanceSpec.
+        :type: str
+        """
+
+        self._scheduler_name = scheduler_name
 
     @property
     def subdomain(self):

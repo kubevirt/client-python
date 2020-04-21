@@ -32,26 +32,31 @@ class V1ConfigMapVolumeSource(object):
     """
     swagger_types = {
         'name': 'str',
-        'optional': 'bool'
+        'optional': 'bool',
+        'volume_label': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'optional': 'optional'
+        'optional': 'optional',
+        'volume_label': 'volumeLabel'
     }
 
-    def __init__(self, name=None, optional=None):
+    def __init__(self, name=None, optional=None, volume_label=None):
         """
         V1ConfigMapVolumeSource - a model defined in Swagger
         """
 
         self._name = None
         self._optional = None
+        self._volume_label = None
 
         if name is not None:
           self.name = name
         if optional is not None:
           self.optional = optional
+        if volume_label is not None:
+          self.volume_label = volume_label
 
     @property
     def name(self):
@@ -98,6 +103,29 @@ class V1ConfigMapVolumeSource(object):
         """
 
         self._optional = optional
+
+    @property
+    def volume_label(self):
+        """
+        Gets the volume_label of this V1ConfigMapVolumeSource.
+        The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart). +optional
+
+        :return: The volume_label of this V1ConfigMapVolumeSource.
+        :rtype: str
+        """
+        return self._volume_label
+
+    @volume_label.setter
+    def volume_label(self, volume_label):
+        """
+        Sets the volume_label of this V1ConfigMapVolumeSource.
+        The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart). +optional
+
+        :param volume_label: The volume_label of this V1ConfigMapVolumeSource.
+        :type: str
+        """
+
+        self._volume_label = volume_label
 
     def to_dict(self):
         """

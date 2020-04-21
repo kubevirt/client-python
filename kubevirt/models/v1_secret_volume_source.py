@@ -32,26 +32,31 @@ class V1SecretVolumeSource(object):
     """
     swagger_types = {
         'optional': 'bool',
-        'secret_name': 'str'
+        'secret_name': 'str',
+        'volume_label': 'str'
     }
 
     attribute_map = {
         'optional': 'optional',
-        'secret_name': 'secretName'
+        'secret_name': 'secretName',
+        'volume_label': 'volumeLabel'
     }
 
-    def __init__(self, optional=None, secret_name=None):
+    def __init__(self, optional=None, secret_name=None, volume_label=None):
         """
         V1SecretVolumeSource - a model defined in Swagger
         """
 
         self._optional = None
         self._secret_name = None
+        self._volume_label = None
 
         if optional is not None:
           self.optional = optional
         if secret_name is not None:
           self.secret_name = secret_name
+        if volume_label is not None:
+          self.volume_label = volume_label
 
     @property
     def optional(self):
@@ -98,6 +103,29 @@ class V1SecretVolumeSource(object):
         """
 
         self._secret_name = secret_name
+
+    @property
+    def volume_label(self):
+        """
+        Gets the volume_label of this V1SecretVolumeSource.
+        The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart). +optional
+
+        :return: The volume_label of this V1SecretVolumeSource.
+        :rtype: str
+        """
+        return self._volume_label
+
+    @volume_label.setter
+    def volume_label(self, volume_label):
+        """
+        Sets the volume_label of this V1SecretVolumeSource.
+        The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart). +optional
+
+        :param volume_label: The volume_label of this V1SecretVolumeSource.
+        :type: str
+        """
+
+        self._volume_label = volume_label
 
     def to_dict(self):
         """

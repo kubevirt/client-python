@@ -31,7 +31,7 @@ class V1EmptyDiskSource(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'capacity': 'str'
+        'capacity': 'ResourceQuantity'
     }
 
     attribute_map = {
@@ -54,7 +54,7 @@ class V1EmptyDiskSource(object):
         Capacity of the sparse disk.
 
         :return: The capacity of this V1EmptyDiskSource.
-        :rtype: str
+        :rtype: ResourceQuantity
         """
         return self._capacity
 
@@ -65,7 +65,7 @@ class V1EmptyDiskSource(object):
         Capacity of the sparse disk.
 
         :param capacity: The capacity of this V1EmptyDiskSource.
-        :type: str
+        :type: ResourceQuantity
         """
         if capacity is None:
             raise ValueError("Invalid value for `capacity`, must not be `None`")

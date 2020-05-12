@@ -105,7 +105,7 @@ class V1CPU(object):
     def dedicated_cpu_placement(self):
         """
         Gets the dedicated_cpu_placement of this V1CPU.
-        DedicatedCPUPlacement requests the scheduler to place the VirtualMachineInstance on a node with enough dedicated pCPUs and pin the vCPUs to it. +optional
+        DedicatedCPUPlacement requests the scheduler to place the VirtualMachineInstance on a node with enough dedicated pCPUs and pin the vCPUs to it.
 
         :return: The dedicated_cpu_placement of this V1CPU.
         :rtype: bool
@@ -116,7 +116,7 @@ class V1CPU(object):
     def dedicated_cpu_placement(self, dedicated_cpu_placement):
         """
         Sets the dedicated_cpu_placement of this V1CPU.
-        DedicatedCPUPlacement requests the scheduler to place the VirtualMachineInstance on a node with enough dedicated pCPUs and pin the vCPUs to it. +optional
+        DedicatedCPUPlacement requests the scheduler to place the VirtualMachineInstance on a node with enough dedicated pCPUs and pin the vCPUs to it.
 
         :param dedicated_cpu_placement: The dedicated_cpu_placement of this V1CPU.
         :type: bool
@@ -128,7 +128,7 @@ class V1CPU(object):
     def features(self):
         """
         Gets the features of this V1CPU.
-        Features specifies the CPU features list inside the VMI. +optional
+        Features specifies the CPU features list inside the VMI.
 
         :return: The features of this V1CPU.
         :rtype: list[V1CPUFeature]
@@ -139,7 +139,7 @@ class V1CPU(object):
     def features(self, features):
         """
         Sets the features of this V1CPU.
-        Features specifies the CPU features list inside the VMI. +optional
+        Features specifies the CPU features list inside the VMI.
 
         :param features: The features of this V1CPU.
         :type: list[V1CPUFeature]
@@ -151,7 +151,7 @@ class V1CPU(object):
     def isolate_emulator_thread(self):
         """
         Gets the isolate_emulator_thread of this V1CPU.
-        IsolateEmulatorThread requests one more dedicated pCPU to be allocated for the VMI to place the emulator thread on it. +optional
+        IsolateEmulatorThread requests one more dedicated pCPU to be allocated for the VMI to place the emulator thread on it.
 
         :return: The isolate_emulator_thread of this V1CPU.
         :rtype: bool
@@ -162,7 +162,7 @@ class V1CPU(object):
     def isolate_emulator_thread(self, isolate_emulator_thread):
         """
         Sets the isolate_emulator_thread of this V1CPU.
-        IsolateEmulatorThread requests one more dedicated pCPU to be allocated for the VMI to place the emulator thread on it. +optional
+        IsolateEmulatorThread requests one more dedicated pCPU to be allocated for the VMI to place the emulator thread on it.
 
         :param isolate_emulator_thread: The isolate_emulator_thread of this V1CPU.
         :type: bool
@@ -174,7 +174,7 @@ class V1CPU(object):
     def model(self):
         """
         Gets the model of this V1CPU.
-        Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/tree/master/src/cpu_map. It is possible to specify special cases like \"host-passthrough\" to get the same CPU as the node and \"host-model\" to get CPU closest to the node one. Defaults to host-model. +optional
+        Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/tree/master/src/cpu_map. It is possible to specify special cases like \"host-passthrough\" to get the same CPU as the node and \"host-model\" to get CPU closest to the node one. Defaults to host-model.
 
         :return: The model of this V1CPU.
         :rtype: str
@@ -185,7 +185,7 @@ class V1CPU(object):
     def model(self, model):
         """
         Sets the model of this V1CPU.
-        Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/tree/master/src/cpu_map. It is possible to specify special cases like \"host-passthrough\" to get the same CPU as the node and \"host-model\" to get CPU closest to the node one. Defaults to host-model. +optional
+        Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/tree/master/src/cpu_map. It is possible to specify special cases like \"host-passthrough\" to get the same CPU as the node and \"host-model\" to get CPU closest to the node one. Defaults to host-model.
 
         :param model: The model of this V1CPU.
         :type: str

@@ -53,7 +53,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: None
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -77,7 +77,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: None
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -119,7 +119,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
         return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/healthz', 'GET',
                                         path_params,
@@ -128,7 +128,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='str',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -136,7 +136,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def console(self, namespace, name, **kwargs):
+    def console(self, name, namespace, **kwargs):
         """
         Open a websocket connection to a serial console on the specified VirtualMachineInstance.
         This method makes a synchronous HTTP request by default. To make an
@@ -145,24 +145,24 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.console(namespace, name, callback=callback_function)
+        >>> thread = api.console(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.console_with_http_info(namespace, name, **kwargs)
+            return self.console_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.console_with_http_info(namespace, name, **kwargs)
+            (data) = self.console_with_http_info(name, namespace, **kwargs)
             return data
 
-    def console_with_http_info(self, namespace, name, **kwargs):
+    def console_with_http_info(self, name, namespace, **kwargs):
         """
         Open a websocket connection to a serial console on the specified VirtualMachineInstance.
         This method makes a synchronous HTTP request by default. To make an
@@ -171,18 +171,18 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.console_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.console_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['namespace', 'name']
+        all_params = ['name', 'namespace']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -197,25 +197,21 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `console`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `console`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `console`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `console`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `console`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -226,9 +222,9 @@ class DefaultApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/console', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/console', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -311,8 +307,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_virtual_machine`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `create_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -339,9 +333,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines', 'POST',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -424,8 +418,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_virtual_machine_instance`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `create_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -452,9 +444,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances', 'POST',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -537,8 +529,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_virtual_machine_instance_migration`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `create_namespaced_virtual_machine_instance_migration`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -565,9 +555,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations', 'POST',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -650,8 +640,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_virtual_machine_instance_preset`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `create_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -678,9 +666,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets', 'POST',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -763,8 +751,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `create_namespaced_virtual_machine_instance_replica_set`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `create_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -791,9 +777,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets', 'POST',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -916,9 +902,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1041,9 +1027,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1166,9 +1152,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1291,9 +1277,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1416,9 +1402,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1433,7 +1419,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_namespaced_virtual_machine(self, body, namespace, name, **kwargs):
+    def delete_namespaced_virtual_machine(self, name, namespace, body, **kwargs):
         """
         Delete a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -1442,13 +1428,13 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_virtual_machine(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_virtual_machine(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1DeleteOptions body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -1458,12 +1444,12 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_namespaced_virtual_machine_with_http_info(body, namespace, name, **kwargs)
+            return self.delete_namespaced_virtual_machine_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_namespaced_virtual_machine_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.delete_namespaced_virtual_machine_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_namespaced_virtual_machine_with_http_info(self, body, namespace, name, **kwargs):
+    def delete_namespaced_virtual_machine_with_http_info(self, name, namespace, body, **kwargs):
         """
         Delete a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -1472,13 +1458,13 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_virtual_machine_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_virtual_machine_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1DeleteOptions body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -1487,7 +1473,7 @@ class DefaultApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name', 'grace_period_seconds', 'orphan_dependents', 'propagation_policy']
+        all_params = ['name', 'namespace', 'body', 'grace_period_seconds', 'orphan_dependents', 'propagation_policy']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1502,28 +1488,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_virtual_machine`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `delete_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `delete_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
         if 'grace_period_seconds' in params:
@@ -1550,9 +1532,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1567,7 +1549,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_namespaced_virtual_machine_instance(self, body, namespace, name, **kwargs):
+    def delete_namespaced_virtual_machine_instance(self, name, namespace, body, **kwargs):
         """
         Delete a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -1576,13 +1558,13 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_virtual_machine_instance(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_virtual_machine_instance(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1DeleteOptions body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -1592,12 +1574,12 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, **kwargs)
+            return self.delete_namespaced_virtual_machine_instance_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.delete_namespaced_virtual_machine_instance_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_namespaced_virtual_machine_instance_with_http_info(self, body, namespace, name, **kwargs):
+    def delete_namespaced_virtual_machine_instance_with_http_info(self, name, namespace, body, **kwargs):
         """
         Delete a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -1606,13 +1588,13 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_virtual_machine_instance_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1DeleteOptions body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -1621,7 +1603,7 @@ class DefaultApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name', 'grace_period_seconds', 'orphan_dependents', 'propagation_policy']
+        all_params = ['name', 'namespace', 'body', 'grace_period_seconds', 'orphan_dependents', 'propagation_policy']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1636,28 +1618,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine_instance`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine_instance`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_virtual_machine_instance`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine_instance`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine_instance`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `delete_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `delete_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
         if 'grace_period_seconds' in params:
@@ -1684,9 +1662,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1701,7 +1679,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_namespaced_virtual_machine_instance_migration(self, body, namespace, name, **kwargs):
+    def delete_namespaced_virtual_machine_instance_migration(self, name, namespace, body, **kwargs):
         """
         Delete a VirtualMachineInstanceMigration object.
         This method makes a synchronous HTTP request by default. To make an
@@ -1710,13 +1688,13 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_virtual_machine_instance_migration(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_virtual_machine_instance_migration(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1DeleteOptions body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -1726,12 +1704,12 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_namespaced_virtual_machine_instance_migration_with_http_info(body, namespace, name, **kwargs)
+            return self.delete_namespaced_virtual_machine_instance_migration_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_namespaced_virtual_machine_instance_migration_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.delete_namespaced_virtual_machine_instance_migration_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_namespaced_virtual_machine_instance_migration_with_http_info(self, body, namespace, name, **kwargs):
+    def delete_namespaced_virtual_machine_instance_migration_with_http_info(self, name, namespace, body, **kwargs):
         """
         Delete a VirtualMachineInstanceMigration object.
         This method makes a synchronous HTTP request by default. To make an
@@ -1740,13 +1718,13 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_virtual_machine_instance_migration_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_virtual_machine_instance_migration_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1DeleteOptions body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -1755,7 +1733,7 @@ class DefaultApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name', 'grace_period_seconds', 'orphan_dependents', 'propagation_policy']
+        all_params = ['name', 'namespace', 'body', 'grace_period_seconds', 'orphan_dependents', 'propagation_policy']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1770,28 +1748,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine_instance_migration`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine_instance_migration`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_virtual_machine_instance_migration`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine_instance_migration`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine_instance_migration`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `delete_namespaced_virtual_machine_instance_migration`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `delete_namespaced_virtual_machine_instance_migration`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
         if 'grace_period_seconds' in params:
@@ -1818,9 +1792,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations/{name:[a-z0-9][a-z0-9\-]*}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1835,7 +1809,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_namespaced_virtual_machine_instance_preset(self, body, namespace, name, **kwargs):
+    def delete_namespaced_virtual_machine_instance_preset(self, name, namespace, body, **kwargs):
         """
         Delete a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
@@ -1844,13 +1818,13 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_virtual_machine_instance_preset(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_virtual_machine_instance_preset(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1DeleteOptions body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -1860,12 +1834,12 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, **kwargs)
+            return self.delete_namespaced_virtual_machine_instance_preset_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.delete_namespaced_virtual_machine_instance_preset_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_namespaced_virtual_machine_instance_preset_with_http_info(self, body, namespace, name, **kwargs):
+    def delete_namespaced_virtual_machine_instance_preset_with_http_info(self, name, namespace, body, **kwargs):
         """
         Delete a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
@@ -1874,13 +1848,13 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_virtual_machine_instance_preset_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1DeleteOptions body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -1889,7 +1863,7 @@ class DefaultApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name', 'grace_period_seconds', 'orphan_dependents', 'propagation_policy']
+        all_params = ['name', 'namespace', 'body', 'grace_period_seconds', 'orphan_dependents', 'propagation_policy']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1904,28 +1878,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine_instance_preset`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine_instance_preset`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_virtual_machine_instance_preset`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine_instance_preset`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine_instance_preset`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `delete_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `delete_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
         if 'grace_period_seconds' in params:
@@ -1952,9 +1922,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets/{name:[a-z0-9][a-z0-9\-]*}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1969,7 +1939,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_namespaced_virtual_machine_instance_replica_set(self, body, namespace, name, **kwargs):
+    def delete_namespaced_virtual_machine_instance_replica_set(self, name, namespace, body, **kwargs):
         """
         Delete a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
@@ -1978,13 +1948,13 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_virtual_machine_instance_replica_set(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_virtual_machine_instance_replica_set(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1DeleteOptions body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -1994,12 +1964,12 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, **kwargs)
+            return self.delete_namespaced_virtual_machine_instance_replica_set_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.delete_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.delete_namespaced_virtual_machine_instance_replica_set_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def delete_namespaced_virtual_machine_instance_replica_set_with_http_info(self, body, namespace, name, **kwargs):
+    def delete_namespaced_virtual_machine_instance_replica_set_with_http_info(self, name, namespace, body, **kwargs):
         """
         Delete a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
@@ -2008,13 +1978,13 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.delete_namespaced_virtual_machine_instance_replica_set_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1DeleteOptions body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -2023,7 +1993,7 @@ class DefaultApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name', 'grace_period_seconds', 'orphan_dependents', 'propagation_policy']
+        all_params = ['name', 'namespace', 'body', 'grace_period_seconds', 'orphan_dependents', 'propagation_policy']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2038,28 +2008,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine_instance_replica_set`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine_instance_replica_set`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `delete_namespaced_virtual_machine_instance_replica_set`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `delete_namespaced_virtual_machine_instance_replica_set`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `delete_namespaced_virtual_machine_instance_replica_set`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `delete_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `delete_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
         if 'grace_period_seconds' in params:
@@ -2086,9 +2052,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets/{name:[a-z0-9][a-z0-9\-]*}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2182,9 +2148,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/filesystemlist', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/filesystemlist', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2276,7 +2242,7 @@ class DefaultApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
         return self.api_client.call_api('/openapi/v2', 'GET',
                                         path_params,
@@ -2368,101 +2334,9 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io', 'GET',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='V1APIGroup',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def get_api_group_0(self, **kwargs):
-        """
-        Get a KubeVirt API Group
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.get_api_group_0(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :return: V1APIGroup
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.get_api_group_0_with_http_info(**kwargs)
-        else:
-            (data) = self.get_api_group_0_with_http_info(**kwargs)
-            return data
-
-    def get_api_group_0_with_http_info(self, **kwargs):
-        """
-        Get a KubeVirt API Group
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.get_api_group_0_with_http_info(callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :return: V1APIGroup
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = []
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_api_group_0" % key
-                )
-            params[key] = val
-        del params['kwargs']
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-
-        # Authentication setting
-        auth_settings = ['BearerToken']
-
-        return self.api_client.call_api('/apis/subresources.kubevirt.io', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2552,7 +2426,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
         return self.api_client.call_api('/apis', 'GET',
                                         path_params,
@@ -2644,9 +2518,9 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2661,7 +2535,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_api_resources_0(self, **kwargs):
+    def get_api_sub_resources(self, **kwargs):
         """
         Get a KubeVirt API resources
         This method makes a synchronous HTTP request by default. To make an
@@ -2670,7 +2544,7 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_api_resources_0(callback=callback_function)
+        >>> thread = api.get_api_sub_resources(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2680,12 +2554,12 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_api_resources_0_with_http_info(**kwargs)
+            return self.get_api_sub_resources_with_http_info(**kwargs)
         else:
-            (data) = self.get_api_resources_0_with_http_info(**kwargs)
+            (data) = self.get_api_sub_resources_with_http_info(**kwargs)
             return data
 
-    def get_api_resources_0_with_http_info(self, **kwargs):
+    def get_api_sub_resources_with_http_info(self, **kwargs):
         """
         Get a KubeVirt API resources
         This method makes a synchronous HTTP request by default. To make an
@@ -2694,7 +2568,7 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_api_resources_0_with_http_info(callback=callback_function)
+        >>> thread = api.get_api_sub_resources_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -2714,7 +2588,7 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_api_resources_0" % key
+                    " to method get_api_sub_resources" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -2736,9 +2610,9 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2753,7 +2627,191 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def guestosinfo(self, namespace, name, **kwargs):
+    def get_root_paths(self, **kwargs):
+        """
+        Get KubeVirt API root paths
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_root_paths(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: V1RootPaths
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_root_paths_with_http_info(**kwargs)
+        else:
+            (data) = self.get_root_paths_with_http_info(**kwargs)
+            return data
+
+    def get_root_paths_with_http_info(self, **kwargs):
+        """
+        Get KubeVirt API root paths
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_root_paths_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: V1RootPaths
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_root_paths" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='V1RootPaths',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_sub_api_group(self, **kwargs):
+        """
+        Get a KubeVirt API Group
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_sub_api_group(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: V1APIGroup
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_sub_api_group_with_http_info(**kwargs)
+        else:
+            (data) = self.get_sub_api_group_with_http_info(**kwargs)
+            return data
+
+    def get_sub_api_group_with_http_info(self, **kwargs):
+        """
+        Get a KubeVirt API Group
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_sub_api_group_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: V1APIGroup
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_sub_api_group" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/subresources.kubevirt.io', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='V1APIGroup',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def guestosinfo(self, name, namespace, **kwargs):
         """
         Get guest agent os information
         This method makes a synchronous HTTP request by default. To make an
@@ -2762,24 +2820,24 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.guestosinfo(namespace, name, callback=callback_function)
+        >>> thread = api.guestosinfo(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :return: V1VirtualMachineInstanceGuestAgentInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.guestosinfo_with_http_info(namespace, name, **kwargs)
+            return self.guestosinfo_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.guestosinfo_with_http_info(namespace, name, **kwargs)
+            (data) = self.guestosinfo_with_http_info(name, namespace, **kwargs)
             return data
 
-    def guestosinfo_with_http_info(self, namespace, name, **kwargs):
+    def guestosinfo_with_http_info(self, name, namespace, **kwargs):
         """
         Get guest agent os information
         This method makes a synchronous HTTP request by default. To make an
@@ -2788,18 +2846,18 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.guestosinfo_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.guestosinfo_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :return: V1VirtualMachineInstanceGuestAgentInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['namespace', 'name']
+        all_params = ['name', 'namespace']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2814,25 +2872,21 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `guestosinfo`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `guestosinfo`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `guestosinfo`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `guestosinfo`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `guestosinfo`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -2851,9 +2905,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/guestosinfo', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/guestosinfo', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -2947,8 +3001,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_virtual_machine`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -2985,9 +3037,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3081,8 +3133,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_virtual_machine_instance`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -3119,9 +3169,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3215,8 +3265,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_virtual_machine_instance_migration`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_virtual_machine_instance_migration`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -3253,9 +3301,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3349,8 +3397,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_virtual_machine_instance_preset`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -3387,9 +3433,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3483,8 +3529,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `list_namespaced_virtual_machine_instance_replica_set`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `list_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -3521,9 +3565,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3646,7 +3690,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/virtualmachines', 'GET',
                                         path_params,
@@ -3771,7 +3815,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/virtualmachineinstances', 'GET',
                                         path_params,
@@ -3896,7 +3940,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/virtualmachineinstancemigrations', 'GET',
                                         path_params,
@@ -4021,7 +4065,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/virtualmachineinstancepresets', 'GET',
                                         path_params,
@@ -4146,7 +4190,7 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/virtualmachineinstancereplicasets', 'GET',
                                         path_params,
@@ -4163,7 +4207,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def migrate(self, namespace, name, **kwargs):
+    def migrate(self, name, namespace, **kwargs):
         """
         Migrate a running VirtualMachine to another node.
         This method makes a synchronous HTTP request by default. To make an
@@ -4172,24 +4216,24 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.migrate(namespace, name, callback=callback_function)
+        >>> thread = api.migrate(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.migrate_with_http_info(namespace, name, **kwargs)
+            return self.migrate_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.migrate_with_http_info(namespace, name, **kwargs)
+            (data) = self.migrate_with_http_info(name, namespace, **kwargs)
             return data
 
-    def migrate_with_http_info(self, namespace, name, **kwargs):
+    def migrate_with_http_info(self, name, namespace, **kwargs):
         """
         Migrate a running VirtualMachine to another node.
         This method makes a synchronous HTTP request by default. To make an
@@ -4198,18 +4242,18 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.migrate_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.migrate_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['namespace', 'name']
+        all_params = ['name', 'namespace']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4224,25 +4268,21 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `migrate`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `migrate`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `migrate`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `migrate`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `migrate`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -4253,16 +4293,16 @@ class DefaultApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}/migrate', 'PUT',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/migrate', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='str',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4270,7 +4310,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_namespaced_virtual_machine(self, body, namespace, name, **kwargs):
+    def patch_namespaced_virtual_machine(self, name, namespace, body, **kwargs):
         """
         Patch a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -4279,25 +4319,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1Patch body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1Patch body: (required)
         :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_virtual_machine_with_http_info(body, namespace, name, **kwargs)
+            return self.patch_namespaced_virtual_machine_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_namespaced_virtual_machine_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.patch_namespaced_virtual_machine_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_namespaced_virtual_machine_with_http_info(self, body, namespace, name, **kwargs):
+    def patch_namespaced_virtual_machine_with_http_info(self, name, namespace, body, **kwargs):
         """
         Patch a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -4306,19 +4346,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1Patch body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1Patch body: (required)
         :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4333,28 +4373,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_virtual_machine`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_virtual_machine`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_virtual_machine`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `patch_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `patch_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -4375,9 +4411,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json-patch+json', 'application/merge-patch+json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4392,7 +4428,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_namespaced_virtual_machine_instance(self, body, namespace, name, **kwargs):
+    def patch_namespaced_virtual_machine_instance(self, name, namespace, body, **kwargs):
         """
         Patch a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -4401,25 +4437,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_instance(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1Patch body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1Patch body: (required)
         :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, **kwargs)
+            return self.patch_namespaced_virtual_machine_instance_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.patch_namespaced_virtual_machine_instance_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_namespaced_virtual_machine_instance_with_http_info(self, body, namespace, name, **kwargs):
+    def patch_namespaced_virtual_machine_instance_with_http_info(self, name, namespace, body, **kwargs):
         """
         Patch a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -4428,19 +4464,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1Patch body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1Patch body: (required)
         :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4455,28 +4491,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_instance`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_virtual_machine_instance`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_virtual_machine_instance`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_virtual_machine_instance`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_instance`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `patch_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `patch_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -4497,9 +4529,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json-patch+json', 'application/merge-patch+json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4514,7 +4546,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_namespaced_virtual_machine_instance_migration(self, body, namespace, name, **kwargs):
+    def patch_namespaced_virtual_machine_instance_migration(self, name, namespace, body, **kwargs):
         """
         Patch a VirtualMachineInstanceMigration object.
         This method makes a synchronous HTTP request by default. To make an
@@ -4523,25 +4555,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_instance_migration(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_migration(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1Patch body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1Patch body: (required)
         :return: V1VirtualMachineInstanceMigration
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_virtual_machine_instance_migration_with_http_info(body, namespace, name, **kwargs)
+            return self.patch_namespaced_virtual_machine_instance_migration_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_namespaced_virtual_machine_instance_migration_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.patch_namespaced_virtual_machine_instance_migration_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_namespaced_virtual_machine_instance_migration_with_http_info(self, body, namespace, name, **kwargs):
+    def patch_namespaced_virtual_machine_instance_migration_with_http_info(self, name, namespace, body, **kwargs):
         """
         Patch a VirtualMachineInstanceMigration object.
         This method makes a synchronous HTTP request by default. To make an
@@ -4550,19 +4582,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_instance_migration_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_migration_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1Patch body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1Patch body: (required)
         :return: V1VirtualMachineInstanceMigration
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4577,28 +4609,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_instance_migration`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_virtual_machine_instance_migration`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_virtual_machine_instance_migration`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_virtual_machine_instance_migration`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_instance_migration`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `patch_namespaced_virtual_machine_instance_migration`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `patch_namespaced_virtual_machine_instance_migration`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -4619,9 +4647,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json-patch+json', 'application/merge-patch+json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations/{name:[a-z0-9][a-z0-9\-]*}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4636,7 +4664,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_namespaced_virtual_machine_instance_preset(self, body, namespace, name, **kwargs):
+    def patch_namespaced_virtual_machine_instance_preset(self, name, namespace, body, **kwargs):
         """
         Patch a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
@@ -4645,25 +4673,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_instance_preset(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_preset(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1Patch body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1Patch body: (required)
         :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, **kwargs)
+            return self.patch_namespaced_virtual_machine_instance_preset_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.patch_namespaced_virtual_machine_instance_preset_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_namespaced_virtual_machine_instance_preset_with_http_info(self, body, namespace, name, **kwargs):
+    def patch_namespaced_virtual_machine_instance_preset_with_http_info(self, name, namespace, body, **kwargs):
         """
         Patch a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
@@ -4672,19 +4700,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_preset_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1Patch body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1Patch body: (required)
         :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4699,28 +4727,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_instance_preset`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_virtual_machine_instance_preset`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_virtual_machine_instance_preset`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_virtual_machine_instance_preset`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_instance_preset`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `patch_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `patch_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -4741,9 +4765,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json-patch+json', 'application/merge-patch+json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets/{name:[a-z0-9][a-z0-9\-]*}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4758,7 +4782,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_namespaced_virtual_machine_instance_replica_set(self, body, namespace, name, **kwargs):
+    def patch_namespaced_virtual_machine_instance_replica_set(self, name, namespace, body, **kwargs):
         """
         Patch a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
@@ -4767,25 +4791,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_instance_replica_set(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_replica_set(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1Patch body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1Patch body: (required)
         :return: V1VirtualMachineInstanceReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, **kwargs)
+            return self.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def patch_namespaced_virtual_machine_instance_replica_set_with_http_info(self, body, namespace, name, **kwargs):
+    def patch_namespaced_virtual_machine_instance_replica_set_with_http_info(self, name, namespace, body, **kwargs):
         """
         Patch a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
@@ -4794,19 +4818,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.patch_namespaced_virtual_machine_instance_replica_set_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1Patch body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1Patch body: (required)
         :return: V1VirtualMachineInstanceReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4821,28 +4845,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_instance_replica_set`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_virtual_machine_instance_replica_set`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `patch_namespaced_virtual_machine_instance_replica_set`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `patch_namespaced_virtual_machine_instance_replica_set`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `patch_namespaced_virtual_machine_instance_replica_set`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `patch_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `patch_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -4863,9 +4883,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json-patch+json', 'application/merge-patch+json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets/{name:[a-z0-9][a-z0-9\-]*}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4880,7 +4900,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def pause(self, namespace, name, **kwargs):
+    def pause(self, name, namespace, **kwargs):
         """
         Pause a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -4889,24 +4909,24 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.pause(namespace, name, callback=callback_function)
+        >>> thread = api.pause(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.pause_with_http_info(namespace, name, **kwargs)
+            return self.pause_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.pause_with_http_info(namespace, name, **kwargs)
+            (data) = self.pause_with_http_info(name, namespace, **kwargs)
             return data
 
-    def pause_with_http_info(self, namespace, name, **kwargs):
+    def pause_with_http_info(self, name, namespace, **kwargs):
         """
         Pause a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -4915,18 +4935,18 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.pause_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.pause_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['namespace', 'name']
+        all_params = ['name', 'namespace']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4941,25 +4961,21 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `pause`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `pause`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `pause`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `pause`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `pause`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -4970,16 +4986,16 @@ class DefaultApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/pause', 'PUT',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/pause', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='str',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -5059,10 +5075,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_virtual_machine`")
 
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `read_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `read_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -5089,9 +5101,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5178,10 +5190,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_virtual_machine_instance`")
 
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `read_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `read_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -5208,9 +5216,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5297,10 +5305,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_virtual_machine_instance_migration`")
 
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `read_namespaced_virtual_machine_instance_migration`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `read_namespaced_virtual_machine_instance_migration`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -5327,9 +5331,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations/{name}', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations/{name:[a-z0-9][a-z0-9\-]*}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5416,10 +5420,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_virtual_machine_instance_preset`")
 
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `read_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `read_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -5446,9 +5446,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets/{name:[a-z0-9][a-z0-9\-]*}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5535,10 +5535,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `read_namespaced_virtual_machine_instance_replica_set`")
 
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `read_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `read_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -5565,9 +5561,9 @@ class DefaultApi(object):
             select_header_accept(['application/json', 'application/yaml', 'application/json;stream=watch'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets/{name:[a-z0-9][a-z0-9\-]*}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5582,7 +5578,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def rename(self, namespace, name, **kwargs):
+    def rename(self, name, namespace, **kwargs):
         """
         Rename a stopped VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -5591,24 +5587,24 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.rename(namespace, name, callback=callback_function)
+        >>> thread = api.rename(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.rename_with_http_info(namespace, name, **kwargs)
+            return self.rename_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.rename_with_http_info(namespace, name, **kwargs)
+            (data) = self.rename_with_http_info(name, namespace, **kwargs)
             return data
 
-    def rename_with_http_info(self, namespace, name, **kwargs):
+    def rename_with_http_info(self, name, namespace, **kwargs):
         """
         Rename a stopped VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -5617,18 +5613,18 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.rename_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.rename_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['namespace', 'name']
+        all_params = ['name', 'namespace']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5643,25 +5639,21 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `rename`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `rename`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `rename`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `rename`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `rename`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -5672,16 +5664,16 @@ class DefaultApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}/rename', 'PUT',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/rename', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='str',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -5689,7 +5681,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def replace_namespaced_virtual_machine(self, body, namespace, name, **kwargs):
+    def replace_namespaced_virtual_machine(self, name, namespace, body, **kwargs):
         """
         Update a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -5698,25 +5690,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_virtual_machine(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_virtual_machine(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachine body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1VirtualMachine body: (required)
         :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_virtual_machine_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_virtual_machine_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_namespaced_virtual_machine_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_virtual_machine_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_namespaced_virtual_machine_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_virtual_machine_with_http_info(self, name, namespace, body, **kwargs):
         """
         Update a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -5725,19 +5717,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_virtual_machine_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_virtual_machine_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachine body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1VirtualMachine body: (required)
         :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5752,28 +5744,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_virtual_machine`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `replace_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `replace_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -5794,9 +5782,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}', 'PUT',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5811,7 +5799,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def replace_namespaced_virtual_machine_instance(self, body, namespace, name, **kwargs):
+    def replace_namespaced_virtual_machine_instance(self, name, namespace, body, **kwargs):
         """
         Update a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -5820,25 +5808,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_virtual_machine_instance(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_virtual_machine_instance(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachineInstance body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1VirtualMachineInstance body: (required)
         :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_virtual_machine_instance_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_virtual_machine_instance_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_namespaced_virtual_machine_instance_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_virtual_machine_instance_with_http_info(self, name, namespace, body, **kwargs):
         """
         Update a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -5847,19 +5835,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_virtual_machine_instance_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_virtual_machine_instance_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachineInstance body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1VirtualMachineInstance body: (required)
         :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5874,28 +5862,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine_instance`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine_instance`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_virtual_machine_instance`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine_instance`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine_instance`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `replace_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `replace_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -5916,9 +5900,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}', 'PUT',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5933,7 +5917,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def replace_namespaced_virtual_machine_instance_migration(self, body, namespace, name, **kwargs):
+    def replace_namespaced_virtual_machine_instance_migration(self, name, namespace, body, **kwargs):
         """
         Update a VirtualMachineInstanceMigration object.
         This method makes a synchronous HTTP request by default. To make an
@@ -5942,25 +5926,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_virtual_machine_instance_migration(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_virtual_machine_instance_migration(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachineInstanceMigration body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1VirtualMachineInstanceMigration body: (required)
         :return: V1VirtualMachineInstanceMigration
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_virtual_machine_instance_migration_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_virtual_machine_instance_migration_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_namespaced_virtual_machine_instance_migration_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_virtual_machine_instance_migration_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_namespaced_virtual_machine_instance_migration_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_virtual_machine_instance_migration_with_http_info(self, name, namespace, body, **kwargs):
         """
         Update a VirtualMachineInstanceMigration object.
         This method makes a synchronous HTTP request by default. To make an
@@ -5969,19 +5953,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_virtual_machine_instance_migration_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_virtual_machine_instance_migration_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachineInstanceMigration body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1VirtualMachineInstanceMigration body: (required)
         :return: V1VirtualMachineInstanceMigration
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5996,28 +5980,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine_instance_migration`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine_instance_migration`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_virtual_machine_instance_migration`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine_instance_migration`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine_instance_migration`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `replace_namespaced_virtual_machine_instance_migration`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `replace_namespaced_virtual_machine_instance_migration`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -6038,9 +6018,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancemigrations/{name}', 'PUT',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations/{name:[a-z0-9][a-z0-9\-]*}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -6055,7 +6035,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def replace_namespaced_virtual_machine_instance_preset(self, body, namespace, name, **kwargs):
+    def replace_namespaced_virtual_machine_instance_preset(self, name, namespace, body, **kwargs):
         """
         Update a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
@@ -6064,25 +6044,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_virtual_machine_instance_preset(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_virtual_machine_instance_preset(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachineInstancePreset body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1VirtualMachineInstancePreset body: (required)
         :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_virtual_machine_instance_preset_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_virtual_machine_instance_preset_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_namespaced_virtual_machine_instance_preset_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_virtual_machine_instance_preset_with_http_info(self, name, namespace, body, **kwargs):
         """
         Update a VirtualMachineInstancePreset object.
         This method makes a synchronous HTTP request by default. To make an
@@ -6091,19 +6071,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_virtual_machine_instance_preset_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_virtual_machine_instance_preset_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachineInstancePreset body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1VirtualMachineInstancePreset body: (required)
         :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6118,28 +6098,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine_instance_preset`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine_instance_preset`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_virtual_machine_instance_preset`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine_instance_preset`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine_instance_preset`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `replace_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `replace_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -6160,9 +6136,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancepresets/{name}', 'PUT',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets/{name:[a-z0-9][a-z0-9\-]*}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -6177,7 +6153,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def replace_namespaced_virtual_machine_instance_replica_set(self, body, namespace, name, **kwargs):
+    def replace_namespaced_virtual_machine_instance_replica_set(self, name, namespace, body, **kwargs):
         """
         Update a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
@@ -6186,25 +6162,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_virtual_machine_instance_replica_set(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_virtual_machine_instance_replica_set(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachineInstanceReplicaSet body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1VirtualMachineInstanceReplicaSet body: (required)
         :return: V1VirtualMachineInstanceReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.replace_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, **kwargs)
+            return self.replace_namespaced_virtual_machine_instance_replica_set_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.replace_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, **kwargs)
+            (data) = self.replace_namespaced_virtual_machine_instance_replica_set_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def replace_namespaced_virtual_machine_instance_replica_set_with_http_info(self, body, namespace, name, **kwargs):
+    def replace_namespaced_virtual_machine_instance_replica_set_with_http_info(self, name, namespace, body, **kwargs):
         """
         Update a VirtualMachineInstanceReplicaSet object.
         This method makes a synchronous HTTP request by default. To make an
@@ -6213,19 +6189,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.replace_namespaced_virtual_machine_instance_replica_set_with_http_info(body, namespace, name, callback=callback_function)
+        >>> thread = api.replace_namespaced_virtual_machine_instance_replica_set_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1VirtualMachineInstanceReplicaSet body: (required)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1VirtualMachineInstanceReplicaSet body: (required)
         :return: V1VirtualMachineInstanceReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'namespace', 'name']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6240,28 +6216,24 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params) or (params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine_instance_replica_set`")
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine_instance_replica_set`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `replace_namespaced_virtual_machine_instance_replica_set`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `replace_namespaced_virtual_machine_instance_replica_set`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `replace_namespaced_virtual_machine_instance_replica_set`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `replace_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `replace_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -6282,9 +6254,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json', 'application/yaml'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstancereplicasets/{name}', 'PUT',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets/{name:[a-z0-9][a-z0-9\-]*}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -6299,7 +6271,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def restart(self, namespace, name, **kwargs):
+    def restart(self, name, namespace, **kwargs):
         """
         Restart a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -6308,25 +6280,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.restart(namespace, name, callback=callback_function)
+        >>> thread = api.restart(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param V1RestartOptions body:
-        :return: None
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.restart_with_http_info(namespace, name, **kwargs)
+            return self.restart_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.restart_with_http_info(namespace, name, **kwargs)
+            (data) = self.restart_with_http_info(name, namespace, **kwargs)
             return data
 
-    def restart_with_http_info(self, namespace, name, **kwargs):
+    def restart_with_http_info(self, name, namespace, **kwargs):
         """
         Restart a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -6335,19 +6307,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.restart_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.restart_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param V1RestartOptions body:
-        :return: None
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['namespace', 'name', 'body']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6362,25 +6334,21 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `restart`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `restart`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `restart`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `restart`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `restart`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -6393,16 +6361,16 @@ class DefaultApi(object):
         if 'body' in params:
             body_params = params['body']
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}/restart', 'PUT',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/restart', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='str',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -6410,7 +6378,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def start(self, namespace, name, **kwargs):
+    def start(self, name, namespace, **kwargs):
         """
         Start a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -6419,24 +6387,24 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.start(namespace, name, callback=callback_function)
+        >>> thread = api.start(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.start_with_http_info(namespace, name, **kwargs)
+            return self.start_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.start_with_http_info(namespace, name, **kwargs)
+            (data) = self.start_with_http_info(name, namespace, **kwargs)
             return data
 
-    def start_with_http_info(self, namespace, name, **kwargs):
+    def start_with_http_info(self, name, namespace, **kwargs):
         """
         Start a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -6445,18 +6413,18 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.start_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.start_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['namespace', 'name']
+        all_params = ['name', 'namespace']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6471,25 +6439,21 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `start`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `start`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `start`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `start`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `start`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -6500,16 +6464,16 @@ class DefaultApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}/start', 'PUT',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/start', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='str',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -6517,7 +6481,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def stop(self, namespace, name, **kwargs):
+    def stop(self, name, namespace, **kwargs):
         """
         Stop a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -6526,24 +6490,24 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.stop(namespace, name, callback=callback_function)
+        >>> thread = api.stop(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.stop_with_http_info(namespace, name, **kwargs)
+            return self.stop_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.stop_with_http_info(namespace, name, **kwargs)
+            (data) = self.stop_with_http_info(name, namespace, **kwargs)
             return data
 
-    def stop_with_http_info(self, namespace, name, **kwargs):
+    def stop_with_http_info(self, name, namespace, **kwargs):
         """
         Stop a VirtualMachine object.
         This method makes a synchronous HTTP request by default. To make an
@@ -6552,18 +6516,18 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.stop_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.stop_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['namespace', 'name']
+        all_params = ['name', 'namespace']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6578,25 +6542,21 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `stop`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `stop`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `stop`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `stop`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `stop`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -6607,16 +6567,16 @@ class DefaultApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}/stop', 'PUT',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/stop', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='str',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -6624,7 +6584,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def test(self, namespace, name, **kwargs):
+    def test(self, name, namespace, **kwargs):
         """
         Test endpoint verifying apiserver connectivity.
         This method makes a synchronous HTTP request by default. To make an
@@ -6633,24 +6593,24 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.test(namespace, name, callback=callback_function)
+        >>> thread = api.test(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.test_with_http_info(namespace, name, **kwargs)
+            return self.test_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.test_with_http_info(namespace, name, **kwargs)
+            (data) = self.test_with_http_info(name, namespace, **kwargs)
             return data
 
-    def test_with_http_info(self, namespace, name, **kwargs):
+    def test_with_http_info(self, name, namespace, **kwargs):
         """
         Test endpoint verifying apiserver connectivity.
         This method makes a synchronous HTTP request by default. To make an
@@ -6659,18 +6619,18 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.test_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.test_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['namespace', 'name']
+        all_params = ['name', 'namespace']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6685,25 +6645,21 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `test`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `test`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `test`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `test`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `test`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -6714,9 +6670,9 @@ class DefaultApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/test', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/test', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -6731,7 +6687,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def unpause(self, namespace, name, **kwargs):
+    def unpause(self, name, namespace, **kwargs):
         """
         Unpause a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -6740,24 +6696,24 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.unpause(namespace, name, callback=callback_function)
+        >>> thread = api.unpause(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.unpause_with_http_info(namespace, name, **kwargs)
+            return self.unpause_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.unpause_with_http_info(namespace, name, **kwargs)
+            (data) = self.unpause_with_http_info(name, namespace, **kwargs)
             return data
 
-    def unpause_with_http_info(self, namespace, name, **kwargs):
+    def unpause_with_http_info(self, name, namespace, **kwargs):
         """
         Unpause a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -6766,18 +6722,18 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.unpause_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.unpause_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
-        :return: None
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['namespace', 'name']
+        all_params = ['name', 'namespace']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6792,25 +6748,21 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `unpause`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `unpause`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `unpause`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `unpause`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `unpause`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -6821,16 +6773,16 @@ class DefaultApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/unpause', 'PUT',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/unpause', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='str',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -6917,9 +6869,9 @@ class DefaultApi(object):
             select_header_content_type(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/userlist', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/userlist', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -7007,7 +6959,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
         return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/version', 'GET',
                                         path_params,
@@ -7024,7 +6976,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def vnc(self, namespace, name, **kwargs):
+    def vnc(self, name, namespace, **kwargs):
         """
         Open a websocket connection to connect to VNC on the specified VirtualMachineInstance.
         This method makes a synchronous HTTP request by default. To make an
@@ -7033,24 +6985,24 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.vnc(namespace, name, callback=callback_function)
+        >>> thread = api.vnc(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.vnc_with_http_info(namespace, name, **kwargs)
+            return self.vnc_with_http_info(name, namespace, **kwargs)
         else:
-            (data) = self.vnc_with_http_info(namespace, name, **kwargs)
+            (data) = self.vnc_with_http_info(name, namespace, **kwargs)
             return data
 
-    def vnc_with_http_info(self, namespace, name, **kwargs):
+    def vnc_with_http_info(self, name, namespace, **kwargs):
         """
         Open a websocket connection to connect to VNC on the specified VirtualMachineInstance.
         This method makes a synchronous HTTP request by default. To make an
@@ -7059,18 +7011,18 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.vnc_with_http_info(namespace, name, callback=callback_function)
+        >>> thread = api.vnc_with_http_info(name, namespace, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['namespace', 'name']
+        all_params = ['name', 'namespace']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7085,25 +7037,21 @@ class DefaultApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'namespace' is set
-        if ('namespace' not in params) or (params['namespace'] is None):
-            raise ValueError("Missing the required parameter `namespace` when calling `vnc`")
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `vnc`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `vnc`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `vnc`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
-        if 'name' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['name']):
-            raise ValueError("Invalid value for parameter `name` when calling `vnc`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'namespace' in params:
-            path_params['namespace'] = params['namespace']
         if 'name' in params:
             path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
 
         query_params = []
 
@@ -7114,9 +7062,9 @@ class DefaultApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/vnc', 'GET',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/vnc', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -7210,8 +7158,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_virtual_machine`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `watch_namespaced_virtual_machine`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -7248,9 +7194,9 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace}/virtualmachines', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -7344,8 +7290,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_virtual_machine_instance`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `watch_namespaced_virtual_machine_instance`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -7382,9 +7326,9 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace}/virtualmachineinstances', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -7478,8 +7422,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_virtual_machine_instance_migration`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `watch_namespaced_virtual_machine_instance_migration`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -7516,9 +7458,9 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace}/virtualmachineinstancemigrations', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -7612,8 +7554,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_virtual_machine_instance_preset`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `watch_namespaced_virtual_machine_instance_preset`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -7650,9 +7590,9 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace}/virtualmachineinstancepresets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -7746,8 +7686,6 @@ class DefaultApi(object):
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `watch_namespaced_virtual_machine_instance_replica_set`")
 
-        if 'namespace' in params and not re.search('[a-z0-9][a-z0-9\\-]*', params['namespace']):
-            raise ValueError("Invalid value for parameter `namespace` when calling `watch_namespaced_virtual_machine_instance_replica_set`, must conform to the pattern `/[a-z0-9][a-z0-9\\-]*/`")
 
         collection_formats = {}
 
@@ -7784,9 +7722,9 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
-        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace}/virtualmachineinstancereplicasets', 'GET',
+        return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -7909,7 +7847,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/virtualmachineinstances', 'GET',
                                         path_params,
@@ -8034,7 +7972,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/virtualmachineinstancemigrations', 'GET',
                                         path_params,
@@ -8159,7 +8097,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/virtualmachineinstancepresets', 'GET',
                                         path_params,
@@ -8284,7 +8222,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/virtualmachineinstancereplicasets', 'GET',
                                         path_params,
@@ -8409,7 +8347,7 @@ class DefaultApi(object):
             select_header_accept(['application/json'])
 
         # Authentication setting
-        auth_settings = ['BearerToken']
+        auth_settings = []
 
         return self.api_client.call_api('/apis/kubevirt.io/v1alpha3/watch/virtualmachines', 'GET',
                                         path_params,

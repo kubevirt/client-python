@@ -106,7 +106,7 @@ class V1Volume(object):
     def cloud_init_config_drive(self):
         """
         Gets the cloud_init_config_drive of this V1Volume.
-        CloudInitConfigDrive represents a cloud-init Config Drive user-data source. The Config Drive data will be added as a disk to the vmi. A proper cloud-init installation is required inside the guest. More info: https://cloudinit.readthedocs.io/en/latest/topics/datasources/configdrive.html +optional
+        CloudInitConfigDrive represents a cloud-init Config Drive user-data source. The Config Drive data will be added as a disk to the vmi. A proper cloud-init installation is required inside the guest. More info: https://cloudinit.readthedocs.io/en/latest/topics/datasources/configdrive.html
 
         :return: The cloud_init_config_drive of this V1Volume.
         :rtype: V1CloudInitConfigDriveSource
@@ -117,7 +117,7 @@ class V1Volume(object):
     def cloud_init_config_drive(self, cloud_init_config_drive):
         """
         Sets the cloud_init_config_drive of this V1Volume.
-        CloudInitConfigDrive represents a cloud-init Config Drive user-data source. The Config Drive data will be added as a disk to the vmi. A proper cloud-init installation is required inside the guest. More info: https://cloudinit.readthedocs.io/en/latest/topics/datasources/configdrive.html +optional
+        CloudInitConfigDrive represents a cloud-init Config Drive user-data source. The Config Drive data will be added as a disk to the vmi. A proper cloud-init installation is required inside the guest. More info: https://cloudinit.readthedocs.io/en/latest/topics/datasources/configdrive.html
 
         :param cloud_init_config_drive: The cloud_init_config_drive of this V1Volume.
         :type: V1CloudInitConfigDriveSource
@@ -129,7 +129,7 @@ class V1Volume(object):
     def cloud_init_no_cloud(self):
         """
         Gets the cloud_init_no_cloud of this V1Volume.
-        CloudInitNoCloud represents a cloud-init NoCloud user-data source. The NoCloud data will be added as a disk to the vmi. A proper cloud-init installation is required inside the guest. More info: http://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html +optional
+        CloudInitNoCloud represents a cloud-init NoCloud user-data source. The NoCloud data will be added as a disk to the vmi. A proper cloud-init installation is required inside the guest. More info: http://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html
 
         :return: The cloud_init_no_cloud of this V1Volume.
         :rtype: V1CloudInitNoCloudSource
@@ -140,7 +140,7 @@ class V1Volume(object):
     def cloud_init_no_cloud(self, cloud_init_no_cloud):
         """
         Sets the cloud_init_no_cloud of this V1Volume.
-        CloudInitNoCloud represents a cloud-init NoCloud user-data source. The NoCloud data will be added as a disk to the vmi. A proper cloud-init installation is required inside the guest. More info: http://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html +optional
+        CloudInitNoCloud represents a cloud-init NoCloud user-data source. The NoCloud data will be added as a disk to the vmi. A proper cloud-init installation is required inside the guest. More info: http://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html
 
         :param cloud_init_no_cloud: The cloud_init_no_cloud of this V1Volume.
         :type: V1CloudInitNoCloudSource
@@ -152,7 +152,7 @@ class V1Volume(object):
     def config_map(self):
         """
         Gets the config_map of this V1Volume.
-        ConfigMapSource represents a reference to a ConfigMap in the same namespace. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/ +optional
+        ConfigMapSource represents a reference to a ConfigMap in the same namespace. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/
 
         :return: The config_map of this V1Volume.
         :rtype: V1ConfigMapVolumeSource
@@ -163,7 +163,7 @@ class V1Volume(object):
     def config_map(self, config_map):
         """
         Sets the config_map of this V1Volume.
-        ConfigMapSource represents a reference to a ConfigMap in the same namespace. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/ +optional
+        ConfigMapSource represents a reference to a ConfigMap in the same namespace. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/
 
         :param config_map: The config_map of this V1Volume.
         :type: V1ConfigMapVolumeSource
@@ -175,7 +175,7 @@ class V1Volume(object):
     def container_disk(self):
         """
         Gets the container_disk of this V1Volume.
-        ContainerDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html +optional
+        ContainerDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html
 
         :return: The container_disk of this V1Volume.
         :rtype: V1ContainerDiskSource
@@ -186,7 +186,7 @@ class V1Volume(object):
     def container_disk(self, container_disk):
         """
         Sets the container_disk of this V1Volume.
-        ContainerDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html +optional
+        ContainerDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html
 
         :param container_disk: The container_disk of this V1Volume.
         :type: V1ContainerDiskSource
@@ -198,7 +198,7 @@ class V1Volume(object):
     def data_volume(self):
         """
         Gets the data_volume of this V1Volume.
-        DataVolume represents the dynamic creation a PVC for this volume as well as the process of populating that PVC with a disk image. +optional
+        DataVolume represents the dynamic creation a PVC for this volume as well as the process of populating that PVC with a disk image.
 
         :return: The data_volume of this V1Volume.
         :rtype: V1DataVolumeSource
@@ -209,7 +209,7 @@ class V1Volume(object):
     def data_volume(self, data_volume):
         """
         Sets the data_volume of this V1Volume.
-        DataVolume represents the dynamic creation a PVC for this volume as well as the process of populating that PVC with a disk image. +optional
+        DataVolume represents the dynamic creation a PVC for this volume as well as the process of populating that PVC with a disk image.
 
         :param data_volume: The data_volume of this V1Volume.
         :type: V1DataVolumeSource
@@ -221,7 +221,7 @@ class V1Volume(object):
     def empty_disk(self):
         """
         Gets the empty_disk of this V1Volume.
-        EmptyDisk represents a temporary disk which shares the vmis lifecycle. More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html +optional
+        EmptyDisk represents a temporary disk which shares the vmis lifecycle. More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html
 
         :return: The empty_disk of this V1Volume.
         :rtype: V1EmptyDiskSource
@@ -232,7 +232,7 @@ class V1Volume(object):
     def empty_disk(self, empty_disk):
         """
         Sets the empty_disk of this V1Volume.
-        EmptyDisk represents a temporary disk which shares the vmis lifecycle. More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html +optional
+        EmptyDisk represents a temporary disk which shares the vmis lifecycle. More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html
 
         :param empty_disk: The empty_disk of this V1Volume.
         :type: V1EmptyDiskSource
@@ -244,7 +244,7 @@ class V1Volume(object):
     def ephemeral(self):
         """
         Gets the ephemeral of this V1Volume.
-        Ephemeral is a special volume source that \"wraps\" specified source and provides copy-on-write image on top of it. +optional
+        Ephemeral is a special volume source that \"wraps\" specified source and provides copy-on-write image on top of it.
 
         :return: The ephemeral of this V1Volume.
         :rtype: V1EphemeralVolumeSource
@@ -255,7 +255,7 @@ class V1Volume(object):
     def ephemeral(self, ephemeral):
         """
         Sets the ephemeral of this V1Volume.
-        Ephemeral is a special volume source that \"wraps\" specified source and provides copy-on-write image on top of it. +optional
+        Ephemeral is a special volume source that \"wraps\" specified source and provides copy-on-write image on top of it.
 
         :param ephemeral: The ephemeral of this V1Volume.
         :type: V1EphemeralVolumeSource
@@ -267,7 +267,7 @@ class V1Volume(object):
     def host_disk(self):
         """
         Gets the host_disk of this V1Volume.
-        HostDisk represents a disk created on the cluster level +optional
+        HostDisk represents a disk created on the cluster level
 
         :return: The host_disk of this V1Volume.
         :rtype: V1HostDisk
@@ -278,7 +278,7 @@ class V1Volume(object):
     def host_disk(self, host_disk):
         """
         Sets the host_disk of this V1Volume.
-        HostDisk represents a disk created on the cluster level +optional
+        HostDisk represents a disk created on the cluster level
 
         :param host_disk: The host_disk of this V1Volume.
         :type: V1HostDisk
@@ -315,7 +315,7 @@ class V1Volume(object):
     def persistent_volume_claim(self):
         """
         Gets the persistent_volume_claim of this V1Volume.
-        PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims +optional
+        PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
         :return: The persistent_volume_claim of this V1Volume.
         :rtype: V1PersistentVolumeClaimVolumeSource
@@ -326,7 +326,7 @@ class V1Volume(object):
     def persistent_volume_claim(self, persistent_volume_claim):
         """
         Sets the persistent_volume_claim of this V1Volume.
-        PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims +optional
+        PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
         :param persistent_volume_claim: The persistent_volume_claim of this V1Volume.
         :type: V1PersistentVolumeClaimVolumeSource
@@ -338,7 +338,7 @@ class V1Volume(object):
     def secret(self):
         """
         Gets the secret of this V1Volume.
-        SecretVolumeSource represents a reference to a secret data in the same namespace. More info: https://kubernetes.io/docs/concepts/configuration/secret/ +optional
+        SecretVolumeSource represents a reference to a secret data in the same namespace. More info: https://kubernetes.io/docs/concepts/configuration/secret/
 
         :return: The secret of this V1Volume.
         :rtype: V1SecretVolumeSource
@@ -349,7 +349,7 @@ class V1Volume(object):
     def secret(self, secret):
         """
         Sets the secret of this V1Volume.
-        SecretVolumeSource represents a reference to a secret data in the same namespace. More info: https://kubernetes.io/docs/concepts/configuration/secret/ +optional
+        SecretVolumeSource represents a reference to a secret data in the same namespace. More info: https://kubernetes.io/docs/concepts/configuration/secret/
 
         :param secret: The secret of this V1Volume.
         :type: V1SecretVolumeSource
@@ -361,7 +361,7 @@ class V1Volume(object):
     def service_account(self):
         """
         Gets the service_account of this V1Volume.
-        ServiceAccountVolumeSource represents a reference to a service account. There can only be one volume of this type! More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/ +optional
+        ServiceAccountVolumeSource represents a reference to a service account. There can only be one volume of this type! More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
 
         :return: The service_account of this V1Volume.
         :rtype: V1ServiceAccountVolumeSource
@@ -372,7 +372,7 @@ class V1Volume(object):
     def service_account(self, service_account):
         """
         Sets the service_account of this V1Volume.
-        ServiceAccountVolumeSource represents a reference to a service account. There can only be one volume of this type! More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/ +optional
+        ServiceAccountVolumeSource represents a reference to a service account. There can only be one volume of this type! More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
 
         :param service_account: The service_account of this V1Volume.
         :type: V1ServiceAccountVolumeSource

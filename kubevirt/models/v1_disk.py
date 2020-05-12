@@ -96,7 +96,7 @@ class V1Disk(object):
     def boot_order(self):
         """
         Gets the boot_order of this V1Disk.
-        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Each disk or interface that has a boot order must have a unique value. Disks without a boot order are not tried if a disk with a boot order exists. +optional
+        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Each disk or interface that has a boot order must have a unique value. Disks without a boot order are not tried if a disk with a boot order exists.
 
         :return: The boot_order of this V1Disk.
         :rtype: int
@@ -107,7 +107,7 @@ class V1Disk(object):
     def boot_order(self, boot_order):
         """
         Sets the boot_order of this V1Disk.
-        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Each disk or interface that has a boot order must have a unique value. Disks without a boot order are not tried if a disk with a boot order exists. +optional
+        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Each disk or interface that has a boot order must have a unique value. Disks without a boot order are not tried if a disk with a boot order exists.
 
         :param boot_order: The boot_order of this V1Disk.
         :type: int
@@ -119,7 +119,7 @@ class V1Disk(object):
     def cache(self):
         """
         Gets the cache of this V1Disk.
-        Cache specifies which kvm disk cache mode should be used. +optional
+        Cache specifies which kvm disk cache mode should be used.
 
         :return: The cache of this V1Disk.
         :rtype: str
@@ -130,7 +130,7 @@ class V1Disk(object):
     def cache(self, cache):
         """
         Sets the cache of this V1Disk.
-        Cache specifies which kvm disk cache mode should be used. +optional
+        Cache specifies which kvm disk cache mode should be used.
 
         :param cache: The cache of this V1Disk.
         :type: str
@@ -165,7 +165,7 @@ class V1Disk(object):
     def dedicated_io_thread(self):
         """
         Gets the dedicated_io_thread of this V1Disk.
-        dedicatedIOThread indicates this disk should have an exclusive IO Thread. Enabling this implies useIOThreads = true. Defaults to false. +optional
+        dedicatedIOThread indicates this disk should have an exclusive IO Thread. Enabling this implies useIOThreads = true. Defaults to false.
 
         :return: The dedicated_io_thread of this V1Disk.
         :rtype: bool
@@ -176,7 +176,7 @@ class V1Disk(object):
     def dedicated_io_thread(self, dedicated_io_thread):
         """
         Sets the dedicated_io_thread of this V1Disk.
-        dedicatedIOThread indicates this disk should have an exclusive IO Thread. Enabling this implies useIOThreads = true. Defaults to false. +optional
+        dedicatedIOThread indicates this disk should have an exclusive IO Thread. Enabling this implies useIOThreads = true. Defaults to false.
 
         :param dedicated_io_thread: The dedicated_io_thread of this V1Disk.
         :type: bool
@@ -282,7 +282,7 @@ class V1Disk(object):
     def serial(self):
         """
         Gets the serial of this V1Disk.
-        Serial provides the ability to specify a serial number for the disk device. +optional
+        Serial provides the ability to specify a serial number for the disk device.
 
         :return: The serial of this V1Disk.
         :rtype: str
@@ -293,7 +293,7 @@ class V1Disk(object):
     def serial(self, serial):
         """
         Sets the serial of this V1Disk.
-        Serial provides the ability to specify a serial number for the disk device. +optional
+        Serial provides the ability to specify a serial number for the disk device.
 
         :param serial: The serial of this V1Disk.
         :type: str
@@ -305,7 +305,7 @@ class V1Disk(object):
     def tag(self):
         """
         Gets the tag of this V1Disk.
-        If specified, disk address and its tag will be provided to the guest via config drive metadata +optional
+        If specified, disk address and its tag will be provided to the guest via config drive metadata
 
         :return: The tag of this V1Disk.
         :rtype: str
@@ -316,7 +316,7 @@ class V1Disk(object):
     def tag(self, tag):
         """
         Sets the tag of this V1Disk.
-        If specified, disk address and its tag will be provided to the guest via config drive metadata +optional
+        If specified, disk address and its tag will be provided to the guest via config drive metadata
 
         :param tag: The tag of this V1Disk.
         :type: str

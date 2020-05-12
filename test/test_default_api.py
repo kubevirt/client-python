@@ -35,7 +35,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for check_health
 
-        Health endpoint
+        
         """
         pass
 
@@ -43,7 +43,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for console
 
-        Open a websocket connection to a serial console on the specified VirtualMachineInstance.
+        
         """
         pass
 
@@ -51,7 +51,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for create_namespaced_virtual_machine
 
-        Create a VirtualMachine object.
+        
         """
         pass
 
@@ -59,7 +59,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for create_namespaced_virtual_machine_instance
 
-        Create a VirtualMachineInstance object.
+        
         """
         pass
 
@@ -67,7 +67,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for create_namespaced_virtual_machine_instance_migration
 
-        Create a VirtualMachineInstanceMigration object.
+        
         """
         pass
 
@@ -75,7 +75,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for create_namespaced_virtual_machine_instance_preset
 
-        Create a VirtualMachineInstancePreset object.
+        
         """
         pass
 
@@ -83,7 +83,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for create_namespaced_virtual_machine_instance_replica_set
 
-        Create a VirtualMachineInstanceReplicaSet object.
+        
         """
         pass
 
@@ -91,7 +91,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for delete_collection_namespaced_virtual_machine
 
-        Delete a collection of VirtualMachine objects.
+        
         """
         pass
 
@@ -99,7 +99,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for delete_collection_namespaced_virtual_machine_instance
 
-        Delete a collection of VirtualMachineInstance objects.
+        
         """
         pass
 
@@ -107,7 +107,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for delete_collection_namespaced_virtual_machine_instance_migration
 
-        Delete a collection of VirtualMachineInstanceMigration objects.
+        
         """
         pass
 
@@ -115,7 +115,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for delete_collection_namespaced_virtual_machine_instance_preset
 
-        Delete a collection of VirtualMachineInstancePreset objects.
+        
         """
         pass
 
@@ -123,7 +123,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for delete_collection_namespaced_virtual_machine_instance_replica_set
 
-        Delete a collection of VirtualMachineInstanceReplicaSet objects.
+        
         """
         pass
 
@@ -131,7 +131,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for delete_namespaced_virtual_machine
 
-        Delete a VirtualMachine object.
+        
         """
         pass
 
@@ -139,7 +139,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for delete_namespaced_virtual_machine_instance
 
-        Delete a VirtualMachineInstance object.
+        
         """
         pass
 
@@ -147,7 +147,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for delete_namespaced_virtual_machine_instance_migration
 
-        Delete a VirtualMachineInstanceMigration object.
+        
         """
         pass
 
@@ -155,7 +155,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for delete_namespaced_virtual_machine_instance_preset
 
-        Delete a VirtualMachineInstancePreset object.
+        
         """
         pass
 
@@ -163,7 +163,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for delete_namespaced_virtual_machine_instance_replica_set
 
-        Delete a VirtualMachineInstanceReplicaSet object.
+        
         """
         pass
 
@@ -171,7 +171,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for filesystemlist
 
-        Get list of active filesystems on guest machine via guest agent
+        
         """
         pass
 
@@ -187,15 +187,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for get_api_group
 
-        Get a KubeVirt API group
-        """
-        pass
-
-    def test_get_api_group_0(self):
-        """
-        Test case for get_api_group_0
-
-        Get a KubeVirt API Group
+        
         """
         pass
 
@@ -203,7 +195,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for get_api_group_list
 
-        Get a KubeVirt API GroupList
+        
         """
         pass
 
@@ -211,15 +203,31 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for get_api_resources
 
-        Get KubeVirt API Resources
+        
         """
         pass
 
-    def test_get_api_resources_0(self):
+    def test_get_api_sub_resources(self):
         """
-        Test case for get_api_resources_0
+        Test case for get_api_sub_resources
 
-        Get a KubeVirt API resources
+        
+        """
+        pass
+
+    def test_get_root_paths(self):
+        """
+        Test case for get_root_paths
+
+        
+        """
+        pass
+
+    def test_get_sub_api_group(self):
+        """
+        Test case for get_sub_api_group
+
+        
         """
         pass
 
@@ -227,7 +235,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for guestosinfo
 
-        Get guest agent os information
+        
         """
         pass
 
@@ -235,7 +243,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for list_namespaced_virtual_machine
 
-        Get a list of VirtualMachine objects.
+        
         """
         pass
 
@@ -243,7 +251,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for list_namespaced_virtual_machine_instance
 
-        Get a list of VirtualMachineInstance objects.
+        
         """
         pass
 
@@ -251,7 +259,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for list_namespaced_virtual_machine_instance_migration
 
-        Get a list of VirtualMachineInstanceMigration objects.
+        
         """
         pass
 
@@ -259,7 +267,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for list_namespaced_virtual_machine_instance_preset
 
-        Get a list of VirtualMachineInstancePreset objects.
+        
         """
         pass
 
@@ -267,7 +275,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for list_namespaced_virtual_machine_instance_replica_set
 
-        Get a list of VirtualMachineInstanceReplicaSet objects.
+        
         """
         pass
 
@@ -275,7 +283,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for list_virtual_machine_for_all_namespaces
 
-        Get a list of all VirtualMachine objects.
+        
         """
         pass
 
@@ -283,7 +291,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for list_virtual_machine_instance_for_all_namespaces
 
-        Get a list of all VirtualMachineInstance objects.
+        
         """
         pass
 
@@ -291,7 +299,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for list_virtual_machine_instance_migration_for_all_namespaces
 
-        Get a list of all VirtualMachineInstanceMigration objects.
+        
         """
         pass
 
@@ -299,7 +307,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for list_virtual_machine_instance_preset_for_all_namespaces
 
-        Get a list of all VirtualMachineInstancePreset objects.
+        
         """
         pass
 
@@ -307,7 +315,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for list_virtual_machine_instance_replica_set_for_all_namespaces
 
-        Get a list of all VirtualMachineInstanceReplicaSet objects.
+        
         """
         pass
 
@@ -315,7 +323,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for migrate
 
-        Migrate a running VirtualMachine to another node.
+        
         """
         pass
 
@@ -323,7 +331,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for patch_namespaced_virtual_machine
 
-        Patch a VirtualMachine object.
+        
         """
         pass
 
@@ -331,7 +339,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for patch_namespaced_virtual_machine_instance
 
-        Patch a VirtualMachineInstance object.
+        
         """
         pass
 
@@ -339,7 +347,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for patch_namespaced_virtual_machine_instance_migration
 
-        Patch a VirtualMachineInstanceMigration object.
+        
         """
         pass
 
@@ -347,7 +355,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for patch_namespaced_virtual_machine_instance_preset
 
-        Patch a VirtualMachineInstancePreset object.
+        
         """
         pass
 
@@ -355,7 +363,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for patch_namespaced_virtual_machine_instance_replica_set
 
-        Patch a VirtualMachineInstanceReplicaSet object.
+        
         """
         pass
 
@@ -363,7 +371,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for pause
 
-        Pause a VirtualMachineInstance object.
+        
         """
         pass
 
@@ -371,7 +379,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for read_namespaced_virtual_machine
 
-        Get a VirtualMachine object.
+        
         """
         pass
 
@@ -379,7 +387,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for read_namespaced_virtual_machine_instance
 
-        Get a VirtualMachineInstance object.
+        
         """
         pass
 
@@ -387,7 +395,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for read_namespaced_virtual_machine_instance_migration
 
-        Get a VirtualMachineInstanceMigration object.
+        
         """
         pass
 
@@ -395,7 +403,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for read_namespaced_virtual_machine_instance_preset
 
-        Get a VirtualMachineInstancePreset object.
+        
         """
         pass
 
@@ -403,7 +411,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for read_namespaced_virtual_machine_instance_replica_set
 
-        Get a VirtualMachineInstanceReplicaSet object.
+        
         """
         pass
 
@@ -411,7 +419,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for rename
 
-        Rename a stopped VirtualMachine object.
+        
         """
         pass
 
@@ -419,7 +427,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for replace_namespaced_virtual_machine
 
-        Update a VirtualMachine object.
+        
         """
         pass
 
@@ -427,7 +435,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for replace_namespaced_virtual_machine_instance
 
-        Update a VirtualMachineInstance object.
+        
         """
         pass
 
@@ -435,7 +443,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for replace_namespaced_virtual_machine_instance_migration
 
-        Update a VirtualMachineInstanceMigration object.
+        
         """
         pass
 
@@ -443,7 +451,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for replace_namespaced_virtual_machine_instance_preset
 
-        Update a VirtualMachineInstancePreset object.
+        
         """
         pass
 
@@ -451,7 +459,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for replace_namespaced_virtual_machine_instance_replica_set
 
-        Update a VirtualMachineInstanceReplicaSet object.
+        
         """
         pass
 
@@ -459,7 +467,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for restart
 
-        Restart a VirtualMachine object.
+        
         """
         pass
 
@@ -467,7 +475,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for start
 
-        Start a VirtualMachine object.
+        
         """
         pass
 
@@ -475,7 +483,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for stop
 
-        Stop a VirtualMachine object.
+        
         """
         pass
 
@@ -483,7 +491,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for test
 
-        Test endpoint verifying apiserver connectivity.
+        
         """
         pass
 
@@ -491,7 +499,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for unpause
 
-        Unpause a VirtualMachineInstance object.
+        
         """
         pass
 
@@ -499,7 +507,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for userlist
 
-        Get list of active users via guest agent
+        
         """
         pass
 
@@ -515,7 +523,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for vnc
 
-        Open a websocket connection to connect to VNC on the specified VirtualMachineInstance.
+        
         """
         pass
 
@@ -523,7 +531,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for watch_namespaced_virtual_machine
 
-        Watch a VirtualMachine object.
+        
         """
         pass
 
@@ -531,7 +539,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for watch_namespaced_virtual_machine_instance
 
-        Watch a VirtualMachineInstance object.
+        
         """
         pass
 
@@ -539,7 +547,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for watch_namespaced_virtual_machine_instance_migration
 
-        Watch a VirtualMachineInstanceMigration object.
+        
         """
         pass
 
@@ -547,7 +555,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for watch_namespaced_virtual_machine_instance_preset
 
-        Watch a VirtualMachineInstancePreset object.
+        
         """
         pass
 
@@ -555,7 +563,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for watch_namespaced_virtual_machine_instance_replica_set
 
-        Watch a VirtualMachineInstanceReplicaSet object.
+        
         """
         pass
 
@@ -563,7 +571,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for watch_virtual_machine_instance_list_for_all_namespaces
 
-        Watch a VirtualMachineInstanceList object.
+        
         """
         pass
 
@@ -571,7 +579,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for watch_virtual_machine_instance_migration_list_for_all_namespaces
 
-        Watch a VirtualMachineInstanceMigrationList object.
+        
         """
         pass
 
@@ -579,7 +587,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for watch_virtual_machine_instance_preset_list_for_all_namespaces
 
-        Watch a VirtualMachineInstancePresetList object.
+        
         """
         pass
 
@@ -587,7 +595,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for watch_virtual_machine_instance_replica_set_list_for_all_namespaces
 
-        Watch a VirtualMachineInstanceReplicaSetList object.
+        
         """
         pass
 
@@ -595,7 +603,7 @@ class TestDefaultApi(unittest.TestCase):
         """
         Test case for watch_virtual_machine_list_for_all_namespaces
 
-        Watch a VirtualMachineList object.
+        
         """
         pass
 

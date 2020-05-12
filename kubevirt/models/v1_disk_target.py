@@ -85,7 +85,7 @@ class V1DiskTarget(object):
     def pci_address(self):
         """
         Gets the pci_address of this V1DiskTarget.
-        If specified, the virtual disk will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10 +optional
+        If specified, the virtual disk will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10
 
         :return: The pci_address of this V1DiskTarget.
         :rtype: str
@@ -96,7 +96,7 @@ class V1DiskTarget(object):
     def pci_address(self, pci_address):
         """
         Sets the pci_address of this V1DiskTarget.
-        If specified, the virtual disk will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10 +optional
+        If specified, the virtual disk will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10
 
         :param pci_address: The pci_address of this V1DiskTarget.
         :type: str

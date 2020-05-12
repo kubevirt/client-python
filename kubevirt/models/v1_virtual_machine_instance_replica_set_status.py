@@ -111,7 +111,7 @@ class V1VirtualMachineInstanceReplicaSetStatus(object):
     def ready_replicas(self):
         """
         Gets the ready_replicas of this V1VirtualMachineInstanceReplicaSetStatus.
-        The number of ready replicas for this replica set. +optional
+        The number of ready replicas for this replica set.
 
         :return: The ready_replicas of this V1VirtualMachineInstanceReplicaSetStatus.
         :rtype: int
@@ -122,7 +122,7 @@ class V1VirtualMachineInstanceReplicaSetStatus(object):
     def ready_replicas(self, ready_replicas):
         """
         Sets the ready_replicas of this V1VirtualMachineInstanceReplicaSetStatus.
-        The number of ready replicas for this replica set. +optional
+        The number of ready replicas for this replica set.
 
         :param ready_replicas: The ready_replicas of this V1VirtualMachineInstanceReplicaSetStatus.
         :type: int
@@ -134,7 +134,7 @@ class V1VirtualMachineInstanceReplicaSetStatus(object):
     def replicas(self):
         """
         Gets the replicas of this V1VirtualMachineInstanceReplicaSetStatus.
-        Total number of non-terminated pods targeted by this deployment (their labels match the selector). +optional
+        Total number of non-terminated pods targeted by this deployment (their labels match the selector).
 
         :return: The replicas of this V1VirtualMachineInstanceReplicaSetStatus.
         :rtype: int
@@ -145,7 +145,7 @@ class V1VirtualMachineInstanceReplicaSetStatus(object):
     def replicas(self, replicas):
         """
         Sets the replicas of this V1VirtualMachineInstanceReplicaSetStatus.
-        Total number of non-terminated pods targeted by this deployment (their labels match the selector). +optional
+        Total number of non-terminated pods targeted by this deployment (their labels match the selector).
 
         :param replicas: The replicas of this V1VirtualMachineInstanceReplicaSetStatus.
         :type: int

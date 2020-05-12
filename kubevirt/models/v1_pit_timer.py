@@ -57,7 +57,7 @@ class V1PITTimer(object):
     def present(self):
         """
         Gets the present of this V1PITTimer.
-        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true. +optional
+        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true.
 
         :return: The present of this V1PITTimer.
         :rtype: bool
@@ -68,7 +68,7 @@ class V1PITTimer(object):
     def present(self, present):
         """
         Sets the present of this V1PITTimer.
-        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true. +optional
+        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true.
 
         :param present: The present of this V1PITTimer.
         :type: bool

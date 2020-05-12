@@ -85,7 +85,7 @@ class V1RestartOptions(object):
     def grace_period_seconds(self):
         """
         Gets the grace_period_seconds of this V1RestartOptions.
-        The duration in seconds before the object should be force-restared. Value must be non-negative integer. The value zero indicates, restart immediately. If this value is nil, the default grace period for deletion of the corresponding VMI for the specified type will be used to determine on how much time to give the VMI to restart. Defaults to a per object value if not specified. zero means restart immediately. Allowed Values: nil and 0 +optional
+        The duration in seconds before the object should be force-restared. Value must be non-negative integer. The value zero indicates, restart immediately. If this value is nil, the default grace period for deletion of the corresponding VMI for the specified type will be used to determine on how much time to give the VMI to restart. Defaults to a per object value if not specified. zero means restart immediately. Allowed Values: nil and 0
 
         :return: The grace_period_seconds of this V1RestartOptions.
         :rtype: int
@@ -96,7 +96,7 @@ class V1RestartOptions(object):
     def grace_period_seconds(self, grace_period_seconds):
         """
         Sets the grace_period_seconds of this V1RestartOptions.
-        The duration in seconds before the object should be force-restared. Value must be non-negative integer. The value zero indicates, restart immediately. If this value is nil, the default grace period for deletion of the corresponding VMI for the specified type will be used to determine on how much time to give the VMI to restart. Defaults to a per object value if not specified. zero means restart immediately. Allowed Values: nil and 0 +optional
+        The duration in seconds before the object should be force-restared. Value must be non-negative integer. The value zero indicates, restart immediately. If this value is nil, the default grace period for deletion of the corresponding VMI for the specified type will be used to determine on how much time to give the VMI to restart. Defaults to a per object value if not specified. zero means restart immediately. Allowed Values: nil and 0
 
         :param grace_period_seconds: The grace_period_seconds of this V1RestartOptions.
         :type: int

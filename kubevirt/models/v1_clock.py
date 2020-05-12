@@ -32,7 +32,7 @@ class V1Clock(object):
     """
     swagger_types = {
         'timer': 'V1Timer',
-        'timezone': 'V1ClockOffsetTimezone',
+        'timezone': 'str',
         'utc': 'V1ClockOffsetUTC'
     }
 
@@ -51,7 +51,8 @@ class V1Clock(object):
         self._timezone = None
         self._utc = None
 
-        self.timer = timer
+        if timer is not None:
+          self.timer = timer
         if timezone is not None:
           self.timezone = timezone
         if utc is not None:
@@ -77,8 +78,6 @@ class V1Clock(object):
         :param timer: The timer of this V1Clock.
         :type: V1Timer
         """
-        if timer is None:
-            raise ValueError("Invalid value for `timer`, must not be `None`")
 
         self._timer = timer
 
@@ -89,7 +88,7 @@ class V1Clock(object):
         Timezone sets the guest clock to the specified timezone. Zone name follows the TZ environment variable format (e.g. 'America/New_York').
 
         :return: The timezone of this V1Clock.
-        :rtype: V1ClockOffsetTimezone
+        :rtype: str
         """
         return self._timezone
 
@@ -100,7 +99,7 @@ class V1Clock(object):
         Timezone sets the guest clock to the specified timezone. Zone name follows the TZ environment variable format (e.g. 'America/New_York').
 
         :param timezone: The timezone of this V1Clock.
-        :type: V1ClockOffsetTimezone
+        :type: str
         """
 
         self._timezone = timezone

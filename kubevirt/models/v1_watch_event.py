@@ -31,7 +31,7 @@ class V1WatchEvent(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'object': 'str',
+        'object': 'RuntimeRawExtension',
         'type': 'str'
     }
 
@@ -55,9 +55,10 @@ class V1WatchEvent(object):
     def object(self):
         """
         Gets the object of this V1WatchEvent.
+        Object is:  * If Type is Added or Modified: the new state of the object.  * If Type is Deleted: the state of the object immediately before deletion.  * If Type is Error: *Status is recommended; other types may make sense    depending on context.
 
         :return: The object of this V1WatchEvent.
-        :rtype: str
+        :rtype: RuntimeRawExtension
         """
         return self._object
 
@@ -65,9 +66,10 @@ class V1WatchEvent(object):
     def object(self, object):
         """
         Sets the object of this V1WatchEvent.
+        Object is:  * If Type is Added or Modified: the new state of the object.  * If Type is Deleted: the state of the object immediately before deletion.  * If Type is Error: *Status is recommended; other types may make sense    depending on context.
 
         :param object: The object of this V1WatchEvent.
-        :type: str
+        :type: RuntimeRawExtension
         """
         if object is None:
             raise ValueError("Invalid value for `object`, must not be `None`")

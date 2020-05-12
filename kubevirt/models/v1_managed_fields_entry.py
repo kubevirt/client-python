@@ -33,10 +33,10 @@ class V1ManagedFieldsEntry(object):
     swagger_types = {
         'api_version': 'str',
         'fields_type': 'str',
-        'fields_v1': 'str',
+        'fields_v1': 'V1FieldsV1',
         'manager': 'str',
         'operation': 'str',
-        'time': 'str'
+        'time': 'V1Time'
     }
 
     attribute_map = {
@@ -126,7 +126,7 @@ class V1ManagedFieldsEntry(object):
         FieldsV1 holds the first JSON version format as described in the \"FieldsV1\" type.
 
         :return: The fields_v1 of this V1ManagedFieldsEntry.
-        :rtype: str
+        :rtype: V1FieldsV1
         """
         return self._fields_v1
 
@@ -137,7 +137,7 @@ class V1ManagedFieldsEntry(object):
         FieldsV1 holds the first JSON version format as described in the \"FieldsV1\" type.
 
         :param fields_v1: The fields_v1 of this V1ManagedFieldsEntry.
-        :type: str
+        :type: V1FieldsV1
         """
 
         self._fields_v1 = fields_v1
@@ -195,7 +195,7 @@ class V1ManagedFieldsEntry(object):
         Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'
 
         :return: The time of this V1ManagedFieldsEntry.
-        :rtype: str
+        :rtype: V1Time
         """
         return self._time
 
@@ -206,7 +206,7 @@ class V1ManagedFieldsEntry(object):
         Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'
 
         :param time: The time of this V1ManagedFieldsEntry.
-        :type: str
+        :type: V1Time
         """
 
         self._time = time

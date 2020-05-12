@@ -106,7 +106,7 @@ class V1Interface(object):
     def boot_order(self):
         """
         Gets the boot_order of this V1Interface.
-        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Each interface or disk that has a boot order must have a unique value. Interfaces without a boot order are not tried. +optional
+        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Each interface or disk that has a boot order must have a unique value. Interfaces without a boot order are not tried.
 
         :return: The boot_order of this V1Interface.
         :rtype: int
@@ -117,7 +117,7 @@ class V1Interface(object):
     def boot_order(self, boot_order):
         """
         Sets the boot_order of this V1Interface.
-        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Each interface or disk that has a boot order must have a unique value. Interfaces without a boot order are not tried. +optional
+        BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Each interface or disk that has a boot order must have a unique value. Interfaces without a boot order are not tried.
 
         :param boot_order: The boot_order of this V1Interface.
         :type: int
@@ -150,7 +150,7 @@ class V1Interface(object):
     def dhcp_options(self):
         """
         Gets the dhcp_options of this V1Interface.
-        If specified the network interface will pass additional DHCP options to the VMI +optional
+        If specified the network interface will pass additional DHCP options to the VMI
 
         :return: The dhcp_options of this V1Interface.
         :rtype: V1DHCPOptions
@@ -161,7 +161,7 @@ class V1Interface(object):
     def dhcp_options(self, dhcp_options):
         """
         Sets the dhcp_options of this V1Interface.
-        If specified the network interface will pass additional DHCP options to the VMI +optional
+        If specified the network interface will pass additional DHCP options to the VMI
 
         :param dhcp_options: The dhcp_options of this V1Interface.
         :type: V1DHCPOptions
@@ -265,7 +265,7 @@ class V1Interface(object):
     def pci_address(self):
         """
         Gets the pci_address of this V1Interface.
-        If specified, the virtual network interface will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10 +optional
+        If specified, the virtual network interface will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10
 
         :return: The pci_address of this V1Interface.
         :rtype: str
@@ -276,7 +276,7 @@ class V1Interface(object):
     def pci_address(self, pci_address):
         """
         Sets the pci_address of this V1Interface.
-        If specified, the virtual network interface will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10 +optional
+        If specified, the virtual network interface will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10
 
         :param pci_address: The pci_address of this V1Interface.
         :type: str
@@ -353,7 +353,7 @@ class V1Interface(object):
     def tag(self):
         """
         Gets the tag of this V1Interface.
-        If specified, the virtual network interface address and its tag will be provided to the guest via config drive +optional
+        If specified, the virtual network interface address and its tag will be provided to the guest via config drive
 
         :return: The tag of this V1Interface.
         :rtype: str
@@ -364,7 +364,7 @@ class V1Interface(object):
     def tag(self, tag):
         """
         Sets the tag of this V1Interface.
-        If specified, the virtual network interface address and its tag will be provided to the guest via config drive +optional
+        If specified, the virtual network interface address and its tag will be provided to the guest via config drive
 
         :param tag: The tag of this V1Interface.
         :type: str

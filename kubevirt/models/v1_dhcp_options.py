@@ -67,7 +67,7 @@ class V1DHCPOptions(object):
     def boot_file_name(self):
         """
         Gets the boot_file_name of this V1DHCPOptions.
-        If specified will pass option 67 to interface's DHCP server +optional
+        If specified will pass option 67 to interface's DHCP server
 
         :return: The boot_file_name of this V1DHCPOptions.
         :rtype: str
@@ -78,7 +78,7 @@ class V1DHCPOptions(object):
     def boot_file_name(self, boot_file_name):
         """
         Sets the boot_file_name of this V1DHCPOptions.
-        If specified will pass option 67 to interface's DHCP server +optional
+        If specified will pass option 67 to interface's DHCP server
 
         :param boot_file_name: The boot_file_name of this V1DHCPOptions.
         :type: str
@@ -90,7 +90,7 @@ class V1DHCPOptions(object):
     def ntp_servers(self):
         """
         Gets the ntp_servers of this V1DHCPOptions.
-        If specified will pass the configured NTP server to the VM via DHCP option 042. +optional
+        If specified will pass the configured NTP server to the VM via DHCP option 042.
 
         :return: The ntp_servers of this V1DHCPOptions.
         :rtype: list[str]
@@ -101,7 +101,7 @@ class V1DHCPOptions(object):
     def ntp_servers(self, ntp_servers):
         """
         Sets the ntp_servers of this V1DHCPOptions.
-        If specified will pass the configured NTP server to the VM via DHCP option 042. +optional
+        If specified will pass the configured NTP server to the VM via DHCP option 042.
 
         :param ntp_servers: The ntp_servers of this V1DHCPOptions.
         :type: list[str]
@@ -113,7 +113,7 @@ class V1DHCPOptions(object):
     def private_options(self):
         """
         Gets the private_options of this V1DHCPOptions.
-        If specified will pass extra DHCP options for private use, range: 224-254 +optional
+        If specified will pass extra DHCP options for private use, range: 224-254
 
         :return: The private_options of this V1DHCPOptions.
         :rtype: list[V1DHCPPrivateOptions]
@@ -124,7 +124,7 @@ class V1DHCPOptions(object):
     def private_options(self, private_options):
         """
         Sets the private_options of this V1DHCPOptions.
-        If specified will pass extra DHCP options for private use, range: 224-254 +optional
+        If specified will pass extra DHCP options for private use, range: 224-254
 
         :param private_options: The private_options of this V1DHCPOptions.
         :type: list[V1DHCPPrivateOptions]
@@ -136,7 +136,7 @@ class V1DHCPOptions(object):
     def tftp_server_name(self):
         """
         Gets the tftp_server_name of this V1DHCPOptions.
-        If specified will pass option 66 to interface's DHCP server +optional
+        If specified will pass option 66 to interface's DHCP server
 
         :return: The tftp_server_name of this V1DHCPOptions.
         :rtype: str
@@ -147,7 +147,7 @@ class V1DHCPOptions(object):
     def tftp_server_name(self, tftp_server_name):
         """
         Sets the tftp_server_name of this V1DHCPOptions.
-        If specified will pass option 66 to interface's DHCP server +optional
+        If specified will pass option 66 to interface's DHCP server
 
         :param tftp_server_name: The tftp_server_name of this V1DHCPOptions.
         :type: str

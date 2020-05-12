@@ -32,8 +32,8 @@ class V1VirtualMachineStateChangeRequest(object):
     """
     swagger_types = {
         'action': 'str',
-        'data': 'object',
-        'uid': 'TypesUID'
+        'data': 'dict(str, str)',
+        'uid': 'str'
     }
 
     attribute_map = {
@@ -89,7 +89,7 @@ class V1VirtualMachineStateChangeRequest(object):
         Provides additional data in order to perform the Action
 
         :return: The data of this V1VirtualMachineStateChangeRequest.
-        :rtype: object
+        :rtype: dict(str, str)
         """
         return self._data
 
@@ -100,7 +100,7 @@ class V1VirtualMachineStateChangeRequest(object):
         Provides additional data in order to perform the Action
 
         :param data: The data of this V1VirtualMachineStateChangeRequest.
-        :type: object
+        :type: dict(str, str)
         """
 
         self._data = data
@@ -112,7 +112,7 @@ class V1VirtualMachineStateChangeRequest(object):
         Indicates the UUID of an existing Virtual Machine Instance that this change request applies to -- if applicable
 
         :return: The uid of this V1VirtualMachineStateChangeRequest.
-        :rtype: TypesUID
+        :rtype: str
         """
         return self._uid
 
@@ -123,7 +123,7 @@ class V1VirtualMachineStateChangeRequest(object):
         Indicates the UUID of an existing Virtual Machine Instance that this change request applies to -- if applicable
 
         :param uid: The uid of this V1VirtualMachineStateChangeRequest.
-        :type: TypesUID
+        :type: str
         """
 
         self._uid = uid

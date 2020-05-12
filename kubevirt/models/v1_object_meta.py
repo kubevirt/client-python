@@ -31,14 +31,14 @@ class V1ObjectMeta(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'annotations': 'object',
+        'annotations': 'dict(str, str)',
         'cluster_name': 'str',
         'deletion_grace_period_seconds': 'int',
-        'deletion_timestamp': 'str',
+        'deletion_timestamp': 'V1Time',
         'finalizers': 'list[str]',
         'generate_name': 'str',
         'generation': 'int',
-        'labels': 'object',
+        'labels': 'dict(str, str)',
         'managed_fields': 'list[V1ManagedFieldsEntry]',
         'name': 'str',
         'namespace': 'str',
@@ -125,7 +125,7 @@ class V1ObjectMeta(object):
         Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
 
         :return: The annotations of this V1ObjectMeta.
-        :rtype: object
+        :rtype: dict(str, str)
         """
         return self._annotations
 
@@ -136,7 +136,7 @@ class V1ObjectMeta(object):
         Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
 
         :param annotations: The annotations of this V1ObjectMeta.
-        :type: object
+        :type: dict(str, str)
         """
 
         self._annotations = annotations
@@ -194,7 +194,7 @@ class V1ObjectMeta(object):
         DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.  Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
         :return: The deletion_timestamp of this V1ObjectMeta.
-        :rtype: str
+        :rtype: V1Time
         """
         return self._deletion_timestamp
 
@@ -205,7 +205,7 @@ class V1ObjectMeta(object):
         DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.  Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
         :param deletion_timestamp: The deletion_timestamp of this V1ObjectMeta.
-        :type: str
+        :type: V1Time
         """
 
         self._deletion_timestamp = deletion_timestamp
@@ -286,7 +286,7 @@ class V1ObjectMeta(object):
         Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
 
         :return: The labels of this V1ObjectMeta.
-        :rtype: object
+        :rtype: dict(str, str)
         """
         return self._labels
 
@@ -297,7 +297,7 @@ class V1ObjectMeta(object):
         Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
 
         :param labels: The labels of this V1ObjectMeta.
-        :type: object
+        :type: dict(str, str)
         """
 
         self._labels = labels

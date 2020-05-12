@@ -108,7 +108,7 @@ class V1CDRomTarget(object):
     def tray(self):
         """
         Gets the tray of this V1CDRomTarget.
-        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\". Defaults to closed. +optional
+        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\". Defaults to closed.
 
         :return: The tray of this V1CDRomTarget.
         :rtype: str
@@ -119,7 +119,7 @@ class V1CDRomTarget(object):
     def tray(self, tray):
         """
         Sets the tray of this V1CDRomTarget.
-        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\". Defaults to closed. +optional
+        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\". Defaults to closed.
 
         :param tray: The tray of this V1CDRomTarget.
         :type: str

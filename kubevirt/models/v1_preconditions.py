@@ -32,7 +32,7 @@ class V1Preconditions(object):
     """
     swagger_types = {
         'resource_version': 'str',
-        'uid': 'TypesUID'
+        'uid': 'str'
     }
 
     attribute_map = {
@@ -83,7 +83,7 @@ class V1Preconditions(object):
         Specifies the target UID.
 
         :return: The uid of this V1Preconditions.
-        :rtype: TypesUID
+        :rtype: str
         """
         return self._uid
 
@@ -94,7 +94,7 @@ class V1Preconditions(object):
         Specifies the target UID.
 
         :param uid: The uid of this V1Preconditions.
-        :type: TypesUID
+        :type: str
         """
 
         self._uid = uid

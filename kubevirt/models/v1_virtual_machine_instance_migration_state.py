@@ -34,12 +34,12 @@ class V1VirtualMachineInstanceMigrationState(object):
         'abort_requested': 'bool',
         'abort_status': 'str',
         'completed': 'bool',
-        'end_timestamp': 'str',
+        'end_timestamp': 'V1Time',
         'failed': 'bool',
         'migration_uid': 'str',
         'source_node': 'str',
-        'start_timestamp': 'str',
-        'target_direct_migration_node_ports': 'object',
+        'start_timestamp': 'V1Time',
+        'target_direct_migration_node_ports': 'dict(str, int)',
         'target_node': 'str',
         'target_node_address': 'str',
         'target_node_domain_detected': 'bool',
@@ -184,7 +184,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The time the migration action ended
 
         :return: The end_timestamp of this V1VirtualMachineInstanceMigrationState.
-        :rtype: str
+        :rtype: V1Time
         """
         return self._end_timestamp
 
@@ -195,7 +195,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The time the migration action ended
 
         :param end_timestamp: The end_timestamp of this V1VirtualMachineInstanceMigrationState.
-        :type: str
+        :type: V1Time
         """
 
         self._end_timestamp = end_timestamp
@@ -276,7 +276,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The time the migration action began
 
         :return: The start_timestamp of this V1VirtualMachineInstanceMigrationState.
-        :rtype: str
+        :rtype: V1Time
         """
         return self._start_timestamp
 
@@ -287,7 +287,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The time the migration action began
 
         :param start_timestamp: The start_timestamp of this V1VirtualMachineInstanceMigrationState.
-        :type: str
+        :type: V1Time
         """
 
         self._start_timestamp = start_timestamp
@@ -299,7 +299,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The list of ports opened for live migration on the destination node
 
         :return: The target_direct_migration_node_ports of this V1VirtualMachineInstanceMigrationState.
-        :rtype: object
+        :rtype: dict(str, int)
         """
         return self._target_direct_migration_node_ports
 
@@ -310,7 +310,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The list of ports opened for live migration on the destination node
 
         :param target_direct_migration_node_ports: The target_direct_migration_node_ports of this V1VirtualMachineInstanceMigrationState.
-        :type: object
+        :type: dict(str, int)
         """
 
         self._target_direct_migration_node_ports = target_direct_migration_node_ports

@@ -35,11 +35,11 @@ class V1VirtualMachineInstanceSpec(object):
         'dns_config': 'V1PodDNSConfig',
         'dns_policy': 'str',
         'domain': 'V1DomainSpec',
-        'eviction_strategy': 'V1EvictionStrategy',
+        'eviction_strategy': 'str',
         'hostname': 'str',
         'liveness_probe': 'V1Probe',
         'networks': 'list[V1Network]',
-        'node_selector': 'object',
+        'node_selector': 'dict(str, str)',
         'priority_class_name': 'str',
         'readiness_probe': 'V1Probe',
         'scheduler_name': 'str',
@@ -149,7 +149,7 @@ class V1VirtualMachineInstanceSpec(object):
     def dns_config(self):
         """
         Gets the dns_config of this V1VirtualMachineInstanceSpec.
-        Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy. +optional
+        Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.
 
         :return: The dns_config of this V1VirtualMachineInstanceSpec.
         :rtype: V1PodDNSConfig
@@ -160,7 +160,7 @@ class V1VirtualMachineInstanceSpec(object):
     def dns_config(self, dns_config):
         """
         Sets the dns_config of this V1VirtualMachineInstanceSpec.
-        Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy. +optional
+        Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.
 
         :param dns_config: The dns_config of this V1VirtualMachineInstanceSpec.
         :type: V1PodDNSConfig
@@ -172,7 +172,7 @@ class V1VirtualMachineInstanceSpec(object):
     def dns_policy(self):
         """
         Gets the dns_policy of this V1VirtualMachineInstanceSpec.
-        Set DNS policy for the pod. Defaults to \"ClusterFirst\". Valid values are 'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to 'ClusterFirstWithHostNet'. +optional
+        Set DNS policy for the pod. Defaults to \"ClusterFirst\". Valid values are 'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to 'ClusterFirstWithHostNet'.
 
         :return: The dns_policy of this V1VirtualMachineInstanceSpec.
         :rtype: str
@@ -183,7 +183,7 @@ class V1VirtualMachineInstanceSpec(object):
     def dns_policy(self, dns_policy):
         """
         Sets the dns_policy of this V1VirtualMachineInstanceSpec.
-        Set DNS policy for the pod. Defaults to \"ClusterFirst\". Valid values are 'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to 'ClusterFirstWithHostNet'. +optional
+        Set DNS policy for the pod. Defaults to \"ClusterFirst\". Valid values are 'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to 'ClusterFirstWithHostNet'.
 
         :param dns_policy: The dns_policy of this V1VirtualMachineInstanceSpec.
         :type: str
@@ -223,7 +223,7 @@ class V1VirtualMachineInstanceSpec(object):
         EvictionStrategy can be set to \"LiveMigrate\" if the VirtualMachineInstance should be migrated instead of shut-off in case of a node drain.
 
         :return: The eviction_strategy of this V1VirtualMachineInstanceSpec.
-        :rtype: V1EvictionStrategy
+        :rtype: str
         """
         return self._eviction_strategy
 
@@ -234,7 +234,7 @@ class V1VirtualMachineInstanceSpec(object):
         EvictionStrategy can be set to \"LiveMigrate\" if the VirtualMachineInstance should be migrated instead of shut-off in case of a node drain.
 
         :param eviction_strategy: The eviction_strategy of this V1VirtualMachineInstanceSpec.
-        :type: V1EvictionStrategy
+        :type: str
         """
 
         self._eviction_strategy = eviction_strategy
@@ -243,7 +243,7 @@ class V1VirtualMachineInstanceSpec(object):
     def hostname(self):
         """
         Gets the hostname of this V1VirtualMachineInstanceSpec.
-        Specifies the hostname of the vmi If not specified, the hostname will be set to the name of the vmi, if dhcp or cloud-init is configured properly. +optional
+        Specifies the hostname of the vmi If not specified, the hostname will be set to the name of the vmi, if dhcp or cloud-init is configured properly.
 
         :return: The hostname of this V1VirtualMachineInstanceSpec.
         :rtype: str
@@ -254,7 +254,7 @@ class V1VirtualMachineInstanceSpec(object):
     def hostname(self, hostname):
         """
         Sets the hostname of this V1VirtualMachineInstanceSpec.
-        Specifies the hostname of the vmi If not specified, the hostname will be set to the name of the vmi, if dhcp or cloud-init is configured properly. +optional
+        Specifies the hostname of the vmi If not specified, the hostname will be set to the name of the vmi, if dhcp or cloud-init is configured properly.
 
         :param hostname: The hostname of this V1VirtualMachineInstanceSpec.
         :type: str
@@ -266,7 +266,7 @@ class V1VirtualMachineInstanceSpec(object):
     def liveness_probe(self):
         """
         Gets the liveness_probe of this V1VirtualMachineInstanceSpec.
-        Periodic probe of VirtualMachineInstance liveness. VirtualmachineInstances will be stopped if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+        Periodic probe of VirtualMachineInstance liveness. VirtualmachineInstances will be stopped if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
 
         :return: The liveness_probe of this V1VirtualMachineInstanceSpec.
         :rtype: V1Probe
@@ -277,7 +277,7 @@ class V1VirtualMachineInstanceSpec(object):
     def liveness_probe(self, liveness_probe):
         """
         Sets the liveness_probe of this V1VirtualMachineInstanceSpec.
-        Periodic probe of VirtualMachineInstance liveness. VirtualmachineInstances will be stopped if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+        Periodic probe of VirtualMachineInstance liveness. VirtualmachineInstances will be stopped if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
 
         :param liveness_probe: The liveness_probe of this V1VirtualMachineInstanceSpec.
         :type: V1Probe
@@ -312,10 +312,10 @@ class V1VirtualMachineInstanceSpec(object):
     def node_selector(self):
         """
         Gets the node_selector of this V1VirtualMachineInstanceSpec.
-        NodeSelector is a selector which must be true for the vmi to fit on a node. Selector which must match a node's labels for the vmi to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/ +optional
+        NodeSelector is a selector which must be true for the vmi to fit on a node. Selector which must match a node's labels for the vmi to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
 
         :return: The node_selector of this V1VirtualMachineInstanceSpec.
-        :rtype: object
+        :rtype: dict(str, str)
         """
         return self._node_selector
 
@@ -323,10 +323,10 @@ class V1VirtualMachineInstanceSpec(object):
     def node_selector(self, node_selector):
         """
         Sets the node_selector of this V1VirtualMachineInstanceSpec.
-        NodeSelector is a selector which must be true for the vmi to fit on a node. Selector which must match a node's labels for the vmi to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/ +optional
+        NodeSelector is a selector which must be true for the vmi to fit on a node. Selector which must match a node's labels for the vmi to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
 
         :param node_selector: The node_selector of this V1VirtualMachineInstanceSpec.
-        :type: object
+        :type: dict(str, str)
         """
 
         self._node_selector = node_selector
@@ -335,7 +335,7 @@ class V1VirtualMachineInstanceSpec(object):
     def priority_class_name(self):
         """
         Gets the priority_class_name of this V1VirtualMachineInstanceSpec.
-        If specified, indicates the pod's priority. If not specified, the pod priority will be default or zero if there is no default. +optional
+        If specified, indicates the pod's priority. If not specified, the pod priority will be default or zero if there is no default.
 
         :return: The priority_class_name of this V1VirtualMachineInstanceSpec.
         :rtype: str
@@ -346,7 +346,7 @@ class V1VirtualMachineInstanceSpec(object):
     def priority_class_name(self, priority_class_name):
         """
         Sets the priority_class_name of this V1VirtualMachineInstanceSpec.
-        If specified, indicates the pod's priority. If not specified, the pod priority will be default or zero if there is no default. +optional
+        If specified, indicates the pod's priority. If not specified, the pod priority will be default or zero if there is no default.
 
         :param priority_class_name: The priority_class_name of this V1VirtualMachineInstanceSpec.
         :type: str
@@ -358,7 +358,7 @@ class V1VirtualMachineInstanceSpec(object):
     def readiness_probe(self):
         """
         Gets the readiness_probe of this V1VirtualMachineInstanceSpec.
-        Periodic probe of VirtualMachineInstance service readiness. VirtualmachineInstances will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+        Periodic probe of VirtualMachineInstance service readiness. VirtualmachineInstances will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
 
         :return: The readiness_probe of this V1VirtualMachineInstanceSpec.
         :rtype: V1Probe
@@ -369,7 +369,7 @@ class V1VirtualMachineInstanceSpec(object):
     def readiness_probe(self, readiness_probe):
         """
         Sets the readiness_probe of this V1VirtualMachineInstanceSpec.
-        Periodic probe of VirtualMachineInstance service readiness. VirtualmachineInstances will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+        Periodic probe of VirtualMachineInstance service readiness. VirtualmachineInstances will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
 
         :param readiness_probe: The readiness_probe of this V1VirtualMachineInstanceSpec.
         :type: V1Probe
@@ -381,7 +381,7 @@ class V1VirtualMachineInstanceSpec(object):
     def scheduler_name(self):
         """
         Gets the scheduler_name of this V1VirtualMachineInstanceSpec.
-        If specified, the VMI will be dispatched by specified scheduler. If not specified, the VMI will be dispatched by default scheduler. +optional
+        If specified, the VMI will be dispatched by specified scheduler. If not specified, the VMI will be dispatched by default scheduler.
 
         :return: The scheduler_name of this V1VirtualMachineInstanceSpec.
         :rtype: str
@@ -392,7 +392,7 @@ class V1VirtualMachineInstanceSpec(object):
     def scheduler_name(self, scheduler_name):
         """
         Sets the scheduler_name of this V1VirtualMachineInstanceSpec.
-        If specified, the VMI will be dispatched by specified scheduler. If not specified, the VMI will be dispatched by default scheduler. +optional
+        If specified, the VMI will be dispatched by specified scheduler. If not specified, the VMI will be dispatched by default scheduler.
 
         :param scheduler_name: The scheduler_name of this V1VirtualMachineInstanceSpec.
         :type: str
@@ -404,7 +404,7 @@ class V1VirtualMachineInstanceSpec(object):
     def subdomain(self):
         """
         Gets the subdomain of this V1VirtualMachineInstanceSpec.
-        If specified, the fully qualified vmi hostname will be \"<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>\". If not specified, the vmi will not have a domainname at all. The DNS entry will resolve to the vmi, no matter if the vmi itself can pick up a hostname. +optional
+        If specified, the fully qualified vmi hostname will be \"<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>\". If not specified, the vmi will not have a domainname at all. The DNS entry will resolve to the vmi, no matter if the vmi itself can pick up a hostname.
 
         :return: The subdomain of this V1VirtualMachineInstanceSpec.
         :rtype: str
@@ -415,7 +415,7 @@ class V1VirtualMachineInstanceSpec(object):
     def subdomain(self, subdomain):
         """
         Sets the subdomain of this V1VirtualMachineInstanceSpec.
-        If specified, the fully qualified vmi hostname will be \"<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>\". If not specified, the vmi will not have a domainname at all. The DNS entry will resolve to the vmi, no matter if the vmi itself can pick up a hostname. +optional
+        If specified, the fully qualified vmi hostname will be \"<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>\". If not specified, the vmi will not have a domainname at all. The DNS entry will resolve to the vmi, no matter if the vmi itself can pick up a hostname.
 
         :param subdomain: The subdomain of this V1VirtualMachineInstanceSpec.
         :type: str

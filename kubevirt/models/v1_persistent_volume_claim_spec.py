@@ -31,12 +31,12 @@ class V1PersistentVolumeClaimSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'access_modes': 'list[V1PersistentVolumeAccessMode]',
+        'access_modes': 'list[str]',
         'data_source': 'V1TypedLocalObjectReference',
         'resources': 'V1ResourceRequirements',
         'selector': 'V1LabelSelector',
         'storage_class_name': 'str',
-        'volume_mode': 'V1PersistentVolumeMode',
+        'volume_mode': 'str',
         'volume_name': 'str'
     }
 
@@ -85,7 +85,7 @@ class V1PersistentVolumeClaimSpec(object):
         AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
 
         :return: The access_modes of this V1PersistentVolumeClaimSpec.
-        :rtype: list[V1PersistentVolumeAccessMode]
+        :rtype: list[str]
         """
         return self._access_modes
 
@@ -96,7 +96,7 @@ class V1PersistentVolumeClaimSpec(object):
         AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
 
         :param access_modes: The access_modes of this V1PersistentVolumeClaimSpec.
-        :type: list[V1PersistentVolumeAccessMode]
+        :type: list[str]
         """
 
         self._access_modes = access_modes
@@ -200,7 +200,7 @@ class V1PersistentVolumeClaimSpec(object):
         volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec. This is a beta feature.
 
         :return: The volume_mode of this V1PersistentVolumeClaimSpec.
-        :rtype: V1PersistentVolumeMode
+        :rtype: str
         """
         return self._volume_mode
 
@@ -211,7 +211,7 @@ class V1PersistentVolumeClaimSpec(object):
         volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec. This is a beta feature.
 
         :param volume_mode: The volume_mode of this V1PersistentVolumeClaimSpec.
-        :type: V1PersistentVolumeMode
+        :type: str
         """
 
         self._volume_mode = volume_mode

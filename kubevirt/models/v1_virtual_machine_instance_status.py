@@ -31,7 +31,7 @@ class V1VirtualMachineInstanceStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'active_pods': 'object',
+        'active_pods': 'dict(str, str)',
         'conditions': 'list[V1VirtualMachineInstanceCondition]',
         'guest_os_info': 'V1VirtualMachineInstanceGuestOSInfo',
         'interfaces': 'list[V1VirtualMachineInstanceNetworkInterface]',
@@ -39,7 +39,7 @@ class V1VirtualMachineInstanceStatus(object):
         'migration_state': 'V1VirtualMachineInstanceMigrationState',
         'node_name': 'str',
         'phase': 'str',
-        'qos_class': 'V1PodQOSClass',
+        'qos_class': 'str',
         'reason': 'str'
     }
 
@@ -100,7 +100,7 @@ class V1VirtualMachineInstanceStatus(object):
         ActivePods is a mapping of pod UID to node name. It is possible for multiple pods to be running for a single VMI during migration.
 
         :return: The active_pods of this V1VirtualMachineInstanceStatus.
-        :rtype: object
+        :rtype: dict(str, str)
         """
         return self._active_pods
 
@@ -111,7 +111,7 @@ class V1VirtualMachineInstanceStatus(object):
         ActivePods is a mapping of pod UID to node name. It is possible for multiple pods to be running for a single VMI during migration.
 
         :param active_pods: The active_pods of this V1VirtualMachineInstanceStatus.
-        :type: object
+        :type: dict(str, str)
         """
 
         self._active_pods = active_pods
@@ -281,10 +281,10 @@ class V1VirtualMachineInstanceStatus(object):
     def qos_class(self):
         """
         Gets the qos_class of this V1VirtualMachineInstanceStatus.
-        The Quality of Service (QOS) classification assigned to the virtual machine instance based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md +optional
+        The Quality of Service (QOS) classification assigned to the virtual machine instance based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md
 
         :return: The qos_class of this V1VirtualMachineInstanceStatus.
-        :rtype: V1PodQOSClass
+        :rtype: str
         """
         return self._qos_class
 
@@ -292,10 +292,10 @@ class V1VirtualMachineInstanceStatus(object):
     def qos_class(self, qos_class):
         """
         Sets the qos_class of this V1VirtualMachineInstanceStatus.
-        The Quality of Service (QOS) classification assigned to the virtual machine instance based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md +optional
+        The Quality of Service (QOS) classification assigned to the virtual machine instance based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md
 
         :param qos_class: The qos_class of this V1VirtualMachineInstanceStatus.
-        :type: V1PodQOSClass
+        :type: str
         """
 
         self._qos_class = qos_class
@@ -304,7 +304,7 @@ class V1VirtualMachineInstanceStatus(object):
     def reason(self):
         """
         Gets the reason of this V1VirtualMachineInstanceStatus.
-        A brief CamelCase message indicating details about why the VMI is in this state. e.g. 'NodeUnresponsive' +optional
+        A brief CamelCase message indicating details about why the VMI is in this state. e.g. 'NodeUnresponsive'
 
         :return: The reason of this V1VirtualMachineInstanceStatus.
         :rtype: str
@@ -315,7 +315,7 @@ class V1VirtualMachineInstanceStatus(object):
     def reason(self, reason):
         """
         Sets the reason of this V1VirtualMachineInstanceStatus.
-        A brief CamelCase message indicating details about why the VMI is in this state. e.g. 'NodeUnresponsive' +optional
+        A brief CamelCase message indicating details about why the VMI is in this state. e.g. 'NodeUnresponsive'
 
         :param reason: The reason of this V1VirtualMachineInstanceStatus.
         :type: str

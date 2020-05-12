@@ -171,7 +171,7 @@ class V1Devices(object):
     def block_multi_queue(self):
         """
         Gets the block_multi_queue of this V1Devices.
-        Whether or not to enable virtio multi-queue for block devices +optional
+        Whether or not to enable virtio multi-queue for block devices
 
         :return: The block_multi_queue of this V1Devices.
         :rtype: bool
@@ -182,7 +182,7 @@ class V1Devices(object):
     def block_multi_queue(self, block_multi_queue):
         """
         Sets the block_multi_queue of this V1Devices.
-        Whether or not to enable virtio multi-queue for block devices +optional
+        Whether or not to enable virtio multi-queue for block devices
 
         :param block_multi_queue: The block_multi_queue of this V1Devices.
         :type: bool
@@ -217,7 +217,7 @@ class V1Devices(object):
     def gpus(self):
         """
         Gets the gpus of this V1Devices.
-        Whether to attach a GPU device to the vmi. +optional
+        Whether to attach a GPU device to the vmi.
 
         :return: The gpus of this V1Devices.
         :rtype: list[V1GPU]
@@ -228,7 +228,7 @@ class V1Devices(object):
     def gpus(self, gpus):
         """
         Sets the gpus of this V1Devices.
-        Whether to attach a GPU device to the vmi. +optional
+        Whether to attach a GPU device to the vmi.
 
         :param gpus: The gpus of this V1Devices.
         :type: list[V1GPU]
@@ -286,7 +286,7 @@ class V1Devices(object):
     def network_interface_multiqueue(self):
         """
         Gets the network_interface_multiqueue of this V1Devices.
-        If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature +optional
+        If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature
 
         :return: The network_interface_multiqueue of this V1Devices.
         :rtype: bool
@@ -297,7 +297,7 @@ class V1Devices(object):
     def network_interface_multiqueue(self, network_interface_multiqueue):
         """
         Sets the network_interface_multiqueue of this V1Devices.
-        If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature +optional
+        If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature
 
         :param network_interface_multiqueue: The network_interface_multiqueue of this V1Devices.
         :type: bool
@@ -309,7 +309,7 @@ class V1Devices(object):
     def rng(self):
         """
         Gets the rng of this V1Devices.
-        Whether to have random number generator from host +optional
+        Whether to have random number generator from host
 
         :return: The rng of this V1Devices.
         :rtype: V1Rng
@@ -320,7 +320,7 @@ class V1Devices(object):
     def rng(self, rng):
         """
         Sets the rng of this V1Devices.
-        Whether to have random number generator from host +optional
+        Whether to have random number generator from host
 
         :param rng: The rng of this V1Devices.
         :type: V1Rng

@@ -37,7 +37,7 @@ class V1DeleteOptions(object):
         'kind': 'str',
         'orphan_dependents': 'bool',
         'preconditions': 'V1Preconditions',
-        'propagation_policy': 'V1DeletionPropagation'
+        'propagation_policy': 'str'
     }
 
     attribute_map = {
@@ -223,7 +223,7 @@ class V1DeleteOptions(object):
         Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
 
         :return: The propagation_policy of this V1DeleteOptions.
-        :rtype: V1DeletionPropagation
+        :rtype: str
         """
         return self._propagation_policy
 
@@ -234,7 +234,7 @@ class V1DeleteOptions(object):
         Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
 
         :param propagation_policy: The propagation_policy of this V1DeleteOptions.
-        :type: V1DeletionPropagation
+        :type: str
         """
 
         self._propagation_policy = propagation_policy

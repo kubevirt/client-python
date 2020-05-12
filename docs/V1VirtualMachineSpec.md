@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data_volume_templates** | [**list[V1alpha1DataVolume]**](V1alpha1DataVolume.md) | dataVolumeTemplates is a list of dataVolumes that the VirtualMachineInstance template can reference. DataVolumes in this list are dynamically created for the VirtualMachine and are tied to the VirtualMachine&#39;s life-cycle. | [optional] 
-**run_strategy** | [**V1VirtualMachineRunStrategy**](V1VirtualMachineRunStrategy.md) | Running state indicates the requested running state of the VirtualMachineInstance mutually exclusive with Running | [optional] 
+**run_strategy** | **str** | Running state indicates the requested running state of the VirtualMachineInstance mutually exclusive with Running | [optional] 
 **running** | **bool** | Running controls whether the associatied VirtualMachineInstance is created or not Mutually exclusive with RunStrategy | [optional] 
 **template** | [**V1VirtualMachineInstanceTemplateSpec**](V1VirtualMachineInstanceTemplateSpec.md) | Template is the direct specification of VirtualMachineInstance | 
 

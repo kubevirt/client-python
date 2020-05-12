@@ -52,7 +52,7 @@ class V1KVMTimer(object):
     def present(self):
         """
         Gets the present of this V1KVMTimer.
-        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true. +optional
+        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true.
 
         :return: The present of this V1KVMTimer.
         :rtype: bool
@@ -63,7 +63,7 @@ class V1KVMTimer(object):
     def present(self, present):
         """
         Sets the present of this V1KVMTimer.
-        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true. +optional
+        Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true.
 
         :param present: The present of this V1KVMTimer.
         :type: bool

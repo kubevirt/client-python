@@ -77,7 +77,7 @@ class V1CloudInitConfigDriveSource(object):
     def network_data(self):
         """
         Gets the network_data of this V1CloudInitConfigDriveSource.
-        NetworkData contains config drive inline cloud-init networkdata. + optional
+        NetworkData contains config drive inline cloud-init networkdata.
 
         :return: The network_data of this V1CloudInitConfigDriveSource.
         :rtype: str
@@ -88,7 +88,7 @@ class V1CloudInitConfigDriveSource(object):
     def network_data(self, network_data):
         """
         Sets the network_data of this V1CloudInitConfigDriveSource.
-        NetworkData contains config drive inline cloud-init networkdata. + optional
+        NetworkData contains config drive inline cloud-init networkdata.
 
         :param network_data: The network_data of this V1CloudInitConfigDriveSource.
         :type: str
@@ -100,7 +100,7 @@ class V1CloudInitConfigDriveSource(object):
     def network_data_base64(self):
         """
         Gets the network_data_base64 of this V1CloudInitConfigDriveSource.
-        NetworkDataBase64 contains config drive cloud-init networkdata as a base64 encoded string. + optional
+        NetworkDataBase64 contains config drive cloud-init networkdata as a base64 encoded string.
 
         :return: The network_data_base64 of this V1CloudInitConfigDriveSource.
         :rtype: str
@@ -111,7 +111,7 @@ class V1CloudInitConfigDriveSource(object):
     def network_data_base64(self, network_data_base64):
         """
         Sets the network_data_base64 of this V1CloudInitConfigDriveSource.
-        NetworkDataBase64 contains config drive cloud-init networkdata as a base64 encoded string. + optional
+        NetworkDataBase64 contains config drive cloud-init networkdata as a base64 encoded string.
 
         :param network_data_base64: The network_data_base64 of this V1CloudInitConfigDriveSource.
         :type: str
@@ -123,7 +123,7 @@ class V1CloudInitConfigDriveSource(object):
     def network_data_secret_ref(self):
         """
         Gets the network_data_secret_ref of this V1CloudInitConfigDriveSource.
-        NetworkDataSecretRef references a k8s secret that contains config drive networkdata. + optional
+        NetworkDataSecretRef references a k8s secret that contains config drive networkdata.
 
         :return: The network_data_secret_ref of this V1CloudInitConfigDriveSource.
         :rtype: V1LocalObjectReference
@@ -134,7 +134,7 @@ class V1CloudInitConfigDriveSource(object):
     def network_data_secret_ref(self, network_data_secret_ref):
         """
         Sets the network_data_secret_ref of this V1CloudInitConfigDriveSource.
-        NetworkDataSecretRef references a k8s secret that contains config drive networkdata. + optional
+        NetworkDataSecretRef references a k8s secret that contains config drive networkdata.
 
         :param network_data_secret_ref: The network_data_secret_ref of this V1CloudInitConfigDriveSource.
         :type: V1LocalObjectReference
@@ -146,7 +146,7 @@ class V1CloudInitConfigDriveSource(object):
     def secret_ref(self):
         """
         Gets the secret_ref of this V1CloudInitConfigDriveSource.
-        UserDataSecretRef references a k8s secret that contains config drive userdata. + optional
+        UserDataSecretRef references a k8s secret that contains config drive userdata.
 
         :return: The secret_ref of this V1CloudInitConfigDriveSource.
         :rtype: V1LocalObjectReference
@@ -157,7 +157,7 @@ class V1CloudInitConfigDriveSource(object):
     def secret_ref(self, secret_ref):
         """
         Sets the secret_ref of this V1CloudInitConfigDriveSource.
-        UserDataSecretRef references a k8s secret that contains config drive userdata. + optional
+        UserDataSecretRef references a k8s secret that contains config drive userdata.
 
         :param secret_ref: The secret_ref of this V1CloudInitConfigDriveSource.
         :type: V1LocalObjectReference
@@ -169,7 +169,7 @@ class V1CloudInitConfigDriveSource(object):
     def user_data(self):
         """
         Gets the user_data of this V1CloudInitConfigDriveSource.
-        UserData contains config drive inline cloud-init userdata. + optional
+        UserData contains config drive inline cloud-init userdata.
 
         :return: The user_data of this V1CloudInitConfigDriveSource.
         :rtype: str
@@ -180,7 +180,7 @@ class V1CloudInitConfigDriveSource(object):
     def user_data(self, user_data):
         """
         Sets the user_data of this V1CloudInitConfigDriveSource.
-        UserData contains config drive inline cloud-init userdata. + optional
+        UserData contains config drive inline cloud-init userdata.
 
         :param user_data: The user_data of this V1CloudInitConfigDriveSource.
         :type: str
@@ -192,7 +192,7 @@ class V1CloudInitConfigDriveSource(object):
     def user_data_base64(self):
         """
         Gets the user_data_base64 of this V1CloudInitConfigDriveSource.
-        UserDataBase64 contains config drive cloud-init userdata as a base64 encoded string. + optional
+        UserDataBase64 contains config drive cloud-init userdata as a base64 encoded string.
 
         :return: The user_data_base64 of this V1CloudInitConfigDriveSource.
         :rtype: str
@@ -203,7 +203,7 @@ class V1CloudInitConfigDriveSource(object):
     def user_data_base64(self, user_data_base64):
         """
         Sets the user_data_base64 of this V1CloudInitConfigDriveSource.
-        UserDataBase64 contains config drive cloud-init userdata as a base64 encoded string. + optional
+        UserDataBase64 contains config drive cloud-init userdata as a base64 encoded string.
 
         :param user_data_base64: The user_data_base64 of this V1CloudInitConfigDriveSource.
         :type: str

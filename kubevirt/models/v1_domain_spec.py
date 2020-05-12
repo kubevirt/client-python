@@ -37,7 +37,7 @@ class V1DomainSpec(object):
         'devices': 'V1Devices',
         'features': 'V1Features',
         'firmware': 'V1Firmware',
-        'io_threads_policy': 'V1IOThreadsPolicy',
+        'io_threads_policy': 'str',
         'machine': 'V1Machine',
         'memory': 'V1Memory',
         'resources': 'V1ResourceRequirements'
@@ -96,7 +96,7 @@ class V1DomainSpec(object):
     def chassis(self):
         """
         Gets the chassis of this V1DomainSpec.
-        Chassis specifies the chassis info passed to the domain. +optional
+        Chassis specifies the chassis info passed to the domain.
 
         :return: The chassis of this V1DomainSpec.
         :rtype: V1Chassis
@@ -107,7 +107,7 @@ class V1DomainSpec(object):
     def chassis(self, chassis):
         """
         Sets the chassis of this V1DomainSpec.
-        Chassis specifies the chassis info passed to the domain. +optional
+        Chassis specifies the chassis info passed to the domain.
 
         :param chassis: The chassis of this V1DomainSpec.
         :type: V1Chassis
@@ -119,7 +119,7 @@ class V1DomainSpec(object):
     def clock(self):
         """
         Gets the clock of this V1DomainSpec.
-        Clock sets the clock and timers of the vmi. +optional
+        Clock sets the clock and timers of the vmi.
 
         :return: The clock of this V1DomainSpec.
         :rtype: V1Clock
@@ -130,7 +130,7 @@ class V1DomainSpec(object):
     def clock(self, clock):
         """
         Sets the clock of this V1DomainSpec.
-        Clock sets the clock and timers of the vmi. +optional
+        Clock sets the clock and timers of the vmi.
 
         :param clock: The clock of this V1DomainSpec.
         :type: V1Clock
@@ -142,7 +142,7 @@ class V1DomainSpec(object):
     def cpu(self):
         """
         Gets the cpu of this V1DomainSpec.
-        CPU allow specified the detailed CPU topology inside the vmi. +optional
+        CPU allow specified the detailed CPU topology inside the vmi.
 
         :return: The cpu of this V1DomainSpec.
         :rtype: V1CPU
@@ -153,7 +153,7 @@ class V1DomainSpec(object):
     def cpu(self, cpu):
         """
         Sets the cpu of this V1DomainSpec.
-        CPU allow specified the detailed CPU topology inside the vmi. +optional
+        CPU allow specified the detailed CPU topology inside the vmi.
 
         :param cpu: The cpu of this V1DomainSpec.
         :type: V1CPU
@@ -165,7 +165,7 @@ class V1DomainSpec(object):
     def devices(self):
         """
         Gets the devices of this V1DomainSpec.
-        Devices allows adding disks, network interfaces, ...
+        Devices allows adding disks, network interfaces, and others
 
         :return: The devices of this V1DomainSpec.
         :rtype: V1Devices
@@ -176,7 +176,7 @@ class V1DomainSpec(object):
     def devices(self, devices):
         """
         Sets the devices of this V1DomainSpec.
-        Devices allows adding disks, network interfaces, ...
+        Devices allows adding disks, network interfaces, and others
 
         :param devices: The devices of this V1DomainSpec.
         :type: V1Devices
@@ -190,7 +190,7 @@ class V1DomainSpec(object):
     def features(self):
         """
         Gets the features of this V1DomainSpec.
-        Features like acpi, apic, hyperv, smm. +optional
+        Features like acpi, apic, hyperv, smm.
 
         :return: The features of this V1DomainSpec.
         :rtype: V1Features
@@ -201,7 +201,7 @@ class V1DomainSpec(object):
     def features(self, features):
         """
         Sets the features of this V1DomainSpec.
-        Features like acpi, apic, hyperv, smm. +optional
+        Features like acpi, apic, hyperv, smm.
 
         :param features: The features of this V1DomainSpec.
         :type: V1Features
@@ -213,7 +213,7 @@ class V1DomainSpec(object):
     def firmware(self):
         """
         Gets the firmware of this V1DomainSpec.
-        Firmware. +optional
+        Firmware.
 
         :return: The firmware of this V1DomainSpec.
         :rtype: V1Firmware
@@ -224,7 +224,7 @@ class V1DomainSpec(object):
     def firmware(self, firmware):
         """
         Sets the firmware of this V1DomainSpec.
-        Firmware. +optional
+        Firmware.
 
         :param firmware: The firmware of this V1DomainSpec.
         :type: V1Firmware
@@ -236,10 +236,10 @@ class V1DomainSpec(object):
     def io_threads_policy(self):
         """
         Gets the io_threads_policy of this V1DomainSpec.
-        Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto +optional
+        Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto
 
         :return: The io_threads_policy of this V1DomainSpec.
-        :rtype: V1IOThreadsPolicy
+        :rtype: str
         """
         return self._io_threads_policy
 
@@ -247,10 +247,10 @@ class V1DomainSpec(object):
     def io_threads_policy(self, io_threads_policy):
         """
         Sets the io_threads_policy of this V1DomainSpec.
-        Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto +optional
+        Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto
 
         :param io_threads_policy: The io_threads_policy of this V1DomainSpec.
-        :type: V1IOThreadsPolicy
+        :type: str
         """
 
         self._io_threads_policy = io_threads_policy
@@ -259,7 +259,7 @@ class V1DomainSpec(object):
     def machine(self):
         """
         Gets the machine of this V1DomainSpec.
-        Machine type. +optional
+        Machine type.
 
         :return: The machine of this V1DomainSpec.
         :rtype: V1Machine
@@ -270,7 +270,7 @@ class V1DomainSpec(object):
     def machine(self, machine):
         """
         Sets the machine of this V1DomainSpec.
-        Machine type. +optional
+        Machine type.
 
         :param machine: The machine of this V1DomainSpec.
         :type: V1Machine
@@ -282,7 +282,7 @@ class V1DomainSpec(object):
     def memory(self):
         """
         Gets the memory of this V1DomainSpec.
-        Memory allow specifying the VMI memory features. +optional
+        Memory allow specifying the VMI memory features.
 
         :return: The memory of this V1DomainSpec.
         :rtype: V1Memory
@@ -293,7 +293,7 @@ class V1DomainSpec(object):
     def memory(self, memory):
         """
         Sets the memory of this V1DomainSpec.
-        Memory allow specifying the VMI memory features. +optional
+        Memory allow specifying the VMI memory features.
 
         :param memory: The memory of this V1DomainSpec.
         :type: V1Memory

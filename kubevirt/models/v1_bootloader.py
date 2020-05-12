@@ -57,7 +57,7 @@ class V1Bootloader(object):
     def bios(self):
         """
         Gets the bios of this V1Bootloader.
-        If set (default), BIOS will be used. +optional
+        If set (default), BIOS will be used.
 
         :return: The bios of this V1Bootloader.
         :rtype: V1BIOS
@@ -68,7 +68,7 @@ class V1Bootloader(object):
     def bios(self, bios):
         """
         Sets the bios of this V1Bootloader.
-        If set (default), BIOS will be used. +optional
+        If set (default), BIOS will be used.
 
         :param bios: The bios of this V1Bootloader.
         :type: V1BIOS
@@ -80,7 +80,7 @@ class V1Bootloader(object):
     def efi(self):
         """
         Gets the efi of this V1Bootloader.
-        If set, EFI will be used instead of BIOS. +optional
+        If set, EFI will be used instead of BIOS.
 
         :return: The efi of this V1Bootloader.
         :rtype: V1EFI
@@ -91,7 +91,7 @@ class V1Bootloader(object):
     def efi(self, efi):
         """
         Sets the efi of this V1Bootloader.
-        If set, EFI will be used instead of BIOS. +optional
+        If set, EFI will be used instead of BIOS.
 
         :param efi: The efi of this V1Bootloader.
         :type: V1EFI

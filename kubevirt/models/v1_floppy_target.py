@@ -80,7 +80,7 @@ class V1FloppyTarget(object):
     def tray(self):
         """
         Gets the tray of this V1FloppyTarget.
-        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\". Defaults to closed. +optional
+        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\". Defaults to closed.
 
         :return: The tray of this V1FloppyTarget.
         :rtype: str
@@ -91,7 +91,7 @@ class V1FloppyTarget(object):
     def tray(self, tray):
         """
         Sets the tray of this V1FloppyTarget.
-        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\". Defaults to closed. +optional
+        Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\". Defaults to closed.
 
         :param tray: The tray of this V1FloppyTarget.
         :type: str

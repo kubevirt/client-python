@@ -82,7 +82,7 @@ class V1Probe(object):
     def failure_threshold(self):
         """
         Gets the failure_threshold of this V1Probe.
-        Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1. +optional
+        Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
 
         :return: The failure_threshold of this V1Probe.
         :rtype: int
@@ -93,7 +93,7 @@ class V1Probe(object):
     def failure_threshold(self, failure_threshold):
         """
         Sets the failure_threshold of this V1Probe.
-        Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1. +optional
+        Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
 
         :param failure_threshold: The failure_threshold of this V1Probe.
         :type: int
@@ -105,7 +105,7 @@ class V1Probe(object):
     def http_get(self):
         """
         Gets the http_get of this V1Probe.
-        HTTPGet specifies the http request to perform. +optional
+        HTTPGet specifies the http request to perform.
 
         :return: The http_get of this V1Probe.
         :rtype: V1HTTPGetAction
@@ -116,7 +116,7 @@ class V1Probe(object):
     def http_get(self, http_get):
         """
         Sets the http_get of this V1Probe.
-        HTTPGet specifies the http request to perform. +optional
+        HTTPGet specifies the http request to perform.
 
         :param http_get: The http_get of this V1Probe.
         :type: V1HTTPGetAction
@@ -128,7 +128,7 @@ class V1Probe(object):
     def initial_delay_seconds(self):
         """
         Gets the initial_delay_seconds of this V1Probe.
-        Number of seconds after the VirtualMachineInstance has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+        Number of seconds after the VirtualMachineInstance has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
 
         :return: The initial_delay_seconds of this V1Probe.
         :rtype: int
@@ -139,7 +139,7 @@ class V1Probe(object):
     def initial_delay_seconds(self, initial_delay_seconds):
         """
         Sets the initial_delay_seconds of this V1Probe.
-        Number of seconds after the VirtualMachineInstance has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+        Number of seconds after the VirtualMachineInstance has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
 
         :param initial_delay_seconds: The initial_delay_seconds of this V1Probe.
         :type: int
@@ -151,7 +151,7 @@ class V1Probe(object):
     def period_seconds(self):
         """
         Gets the period_seconds of this V1Probe.
-        How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. +optional
+        How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
 
         :return: The period_seconds of this V1Probe.
         :rtype: int
@@ -162,7 +162,7 @@ class V1Probe(object):
     def period_seconds(self, period_seconds):
         """
         Sets the period_seconds of this V1Probe.
-        How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. +optional
+        How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
 
         :param period_seconds: The period_seconds of this V1Probe.
         :type: int
@@ -174,7 +174,7 @@ class V1Probe(object):
     def success_threshold(self):
         """
         Gets the success_threshold of this V1Probe.
-        Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1. +optional
+        Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
 
         :return: The success_threshold of this V1Probe.
         :rtype: int
@@ -185,7 +185,7 @@ class V1Probe(object):
     def success_threshold(self, success_threshold):
         """
         Sets the success_threshold of this V1Probe.
-        Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1. +optional
+        Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
 
         :param success_threshold: The success_threshold of this V1Probe.
         :type: int
@@ -197,7 +197,7 @@ class V1Probe(object):
     def tcp_socket(self):
         """
         Gets the tcp_socket of this V1Probe.
-        TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported +optional
+        TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported
 
         :return: The tcp_socket of this V1Probe.
         :rtype: V1TCPSocketAction
@@ -208,7 +208,7 @@ class V1Probe(object):
     def tcp_socket(self, tcp_socket):
         """
         Sets the tcp_socket of this V1Probe.
-        TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported +optional
+        TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported
 
         :param tcp_socket: The tcp_socket of this V1Probe.
         :type: V1TCPSocketAction
@@ -220,7 +220,7 @@ class V1Probe(object):
     def timeout_seconds(self):
         """
         Gets the timeout_seconds of this V1Probe.
-        Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+        Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
 
         :return: The timeout_seconds of this V1Probe.
         :rtype: int
@@ -231,7 +231,7 @@ class V1Probe(object):
     def timeout_seconds(self, timeout_seconds):
         """
         Sets the timeout_seconds of this V1Probe.
-        Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional
+        Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
 
         :param timeout_seconds: The timeout_seconds of this V1Probe.
         :type: int

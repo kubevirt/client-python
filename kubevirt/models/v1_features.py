@@ -67,7 +67,7 @@ class V1Features(object):
     def acpi(self):
         """
         Gets the acpi of this V1Features.
-        ACPI enables/disables ACPI insidejsondata guest. Defaults to enabled. +optional
+        ACPI enables/disables ACPI insidejsondata guest. Defaults to enabled.
 
         :return: The acpi of this V1Features.
         :rtype: V1FeatureState
@@ -78,7 +78,7 @@ class V1Features(object):
     def acpi(self, acpi):
         """
         Sets the acpi of this V1Features.
-        ACPI enables/disables ACPI insidejsondata guest. Defaults to enabled. +optional
+        ACPI enables/disables ACPI insidejsondata guest. Defaults to enabled.
 
         :param acpi: The acpi of this V1Features.
         :type: V1FeatureState
@@ -90,7 +90,7 @@ class V1Features(object):
     def apic(self):
         """
         Gets the apic of this V1Features.
-        Defaults to the machine type setting. +optional
+        Defaults to the machine type setting.
 
         :return: The apic of this V1Features.
         :rtype: V1FeatureAPIC
@@ -101,7 +101,7 @@ class V1Features(object):
     def apic(self, apic):
         """
         Sets the apic of this V1Features.
-        Defaults to the machine type setting. +optional
+        Defaults to the machine type setting.
 
         :param apic: The apic of this V1Features.
         :type: V1FeatureAPIC
@@ -113,7 +113,7 @@ class V1Features(object):
     def hyperv(self):
         """
         Gets the hyperv of this V1Features.
-        Defaults to the machine type setting. +optional
+        Defaults to the machine type setting.
 
         :return: The hyperv of this V1Features.
         :rtype: V1FeatureHyperv
@@ -124,7 +124,7 @@ class V1Features(object):
     def hyperv(self, hyperv):
         """
         Sets the hyperv of this V1Features.
-        Defaults to the machine type setting. +optional
+        Defaults to the machine type setting.
 
         :param hyperv: The hyperv of this V1Features.
         :type: V1FeatureHyperv
@@ -136,7 +136,7 @@ class V1Features(object):
     def smm(self):
         """
         Gets the smm of this V1Features.
-        SMM enables/disables System Management Mode. TSEG not yet implemented. +optional
+        SMM enables/disables System Management Mode. TSEG not yet implemented.
 
         :return: The smm of this V1Features.
         :rtype: V1FeatureState
@@ -147,7 +147,7 @@ class V1Features(object):
     def smm(self, smm):
         """
         Sets the smm of this V1Features.
-        SMM enables/disables System Management Mode. TSEG not yet implemented. +optional
+        SMM enables/disables System Management Mode. TSEG not yet implemented.
 
         :param smm: The smm of this V1Features.
         :type: V1FeatureState

@@ -51,7 +51,8 @@ class V1TypedLocalObjectReference(object):
         self._kind = None
         self._name = None
 
-        self.api_group = api_group
+        if api_group is not None:
+          self.api_group = api_group
         self.kind = kind
         self.name = name
 
@@ -75,8 +76,6 @@ class V1TypedLocalObjectReference(object):
         :param api_group: The api_group of this V1TypedLocalObjectReference.
         :type: str
         """
-        if api_group is None:
-            raise ValueError("Invalid value for `api_group`, must not be `None`")
 
         self._api_group = api_group
 

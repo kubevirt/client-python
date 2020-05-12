@@ -62,7 +62,7 @@ class V1SecretVolumeSource(object):
     def optional(self):
         """
         Gets the optional of this V1SecretVolumeSource.
-        Specify whether the Secret or it's keys must be defined +optional
+        Specify whether the Secret or it's keys must be defined
 
         :return: The optional of this V1SecretVolumeSource.
         :rtype: bool
@@ -73,7 +73,7 @@ class V1SecretVolumeSource(object):
     def optional(self, optional):
         """
         Sets the optional of this V1SecretVolumeSource.
-        Specify whether the Secret or it's keys must be defined +optional
+        Specify whether the Secret or it's keys must be defined
 
         :param optional: The optional of this V1SecretVolumeSource.
         :type: bool
@@ -85,7 +85,7 @@ class V1SecretVolumeSource(object):
     def secret_name(self):
         """
         Gets the secret_name of this V1SecretVolumeSource.
-        Name of the secret in the pod's namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret +optional
+        Name of the secret in the pod's namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
 
         :return: The secret_name of this V1SecretVolumeSource.
         :rtype: str
@@ -96,7 +96,7 @@ class V1SecretVolumeSource(object):
     def secret_name(self, secret_name):
         """
         Sets the secret_name of this V1SecretVolumeSource.
-        Name of the secret in the pod's namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret +optional
+        Name of the secret in the pod's namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
 
         :param secret_name: The secret_name of this V1SecretVolumeSource.
         :type: str
@@ -108,7 +108,7 @@ class V1SecretVolumeSource(object):
     def volume_label(self):
         """
         Gets the volume_label of this V1SecretVolumeSource.
-        The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart). +optional
+        The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart).
 
         :return: The volume_label of this V1SecretVolumeSource.
         :rtype: str
@@ -119,7 +119,7 @@ class V1SecretVolumeSource(object):
     def volume_label(self, volume_label):
         """
         Sets the volume_label of this V1SecretVolumeSource.
-        The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart). +optional
+        The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart).
 
         :param volume_label: The volume_label of this V1SecretVolumeSource.
         :type: str

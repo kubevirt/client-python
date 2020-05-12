@@ -31,7 +31,7 @@ class V1Memory(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'guest': 'str',
+        'guest': 'ResourceQuantity',
         'hugepages': 'V1Hugepages'
     }
 
@@ -57,10 +57,10 @@ class V1Memory(object):
     def guest(self):
         """
         Gets the guest of this V1Memory.
-        Guest allows to specifying the amount of memory which is visible inside the Guest OS. The Guest must lie between Requests and Limits from the resources section. Defaults to the requested memory in the resources section if not specified. + optional
+        Guest allows to specifying the amount of memory which is visible inside the Guest OS. The Guest must lie between Requests and Limits from the resources section. Defaults to the requested memory in the resources section if not specified.
 
         :return: The guest of this V1Memory.
-        :rtype: str
+        :rtype: ResourceQuantity
         """
         return self._guest
 
@@ -68,10 +68,10 @@ class V1Memory(object):
     def guest(self, guest):
         """
         Sets the guest of this V1Memory.
-        Guest allows to specifying the amount of memory which is visible inside the Guest OS. The Guest must lie between Requests and Limits from the resources section. Defaults to the requested memory in the resources section if not specified. + optional
+        Guest allows to specifying the amount of memory which is visible inside the Guest OS. The Guest must lie between Requests and Limits from the resources section. Defaults to the requested memory in the resources section if not specified.
 
         :param guest: The guest of this V1Memory.
-        :type: str
+        :type: ResourceQuantity
         """
 
         self._guest = guest
@@ -80,7 +80,7 @@ class V1Memory(object):
     def hugepages(self):
         """
         Gets the hugepages of this V1Memory.
-        Hugepages allow to use hugepages for the VirtualMachineInstance instead of regular memory. +optional
+        Hugepages allow to use hugepages for the VirtualMachineInstance instead of regular memory.
 
         :return: The hugepages of this V1Memory.
         :rtype: V1Hugepages
@@ -91,7 +91,7 @@ class V1Memory(object):
     def hugepages(self, hugepages):
         """
         Sets the hugepages of this V1Memory.
-        Hugepages allow to use hugepages for the VirtualMachineInstance instead of regular memory. +optional
+        Hugepages allow to use hugepages for the VirtualMachineInstance instead of regular memory.
 
         :param hugepages: The hugepages of this V1Memory.
         :type: V1Hugepages

@@ -52,7 +52,7 @@ class V1EphemeralVolumeSource(object):
     def persistent_volume_claim(self):
         """
         Gets the persistent_volume_claim of this V1EphemeralVolumeSource.
-        PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims +optional
+        PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
         :return: The persistent_volume_claim of this V1EphemeralVolumeSource.
         :rtype: V1PersistentVolumeClaimVolumeSource
@@ -63,7 +63,7 @@ class V1EphemeralVolumeSource(object):
     def persistent_volume_claim(self, persistent_volume_claim):
         """
         Sets the persistent_volume_claim of this V1EphemeralVolumeSource.
-        PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims +optional
+        PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
         :param persistent_volume_claim: The persistent_volume_claim of this V1EphemeralVolumeSource.
         :type: V1PersistentVolumeClaimVolumeSource

@@ -65,7 +65,7 @@ class V1VirtualMachineInstanceReplicaSetSpec(object):
     def paused(self):
         """
         Gets the paused of this V1VirtualMachineInstanceReplicaSetSpec.
-        Indicates that the replica set is paused. +optional
+        Indicates that the replica set is paused.
 
         :return: The paused of this V1VirtualMachineInstanceReplicaSetSpec.
         :rtype: bool
@@ -76,7 +76,7 @@ class V1VirtualMachineInstanceReplicaSetSpec(object):
     def paused(self, paused):
         """
         Sets the paused of this V1VirtualMachineInstanceReplicaSetSpec.
-        Indicates that the replica set is paused. +optional
+        Indicates that the replica set is paused.
 
         :param paused: The paused of this V1VirtualMachineInstanceReplicaSetSpec.
         :type: bool
@@ -88,7 +88,7 @@ class V1VirtualMachineInstanceReplicaSetSpec(object):
     def replicas(self):
         """
         Gets the replicas of this V1VirtualMachineInstanceReplicaSetSpec.
-        Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1. +optional
+        Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.
 
         :return: The replicas of this V1VirtualMachineInstanceReplicaSetSpec.
         :rtype: int
@@ -99,7 +99,7 @@ class V1VirtualMachineInstanceReplicaSetSpec(object):
     def replicas(self, replicas):
         """
         Sets the replicas of this V1VirtualMachineInstanceReplicaSetSpec.
-        Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1. +optional
+        Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.
 
         :param replicas: The replicas of this V1VirtualMachineInstanceReplicaSetSpec.
         :type: int

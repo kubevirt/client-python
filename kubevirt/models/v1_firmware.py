@@ -62,7 +62,7 @@ class V1Firmware(object):
     def bootloader(self):
         """
         Gets the bootloader of this V1Firmware.
-        Settings to control the bootloader that is used. +optional
+        Settings to control the bootloader that is used.
 
         :return: The bootloader of this V1Firmware.
         :rtype: V1Bootloader
@@ -73,7 +73,7 @@ class V1Firmware(object):
     def bootloader(self, bootloader):
         """
         Sets the bootloader of this V1Firmware.
-        Settings to control the bootloader that is used. +optional
+        Settings to control the bootloader that is used.
 
         :param bootloader: The bootloader of this V1Firmware.
         :type: V1Bootloader

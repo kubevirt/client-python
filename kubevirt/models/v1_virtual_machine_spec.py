@@ -32,7 +32,7 @@ class V1VirtualMachineSpec(object):
     """
     swagger_types = {
         'data_volume_templates': 'list[V1alpha1DataVolume]',
-        'run_strategy': 'V1VirtualMachineRunStrategy',
+        'run_strategy': 'str',
         'running': 'bool',
         'template': 'V1VirtualMachineInstanceTemplateSpec'
     }
@@ -92,7 +92,7 @@ class V1VirtualMachineSpec(object):
         Running state indicates the requested running state of the VirtualMachineInstance mutually exclusive with Running
 
         :return: The run_strategy of this V1VirtualMachineSpec.
-        :rtype: V1VirtualMachineRunStrategy
+        :rtype: str
         """
         return self._run_strategy
 
@@ -103,7 +103,7 @@ class V1VirtualMachineSpec(object):
         Running state indicates the requested running state of the VirtualMachineInstance mutually exclusive with Running
 
         :param run_strategy: The run_strategy of this V1VirtualMachineSpec.
-        :type: V1VirtualMachineRunStrategy
+        :type: str
         """
 
         self._run_strategy = run_strategy

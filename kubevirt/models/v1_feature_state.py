@@ -52,7 +52,7 @@ class V1FeatureState(object):
     def enabled(self):
         """
         Gets the enabled of this V1FeatureState.
-        Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true. +optional
+        Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true.
 
         :return: The enabled of this V1FeatureState.
         :rtype: bool
@@ -63,7 +63,7 @@ class V1FeatureState(object):
     def enabled(self, enabled):
         """
         Sets the enabled of this V1FeatureState.
-        Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true. +optional
+        Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true.
 
         :param enabled: The enabled of this V1FeatureState.
         :type: bool

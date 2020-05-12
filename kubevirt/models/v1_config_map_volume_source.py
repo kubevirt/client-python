@@ -85,7 +85,7 @@ class V1ConfigMapVolumeSource(object):
     def optional(self):
         """
         Gets the optional of this V1ConfigMapVolumeSource.
-        Specify whether the ConfigMap or it's keys must be defined +optional
+        Specify whether the ConfigMap or it's keys must be defined
 
         :return: The optional of this V1ConfigMapVolumeSource.
         :rtype: bool
@@ -96,7 +96,7 @@ class V1ConfigMapVolumeSource(object):
     def optional(self, optional):
         """
         Sets the optional of this V1ConfigMapVolumeSource.
-        Specify whether the ConfigMap or it's keys must be defined +optional
+        Specify whether the ConfigMap or it's keys must be defined
 
         :param optional: The optional of this V1ConfigMapVolumeSource.
         :type: bool
@@ -108,7 +108,7 @@ class V1ConfigMapVolumeSource(object):
     def volume_label(self):
         """
         Gets the volume_label of this V1ConfigMapVolumeSource.
-        The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart). +optional
+        The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart).
 
         :return: The volume_label of this V1ConfigMapVolumeSource.
         :rtype: str
@@ -119,7 +119,7 @@ class V1ConfigMapVolumeSource(object):
     def volume_label(self, volume_label):
         """
         Sets the volume_label of this V1ConfigMapVolumeSource.
-        The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart). +optional
+        The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart).
 
         :param volume_label: The volume_label of this V1ConfigMapVolumeSource.
         :type: str

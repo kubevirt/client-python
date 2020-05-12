@@ -91,7 +91,7 @@ class V1ContainerDiskSource(object):
     def image_pull_policy(self):
         """
         Gets the image_pull_policy of this V1ContainerDiskSource.
-        Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images +optional
+        Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
 
         :return: The image_pull_policy of this V1ContainerDiskSource.
         :rtype: str
@@ -102,7 +102,7 @@ class V1ContainerDiskSource(object):
     def image_pull_policy(self, image_pull_policy):
         """
         Sets the image_pull_policy of this V1ContainerDiskSource.
-        Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images +optional
+        Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
 
         :param image_pull_policy: The image_pull_policy of this V1ContainerDiskSource.
         :type: str

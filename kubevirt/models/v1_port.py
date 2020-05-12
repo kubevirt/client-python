@@ -61,7 +61,7 @@ class V1Port(object):
     def name(self):
         """
         Gets the name of this V1Port.
-        If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services. +optional
+        If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.
 
         :return: The name of this V1Port.
         :rtype: str
@@ -72,7 +72,7 @@ class V1Port(object):
     def name(self, name):
         """
         Sets the name of this V1Port.
-        If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services. +optional
+        If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.
 
         :param name: The name of this V1Port.
         :type: str
@@ -109,7 +109,7 @@ class V1Port(object):
     def protocol(self):
         """
         Gets the protocol of this V1Port.
-        Protocol for port. Must be UDP or TCP. Defaults to \"TCP\". +optional
+        Protocol for port. Must be UDP or TCP. Defaults to \"TCP\".
 
         :return: The protocol of this V1Port.
         :rtype: str
@@ -120,7 +120,7 @@ class V1Port(object):
     def protocol(self, protocol):
         """
         Sets the protocol of this V1Port.
-        Protocol for port. Must be UDP or TCP. Defaults to \"TCP\". +optional
+        Protocol for port. Must be UDP or TCP. Defaults to \"TCP\".
 
         :param protocol: The protocol of this V1Port.
         :type: str

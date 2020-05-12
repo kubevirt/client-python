@@ -14,11 +14,15 @@
 from __future__ import absolute_import
 
 # import models into model package
+from .intstr_int_or_string import IntstrIntOrString
+from .resource_quantity import ResourceQuantity
+from .runtime_raw_extension import RuntimeRawExtension
 from .v1_api_group import V1APIGroup
 from .v1_api_group_list import V1APIGroupList
 from .v1_api_resource import V1APIResource
 from .v1_api_resource_list import V1APIResourceList
 from .v1_affinity import V1Affinity
+from .v1_bios import V1BIOS
 from .v1_bootloader import V1Bootloader
 from .v1_cd_rom_target import V1CDRomTarget
 from .v1_cpu import V1CPU
@@ -38,6 +42,7 @@ from .v1_devices import V1Devices
 from .v1_disk import V1Disk
 from .v1_disk_target import V1DiskTarget
 from .v1_domain_spec import V1DomainSpec
+from .v1_efi import V1EFI
 from .v1_empty_disk_source import V1EmptyDiskSource
 from .v1_ephemeral_volume_source import V1EphemeralVolumeSource
 from .v1_feature_apic import V1FeatureAPIC
@@ -46,6 +51,7 @@ from .v1_feature_spinlocks import V1FeatureSpinlocks
 from .v1_feature_state import V1FeatureState
 from .v1_feature_vendor_id import V1FeatureVendorID
 from .v1_features import V1Features
+from .v1_fields_v1 import V1FieldsV1
 from .v1_firmware import V1Firmware
 from .v1_floppy_target import V1FloppyTarget
 from .v1_gpu import V1GPU
@@ -59,6 +65,10 @@ from .v1_hyperv_timer import V1HypervTimer
 from .v1_i6300_esb_watchdog import V1I6300ESBWatchdog
 from .v1_input import V1Input
 from .v1_interface import V1Interface
+from .v1_interface_bridge import V1InterfaceBridge
+from .v1_interface_masquerade import V1InterfaceMasquerade
+from .v1_interface_sriov import V1InterfaceSRIOV
+from .v1_interface_slirp import V1InterfaceSlirp
 from .v1_kvm_timer import V1KVMTimer
 from .v1_label_selector import V1LabelSelector
 from .v1_label_selector_requirement import V1LabelSelectorRequirement
@@ -77,6 +87,7 @@ from .v1_node_selector_term import V1NodeSelectorTerm
 from .v1_object_meta import V1ObjectMeta
 from .v1_owner_reference import V1OwnerReference
 from .v1_pit_timer import V1PITTimer
+from .v1_patch import V1Patch
 from .v1_persistent_volume_claim_spec import V1PersistentVolumeClaimSpec
 from .v1_persistent_volume_claim_volume_source import V1PersistentVolumeClaimVolumeSource
 from .v1_pod_affinity import V1PodAffinity
@@ -92,6 +103,7 @@ from .v1_probe import V1Probe
 from .v1_rtc_timer import V1RTCTimer
 from .v1_resource_requirements import V1ResourceRequirements
 from .v1_restart_options import V1RestartOptions
+from .v1_rng import V1Rng
 from .v1_root_paths import V1RootPaths
 from .v1_secret_volume_source import V1SecretVolumeSource
 from .v1_server_address_by_client_cidr import V1ServerAddressByClientCIDR
@@ -100,6 +112,7 @@ from .v1_status import V1Status
 from .v1_status_cause import V1StatusCause
 from .v1_status_details import V1StatusDetails
 from .v1_tcp_socket_action import V1TCPSocketAction
+from .v1_time import V1Time
 from .v1_timer import V1Timer
 from .v1_toleration import V1Toleration
 from .v1_typed_local_object_reference import V1TypedLocalObjectReference
@@ -142,11 +155,13 @@ from .v1_watch_event import V1WatchEvent
 from .v1_watchdog import V1Watchdog
 from .v1_weighted_pod_affinity_term import V1WeightedPodAffinityTerm
 from .v1alpha1_data_volume import V1alpha1DataVolume
+from .v1alpha1_data_volume_blank_image import V1alpha1DataVolumeBlankImage
 from .v1alpha1_data_volume_source import V1alpha1DataVolumeSource
 from .v1alpha1_data_volume_source_http import V1alpha1DataVolumeSourceHTTP
 from .v1alpha1_data_volume_source_pvc import V1alpha1DataVolumeSourcePVC
 from .v1alpha1_data_volume_source_registry import V1alpha1DataVolumeSourceRegistry
 from .v1alpha1_data_volume_source_s3 import V1alpha1DataVolumeSourceS3
+from .v1alpha1_data_volume_source_upload import V1alpha1DataVolumeSourceUpload
 from .v1alpha1_data_volume_spec import V1alpha1DataVolumeSpec
 from .v1alpha1_data_volume_status import V1alpha1DataVolumeStatus
 from .v1_interface_bridge import V1InterfaceBridge

@@ -31,9 +31,9 @@ class V1ResourceRequirements(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'limits': 'object',
+        'limits': 'dict(str, ResourceQuantity)',
         'overcommit_guest_overhead': 'bool',
-        'requests': 'object'
+        'requests': 'dict(str, ResourceQuantity)'
     }
 
     attribute_map = {
@@ -62,10 +62,10 @@ class V1ResourceRequirements(object):
     def limits(self):
         """
         Gets the limits of this V1ResourceRequirements.
-        Limits describes the maximum amount of compute resources allowed. Valid resource keys are \"memory\" and \"cpu\". +optional
+        Limits describes the maximum amount of compute resources allowed. Valid resource keys are \"memory\" and \"cpu\".
 
         :return: The limits of this V1ResourceRequirements.
-        :rtype: object
+        :rtype: dict(str, ResourceQuantity)
         """
         return self._limits
 
@@ -73,10 +73,10 @@ class V1ResourceRequirements(object):
     def limits(self, limits):
         """
         Sets the limits of this V1ResourceRequirements.
-        Limits describes the maximum amount of compute resources allowed. Valid resource keys are \"memory\" and \"cpu\". +optional
+        Limits describes the maximum amount of compute resources allowed. Valid resource keys are \"memory\" and \"cpu\".
 
         :param limits: The limits of this V1ResourceRequirements.
-        :type: object
+        :type: dict(str, ResourceQuantity)
         """
 
         self._limits = limits
@@ -108,10 +108,10 @@ class V1ResourceRequirements(object):
     def requests(self):
         """
         Gets the requests of this V1ResourceRequirements.
-        Requests is a description of the initial vmi resources. Valid resource keys are \"memory\" and \"cpu\". +optional
+        Requests is a description of the initial vmi resources. Valid resource keys are \"memory\" and \"cpu\".
 
         :return: The requests of this V1ResourceRequirements.
-        :rtype: object
+        :rtype: dict(str, ResourceQuantity)
         """
         return self._requests
 
@@ -119,10 +119,10 @@ class V1ResourceRequirements(object):
     def requests(self, requests):
         """
         Sets the requests of this V1ResourceRequirements.
-        Requests is a description of the initial vmi resources. Valid resource keys are \"memory\" and \"cpu\". +optional
+        Requests is a description of the initial vmi resources. Valid resource keys are \"memory\" and \"cpu\".
 
         :param requests: The requests of this V1ResourceRequirements.
-        :type: object
+        :type: dict(str, ResourceQuantity)
         """
 
         self._requests = requests

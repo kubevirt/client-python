@@ -31,7 +31,7 @@ class V1HostDisk(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'capacity': 'str',
+        'capacity': 'ResourceQuantity',
         'path': 'str',
         'shared': 'bool',
         'type': 'str'
@@ -65,10 +65,10 @@ class V1HostDisk(object):
     def capacity(self):
         """
         Gets the capacity of this V1HostDisk.
-        Capacity of the sparse disk +optional
+        Capacity of the sparse disk
 
         :return: The capacity of this V1HostDisk.
-        :rtype: str
+        :rtype: ResourceQuantity
         """
         return self._capacity
 
@@ -76,10 +76,10 @@ class V1HostDisk(object):
     def capacity(self, capacity):
         """
         Sets the capacity of this V1HostDisk.
-        Capacity of the sparse disk +optional
+        Capacity of the sparse disk
 
         :param capacity: The capacity of this V1HostDisk.
-        :type: str
+        :type: ResourceQuantity
         """
 
         self._capacity = capacity

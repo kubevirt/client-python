@@ -31,19 +31,45 @@ class V1EFI(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        
+        'secure_boot': 'bool'
     }
 
     attribute_map = {
-        
+        'secure_boot': 'secureBoot'
     }
 
-    def __init__(self):
+    def __init__(self, secure_boot=None):
         """
         V1EFI - a model defined in Swagger
         """
 
+        self._secure_boot = None
 
+        if secure_boot is not None:
+          self.secure_boot = secure_boot
+
+    @property
+    def secure_boot(self):
+        """
+        Gets the secure_boot of this V1EFI.
+        If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to false
+
+        :return: The secure_boot of this V1EFI.
+        :rtype: bool
+        """
+        return self._secure_boot
+
+    @secure_boot.setter
+    def secure_boot(self, secure_boot):
+        """
+        Sets the secure_boot of this V1EFI.
+        If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to false
+
+        :param secure_boot: The secure_boot of this V1EFI.
+        :type: bool
+        """
+
+        self._secure_boot = secure_boot
 
     def to_dict(self):
         """

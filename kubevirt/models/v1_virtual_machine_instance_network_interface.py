@@ -95,7 +95,7 @@ class V1VirtualMachineInstanceNetworkInterface(object):
     def ip_address(self):
         """
         Gets the ip_address of this V1VirtualMachineInstanceNetworkInterface.
-        IP address of a Virtual Machine interface
+        IP address of a Virtual Machine interface. It is always the first item of IPs
 
         :return: The ip_address of this V1VirtualMachineInstanceNetworkInterface.
         :rtype: str
@@ -106,7 +106,7 @@ class V1VirtualMachineInstanceNetworkInterface(object):
     def ip_address(self, ip_address):
         """
         Sets the ip_address of this V1VirtualMachineInstanceNetworkInterface.
-        IP address of a Virtual Machine interface
+        IP address of a Virtual Machine interface. It is always the first item of IPs
 
         :param ip_address: The ip_address of this V1VirtualMachineInstanceNetworkInterface.
         :type: str

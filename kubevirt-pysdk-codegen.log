@@ -3,7 +3,11 @@
 [main] WARN io.swagger.util.PropertyDeserializer - no property from , null, {ENUM=null, TITLE=null, DESCRIPTION=CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
 Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata, DEFAULT=null, PATTERN=null, DESCRIMINATOR=null, MIN_ITEMS=null, MAX_ITEMS=null, MIN_PROPERTIES=null, MAX_PROPERTIES=null, MIN_LENGTH=null, MAX_LENGTH=null, MINIMUM=null, MAXIMUM=null, EXCLUSIVE_MINIMUM=null, EXCLUSIVE_MAXIMUM=null, UNIQUE_ITEMS=null, EXAMPLE=null, TYPE=, FORMAT=null, READ_ONLY=null, VENDOR_EXTENSIONS={}, MULTIPLE_OF=null}
+[main] WARN io.swagger.util.PropertyDeserializer - no property from , null, {ENUM=null, TITLE=null, DESCRIPTION=Last time we probed the condition., DEFAULT=null, PATTERN=null, DESCRIMINATOR=null, MIN_ITEMS=null, MAX_ITEMS=null, MIN_PROPERTIES=null, MAX_PROPERTIES=null, MIN_LENGTH=null, MAX_LENGTH=null, MINIMUM=null, MAXIMUM=null, EXCLUSIVE_MINIMUM=null, EXCLUSIVE_MAXIMUM=null, UNIQUE_ITEMS=null, EXAMPLE=null, TYPE=, FORMAT=null, READ_ONLY=null, VENDOR_EXTENSIONS={}, MULTIPLE_OF=null}
+[main] WARN io.swagger.util.PropertyDeserializer - no property from , null, {ENUM=null, TITLE=null, DESCRIPTION=Last time the condition transitioned from one status to another., DEFAULT=null, PATTERN=null, DESCRIMINATOR=null, MIN_ITEMS=null, MAX_ITEMS=null, MIN_PROPERTIES=null, MAX_PROPERTIES=null, MIN_LENGTH=null, MAX_LENGTH=null, MINIMUM=null, MAXIMUM=null, EXCLUSIVE_MINIMUM=null, EXCLUSIVE_MAXIMUM=null, UNIQUE_ITEMS=null, EXAMPLE=null, TYPE=, FORMAT=null, READ_ONLY=null, VENDOR_EXTENSIONS={}, MULTIPLE_OF=null}
 [main] WARN io.swagger.util.PropertyDeserializer - no property from , null, {ENUM=null, TITLE=null, DESCRIPTION=Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME., DEFAULT=null, PATTERN=null, DESCRIMINATOR=null, MIN_ITEMS=null, MAX_ITEMS=null, MIN_PROPERTIES=null, MAX_PROPERTIES=null, MIN_LENGTH=null, MAX_LENGTH=null, MINIMUM=null, MAXIMUM=null, EXCLUSIVE_MINIMUM=null, EXCLUSIVE_MAXIMUM=null, UNIQUE_ITEMS=null, EXAMPLE=null, TYPE=, FORMAT=null, READ_ONLY=null, VENDOR_EXTENSIONS={}, MULTIPLE_OF=null}
+[main] WARN io.swagger.util.PropertyDeserializer - no property from , null, {ENUM=null, TITLE=null, DESCRIPTION=null, DEFAULT=null, PATTERN=null, DESCRIMINATOR=null, MIN_ITEMS=null, MAX_ITEMS=null, MIN_PROPERTIES=null, MAX_PROPERTIES=null, MIN_LENGTH=null, MAX_LENGTH=null, MINIMUM=null, MAXIMUM=null, EXCLUSIVE_MINIMUM=null, EXCLUSIVE_MAXIMUM=null, UNIQUE_ITEMS=null, EXAMPLE=null, TYPE=, FORMAT=null, READ_ONLY=null, VENDOR_EXTENSIONS={}, MULTIPLE_OF=null}
+[main] WARN io.swagger.util.PropertyDeserializer - no property from , null, {ENUM=null, TITLE=null, DESCRIPTION=null, DEFAULT=null, PATTERN=null, DESCRIMINATOR=null, MIN_ITEMS=null, MAX_ITEMS=null, MIN_PROPERTIES=null, MAX_PROPERTIES=null, MIN_LENGTH=null, MAX_LENGTH=null, MINIMUM=null, MAXIMUM=null, EXCLUSIVE_MINIMUM=null, EXCLUSIVE_MAXIMUM=null, UNIQUE_ITEMS=null, EXAMPLE=null, TYPE=, FORMAT=null, READ_ONLY=null, VENDOR_EXTENSIONS={}, MULTIPLE_OF=null}
 [main] WARN io.swagger.util.PropertyDeserializer - no property from , null, {ENUM=null, TITLE=null, DESCRIPTION=null, DEFAULT=null, PATTERN=null, DESCRIMINATOR=null, MIN_ITEMS=null, MAX_ITEMS=null, MIN_PROPERTIES=null, MAX_PROPERTIES=null, MIN_LENGTH=null, MAX_LENGTH=null, MINIMUM=null, MAXIMUM=null, EXCLUSIVE_MINIMUM=null, EXCLUSIVE_MAXIMUM=null, UNIQUE_ITEMS=null, EXAMPLE=null, TYPE=, FORMAT=null, READ_ONLY=null, VENDOR_EXTENSIONS={}, MULTIPLE_OF=null}
 [main] WARN io.swagger.util.PropertyDeserializer - no property from , null, {ENUM=null, TITLE=null, DESCRIPTION=null, DEFAULT=null, PATTERN=null, DESCRIMINATOR=null, MIN_ITEMS=null, MAX_ITEMS=null, MIN_PROPERTIES=null, MAX_PROPERTIES=null, MIN_LENGTH=null, MAX_LENGTH=null, MINIMUM=null, MAXIMUM=null, EXCLUSIVE_MINIMUM=null, EXCLUSIVE_MAXIMUM=null, UNIQUE_ITEMS=null, EXAMPLE=null, TYPE=, FORMAT=null, READ_ONLY=null, VENDOR_EXTENSIONS={}, MULTIPLE_OF=null}
 [main] WARN io.swagger.util.PropertyDeserializer - no property from , null, {ENUM=null, TITLE=null, DESCRIPTION=null, DEFAULT=null, PATTERN=null, DESCRIMINATOR=null, MIN_ITEMS=null, MAX_ITEMS=null, MIN_PROPERTIES=null, MAX_PROPERTIES=null, MIN_LENGTH=null, MAX_LENGTH=null, MINIMUM=null, MAXIMUM=null, EXCLUSIVE_MINIMUM=null, EXCLUSIVE_MAXIMUM=null, UNIQUE_ITEMS=null, EXAMPLE=null, TYPE=, FORMAT=null, READ_ONLY=null, VENDOR_EXTENSIONS={}, MULTIPLE_OF=null}
@@ -237,9 +241,18 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_patch.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_patch.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1Patch.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_persistent_volume_claim.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_persistent_volume_claim.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1PersistentVolumeClaim.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_persistent_volume_claim_condition.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_persistent_volume_claim_condition.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1PersistentVolumeClaimCondition.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_persistent_volume_claim_spec.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_persistent_volume_claim_spec.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1PersistentVolumeClaimSpec.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_persistent_volume_claim_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_persistent_volume_claim_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1PersistentVolumeClaimStatus.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_persistent_volume_claim_volume_source.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_persistent_volume_claim_volume_source.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1PersistentVolumeClaimVolumeSource.md
@@ -465,6 +478,45 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1alpha1_data_volume_status.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1alpha1_data_volume_status.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1alpha1DataVolumeStatus.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1alpha1_source_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1alpha1_source_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1alpha1SourceSpec.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1alpha1_virtual_machine_snapshot.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1alpha1_virtual_machine_snapshot.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1alpha1VirtualMachineSnapshot.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1alpha1_virtual_machine_snapshot_condition.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1alpha1_virtual_machine_snapshot_condition.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1alpha1VirtualMachineSnapshotCondition.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1alpha1_virtual_machine_snapshot_content.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1alpha1_virtual_machine_snapshot_content.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1alpha1VirtualMachineSnapshotContent.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1alpha1_virtual_machine_snapshot_content_list.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1alpha1_virtual_machine_snapshot_content_list.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1alpha1VirtualMachineSnapshotContentList.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1alpha1_virtual_machine_snapshot_content_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1alpha1_virtual_machine_snapshot_content_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1alpha1VirtualMachineSnapshotContentSpec.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1alpha1_virtual_machine_snapshot_content_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1alpha1_virtual_machine_snapshot_content_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1alpha1VirtualMachineSnapshotContentStatus.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1alpha1_virtual_machine_snapshot_error.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1alpha1_virtual_machine_snapshot_error.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1alpha1VirtualMachineSnapshotError.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1alpha1_virtual_machine_snapshot_list.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1alpha1_virtual_machine_snapshot_list.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1alpha1VirtualMachineSnapshotList.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1alpha1_virtual_machine_snapshot_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1alpha1_virtual_machine_snapshot_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1alpha1VirtualMachineSnapshotSpec.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1alpha1_virtual_machine_snapshot_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1alpha1_virtual_machine_snapshot_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1alpha1VirtualMachineSnapshotStatus.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1alpha1_volume_backup.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1alpha1_volume_backup.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1alpha1VolumeBackup.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1alpha1_volume_snapshot_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1alpha1_volume_snapshot_status.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1alpha1VolumeSnapshotStatus.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/apis/default_api.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_default_api.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/DefaultApi.md

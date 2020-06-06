@@ -34,6 +34,7 @@ class V1VirtualMachineStatus(object):
         'conditions': 'list[V1VirtualMachineCondition]',
         'created': 'bool',
         'ready': 'bool',
+        'snapshot_in_progress': 'str',
         'state_change_requests': 'list[V1VirtualMachineStateChangeRequest]'
     }
 
@@ -41,10 +42,11 @@ class V1VirtualMachineStatus(object):
         'conditions': 'conditions',
         'created': 'created',
         'ready': 'ready',
+        'snapshot_in_progress': 'snapshotInProgress',
         'state_change_requests': 'stateChangeRequests'
     }
 
-    def __init__(self, conditions=None, created=None, ready=None, state_change_requests=None):
+    def __init__(self, conditions=None, created=None, ready=None, snapshot_in_progress=None, state_change_requests=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class V1VirtualMachineStatus(object):
         self._conditions = None
         self._created = None
         self._ready = None
+        self._snapshot_in_progress = None
         self._state_change_requests = None
 
         if conditions is not None:
@@ -60,6 +63,8 @@ class V1VirtualMachineStatus(object):
           self.created = created
         if ready is not None:
           self.ready = ready
+        if snapshot_in_progress is not None:
+          self.snapshot_in_progress = snapshot_in_progress
         if state_change_requests is not None:
           self.state_change_requests = state_change_requests
 
@@ -131,6 +136,29 @@ class V1VirtualMachineStatus(object):
         """
 
         self._ready = ready
+
+    @property
+    def snapshot_in_progress(self):
+        """
+        Gets the snapshot_in_progress of this V1VirtualMachineStatus.
+        SnapshotInProgress is the name of the VirtualMachineSnapshot currently executing
+
+        :return: The snapshot_in_progress of this V1VirtualMachineStatus.
+        :rtype: str
+        """
+        return self._snapshot_in_progress
+
+    @snapshot_in_progress.setter
+    def snapshot_in_progress(self, snapshot_in_progress):
+        """
+        Sets the snapshot_in_progress of this V1VirtualMachineStatus.
+        SnapshotInProgress is the name of the VirtualMachineSnapshot currently executing
+
+        :param snapshot_in_progress: The snapshot_in_progress of this V1VirtualMachineStatus.
+        :type: str
+        """
+
+        self._snapshot_in_progress = snapshot_in_progress
 
     @property
     def state_change_requests(self):

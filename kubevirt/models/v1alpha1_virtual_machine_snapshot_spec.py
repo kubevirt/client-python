@@ -31,26 +31,47 @@ class V1alpha1VirtualMachineSnapshotSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'source': 'V1TypedLocalObjectReference',
-        'time': 'str'
+        'deletion_policy': 'str',
+        'source': 'V1TypedLocalObjectReference'
     }
 
     attribute_map = {
-        'source': 'source',
-        'time': 'time'
+        'deletion_policy': 'deletionPolicy',
+        'source': 'source'
     }
 
-    def __init__(self, source=None, time=None):
+    def __init__(self, deletion_policy=None, source=None):
         """
         V1alpha1VirtualMachineSnapshotSpec - a model defined in Swagger
         """
 
+        self._deletion_policy = None
         self._source = None
-        self._time = None
 
+        if deletion_policy is not None:
+          self.deletion_policy = deletion_policy
         self.source = source
-        if time is not None:
-          self.time = time
+
+    @property
+    def deletion_policy(self):
+        """
+        Gets the deletion_policy of this V1alpha1VirtualMachineSnapshotSpec.
+
+        :return: The deletion_policy of this V1alpha1VirtualMachineSnapshotSpec.
+        :rtype: str
+        """
+        return self._deletion_policy
+
+    @deletion_policy.setter
+    def deletion_policy(self, deletion_policy):
+        """
+        Sets the deletion_policy of this V1alpha1VirtualMachineSnapshotSpec.
+
+        :param deletion_policy: The deletion_policy of this V1alpha1VirtualMachineSnapshotSpec.
+        :type: str
+        """
+
+        self._deletion_policy = deletion_policy
 
     @property
     def source(self):
@@ -74,27 +95,6 @@ class V1alpha1VirtualMachineSnapshotSpec(object):
             raise ValueError("Invalid value for `source`, must not be `None`")
 
         self._source = source
-
-    @property
-    def time(self):
-        """
-        Gets the time of this V1alpha1VirtualMachineSnapshotSpec.
-
-        :return: The time of this V1alpha1VirtualMachineSnapshotSpec.
-        :rtype: str
-        """
-        return self._time
-
-    @time.setter
-    def time(self, time):
-        """
-        Sets the time of this V1alpha1VirtualMachineSnapshotSpec.
-
-        :param time: The time of this V1alpha1VirtualMachineSnapshotSpec.
-        :type: str
-        """
-
-        self._time = time
 
     def to_dict(self):
         """

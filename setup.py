@@ -15,7 +15,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "kubevirt-py"
-VERSION = "v0.30.0-90-g5665b11c"
+VERSION = "v0.30.0-102-gb8543ba8"
 # To install the library, run the following
 #
 # python setup.py install

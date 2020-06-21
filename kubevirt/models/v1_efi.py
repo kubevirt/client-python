@@ -52,7 +52,7 @@ class V1EFI(object):
     def secure_boot(self):
         """
         Gets the secure_boot of this V1EFI.
-        If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to false
+        If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to true
 
         :return: The secure_boot of this V1EFI.
         :rtype: bool
@@ -63,7 +63,7 @@ class V1EFI(object):
     def secure_boot(self, secure_boot):
         """
         Sets the secure_boot of this V1EFI.
-        If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to false
+        If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to true
 
         :param secure_boot: The secure_boot of this V1EFI.
         :type: bool

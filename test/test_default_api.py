@@ -223,6 +223,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_func1(self):
+        """
+        Test case for func1
+
+        
+        """
+        pass
+
     def test_func7(self):
         """
         Test case for func7

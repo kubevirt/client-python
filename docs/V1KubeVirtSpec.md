@@ -1,0 +1,17 @@
+# V1KubeVirtSpec
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**certificate_rotate_strategy** | [**V1KubeVirtCertificateRotateStrategy**](V1KubeVirtCertificateRotateStrategy.md) |  | [optional] 
+**configuration** | [**V1KubeVirtConfiguration**](V1KubeVirtConfiguration.md) | holds kubevirt configurations. same as the virt-configMap | [optional] 
+**image_pull_policy** | **str** | The ImagePullPolicy to use. | [optional] 
+**image_registry** | **str** | The image registry to pull the container images from Defaults to the same registry the operator&#39;s container image is pulled from. | [optional] 
+**image_tag** | **str** | The image tag to use for the continer images installed. Defaults to the same tag as the operator&#39;s container image. | [optional] 
+**monitor_account** | **str** | The name of the Prometheus service account that needs read-access to KubeVirt endpoints Defaults to prometheus-k8s | [optional] 
+**monitor_namespace** | **str** | The namespace Prometheus is deployed in Defaults to openshift-monitor | [optional] 
+**uninstall_strategy** | **str** | Specifies if kubevirt can be deleted if workloads are still present. This is mainly a precaution to avoid accidental data loss | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

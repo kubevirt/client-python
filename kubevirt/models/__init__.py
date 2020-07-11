@@ -38,10 +38,12 @@ from .v1_dhcp_options import V1DHCPOptions
 from .v1_dhcp_private_options import V1DHCPPrivateOptions
 from .v1_data_volume_source import V1DataVolumeSource
 from .v1_delete_options import V1DeleteOptions
+from .v1_developer_configuration import V1DeveloperConfiguration
 from .v1_devices import V1Devices
 from .v1_disk import V1Disk
 from .v1_disk_target import V1DiskTarget
 from .v1_domain_spec import V1DomainSpec
+from .v1_duration import V1Duration
 from .v1_efi import V1EFI
 from .v1_empty_disk_source import V1EmptyDiskSource
 from .v1_ephemeral_volume_source import V1EphemeralVolumeSource
@@ -70,6 +72,14 @@ from .v1_interface_masquerade import V1InterfaceMasquerade
 from .v1_interface_sriov import V1InterfaceSRIOV
 from .v1_interface_slirp import V1InterfaceSlirp
 from .v1_kvm_timer import V1KVMTimer
+from .v1_kube_virt import V1KubeVirt
+from .v1_kube_virt_certificate_rotate_strategy import V1KubeVirtCertificateRotateStrategy
+from .v1_kube_virt_condition import V1KubeVirtCondition
+from .v1_kube_virt_configuration import V1KubeVirtConfiguration
+from .v1_kube_virt_list import V1KubeVirtList
+from .v1_kube_virt_self_sign_configuration import V1KubeVirtSelfSignConfiguration
+from .v1_kube_virt_spec import V1KubeVirtSpec
+from .v1_kube_virt_status import V1KubeVirtStatus
 from .v1_label_selector import V1LabelSelector
 from .v1_label_selector_requirement import V1LabelSelectorRequirement
 from .v1_list_meta import V1ListMeta
@@ -78,8 +88,10 @@ from .v1_lun_target import V1LunTarget
 from .v1_machine import V1Machine
 from .v1_managed_fields_entry import V1ManagedFieldsEntry
 from .v1_memory import V1Memory
+from .v1_migration_configuration import V1MigrationConfiguration
 from .v1_multus_network import V1MultusNetwork
 from .v1_network import V1Network
+from .v1_network_configuration import V1NetworkConfiguration
 from .v1_node_affinity import V1NodeAffinity
 from .v1_node_selector import V1NodeSelector
 from .v1_node_selector_requirement import V1NodeSelectorRequirement
@@ -108,6 +120,7 @@ from .v1_resource_requirements import V1ResourceRequirements
 from .v1_restart_options import V1RestartOptions
 from .v1_rng import V1Rng
 from .v1_root_paths import V1RootPaths
+from .v1_sm_bios_configuration import V1SMBiosConfiguration
 from .v1_secret_volume_source import V1SecretVolumeSource
 from .v1_server_address_by_client_cidr import V1ServerAddressByClientCIDR
 from .v1_service_account_volume_source import V1ServiceAccountVolumeSource

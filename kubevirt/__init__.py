@@ -38,10 +38,12 @@ from .models.v1_dhcp_options import V1DHCPOptions
 from .models.v1_dhcp_private_options import V1DHCPPrivateOptions
 from .models.v1_data_volume_source import V1DataVolumeSource
 from .models.v1_delete_options import V1DeleteOptions
+from .models.v1_developer_configuration import V1DeveloperConfiguration
 from .models.v1_devices import V1Devices
 from .models.v1_disk import V1Disk
 from .models.v1_disk_target import V1DiskTarget
 from .models.v1_domain_spec import V1DomainSpec
+from .models.v1_duration import V1Duration
 from .models.v1_efi import V1EFI
 from .models.v1_empty_disk_source import V1EmptyDiskSource
 from .models.v1_ephemeral_volume_source import V1EphemeralVolumeSource
@@ -70,6 +72,14 @@ from .models.v1_interface_masquerade import V1InterfaceMasquerade
 from .models.v1_interface_sriov import V1InterfaceSRIOV
 from .models.v1_interface_slirp import V1InterfaceSlirp
 from .models.v1_kvm_timer import V1KVMTimer
+from .models.v1_kube_virt import V1KubeVirt
+from .models.v1_kube_virt_certificate_rotate_strategy import V1KubeVirtCertificateRotateStrategy
+from .models.v1_kube_virt_condition import V1KubeVirtCondition
+from .models.v1_kube_virt_configuration import V1KubeVirtConfiguration
+from .models.v1_kube_virt_list import V1KubeVirtList
+from .models.v1_kube_virt_self_sign_configuration import V1KubeVirtSelfSignConfiguration
+from .models.v1_kube_virt_spec import V1KubeVirtSpec
+from .models.v1_kube_virt_status import V1KubeVirtStatus
 from .models.v1_label_selector import V1LabelSelector
 from .models.v1_label_selector_requirement import V1LabelSelectorRequirement
 from .models.v1_list_meta import V1ListMeta
@@ -78,8 +88,10 @@ from .models.v1_lun_target import V1LunTarget
 from .models.v1_machine import V1Machine
 from .models.v1_managed_fields_entry import V1ManagedFieldsEntry
 from .models.v1_memory import V1Memory
+from .models.v1_migration_configuration import V1MigrationConfiguration
 from .models.v1_multus_network import V1MultusNetwork
 from .models.v1_network import V1Network
+from .models.v1_network_configuration import V1NetworkConfiguration
 from .models.v1_node_affinity import V1NodeAffinity
 from .models.v1_node_selector import V1NodeSelector
 from .models.v1_node_selector_requirement import V1NodeSelectorRequirement
@@ -108,6 +120,7 @@ from .models.v1_resource_requirements import V1ResourceRequirements
 from .models.v1_restart_options import V1RestartOptions
 from .models.v1_rng import V1Rng
 from .models.v1_root_paths import V1RootPaths
+from .models.v1_sm_bios_configuration import V1SMBiosConfiguration
 from .models.v1_secret_volume_source import V1SecretVolumeSource
 from .models.v1_server_address_by_client_cidr import V1ServerAddressByClientCIDR
 from .models.v1_service_account_volume_source import V1ServiceAccountVolumeSource

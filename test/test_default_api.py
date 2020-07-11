@@ -47,6 +47,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_create_namespaced_kube_virt(self):
+        """
+        Test case for create_namespaced_kube_virt
+
+        
+        """
+        pass
+
     def test_create_namespaced_virtual_machine(self):
         """
         Test case for create_namespaced_virtual_machine
@@ -103,6 +111,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_collection_namespaced_kube_virt(self):
+        """
+        Test case for delete_collection_namespaced_kube_virt
+
+        
+        """
+        pass
+
     def test_delete_collection_namespaced_virtual_machine(self):
         """
         Test case for delete_collection_namespaced_virtual_machine
@@ -154,6 +170,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_delete_collection_namespaced_virtual_machine_snapshot_content(self):
         """
         Test case for delete_collection_namespaced_virtual_machine_snapshot_content
+
+        
+        """
+        pass
+
+    def test_delete_namespaced_kube_virt(self):
+        """
+        Test case for delete_namespaced_kube_virt
 
         
         """
@@ -311,6 +335,22 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_list_kube_virt_for_all_namespaces(self):
+        """
+        Test case for list_kube_virt_for_all_namespaces
+
+        
+        """
+        pass
+
+    def test_list_namespaced_kube_virt(self):
+        """
+        Test case for list_namespaced_kube_virt
+
+        
+        """
+        pass
+
     def test_list_namespaced_virtual_machine(self):
         """
         Test case for list_namespaced_virtual_machine
@@ -431,6 +471,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_namespaced_kube_virt(self):
+        """
+        Test case for patch_namespaced_kube_virt
+
+        
+        """
+        pass
+
     def test_patch_namespaced_virtual_machine(self):
         """
         Test case for patch_namespaced_virtual_machine
@@ -495,6 +543,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_read_namespaced_kube_virt(self):
+        """
+        Test case for read_namespaced_kube_virt
+
+        
+        """
+        pass
+
     def test_read_namespaced_virtual_machine(self):
         """
         Test case for read_namespaced_virtual_machine
@@ -554,6 +610,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_rename(self):
         """
         Test case for rename
+
+        
+        """
+        pass
+
+    def test_replace_namespaced_kube_virt(self):
+        """
+        Test case for replace_namespaced_kube_virt
 
         
         """
@@ -674,6 +738,22 @@ class TestDefaultApi(unittest.TestCase):
     def test_vnc(self):
         """
         Test case for vnc
+
+        
+        """
+        pass
+
+    def test_watch_kube_virt_list_for_all_namespaces(self):
+        """
+        Test case for watch_kube_virt_list_for_all_namespaces
+
+        
+        """
+        pass
+
+    def test_watch_namespaced_kube_virt(self):
+        """
+        Test case for watch_namespaced_kube_virt
 
         
         """

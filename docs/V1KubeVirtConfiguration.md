@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **network** | [**V1NetworkConfiguration**](V1NetworkConfiguration.md) |  | [optional] 
 **ovmf_path** | **str** |  | [optional] 
 **selinux_launcher_type** | **str** |  | [optional] 
-**smbi_os** | [**V1SMBiosConfiguration**](V1SMBiosConfiguration.md) |  | [optional] 
+**smbios** | [**V1SMBiosConfiguration**](V1SMBiosConfiguration.md) |  | [optional] 
 **supported_guest_agent_versions** | **list[str]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

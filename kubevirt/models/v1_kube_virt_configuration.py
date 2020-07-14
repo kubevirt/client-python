@@ -41,7 +41,7 @@ class V1KubeVirtConfiguration(object):
         'network': 'V1NetworkConfiguration',
         'ovmf_path': 'str',
         'selinux_launcher_type': 'str',
-        'smbi_os': 'V1SMBiosConfiguration',
+        'smbios': 'V1SMBiosConfiguration',
         'supported_guest_agent_versions': 'list[str]'
     }
 
@@ -56,11 +56,11 @@ class V1KubeVirtConfiguration(object):
         'network': 'network',
         'ovmf_path': 'ovmfPath',
         'selinux_launcher_type': 'selinuxLauncherType',
-        'smbi_os': 'smbiOS',
+        'smbios': 'smbios',
         'supported_guest_agent_versions': 'supportedGuestAgentVersions'
     }
 
-    def __init__(self, cpu_model=None, cpu_request=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, migrations=None, network=None, ovmf_path=None, selinux_launcher_type=None, smbi_os=None, supported_guest_agent_versions=None):
+    def __init__(self, cpu_model=None, cpu_request=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, migrations=None, network=None, ovmf_path=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -75,7 +75,7 @@ class V1KubeVirtConfiguration(object):
         self._network = None
         self._ovmf_path = None
         self._selinux_launcher_type = None
-        self._smbi_os = None
+        self._smbios = None
         self._supported_guest_agent_versions = None
 
         if cpu_model is not None:
@@ -98,8 +98,8 @@ class V1KubeVirtConfiguration(object):
           self.ovmf_path = ovmf_path
         if selinux_launcher_type is not None:
           self.selinux_launcher_type = selinux_launcher_type
-        if smbi_os is not None:
-          self.smbi_os = smbi_os
+        if smbios is not None:
+          self.smbios = smbios
         if supported_guest_agent_versions is not None:
           self.supported_guest_agent_versions = supported_guest_agent_versions
 
@@ -314,25 +314,25 @@ class V1KubeVirtConfiguration(object):
         self._selinux_launcher_type = selinux_launcher_type
 
     @property
-    def smbi_os(self):
+    def smbios(self):
         """
-        Gets the smbi_os of this V1KubeVirtConfiguration.
+        Gets the smbios of this V1KubeVirtConfiguration.
 
-        :return: The smbi_os of this V1KubeVirtConfiguration.
+        :return: The smbios of this V1KubeVirtConfiguration.
         :rtype: V1SMBiosConfiguration
         """
-        return self._smbi_os
+        return self._smbios
 
-    @smbi_os.setter
-    def smbi_os(self, smbi_os):
+    @smbios.setter
+    def smbios(self, smbios):
         """
-        Sets the smbi_os of this V1KubeVirtConfiguration.
+        Sets the smbios of this V1KubeVirtConfiguration.
 
-        :param smbi_os: The smbi_os of this V1KubeVirtConfiguration.
+        :param smbios: The smbios of this V1KubeVirtConfiguration.
         :type: V1SMBiosConfiguration
         """
 
-        self._smbi_os = smbi_os
+        self._smbios = smbios
 
     @property
     def supported_guest_agent_versions(self):

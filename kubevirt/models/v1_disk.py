@@ -37,6 +37,7 @@ class V1Disk(object):
         'dedicated_io_thread': 'bool',
         'disk': 'V1DiskTarget',
         'floppy': 'V1FloppyTarget',
+        'io': 'str',
         'lun': 'V1LunTarget',
         'name': 'str',
         'serial': 'str',
@@ -50,13 +51,14 @@ class V1Disk(object):
         'dedicated_io_thread': 'dedicatedIOThread',
         'disk': 'disk',
         'floppy': 'floppy',
+        'io': 'io',
         'lun': 'lun',
         'name': 'name',
         'serial': 'serial',
         'tag': 'tag'
     }
 
-    def __init__(self, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, floppy=None, lun=None, name=None, serial=None, tag=None):
+    def __init__(self, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, floppy=None, io=None, lun=None, name=None, serial=None, tag=None):
         """
         V1Disk - a model defined in Swagger
         """
@@ -67,6 +69,7 @@ class V1Disk(object):
         self._dedicated_io_thread = None
         self._disk = None
         self._floppy = None
+        self._io = None
         self._lun = None
         self._name = None
         self._serial = None
@@ -84,6 +87,8 @@ class V1Disk(object):
           self.disk = disk
         if floppy is not None:
           self.floppy = floppy
+        if io is not None:
+          self.io = io
         if lun is not None:
           self.lun = lun
         self.name = name
@@ -229,6 +234,29 @@ class V1Disk(object):
         """
 
         self._floppy = floppy
+
+    @property
+    def io(self):
+        """
+        Gets the io of this V1Disk.
+        IO specifies which QEMU disk IO mode should be used. Supported values are: native, default, threads.
+
+        :return: The io of this V1Disk.
+        :rtype: str
+        """
+        return self._io
+
+    @io.setter
+    def io(self, io):
+        """
+        Sets the io of this V1Disk.
+        IO specifies which QEMU disk IO mode should be used. Supported values are: native, default, threads.
+
+        :param io: The io of this V1Disk.
+        :type: str
+        """
+
+        self._io = io
 
     @property
     def lun(self):

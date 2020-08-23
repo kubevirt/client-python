@@ -37,6 +37,7 @@ class V1KubeVirtConfiguration(object):
         'emulated_machines': 'list[str]',
         'image_pull_policy': 'str',
         'machine_type': 'str',
+        'mem_balloon_stats_period': 'int',
         'migrations': 'V1MigrationConfiguration',
         'network': 'V1NetworkConfiguration',
         'ovmf_path': 'str',
@@ -52,6 +53,7 @@ class V1KubeVirtConfiguration(object):
         'emulated_machines': 'emulatedMachines',
         'image_pull_policy': 'imagePullPolicy',
         'machine_type': 'machineType',
+        'mem_balloon_stats_period': 'memBalloonStatsPeriod',
         'migrations': 'migrations',
         'network': 'network',
         'ovmf_path': 'ovmfPath',
@@ -60,7 +62,7 @@ class V1KubeVirtConfiguration(object):
         'supported_guest_agent_versions': 'supportedGuestAgentVersions'
     }
 
-    def __init__(self, cpu_model=None, cpu_request=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, migrations=None, network=None, ovmf_path=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None):
+    def __init__(self, cpu_model=None, cpu_request=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, mem_balloon_stats_period=None, migrations=None, network=None, ovmf_path=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class V1KubeVirtConfiguration(object):
         self._emulated_machines = None
         self._image_pull_policy = None
         self._machine_type = None
+        self._mem_balloon_stats_period = None
         self._migrations = None
         self._network = None
         self._ovmf_path = None
@@ -90,6 +93,8 @@ class V1KubeVirtConfiguration(object):
           self.image_pull_policy = image_pull_policy
         if machine_type is not None:
           self.machine_type = machine_type
+        if mem_balloon_stats_period is not None:
+          self.mem_balloon_stats_period = mem_balloon_stats_period
         if migrations is not None:
           self.migrations = migrations
         if network is not None:
@@ -228,6 +233,27 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._machine_type = machine_type
+
+    @property
+    def mem_balloon_stats_period(self):
+        """
+        Gets the mem_balloon_stats_period of this V1KubeVirtConfiguration.
+
+        :return: The mem_balloon_stats_period of this V1KubeVirtConfiguration.
+        :rtype: int
+        """
+        return self._mem_balloon_stats_period
+
+    @mem_balloon_stats_period.setter
+    def mem_balloon_stats_period(self, mem_balloon_stats_period):
+        """
+        Sets the mem_balloon_stats_period of this V1KubeVirtConfiguration.
+
+        :param mem_balloon_stats_period: The mem_balloon_stats_period of this V1KubeVirtConfiguration.
+        :type: int
+        """
+
+        self._mem_balloon_stats_period = mem_balloon_stats_period
 
     @property
     def migrations(self):

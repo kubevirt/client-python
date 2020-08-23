@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **emulated_machines** | **list[str]** |  | [optional] 
 **image_pull_policy** | **str** |  | [optional] 
 **machine_type** | **str** |  | [optional] 
+**mem_balloon_stats_period** | **int** |  | [optional] 
 **migrations** | [**V1MigrationConfiguration**](V1MigrationConfiguration.md) |  | [optional] 
 **network** | [**V1NetworkConfiguration**](V1NetworkConfiguration.md) |  | [optional] 
 **ovmf_path** | **str** |  | [optional] 

@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **image_tag** | **str** | The image tag to use for the continer images installed. Defaults to the same tag as the operator&#39;s container image. | [optional] 
 **monitor_account** | **str** | The name of the Prometheus service account that needs read-access to KubeVirt endpoints Defaults to prometheus-k8s | [optional] 
 **monitor_namespace** | **str** | The namespace Prometheus is deployed in Defaults to openshift-monitor | [optional] 
+**product_name** | **str** | Designate the apps.kubevirt.io/part-of label for KubeVirt components. Useful if KubeVirt is included as part of a product. If ProductName is not specified, the part-of label will be omitted. | [optional] 
+**product_version** | **str** | Designate the apps.kubevirt.io/version label for KubeVirt components. Useful if KubeVirt is included as part of a product. If ProductVersion is not specified, KubeVirt&#39;s version will be used. | [optional] 
 **uninstall_strategy** | **str** | Specifies if kubevirt can be deleted if workloads are still present. This is mainly a precaution to avoid accidental data loss | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

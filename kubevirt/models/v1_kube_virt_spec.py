@@ -38,6 +38,8 @@ class V1KubeVirtSpec(object):
         'image_tag': 'str',
         'monitor_account': 'str',
         'monitor_namespace': 'str',
+        'product_name': 'str',
+        'product_version': 'str',
         'uninstall_strategy': 'str'
     }
 
@@ -49,10 +51,12 @@ class V1KubeVirtSpec(object):
         'image_tag': 'imageTag',
         'monitor_account': 'monitorAccount',
         'monitor_namespace': 'monitorNamespace',
+        'product_name': 'productName',
+        'product_version': 'productVersion',
         'uninstall_strategy': 'uninstallStrategy'
     }
 
-    def __init__(self, certificate_rotate_strategy=None, configuration=None, image_pull_policy=None, image_registry=None, image_tag=None, monitor_account=None, monitor_namespace=None, uninstall_strategy=None):
+    def __init__(self, certificate_rotate_strategy=None, configuration=None, image_pull_policy=None, image_registry=None, image_tag=None, monitor_account=None, monitor_namespace=None, product_name=None, product_version=None, uninstall_strategy=None):
         """
         V1KubeVirtSpec - a model defined in Swagger
         """
@@ -64,6 +68,8 @@ class V1KubeVirtSpec(object):
         self._image_tag = None
         self._monitor_account = None
         self._monitor_namespace = None
+        self._product_name = None
+        self._product_version = None
         self._uninstall_strategy = None
 
         if certificate_rotate_strategy is not None:
@@ -80,6 +86,10 @@ class V1KubeVirtSpec(object):
           self.monitor_account = monitor_account
         if monitor_namespace is not None:
           self.monitor_namespace = monitor_namespace
+        if product_name is not None:
+          self.product_name = product_name
+        if product_version is not None:
+          self.product_version = product_version
         if uninstall_strategy is not None:
           self.uninstall_strategy = uninstall_strategy
 
@@ -241,6 +251,52 @@ class V1KubeVirtSpec(object):
         """
 
         self._monitor_namespace = monitor_namespace
+
+    @property
+    def product_name(self):
+        """
+        Gets the product_name of this V1KubeVirtSpec.
+        Designate the apps.kubevirt.io/part-of label for KubeVirt components. Useful if KubeVirt is included as part of a product. If ProductName is not specified, the part-of label will be omitted.
+
+        :return: The product_name of this V1KubeVirtSpec.
+        :rtype: str
+        """
+        return self._product_name
+
+    @product_name.setter
+    def product_name(self, product_name):
+        """
+        Sets the product_name of this V1KubeVirtSpec.
+        Designate the apps.kubevirt.io/part-of label for KubeVirt components. Useful if KubeVirt is included as part of a product. If ProductName is not specified, the part-of label will be omitted.
+
+        :param product_name: The product_name of this V1KubeVirtSpec.
+        :type: str
+        """
+
+        self._product_name = product_name
+
+    @property
+    def product_version(self):
+        """
+        Gets the product_version of this V1KubeVirtSpec.
+        Designate the apps.kubevirt.io/version label for KubeVirt components. Useful if KubeVirt is included as part of a product. If ProductVersion is not specified, KubeVirt's version will be used.
+
+        :return: The product_version of this V1KubeVirtSpec.
+        :rtype: str
+        """
+        return self._product_version
+
+    @product_version.setter
+    def product_version(self, product_version):
+        """
+        Sets the product_version of this V1KubeVirtSpec.
+        Designate the apps.kubevirt.io/version label for KubeVirt components. Useful if KubeVirt is included as part of a product. If ProductVersion is not specified, KubeVirt's version will be used.
+
+        :param product_version: The product_version of this V1KubeVirtSpec.
+        :type: str
+        """
+
+        self._product_version = product_version
 
     @property
     def uninstall_strategy(self):

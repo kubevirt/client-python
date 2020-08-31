@@ -11,7 +11,7 @@
 """
 
 
-import sys
+import system
 from setuptools import setup, find_packages
 
 NAME = "kubevirt-py"

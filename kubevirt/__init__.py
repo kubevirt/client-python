@@ -34,6 +34,7 @@ from .models.v1_cloud_init_config_drive_source import V1CloudInitConfigDriveSour
 from .models.v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
 from .models.v1_config_map_volume_source import V1ConfigMapVolumeSource
 from .models.v1_container_disk_source import V1ContainerDiskSource
+from .models.v1_customize_components import V1CustomizeComponents
 from .models.v1_dhcp_options import V1DHCPOptions
 from .models.v1_dhcp_private_options import V1DHCPPrivateOptions
 from .models.v1_data_volume_source import V1DataVolumeSource

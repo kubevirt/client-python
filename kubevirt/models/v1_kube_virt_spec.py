@@ -33,6 +33,7 @@ class V1KubeVirtSpec(object):
     swagger_types = {
         'certificate_rotate_strategy': 'V1KubeVirtCertificateRotateStrategy',
         'configuration': 'V1KubeVirtConfiguration',
+        'customize_components': 'V1CustomizeComponents',
         'image_pull_policy': 'str',
         'image_registry': 'str',
         'image_tag': 'str',
@@ -46,6 +47,7 @@ class V1KubeVirtSpec(object):
     attribute_map = {
         'certificate_rotate_strategy': 'certificateRotateStrategy',
         'configuration': 'configuration',
+        'customize_components': 'customizeComponents',
         'image_pull_policy': 'imagePullPolicy',
         'image_registry': 'imageRegistry',
         'image_tag': 'imageTag',
@@ -56,13 +58,14 @@ class V1KubeVirtSpec(object):
         'uninstall_strategy': 'uninstallStrategy'
     }
 
-    def __init__(self, certificate_rotate_strategy=None, configuration=None, image_pull_policy=None, image_registry=None, image_tag=None, monitor_account=None, monitor_namespace=None, product_name=None, product_version=None, uninstall_strategy=None):
+    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_registry=None, image_tag=None, monitor_account=None, monitor_namespace=None, product_name=None, product_version=None, uninstall_strategy=None):
         """
         V1KubeVirtSpec - a model defined in Swagger
         """
 
         self._certificate_rotate_strategy = None
         self._configuration = None
+        self._customize_components = None
         self._image_pull_policy = None
         self._image_registry = None
         self._image_tag = None
@@ -76,6 +79,8 @@ class V1KubeVirtSpec(object):
           self.certificate_rotate_strategy = certificate_rotate_strategy
         if configuration is not None:
           self.configuration = configuration
+        if customize_components is not None:
+          self.customize_components = customize_components
         if image_pull_policy is not None:
           self.image_pull_policy = image_pull_policy
         if image_registry is not None:
@@ -136,6 +141,27 @@ class V1KubeVirtSpec(object):
         """
 
         self._configuration = configuration
+
+    @property
+    def customize_components(self):
+        """
+        Gets the customize_components of this V1KubeVirtSpec.
+
+        :return: The customize_components of this V1KubeVirtSpec.
+        :rtype: V1CustomizeComponents
+        """
+        return self._customize_components
+
+    @customize_components.setter
+    def customize_components(self, customize_components):
+        """
+        Sets the customize_components of this V1KubeVirtSpec.
+
+        :param customize_components: The customize_components of this V1KubeVirtSpec.
+        :type: V1CustomizeComponents
+        """
+
+        self._customize_components = customize_components
 
     @property
     def image_pull_policy(self):

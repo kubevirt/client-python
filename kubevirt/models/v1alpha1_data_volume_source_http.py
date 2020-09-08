@@ -55,14 +55,13 @@ class V1alpha1DataVolumeSourceHTTP(object):
           self.cert_config_map = cert_config_map
         if secret_ref is not None:
           self.secret_ref = secret_ref
-        if url is not None:
-          self.url = url
+        self.url = url
 
     @property
     def cert_config_map(self):
         """
         Gets the cert_config_map of this V1alpha1DataVolumeSourceHTTP.
-        CertConfigMap provides a reference to the Registry certs
+        CertConfigMap is a configmap reference, containing a Certificate Authority(CA) public key, and a base64 encoded pem certificate
 
         :return: The cert_config_map of this V1alpha1DataVolumeSourceHTTP.
         :rtype: str
@@ -73,7 +72,7 @@ class V1alpha1DataVolumeSourceHTTP(object):
     def cert_config_map(self, cert_config_map):
         """
         Sets the cert_config_map of this V1alpha1DataVolumeSourceHTTP.
-        CertConfigMap provides a reference to the Registry certs
+        CertConfigMap is a configmap reference, containing a Certificate Authority(CA) public key, and a base64 encoded pem certificate
 
         :param cert_config_map: The cert_config_map of this V1alpha1DataVolumeSourceHTTP.
         :type: str
@@ -85,7 +84,7 @@ class V1alpha1DataVolumeSourceHTTP(object):
     def secret_ref(self):
         """
         Gets the secret_ref of this V1alpha1DataVolumeSourceHTTP.
-        SecretRef provides the secret reference needed to access the HTTP source
+        SecretRef A Secret reference, the secret should contain accessKeyId (user name) base64 encoded, and secretKey (password) also base64 encoded
 
         :return: The secret_ref of this V1alpha1DataVolumeSourceHTTP.
         :rtype: str
@@ -96,7 +95,7 @@ class V1alpha1DataVolumeSourceHTTP(object):
     def secret_ref(self, secret_ref):
         """
         Sets the secret_ref of this V1alpha1DataVolumeSourceHTTP.
-        SecretRef provides the secret reference needed to access the HTTP source
+        SecretRef A Secret reference, the secret should contain accessKeyId (user name) base64 encoded, and secretKey (password) also base64 encoded
 
         :param secret_ref: The secret_ref of this V1alpha1DataVolumeSourceHTTP.
         :type: str
@@ -108,7 +107,7 @@ class V1alpha1DataVolumeSourceHTTP(object):
     def url(self):
         """
         Gets the url of this V1alpha1DataVolumeSourceHTTP.
-        URL is the URL of the http source
+        URL is the URL of the http(s) endpoint
 
         :return: The url of this V1alpha1DataVolumeSourceHTTP.
         :rtype: str
@@ -119,11 +118,13 @@ class V1alpha1DataVolumeSourceHTTP(object):
     def url(self, url):
         """
         Sets the url of this V1alpha1DataVolumeSourceHTTP.
-        URL is the URL of the http source
+        URL is the URL of the http(s) endpoint
 
         :param url: The url of this V1alpha1DataVolumeSourceHTTP.
         :type: str
         """
+        if url is None:
+            raise ValueError("Invalid value for `url`, must not be `None`")
 
         self._url = url
 

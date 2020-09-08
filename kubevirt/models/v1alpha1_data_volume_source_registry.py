@@ -55,8 +55,7 @@ class V1alpha1DataVolumeSourceRegistry(object):
           self.cert_config_map = cert_config_map
         if secret_ref is not None:
           self.secret_ref = secret_ref
-        if url is not None:
-          self.url = url
+        self.url = url
 
     @property
     def cert_config_map(self):
@@ -108,7 +107,7 @@ class V1alpha1DataVolumeSourceRegistry(object):
     def url(self):
         """
         Gets the url of this V1alpha1DataVolumeSourceRegistry.
-        URL is the url of the Registry source
+        URL is the url of the Docker registry source
 
         :return: The url of this V1alpha1DataVolumeSourceRegistry.
         :rtype: str
@@ -119,11 +118,13 @@ class V1alpha1DataVolumeSourceRegistry(object):
     def url(self, url):
         """
         Sets the url of this V1alpha1DataVolumeSourceRegistry.
-        URL is the url of the Registry source
+        URL is the url of the Docker registry source
 
         :param url: The url of this V1alpha1DataVolumeSourceRegistry.
         :type: str
         """
+        if url is None:
+            raise ValueError("Invalid value for `url`, must not be `None`")
 
         self._url = url
 

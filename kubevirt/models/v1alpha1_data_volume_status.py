@@ -31,27 +31,58 @@ class V1alpha1DataVolumeStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'conditions': 'list[V1alpha1DataVolumeCondition]',
         'phase': 'str',
-        'progress': 'str'
+        'progress': 'str',
+        'restart_count': 'int'
     }
 
     attribute_map = {
+        'conditions': 'conditions',
         'phase': 'phase',
-        'progress': 'progress'
+        'progress': 'progress',
+        'restart_count': 'restartCount'
     }
 
-    def __init__(self, phase=None, progress=None):
+    def __init__(self, conditions=None, phase=None, progress=None, restart_count=None):
         """
         V1alpha1DataVolumeStatus - a model defined in Swagger
         """
 
+        self._conditions = None
         self._phase = None
         self._progress = None
+        self._restart_count = None
 
+        if conditions is not None:
+          self.conditions = conditions
         if phase is not None:
           self.phase = phase
         if progress is not None:
           self.progress = progress
+        if restart_count is not None:
+          self.restart_count = restart_count
+
+    @property
+    def conditions(self):
+        """
+        Gets the conditions of this V1alpha1DataVolumeStatus.
+
+        :return: The conditions of this V1alpha1DataVolumeStatus.
+        :rtype: list[V1alpha1DataVolumeCondition]
+        """
+        return self._conditions
+
+    @conditions.setter
+    def conditions(self, conditions):
+        """
+        Sets the conditions of this V1alpha1DataVolumeStatus.
+
+        :param conditions: The conditions of this V1alpha1DataVolumeStatus.
+        :type: list[V1alpha1DataVolumeCondition]
+        """
+
+        self._conditions = conditions
 
     @property
     def phase(self):
@@ -96,6 +127,29 @@ class V1alpha1DataVolumeStatus(object):
         """
 
         self._progress = progress
+
+    @property
+    def restart_count(self):
+        """
+        Gets the restart_count of this V1alpha1DataVolumeStatus.
+        RestartCount is the number of times the pod populating the DataVolume has restarted
+
+        :return: The restart_count of this V1alpha1DataVolumeStatus.
+        :rtype: int
+        """
+        return self._restart_count
+
+    @restart_count.setter
+    def restart_count(self, restart_count):
+        """
+        Sets the restart_count of this V1alpha1DataVolumeStatus.
+        RestartCount is the number of times the pod populating the DataVolume has restarted
+
+        :param restart_count: The restart_count of this V1alpha1DataVolumeStatus.
+        :type: int
+        """
+
+        self._restart_count = restart_count
 
     def to_dict(self):
         """

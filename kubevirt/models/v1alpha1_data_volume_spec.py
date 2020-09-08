@@ -83,7 +83,7 @@ class V1alpha1DataVolumeSpec(object):
     def pvc(self):
         """
         Gets the pvc of this V1alpha1DataVolumeSpec.
-        PVC is a pointer to the PVC Spec we want to use
+        PVC is the PVC specification
 
         :return: The pvc of this V1alpha1DataVolumeSpec.
         :rtype: V1PersistentVolumeClaimSpec
@@ -94,7 +94,7 @@ class V1alpha1DataVolumeSpec(object):
     def pvc(self, pvc):
         """
         Sets the pvc of this V1alpha1DataVolumeSpec.
-        PVC is a pointer to the PVC Spec we want to use
+        PVC is the PVC specification
 
         :param pvc: The pvc of this V1alpha1DataVolumeSpec.
         :type: V1PersistentVolumeClaimSpec

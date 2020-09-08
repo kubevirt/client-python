@@ -173,8 +173,10 @@ from .models.v1_watchdog import V1Watchdog
 from .models.v1_weighted_pod_affinity_term import V1WeightedPodAffinityTerm
 from .models.v1alpha1_data_volume import V1alpha1DataVolume
 from .models.v1alpha1_data_volume_blank_image import V1alpha1DataVolumeBlankImage
+from .models.v1alpha1_data_volume_condition import V1alpha1DataVolumeCondition
 from .models.v1alpha1_data_volume_source import V1alpha1DataVolumeSource
 from .models.v1alpha1_data_volume_source_http import V1alpha1DataVolumeSourceHTTP
+from .models.v1alpha1_data_volume_source_image_io import V1alpha1DataVolumeSourceImageIO
 from .models.v1alpha1_data_volume_source_pvc import V1alpha1DataVolumeSourcePVC
 from .models.v1alpha1_data_volume_source_registry import V1alpha1DataVolumeSourceRegistry
 from .models.v1alpha1_data_volume_source_s3 import V1alpha1DataVolumeSourceS3

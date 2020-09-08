@@ -33,6 +33,7 @@ class V1alpha1DataVolumeSource(object):
     swagger_types = {
         'blank': 'V1alpha1DataVolumeBlankImage',
         'http': 'V1alpha1DataVolumeSourceHTTP',
+        'imageio': 'V1alpha1DataVolumeSourceImageIO',
         'pvc': 'V1alpha1DataVolumeSourcePVC',
         'registry': 'V1alpha1DataVolumeSourceRegistry',
         's3': 'V1alpha1DataVolumeSourceS3',
@@ -42,19 +43,21 @@ class V1alpha1DataVolumeSource(object):
     attribute_map = {
         'blank': 'blank',
         'http': 'http',
+        'imageio': 'imageio',
         'pvc': 'pvc',
         'registry': 'registry',
         's3': 's3',
         'upload': 'upload'
     }
 
-    def __init__(self, blank=None, http=None, pvc=None, registry=None, s3=None, upload=None):
+    def __init__(self, blank=None, http=None, imageio=None, pvc=None, registry=None, s3=None, upload=None):
         """
         V1alpha1DataVolumeSource - a model defined in Swagger
         """
 
         self._blank = None
         self._http = None
+        self._imageio = None
         self._pvc = None
         self._registry = None
         self._s3 = None
@@ -64,6 +67,8 @@ class V1alpha1DataVolumeSource(object):
           self.blank = blank
         if http is not None:
           self.http = http
+        if imageio is not None:
+          self.imageio = imageio
         if pvc is not None:
           self.pvc = pvc
         if registry is not None:
@@ -114,6 +119,27 @@ class V1alpha1DataVolumeSource(object):
         """
 
         self._http = http
+
+    @property
+    def imageio(self):
+        """
+        Gets the imageio of this V1alpha1DataVolumeSource.
+
+        :return: The imageio of this V1alpha1DataVolumeSource.
+        :rtype: V1alpha1DataVolumeSourceImageIO
+        """
+        return self._imageio
+
+    @imageio.setter
+    def imageio(self, imageio):
+        """
+        Sets the imageio of this V1alpha1DataVolumeSource.
+
+        :param imageio: The imageio of this V1alpha1DataVolumeSource.
+        :type: V1alpha1DataVolumeSourceImageIO
+        """
+
+        self._imageio = imageio
 
     @property
     def pvc(self):

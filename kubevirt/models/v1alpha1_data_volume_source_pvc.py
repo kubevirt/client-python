@@ -48,15 +48,14 @@ class V1alpha1DataVolumeSourcePVC(object):
         self._name = None
         self._namespace = None
 
-        if name is not None:
-          self.name = name
-        if namespace is not None:
-          self.namespace = namespace
+        self.name = name
+        self.namespace = namespace
 
     @property
     def name(self):
         """
         Gets the name of this V1alpha1DataVolumeSourcePVC.
+        The name of the source PVC
 
         :return: The name of this V1alpha1DataVolumeSourcePVC.
         :rtype: str
@@ -67,10 +66,13 @@ class V1alpha1DataVolumeSourcePVC(object):
     def name(self, name):
         """
         Sets the name of this V1alpha1DataVolumeSourcePVC.
+        The name of the source PVC
 
         :param name: The name of this V1alpha1DataVolumeSourcePVC.
         :type: str
         """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")
 
         self._name = name
 
@@ -78,6 +80,7 @@ class V1alpha1DataVolumeSourcePVC(object):
     def namespace(self):
         """
         Gets the namespace of this V1alpha1DataVolumeSourcePVC.
+        The namespace of the source PVC
 
         :return: The namespace of this V1alpha1DataVolumeSourcePVC.
         :rtype: str
@@ -88,10 +91,13 @@ class V1alpha1DataVolumeSourcePVC(object):
     def namespace(self, namespace):
         """
         Sets the namespace of this V1alpha1DataVolumeSourcePVC.
+        The namespace of the source PVC
 
         :param namespace: The namespace of this V1alpha1DataVolumeSourcePVC.
         :type: str
         """
+        if namespace is None:
+            raise ValueError("Invalid value for `namespace`, must not be `None`")
 
         self._namespace = namespace
 

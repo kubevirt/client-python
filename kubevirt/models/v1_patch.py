@@ -31,19 +31,121 @@ class V1Patch(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        
+        'patch': 'str',
+        'resource_name': 'str',
+        'resource_type': 'str',
+        'type': 'str'
     }
 
     attribute_map = {
-        
+        'patch': 'patch',
+        'resource_name': 'resourceName',
+        'resource_type': 'resourceType',
+        'type': 'type'
     }
 
-    def __init__(self):
+    def __init__(self, patch=None, resource_name=None, resource_type=None, type=None):
         """
         V1Patch - a model defined in Swagger
         """
 
+        self._patch = None
+        self._resource_name = None
+        self._resource_type = None
+        self._type = None
 
+        if patch is not None:
+          self.patch = patch
+        if resource_name is not None:
+          self.resource_name = resource_name
+        if resource_type is not None:
+          self.resource_type = resource_type
+        if type is not None:
+          self.type = type
+
+    @property
+    def patch(self):
+        """
+        Gets the patch of this V1Patch.
+
+        :return: The patch of this V1Patch.
+        :rtype: str
+        """
+        return self._patch
+
+    @patch.setter
+    def patch(self, patch):
+        """
+        Sets the patch of this V1Patch.
+
+        :param patch: The patch of this V1Patch.
+        :type: str
+        """
+
+        self._patch = patch
+
+    @property
+    def resource_name(self):
+        """
+        Gets the resource_name of this V1Patch.
+
+        :return: The resource_name of this V1Patch.
+        :rtype: str
+        """
+        return self._resource_name
+
+    @resource_name.setter
+    def resource_name(self, resource_name):
+        """
+        Sets the resource_name of this V1Patch.
+
+        :param resource_name: The resource_name of this V1Patch.
+        :type: str
+        """
+
+        self._resource_name = resource_name
+
+    @property
+    def resource_type(self):
+        """
+        Gets the resource_type of this V1Patch.
+
+        :return: The resource_type of this V1Patch.
+        :rtype: str
+        """
+        return self._resource_type
+
+    @resource_type.setter
+    def resource_type(self, resource_type):
+        """
+        Sets the resource_type of this V1Patch.
+
+        :param resource_type: The resource_type of this V1Patch.
+        :type: str
+        """
+
+        self._resource_type = resource_type
+
+    @property
+    def type(self):
+        """
+        Gets the type of this V1Patch.
+
+        :return: The type of this V1Patch.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this V1Patch.
+
+        :param type: The type of this V1Patch.
+        :type: str
+        """
+
+        self._type = type
 
     def to_dict(self):
         """

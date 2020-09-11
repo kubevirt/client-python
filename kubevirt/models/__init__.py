@@ -35,6 +35,7 @@ from .v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
 from .v1_config_map_volume_source import V1ConfigMapVolumeSource
 from .v1_container_disk_source import V1ContainerDiskSource
 from .v1_customize_components import V1CustomizeComponents
+from .v1_customize_components_patch import V1CustomizeComponentsPatch
 from .v1_dhcp_options import V1DHCPOptions
 from .v1_dhcp_private_options import V1DHCPPrivateOptions
 from .v1_data_volume_source import V1DataVolumeSource

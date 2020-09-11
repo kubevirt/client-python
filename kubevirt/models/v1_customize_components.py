@@ -31,7 +31,7 @@ class V1CustomizeComponents(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'patches': 'list[V1Patch]'
+        'patches': 'list[V1CustomizeComponentsPatch]'
     }
 
     attribute_map = {
@@ -54,7 +54,7 @@ class V1CustomizeComponents(object):
         Gets the patches of this V1CustomizeComponents.
 
         :return: The patches of this V1CustomizeComponents.
-        :rtype: list[V1Patch]
+        :rtype: list[V1CustomizeComponentsPatch]
         """
         return self._patches
 
@@ -64,7 +64,7 @@ class V1CustomizeComponents(object):
         Sets the patches of this V1CustomizeComponents.
 
         :param patches: The patches of this V1CustomizeComponents.
-        :type: list[V1Patch]
+        :type: list[V1CustomizeComponentsPatch]
         """
 
         self._patches = patches

@@ -86,6 +86,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_customize_components.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_customize_components.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1CustomizeComponents.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_customize_components_patch.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_customize_components_patch.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1CustomizeComponentsPatch.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_dhcp_options.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_dhcp_options.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1DHCPOptions.md

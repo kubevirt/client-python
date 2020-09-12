@@ -1,14 +1,13 @@
-# V1alpha1VirtualMachineSnapshotStatus
+# V1alpha1VirtualMachineRestoreStatus
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**complete** | **bool** |  | [optional] 
 **conditions** | [**list[V1alpha1Condition]**](V1alpha1Condition.md) |  | [optional] 
-**creation_time** | [**V1Time**](V1Time.md) |  | [optional] 
-**error** | [**V1alpha1Error**](V1alpha1Error.md) |  | [optional] 
-**ready_to_use** | **bool** |  | [optional] 
-**source_uid** | **str** |  | [optional] 
-**virtual_machine_snapshot_content_name** | **str** |  | [optional] 
+**deleted_data_volumes** | **list[str]** |  | [optional] 
+**restore_time** | [**V1Time**](V1Time.md) |  | [optional] 
+**restores** | [**list[V1alpha1VolumeRestore]**](V1alpha1VolumeRestore.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

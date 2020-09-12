@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **creation_time** | [**V1Time**](V1Time.md) |  | [optional] 
-**error** | [**V1alpha1VirtualMachineSnapshotError**](V1alpha1VirtualMachineSnapshotError.md) |  | [optional] 
+**error** | [**V1alpha1Error**](V1alpha1Error.md) |  | [optional] 
 **ready_to_use** | **bool** |  | [optional] 
 **volume_snapshot_status** | [**list[V1alpha1VolumeSnapshotStatus]**](V1alpha1VolumeSnapshotStatus.md) |  | [optional] 
 

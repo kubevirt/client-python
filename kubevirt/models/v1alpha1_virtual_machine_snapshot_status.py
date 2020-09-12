@@ -31,10 +31,11 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'conditions': 'list[V1alpha1VirtualMachineSnapshotCondition]',
+        'conditions': 'list[V1alpha1Condition]',
         'creation_time': 'V1Time',
-        'error': 'V1alpha1VirtualMachineSnapshotError',
+        'error': 'V1alpha1Error',
         'ready_to_use': 'bool',
+        'source_uid': 'str',
         'virtual_machine_snapshot_content_name': 'str'
     }
 
@@ -43,10 +44,11 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         'creation_time': 'creationTime',
         'error': 'error',
         'ready_to_use': 'readyToUse',
+        'source_uid': 'sourceUID',
         'virtual_machine_snapshot_content_name': 'virtualMachineSnapshotContentName'
     }
 
-    def __init__(self, conditions=None, creation_time=None, error=None, ready_to_use=None, virtual_machine_snapshot_content_name=None):
+    def __init__(self, conditions=None, creation_time=None, error=None, ready_to_use=None, source_uid=None, virtual_machine_snapshot_content_name=None):
         """
         V1alpha1VirtualMachineSnapshotStatus - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         self._creation_time = None
         self._error = None
         self._ready_to_use = None
+        self._source_uid = None
         self._virtual_machine_snapshot_content_name = None
 
         if conditions is not None:
@@ -65,6 +68,8 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
           self.error = error
         if ready_to_use is not None:
           self.ready_to_use = ready_to_use
+        if source_uid is not None:
+          self.source_uid = source_uid
         if virtual_machine_snapshot_content_name is not None:
           self.virtual_machine_snapshot_content_name = virtual_machine_snapshot_content_name
 
@@ -74,7 +79,7 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         Gets the conditions of this V1alpha1VirtualMachineSnapshotStatus.
 
         :return: The conditions of this V1alpha1VirtualMachineSnapshotStatus.
-        :rtype: list[V1alpha1VirtualMachineSnapshotCondition]
+        :rtype: list[V1alpha1Condition]
         """
         return self._conditions
 
@@ -84,7 +89,7 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         Sets the conditions of this V1alpha1VirtualMachineSnapshotStatus.
 
         :param conditions: The conditions of this V1alpha1VirtualMachineSnapshotStatus.
-        :type: list[V1alpha1VirtualMachineSnapshotCondition]
+        :type: list[V1alpha1Condition]
         """
 
         self._conditions = conditions
@@ -116,7 +121,7 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         Gets the error of this V1alpha1VirtualMachineSnapshotStatus.
 
         :return: The error of this V1alpha1VirtualMachineSnapshotStatus.
-        :rtype: V1alpha1VirtualMachineSnapshotError
+        :rtype: V1alpha1Error
         """
         return self._error
 
@@ -126,7 +131,7 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         Sets the error of this V1alpha1VirtualMachineSnapshotStatus.
 
         :param error: The error of this V1alpha1VirtualMachineSnapshotStatus.
-        :type: V1alpha1VirtualMachineSnapshotError
+        :type: V1alpha1Error
         """
 
         self._error = error
@@ -151,6 +156,27 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         """
 
         self._ready_to_use = ready_to_use
+
+    @property
+    def source_uid(self):
+        """
+        Gets the source_uid of this V1alpha1VirtualMachineSnapshotStatus.
+
+        :return: The source_uid of this V1alpha1VirtualMachineSnapshotStatus.
+        :rtype: str
+        """
+        return self._source_uid
+
+    @source_uid.setter
+    def source_uid(self, source_uid):
+        """
+        Sets the source_uid of this V1alpha1VirtualMachineSnapshotStatus.
+
+        :param source_uid: The source_uid of this V1alpha1VirtualMachineSnapshotStatus.
+        :type: str
+        """
+
+        self._source_uid = source_uid
 
     @property
     def virtual_machine_snapshot_content_name(self):

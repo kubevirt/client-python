@@ -32,7 +32,7 @@ class V1alpha1VolumeSnapshotStatus(object):
     """
     swagger_types = {
         'creation_time': 'V1Time',
-        'error': 'V1alpha1VirtualMachineSnapshotError',
+        'error': 'V1alpha1Error',
         'ready_to_use': 'bool',
         'volume_snapshot_name': 'str'
     }
@@ -89,7 +89,7 @@ class V1alpha1VolumeSnapshotStatus(object):
         Gets the error of this V1alpha1VolumeSnapshotStatus.
 
         :return: The error of this V1alpha1VolumeSnapshotStatus.
-        :rtype: V1alpha1VirtualMachineSnapshotError
+        :rtype: V1alpha1Error
         """
         return self._error
 
@@ -99,7 +99,7 @@ class V1alpha1VolumeSnapshotStatus(object):
         Sets the error of this V1alpha1VolumeSnapshotStatus.
 
         :param error: The error of this V1alpha1VolumeSnapshotStatus.
-        :type: V1alpha1VirtualMachineSnapshotError
+        :type: V1alpha1Error
         """
 
         self._error = error

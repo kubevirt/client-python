@@ -1,12 +1,10 @@
-# V1alpha1VirtualMachineSnapshotCondition
+# V1alpha1Error
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **str** |  | [optional] 
-**reason** | **str** |  | [optional] 
-**status** | **str** |  | 
-**type** | **str** |  | 
+**time** | [**V1Time**](V1Time.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

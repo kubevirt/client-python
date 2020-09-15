@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **conditions** | [**list[V1alpha1Condition]**](V1alpha1Condition.md) |  | [optional] 
-**creation_time** | [**V1Time**](V1Time.md) |  | [optional] 
+**creation_time** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) |  | [optional] 
 **error** | [**V1alpha1Error**](V1alpha1Error.md) |  | [optional] 
 **ready_to_use** | **bool** |  | [optional] 
 **source_uid** | **str** |  | [optional] 

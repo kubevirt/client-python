@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **allow_auto_converge** | **str** |  | 
-**bandwidth_per_migration** | [**ResourceQuantity**](ResourceQuantity.md) |  | [optional] 
+**bandwidth_per_migration** | [**K8sIoApimachineryPkgApiResourceQuantity**](K8sIoApimachineryPkgApiResourceQuantity.md) |  | [optional] 
 **completion_timeout_per_gi_b** | **str** |  | [optional] 
 **node_drain_taint_key** | **str** |  | [optional] 
 **parallel_migrations_per_cluster** | **str** |  | [optional] 

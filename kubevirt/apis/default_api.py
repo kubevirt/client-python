@@ -1259,7 +1259,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1291,7 +1291,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1355,7 +1355,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1384,7 +1384,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1416,7 +1416,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1480,7 +1480,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1509,7 +1509,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1541,7 +1541,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1605,7 +1605,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1634,7 +1634,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1666,7 +1666,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1730,7 +1730,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1759,7 +1759,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1791,7 +1791,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1855,7 +1855,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1884,7 +1884,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1916,7 +1916,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1980,7 +1980,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2009,7 +2009,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2041,7 +2041,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2105,7 +2105,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2134,7 +2134,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2166,7 +2166,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2230,7 +2230,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2259,7 +2259,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2291,7 +2291,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2355,7 +2355,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2378,11 +2378,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2408,11 +2408,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2485,7 +2485,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2508,11 +2508,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2538,11 +2538,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2615,7 +2615,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2638,11 +2638,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2668,11 +2668,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2745,7 +2745,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2768,11 +2768,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2798,11 +2798,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2875,7 +2875,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2898,11 +2898,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2928,11 +2928,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3005,7 +3005,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3028,11 +3028,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3058,11 +3058,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3135,7 +3135,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3158,11 +3158,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3188,11 +3188,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3265,7 +3265,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3288,11 +3288,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3318,11 +3318,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3395,7 +3395,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3418,11 +3418,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3448,11 +3448,11 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1DeleteOptions body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1DeleteOptions body: (required)
         :param int grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :param bool orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :param str propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :return: V1Status
+        :return: K8sIoApimachineryPkgApisMetaV1Status
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3525,7 +3525,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1Status',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1Status',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3824,7 +3824,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1APIGroup
+        :return: K8sIoApimachineryPkgApisMetaV1APIGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3848,7 +3848,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1APIGroup
+        :return: K8sIoApimachineryPkgApisMetaV1APIGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3895,7 +3895,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1APIGroup',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1APIGroup',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3916,7 +3916,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1APIGroupList
+        :return: K8sIoApimachineryPkgApisMetaV1APIGroupList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3940,7 +3940,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1APIGroupList
+        :return: K8sIoApimachineryPkgApisMetaV1APIGroupList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3987,7 +3987,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1APIGroupList',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1APIGroupList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4008,7 +4008,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1APIGroup
+        :return: K8sIoApimachineryPkgApisMetaV1APIGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4032,7 +4032,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1APIGroup
+        :return: K8sIoApimachineryPkgApisMetaV1APIGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4079,7 +4079,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1APIGroup',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1APIGroup',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4100,7 +4100,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1APIResourceList
+        :return: K8sIoApimachineryPkgApisMetaV1APIResourceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4124,7 +4124,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1APIResourceList
+        :return: K8sIoApimachineryPkgApisMetaV1APIResourceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4171,7 +4171,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1APIResourceList',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1APIResourceList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4192,7 +4192,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1APIResourceList
+        :return: K8sIoApimachineryPkgApisMetaV1APIResourceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4216,7 +4216,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1APIResourceList
+        :return: K8sIoApimachineryPkgApisMetaV1APIResourceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4263,7 +4263,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1APIResourceList',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1APIResourceList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4284,7 +4284,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1APIResourceList
+        :return: K8sIoApimachineryPkgApisMetaV1APIResourceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4308,7 +4308,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1APIResourceList
+        :return: K8sIoApimachineryPkgApisMetaV1APIResourceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4355,7 +4355,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1APIResourceList',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1APIResourceList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4376,7 +4376,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1RootPaths
+        :return: K8sIoApimachineryPkgApisMetaV1RootPaths
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4400,7 +4400,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1RootPaths
+        :return: K8sIoApimachineryPkgApisMetaV1RootPaths
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4447,7 +4447,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1RootPaths',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1RootPaths',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4468,7 +4468,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1APIGroup
+        :return: K8sIoApimachineryPkgApisMetaV1APIGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4492,7 +4492,7 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: V1APIGroup
+        :return: K8sIoApimachineryPkgApisMetaV1APIGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4539,7 +4539,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1APIGroup',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1APIGroup',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -7089,7 +7089,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1KubeVirt
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7116,7 +7116,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1KubeVirt
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7207,7 +7207,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7234,7 +7234,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1VirtualMachine
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7325,7 +7325,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7352,7 +7352,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1VirtualMachineInstance
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7443,7 +7443,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1VirtualMachineInstanceMigration
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7470,7 +7470,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1VirtualMachineInstanceMigration
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7561,7 +7561,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7588,7 +7588,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1VirtualMachineInstancePreset
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7679,7 +7679,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1VirtualMachineInstanceReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7706,7 +7706,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1VirtualMachineInstanceReplicaSet
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7797,7 +7797,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1alpha1VirtualMachineRestore
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7824,7 +7824,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1alpha1VirtualMachineRestore
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7915,7 +7915,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1alpha1VirtualMachineSnapshot
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7942,7 +7942,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1alpha1VirtualMachineSnapshot
                  If the method is called asynchronously,
                  returns the request thread.
@@ -8033,7 +8033,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1alpha1VirtualMachineSnapshotContent
                  If the method is called asynchronously,
                  returns the request thread.
@@ -8060,7 +8060,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1Patch body: (required)
+        :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
         :return: V1alpha1VirtualMachineSnapshotContent
                  If the method is called asynchronously,
                  returns the request thread.
@@ -11268,7 +11268,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11300,7 +11300,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11364,7 +11364,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -11394,7 +11394,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11427,7 +11427,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11496,7 +11496,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -11526,7 +11526,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11559,7 +11559,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11628,7 +11628,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -11658,7 +11658,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11691,7 +11691,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11760,7 +11760,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -11790,7 +11790,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11823,7 +11823,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11892,7 +11892,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -11922,7 +11922,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11955,7 +11955,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12024,7 +12024,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -12054,7 +12054,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12087,7 +12087,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12156,7 +12156,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -12186,7 +12186,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12219,7 +12219,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12288,7 +12288,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -12318,7 +12318,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12351,7 +12351,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12420,7 +12420,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -12450,7 +12450,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12483,7 +12483,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12552,7 +12552,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -12581,7 +12581,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12613,7 +12613,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12677,7 +12677,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -12706,7 +12706,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12738,7 +12738,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12802,7 +12802,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -12831,7 +12831,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12863,7 +12863,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12927,7 +12927,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -12956,7 +12956,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12988,7 +12988,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13052,7 +13052,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -13081,7 +13081,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13113,7 +13113,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13177,7 +13177,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -13206,7 +13206,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13238,7 +13238,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13302,7 +13302,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -13331,7 +13331,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13363,7 +13363,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13427,7 +13427,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -13456,7 +13456,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13488,7 +13488,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1WatchEvent
+        :return: K8sIoApimachineryPkgApisMetaV1WatchEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13552,7 +13552,7 @@ class DefaultApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1WatchEvent',
+                                        response_type='K8sIoApimachineryPkgApisMetaV1WatchEvent',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

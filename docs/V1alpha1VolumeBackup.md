@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**persistent_volume_claim** | [**V1PersistentVolumeClaim**](V1PersistentVolumeClaim.md) |  | 
+**persistent_volume_claim** | [**K8sIoApiCoreV1PersistentVolumeClaim**](K8sIoApiCoreV1PersistentVolumeClaim.md) |  | 
 **volume_name** | **str** |  | 
 **volume_snapshot_name** | **str** |  | [optional] 
 

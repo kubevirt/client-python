@@ -40,7 +40,7 @@ class V1Volume(object):
         'ephemeral': 'V1EphemeralVolumeSource',
         'host_disk': 'V1HostDisk',
         'name': 'str',
-        'persistent_volume_claim': 'V1PersistentVolumeClaimVolumeSource',
+        'persistent_volume_claim': 'K8sIoApiCoreV1PersistentVolumeClaimVolumeSource',
         'secret': 'V1SecretVolumeSource',
         'service_account': 'V1ServiceAccountVolumeSource'
     }
@@ -318,7 +318,7 @@ class V1Volume(object):
         PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
         :return: The persistent_volume_claim of this V1Volume.
-        :rtype: V1PersistentVolumeClaimVolumeSource
+        :rtype: K8sIoApiCoreV1PersistentVolumeClaimVolumeSource
         """
         return self._persistent_volume_claim
 
@@ -329,7 +329,7 @@ class V1Volume(object):
         PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
         :param persistent_volume_claim: The persistent_volume_claim of this V1Volume.
-        :type: V1PersistentVolumeClaimVolumeSource
+        :type: K8sIoApiCoreV1PersistentVolumeClaimVolumeSource
         """
 
         self._persistent_volume_claim = persistent_volume_claim

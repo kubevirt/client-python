@@ -34,7 +34,7 @@ class V1VirtualMachineList(object):
         'api_version': 'str',
         'items': 'list[V1VirtualMachine]',
         'kind': 'str',
-        'metadata': 'V1ListMeta'
+        'metadata': 'K8sIoApimachineryPkgApisMetaV1ListMeta'
     }
 
     attribute_map = {
@@ -137,7 +137,7 @@ class V1VirtualMachineList(object):
         Gets the metadata of this V1VirtualMachineList.
 
         :return: The metadata of this V1VirtualMachineList.
-        :rtype: V1ListMeta
+        :rtype: K8sIoApimachineryPkgApisMetaV1ListMeta
         """
         return self._metadata
 
@@ -147,7 +147,7 @@ class V1VirtualMachineList(object):
         Sets the metadata of this V1VirtualMachineList.
 
         :param metadata: The metadata of this V1VirtualMachineList.
-        :type: V1ListMeta
+        :type: K8sIoApimachineryPkgApisMetaV1ListMeta
         """
 
         self._metadata = metadata

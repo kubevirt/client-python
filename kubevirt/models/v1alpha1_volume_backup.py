@@ -31,7 +31,7 @@ class V1alpha1VolumeBackup(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'persistent_volume_claim': 'V1PersistentVolumeClaim',
+        'persistent_volume_claim': 'K8sIoApiCoreV1PersistentVolumeClaim',
         'volume_name': 'str',
         'volume_snapshot_name': 'str'
     }
@@ -62,7 +62,7 @@ class V1alpha1VolumeBackup(object):
         Gets the persistent_volume_claim of this V1alpha1VolumeBackup.
 
         :return: The persistent_volume_claim of this V1alpha1VolumeBackup.
-        :rtype: V1PersistentVolumeClaim
+        :rtype: K8sIoApiCoreV1PersistentVolumeClaim
         """
         return self._persistent_volume_claim
 
@@ -72,7 +72,7 @@ class V1alpha1VolumeBackup(object):
         Sets the persistent_volume_claim of this V1alpha1VolumeBackup.
 
         :param persistent_volume_claim: The persistent_volume_claim of this V1alpha1VolumeBackup.
-        :type: V1PersistentVolumeClaim
+        :type: K8sIoApiCoreV1PersistentVolumeClaim
         """
         if persistent_volume_claim is None:
             raise ValueError("Invalid value for `persistent_volume_claim`, must not be `None`")

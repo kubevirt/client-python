@@ -33,7 +33,7 @@ class V1alpha1DataVolume(object):
     swagger_types = {
         'api_version': 'str',
         'kind': 'str',
-        'metadata': 'V1ObjectMeta',
+        'metadata': 'K8sIoApimachineryPkgApisMetaV1ObjectMeta',
         'spec': 'V1alpha1DataVolumeSpec',
         'status': 'V1alpha1DataVolumeStatus'
     }
@@ -119,7 +119,7 @@ class V1alpha1DataVolume(object):
         Gets the metadata of this V1alpha1DataVolume.
 
         :return: The metadata of this V1alpha1DataVolume.
-        :rtype: V1ObjectMeta
+        :rtype: K8sIoApimachineryPkgApisMetaV1ObjectMeta
         """
         return self._metadata
 
@@ -129,7 +129,7 @@ class V1alpha1DataVolume(object):
         Sets the metadata of this V1alpha1DataVolume.
 
         :param metadata: The metadata of this V1alpha1DataVolume.
-        :type: V1ObjectMeta
+        :type: K8sIoApimachineryPkgApisMetaV1ObjectMeta
         """
 
         self._metadata = metadata

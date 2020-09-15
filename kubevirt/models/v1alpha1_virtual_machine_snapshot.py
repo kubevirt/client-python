@@ -33,7 +33,7 @@ class V1alpha1VirtualMachineSnapshot(object):
     swagger_types = {
         'api_version': 'str',
         'kind': 'str',
-        'metadata': 'V1ObjectMeta',
+        'metadata': 'K8sIoApimachineryPkgApisMetaV1ObjectMeta',
         'spec': 'V1alpha1VirtualMachineSnapshotSpec',
         'status': 'V1alpha1VirtualMachineSnapshotStatus'
     }
@@ -119,7 +119,7 @@ class V1alpha1VirtualMachineSnapshot(object):
         Gets the metadata of this V1alpha1VirtualMachineSnapshot.
 
         :return: The metadata of this V1alpha1VirtualMachineSnapshot.
-        :rtype: V1ObjectMeta
+        :rtype: K8sIoApimachineryPkgApisMetaV1ObjectMeta
         """
         return self._metadata
 
@@ -129,7 +129,7 @@ class V1alpha1VirtualMachineSnapshot(object):
         Sets the metadata of this V1alpha1VirtualMachineSnapshot.
 
         :param metadata: The metadata of this V1alpha1VirtualMachineSnapshot.
-        :type: V1ObjectMeta
+        :type: K8sIoApimachineryPkgApisMetaV1ObjectMeta
         """
 
         self._metadata = metadata

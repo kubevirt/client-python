@@ -34,7 +34,7 @@ class V1alpha1VirtualMachineRestoreStatus(object):
         'complete': 'bool',
         'conditions': 'list[V1alpha1Condition]',
         'deleted_data_volumes': 'list[str]',
-        'restore_time': 'V1Time',
+        'restore_time': 'K8sIoApimachineryPkgApisMetaV1Time',
         'restores': 'list[V1alpha1VolumeRestore]'
     }
 
@@ -137,7 +137,7 @@ class V1alpha1VirtualMachineRestoreStatus(object):
         Gets the restore_time of this V1alpha1VirtualMachineRestoreStatus.
 
         :return: The restore_time of this V1alpha1VirtualMachineRestoreStatus.
-        :rtype: V1Time
+        :rtype: K8sIoApimachineryPkgApisMetaV1Time
         """
         return self._restore_time
 
@@ -147,7 +147,7 @@ class V1alpha1VirtualMachineRestoreStatus(object):
         Sets the restore_time of this V1alpha1VirtualMachineRestoreStatus.
 
         :param restore_time: The restore_time of this V1alpha1VirtualMachineRestoreStatus.
-        :type: V1Time
+        :type: K8sIoApimachineryPkgApisMetaV1Time
         """
 
         self._restore_time = restore_time

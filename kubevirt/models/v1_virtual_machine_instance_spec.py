@@ -31,8 +31,8 @@ class V1VirtualMachineInstanceSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'affinity': 'V1Affinity',
-        'dns_config': 'V1PodDNSConfig',
+        'affinity': 'K8sIoApiCoreV1Affinity',
+        'dns_config': 'K8sIoApiCoreV1PodDNSConfig',
         'dns_policy': 'str',
         'domain': 'V1DomainSpec',
         'eviction_strategy': 'str',
@@ -45,7 +45,7 @@ class V1VirtualMachineInstanceSpec(object):
         'scheduler_name': 'str',
         'subdomain': 'str',
         'termination_grace_period_seconds': 'int',
-        'tolerations': 'list[V1Toleration]',
+        'tolerations': 'list[K8sIoApiCoreV1Toleration]',
         'volumes': 'list[V1Volume]'
     }
 
@@ -129,7 +129,7 @@ class V1VirtualMachineInstanceSpec(object):
         If affinity is specifies, obey all the affinity rules
 
         :return: The affinity of this V1VirtualMachineInstanceSpec.
-        :rtype: V1Affinity
+        :rtype: K8sIoApiCoreV1Affinity
         """
         return self._affinity
 
@@ -140,7 +140,7 @@ class V1VirtualMachineInstanceSpec(object):
         If affinity is specifies, obey all the affinity rules
 
         :param affinity: The affinity of this V1VirtualMachineInstanceSpec.
-        :type: V1Affinity
+        :type: K8sIoApiCoreV1Affinity
         """
 
         self._affinity = affinity
@@ -152,7 +152,7 @@ class V1VirtualMachineInstanceSpec(object):
         Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.
 
         :return: The dns_config of this V1VirtualMachineInstanceSpec.
-        :rtype: V1PodDNSConfig
+        :rtype: K8sIoApiCoreV1PodDNSConfig
         """
         return self._dns_config
 
@@ -163,7 +163,7 @@ class V1VirtualMachineInstanceSpec(object):
         Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.
 
         :param dns_config: The dns_config of this V1VirtualMachineInstanceSpec.
-        :type: V1PodDNSConfig
+        :type: K8sIoApiCoreV1PodDNSConfig
         """
 
         self._dns_config = dns_config
@@ -453,7 +453,7 @@ class V1VirtualMachineInstanceSpec(object):
         If toleration is specified, obey all the toleration rules.
 
         :return: The tolerations of this V1VirtualMachineInstanceSpec.
-        :rtype: list[V1Toleration]
+        :rtype: list[K8sIoApiCoreV1Toleration]
         """
         return self._tolerations
 
@@ -464,7 +464,7 @@ class V1VirtualMachineInstanceSpec(object):
         If toleration is specified, obey all the toleration rules.
 
         :param tolerations: The tolerations of this V1VirtualMachineInstanceSpec.
-        :type: list[V1Toleration]
+        :type: list[K8sIoApiCoreV1Toleration]
         """
 
         self._tolerations = tolerations

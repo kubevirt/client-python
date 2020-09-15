@@ -31,9 +31,9 @@ class V1KubeVirtSelfSignConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'ca_overlap_interval': 'V1Duration',
-        'ca_rotate_interval': 'V1Duration',
-        'cert_rotate_interval': 'V1Duration'
+        'ca_overlap_interval': 'K8sIoApimachineryPkgApisMetaV1Duration',
+        'ca_rotate_interval': 'K8sIoApimachineryPkgApisMetaV1Duration',
+        'cert_rotate_interval': 'K8sIoApimachineryPkgApisMetaV1Duration'
     }
 
     attribute_map = {
@@ -64,7 +64,7 @@ class V1KubeVirtSelfSignConfiguration(object):
         Gets the ca_overlap_interval of this V1KubeVirtSelfSignConfiguration.
 
         :return: The ca_overlap_interval of this V1KubeVirtSelfSignConfiguration.
-        :rtype: V1Duration
+        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
         """
         return self._ca_overlap_interval
 
@@ -74,7 +74,7 @@ class V1KubeVirtSelfSignConfiguration(object):
         Sets the ca_overlap_interval of this V1KubeVirtSelfSignConfiguration.
 
         :param ca_overlap_interval: The ca_overlap_interval of this V1KubeVirtSelfSignConfiguration.
-        :type: V1Duration
+        :type: K8sIoApimachineryPkgApisMetaV1Duration
         """
 
         self._ca_overlap_interval = ca_overlap_interval
@@ -85,7 +85,7 @@ class V1KubeVirtSelfSignConfiguration(object):
         Gets the ca_rotate_interval of this V1KubeVirtSelfSignConfiguration.
 
         :return: The ca_rotate_interval of this V1KubeVirtSelfSignConfiguration.
-        :rtype: V1Duration
+        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
         """
         return self._ca_rotate_interval
 
@@ -95,7 +95,7 @@ class V1KubeVirtSelfSignConfiguration(object):
         Sets the ca_rotate_interval of this V1KubeVirtSelfSignConfiguration.
 
         :param ca_rotate_interval: The ca_rotate_interval of this V1KubeVirtSelfSignConfiguration.
-        :type: V1Duration
+        :type: K8sIoApimachineryPkgApisMetaV1Duration
         """
 
         self._ca_rotate_interval = ca_rotate_interval
@@ -106,7 +106,7 @@ class V1KubeVirtSelfSignConfiguration(object):
         Gets the cert_rotate_interval of this V1KubeVirtSelfSignConfiguration.
 
         :return: The cert_rotate_interval of this V1KubeVirtSelfSignConfiguration.
-        :rtype: V1Duration
+        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
         """
         return self._cert_rotate_interval
 
@@ -116,7 +116,7 @@ class V1KubeVirtSelfSignConfiguration(object):
         Sets the cert_rotate_interval of this V1KubeVirtSelfSignConfiguration.
 
         :param cert_rotate_interval: The cert_rotate_interval of this V1KubeVirtSelfSignConfiguration.
-        :type: V1Duration
+        :type: K8sIoApimachineryPkgApisMetaV1Duration
         """
 
         self._cert_rotate_interval = cert_rotate_interval

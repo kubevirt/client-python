@@ -32,7 +32,7 @@ class V1alpha1DataVolumeSpec(object):
     """
     swagger_types = {
         'content_type': 'str',
-        'pvc': 'V1PersistentVolumeClaimSpec',
+        'pvc': 'K8sIoApiCoreV1PersistentVolumeClaimSpec',
         'source': 'V1alpha1DataVolumeSource'
     }
 
@@ -86,7 +86,7 @@ class V1alpha1DataVolumeSpec(object):
         PVC is the PVC specification
 
         :return: The pvc of this V1alpha1DataVolumeSpec.
-        :rtype: V1PersistentVolumeClaimSpec
+        :rtype: K8sIoApiCoreV1PersistentVolumeClaimSpec
         """
         return self._pvc
 
@@ -97,7 +97,7 @@ class V1alpha1DataVolumeSpec(object):
         PVC is the PVC specification
 
         :param pvc: The pvc of this V1alpha1DataVolumeSpec.
-        :type: V1PersistentVolumeClaimSpec
+        :type: K8sIoApiCoreV1PersistentVolumeClaimSpec
         """
         if pvc is None:
             raise ValueError("Invalid value for `pvc`, must not be `None`")

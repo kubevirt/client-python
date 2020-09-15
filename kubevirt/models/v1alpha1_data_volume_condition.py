@@ -31,7 +31,7 @@ class V1alpha1DataVolumeCondition(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'last_heartbeat_time': 'V1Time',
+        'last_heartbeat_time': 'K8sIoApimachineryPkgApisMetaV1Time',
         'message': 'str',
         'reason': 'str',
         'status': 'str',
@@ -72,7 +72,7 @@ class V1alpha1DataVolumeCondition(object):
         Gets the last_heartbeat_time of this V1alpha1DataVolumeCondition.
 
         :return: The last_heartbeat_time of this V1alpha1DataVolumeCondition.
-        :rtype: V1Time
+        :rtype: K8sIoApimachineryPkgApisMetaV1Time
         """
         return self._last_heartbeat_time
 
@@ -82,7 +82,7 @@ class V1alpha1DataVolumeCondition(object):
         Sets the last_heartbeat_time of this V1alpha1DataVolumeCondition.
 
         :param last_heartbeat_time: The last_heartbeat_time of this V1alpha1DataVolumeCondition.
-        :type: V1Time
+        :type: K8sIoApimachineryPkgApisMetaV1Time
         """
 
         self._last_heartbeat_time = last_heartbeat_time

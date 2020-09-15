@@ -32,11 +32,11 @@ class V1Probe(object):
     """
     swagger_types = {
         'failure_threshold': 'int',
-        'http_get': 'V1HTTPGetAction',
+        'http_get': 'K8sIoApiCoreV1HTTPGetAction',
         'initial_delay_seconds': 'int',
         'period_seconds': 'int',
         'success_threshold': 'int',
-        'tcp_socket': 'V1TCPSocketAction',
+        'tcp_socket': 'K8sIoApiCoreV1TCPSocketAction',
         'timeout_seconds': 'int'
     }
 
@@ -108,7 +108,7 @@ class V1Probe(object):
         HTTPGet specifies the http request to perform.
 
         :return: The http_get of this V1Probe.
-        :rtype: V1HTTPGetAction
+        :rtype: K8sIoApiCoreV1HTTPGetAction
         """
         return self._http_get
 
@@ -119,7 +119,7 @@ class V1Probe(object):
         HTTPGet specifies the http request to perform.
 
         :param http_get: The http_get of this V1Probe.
-        :type: V1HTTPGetAction
+        :type: K8sIoApiCoreV1HTTPGetAction
         """
 
         self._http_get = http_get
@@ -200,7 +200,7 @@ class V1Probe(object):
         TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported
 
         :return: The tcp_socket of this V1Probe.
-        :rtype: V1TCPSocketAction
+        :rtype: K8sIoApiCoreV1TCPSocketAction
         """
         return self._tcp_socket
 
@@ -211,7 +211,7 @@ class V1Probe(object):
         TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported
 
         :param tcp_socket: The tcp_socket of this V1Probe.
-        :type: V1TCPSocketAction
+        :type: K8sIoApiCoreV1TCPSocketAction
         """
 
         self._tcp_socket = tcp_socket

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**last_heartbeat_time** | [**V1Time**](V1Time.md) |  | [optional] 
+**last_heartbeat_time** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) |  | [optional] 
 **message** | **str** |  | [optional] 
 **reason** | **str** |  | [optional] 
 **status** | **str** |  | 

@@ -31,7 +31,7 @@ class V1alpha1VirtualMachineRestoreSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'target': 'V1TypedLocalObjectReference',
+        'target': 'K8sIoApiCoreV1TypedLocalObjectReference',
         'virtual_machine_snapshot_name': 'str'
     }
 
@@ -58,7 +58,7 @@ class V1alpha1VirtualMachineRestoreSpec(object):
         initially only VirtualMachine type supported
 
         :return: The target of this V1alpha1VirtualMachineRestoreSpec.
-        :rtype: V1TypedLocalObjectReference
+        :rtype: K8sIoApiCoreV1TypedLocalObjectReference
         """
         return self._target
 
@@ -69,7 +69,7 @@ class V1alpha1VirtualMachineRestoreSpec(object):
         initially only VirtualMachine type supported
 
         :param target: The target of this V1alpha1VirtualMachineRestoreSpec.
-        :type: V1TypedLocalObjectReference
+        :type: K8sIoApiCoreV1TypedLocalObjectReference
         """
         if target is None:
             raise ValueError("Invalid value for `target`, must not be `None`")

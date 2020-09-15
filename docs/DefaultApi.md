@@ -654,7 +654,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_collection_namespaced_kube_virt**
-> V1Status delete_collection_namespaced_kube_virt(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1Status delete_collection_namespaced_kube_virt(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -701,7 +701,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -715,7 +715,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_collection_namespaced_virtual_machine**
-> V1Status delete_collection_namespaced_virtual_machine(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1Status delete_collection_namespaced_virtual_machine(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -762,7 +762,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -776,7 +776,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_collection_namespaced_virtual_machine_instance**
-> V1Status delete_collection_namespaced_virtual_machine_instance(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1Status delete_collection_namespaced_virtual_machine_instance(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -823,7 +823,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -837,7 +837,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_collection_namespaced_virtual_machine_instance_migration**
-> V1Status delete_collection_namespaced_virtual_machine_instance_migration(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1Status delete_collection_namespaced_virtual_machine_instance_migration(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -884,7 +884,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -898,7 +898,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_collection_namespaced_virtual_machine_instance_preset**
-> V1Status delete_collection_namespaced_virtual_machine_instance_preset(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1Status delete_collection_namespaced_virtual_machine_instance_preset(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -945,7 +945,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -959,7 +959,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_collection_namespaced_virtual_machine_instance_replica_set**
-> V1Status delete_collection_namespaced_virtual_machine_instance_replica_set(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1Status delete_collection_namespaced_virtual_machine_instance_replica_set(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -1006,7 +1006,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -1020,7 +1020,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_collection_namespaced_virtual_machine_restore**
-> V1Status delete_collection_namespaced_virtual_machine_restore(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1Status delete_collection_namespaced_virtual_machine_restore(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -1067,7 +1067,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -1081,7 +1081,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_collection_namespaced_virtual_machine_snapshot**
-> V1Status delete_collection_namespaced_virtual_machine_snapshot(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1Status delete_collection_namespaced_virtual_machine_snapshot(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -1128,7 +1128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -1142,7 +1142,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_collection_namespaced_virtual_machine_snapshot_content**
-> V1Status delete_collection_namespaced_virtual_machine_snapshot_content(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1Status delete_collection_namespaced_virtual_machine_snapshot_content(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -1189,7 +1189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -1203,7 +1203,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_namespaced_kube_virt**
-> V1Status delete_namespaced_kube_virt(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
+> K8sIoApimachineryPkgApisMetaV1Status delete_namespaced_kube_virt(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
 
 
 
@@ -1221,7 +1221,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1DeleteOptions() # V1DeleteOptions | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1DeleteOptions() # K8sIoApimachineryPkgApisMetaV1DeleteOptions | 
 grace_period_seconds = 56 # int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 orphan_dependents = true # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -1239,14 +1239,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1DeleteOptions**](V1DeleteOptions.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1DeleteOptions**](K8sIoApimachineryPkgApisMetaV1DeleteOptions.md)|  | 
  **grace_period_seconds** | **int**| The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | [optional] 
  **orphan_dependents** | **bool**| Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | [optional] 
  **propagation_policy** | **str**| Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | [optional] 
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -1260,7 +1260,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_namespaced_virtual_machine**
-> V1Status delete_namespaced_virtual_machine(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
+> K8sIoApimachineryPkgApisMetaV1Status delete_namespaced_virtual_machine(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
 
 
 
@@ -1278,7 +1278,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1DeleteOptions() # V1DeleteOptions | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1DeleteOptions() # K8sIoApimachineryPkgApisMetaV1DeleteOptions | 
 grace_period_seconds = 56 # int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 orphan_dependents = true # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -1296,14 +1296,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1DeleteOptions**](V1DeleteOptions.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1DeleteOptions**](K8sIoApimachineryPkgApisMetaV1DeleteOptions.md)|  | 
  **grace_period_seconds** | **int**| The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | [optional] 
  **orphan_dependents** | **bool**| Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | [optional] 
  **propagation_policy** | **str**| Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | [optional] 
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -1317,7 +1317,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_namespaced_virtual_machine_instance**
-> V1Status delete_namespaced_virtual_machine_instance(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
+> K8sIoApimachineryPkgApisMetaV1Status delete_namespaced_virtual_machine_instance(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
 
 
 
@@ -1335,7 +1335,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1DeleteOptions() # V1DeleteOptions | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1DeleteOptions() # K8sIoApimachineryPkgApisMetaV1DeleteOptions | 
 grace_period_seconds = 56 # int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 orphan_dependents = true # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -1353,14 +1353,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1DeleteOptions**](V1DeleteOptions.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1DeleteOptions**](K8sIoApimachineryPkgApisMetaV1DeleteOptions.md)|  | 
  **grace_period_seconds** | **int**| The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | [optional] 
  **orphan_dependents** | **bool**| Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | [optional] 
  **propagation_policy** | **str**| Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | [optional] 
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -1374,7 +1374,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_namespaced_virtual_machine_instance_migration**
-> V1Status delete_namespaced_virtual_machine_instance_migration(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
+> K8sIoApimachineryPkgApisMetaV1Status delete_namespaced_virtual_machine_instance_migration(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
 
 
 
@@ -1392,7 +1392,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1DeleteOptions() # V1DeleteOptions | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1DeleteOptions() # K8sIoApimachineryPkgApisMetaV1DeleteOptions | 
 grace_period_seconds = 56 # int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 orphan_dependents = true # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -1410,14 +1410,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1DeleteOptions**](V1DeleteOptions.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1DeleteOptions**](K8sIoApimachineryPkgApisMetaV1DeleteOptions.md)|  | 
  **grace_period_seconds** | **int**| The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | [optional] 
  **orphan_dependents** | **bool**| Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | [optional] 
  **propagation_policy** | **str**| Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | [optional] 
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -1431,7 +1431,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_namespaced_virtual_machine_instance_preset**
-> V1Status delete_namespaced_virtual_machine_instance_preset(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
+> K8sIoApimachineryPkgApisMetaV1Status delete_namespaced_virtual_machine_instance_preset(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
 
 
 
@@ -1449,7 +1449,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1DeleteOptions() # V1DeleteOptions | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1DeleteOptions() # K8sIoApimachineryPkgApisMetaV1DeleteOptions | 
 grace_period_seconds = 56 # int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 orphan_dependents = true # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -1467,14 +1467,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1DeleteOptions**](V1DeleteOptions.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1DeleteOptions**](K8sIoApimachineryPkgApisMetaV1DeleteOptions.md)|  | 
  **grace_period_seconds** | **int**| The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | [optional] 
  **orphan_dependents** | **bool**| Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | [optional] 
  **propagation_policy** | **str**| Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | [optional] 
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -1488,7 +1488,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_namespaced_virtual_machine_instance_replica_set**
-> V1Status delete_namespaced_virtual_machine_instance_replica_set(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
+> K8sIoApimachineryPkgApisMetaV1Status delete_namespaced_virtual_machine_instance_replica_set(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
 
 
 
@@ -1506,7 +1506,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1DeleteOptions() # V1DeleteOptions | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1DeleteOptions() # K8sIoApimachineryPkgApisMetaV1DeleteOptions | 
 grace_period_seconds = 56 # int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 orphan_dependents = true # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -1524,14 +1524,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1DeleteOptions**](V1DeleteOptions.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1DeleteOptions**](K8sIoApimachineryPkgApisMetaV1DeleteOptions.md)|  | 
  **grace_period_seconds** | **int**| The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | [optional] 
  **orphan_dependents** | **bool**| Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | [optional] 
  **propagation_policy** | **str**| Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | [optional] 
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -1545,7 +1545,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_namespaced_virtual_machine_restore**
-> V1Status delete_namespaced_virtual_machine_restore(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
+> K8sIoApimachineryPkgApisMetaV1Status delete_namespaced_virtual_machine_restore(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
 
 
 
@@ -1563,7 +1563,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1DeleteOptions() # V1DeleteOptions | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1DeleteOptions() # K8sIoApimachineryPkgApisMetaV1DeleteOptions | 
 grace_period_seconds = 56 # int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 orphan_dependents = true # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -1581,14 +1581,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1DeleteOptions**](V1DeleteOptions.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1DeleteOptions**](K8sIoApimachineryPkgApisMetaV1DeleteOptions.md)|  | 
  **grace_period_seconds** | **int**| The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | [optional] 
  **orphan_dependents** | **bool**| Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | [optional] 
  **propagation_policy** | **str**| Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | [optional] 
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -1602,7 +1602,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_namespaced_virtual_machine_snapshot**
-> V1Status delete_namespaced_virtual_machine_snapshot(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
+> K8sIoApimachineryPkgApisMetaV1Status delete_namespaced_virtual_machine_snapshot(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
 
 
 
@@ -1620,7 +1620,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1DeleteOptions() # V1DeleteOptions | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1DeleteOptions() # K8sIoApimachineryPkgApisMetaV1DeleteOptions | 
 grace_period_seconds = 56 # int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 orphan_dependents = true # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -1638,14 +1638,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1DeleteOptions**](V1DeleteOptions.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1DeleteOptions**](K8sIoApimachineryPkgApisMetaV1DeleteOptions.md)|  | 
  **grace_period_seconds** | **int**| The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | [optional] 
  **orphan_dependents** | **bool**| Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | [optional] 
  **propagation_policy** | **str**| Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | [optional] 
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -1659,7 +1659,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_namespaced_virtual_machine_snapshot_content**
-> V1Status delete_namespaced_virtual_machine_snapshot_content(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
+> K8sIoApimachineryPkgApisMetaV1Status delete_namespaced_virtual_machine_snapshot_content(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
 
 
 
@@ -1677,7 +1677,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1DeleteOptions() # V1DeleteOptions | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1DeleteOptions() # K8sIoApimachineryPkgApisMetaV1DeleteOptions | 
 grace_period_seconds = 56 # int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 orphan_dependents = true # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -1695,14 +1695,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1DeleteOptions**](V1DeleteOptions.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1DeleteOptions**](K8sIoApimachineryPkgApisMetaV1DeleteOptions.md)|  | 
  **grace_period_seconds** | **int**| The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | [optional] 
  **orphan_dependents** | **bool**| Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | [optional] 
  **propagation_policy** | **str**| Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | [optional] 
 
 ### Return type
 
-[**V1Status**](V1Status.md)
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
 
 ### Authorization
 
@@ -1841,7 +1841,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_api_group_kubevirt_io**
-> V1APIGroup get_api_group_kubevirt_io()
+> K8sIoApimachineryPkgApisMetaV1APIGroup get_api_group_kubevirt_io()
 
 
 
@@ -1870,7 +1870,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**V1APIGroup**](V1APIGroup.md)
+[**K8sIoApimachineryPkgApisMetaV1APIGroup**](K8sIoApimachineryPkgApisMetaV1APIGroup.md)
 
 ### Authorization
 
@@ -1884,7 +1884,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_api_group_list**
-> V1APIGroupList get_api_group_list()
+> K8sIoApimachineryPkgApisMetaV1APIGroupList get_api_group_list()
 
 
 
@@ -1913,7 +1913,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**V1APIGroupList**](V1APIGroupList.md)
+[**K8sIoApimachineryPkgApisMetaV1APIGroupList**](K8sIoApimachineryPkgApisMetaV1APIGroupList.md)
 
 ### Authorization
 
@@ -1927,7 +1927,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_api_group_snapshot_kubevirt_io**
-> V1APIGroup get_api_group_snapshot_kubevirt_io()
+> K8sIoApimachineryPkgApisMetaV1APIGroup get_api_group_snapshot_kubevirt_io()
 
 
 
@@ -1956,7 +1956,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**V1APIGroup**](V1APIGroup.md)
+[**K8sIoApimachineryPkgApisMetaV1APIGroup**](K8sIoApimachineryPkgApisMetaV1APIGroup.md)
 
 ### Authorization
 
@@ -1970,7 +1970,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_api_resources_kubevirt_io_v1alpha3**
-> V1APIResourceList get_api_resources_kubevirt_io_v1alpha3()
+> K8sIoApimachineryPkgApisMetaV1APIResourceList get_api_resources_kubevirt_io_v1alpha3()
 
 
 
@@ -1999,7 +1999,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**V1APIResourceList**](V1APIResourceList.md)
+[**K8sIoApimachineryPkgApisMetaV1APIResourceList**](K8sIoApimachineryPkgApisMetaV1APIResourceList.md)
 
 ### Authorization
 
@@ -2013,7 +2013,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_api_resources_snapshot_kubevirt_io_v1alpha1**
-> V1APIResourceList get_api_resources_snapshot_kubevirt_io_v1alpha1()
+> K8sIoApimachineryPkgApisMetaV1APIResourceList get_api_resources_snapshot_kubevirt_io_v1alpha1()
 
 
 
@@ -2042,7 +2042,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**V1APIResourceList**](V1APIResourceList.md)
+[**K8sIoApimachineryPkgApisMetaV1APIResourceList**](K8sIoApimachineryPkgApisMetaV1APIResourceList.md)
 
 ### Authorization
 
@@ -2056,7 +2056,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_api_sub_resources**
-> V1APIResourceList get_api_sub_resources()
+> K8sIoApimachineryPkgApisMetaV1APIResourceList get_api_sub_resources()
 
 
 
@@ -2085,7 +2085,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**V1APIResourceList**](V1APIResourceList.md)
+[**K8sIoApimachineryPkgApisMetaV1APIResourceList**](K8sIoApimachineryPkgApisMetaV1APIResourceList.md)
 
 ### Authorization
 
@@ -2099,7 +2099,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_root_paths**
-> V1RootPaths get_root_paths()
+> K8sIoApimachineryPkgApisMetaV1RootPaths get_root_paths()
 
 
 
@@ -2128,7 +2128,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**V1RootPaths**](V1RootPaths.md)
+[**K8sIoApimachineryPkgApisMetaV1RootPaths**](K8sIoApimachineryPkgApisMetaV1RootPaths.md)
 
 ### Authorization
 
@@ -2142,7 +2142,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_sub_api_group**
-> V1APIGroup get_sub_api_group()
+> K8sIoApimachineryPkgApisMetaV1APIGroup get_sub_api_group()
 
 
 
@@ -2171,7 +2171,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**V1APIGroup**](V1APIGroup.md)
+[**K8sIoApimachineryPkgApisMetaV1APIGroup**](K8sIoApimachineryPkgApisMetaV1APIGroup.md)
 
 ### Authorization
 
@@ -3417,7 +3417,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1Patch() # V1Patch | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1Patch() # K8sIoApimachineryPkgApisMetaV1Patch | 
 
 try: 
     api_response = api_instance.patch_namespaced_kube_virt(name, namespace, body)
@@ -3432,7 +3432,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1Patch**](V1Patch.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1Patch**](K8sIoApimachineryPkgApisMetaV1Patch.md)|  | 
 
 ### Return type
 
@@ -3468,7 +3468,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1Patch() # V1Patch | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1Patch() # K8sIoApimachineryPkgApisMetaV1Patch | 
 
 try: 
     api_response = api_instance.patch_namespaced_virtual_machine(name, namespace, body)
@@ -3483,7 +3483,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1Patch**](V1Patch.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1Patch**](K8sIoApimachineryPkgApisMetaV1Patch.md)|  | 
 
 ### Return type
 
@@ -3519,7 +3519,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1Patch() # V1Patch | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1Patch() # K8sIoApimachineryPkgApisMetaV1Patch | 
 
 try: 
     api_response = api_instance.patch_namespaced_virtual_machine_instance(name, namespace, body)
@@ -3534,7 +3534,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1Patch**](V1Patch.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1Patch**](K8sIoApimachineryPkgApisMetaV1Patch.md)|  | 
 
 ### Return type
 
@@ -3570,7 +3570,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1Patch() # V1Patch | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1Patch() # K8sIoApimachineryPkgApisMetaV1Patch | 
 
 try: 
     api_response = api_instance.patch_namespaced_virtual_machine_instance_migration(name, namespace, body)
@@ -3585,7 +3585,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1Patch**](V1Patch.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1Patch**](K8sIoApimachineryPkgApisMetaV1Patch.md)|  | 
 
 ### Return type
 
@@ -3621,7 +3621,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1Patch() # V1Patch | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1Patch() # K8sIoApimachineryPkgApisMetaV1Patch | 
 
 try: 
     api_response = api_instance.patch_namespaced_virtual_machine_instance_preset(name, namespace, body)
@@ -3636,7 +3636,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1Patch**](V1Patch.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1Patch**](K8sIoApimachineryPkgApisMetaV1Patch.md)|  | 
 
 ### Return type
 
@@ -3672,7 +3672,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1Patch() # V1Patch | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1Patch() # K8sIoApimachineryPkgApisMetaV1Patch | 
 
 try: 
     api_response = api_instance.patch_namespaced_virtual_machine_instance_replica_set(name, namespace, body)
@@ -3687,7 +3687,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1Patch**](V1Patch.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1Patch**](K8sIoApimachineryPkgApisMetaV1Patch.md)|  | 
 
 ### Return type
 
@@ -3723,7 +3723,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1Patch() # V1Patch | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1Patch() # K8sIoApimachineryPkgApisMetaV1Patch | 
 
 try: 
     api_response = api_instance.patch_namespaced_virtual_machine_restore(name, namespace, body)
@@ -3738,7 +3738,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1Patch**](V1Patch.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1Patch**](K8sIoApimachineryPkgApisMetaV1Patch.md)|  | 
 
 ### Return type
 
@@ -3774,7 +3774,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1Patch() # V1Patch | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1Patch() # K8sIoApimachineryPkgApisMetaV1Patch | 
 
 try: 
     api_response = api_instance.patch_namespaced_virtual_machine_snapshot(name, namespace, body)
@@ -3789,7 +3789,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1Patch**](V1Patch.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1Patch**](K8sIoApimachineryPkgApisMetaV1Patch.md)|  | 
 
 ### Return type
 
@@ -3825,7 +3825,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1Patch() # V1Patch | 
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1Patch() # K8sIoApimachineryPkgApisMetaV1Patch | 
 
 try: 
     api_response = api_instance.patch_namespaced_virtual_machine_snapshot_content(name, namespace, body)
@@ -3840,7 +3840,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1Patch**](V1Patch.md)|  | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1Patch**](K8sIoApimachineryPkgApisMetaV1Patch.md)|  | 
 
 ### Return type
 
@@ -5269,7 +5269,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_kube_virt_list_for_all_namespaces**
-> V1WatchEvent watch_kube_virt_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_kube_virt_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5316,7 +5316,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -5330,7 +5330,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_namespaced_kube_virt**
-> V1WatchEvent watch_namespaced_kube_virt(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_namespaced_kube_virt(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5379,7 +5379,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -5393,7 +5393,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_namespaced_virtual_machine**
-> V1WatchEvent watch_namespaced_virtual_machine(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_namespaced_virtual_machine(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5442,7 +5442,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -5456,7 +5456,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_namespaced_virtual_machine_instance**
-> V1WatchEvent watch_namespaced_virtual_machine_instance(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_namespaced_virtual_machine_instance(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5505,7 +5505,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -5519,7 +5519,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_namespaced_virtual_machine_instance_migration**
-> V1WatchEvent watch_namespaced_virtual_machine_instance_migration(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_namespaced_virtual_machine_instance_migration(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5568,7 +5568,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -5582,7 +5582,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_namespaced_virtual_machine_instance_preset**
-> V1WatchEvent watch_namespaced_virtual_machine_instance_preset(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_namespaced_virtual_machine_instance_preset(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5631,7 +5631,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -5645,7 +5645,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_namespaced_virtual_machine_instance_replica_set**
-> V1WatchEvent watch_namespaced_virtual_machine_instance_replica_set(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_namespaced_virtual_machine_instance_replica_set(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5694,7 +5694,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -5708,7 +5708,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_namespaced_virtual_machine_restore**
-> V1WatchEvent watch_namespaced_virtual_machine_restore(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_namespaced_virtual_machine_restore(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5757,7 +5757,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -5771,7 +5771,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_namespaced_virtual_machine_snapshot**
-> V1WatchEvent watch_namespaced_virtual_machine_snapshot(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_namespaced_virtual_machine_snapshot(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5820,7 +5820,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -5834,7 +5834,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_namespaced_virtual_machine_snapshot_content**
-> V1WatchEvent watch_namespaced_virtual_machine_snapshot_content(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_namespaced_virtual_machine_snapshot_content(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5883,7 +5883,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -5897,7 +5897,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_virtual_machine_instance_list_for_all_namespaces**
-> V1WatchEvent watch_virtual_machine_instance_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_virtual_machine_instance_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5944,7 +5944,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -5958,7 +5958,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_virtual_machine_instance_migration_list_for_all_namespaces**
-> V1WatchEvent watch_virtual_machine_instance_migration_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_virtual_machine_instance_migration_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -6005,7 +6005,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -6019,7 +6019,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_virtual_machine_instance_preset_list_for_all_namespaces**
-> V1WatchEvent watch_virtual_machine_instance_preset_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_virtual_machine_instance_preset_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -6066,7 +6066,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -6080,7 +6080,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_virtual_machine_instance_replica_set_list_for_all_namespaces**
-> V1WatchEvent watch_virtual_machine_instance_replica_set_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_virtual_machine_instance_replica_set_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -6127,7 +6127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -6141,7 +6141,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_virtual_machine_list_for_all_namespaces**
-> V1WatchEvent watch_virtual_machine_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_virtual_machine_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -6188,7 +6188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -6202,7 +6202,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_virtual_machine_restore_list_for_all_namespaces**
-> V1WatchEvent watch_virtual_machine_restore_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_virtual_machine_restore_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -6249,7 +6249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -6263,7 +6263,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_virtual_machine_snapshot_content_list_for_all_namespaces**
-> V1WatchEvent watch_virtual_machine_snapshot_content_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_virtual_machine_snapshot_content_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -6310,7 +6310,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 
@@ -6324,7 +6324,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_virtual_machine_snapshot_list_for_all_namespaces**
-> V1WatchEvent watch_virtual_machine_snapshot_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_virtual_machine_snapshot_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -6371,7 +6371,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1WatchEvent**](V1WatchEvent.md)
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
 
 ### Authorization
 

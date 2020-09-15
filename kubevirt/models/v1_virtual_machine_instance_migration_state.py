@@ -34,11 +34,11 @@ class V1VirtualMachineInstanceMigrationState(object):
         'abort_requested': 'bool',
         'abort_status': 'str',
         'completed': 'bool',
-        'end_timestamp': 'V1Time',
+        'end_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'failed': 'bool',
         'migration_uid': 'str',
         'source_node': 'str',
-        'start_timestamp': 'V1Time',
+        'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'target_direct_migration_node_ports': 'dict(str, int)',
         'target_node': 'str',
         'target_node_address': 'str',
@@ -184,7 +184,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The time the migration action ended
 
         :return: The end_timestamp of this V1VirtualMachineInstanceMigrationState.
-        :rtype: V1Time
+        :rtype: K8sIoApimachineryPkgApisMetaV1Time
         """
         return self._end_timestamp
 
@@ -195,7 +195,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The time the migration action ended
 
         :param end_timestamp: The end_timestamp of this V1VirtualMachineInstanceMigrationState.
-        :type: V1Time
+        :type: K8sIoApimachineryPkgApisMetaV1Time
         """
 
         self._end_timestamp = end_timestamp
@@ -276,7 +276,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The time the migration action began
 
         :return: The start_timestamp of this V1VirtualMachineInstanceMigrationState.
-        :rtype: V1Time
+        :rtype: K8sIoApimachineryPkgApisMetaV1Time
         """
         return self._start_timestamp
 
@@ -287,7 +287,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The time the migration action began
 
         :param start_timestamp: The start_timestamp of this V1VirtualMachineInstanceMigrationState.
-        :type: V1Time
+        :type: K8sIoApimachineryPkgApisMetaV1Time
         """
 
         self._start_timestamp = start_timestamp

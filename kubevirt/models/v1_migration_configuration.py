@@ -32,7 +32,7 @@ class V1MigrationConfiguration(object):
     """
     swagger_types = {
         'allow_auto_converge': 'str',
-        'bandwidth_per_migration': 'ResourceQuantity',
+        'bandwidth_per_migration': 'K8sIoApimachineryPkgApiResourceQuantity',
         'completion_timeout_per_gi_b': 'str',
         'node_drain_taint_key': 'str',
         'parallel_migrations_per_cluster': 'str',
@@ -110,7 +110,7 @@ class V1MigrationConfiguration(object):
         Gets the bandwidth_per_migration of this V1MigrationConfiguration.
 
         :return: The bandwidth_per_migration of this V1MigrationConfiguration.
-        :rtype: ResourceQuantity
+        :rtype: K8sIoApimachineryPkgApiResourceQuantity
         """
         return self._bandwidth_per_migration
 
@@ -120,7 +120,7 @@ class V1MigrationConfiguration(object):
         Sets the bandwidth_per_migration of this V1MigrationConfiguration.
 
         :param bandwidth_per_migration: The bandwidth_per_migration of this V1MigrationConfiguration.
-        :type: ResourceQuantity
+        :type: K8sIoApimachineryPkgApiResourceQuantity
         """
 
         self._bandwidth_per_migration = bandwidth_per_migration

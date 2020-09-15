@@ -31,7 +31,7 @@ class V1Memory(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'guest': 'ResourceQuantity',
+        'guest': 'K8sIoApimachineryPkgApiResourceQuantity',
         'hugepages': 'V1Hugepages'
     }
 
@@ -60,7 +60,7 @@ class V1Memory(object):
         Guest allows to specifying the amount of memory which is visible inside the Guest OS. The Guest must lie between Requests and Limits from the resources section. Defaults to the requested memory in the resources section if not specified.
 
         :return: The guest of this V1Memory.
-        :rtype: ResourceQuantity
+        :rtype: K8sIoApimachineryPkgApiResourceQuantity
         """
         return self._guest
 
@@ -71,7 +71,7 @@ class V1Memory(object):
         Guest allows to specifying the amount of memory which is visible inside the Guest OS. The Guest must lie between Requests and Limits from the resources section. Defaults to the requested memory in the resources section if not specified.
 
         :param guest: The guest of this V1Memory.
-        :type: ResourceQuantity
+        :type: K8sIoApimachineryPkgApiResourceQuantity
         """
 
         self._guest = guest

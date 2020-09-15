@@ -33,7 +33,7 @@ class V1VirtualMachineInstanceReplicaSetSpec(object):
     swagger_types = {
         'paused': 'bool',
         'replicas': 'int',
-        'selector': 'V1LabelSelector',
+        'selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
         'template': 'V1VirtualMachineInstanceTemplateSpec'
     }
 
@@ -114,7 +114,7 @@ class V1VirtualMachineInstanceReplicaSetSpec(object):
         Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment.
 
         :return: The selector of this V1VirtualMachineInstanceReplicaSetSpec.
-        :rtype: V1LabelSelector
+        :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
         """
         return self._selector
 
@@ -125,7 +125,7 @@ class V1VirtualMachineInstanceReplicaSetSpec(object):
         Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment.
 
         :param selector: The selector of this V1VirtualMachineInstanceReplicaSetSpec.
-        :type: V1LabelSelector
+        :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
         """
         if selector is None:
             raise ValueError("Invalid value for `selector`, must not be `None`")

@@ -32,7 +32,7 @@ class V1alpha1VirtualMachineSnapshotSpec(object):
     """
     swagger_types = {
         'deletion_policy': 'str',
-        'source': 'V1TypedLocalObjectReference'
+        'source': 'K8sIoApiCoreV1TypedLocalObjectReference'
     }
 
     attribute_map = {
@@ -79,7 +79,7 @@ class V1alpha1VirtualMachineSnapshotSpec(object):
         Gets the source of this V1alpha1VirtualMachineSnapshotSpec.
 
         :return: The source of this V1alpha1VirtualMachineSnapshotSpec.
-        :rtype: V1TypedLocalObjectReference
+        :rtype: K8sIoApiCoreV1TypedLocalObjectReference
         """
         return self._source
 
@@ -89,7 +89,7 @@ class V1alpha1VirtualMachineSnapshotSpec(object):
         Sets the source of this V1alpha1VirtualMachineSnapshotSpec.
 
         :param source: The source of this V1alpha1VirtualMachineSnapshotSpec.
-        :type: V1TypedLocalObjectReference
+        :type: K8sIoApiCoreV1TypedLocalObjectReference
         """
         if source is None:
             raise ValueError("Invalid value for `source`, must not be `None`")

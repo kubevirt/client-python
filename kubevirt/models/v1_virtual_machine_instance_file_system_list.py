@@ -34,7 +34,7 @@ class V1VirtualMachineInstanceFileSystemList(object):
         'api_version': 'str',
         'items': 'list[V1VirtualMachineInstanceFileSystem]',
         'kind': 'str',
-        'metadata': 'V1ListMeta'
+        'metadata': 'K8sIoApimachineryPkgApisMetaV1ListMeta'
     }
 
     attribute_map = {
@@ -137,7 +137,7 @@ class V1VirtualMachineInstanceFileSystemList(object):
         Gets the metadata of this V1VirtualMachineInstanceFileSystemList.
 
         :return: The metadata of this V1VirtualMachineInstanceFileSystemList.
-        :rtype: V1ListMeta
+        :rtype: K8sIoApimachineryPkgApisMetaV1ListMeta
         """
         return self._metadata
 
@@ -147,7 +147,7 @@ class V1VirtualMachineInstanceFileSystemList(object):
         Sets the metadata of this V1VirtualMachineInstanceFileSystemList.
 
         :param metadata: The metadata of this V1VirtualMachineInstanceFileSystemList.
-        :type: V1ListMeta
+        :type: K8sIoApimachineryPkgApisMetaV1ListMeta
         """
 
         self._metadata = metadata

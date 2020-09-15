@@ -33,7 +33,7 @@ class V1VirtualMachineInstancePreset(object):
     swagger_types = {
         'api_version': 'str',
         'kind': 'str',
-        'metadata': 'V1ObjectMeta',
+        'metadata': 'K8sIoApimachineryPkgApisMetaV1ObjectMeta',
         'spec': 'V1VirtualMachineInstancePresetSpec'
     }
 
@@ -115,7 +115,7 @@ class V1VirtualMachineInstancePreset(object):
         Gets the metadata of this V1VirtualMachineInstancePreset.
 
         :return: The metadata of this V1VirtualMachineInstancePreset.
-        :rtype: V1ObjectMeta
+        :rtype: K8sIoApimachineryPkgApisMetaV1ObjectMeta
         """
         return self._metadata
 
@@ -125,7 +125,7 @@ class V1VirtualMachineInstancePreset(object):
         Sets the metadata of this V1VirtualMachineInstancePreset.
 
         :param metadata: The metadata of this V1VirtualMachineInstancePreset.
-        :type: V1ObjectMeta
+        :type: K8sIoApimachineryPkgApisMetaV1ObjectMeta
         """
 
         self._metadata = metadata

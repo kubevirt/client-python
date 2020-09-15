@@ -31,7 +31,7 @@ class V1alpha1VirtualMachineSnapshotContentStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'creation_time': 'V1Time',
+        'creation_time': 'K8sIoApimachineryPkgApisMetaV1Time',
         'error': 'V1alpha1Error',
         'ready_to_use': 'bool',
         'volume_snapshot_status': 'list[V1alpha1VolumeSnapshotStatus]'
@@ -69,7 +69,7 @@ class V1alpha1VirtualMachineSnapshotContentStatus(object):
         Gets the creation_time of this V1alpha1VirtualMachineSnapshotContentStatus.
 
         :return: The creation_time of this V1alpha1VirtualMachineSnapshotContentStatus.
-        :rtype: V1Time
+        :rtype: K8sIoApimachineryPkgApisMetaV1Time
         """
         return self._creation_time
 
@@ -79,7 +79,7 @@ class V1alpha1VirtualMachineSnapshotContentStatus(object):
         Sets the creation_time of this V1alpha1VirtualMachineSnapshotContentStatus.
 
         :param creation_time: The creation_time of this V1alpha1VirtualMachineSnapshotContentStatus.
-        :type: V1Time
+        :type: K8sIoApimachineryPkgApisMetaV1Time
         """
 
         self._creation_time = creation_time

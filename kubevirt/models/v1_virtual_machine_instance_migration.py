@@ -33,7 +33,7 @@ class V1VirtualMachineInstanceMigration(object):
     swagger_types = {
         'api_version': 'str',
         'kind': 'str',
-        'metadata': 'V1ObjectMeta',
+        'metadata': 'K8sIoApimachineryPkgApisMetaV1ObjectMeta',
         'spec': 'V1VirtualMachineInstanceMigrationSpec',
         'status': 'V1VirtualMachineInstanceMigrationStatus'
     }
@@ -119,7 +119,7 @@ class V1VirtualMachineInstanceMigration(object):
         Gets the metadata of this V1VirtualMachineInstanceMigration.
 
         :return: The metadata of this V1VirtualMachineInstanceMigration.
-        :rtype: V1ObjectMeta
+        :rtype: K8sIoApimachineryPkgApisMetaV1ObjectMeta
         """
         return self._metadata
 
@@ -129,7 +129,7 @@ class V1VirtualMachineInstanceMigration(object):
         Sets the metadata of this V1VirtualMachineInstanceMigration.
 
         :param metadata: The metadata of this V1VirtualMachineInstanceMigration.
-        :type: V1ObjectMeta
+        :type: K8sIoApimachineryPkgApisMetaV1ObjectMeta
         """
 
         self._metadata = metadata

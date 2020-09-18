@@ -34,6 +34,7 @@ class V1Features(object):
         'acpi': 'V1FeatureState',
         'apic': 'V1FeatureAPIC',
         'hyperv': 'V1FeatureHyperv',
+        'kvm': 'V1FeatureKVM',
         'smm': 'V1FeatureState'
     }
 
@@ -41,10 +42,11 @@ class V1Features(object):
         'acpi': 'acpi',
         'apic': 'apic',
         'hyperv': 'hyperv',
+        'kvm': 'kvm',
         'smm': 'smm'
     }
 
-    def __init__(self, acpi=None, apic=None, hyperv=None, smm=None):
+    def __init__(self, acpi=None, apic=None, hyperv=None, kvm=None, smm=None):
         """
         V1Features - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class V1Features(object):
         self._acpi = None
         self._apic = None
         self._hyperv = None
+        self._kvm = None
         self._smm = None
 
         if acpi is not None:
@@ -60,6 +63,8 @@ class V1Features(object):
           self.apic = apic
         if hyperv is not None:
           self.hyperv = hyperv
+        if kvm is not None:
+          self.kvm = kvm
         if smm is not None:
           self.smm = smm
 
@@ -131,6 +136,29 @@ class V1Features(object):
         """
 
         self._hyperv = hyperv
+
+    @property
+    def kvm(self):
+        """
+        Gets the kvm of this V1Features.
+        Configure how KVM presence is exposed to the guest.
+
+        :return: The kvm of this V1Features.
+        :rtype: V1FeatureKVM
+        """
+        return self._kvm
+
+    @kvm.setter
+    def kvm(self, kvm):
+        """
+        Sets the kvm of this V1Features.
+        Configure how KVM presence is exposed to the guest.
+
+        :param kvm: The kvm of this V1Features.
+        :type: V1FeatureKVM
+        """
+
+        self._kvm = kvm
 
     @property
     def smm(self):

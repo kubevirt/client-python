@@ -91,6 +91,7 @@ from .models.v1_empty_disk_source import V1EmptyDiskSource
 from .models.v1_ephemeral_volume_source import V1EphemeralVolumeSource
 from .models.v1_feature_apic import V1FeatureAPIC
 from .models.v1_feature_hyperv import V1FeatureHyperv
+from .models.v1_feature_kvm import V1FeatureKVM
 from .models.v1_feature_spinlocks import V1FeatureSpinlocks
 from .models.v1_feature_state import V1FeatureState
 from .models.v1_feature_vendor_id import V1FeatureVendorID

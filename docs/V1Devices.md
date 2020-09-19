@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **autoattach_serial_console** | **bool** | Whether to attach the default serial console or not. Serial console access will not be available if set to false. Defaults to true. | [optional] 
 **block_multi_queue** | **bool** | Whether or not to enable virtio multi-queue for block devices | [optional] 
 **disks** | [**list[V1Disk]**](V1Disk.md) | Disks describes disks, cdroms, floppy and luns which are connected to the vmi. | [optional] 
+**filesystems** | [**list[V1Filesystem]**](V1Filesystem.md) | Filesystems describes filesystem which is connected to the vmi. | [optional] 
 **gpus** | [**list[V1GPU]**](V1GPU.md) | Whether to attach a GPU device to the vmi. | [optional] 
 **inputs** | [**list[V1Input]**](V1Input.md) | Inputs describe input devices | [optional] 
 **interfaces** | [**list[V1Interface]**](V1Interface.md) | Interfaces describe network interfaces which are added to the vmi. | [optional] 

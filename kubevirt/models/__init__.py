@@ -96,6 +96,8 @@ from .v1_feature_spinlocks import V1FeatureSpinlocks
 from .v1_feature_state import V1FeatureState
 from .v1_feature_vendor_id import V1FeatureVendorID
 from .v1_features import V1Features
+from .v1_filesystem import V1Filesystem
+from .v1_filesystem_virtiofs import V1FilesystemVirtiofs
 from .v1_firmware import V1Firmware
 from .v1_floppy_target import V1FloppyTarget
 from .v1_gpu import V1GPU

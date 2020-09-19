@@ -37,6 +37,7 @@ class V1Devices(object):
         'autoattach_serial_console': 'bool',
         'block_multi_queue': 'bool',
         'disks': 'list[V1Disk]',
+        'filesystems': 'list[V1Filesystem]',
         'gpus': 'list[V1GPU]',
         'inputs': 'list[V1Input]',
         'interfaces': 'list[V1Interface]',
@@ -52,6 +53,7 @@ class V1Devices(object):
         'autoattach_serial_console': 'autoattachSerialConsole',
         'block_multi_queue': 'blockMultiQueue',
         'disks': 'disks',
+        'filesystems': 'filesystems',
         'gpus': 'gpus',
         'inputs': 'inputs',
         'interfaces': 'interfaces',
@@ -60,7 +62,7 @@ class V1Devices(object):
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, disks=None, gpus=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, disks=None, filesystems=None, gpus=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class V1Devices(object):
         self._autoattach_serial_console = None
         self._block_multi_queue = None
         self._disks = None
+        self._filesystems = None
         self._gpus = None
         self._inputs = None
         self._interfaces = None
@@ -90,6 +93,8 @@ class V1Devices(object):
           self.block_multi_queue = block_multi_queue
         if disks is not None:
           self.disks = disks
+        if filesystems is not None:
+          self.filesystems = filesystems
         if gpus is not None:
           self.gpus = gpus
         if inputs is not None:
@@ -240,6 +245,29 @@ class V1Devices(object):
         """
 
         self._disks = disks
+
+    @property
+    def filesystems(self):
+        """
+        Gets the filesystems of this V1Devices.
+        Filesystems describes filesystem which is connected to the vmi.
+
+        :return: The filesystems of this V1Devices.
+        :rtype: list[V1Filesystem]
+        """
+        return self._filesystems
+
+    @filesystems.setter
+    def filesystems(self, filesystems):
+        """
+        Sets the filesystems of this V1Devices.
+        Filesystems describes filesystem which is connected to the vmi.
+
+        :param filesystems: The filesystems of this V1Devices.
+        :type: list[V1Filesystem]
+        """
+
+        self._filesystems = filesystems
 
     @property
     def gpus(self):

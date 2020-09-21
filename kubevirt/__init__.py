@@ -74,6 +74,7 @@ from .models.v1_clock import V1Clock
 from .models.v1_clock_offset_utc import V1ClockOffsetUTC
 from .models.v1_cloud_init_config_drive_source import V1CloudInitConfigDriveSource
 from .models.v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
+from .models.v1_component_config import V1ComponentConfig
 from .models.v1_config_map_volume_source import V1ConfigMapVolumeSource
 from .models.v1_container_disk_source import V1ContainerDiskSource
 from .models.v1_customize_components import V1CustomizeComponents
@@ -128,6 +129,7 @@ from .models.v1_migration_configuration import V1MigrationConfiguration
 from .models.v1_multus_network import V1MultusNetwork
 from .models.v1_network import V1Network
 from .models.v1_network_configuration import V1NetworkConfiguration
+from .models.v1_node_placement import V1NodePlacement
 from .models.v1_pit_timer import V1PITTimer
 from .models.v1_pod_network import V1PodNetwork
 from .models.v1_port import V1Port

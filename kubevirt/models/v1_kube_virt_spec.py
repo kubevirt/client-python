@@ -37,11 +37,13 @@ class V1KubeVirtSpec(object):
         'image_pull_policy': 'str',
         'image_registry': 'str',
         'image_tag': 'str',
+        'infra': 'V1ComponentConfig',
         'monitor_account': 'str',
         'monitor_namespace': 'str',
         'product_name': 'str',
         'product_version': 'str',
-        'uninstall_strategy': 'str'
+        'uninstall_strategy': 'str',
+        'workloads': 'V1ComponentConfig'
     }
 
     attribute_map = {
@@ -51,14 +53,16 @@ class V1KubeVirtSpec(object):
         'image_pull_policy': 'imagePullPolicy',
         'image_registry': 'imageRegistry',
         'image_tag': 'imageTag',
+        'infra': 'infra',
         'monitor_account': 'monitorAccount',
         'monitor_namespace': 'monitorNamespace',
         'product_name': 'productName',
         'product_version': 'productVersion',
-        'uninstall_strategy': 'uninstallStrategy'
+        'uninstall_strategy': 'uninstallStrategy',
+        'workloads': 'workloads'
     }
 
-    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_registry=None, image_tag=None, monitor_account=None, monitor_namespace=None, product_name=None, product_version=None, uninstall_strategy=None):
+    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_registry=None, image_tag=None, infra=None, monitor_account=None, monitor_namespace=None, product_name=None, product_version=None, uninstall_strategy=None, workloads=None):
         """
         V1KubeVirtSpec - a model defined in Swagger
         """
@@ -69,11 +73,13 @@ class V1KubeVirtSpec(object):
         self._image_pull_policy = None
         self._image_registry = None
         self._image_tag = None
+        self._infra = None
         self._monitor_account = None
         self._monitor_namespace = None
         self._product_name = None
         self._product_version = None
         self._uninstall_strategy = None
+        self._workloads = None
 
         if certificate_rotate_strategy is not None:
           self.certificate_rotate_strategy = certificate_rotate_strategy
@@ -87,6 +93,8 @@ class V1KubeVirtSpec(object):
           self.image_registry = image_registry
         if image_tag is not None:
           self.image_tag = image_tag
+        if infra is not None:
+          self.infra = infra
         if monitor_account is not None:
           self.monitor_account = monitor_account
         if monitor_namespace is not None:
@@ -97,6 +105,8 @@ class V1KubeVirtSpec(object):
           self.product_version = product_version
         if uninstall_strategy is not None:
           self.uninstall_strategy = uninstall_strategy
+        if workloads is not None:
+          self.workloads = workloads
 
     @property
     def certificate_rotate_strategy(self):
@@ -233,6 +243,29 @@ class V1KubeVirtSpec(object):
         self._image_tag = image_tag
 
     @property
+    def infra(self):
+        """
+        Gets the infra of this V1KubeVirtSpec.
+        selectors and tolerations that should apply to KubeVirt infrastructure components
+
+        :return: The infra of this V1KubeVirtSpec.
+        :rtype: V1ComponentConfig
+        """
+        return self._infra
+
+    @infra.setter
+    def infra(self, infra):
+        """
+        Sets the infra of this V1KubeVirtSpec.
+        selectors and tolerations that should apply to KubeVirt infrastructure components
+
+        :param infra: The infra of this V1KubeVirtSpec.
+        :type: V1ComponentConfig
+        """
+
+        self._infra = infra
+
+    @property
     def monitor_account(self):
         """
         Gets the monitor_account of this V1KubeVirtSpec.
@@ -346,6 +379,29 @@ class V1KubeVirtSpec(object):
         """
 
         self._uninstall_strategy = uninstall_strategy
+
+    @property
+    def workloads(self):
+        """
+        Gets the workloads of this V1KubeVirtSpec.
+        selectors and tolerations that should apply to KubeVirt workloads
+
+        :return: The workloads of this V1KubeVirtSpec.
+        :rtype: V1ComponentConfig
+        """
+        return self._workloads
+
+    @workloads.setter
+    def workloads(self, workloads):
+        """
+        Sets the workloads of this V1KubeVirtSpec.
+        selectors and tolerations that should apply to KubeVirt workloads
+
+        :param workloads: The workloads of this V1KubeVirtSpec.
+        :type: V1ComponentConfig
+        """
+
+        self._workloads = workloads
 
     def to_dict(self):
         """

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**acpi** | [**V1FeatureState**](V1FeatureState.md) | ACPI enables/disables ACPI insidejsondata guest. Defaults to enabled. | [optional] 
+**acpi** | [**V1FeatureState**](V1FeatureState.md) | ACPI enables/disables ACPI inside the guest. Defaults to enabled. | [optional] 
 **apic** | [**V1FeatureAPIC**](V1FeatureAPIC.md) | Defaults to the machine type setting. | [optional] 
 **hyperv** | [**V1FeatureHyperv**](V1FeatureHyperv.md) | Defaults to the machine type setting. | [optional] 
 **kvm** | [**V1FeatureKVM**](V1FeatureKVM.md) | Configure how KVM presence is exposed to the guest. | [optional] 

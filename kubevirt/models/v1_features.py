@@ -72,7 +72,7 @@ class V1Features(object):
     def acpi(self):
         """
         Gets the acpi of this V1Features.
-        ACPI enables/disables ACPI insidejsondata guest. Defaults to enabled.
+        ACPI enables/disables ACPI inside the guest. Defaults to enabled.
 
         :return: The acpi of this V1Features.
         :rtype: V1FeatureState
@@ -83,7 +83,7 @@ class V1Features(object):
     def acpi(self, acpi):
         """
         Sets the acpi of this V1Features.
-        ACPI enables/disables ACPI insidejsondata guest. Defaults to enabled.
+        ACPI enables/disables ACPI inside the guest. Defaults to enabled.
 
         :param acpi: The acpi of this V1Features.
         :type: V1FeatureState

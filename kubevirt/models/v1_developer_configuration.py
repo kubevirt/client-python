@@ -31,6 +31,7 @@ class V1DeveloperConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'cpu_allocation_ratio': 'str',
         'feature_gates': 'list[str]',
         'memory_overcommit': 'str',
         'node_selectors': 'dict(str, str)',
@@ -39,6 +40,7 @@ class V1DeveloperConfiguration(object):
     }
 
     attribute_map = {
+        'cpu_allocation_ratio': 'cpuAllocationRatio',
         'feature_gates': 'featureGates',
         'memory_overcommit': 'memoryOvercommit',
         'node_selectors': 'nodeSelectors',
@@ -46,17 +48,20 @@ class V1DeveloperConfiguration(object):
         'use_emulation': 'useEmulation'
     }
 
-    def __init__(self, feature_gates=None, memory_overcommit=None, node_selectors=None, pvc_tolerate_less_space_up_to_percent=None, use_emulation=None):
+    def __init__(self, cpu_allocation_ratio=None, feature_gates=None, memory_overcommit=None, node_selectors=None, pvc_tolerate_less_space_up_to_percent=None, use_emulation=None):
         """
         V1DeveloperConfiguration - a model defined in Swagger
         """
 
+        self._cpu_allocation_ratio = None
         self._feature_gates = None
         self._memory_overcommit = None
         self._node_selectors = None
         self._pvc_tolerate_less_space_up_to_percent = None
         self._use_emulation = None
 
+        if cpu_allocation_ratio is not None:
+          self.cpu_allocation_ratio = cpu_allocation_ratio
         if feature_gates is not None:
           self.feature_gates = feature_gates
         if memory_overcommit is not None:
@@ -67,6 +72,27 @@ class V1DeveloperConfiguration(object):
           self.pvc_tolerate_less_space_up_to_percent = pvc_tolerate_less_space_up_to_percent
         if use_emulation is not None:
           self.use_emulation = use_emulation
+
+    @property
+    def cpu_allocation_ratio(self):
+        """
+        Gets the cpu_allocation_ratio of this V1DeveloperConfiguration.
+
+        :return: The cpu_allocation_ratio of this V1DeveloperConfiguration.
+        :rtype: str
+        """
+        return self._cpu_allocation_ratio
+
+    @cpu_allocation_ratio.setter
+    def cpu_allocation_ratio(self, cpu_allocation_ratio):
+        """
+        Sets the cpu_allocation_ratio of this V1DeveloperConfiguration.
+
+        :param cpu_allocation_ratio: The cpu_allocation_ratio of this V1DeveloperConfiguration.
+        :type: str
+        """
+
+        self._cpu_allocation_ratio = cpu_allocation_ratio
 
     @property
     def feature_gates(self):

@@ -33,6 +33,7 @@ class V1VirtualMachineInstanceStatus(object):
     swagger_types = {
         'active_pods': 'dict(str, str)',
         'conditions': 'list[V1VirtualMachineInstanceCondition]',
+        'evacuation_node_name': 'str',
         'guest_os_info': 'V1VirtualMachineInstanceGuestOSInfo',
         'interfaces': 'list[V1VirtualMachineInstanceNetworkInterface]',
         'migration_method': 'str',
@@ -46,6 +47,7 @@ class V1VirtualMachineInstanceStatus(object):
     attribute_map = {
         'active_pods': 'activePods',
         'conditions': 'conditions',
+        'evacuation_node_name': 'evacuationNodeName',
         'guest_os_info': 'guestOSInfo',
         'interfaces': 'interfaces',
         'migration_method': 'migrationMethod',
@@ -56,13 +58,14 @@ class V1VirtualMachineInstanceStatus(object):
         'reason': 'reason'
     }
 
-    def __init__(self, active_pods=None, conditions=None, guest_os_info=None, interfaces=None, migration_method=None, migration_state=None, node_name=None, phase=None, qos_class=None, reason=None):
+    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, guest_os_info=None, interfaces=None, migration_method=None, migration_state=None, node_name=None, phase=None, qos_class=None, reason=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
 
         self._active_pods = None
         self._conditions = None
+        self._evacuation_node_name = None
         self._guest_os_info = None
         self._interfaces = None
         self._migration_method = None
@@ -76,6 +79,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.active_pods = active_pods
         if conditions is not None:
           self.conditions = conditions
+        if evacuation_node_name is not None:
+          self.evacuation_node_name = evacuation_node_name
         if guest_os_info is not None:
           self.guest_os_info = guest_os_info
         if interfaces is not None:
@@ -138,6 +143,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._conditions = conditions
+
+    @property
+    def evacuation_node_name(self):
+        """
+        Gets the evacuation_node_name of this V1VirtualMachineInstanceStatus.
+        EvacuationNodeName is used to track the eviction process of a VMI. It stores the name of the node that we want to evacuate. It is meant to be used by KubeVirt core components only and can't be set or modified by users.
+
+        :return: The evacuation_node_name of this V1VirtualMachineInstanceStatus.
+        :rtype: str
+        """
+        return self._evacuation_node_name
+
+    @evacuation_node_name.setter
+    def evacuation_node_name(self, evacuation_node_name):
+        """
+        Sets the evacuation_node_name of this V1VirtualMachineInstanceStatus.
+        EvacuationNodeName is used to track the eviction process of a VMI. It stores the name of the node that we want to evacuate. It is meant to be used by KubeVirt core components only and can't be set or modified by users.
+
+        :param evacuation_node_name: The evacuation_node_name of this V1VirtualMachineInstanceStatus.
+        :type: str
+        """
+
+        self._evacuation_node_name = evacuation_node_name
 
     @property
     def guest_os_info(self):

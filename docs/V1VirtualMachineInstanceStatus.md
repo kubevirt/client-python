@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **active_pods** | **dict(str, str)** | ActivePods is a mapping of pod UID to node name. It is possible for multiple pods to be running for a single VMI during migration. | [optional] 
 **conditions** | [**list[V1VirtualMachineInstanceCondition]**](V1VirtualMachineInstanceCondition.md) | Conditions are specific points in VirtualMachineInstance&#39;s pod runtime. | [optional] 
+**evacuation_node_name** | **str** | EvacuationNodeName is used to track the eviction process of a VMI. It stores the name of the node that we want to evacuate. It is meant to be used by KubeVirt core components only and can&#39;t be set or modified by users. | [optional] 
 **guest_os_info** | [**V1VirtualMachineInstanceGuestOSInfo**](V1VirtualMachineInstanceGuestOSInfo.md) | Guest OS Information | [optional] 
 **interfaces** | [**list[V1VirtualMachineInstanceNetworkInterface]**](V1VirtualMachineInstanceNetworkInterface.md) | Interfaces represent the details of available network interfaces. | [optional] 
 **migration_method** | **str** | Represents the method using which the vmi can be migrated: live migration or block migration | [optional] 

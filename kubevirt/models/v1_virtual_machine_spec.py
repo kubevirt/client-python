@@ -31,7 +31,7 @@ class V1VirtualMachineSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'data_volume_templates': 'list[V1alpha1DataVolume]',
+        'data_volume_templates': 'list[V1DataVolumeTemplateSpec]',
         'run_strategy': 'str',
         'running': 'bool',
         'template': 'V1VirtualMachineInstanceTemplateSpec'
@@ -69,7 +69,7 @@ class V1VirtualMachineSpec(object):
         dataVolumeTemplates is a list of dataVolumes that the VirtualMachineInstance template can reference. DataVolumes in this list are dynamically created for the VirtualMachine and are tied to the VirtualMachine's life-cycle.
 
         :return: The data_volume_templates of this V1VirtualMachineSpec.
-        :rtype: list[V1alpha1DataVolume]
+        :rtype: list[V1DataVolumeTemplateSpec]
         """
         return self._data_volume_templates
 
@@ -80,7 +80,7 @@ class V1VirtualMachineSpec(object):
         dataVolumeTemplates is a list of dataVolumes that the VirtualMachineInstance template can reference. DataVolumes in this list are dynamically created for the VirtualMachine and are tied to the VirtualMachine's life-cycle.
 
         :param data_volume_templates: The data_volume_templates of this V1VirtualMachineSpec.
-        :type: list[V1alpha1DataVolume]
+        :type: list[V1DataVolumeTemplateSpec]
         """
 
         self._data_volume_templates = data_volume_templates

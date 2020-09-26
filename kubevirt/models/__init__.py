@@ -82,6 +82,7 @@ from .v1_customize_components_patch import V1CustomizeComponentsPatch
 from .v1_dhcp_options import V1DHCPOptions
 from .v1_dhcp_private_options import V1DHCPPrivateOptions
 from .v1_data_volume_source import V1DataVolumeSource
+from .v1_data_volume_template_spec import V1DataVolumeTemplateSpec
 from .v1_developer_configuration import V1DeveloperConfiguration
 from .v1_devices import V1Devices
 from .v1_disk import V1Disk
@@ -179,9 +180,7 @@ from .v1_virtual_machine_status import V1VirtualMachineStatus
 from .v1_volume import V1Volume
 from .v1_watchdog import V1Watchdog
 from .v1alpha1_condition import V1alpha1Condition
-from .v1alpha1_data_volume import V1alpha1DataVolume
 from .v1alpha1_data_volume_blank_image import V1alpha1DataVolumeBlankImage
-from .v1alpha1_data_volume_condition import V1alpha1DataVolumeCondition
 from .v1alpha1_data_volume_source import V1alpha1DataVolumeSource
 from .v1alpha1_data_volume_source_http import V1alpha1DataVolumeSourceHTTP
 from .v1alpha1_data_volume_source_image_io import V1alpha1DataVolumeSourceImageIO
@@ -190,7 +189,6 @@ from .v1alpha1_data_volume_source_registry import V1alpha1DataVolumeSourceRegist
 from .v1alpha1_data_volume_source_s3 import V1alpha1DataVolumeSourceS3
 from .v1alpha1_data_volume_source_upload import V1alpha1DataVolumeSourceUpload
 from .v1alpha1_data_volume_spec import V1alpha1DataVolumeSpec
-from .v1alpha1_data_volume_status import V1alpha1DataVolumeStatus
 from .v1alpha1_error import V1alpha1Error
 from .v1alpha1_source_spec import V1alpha1SourceSpec
 from .v1alpha1_virtual_machine_restore import V1alpha1VirtualMachineRestore

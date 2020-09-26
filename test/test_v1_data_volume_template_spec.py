@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1alpha1_data_volume_status import V1alpha1DataVolumeStatus
+from kubevirt.models.v1_data_volume_template_spec import V1DataVolumeTemplateSpec
 
 
-class TestV1alpha1DataVolumeStatus(unittest.TestCase):
-    """ V1alpha1DataVolumeStatus unit test stubs """
+class TestV1DataVolumeTemplateSpec(unittest.TestCase):
+    """ V1DataVolumeTemplateSpec unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1alpha1DataVolumeStatus(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1alpha1DataVolumeStatus(self):
+    def testV1DataVolumeTemplateSpec(self):
         """
-        Test V1alpha1DataVolumeStatus
+        Test V1DataVolumeTemplateSpec
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1alpha1_data_volume_status.V1alpha1DataVolumeStatus()
+        #model = kubevirt.models.v1_data_volume_template_spec.V1DataVolumeTemplateSpec()
         pass
 
 

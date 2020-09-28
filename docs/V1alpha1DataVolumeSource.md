@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **registry** | [**V1alpha1DataVolumeSourceRegistry**](V1alpha1DataVolumeSourceRegistry.md) |  | [optional] 
 **s3** | [**V1alpha1DataVolumeSourceS3**](V1alpha1DataVolumeSourceS3.md) |  | [optional] 
 **upload** | [**V1alpha1DataVolumeSourceUpload**](V1alpha1DataVolumeSourceUpload.md) |  | [optional] 
+**vddk** | [**V1alpha1DataVolumeSourceVDDK**](V1alpha1DataVolumeSourceVDDK.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

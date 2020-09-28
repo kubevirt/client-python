@@ -37,7 +37,8 @@ class V1alpha1DataVolumeSource(object):
         'pvc': 'V1alpha1DataVolumeSourcePVC',
         'registry': 'V1alpha1DataVolumeSourceRegistry',
         's3': 'V1alpha1DataVolumeSourceS3',
-        'upload': 'V1alpha1DataVolumeSourceUpload'
+        'upload': 'V1alpha1DataVolumeSourceUpload',
+        'vddk': 'V1alpha1DataVolumeSourceVDDK'
     }
 
     attribute_map = {
@@ -47,10 +48,11 @@ class V1alpha1DataVolumeSource(object):
         'pvc': 'pvc',
         'registry': 'registry',
         's3': 's3',
-        'upload': 'upload'
+        'upload': 'upload',
+        'vddk': 'vddk'
     }
 
-    def __init__(self, blank=None, http=None, imageio=None, pvc=None, registry=None, s3=None, upload=None):
+    def __init__(self, blank=None, http=None, imageio=None, pvc=None, registry=None, s3=None, upload=None, vddk=None):
         """
         V1alpha1DataVolumeSource - a model defined in Swagger
         """
@@ -62,6 +64,7 @@ class V1alpha1DataVolumeSource(object):
         self._registry = None
         self._s3 = None
         self._upload = None
+        self._vddk = None
 
         if blank is not None:
           self.blank = blank
@@ -77,6 +80,8 @@ class V1alpha1DataVolumeSource(object):
           self.s3 = s3
         if upload is not None:
           self.upload = upload
+        if vddk is not None:
+          self.vddk = vddk
 
     @property
     def blank(self):
@@ -224,6 +229,27 @@ class V1alpha1DataVolumeSource(object):
         """
 
         self._upload = upload
+
+    @property
+    def vddk(self):
+        """
+        Gets the vddk of this V1alpha1DataVolumeSource.
+
+        :return: The vddk of this V1alpha1DataVolumeSource.
+        :rtype: V1alpha1DataVolumeSourceVDDK
+        """
+        return self._vddk
+
+    @vddk.setter
+    def vddk(self, vddk):
+        """
+        Sets the vddk of this V1alpha1DataVolumeSource.
+
+        :param vddk: The vddk of this V1alpha1DataVolumeSource.
+        :type: V1alpha1DataVolumeSourceVDDK
+        """
+
+        self._vddk = vddk
 
     def to_dict(self):
         """

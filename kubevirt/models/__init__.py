@@ -188,6 +188,7 @@ from .v1alpha1_data_volume_source_pvc import V1alpha1DataVolumeSourcePVC
 from .v1alpha1_data_volume_source_registry import V1alpha1DataVolumeSourceRegistry
 from .v1alpha1_data_volume_source_s3 import V1alpha1DataVolumeSourceS3
 from .v1alpha1_data_volume_source_upload import V1alpha1DataVolumeSourceUpload
+from .v1alpha1_data_volume_source_vddk import V1alpha1DataVolumeSourceVDDK
 from .v1alpha1_data_volume_spec import V1alpha1DataVolumeSpec
 from .v1alpha1_error import V1alpha1Error
 from .v1alpha1_source_spec import V1alpha1SourceSpec

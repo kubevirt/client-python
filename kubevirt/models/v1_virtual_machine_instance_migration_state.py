@@ -37,6 +37,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'end_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'failed': 'bool',
         'migration_uid': 'str',
+        'mode': 'str',
         'source_node': 'str',
         'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'target_direct_migration_node_ports': 'dict(str, int)',
@@ -53,6 +54,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'end_timestamp': 'endTimestamp',
         'failed': 'failed',
         'migration_uid': 'migrationUid',
+        'mode': 'mode',
         'source_node': 'sourceNode',
         'start_timestamp': 'startTimestamp',
         'target_direct_migration_node_ports': 'targetDirectMigrationNodePorts',
@@ -62,7 +64,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'target_pod': 'targetPod'
     }
 
-    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, migration_uid=None, source_node=None, start_timestamp=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_pod=None):
+    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, migration_uid=None, mode=None, source_node=None, start_timestamp=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_pod=None):
         """
         V1VirtualMachineInstanceMigrationState - a model defined in Swagger
         """
@@ -73,6 +75,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._end_timestamp = None
         self._failed = None
         self._migration_uid = None
+        self._mode = None
         self._source_node = None
         self._start_timestamp = None
         self._target_direct_migration_node_ports = None
@@ -93,6 +96,8 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.failed = failed
         if migration_uid is not None:
           self.migration_uid = migration_uid
+        if mode is not None:
+          self.mode = mode
         if source_node is not None:
           self.source_node = source_node
         if start_timestamp is not None:
@@ -245,6 +250,29 @@ class V1VirtualMachineInstanceMigrationState(object):
         """
 
         self._migration_uid = migration_uid
+
+    @property
+    def mode(self):
+        """
+        Gets the mode of this V1VirtualMachineInstanceMigrationState.
+        Lets us know if the vmi is currenly running pre or post copy migration
+
+        :return: The mode of this V1VirtualMachineInstanceMigrationState.
+        :rtype: str
+        """
+        return self._mode
+
+    @mode.setter
+    def mode(self, mode):
+        """
+        Sets the mode of this V1VirtualMachineInstanceMigrationState.
+        Lets us know if the vmi is currenly running pre or post copy migration
+
+        :param mode: The mode of this V1VirtualMachineInstanceMigrationState.
+        :type: str
+        """
+
+        self._mode = mode
 
     @property
     def source_node(self):

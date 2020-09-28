@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **end_timestamp** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) | The time the migration action ended | [optional] 
 **failed** | **bool** | Indicates that the migration failed | [optional] 
 **migration_uid** | **str** | The VirtualMachineInstanceMigration object associated with this migration | [optional] 
+**mode** | **str** | Lets us know if the vmi is currenly running pre or post copy migration | [optional] 
 **source_node** | **str** | The source node that the VMI originated on | [optional] 
 **start_timestamp** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) | The time the migration action began | [optional] 
 **target_direct_migration_node_ports** | **dict(str, int)** | The list of ports opened for live migration on the destination node | [optional] 

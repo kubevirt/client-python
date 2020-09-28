@@ -32,6 +32,7 @@ class V1MigrationConfiguration(object):
     """
     swagger_types = {
         'allow_auto_converge': 'str',
+        'allow_post_copy': 'str',
         'bandwidth_per_migration': 'K8sIoApimachineryPkgApiResourceQuantity',
         'completion_timeout_per_gi_b': 'str',
         'node_drain_taint_key': 'str',
@@ -43,6 +44,7 @@ class V1MigrationConfiguration(object):
 
     attribute_map = {
         'allow_auto_converge': 'allowAutoConverge',
+        'allow_post_copy': 'allowPostCopy',
         'bandwidth_per_migration': 'bandwidthPerMigration',
         'completion_timeout_per_gi_b': 'completionTimeoutPerGiB',
         'node_drain_taint_key': 'nodeDrainTaintKey',
@@ -52,12 +54,13 @@ class V1MigrationConfiguration(object):
         'unsafe_migration_override': 'unsafeMigrationOverride'
     }
 
-    def __init__(self, allow_auto_converge=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, node_drain_taint_key=None, parallel_migrations_per_cluster=None, parallel_outbound_migrations_per_node=None, progress_timeout=None, unsafe_migration_override=None):
+    def __init__(self, allow_auto_converge=None, allow_post_copy=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, node_drain_taint_key=None, parallel_migrations_per_cluster=None, parallel_outbound_migrations_per_node=None, progress_timeout=None, unsafe_migration_override=None):
         """
         V1MigrationConfiguration - a model defined in Swagger
         """
 
         self._allow_auto_converge = None
+        self._allow_post_copy = None
         self._bandwidth_per_migration = None
         self._completion_timeout_per_gi_b = None
         self._node_drain_taint_key = None
@@ -66,7 +69,10 @@ class V1MigrationConfiguration(object):
         self._progress_timeout = None
         self._unsafe_migration_override = None
 
-        self.allow_auto_converge = allow_auto_converge
+        if allow_auto_converge is not None:
+          self.allow_auto_converge = allow_auto_converge
+        if allow_post_copy is not None:
+          self.allow_post_copy = allow_post_copy
         if bandwidth_per_migration is not None:
           self.bandwidth_per_migration = bandwidth_per_migration
         if completion_timeout_per_gi_b is not None:
@@ -79,7 +85,8 @@ class V1MigrationConfiguration(object):
           self.parallel_outbound_migrations_per_node = parallel_outbound_migrations_per_node
         if progress_timeout is not None:
           self.progress_timeout = progress_timeout
-        self.unsafe_migration_override = unsafe_migration_override
+        if unsafe_migration_override is not None:
+          self.unsafe_migration_override = unsafe_migration_override
 
     @property
     def allow_auto_converge(self):
@@ -99,10 +106,29 @@ class V1MigrationConfiguration(object):
         :param allow_auto_converge: The allow_auto_converge of this V1MigrationConfiguration.
         :type: str
         """
-        if allow_auto_converge is None:
-            raise ValueError("Invalid value for `allow_auto_converge`, must not be `None`")
 
         self._allow_auto_converge = allow_auto_converge
+
+    @property
+    def allow_post_copy(self):
+        """
+        Gets the allow_post_copy of this V1MigrationConfiguration.
+
+        :return: The allow_post_copy of this V1MigrationConfiguration.
+        :rtype: str
+        """
+        return self._allow_post_copy
+
+    @allow_post_copy.setter
+    def allow_post_copy(self, allow_post_copy):
+        """
+        Sets the allow_post_copy of this V1MigrationConfiguration.
+
+        :param allow_post_copy: The allow_post_copy of this V1MigrationConfiguration.
+        :type: str
+        """
+
+        self._allow_post_copy = allow_post_copy
 
     @property
     def bandwidth_per_migration(self):
@@ -248,8 +274,6 @@ class V1MigrationConfiguration(object):
         :param unsafe_migration_override: The unsafe_migration_override of this V1MigrationConfiguration.
         :type: str
         """
-        if unsafe_migration_override is None:
-            raise ValueError("Invalid value for `unsafe_migration_override`, must not be `None`")
 
         self._unsafe_migration_override = unsafe_migration_override
 

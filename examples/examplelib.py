@@ -1,6 +1,6 @@
 import os
 import time
-import yaml
+import yamls
 from urllib3.exceptions import ReadTimeoutError
 
 from kubernetes import config, watch

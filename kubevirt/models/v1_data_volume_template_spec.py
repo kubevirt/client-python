@@ -32,25 +32,30 @@ class V1DataVolumeTemplateSpec(object):
     """
     swagger_types = {
         'metadata': 'K8sIoApimachineryPkgApisMetaV1ObjectMeta',
-        'spec': 'V1alpha1DataVolumeSpec'
+        'spec': 'V1alpha1DataVolumeSpec',
+        'status': 'V1DataVolumeTemplateDummyStatus'
     }
 
     attribute_map = {
         'metadata': 'metadata',
-        'spec': 'spec'
+        'spec': 'spec',
+        'status': 'status'
     }
 
-    def __init__(self, metadata=None, spec=None):
+    def __init__(self, metadata=None, spec=None, status=None):
         """
         V1DataVolumeTemplateSpec - a model defined in Swagger
         """
 
         self._metadata = None
         self._spec = None
+        self._status = None
 
         if metadata is not None:
           self.metadata = metadata
         self.spec = spec
+        if status is not None:
+          self.status = status
 
     @property
     def metadata(self):
@@ -97,6 +102,29 @@ class V1DataVolumeTemplateSpec(object):
             raise ValueError("Invalid value for `spec`, must not be `None`")
 
         self._spec = spec
+
+    @property
+    def status(self):
+        """
+        Gets the status of this V1DataVolumeTemplateSpec.
+        DataVolumeTemplateDummyStatus is here simply for backwards compatibility with a previous API.
+
+        :return: The status of this V1DataVolumeTemplateSpec.
+        :rtype: V1DataVolumeTemplateDummyStatus
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this V1DataVolumeTemplateSpec.
+        DataVolumeTemplateDummyStatus is here simply for backwards compatibility with a previous API.
+
+        :param status: The status of this V1DataVolumeTemplateSpec.
+        :type: V1DataVolumeTemplateDummyStatus
+        """
+
+        self._status = status
 
     def to_dict(self):
         """

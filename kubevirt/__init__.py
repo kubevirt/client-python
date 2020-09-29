@@ -82,6 +82,7 @@ from .models.v1_customize_components_patch import V1CustomizeComponentsPatch
 from .models.v1_dhcp_options import V1DHCPOptions
 from .models.v1_dhcp_private_options import V1DHCPPrivateOptions
 from .models.v1_data_volume_source import V1DataVolumeSource
+from .models.v1_data_volume_template_dummy_status import V1DataVolumeTemplateDummyStatus
 from .models.v1_data_volume_template_spec import V1DataVolumeTemplateSpec
 from .models.v1_developer_configuration import V1DeveloperConfiguration
 from .models.v1_devices import V1Devices

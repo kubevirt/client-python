@@ -11,7 +11,7 @@ from pprint import pprint
 
 from kubevirt import V1DeleteOptions
 
-import examplelib as e1
+import examplelib as e2
 
 
 NAMESPACE = "default"

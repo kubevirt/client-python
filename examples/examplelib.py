@@ -1,5 +1,5 @@
 import os
-import time
+import times
 import yaml
 from urllib3.exceptions import ReadTimeoutError
 

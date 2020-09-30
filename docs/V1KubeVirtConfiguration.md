@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cpu_model** | **str** |  | [optional] 
-**cpu_request** | **str** |  | [optional] 
+**cpu_request** | [**K8sIoApimachineryPkgApiResourceQuantity**](K8sIoApimachineryPkgApiResourceQuantity.md) |  | [optional] 
 **developer_configuration** | [**V1DeveloperConfiguration**](V1DeveloperConfiguration.md) |  | [optional] 
 **emulated_machines** | **list[str]** |  | [optional] 
 **image_pull_policy** | **str** |  | [optional] 

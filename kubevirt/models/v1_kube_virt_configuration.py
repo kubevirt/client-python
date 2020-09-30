@@ -32,7 +32,7 @@ class V1KubeVirtConfiguration(object):
     """
     swagger_types = {
         'cpu_model': 'str',
-        'cpu_request': 'str',
+        'cpu_request': 'K8sIoApimachineryPkgApiResourceQuantity',
         'developer_configuration': 'V1DeveloperConfiguration',
         'emulated_machines': 'list[str]',
         'image_pull_policy': 'str',
@@ -135,7 +135,7 @@ class V1KubeVirtConfiguration(object):
         Gets the cpu_request of this V1KubeVirtConfiguration.
 
         :return: The cpu_request of this V1KubeVirtConfiguration.
-        :rtype: str
+        :rtype: K8sIoApimachineryPkgApiResourceQuantity
         """
         return self._cpu_request
 
@@ -145,7 +145,7 @@ class V1KubeVirtConfiguration(object):
         Sets the cpu_request of this V1KubeVirtConfiguration.
 
         :param cpu_request: The cpu_request of this V1KubeVirtConfiguration.
-        :type: str
+        :type: K8sIoApimachineryPkgApiResourceQuantity
         """
 
         self._cpu_request = cpu_request

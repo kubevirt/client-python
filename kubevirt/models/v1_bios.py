@@ -31,19 +31,45 @@ class V1BIOS(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        
+        'use_serial': 'bool'
     }
 
     attribute_map = {
-        
+        'use_serial': 'useSerial'
     }
 
-    def __init__(self):
+    def __init__(self, use_serial=None):
         """
         V1BIOS - a model defined in Swagger
         """
 
+        self._use_serial = None
 
+        if use_serial is not None:
+          self.use_serial = use_serial
+
+    @property
+    def use_serial(self):
+        """
+        Gets the use_serial of this V1BIOS.
+        If set, the BIOS output will be transmitted over serial
+
+        :return: The use_serial of this V1BIOS.
+        :rtype: bool
+        """
+        return self._use_serial
+
+    @use_serial.setter
+    def use_serial(self, use_serial):
+        """
+        Sets the use_serial of this V1BIOS.
+        If set, the BIOS output will be transmitted over serial
+
+        :param use_serial: The use_serial of this V1BIOS.
+        :type: bool
+        """
+
+        self._use_serial = use_serial
 
     def to_dict(self):
         """

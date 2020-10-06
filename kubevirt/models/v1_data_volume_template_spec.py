@@ -31,31 +31,87 @@ class V1DataVolumeTemplateSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'api_version': 'str',
+        'kind': 'str',
         'metadata': 'K8sIoApimachineryPkgApisMetaV1ObjectMeta',
         'spec': 'V1alpha1DataVolumeSpec',
         'status': 'V1DataVolumeTemplateDummyStatus'
     }
 
     attribute_map = {
+        'api_version': 'apiVersion',
+        'kind': 'kind',
         'metadata': 'metadata',
         'spec': 'spec',
         'status': 'status'
     }
 
-    def __init__(self, metadata=None, spec=None, status=None):
+    def __init__(self, api_version=None, kind=None, metadata=None, spec=None, status=None):
         """
         V1DataVolumeTemplateSpec - a model defined in Swagger
         """
 
+        self._api_version = None
+        self._kind = None
         self._metadata = None
         self._spec = None
         self._status = None
 
+        if api_version is not None:
+          self.api_version = api_version
+        if kind is not None:
+          self.kind = kind
         if metadata is not None:
           self.metadata = metadata
         self.spec = spec
         if status is not None:
           self.status = status
+
+    @property
+    def api_version(self):
+        """
+        Gets the api_version of this V1DataVolumeTemplateSpec.
+        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+
+        :return: The api_version of this V1DataVolumeTemplateSpec.
+        :rtype: str
+        """
+        return self._api_version
+
+    @api_version.setter
+    def api_version(self, api_version):
+        """
+        Sets the api_version of this V1DataVolumeTemplateSpec.
+        APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+
+        :param api_version: The api_version of this V1DataVolumeTemplateSpec.
+        :type: str
+        """
+
+        self._api_version = api_version
+
+    @property
+    def kind(self):
+        """
+        Gets the kind of this V1DataVolumeTemplateSpec.
+        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+
+        :return: The kind of this V1DataVolumeTemplateSpec.
+        :rtype: str
+        """
+        return self._kind
+
+    @kind.setter
+    def kind(self, kind):
+        """
+        Sets the kind of this V1DataVolumeTemplateSpec.
+        Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+
+        :param kind: The kind of this V1DataVolumeTemplateSpec.
+        :type: str
+        """
+
+        self._kind = kind
 
     @property
     def metadata(self):

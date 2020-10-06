@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **gpus** | [**list[V1GPU]**](V1GPU.md) | Whether to attach a GPU device to the vmi. | [optional] 
 **inputs** | [**list[V1Input]**](V1Input.md) | Inputs describe input devices | [optional] 
 **interfaces** | [**list[V1Interface]**](V1Interface.md) | Interfaces describe network interfaces which are added to the vmi. | [optional] 
-**network_interface_multiqueue** | **bool** | If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature | [optional] 
+**network_interface_multiqueue** | **bool** | If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature for network devices. The number of queues created depends on additional factors of the VirtualMachineInstance, like the number of guest CPUs. | [optional] 
 **rng** | [**V1Rng**](V1Rng.md) | Whether to have random number generator from host | [optional] 
 **watchdog** | [**V1Watchdog**](V1Watchdog.md) | Watchdog describes a watchdog device which can be added to the vmi. | [optional] 
 

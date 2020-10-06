@@ -342,7 +342,7 @@ class V1Devices(object):
     def network_interface_multiqueue(self):
         """
         Gets the network_interface_multiqueue of this V1Devices.
-        If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature
+        If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature for network devices. The number of queues created depends on additional factors of the VirtualMachineInstance, like the number of guest CPUs.
 
         :return: The network_interface_multiqueue of this V1Devices.
         :rtype: bool
@@ -353,7 +353,7 @@ class V1Devices(object):
     def network_interface_multiqueue(self, network_interface_multiqueue):
         """
         Sets the network_interface_multiqueue of this V1Devices.
-        If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature
+        If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature for network devices. The number of queues created depends on additional factors of the VirtualMachineInstance, like the number of guest CPUs.
 
         :param network_interface_multiqueue: The network_interface_multiqueue of this V1Devices.
         :type: bool

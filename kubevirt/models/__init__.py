@@ -15,6 +15,7 @@ from __future__ import absolute_import
 
 # import models into model package
 from .k8s_io_api_core_v1_affinity import K8sIoApiCoreV1Affinity
+from .k8s_io_api_core_v1_downward_api_volume_file import K8sIoApiCoreV1DownwardAPIVolumeFile
 from .k8s_io_api_core_v1_http_get_action import K8sIoApiCoreV1HTTPGetAction
 from .k8s_io_api_core_v1_http_header import K8sIoApiCoreV1HTTPHeader
 from .k8s_io_api_core_v1_local_object_reference import K8sIoApiCoreV1LocalObjectReference
@@ -22,6 +23,7 @@ from .k8s_io_api_core_v1_node_affinity import K8sIoApiCoreV1NodeAffinity
 from .k8s_io_api_core_v1_node_selector import K8sIoApiCoreV1NodeSelector
 from .k8s_io_api_core_v1_node_selector_requirement import K8sIoApiCoreV1NodeSelectorRequirement
 from .k8s_io_api_core_v1_node_selector_term import K8sIoApiCoreV1NodeSelectorTerm
+from .k8s_io_api_core_v1_object_field_selector import K8sIoApiCoreV1ObjectFieldSelector
 from .k8s_io_api_core_v1_persistent_volume_claim import K8sIoApiCoreV1PersistentVolumeClaim
 from .k8s_io_api_core_v1_persistent_volume_claim_condition import K8sIoApiCoreV1PersistentVolumeClaimCondition
 from .k8s_io_api_core_v1_persistent_volume_claim_spec import K8sIoApiCoreV1PersistentVolumeClaimSpec
@@ -33,6 +35,7 @@ from .k8s_io_api_core_v1_pod_anti_affinity import K8sIoApiCoreV1PodAntiAffinity
 from .k8s_io_api_core_v1_pod_dns_config import K8sIoApiCoreV1PodDNSConfig
 from .k8s_io_api_core_v1_pod_dns_config_option import K8sIoApiCoreV1PodDNSConfigOption
 from .k8s_io_api_core_v1_preferred_scheduling_term import K8sIoApiCoreV1PreferredSchedulingTerm
+from .k8s_io_api_core_v1_resource_field_selector import K8sIoApiCoreV1ResourceFieldSelector
 from .k8s_io_api_core_v1_resource_requirements import K8sIoApiCoreV1ResourceRequirements
 from .k8s_io_api_core_v1_tcp_socket_action import K8sIoApiCoreV1TCPSocketAction
 from .k8s_io_api_core_v1_toleration import K8sIoApiCoreV1Toleration
@@ -89,6 +92,7 @@ from .v1_devices import V1Devices
 from .v1_disk import V1Disk
 from .v1_disk_target import V1DiskTarget
 from .v1_domain_spec import V1DomainSpec
+from .v1_downward_api_volume_source import V1DownwardAPIVolumeSource
 from .v1_efi import V1EFI
 from .v1_empty_disk_source import V1EmptyDiskSource
 from .v1_ephemeral_volume_source import V1EphemeralVolumeSource
@@ -179,6 +183,7 @@ from .v1_virtual_machine_spec import V1VirtualMachineSpec
 from .v1_virtual_machine_state_change_request import V1VirtualMachineStateChangeRequest
 from .v1_virtual_machine_status import V1VirtualMachineStatus
 from .v1_volume import V1Volume
+from .v1_volume_snapshot_status import V1VolumeSnapshotStatus
 from .v1_watchdog import V1Watchdog
 from .v1alpha1_condition import V1alpha1Condition
 from .v1alpha1_data_volume_blank_image import V1alpha1DataVolumeBlankImage

@@ -35,7 +35,8 @@ class V1VirtualMachineStatus(object):
         'created': 'bool',
         'ready': 'bool',
         'snapshot_in_progress': 'str',
-        'state_change_requests': 'list[V1VirtualMachineStateChangeRequest]'
+        'state_change_requests': 'list[V1VirtualMachineStateChangeRequest]',
+        'volume_snapshot_statuses': 'list[V1VolumeSnapshotStatus]'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class V1VirtualMachineStatus(object):
         'created': 'created',
         'ready': 'ready',
         'snapshot_in_progress': 'snapshotInProgress',
-        'state_change_requests': 'stateChangeRequests'
+        'state_change_requests': 'stateChangeRequests',
+        'volume_snapshot_statuses': 'volumeSnapshotStatuses'
     }
 
-    def __init__(self, conditions=None, created=None, ready=None, snapshot_in_progress=None, state_change_requests=None):
+    def __init__(self, conditions=None, created=None, ready=None, snapshot_in_progress=None, state_change_requests=None, volume_snapshot_statuses=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class V1VirtualMachineStatus(object):
         self._ready = None
         self._snapshot_in_progress = None
         self._state_change_requests = None
+        self._volume_snapshot_statuses = None
 
         if conditions is not None:
           self.conditions = conditions
@@ -67,6 +70,8 @@ class V1VirtualMachineStatus(object):
           self.snapshot_in_progress = snapshot_in_progress
         if state_change_requests is not None:
           self.state_change_requests = state_change_requests
+        if volume_snapshot_statuses is not None:
+          self.volume_snapshot_statuses = volume_snapshot_statuses
 
     @property
     def conditions(self):
@@ -182,6 +187,29 @@ class V1VirtualMachineStatus(object):
         """
 
         self._state_change_requests = state_change_requests
+
+    @property
+    def volume_snapshot_statuses(self):
+        """
+        Gets the volume_snapshot_statuses of this V1VirtualMachineStatus.
+        VolumeSnapshotStatuses indicates a list of statuses whether snapshotting is supported by each volume.
+
+        :return: The volume_snapshot_statuses of this V1VirtualMachineStatus.
+        :rtype: list[V1VolumeSnapshotStatus]
+        """
+        return self._volume_snapshot_statuses
+
+    @volume_snapshot_statuses.setter
+    def volume_snapshot_statuses(self, volume_snapshot_statuses):
+        """
+        Sets the volume_snapshot_statuses of this V1VirtualMachineStatus.
+        VolumeSnapshotStatuses indicates a list of statuses whether snapshotting is supported by each volume.
+
+        :param volume_snapshot_statuses: The volume_snapshot_statuses of this V1VirtualMachineStatus.
+        :type: list[V1VolumeSnapshotStatus]
+        """
+
+        self._volume_snapshot_statuses = volume_snapshot_statuses
 
     def to_dict(self):
         """

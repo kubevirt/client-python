@@ -36,6 +36,7 @@ class V1Volume(object):
         'config_map': 'V1ConfigMapVolumeSource',
         'container_disk': 'V1ContainerDiskSource',
         'data_volume': 'V1DataVolumeSource',
+        'downward_api': 'V1DownwardAPIVolumeSource',
         'empty_disk': 'V1EmptyDiskSource',
         'ephemeral': 'V1EphemeralVolumeSource',
         'host_disk': 'V1HostDisk',
@@ -51,6 +52,7 @@ class V1Volume(object):
         'config_map': 'configMap',
         'container_disk': 'containerDisk',
         'data_volume': 'dataVolume',
+        'downward_api': 'downwardAPI',
         'empty_disk': 'emptyDisk',
         'ephemeral': 'ephemeral',
         'host_disk': 'hostDisk',
@@ -60,7 +62,7 @@ class V1Volume(object):
         'service_account': 'serviceAccount'
     }
 
-    def __init__(self, cloud_init_config_drive=None, cloud_init_no_cloud=None, config_map=None, container_disk=None, data_volume=None, empty_disk=None, ephemeral=None, host_disk=None, name=None, persistent_volume_claim=None, secret=None, service_account=None):
+    def __init__(self, cloud_init_config_drive=None, cloud_init_no_cloud=None, config_map=None, container_disk=None, data_volume=None, downward_api=None, empty_disk=None, ephemeral=None, host_disk=None, name=None, persistent_volume_claim=None, secret=None, service_account=None):
         """
         V1Volume - a model defined in Swagger
         """
@@ -70,6 +72,7 @@ class V1Volume(object):
         self._config_map = None
         self._container_disk = None
         self._data_volume = None
+        self._downward_api = None
         self._empty_disk = None
         self._ephemeral = None
         self._host_disk = None
@@ -88,6 +91,8 @@ class V1Volume(object):
           self.container_disk = container_disk
         if data_volume is not None:
           self.data_volume = data_volume
+        if downward_api is not None:
+          self.downward_api = downward_api
         if empty_disk is not None:
           self.empty_disk = empty_disk
         if ephemeral is not None:
@@ -216,6 +221,29 @@ class V1Volume(object):
         """
 
         self._data_volume = data_volume
+
+    @property
+    def downward_api(self):
+        """
+        Gets the downward_api of this V1Volume.
+        DownwardAPI represents downward API about the pod that should populate this volume
+
+        :return: The downward_api of this V1Volume.
+        :rtype: V1DownwardAPIVolumeSource
+        """
+        return self._downward_api
+
+    @downward_api.setter
+    def downward_api(self, downward_api):
+        """
+        Sets the downward_api of this V1Volume.
+        DownwardAPI represents downward API about the pod that should populate this volume
+
+        :param downward_api: The downward_api of this V1Volume.
+        :type: V1DownwardAPIVolumeSource
+        """
+
+        self._downward_api = downward_api
 
     @property
     def empty_disk(self):

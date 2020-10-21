@@ -80,6 +80,7 @@ class V1Filesystem(object):
     def virtiofs(self):
         """
         Gets the virtiofs of this V1Filesystem.
+        Virtiofs is supported
 
         :return: The virtiofs of this V1Filesystem.
         :rtype: V1FilesystemVirtiofs
@@ -90,6 +91,7 @@ class V1Filesystem(object):
     def virtiofs(self, virtiofs):
         """
         Sets the virtiofs of this V1Filesystem.
+        Virtiofs is supported
 
         :param virtiofs: The virtiofs of this V1Filesystem.
         :type: V1FilesystemVirtiofs

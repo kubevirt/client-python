@@ -35,6 +35,7 @@ class V1Interface(object):
         'bridge': 'V1InterfaceBridge',
         'dhcp_options': 'V1DHCPOptions',
         'mac_address': 'str',
+        'macvtap': 'V1InterfaceMacvtap',
         'masquerade': 'V1InterfaceMasquerade',
         'model': 'str',
         'name': 'str',
@@ -50,6 +51,7 @@ class V1Interface(object):
         'bridge': 'bridge',
         'dhcp_options': 'dhcpOptions',
         'mac_address': 'macAddress',
+        'macvtap': 'macvtap',
         'masquerade': 'masquerade',
         'model': 'model',
         'name': 'name',
@@ -60,7 +62,7 @@ class V1Interface(object):
         'tag': 'tag'
     }
 
-    def __init__(self, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, masquerade=None, model=None, name=None, pci_address=None, ports=None, slirp=None, sriov=None, tag=None):
+    def __init__(self, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name=None, pci_address=None, ports=None, slirp=None, sriov=None, tag=None):
         """
         V1Interface - a model defined in Swagger
         """
@@ -69,6 +71,7 @@ class V1Interface(object):
         self._bridge = None
         self._dhcp_options = None
         self._mac_address = None
+        self._macvtap = None
         self._masquerade = None
         self._model = None
         self._name = None
@@ -86,6 +89,8 @@ class V1Interface(object):
           self.dhcp_options = dhcp_options
         if mac_address is not None:
           self.mac_address = mac_address
+        if macvtap is not None:
+          self.macvtap = macvtap
         if masquerade is not None:
           self.masquerade = masquerade
         if model is not None:
@@ -191,6 +196,27 @@ class V1Interface(object):
         """
 
         self._mac_address = mac_address
+
+    @property
+    def macvtap(self):
+        """
+        Gets the macvtap of this V1Interface.
+
+        :return: The macvtap of this V1Interface.
+        :rtype: V1InterfaceMacvtap
+        """
+        return self._macvtap
+
+    @macvtap.setter
+    def macvtap(self, macvtap):
+        """
+        Sets the macvtap of this V1Interface.
+
+        :param macvtap: The macvtap of this V1Interface.
+        :type: V1InterfaceMacvtap
+        """
+
+        self._macvtap = macvtap
 
     @property
     def masquerade(self):

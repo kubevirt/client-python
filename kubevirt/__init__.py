@@ -116,6 +116,7 @@ from .models.v1_i6300_esb_watchdog import V1I6300ESBWatchdog
 from .models.v1_input import V1Input
 from .models.v1_interface import V1Interface
 from .models.v1_interface_bridge import V1InterfaceBridge
+from .models.v1_interface_macvtap import V1InterfaceMacvtap
 from .models.v1_interface_masquerade import V1InterfaceMasquerade
 from .models.v1_interface_sriov import V1InterfaceSRIOV
 from .models.v1_interface_slirp import V1InterfaceSlirp

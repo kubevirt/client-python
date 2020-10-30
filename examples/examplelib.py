@@ -18,6 +18,7 @@ class WaitForException(ExampleLibException):
 class WaitForFailureMatch(WaitForException):
     def __init__(self, event):
         self.event = event
+        self.event = event
 
     def __str__(self):
         return "Failure condition satisfied with item: %s" % self.event

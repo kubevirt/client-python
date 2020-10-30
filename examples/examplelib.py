@@ -27,7 +27,7 @@ class WaitForTimeout(WaitForException):
     def __init__(self, source, timeout):
         self.source = source
         self.timeout = timeout
-
+        self.timeout = timeout
     def __str__(self):
         return "Waiting for events from %s reached timeout: %ss" % (
             self.source, self.timeout

@@ -31,15 +31,15 @@ class V1MigrationConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'allow_auto_converge': 'str',
-        'allow_post_copy': 'str',
+        'allow_auto_converge': 'bool',
+        'allow_post_copy': 'bool',
         'bandwidth_per_migration': 'K8sIoApimachineryPkgApiResourceQuantity',
-        'completion_timeout_per_gi_b': 'str',
+        'completion_timeout_per_gi_b': 'int',
         'node_drain_taint_key': 'str',
-        'parallel_migrations_per_cluster': 'str',
-        'parallel_outbound_migrations_per_node': 'str',
-        'progress_timeout': 'str',
-        'unsafe_migration_override': 'str'
+        'parallel_migrations_per_cluster': 'int',
+        'parallel_outbound_migrations_per_node': 'int',
+        'progress_timeout': 'int',
+        'unsafe_migration_override': 'bool'
     }
 
     attribute_map = {
@@ -94,7 +94,7 @@ class V1MigrationConfiguration(object):
         Gets the allow_auto_converge of this V1MigrationConfiguration.
 
         :return: The allow_auto_converge of this V1MigrationConfiguration.
-        :rtype: str
+        :rtype: bool
         """
         return self._allow_auto_converge
 
@@ -104,7 +104,7 @@ class V1MigrationConfiguration(object):
         Sets the allow_auto_converge of this V1MigrationConfiguration.
 
         :param allow_auto_converge: The allow_auto_converge of this V1MigrationConfiguration.
-        :type: str
+        :type: bool
         """
 
         self._allow_auto_converge = allow_auto_converge
@@ -115,7 +115,7 @@ class V1MigrationConfiguration(object):
         Gets the allow_post_copy of this V1MigrationConfiguration.
 
         :return: The allow_post_copy of this V1MigrationConfiguration.
-        :rtype: str
+        :rtype: bool
         """
         return self._allow_post_copy
 
@@ -125,7 +125,7 @@ class V1MigrationConfiguration(object):
         Sets the allow_post_copy of this V1MigrationConfiguration.
 
         :param allow_post_copy: The allow_post_copy of this V1MigrationConfiguration.
-        :type: str
+        :type: bool
         """
 
         self._allow_post_copy = allow_post_copy
@@ -157,7 +157,7 @@ class V1MigrationConfiguration(object):
         Gets the completion_timeout_per_gi_b of this V1MigrationConfiguration.
 
         :return: The completion_timeout_per_gi_b of this V1MigrationConfiguration.
-        :rtype: str
+        :rtype: int
         """
         return self._completion_timeout_per_gi_b
 
@@ -167,7 +167,7 @@ class V1MigrationConfiguration(object):
         Sets the completion_timeout_per_gi_b of this V1MigrationConfiguration.
 
         :param completion_timeout_per_gi_b: The completion_timeout_per_gi_b of this V1MigrationConfiguration.
-        :type: str
+        :type: int
         """
 
         self._completion_timeout_per_gi_b = completion_timeout_per_gi_b
@@ -199,7 +199,7 @@ class V1MigrationConfiguration(object):
         Gets the parallel_migrations_per_cluster of this V1MigrationConfiguration.
 
         :return: The parallel_migrations_per_cluster of this V1MigrationConfiguration.
-        :rtype: str
+        :rtype: int
         """
         return self._parallel_migrations_per_cluster
 
@@ -209,7 +209,7 @@ class V1MigrationConfiguration(object):
         Sets the parallel_migrations_per_cluster of this V1MigrationConfiguration.
 
         :param parallel_migrations_per_cluster: The parallel_migrations_per_cluster of this V1MigrationConfiguration.
-        :type: str
+        :type: int
         """
 
         self._parallel_migrations_per_cluster = parallel_migrations_per_cluster
@@ -220,7 +220,7 @@ class V1MigrationConfiguration(object):
         Gets the parallel_outbound_migrations_per_node of this V1MigrationConfiguration.
 
         :return: The parallel_outbound_migrations_per_node of this V1MigrationConfiguration.
-        :rtype: str
+        :rtype: int
         """
         return self._parallel_outbound_migrations_per_node
 
@@ -230,7 +230,7 @@ class V1MigrationConfiguration(object):
         Sets the parallel_outbound_migrations_per_node of this V1MigrationConfiguration.
 
         :param parallel_outbound_migrations_per_node: The parallel_outbound_migrations_per_node of this V1MigrationConfiguration.
-        :type: str
+        :type: int
         """
 
         self._parallel_outbound_migrations_per_node = parallel_outbound_migrations_per_node
@@ -241,7 +241,7 @@ class V1MigrationConfiguration(object):
         Gets the progress_timeout of this V1MigrationConfiguration.
 
         :return: The progress_timeout of this V1MigrationConfiguration.
-        :rtype: str
+        :rtype: int
         """
         return self._progress_timeout
 
@@ -251,7 +251,7 @@ class V1MigrationConfiguration(object):
         Sets the progress_timeout of this V1MigrationConfiguration.
 
         :param progress_timeout: The progress_timeout of this V1MigrationConfiguration.
-        :type: str
+        :type: int
         """
 
         self._progress_timeout = progress_timeout
@@ -262,7 +262,7 @@ class V1MigrationConfiguration(object):
         Gets the unsafe_migration_override of this V1MigrationConfiguration.
 
         :return: The unsafe_migration_override of this V1MigrationConfiguration.
-        :rtype: str
+        :rtype: bool
         """
         return self._unsafe_migration_override
 
@@ -272,7 +272,7 @@ class V1MigrationConfiguration(object):
         Sets the unsafe_migration_override of this V1MigrationConfiguration.
 
         :param unsafe_migration_override: The unsafe_migration_override of this V1MigrationConfiguration.
-        :type: str
+        :type: bool
         """
 
         self._unsafe_migration_override = unsafe_migration_override

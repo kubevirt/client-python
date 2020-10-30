@@ -31,12 +31,12 @@ class V1DeveloperConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'cpu_allocation_ratio': 'str',
+        'cpu_allocation_ratio': 'int',
         'feature_gates': 'list[str]',
-        'memory_overcommit': 'str',
+        'memory_overcommit': 'int',
         'node_selectors': 'dict(str, str)',
-        'pvc_tolerate_less_space_up_to_percent': 'str',
-        'use_emulation': 'str'
+        'pvc_tolerate_less_space_up_to_percent': 'int',
+        'use_emulation': 'bool'
     }
 
     attribute_map = {
@@ -79,7 +79,7 @@ class V1DeveloperConfiguration(object):
         Gets the cpu_allocation_ratio of this V1DeveloperConfiguration.
 
         :return: The cpu_allocation_ratio of this V1DeveloperConfiguration.
-        :rtype: str
+        :rtype: int
         """
         return self._cpu_allocation_ratio
 
@@ -89,7 +89,7 @@ class V1DeveloperConfiguration(object):
         Sets the cpu_allocation_ratio of this V1DeveloperConfiguration.
 
         :param cpu_allocation_ratio: The cpu_allocation_ratio of this V1DeveloperConfiguration.
-        :type: str
+        :type: int
         """
 
         self._cpu_allocation_ratio = cpu_allocation_ratio
@@ -121,7 +121,7 @@ class V1DeveloperConfiguration(object):
         Gets the memory_overcommit of this V1DeveloperConfiguration.
 
         :return: The memory_overcommit of this V1DeveloperConfiguration.
-        :rtype: str
+        :rtype: int
         """
         return self._memory_overcommit
 
@@ -131,7 +131,7 @@ class V1DeveloperConfiguration(object):
         Sets the memory_overcommit of this V1DeveloperConfiguration.
 
         :param memory_overcommit: The memory_overcommit of this V1DeveloperConfiguration.
-        :type: str
+        :type: int
         """
 
         self._memory_overcommit = memory_overcommit
@@ -163,7 +163,7 @@ class V1DeveloperConfiguration(object):
         Gets the pvc_tolerate_less_space_up_to_percent of this V1DeveloperConfiguration.
 
         :return: The pvc_tolerate_less_space_up_to_percent of this V1DeveloperConfiguration.
-        :rtype: str
+        :rtype: int
         """
         return self._pvc_tolerate_less_space_up_to_percent
 
@@ -173,7 +173,7 @@ class V1DeveloperConfiguration(object):
         Sets the pvc_tolerate_less_space_up_to_percent of this V1DeveloperConfiguration.
 
         :param pvc_tolerate_less_space_up_to_percent: The pvc_tolerate_less_space_up_to_percent of this V1DeveloperConfiguration.
-        :type: str
+        :type: int
         """
 
         self._pvc_tolerate_less_space_up_to_percent = pvc_tolerate_less_space_up_to_percent
@@ -184,7 +184,7 @@ class V1DeveloperConfiguration(object):
         Gets the use_emulation of this V1DeveloperConfiguration.
 
         :return: The use_emulation of this V1DeveloperConfiguration.
-        :rtype: str
+        :rtype: bool
         """
         return self._use_emulation
 
@@ -194,7 +194,7 @@ class V1DeveloperConfiguration(object):
         Sets the use_emulation of this V1DeveloperConfiguration.
 
         :param use_emulation: The use_emulation of this V1DeveloperConfiguration.
-        :type: str
+        :type: bool
         """
 
         self._use_emulation = use_emulation

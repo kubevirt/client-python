@@ -32,8 +32,8 @@ class V1NetworkConfiguration(object):
     """
     swagger_types = {
         'default_network_interface': 'str',
-        'permit_bridge_interface_on_pod_network': 'str',
-        'permit_slirp_interface': 'str'
+        'permit_bridge_interface_on_pod_network': 'bool',
+        'permit_slirp_interface': 'bool'
     }
 
     attribute_map = {
@@ -85,7 +85,7 @@ class V1NetworkConfiguration(object):
         Gets the permit_bridge_interface_on_pod_network of this V1NetworkConfiguration.
 
         :return: The permit_bridge_interface_on_pod_network of this V1NetworkConfiguration.
-        :rtype: str
+        :rtype: bool
         """
         return self._permit_bridge_interface_on_pod_network
 
@@ -95,7 +95,7 @@ class V1NetworkConfiguration(object):
         Sets the permit_bridge_interface_on_pod_network of this V1NetworkConfiguration.
 
         :param permit_bridge_interface_on_pod_network: The permit_bridge_interface_on_pod_network of this V1NetworkConfiguration.
-        :type: str
+        :type: bool
         """
 
         self._permit_bridge_interface_on_pod_network = permit_bridge_interface_on_pod_network
@@ -106,7 +106,7 @@ class V1NetworkConfiguration(object):
         Gets the permit_slirp_interface of this V1NetworkConfiguration.
 
         :return: The permit_slirp_interface of this V1NetworkConfiguration.
-        :rtype: str
+        :rtype: bool
         """
         return self._permit_slirp_interface
 
@@ -116,7 +116,7 @@ class V1NetworkConfiguration(object):
         Sets the permit_slirp_interface of this V1NetworkConfiguration.
 
         :param permit_slirp_interface: The permit_slirp_interface of this V1NetworkConfiguration.
-        :type: str
+        :type: bool
         """
 
         self._permit_slirp_interface = permit_slirp_interface

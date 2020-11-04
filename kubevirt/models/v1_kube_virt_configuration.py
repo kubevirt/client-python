@@ -41,6 +41,7 @@ class V1KubeVirtConfiguration(object):
         'migrations': 'V1MigrationConfiguration',
         'network': 'V1NetworkConfiguration',
         'ovmf_path': 'str',
+        'permitted_host_devices': 'V1PermittedHostDevices',
         'selinux_launcher_type': 'str',
         'smbios': 'V1SMBiosConfiguration',
         'supported_guest_agent_versions': 'list[str]'
@@ -57,12 +58,13 @@ class V1KubeVirtConfiguration(object):
         'migrations': 'migrations',
         'network': 'network',
         'ovmf_path': 'ovmfPath',
+        'permitted_host_devices': 'permittedHostDevices',
         'selinux_launcher_type': 'selinuxLauncherType',
         'smbios': 'smbios',
         'supported_guest_agent_versions': 'supportedGuestAgentVersions'
     }
 
-    def __init__(self, cpu_model=None, cpu_request=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, mem_balloon_stats_period=None, migrations=None, network=None, ovmf_path=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None):
+    def __init__(self, cpu_model=None, cpu_request=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, mem_balloon_stats_period=None, migrations=None, network=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -77,6 +79,7 @@ class V1KubeVirtConfiguration(object):
         self._migrations = None
         self._network = None
         self._ovmf_path = None
+        self._permitted_host_devices = None
         self._selinux_launcher_type = None
         self._smbios = None
         self._supported_guest_agent_versions = None
@@ -101,6 +104,8 @@ class V1KubeVirtConfiguration(object):
           self.network = network
         if ovmf_path is not None:
           self.ovmf_path = ovmf_path
+        if permitted_host_devices is not None:
+          self.permitted_host_devices = permitted_host_devices
         if selinux_launcher_type is not None:
           self.selinux_launcher_type = selinux_launcher_type
         if smbios is not None:
@@ -317,6 +322,27 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._ovmf_path = ovmf_path
+
+    @property
+    def permitted_host_devices(self):
+        """
+        Gets the permitted_host_devices of this V1KubeVirtConfiguration.
+
+        :return: The permitted_host_devices of this V1KubeVirtConfiguration.
+        :rtype: V1PermittedHostDevices
+        """
+        return self._permitted_host_devices
+
+    @permitted_host_devices.setter
+    def permitted_host_devices(self, permitted_host_devices):
+        """
+        Sets the permitted_host_devices of this V1KubeVirtConfiguration.
+
+        :param permitted_host_devices: The permitted_host_devices of this V1KubeVirtConfiguration.
+        :type: V1PermittedHostDevices
+        """
+
+        self._permitted_host_devices = permitted_host_devices
 
     @property
     def selinux_launcher_type(self):

@@ -39,6 +39,7 @@ class V1Devices(object):
         'disks': 'list[V1Disk]',
         'filesystems': 'list[V1Filesystem]',
         'gpus': 'list[V1GPU]',
+        'host_devices': 'list[V1HostDevice]',
         'inputs': 'list[V1Input]',
         'interfaces': 'list[V1Interface]',
         'network_interface_multiqueue': 'bool',
@@ -55,6 +56,7 @@ class V1Devices(object):
         'disks': 'disks',
         'filesystems': 'filesystems',
         'gpus': 'gpus',
+        'host_devices': 'hostDevices',
         'inputs': 'inputs',
         'interfaces': 'interfaces',
         'network_interface_multiqueue': 'networkInterfaceMultiqueue',
@@ -62,7 +64,7 @@ class V1Devices(object):
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, disks=None, filesystems=None, gpus=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -75,6 +77,7 @@ class V1Devices(object):
         self._disks = None
         self._filesystems = None
         self._gpus = None
+        self._host_devices = None
         self._inputs = None
         self._interfaces = None
         self._network_interface_multiqueue = None
@@ -97,6 +100,8 @@ class V1Devices(object):
           self.filesystems = filesystems
         if gpus is not None:
           self.gpus = gpus
+        if host_devices is not None:
+          self.host_devices = host_devices
         if inputs is not None:
           self.inputs = inputs
         if interfaces is not None:
@@ -291,6 +296,29 @@ class V1Devices(object):
         """
 
         self._gpus = gpus
+
+    @property
+    def host_devices(self):
+        """
+        Gets the host_devices of this V1Devices.
+        Whether to attach a host device to the vmi.
+
+        :return: The host_devices of this V1Devices.
+        :rtype: list[V1HostDevice]
+        """
+        return self._host_devices
+
+    @host_devices.setter
+    def host_devices(self, host_devices):
+        """
+        Sets the host_devices of this V1Devices.
+        Whether to attach a host device to the vmi.
+
+        :param host_devices: The host_devices of this V1Devices.
+        :type: list[V1HostDevice]
+        """
+
+        self._host_devices = host_devices
 
     @property
     def inputs(self):

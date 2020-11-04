@@ -109,6 +109,7 @@ from .models.v1_firmware import V1Firmware
 from .models.v1_floppy_target import V1FloppyTarget
 from .models.v1_gpu import V1GPU
 from .models.v1_hpet_timer import V1HPETTimer
+from .models.v1_host_device import V1HostDevice
 from .models.v1_host_disk import V1HostDisk
 from .models.v1_hugepages import V1Hugepages
 from .models.v1_hyperv_timer import V1HypervTimer
@@ -131,6 +132,7 @@ from .models.v1_kube_virt_spec import V1KubeVirtSpec
 from .models.v1_kube_virt_status import V1KubeVirtStatus
 from .models.v1_lun_target import V1LunTarget
 from .models.v1_machine import V1Machine
+from .models.v1_mediated_host_device import V1MediatedHostDevice
 from .models.v1_memory import V1Memory
 from .models.v1_migration_configuration import V1MigrationConfiguration
 from .models.v1_multus_network import V1MultusNetwork
@@ -138,6 +140,8 @@ from .models.v1_network import V1Network
 from .models.v1_network_configuration import V1NetworkConfiguration
 from .models.v1_node_placement import V1NodePlacement
 from .models.v1_pit_timer import V1PITTimer
+from .models.v1_pci_host_device import V1PciHostDevice
+from .models.v1_permitted_host_devices import V1PermittedHostDevices
 from .models.v1_pod_network import V1PodNetwork
 from .models.v1_port import V1Port
 from .models.v1_probe import V1Probe

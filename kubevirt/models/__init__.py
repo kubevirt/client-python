@@ -109,6 +109,7 @@ from .v1_firmware import V1Firmware
 from .v1_floppy_target import V1FloppyTarget
 from .v1_gpu import V1GPU
 from .v1_hpet_timer import V1HPETTimer
+from .v1_host_device import V1HostDevice
 from .v1_host_disk import V1HostDisk
 from .v1_hugepages import V1Hugepages
 from .v1_hyperv_timer import V1HypervTimer
@@ -131,6 +132,7 @@ from .v1_kube_virt_spec import V1KubeVirtSpec
 from .v1_kube_virt_status import V1KubeVirtStatus
 from .v1_lun_target import V1LunTarget
 from .v1_machine import V1Machine
+from .v1_mediated_host_device import V1MediatedHostDevice
 from .v1_memory import V1Memory
 from .v1_migration_configuration import V1MigrationConfiguration
 from .v1_multus_network import V1MultusNetwork
@@ -138,6 +140,8 @@ from .v1_network import V1Network
 from .v1_network_configuration import V1NetworkConfiguration
 from .v1_node_placement import V1NodePlacement
 from .v1_pit_timer import V1PITTimer
+from .v1_pci_host_device import V1PciHostDevice
+from .v1_permitted_host_devices import V1PermittedHostDevices
 from .v1_pod_network import V1PodNetwork
 from .v1_port import V1Port
 from .v1_probe import V1Probe

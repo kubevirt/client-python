@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **migrations** | [**V1MigrationConfiguration**](V1MigrationConfiguration.md) |  | [optional] 
 **network** | [**V1NetworkConfiguration**](V1NetworkConfiguration.md) |  | [optional] 
 **ovmf_path** | **str** |  | [optional] 
+**permitted_host_devices** | [**V1PermittedHostDevices**](V1PermittedHostDevices.md) |  | [optional] 
 **selinux_launcher_type** | **str** |  | [optional] 
 **smbios** | [**V1SMBiosConfiguration**](V1SMBiosConfiguration.md) |  | [optional] 
 **supported_guest_agent_versions** | **list[str]** |  | [optional] 

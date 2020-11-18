@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.k8s_io_api_core_v1_persistent_volume_claim import K8sIoApiCoreV1PersistentVolumeClaim
+from kubevirt.models.v1alpha1_persistent_volume_claim import V1alpha1PersistentVolumeClaim
 
 
-class TestK8sIoApiCoreV1PersistentVolumeClaim(unittest.TestCase):
-    """ K8sIoApiCoreV1PersistentVolumeClaim unit test stubs """
+class TestV1alpha1PersistentVolumeClaim(unittest.TestCase):
+    """ V1alpha1PersistentVolumeClaim unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestK8sIoApiCoreV1PersistentVolumeClaim(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testK8sIoApiCoreV1PersistentVolumeClaim(self):
+    def testV1alpha1PersistentVolumeClaim(self):
         """
-        Test K8sIoApiCoreV1PersistentVolumeClaim
+        Test V1alpha1PersistentVolumeClaim
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.k8s_io_api_core_v1_persistent_volume_claim.K8sIoApiCoreV1PersistentVolumeClaim()
+        #model = kubevirt.models.v1alpha1_persistent_volume_claim.V1alpha1PersistentVolumeClaim()
         pass
 
 

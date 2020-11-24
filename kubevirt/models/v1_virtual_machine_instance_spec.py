@@ -31,6 +31,7 @@ class V1VirtualMachineInstanceSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'access_credentials': 'list[V1AccessCredential]',
         'affinity': 'K8sIoApiCoreV1Affinity',
         'dns_config': 'K8sIoApiCoreV1PodDNSConfig',
         'dns_policy': 'str',
@@ -50,6 +51,7 @@ class V1VirtualMachineInstanceSpec(object):
     }
 
     attribute_map = {
+        'access_credentials': 'accessCredentials',
         'affinity': 'affinity',
         'dns_config': 'dnsConfig',
         'dns_policy': 'dnsPolicy',
@@ -68,11 +70,12 @@ class V1VirtualMachineInstanceSpec(object):
         'volumes': 'volumes'
     }
 
-    def __init__(self, affinity=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, scheduler_name=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, volumes=None):
+    def __init__(self, access_credentials=None, affinity=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, scheduler_name=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, volumes=None):
         """
         V1VirtualMachineInstanceSpec - a model defined in Swagger
         """
 
+        self._access_credentials = None
         self._affinity = None
         self._dns_config = None
         self._dns_policy = None
@@ -90,6 +93,8 @@ class V1VirtualMachineInstanceSpec(object):
         self._tolerations = None
         self._volumes = None
 
+        if access_credentials is not None:
+          self.access_credentials = access_credentials
         if affinity is not None:
           self.affinity = affinity
         if dns_config is not None:
@@ -121,6 +126,29 @@ class V1VirtualMachineInstanceSpec(object):
           self.tolerations = tolerations
         if volumes is not None:
           self.volumes = volumes
+
+    @property
+    def access_credentials(self):
+        """
+        Gets the access_credentials of this V1VirtualMachineInstanceSpec.
+        Specifies a set of public keys to inject into the vm guest
+
+        :return: The access_credentials of this V1VirtualMachineInstanceSpec.
+        :rtype: list[V1AccessCredential]
+        """
+        return self._access_credentials
+
+    @access_credentials.setter
+    def access_credentials(self, access_credentials):
+        """
+        Sets the access_credentials of this V1VirtualMachineInstanceSpec.
+        Specifies a set of public keys to inject into the vm guest
+
+        :param access_credentials: The access_credentials of this V1VirtualMachineInstanceSpec.
+        :type: list[V1AccessCredential]
+        """
+
+        self._access_credentials = access_credentials
 
     @property
     def affinity(self):

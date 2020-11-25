@@ -291,7 +291,7 @@ class V1Interface(object):
     def pci_address(self):
         """
         Gets the pci_address of this V1Interface.
-        If specified, the virtual network interface will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10
+        If specified, the virtual network interface will be placed on the guests pci address with the specified PCI address. For example: 0000:81:01.10
 
         :return: The pci_address of this V1Interface.
         :rtype: str
@@ -302,7 +302,7 @@ class V1Interface(object):
     def pci_address(self, pci_address):
         """
         Sets the pci_address of this V1Interface.
-        If specified, the virtual network interface will be placed on the guests pci address with the specifed PCI address. For example: 0000:81:01.10
+        If specified, the virtual network interface will be placed on the guests pci address with the specified PCI address. For example: 0000:81:01.10
 
         :param pci_address: The pci_address of this V1Interface.
         :type: str

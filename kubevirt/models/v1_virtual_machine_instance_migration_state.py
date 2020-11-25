@@ -255,7 +255,7 @@ class V1VirtualMachineInstanceMigrationState(object):
     def mode(self):
         """
         Gets the mode of this V1VirtualMachineInstanceMigrationState.
-        Lets us know if the vmi is currenly running pre or post copy migration
+        Lets us know if the vmi is currently running pre or post copy migration
 
         :return: The mode of this V1VirtualMachineInstanceMigrationState.
         :rtype: str
@@ -266,7 +266,7 @@ class V1VirtualMachineInstanceMigrationState(object):
     def mode(self, mode):
         """
         Sets the mode of this V1VirtualMachineInstanceMigrationState.
-        Lets us know if the vmi is currenly running pre or post copy migration
+        Lets us know if the vmi is currently running pre or post copy migration
 
         :param mode: The mode of this V1VirtualMachineInstanceMigrationState.
         :type: str

@@ -119,7 +119,7 @@ class ApiClient(object):
             for k, v in path_params:
                 # specified safe chars, encode everything
                 resource_path = resource_path.replace(
-                    '{%s}' % k, quote(str(v), safe=config.safe_chars_for_path_param))
+                    '{%s:[a-z0-9][a-z0-9\-]*}' % k, quote(str(v), safe=config.safe_chars_for_path_param))
 
         # query parameters
         if query_params:

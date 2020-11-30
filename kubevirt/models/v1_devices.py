@@ -36,6 +36,7 @@ class V1Devices(object):
         'autoattach_pod_interface': 'bool',
         'autoattach_serial_console': 'bool',
         'block_multi_queue': 'bool',
+        'disable_hotplug': 'bool',
         'disks': 'list[V1Disk]',
         'filesystems': 'list[V1Filesystem]',
         'gpus': 'list[V1GPU]',
@@ -53,6 +54,7 @@ class V1Devices(object):
         'autoattach_pod_interface': 'autoattachPodInterface',
         'autoattach_serial_console': 'autoattachSerialConsole',
         'block_multi_queue': 'blockMultiQueue',
+        'disable_hotplug': 'disableHotplug',
         'disks': 'disks',
         'filesystems': 'filesystems',
         'gpus': 'gpus',
@@ -64,7 +66,7 @@ class V1Devices(object):
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, disable_hotplug=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -74,6 +76,7 @@ class V1Devices(object):
         self._autoattach_pod_interface = None
         self._autoattach_serial_console = None
         self._block_multi_queue = None
+        self._disable_hotplug = None
         self._disks = None
         self._filesystems = None
         self._gpus = None
@@ -94,6 +97,8 @@ class V1Devices(object):
           self.autoattach_serial_console = autoattach_serial_console
         if block_multi_queue is not None:
           self.block_multi_queue = block_multi_queue
+        if disable_hotplug is not None:
+          self.disable_hotplug = disable_hotplug
         if disks is not None:
           self.disks = disks
         if filesystems is not None:
@@ -227,6 +232,29 @@ class V1Devices(object):
         """
 
         self._block_multi_queue = block_multi_queue
+
+    @property
+    def disable_hotplug(self):
+        """
+        Gets the disable_hotplug of this V1Devices.
+        DisableHotplug disabled the ability to hotplug disks.
+
+        :return: The disable_hotplug of this V1Devices.
+        :rtype: bool
+        """
+        return self._disable_hotplug
+
+    @disable_hotplug.setter
+    def disable_hotplug(self, disable_hotplug):
+        """
+        Sets the disable_hotplug of this V1Devices.
+        DisableHotplug disabled the ability to hotplug disks.
+
+        :param disable_hotplug: The disable_hotplug of this V1Devices.
+        :type: bool
+        """
+
+        self._disable_hotplug = disable_hotplug
 
     @property
     def disks(self):

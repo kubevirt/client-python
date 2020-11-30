@@ -41,7 +41,8 @@ class V1VirtualMachineInstanceStatus(object):
         'node_name': 'str',
         'phase': 'str',
         'qos_class': 'str',
-        'reason': 'str'
+        'reason': 'str',
+        'volume_status': 'list[V1VolumeStatus]'
     }
 
     attribute_map = {
@@ -55,10 +56,11 @@ class V1VirtualMachineInstanceStatus(object):
         'node_name': 'nodeName',
         'phase': 'phase',
         'qos_class': 'qosClass',
-        'reason': 'reason'
+        'reason': 'reason',
+        'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, guest_os_info=None, interfaces=None, migration_method=None, migration_state=None, node_name=None, phase=None, qos_class=None, reason=None):
+    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, guest_os_info=None, interfaces=None, migration_method=None, migration_state=None, node_name=None, phase=None, qos_class=None, reason=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -74,6 +76,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._phase = None
         self._qos_class = None
         self._reason = None
+        self._volume_status = None
 
         if active_pods is not None:
           self.active_pods = active_pods
@@ -97,6 +100,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.qos_class = qos_class
         if reason is not None:
           self.reason = reason
+        if volume_status is not None:
+          self.volume_status = volume_status
 
     @property
     def active_pods(self):
@@ -350,6 +355,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._reason = reason
+
+    @property
+    def volume_status(self):
+        """
+        Gets the volume_status of this V1VirtualMachineInstanceStatus.
+        VolumeStatus contains the statuses of all the volumes
+
+        :return: The volume_status of this V1VirtualMachineInstanceStatus.
+        :rtype: list[V1VolumeStatus]
+        """
+        return self._volume_status
+
+    @volume_status.setter
+    def volume_status(self, volume_status):
+        """
+        Sets the volume_status of this V1VirtualMachineInstanceStatus.
+        VolumeStatus contains the statuses of all the volumes
+
+        :param volume_status: The volume_status of this V1VirtualMachineInstanceStatus.
+        :type: list[V1VolumeStatus]
+        """
+
+        self._volume_status = volume_status
 
     def to_dict(self):
         """

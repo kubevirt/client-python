@@ -36,6 +36,7 @@ class V1VirtualMachineStatus(object):
         'ready': 'bool',
         'snapshot_in_progress': 'str',
         'state_change_requests': 'list[V1VirtualMachineStateChangeRequest]',
+        'volume_requests': 'list[V1VirtualMachineVolumeRequest]',
         'volume_snapshot_statuses': 'list[V1VolumeSnapshotStatus]'
     }
 
@@ -45,10 +46,11 @@ class V1VirtualMachineStatus(object):
         'ready': 'ready',
         'snapshot_in_progress': 'snapshotInProgress',
         'state_change_requests': 'stateChangeRequests',
+        'volume_requests': 'volumeRequests',
         'volume_snapshot_statuses': 'volumeSnapshotStatuses'
     }
 
-    def __init__(self, conditions=None, created=None, ready=None, snapshot_in_progress=None, state_change_requests=None, volume_snapshot_statuses=None):
+    def __init__(self, conditions=None, created=None, ready=None, snapshot_in_progress=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class V1VirtualMachineStatus(object):
         self._ready = None
         self._snapshot_in_progress = None
         self._state_change_requests = None
+        self._volume_requests = None
         self._volume_snapshot_statuses = None
 
         if conditions is not None:
@@ -70,6 +73,8 @@ class V1VirtualMachineStatus(object):
           self.snapshot_in_progress = snapshot_in_progress
         if state_change_requests is not None:
           self.state_change_requests = state_change_requests
+        if volume_requests is not None:
+          self.volume_requests = volume_requests
         if volume_snapshot_statuses is not None:
           self.volume_snapshot_statuses = volume_snapshot_statuses
 
@@ -187,6 +192,29 @@ class V1VirtualMachineStatus(object):
         """
 
         self._state_change_requests = state_change_requests
+
+    @property
+    def volume_requests(self):
+        """
+        Gets the volume_requests of this V1VirtualMachineStatus.
+        VolumeRequests indicates a list of volumes add or remove from the VMI template and hotplug on an active running VMI.
+
+        :return: The volume_requests of this V1VirtualMachineStatus.
+        :rtype: list[V1VirtualMachineVolumeRequest]
+        """
+        return self._volume_requests
+
+    @volume_requests.setter
+    def volume_requests(self, volume_requests):
+        """
+        Sets the volume_requests of this V1VirtualMachineStatus.
+        VolumeRequests indicates a list of volumes add or remove from the VMI template and hotplug on an active running VMI.
+
+        :param volume_requests: The volume_requests of this V1VirtualMachineStatus.
+        :type: list[V1VirtualMachineVolumeRequest]
+        """
+
+        self._volume_requests = volume_requests
 
     @property
     def volume_snapshot_statuses(self):

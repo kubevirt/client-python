@@ -66,6 +66,7 @@ from .models.k8s_io_apimachinery_pkg_runtime_raw_extension import K8sIoApimachin
 from .models.k8s_io_apimachinery_pkg_util_intstr_int_or_string import K8sIoApimachineryPkgUtilIntstrIntOrString
 from .models.v1_access_credential import V1AccessCredential
 from .models.v1_access_credential_secret_source import V1AccessCredentialSecretSource
+from .models.v1_add_volume_options import V1AddVolumeOptions
 from .models.v1_bios import V1BIOS
 from .models.v1_bootloader import V1Bootloader
 from .models.v1_cd_rom_target import V1CDRomTarget
@@ -111,6 +112,8 @@ from .models.v1_gpu import V1GPU
 from .models.v1_hpet_timer import V1HPETTimer
 from .models.v1_host_device import V1HostDevice
 from .models.v1_host_disk import V1HostDisk
+from .models.v1_hotplug_volume_source import V1HotplugVolumeSource
+from .models.v1_hotplug_volume_status import V1HotplugVolumeStatus
 from .models.v1_hugepages import V1Hugepages
 from .models.v1_hyperv_timer import V1HypervTimer
 from .models.v1_i6300_esb_watchdog import V1I6300ESBWatchdog
@@ -148,6 +151,7 @@ from .models.v1_probe import V1Probe
 from .models.v1_qemu_guest_agent_ssh_public_key_access_credential_propagation import V1QemuGuestAgentSSHPublicKeyAccessCredentialPropagation
 from .models.v1_qemu_guest_agent_user_password_access_credential_propagation import V1QemuGuestAgentUserPasswordAccessCredentialPropagation
 from .models.v1_rtc_timer import V1RTCTimer
+from .models.v1_remove_volume_options import V1RemoveVolumeOptions
 from .models.v1_resource_requirements import V1ResourceRequirements
 from .models.v1_restart_options import V1RestartOptions
 from .models.v1_rng import V1Rng
@@ -195,8 +199,10 @@ from .models.v1_virtual_machine_list import V1VirtualMachineList
 from .models.v1_virtual_machine_spec import V1VirtualMachineSpec
 from .models.v1_virtual_machine_state_change_request import V1VirtualMachineStateChangeRequest
 from .models.v1_virtual_machine_status import V1VirtualMachineStatus
+from .models.v1_virtual_machine_volume_request import V1VirtualMachineVolumeRequest
 from .models.v1_volume import V1Volume
 from .models.v1_volume_snapshot_status import V1VolumeSnapshotStatus
+from .models.v1_volume_status import V1VolumeStatus
 from .models.v1_watchdog import V1Watchdog
 from .models.v1alpha1_condition import V1alpha1Condition
 from .models.v1alpha1_data_volume_blank_image import V1alpha1DataVolumeBlankImage

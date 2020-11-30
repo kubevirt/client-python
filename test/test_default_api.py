@@ -799,6 +799,38 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_vm_addvolume(self):
+        """
+        Test case for vm_addvolume
+
+        
+        """
+        pass
+
+    def test_vm_removevolume(self):
+        """
+        Test case for vm_removevolume
+
+        
+        """
+        pass
+
+    def test_vmi_addvolume(self):
+        """
+        Test case for vmi_addvolume
+
+        
+        """
+        pass
+
+    def test_vmi_removevolume(self):
+        """
+        Test case for vmi_removevolume
+
+        
+        """
+        pass
+
     def test_vnc(self):
         """
         Test case for vnc

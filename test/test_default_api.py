@@ -31,22 +31,6 @@ class TestDefaultApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_check_health(self):
-        """
-        Test case for check_health
-
-        
-        """
-        pass
-
-    def test_console(self):
-        """
-        Test case for console
-
-        
-        """
-        pass
-
     def test_create_namespaced_kube_virt(self):
         """
         Test case for create_namespaced_kube_virt
@@ -263,14 +247,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_filesystemlist(self):
-        """
-        Test case for filesystemlist
-
-        
-        """
-        pass
-
     def test_func1(self):
         """
         Test case for func1
@@ -311,9 +287,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_get_api_resources_kubevirt_io_v1alpha3(self):
+    def test_get_api_resources_kubevirt_io_v1(self):
         """
-        Test case for get_api_resources_kubevirt_io_v1alpha3
+        Test case for get_api_resources_kubevirt_io_v1
 
         
         """
@@ -327,33 +303,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_get_api_sub_resources(self):
-        """
-        Test case for get_api_sub_resources
-
-        
-        """
-        pass
-
     def test_get_root_paths(self):
         """
         Test case for get_root_paths
-
-        
-        """
-        pass
-
-    def test_get_sub_api_group(self):
-        """
-        Test case for get_sub_api_group
-
-        
-        """
-        pass
-
-    def test_guestosinfo(self):
-        """
-        Test case for guestosinfo
 
         
         """
@@ -503,14 +455,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_migrate(self):
-        """
-        Test case for migrate
-
-        
-        """
-        pass
-
     def test_patch_namespaced_kube_virt(self):
         """
         Test case for patch_namespaced_kube_virt
@@ -578,14 +522,6 @@ class TestDefaultApi(unittest.TestCase):
     def test_patch_namespaced_virtual_machine_snapshot_content(self):
         """
         Test case for patch_namespaced_virtual_machine_snapshot_content
-
-        
-        """
-        pass
-
-    def test_pause(self):
-        """
-        Test case for pause
 
         
         """
@@ -663,14 +599,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_rename(self):
-        """
-        Test case for rename
-
-        
-        """
-        pass
-
     def test_replace_namespaced_kube_virt(self):
         """
         Test case for replace_namespaced_kube_virt
@@ -743,97 +671,329 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_restart(self):
+    def test_v1_check_health(self):
         """
-        Test case for restart
+        Test case for v1_check_health
 
         
         """
         pass
 
-    def test_start(self):
+    def test_v1_console(self):
         """
-        Test case for start
+        Test case for v1_console
 
         
         """
         pass
 
-    def test_stop(self):
+    def test_v1_filesystemlist(self):
         """
-        Test case for stop
+        Test case for v1_filesystemlist
 
         
         """
         pass
 
-    def test_test(self):
+    def test_v1_guestosinfo(self):
         """
-        Test case for test
+        Test case for v1_guestosinfo
 
         
         """
         pass
 
-    def test_unpause(self):
+    def test_v1_migrate(self):
         """
-        Test case for unpause
+        Test case for v1_migrate
 
         
         """
         pass
 
-    def test_userlist(self):
+    def test_v1_pause(self):
         """
-        Test case for userlist
+        Test case for v1_pause
 
         
         """
         pass
 
-    def test_version(self):
+    def test_v1_rename(self):
         """
-        Test case for version
+        Test case for v1_rename
 
         
         """
         pass
 
-    def test_vm_addvolume(self):
+    def test_v1_restart(self):
         """
-        Test case for vm_addvolume
+        Test case for v1_restart
 
         
         """
         pass
 
-    def test_vm_removevolume(self):
+    def test_v1_start(self):
         """
-        Test case for vm_removevolume
+        Test case for v1_start
 
         
         """
         pass
 
-    def test_vmi_addvolume(self):
+    def test_v1_stop(self):
         """
-        Test case for vmi_addvolume
+        Test case for v1_stop
 
         
         """
         pass
 
-    def test_vmi_removevolume(self):
+    def test_v1_test(self):
         """
-        Test case for vmi_removevolume
+        Test case for v1_test
 
         
         """
         pass
 
-    def test_vnc(self):
+    def test_v1_unpause(self):
         """
-        Test case for vnc
+        Test case for v1_unpause
+
+        
+        """
+        pass
+
+    def test_v1_userlist(self):
+        """
+        Test case for v1_userlist
+
+        
+        """
+        pass
+
+    def test_v1_version(self):
+        """
+        Test case for v1_version
+
+        
+        """
+        pass
+
+    def test_v1_vnc(self):
+        """
+        Test case for v1_vnc
+
+        
+        """
+        pass
+
+    def test_v1alpha3_check_health(self):
+        """
+        Test case for v1alpha3_check_health
+
+        
+        """
+        pass
+
+    def test_v1alpha3_console(self):
+        """
+        Test case for v1alpha3_console
+
+        
+        """
+        pass
+
+    def test_v1alpha3_filesystemlist(self):
+        """
+        Test case for v1alpha3_filesystemlist
+
+        
+        """
+        pass
+
+    def test_v1alpha3_get_sub_api_group(self):
+        """
+        Test case for v1alpha3_get_sub_api_group
+
+        
+        """
+        pass
+
+    def test_v1alpha3_guestosinfo(self):
+        """
+        Test case for v1alpha3_guestosinfo
+
+        
+        """
+        pass
+
+    def test_v1alpha3_migrate(self):
+        """
+        Test case for v1alpha3_migrate
+
+        
+        """
+        pass
+
+    def test_v1alpha3_pause(self):
+        """
+        Test case for v1alpha3_pause
+
+        
+        """
+        pass
+
+    def test_v1alpha3_rename(self):
+        """
+        Test case for v1alpha3_rename
+
+        
+        """
+        pass
+
+    def test_v1alpha3_restart(self):
+        """
+        Test case for v1alpha3_restart
+
+        
+        """
+        pass
+
+    def test_v1alpha3_start(self):
+        """
+        Test case for v1alpha3_start
+
+        
+        """
+        pass
+
+    def test_v1alpha3_stop(self):
+        """
+        Test case for v1alpha3_stop
+
+        
+        """
+        pass
+
+    def test_v1alpha3_test(self):
+        """
+        Test case for v1alpha3_test
+
+        
+        """
+        pass
+
+    def test_v1alpha3_unpause(self):
+        """
+        Test case for v1alpha3_unpause
+
+        
+        """
+        pass
+
+    def test_v1alpha3_userlist(self):
+        """
+        Test case for v1alpha3_userlist
+
+        
+        """
+        pass
+
+    def test_v1alpha3_version(self):
+        """
+        Test case for v1alpha3_version
+
+        
+        """
+        pass
+
+    def test_v1alpha3_vnc(self):
+        """
+        Test case for v1alpha3_vnc
+
+        
+        """
+        pass
+
+    def test_v1alpha3get_api_sub_resources(self):
+        """
+        Test case for v1alpha3get_api_sub_resources
+
+        
+        """
+        pass
+
+    def test_v1alpha3vm_addvolume(self):
+        """
+        Test case for v1alpha3vm_addvolume
+
+        
+        """
+        pass
+
+    def test_v1alpha3vm_removevolume(self):
+        """
+        Test case for v1alpha3vm_removevolume
+
+        
+        """
+        pass
+
+    def test_v1alpha3vmi_addvolume(self):
+        """
+        Test case for v1alpha3vmi_addvolume
+
+        
+        """
+        pass
+
+    def test_v1alpha3vmi_removevolume(self):
+        """
+        Test case for v1alpha3vmi_removevolume
+
+        
+        """
+        pass
+
+    def test_v1get_api_sub_resources(self):
+        """
+        Test case for v1get_api_sub_resources
+
+        
+        """
+        pass
+
+    def test_v1vm_addvolume(self):
+        """
+        Test case for v1vm_addvolume
+
+        
+        """
+        pass
+
+    def test_v1vm_removevolume(self):
+        """
+        Test case for v1vm_removevolume
+
+        
+        """
+        pass
+
+    def test_v1vmi_addvolume(self):
+        """
+        Test case for v1vmi_addvolume
+
+        
+        """
+        pass
+
+    def test_v1vmi_removevolume(self):
+        """
+        Test case for v1vmi_removevolume
 
         
         """

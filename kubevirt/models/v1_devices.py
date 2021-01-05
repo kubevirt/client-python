@@ -45,6 +45,7 @@ class V1Devices(object):
         'interfaces': 'list[V1Interface]',
         'network_interface_multiqueue': 'bool',
         'rng': 'V1Rng',
+        'use_virtio_transitional': 'bool',
         'watchdog': 'V1Watchdog'
     }
 
@@ -63,10 +64,11 @@ class V1Devices(object):
         'interfaces': 'interfaces',
         'network_interface_multiqueue': 'networkInterfaceMultiqueue',
         'rng': 'rng',
+        'use_virtio_transitional': 'useVirtioTransitional',
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, disable_hotplug=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, disable_hotplug=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, use_virtio_transitional=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -85,6 +87,7 @@ class V1Devices(object):
         self._interfaces = None
         self._network_interface_multiqueue = None
         self._rng = None
+        self._use_virtio_transitional = None
         self._watchdog = None
 
         if autoattach_graphics_device is not None:
@@ -115,6 +118,8 @@ class V1Devices(object):
           self.network_interface_multiqueue = network_interface_multiqueue
         if rng is not None:
           self.rng = rng
+        if use_virtio_transitional is not None:
+          self.use_virtio_transitional = use_virtio_transitional
         if watchdog is not None:
           self.watchdog = watchdog
 
@@ -439,6 +444,29 @@ class V1Devices(object):
         """
 
         self._rng = rng
+
+    @property
+    def use_virtio_transitional(self):
+        """
+        Gets the use_virtio_transitional of this V1Devices.
+        Fall back to legacy virtio 0.9 support if virtio bus is selected on devices. This is helpful for old machines like CentOS6 or RHEL6 which do not understand virtio_non_transitional (virtio 1.0).
+
+        :return: The use_virtio_transitional of this V1Devices.
+        :rtype: bool
+        """
+        return self._use_virtio_transitional
+
+    @use_virtio_transitional.setter
+    def use_virtio_transitional(self, use_virtio_transitional):
+        """
+        Sets the use_virtio_transitional of this V1Devices.
+        Fall back to legacy virtio 0.9 support if virtio bus is selected on devices. This is helpful for old machines like CentOS6 or RHEL6 which do not understand virtio_non_transitional (virtio 1.0).
+
+        :param use_virtio_transitional: The use_virtio_transitional of this V1Devices.
+        :type: bool
+        """
+
+        self._use_virtio_transitional = use_virtio_transitional
 
     @property
     def watchdog(self):

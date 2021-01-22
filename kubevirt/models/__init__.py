@@ -133,6 +133,7 @@ from .v1_kube_virt_list import V1KubeVirtList
 from .v1_kube_virt_self_sign_configuration import V1KubeVirtSelfSignConfiguration
 from .v1_kube_virt_spec import V1KubeVirtSpec
 from .v1_kube_virt_status import V1KubeVirtStatus
+from .v1_log_verbosity import V1LogVerbosity
 from .v1_lun_target import V1LunTarget
 from .v1_machine import V1Machine
 from .v1_mediated_host_device import V1MediatedHostDevice

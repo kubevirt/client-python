@@ -33,6 +33,7 @@ class V1DeveloperConfiguration(object):
     swagger_types = {
         'cpu_allocation_ratio': 'int',
         'feature_gates': 'list[str]',
+        'log_verbosity': 'V1LogVerbosity',
         'memory_overcommit': 'int',
         'node_selectors': 'dict(str, str)',
         'pvc_tolerate_less_space_up_to_percent': 'int',
@@ -42,19 +43,21 @@ class V1DeveloperConfiguration(object):
     attribute_map = {
         'cpu_allocation_ratio': 'cpuAllocationRatio',
         'feature_gates': 'featureGates',
+        'log_verbosity': 'logVerbosity',
         'memory_overcommit': 'memoryOvercommit',
         'node_selectors': 'nodeSelectors',
         'pvc_tolerate_less_space_up_to_percent': 'pvcTolerateLessSpaceUpToPercent',
         'use_emulation': 'useEmulation'
     }
 
-    def __init__(self, cpu_allocation_ratio=None, feature_gates=None, memory_overcommit=None, node_selectors=None, pvc_tolerate_less_space_up_to_percent=None, use_emulation=None):
+    def __init__(self, cpu_allocation_ratio=None, feature_gates=None, log_verbosity=None, memory_overcommit=None, node_selectors=None, pvc_tolerate_less_space_up_to_percent=None, use_emulation=None):
         """
         V1DeveloperConfiguration - a model defined in Swagger
         """
 
         self._cpu_allocation_ratio = None
         self._feature_gates = None
+        self._log_verbosity = None
         self._memory_overcommit = None
         self._node_selectors = None
         self._pvc_tolerate_less_space_up_to_percent = None
@@ -64,6 +67,8 @@ class V1DeveloperConfiguration(object):
           self.cpu_allocation_ratio = cpu_allocation_ratio
         if feature_gates is not None:
           self.feature_gates = feature_gates
+        if log_verbosity is not None:
+          self.log_verbosity = log_verbosity
         if memory_overcommit is not None:
           self.memory_overcommit = memory_overcommit
         if node_selectors is not None:
@@ -114,6 +119,27 @@ class V1DeveloperConfiguration(object):
         """
 
         self._feature_gates = feature_gates
+
+    @property
+    def log_verbosity(self):
+        """
+        Gets the log_verbosity of this V1DeveloperConfiguration.
+
+        :return: The log_verbosity of this V1DeveloperConfiguration.
+        :rtype: V1LogVerbosity
+        """
+        return self._log_verbosity
+
+    @log_verbosity.setter
+    def log_verbosity(self, log_verbosity):
+        """
+        Sets the log_verbosity of this V1DeveloperConfiguration.
+
+        :param log_verbosity: The log_verbosity of this V1DeveloperConfiguration.
+        :type: V1LogVerbosity
+        """
+
+        self._log_verbosity = log_verbosity
 
     @property
     def memory_overcommit(self):

@@ -214,7 +214,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def finalizers(self):
         """
         Gets the finalizers of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed.
+        Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
 
         :return: The finalizers of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :rtype: list[str]
@@ -225,7 +225,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def finalizers(self, finalizers):
         """
         Sets the finalizers of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed.
+        Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.
 
         :param finalizers: The finalizers of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :type: list[str]
@@ -352,7 +352,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def namespace(self):
         """
         Gets the namespace of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        Namespace defines the space within each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.  Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
+        Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.  Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
 
         :return: The namespace of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :rtype: str
@@ -363,7 +363,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def namespace(self, namespace):
         """
         Sets the namespace of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        Namespace defines the space within each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.  Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
+        Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.  Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
 
         :param namespace: The namespace of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :type: str

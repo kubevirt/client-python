@@ -105,7 +105,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def data_source(self):
         """
         Gets the data_source of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        This field requires the VolumeSnapshotDataSource alpha feature gate to be enabled and currently VolumeSnapshot is the only supported data source. If the provisioner can support VolumeSnapshot data source, it will create a new volume and data will be restored to the volume at the same time. If the provisioner does not support VolumeSnapshot data source, volume will not be created and the failure will be reported as an event. In the future, we plan to support more data source types and the behavior of the provisioner may change.
+        This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.
 
         :return: The data_source of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :rtype: K8sIoApiCoreV1TypedLocalObjectReference
@@ -116,7 +116,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def data_source(self, data_source):
         """
         Sets the data_source of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        This field requires the VolumeSnapshotDataSource alpha feature gate to be enabled and currently VolumeSnapshot is the only supported data source. If the provisioner can support VolumeSnapshot data source, it will create a new volume and data will be restored to the volume at the same time. If the provisioner does not support VolumeSnapshot data source, volume will not be created and the failure will be reported as an event. In the future, we plan to support more data source types and the behavior of the provisioner may change.
+        This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.
 
         :param data_source: The data_source of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :type: K8sIoApiCoreV1TypedLocalObjectReference
@@ -197,7 +197,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def volume_mode(self):
         """
         Gets the volume_mode of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec. This is a beta feature.
+        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.
 
         :return: The volume_mode of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :rtype: str
@@ -208,7 +208,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def volume_mode(self, volume_mode):
         """
         Sets the volume_mode of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec. This is a beta feature.
+        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.
 
         :param volume_mode: The volume_mode of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :type: str

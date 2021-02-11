@@ -35,6 +35,7 @@ class V1Features(object):
         'apic': 'V1FeatureAPIC',
         'hyperv': 'V1FeatureHyperv',
         'kvm': 'V1FeatureKVM',
+        'pvspinlock': 'V1FeatureState',
         'smm': 'V1FeatureState'
     }
 
@@ -43,10 +44,11 @@ class V1Features(object):
         'apic': 'apic',
         'hyperv': 'hyperv',
         'kvm': 'kvm',
+        'pvspinlock': 'pvspinlock',
         'smm': 'smm'
     }
 
-    def __init__(self, acpi=None, apic=None, hyperv=None, kvm=None, smm=None):
+    def __init__(self, acpi=None, apic=None, hyperv=None, kvm=None, pvspinlock=None, smm=None):
         """
         V1Features - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class V1Features(object):
         self._apic = None
         self._hyperv = None
         self._kvm = None
+        self._pvspinlock = None
         self._smm = None
 
         if acpi is not None:
@@ -65,6 +68,8 @@ class V1Features(object):
           self.hyperv = hyperv
         if kvm is not None:
           self.kvm = kvm
+        if pvspinlock is not None:
+          self.pvspinlock = pvspinlock
         if smm is not None:
           self.smm = smm
 
@@ -159,6 +164,29 @@ class V1Features(object):
         """
 
         self._kvm = kvm
+
+    @property
+    def pvspinlock(self):
+        """
+        Gets the pvspinlock of this V1Features.
+        Notify the guest that the host supports paravirtual spinlocks. For older kernels this feature should be explicitly disabled.
+
+        :return: The pvspinlock of this V1Features.
+        :rtype: V1FeatureState
+        """
+        return self._pvspinlock
+
+    @pvspinlock.setter
+    def pvspinlock(self, pvspinlock):
+        """
+        Sets the pvspinlock of this V1Features.
+        Notify the guest that the host supports paravirtual spinlocks. For older kernels this feature should be explicitly disabled.
+
+        :param pvspinlock: The pvspinlock of this V1Features.
+        :type: V1FeatureState
+        """
+
+        self._pvspinlock = pvspinlock
 
     @property
     def smm(self):

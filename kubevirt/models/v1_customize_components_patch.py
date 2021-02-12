@@ -54,14 +54,10 @@ class V1CustomizeComponentsPatch(object):
         self._resource_type = None
         self._type = None
 
-        if patch is not None:
-          self.patch = patch
-        if resource_name is not None:
-          self.resource_name = resource_name
-        if resource_type is not None:
-          self.resource_type = resource_type
-        if type is not None:
-          self.type = type
+        self.patch = patch
+        self.resource_name = resource_name
+        self.resource_type = resource_type
+        self.type = type
 
     @property
     def patch(self):
@@ -81,6 +77,8 @@ class V1CustomizeComponentsPatch(object):
         :param patch: The patch of this V1CustomizeComponentsPatch.
         :type: str
         """
+        if patch is None:
+            raise ValueError("Invalid value for `patch`, must not be `None`")
 
         self._patch = patch
 
@@ -102,6 +100,8 @@ class V1CustomizeComponentsPatch(object):
         :param resource_name: The resource_name of this V1CustomizeComponentsPatch.
         :type: str
         """
+        if resource_name is None:
+            raise ValueError("Invalid value for `resource_name`, must not be `None`")
 
         self._resource_name = resource_name
 
@@ -123,6 +123,8 @@ class V1CustomizeComponentsPatch(object):
         :param resource_type: The resource_type of this V1CustomizeComponentsPatch.
         :type: str
         """
+        if resource_type is None:
+            raise ValueError("Invalid value for `resource_type`, must not be `None`")
 
         self._resource_type = resource_type
 
@@ -144,6 +146,8 @@ class V1CustomizeComponentsPatch(object):
         :param type: The type of this V1CustomizeComponentsPatch.
         :type: str
         """
+        if type is None:
+            raise ValueError("Invalid value for `type`, must not be `None`")
 
         self._type = type
 

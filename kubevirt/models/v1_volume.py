@@ -43,7 +43,8 @@ class V1Volume(object):
         'name': 'str',
         'persistent_volume_claim': 'K8sIoApiCoreV1PersistentVolumeClaimVolumeSource',
         'secret': 'V1SecretVolumeSource',
-        'service_account': 'V1ServiceAccountVolumeSource'
+        'service_account': 'V1ServiceAccountVolumeSource',
+        'sysprep': 'V1SysprepSource'
     }
 
     attribute_map = {
@@ -59,10 +60,11 @@ class V1Volume(object):
         'name': 'name',
         'persistent_volume_claim': 'persistentVolumeClaim',
         'secret': 'secret',
-        'service_account': 'serviceAccount'
+        'service_account': 'serviceAccount',
+        'sysprep': 'sysprep'
     }
 
-    def __init__(self, cloud_init_config_drive=None, cloud_init_no_cloud=None, config_map=None, container_disk=None, data_volume=None, downward_api=None, empty_disk=None, ephemeral=None, host_disk=None, name=None, persistent_volume_claim=None, secret=None, service_account=None):
+    def __init__(self, cloud_init_config_drive=None, cloud_init_no_cloud=None, config_map=None, container_disk=None, data_volume=None, downward_api=None, empty_disk=None, ephemeral=None, host_disk=None, name=None, persistent_volume_claim=None, secret=None, service_account=None, sysprep=None):
         """
         V1Volume - a model defined in Swagger
         """
@@ -80,6 +82,7 @@ class V1Volume(object):
         self._persistent_volume_claim = None
         self._secret = None
         self._service_account = None
+        self._sysprep = None
 
         if cloud_init_config_drive is not None:
           self.cloud_init_config_drive = cloud_init_config_drive
@@ -106,6 +109,8 @@ class V1Volume(object):
           self.secret = secret
         if service_account is not None:
           self.service_account = service_account
+        if sysprep is not None:
+          self.sysprep = sysprep
 
     @property
     def cloud_init_config_drive(self):
@@ -407,6 +412,29 @@ class V1Volume(object):
         """
 
         self._service_account = service_account
+
+    @property
+    def sysprep(self):
+        """
+        Gets the sysprep of this V1Volume.
+        Represents a Sysprep volume source.
+
+        :return: The sysprep of this V1Volume.
+        :rtype: V1SysprepSource
+        """
+        return self._sysprep
+
+    @sysprep.setter
+    def sysprep(self, sysprep):
+        """
+        Sets the sysprep of this V1Volume.
+        Represents a Sysprep volume source.
+
+        :param sysprep: The sysprep of this V1Volume.
+        :type: V1SysprepSource
+        """
+
+        self._sysprep = sysprep
 
     def to_dict(self):
         """

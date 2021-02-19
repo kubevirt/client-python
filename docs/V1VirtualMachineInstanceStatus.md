@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **evacuation_node_name** | **str** | EvacuationNodeName is used to track the eviction process of a VMI. It stores the name of the node that we want to evacuate. It is meant to be used by KubeVirt core components only and can&#39;t be set or modified by users. | [optional] 
 **guest_os_info** | [**V1VirtualMachineInstanceGuestOSInfo**](V1VirtualMachineInstanceGuestOSInfo.md) | Guest OS Information | [optional] 
 **interfaces** | [**list[V1VirtualMachineInstanceNetworkInterface]**](V1VirtualMachineInstanceNetworkInterface.md) | Interfaces represent the details of available network interfaces. | [optional] 
+**launcher_container_image_version** | **str** | LauncherContainerImageVersion indicates what container image is currently active for the vmi. | [optional] 
 **migration_method** | **str** | Represents the method using which the vmi can be migrated: live migration or block migration | [optional] 
 **migration_state** | [**V1VirtualMachineInstanceMigrationState**](V1VirtualMachineInstanceMigrationState.md) | Represents the status of a live migration | [optional] 
 **node_name** | **str** | NodeName is the name where the VirtualMachineInstance is currently running. | [optional] 

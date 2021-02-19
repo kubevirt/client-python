@@ -43,6 +43,7 @@ class V1KubeVirtSpec(object):
         'product_name': 'str',
         'product_version': 'str',
         'uninstall_strategy': 'str',
+        'workload_update_strategy': 'V1KubeVirtWorkloadUpdateStrategy',
         'workloads': 'V1ComponentConfig'
     }
 
@@ -59,10 +60,11 @@ class V1KubeVirtSpec(object):
         'product_name': 'productName',
         'product_version': 'productVersion',
         'uninstall_strategy': 'uninstallStrategy',
+        'workload_update_strategy': 'workloadUpdateStrategy',
         'workloads': 'workloads'
     }
 
-    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_registry=None, image_tag=None, infra=None, monitor_account=None, monitor_namespace=None, product_name=None, product_version=None, uninstall_strategy=None, workloads=None):
+    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_registry=None, image_tag=None, infra=None, monitor_account=None, monitor_namespace=None, product_name=None, product_version=None, uninstall_strategy=None, workload_update_strategy=None, workloads=None):
         """
         V1KubeVirtSpec - a model defined in Swagger
         """
@@ -79,6 +81,7 @@ class V1KubeVirtSpec(object):
         self._product_name = None
         self._product_version = None
         self._uninstall_strategy = None
+        self._workload_update_strategy = None
         self._workloads = None
 
         if certificate_rotate_strategy is not None:
@@ -105,6 +108,8 @@ class V1KubeVirtSpec(object):
           self.product_version = product_version
         if uninstall_strategy is not None:
           self.uninstall_strategy = uninstall_strategy
+        if workload_update_strategy is not None:
+          self.workload_update_strategy = workload_update_strategy
         if workloads is not None:
           self.workloads = workloads
 
@@ -379,6 +384,29 @@ class V1KubeVirtSpec(object):
         """
 
         self._uninstall_strategy = uninstall_strategy
+
+    @property
+    def workload_update_strategy(self):
+        """
+        Gets the workload_update_strategy of this V1KubeVirtSpec.
+        WorkloadUpdateStrategy defines at the cluster level how to handle automated workload updates
+
+        :return: The workload_update_strategy of this V1KubeVirtSpec.
+        :rtype: V1KubeVirtWorkloadUpdateStrategy
+        """
+        return self._workload_update_strategy
+
+    @workload_update_strategy.setter
+    def workload_update_strategy(self, workload_update_strategy):
+        """
+        Sets the workload_update_strategy of this V1KubeVirtSpec.
+        WorkloadUpdateStrategy defines at the cluster level how to handle automated workload updates
+
+        :param workload_update_strategy: The workload_update_strategy of this V1KubeVirtSpec.
+        :type: V1KubeVirtWorkloadUpdateStrategy
+        """
+
+        self._workload_update_strategy = workload_update_strategy
 
     @property
     def workloads(self):

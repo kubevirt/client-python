@@ -37,6 +37,7 @@ class V1KubeVirtStatus(object):
         'observed_kube_virt_registry': 'str',
         'observed_kube_virt_version': 'str',
         'operator_version': 'str',
+        'outdated_virtual_machine_instance_workloads': 'int',
         'phase': 'str',
         'target_deployment_config': 'str',
         'target_deployment_id': 'str',
@@ -51,6 +52,7 @@ class V1KubeVirtStatus(object):
         'observed_kube_virt_registry': 'observedKubeVirtRegistry',
         'observed_kube_virt_version': 'observedKubeVirtVersion',
         'operator_version': 'operatorVersion',
+        'outdated_virtual_machine_instance_workloads': 'outdatedVirtualMachineInstanceWorkloads',
         'phase': 'phase',
         'target_deployment_config': 'targetDeploymentConfig',
         'target_deployment_id': 'targetDeploymentID',
@@ -58,7 +60,7 @@ class V1KubeVirtStatus(object):
         'target_kube_virt_version': 'targetKubeVirtVersion'
     }
 
-    def __init__(self, conditions=None, observed_deployment_config=None, observed_deployment_id=None, observed_kube_virt_registry=None, observed_kube_virt_version=None, operator_version=None, phase=None, target_deployment_config=None, target_deployment_id=None, target_kube_virt_registry=None, target_kube_virt_version=None):
+    def __init__(self, conditions=None, observed_deployment_config=None, observed_deployment_id=None, observed_kube_virt_registry=None, observed_kube_virt_version=None, operator_version=None, outdated_virtual_machine_instance_workloads=None, phase=None, target_deployment_config=None, target_deployment_id=None, target_kube_virt_registry=None, target_kube_virt_version=None):
         """
         V1KubeVirtStatus - a model defined in Swagger
         """
@@ -69,6 +71,7 @@ class V1KubeVirtStatus(object):
         self._observed_kube_virt_registry = None
         self._observed_kube_virt_version = None
         self._operator_version = None
+        self._outdated_virtual_machine_instance_workloads = None
         self._phase = None
         self._target_deployment_config = None
         self._target_deployment_id = None
@@ -87,6 +90,8 @@ class V1KubeVirtStatus(object):
           self.observed_kube_virt_version = observed_kube_virt_version
         if operator_version is not None:
           self.operator_version = operator_version
+        if outdated_virtual_machine_instance_workloads is not None:
+          self.outdated_virtual_machine_instance_workloads = outdated_virtual_machine_instance_workloads
         if phase is not None:
           self.phase = phase
         if target_deployment_config is not None:
@@ -223,6 +228,27 @@ class V1KubeVirtStatus(object):
         """
 
         self._operator_version = operator_version
+
+    @property
+    def outdated_virtual_machine_instance_workloads(self):
+        """
+        Gets the outdated_virtual_machine_instance_workloads of this V1KubeVirtStatus.
+
+        :return: The outdated_virtual_machine_instance_workloads of this V1KubeVirtStatus.
+        :rtype: int
+        """
+        return self._outdated_virtual_machine_instance_workloads
+
+    @outdated_virtual_machine_instance_workloads.setter
+    def outdated_virtual_machine_instance_workloads(self, outdated_virtual_machine_instance_workloads):
+        """
+        Sets the outdated_virtual_machine_instance_workloads of this V1KubeVirtStatus.
+
+        :param outdated_virtual_machine_instance_workloads: The outdated_virtual_machine_instance_workloads of this V1KubeVirtStatus.
+        :type: int
+        """
+
+        self._outdated_virtual_machine_instance_workloads = outdated_virtual_machine_instance_workloads
 
     @property
     def phase(self):

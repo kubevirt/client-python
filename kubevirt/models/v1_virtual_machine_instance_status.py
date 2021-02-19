@@ -36,6 +36,7 @@ class V1VirtualMachineInstanceStatus(object):
         'evacuation_node_name': 'str',
         'guest_os_info': 'V1VirtualMachineInstanceGuestOSInfo',
         'interfaces': 'list[V1VirtualMachineInstanceNetworkInterface]',
+        'launcher_container_image_version': 'str',
         'migration_method': 'str',
         'migration_state': 'V1VirtualMachineInstanceMigrationState',
         'node_name': 'str',
@@ -51,6 +52,7 @@ class V1VirtualMachineInstanceStatus(object):
         'evacuation_node_name': 'evacuationNodeName',
         'guest_os_info': 'guestOSInfo',
         'interfaces': 'interfaces',
+        'launcher_container_image_version': 'launcherContainerImageVersion',
         'migration_method': 'migrationMethod',
         'migration_state': 'migrationState',
         'node_name': 'nodeName',
@@ -60,7 +62,7 @@ class V1VirtualMachineInstanceStatus(object):
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, guest_os_info=None, interfaces=None, migration_method=None, migration_state=None, node_name=None, phase=None, qos_class=None, reason=None, volume_status=None):
+    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, node_name=None, phase=None, qos_class=None, reason=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -70,6 +72,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._evacuation_node_name = None
         self._guest_os_info = None
         self._interfaces = None
+        self._launcher_container_image_version = None
         self._migration_method = None
         self._migration_state = None
         self._node_name = None
@@ -88,6 +91,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.guest_os_info = guest_os_info
         if interfaces is not None:
           self.interfaces = interfaces
+        if launcher_container_image_version is not None:
+          self.launcher_container_image_version = launcher_container_image_version
         if migration_method is not None:
           self.migration_method = migration_method
         if migration_state is not None:
@@ -217,6 +222,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._interfaces = interfaces
+
+    @property
+    def launcher_container_image_version(self):
+        """
+        Gets the launcher_container_image_version of this V1VirtualMachineInstanceStatus.
+        LauncherContainerImageVersion indicates what container image is currently active for the vmi.
+
+        :return: The launcher_container_image_version of this V1VirtualMachineInstanceStatus.
+        :rtype: str
+        """
+        return self._launcher_container_image_version
+
+    @launcher_container_image_version.setter
+    def launcher_container_image_version(self, launcher_container_image_version):
+        """
+        Sets the launcher_container_image_version of this V1VirtualMachineInstanceStatus.
+        LauncherContainerImageVersion indicates what container image is currently active for the vmi.
+
+        :param launcher_container_image_version: The launcher_container_image_version of this V1VirtualMachineInstanceStatus.
+        :type: str
+        """
+
+        self._launcher_container_image_version = launcher_container_image_version
 
     @property
     def migration_method(self):

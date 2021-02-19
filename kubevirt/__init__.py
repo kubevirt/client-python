@@ -133,6 +133,7 @@ from .models.v1_kube_virt_list import V1KubeVirtList
 from .models.v1_kube_virt_self_sign_configuration import V1KubeVirtSelfSignConfiguration
 from .models.v1_kube_virt_spec import V1KubeVirtSpec
 from .models.v1_kube_virt_status import V1KubeVirtStatus
+from .models.v1_kube_virt_workload_update_strategy import V1KubeVirtWorkloadUpdateStrategy
 from .models.v1_log_verbosity import V1LogVerbosity
 from .models.v1_lun_target import V1LunTarget
 from .models.v1_machine import V1Machine

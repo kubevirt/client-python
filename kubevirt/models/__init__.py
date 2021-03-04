@@ -209,6 +209,7 @@ from .v1_volume_status import V1VolumeStatus
 from .v1_watchdog import V1Watchdog
 from .v1alpha1_condition import V1alpha1Condition
 from .v1alpha1_data_volume_blank_image import V1alpha1DataVolumeBlankImage
+from .v1alpha1_data_volume_checkpoint import V1alpha1DataVolumeCheckpoint
 from .v1alpha1_data_volume_source import V1alpha1DataVolumeSource
 from .v1alpha1_data_volume_source_http import V1alpha1DataVolumeSourceHTTP
 from .v1alpha1_data_volume_source_image_io import V1alpha1DataVolumeSourceImageIO

@@ -31,30 +31,68 @@ class V1alpha1DataVolumeSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'checkpoints': 'list[V1alpha1DataVolumeCheckpoint]',
         'content_type': 'str',
+        'final_checkpoint': 'bool',
+        'preallocation': 'bool',
         'pvc': 'K8sIoApiCoreV1PersistentVolumeClaimSpec',
         'source': 'V1alpha1DataVolumeSource'
     }
 
     attribute_map = {
+        'checkpoints': 'checkpoints',
         'content_type': 'contentType',
+        'final_checkpoint': 'finalCheckpoint',
+        'preallocation': 'preallocation',
         'pvc': 'pvc',
         'source': 'source'
     }
 
-    def __init__(self, content_type=None, pvc=None, source=None):
+    def __init__(self, checkpoints=None, content_type=None, final_checkpoint=None, preallocation=None, pvc=None, source=None):
         """
         V1alpha1DataVolumeSpec - a model defined in Swagger
         """
 
+        self._checkpoints = None
         self._content_type = None
+        self._final_checkpoint = None
+        self._preallocation = None
         self._pvc = None
         self._source = None
 
+        if checkpoints is not None:
+          self.checkpoints = checkpoints
         if content_type is not None:
           self.content_type = content_type
+        if final_checkpoint is not None:
+          self.final_checkpoint = final_checkpoint
+        if preallocation is not None:
+          self.preallocation = preallocation
         self.pvc = pvc
         self.source = source
+
+    @property
+    def checkpoints(self):
+        """
+        Gets the checkpoints of this V1alpha1DataVolumeSpec.
+        Checkpoints is a list of DataVolumeCheckpoints, representing stages in a multistage import.
+
+        :return: The checkpoints of this V1alpha1DataVolumeSpec.
+        :rtype: list[V1alpha1DataVolumeCheckpoint]
+        """
+        return self._checkpoints
+
+    @checkpoints.setter
+    def checkpoints(self, checkpoints):
+        """
+        Sets the checkpoints of this V1alpha1DataVolumeSpec.
+        Checkpoints is a list of DataVolumeCheckpoints, representing stages in a multistage import.
+
+        :param checkpoints: The checkpoints of this V1alpha1DataVolumeSpec.
+        :type: list[V1alpha1DataVolumeCheckpoint]
+        """
+
+        self._checkpoints = checkpoints
 
     @property
     def content_type(self):
@@ -78,6 +116,52 @@ class V1alpha1DataVolumeSpec(object):
         """
 
         self._content_type = content_type
+
+    @property
+    def final_checkpoint(self):
+        """
+        Gets the final_checkpoint of this V1alpha1DataVolumeSpec.
+        FinalCheckpoint indicates whether the current DataVolumeCheckpoint is the final checkpoint.
+
+        :return: The final_checkpoint of this V1alpha1DataVolumeSpec.
+        :rtype: bool
+        """
+        return self._final_checkpoint
+
+    @final_checkpoint.setter
+    def final_checkpoint(self, final_checkpoint):
+        """
+        Sets the final_checkpoint of this V1alpha1DataVolumeSpec.
+        FinalCheckpoint indicates whether the current DataVolumeCheckpoint is the final checkpoint.
+
+        :param final_checkpoint: The final_checkpoint of this V1alpha1DataVolumeSpec.
+        :type: bool
+        """
+
+        self._final_checkpoint = final_checkpoint
+
+    @property
+    def preallocation(self):
+        """
+        Gets the preallocation of this V1alpha1DataVolumeSpec.
+        Preallocation controls whether storage for DataVolumes should be allocated in advance.
+
+        :return: The preallocation of this V1alpha1DataVolumeSpec.
+        :rtype: bool
+        """
+        return self._preallocation
+
+    @preallocation.setter
+    def preallocation(self, preallocation):
+        """
+        Sets the preallocation of this V1alpha1DataVolumeSpec.
+        Preallocation controls whether storage for DataVolumes should be allocated in advance.
+
+        :param preallocation: The preallocation of this V1alpha1DataVolumeSpec.
+        :type: bool
+        """
+
+        self._preallocation = preallocation
 
     @property
     def pvc(self):

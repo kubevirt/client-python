@@ -40,7 +40,7 @@ class V1FeatureHyperv(object):
         'runtime': 'V1FeatureState',
         'spinlocks': 'V1FeatureSpinlocks',
         'synic': 'V1FeatureState',
-        'synictimer': 'V1FeatureState',
+        'synictimer': 'V1SyNICTimer',
         'tlbflush': 'V1FeatureState',
         'vapic': 'V1FeatureState',
         'vendorid': 'V1FeatureVendorID',
@@ -327,7 +327,7 @@ class V1FeatureHyperv(object):
         SyNICTimer enables Synthetic Interrupt Controller Timers, reducing CPU load. Defaults to the machine type setting.
 
         :return: The synictimer of this V1FeatureHyperv.
-        :rtype: V1FeatureState
+        :rtype: V1SyNICTimer
         """
         return self._synictimer
 
@@ -338,7 +338,7 @@ class V1FeatureHyperv(object):
         SyNICTimer enables Synthetic Interrupt Controller Timers, reducing CPU load. Defaults to the machine type setting.
 
         :param synictimer: The synictimer of this V1FeatureHyperv.
-        :type: V1FeatureState
+        :type: V1SyNICTimer
         """
 
         self._synictimer = synictimer

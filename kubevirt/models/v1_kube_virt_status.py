@@ -32,6 +32,7 @@ class V1KubeVirtStatus(object):
     """
     swagger_types = {
         'conditions': 'list[V1KubeVirtCondition]',
+        'generations': 'list[GithubComOpenshiftApiOperatorV1GenerationStatus]',
         'observed_deployment_config': 'str',
         'observed_deployment_id': 'str',
         'observed_kube_virt_registry': 'str',
@@ -47,6 +48,7 @@ class V1KubeVirtStatus(object):
 
     attribute_map = {
         'conditions': 'conditions',
+        'generations': 'generations',
         'observed_deployment_config': 'observedDeploymentConfig',
         'observed_deployment_id': 'observedDeploymentID',
         'observed_kube_virt_registry': 'observedKubeVirtRegistry',
@@ -60,12 +62,13 @@ class V1KubeVirtStatus(object):
         'target_kube_virt_version': 'targetKubeVirtVersion'
     }
 
-    def __init__(self, conditions=None, observed_deployment_config=None, observed_deployment_id=None, observed_kube_virt_registry=None, observed_kube_virt_version=None, operator_version=None, outdated_virtual_machine_instance_workloads=None, phase=None, target_deployment_config=None, target_deployment_id=None, target_kube_virt_registry=None, target_kube_virt_version=None):
+    def __init__(self, conditions=None, generations=None, observed_deployment_config=None, observed_deployment_id=None, observed_kube_virt_registry=None, observed_kube_virt_version=None, operator_version=None, outdated_virtual_machine_instance_workloads=None, phase=None, target_deployment_config=None, target_deployment_id=None, target_kube_virt_registry=None, target_kube_virt_version=None):
         """
         V1KubeVirtStatus - a model defined in Swagger
         """
 
         self._conditions = None
+        self._generations = None
         self._observed_deployment_config = None
         self._observed_deployment_id = None
         self._observed_kube_virt_registry = None
@@ -80,6 +83,8 @@ class V1KubeVirtStatus(object):
 
         if conditions is not None:
           self.conditions = conditions
+        if generations is not None:
+          self.generations = generations
         if observed_deployment_config is not None:
           self.observed_deployment_config = observed_deployment_config
         if observed_deployment_id is not None:
@@ -123,6 +128,27 @@ class V1KubeVirtStatus(object):
         """
 
         self._conditions = conditions
+
+    @property
+    def generations(self):
+        """
+        Gets the generations of this V1KubeVirtStatus.
+
+        :return: The generations of this V1KubeVirtStatus.
+        :rtype: list[GithubComOpenshiftApiOperatorV1GenerationStatus]
+        """
+        return self._generations
+
+    @generations.setter
+    def generations(self, generations):
+        """
+        Sets the generations of this V1KubeVirtStatus.
+
+        :param generations: The generations of this V1KubeVirtStatus.
+        :type: list[GithubComOpenshiftApiOperatorV1GenerationStatus]
+        """
+
+        self._generations = generations
 
     @property
     def observed_deployment_config(self):

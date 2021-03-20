@@ -14,6 +14,7 @@
 from __future__ import absolute_import
 
 # import models into sdk package
+from .models.github_com_openshift_api_operator_v1_generation_status import GithubComOpenshiftApiOperatorV1GenerationStatus
 from .models.k8s_io_api_core_v1_affinity import K8sIoApiCoreV1Affinity
 from .models.k8s_io_api_core_v1_downward_api_volume_file import K8sIoApiCoreV1DownwardAPIVolumeFile
 from .models.k8s_io_api_core_v1_http_get_action import K8sIoApiCoreV1HTTPGetAction

@@ -124,7 +124,7 @@ class V1Disk(object):
     def cache(self):
         """
         Gets the cache of this V1Disk.
-        Cache specifies which kvm disk cache mode should be used.
+        Cache specifies which kvm disk cache mode should be used. Supported values are: CacheNone, CacheWriteThrough.
 
         :return: The cache of this V1Disk.
         :rtype: str
@@ -135,7 +135,7 @@ class V1Disk(object):
     def cache(self, cache):
         """
         Sets the cache of this V1Disk.
-        Cache specifies which kvm disk cache mode should be used.
+        Cache specifies which kvm disk cache mode should be used. Supported values are: CacheNone, CacheWriteThrough.
 
         :param cache: The cache of this V1Disk.
         :type: str

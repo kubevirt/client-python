@@ -219,7 +219,7 @@ class V1Devices(object):
     def block_multi_queue(self):
         """
         Gets the block_multi_queue of this V1Devices.
-        Whether or not to enable virtio multi-queue for block devices
+        Whether or not to enable virtio multi-queue for block devices. Defaults to false.
 
         :return: The block_multi_queue of this V1Devices.
         :rtype: bool
@@ -230,7 +230,7 @@ class V1Devices(object):
     def block_multi_queue(self, block_multi_queue):
         """
         Sets the block_multi_queue of this V1Devices.
-        Whether or not to enable virtio multi-queue for block devices
+        Whether or not to enable virtio multi-queue for block devices. Defaults to false.
 
         :param block_multi_queue: The block_multi_queue of this V1Devices.
         :type: bool

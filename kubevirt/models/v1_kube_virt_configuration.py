@@ -39,7 +39,9 @@ class V1KubeVirtConfiguration(object):
         'machine_type': 'str',
         'mem_balloon_stats_period': 'int',
         'migrations': 'V1MigrationConfiguration',
+        'min_cpu_model': 'str',
         'network': 'V1NetworkConfiguration',
+        'obsolete_cpu_models': 'dict(str, bool)',
         'ovmf_path': 'str',
         'permitted_host_devices': 'V1PermittedHostDevices',
         'selinux_launcher_type': 'str',
@@ -56,7 +58,9 @@ class V1KubeVirtConfiguration(object):
         'machine_type': 'machineType',
         'mem_balloon_stats_period': 'memBalloonStatsPeriod',
         'migrations': 'migrations',
+        'min_cpu_model': 'minCPUModel',
         'network': 'network',
+        'obsolete_cpu_models': 'obsoleteCPUModels',
         'ovmf_path': 'ovmfPath',
         'permitted_host_devices': 'permittedHostDevices',
         'selinux_launcher_type': 'selinuxLauncherType',
@@ -64,7 +68,7 @@ class V1KubeVirtConfiguration(object):
         'supported_guest_agent_versions': 'supportedGuestAgentVersions'
     }
 
-    def __init__(self, cpu_model=None, cpu_request=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, mem_balloon_stats_period=None, migrations=None, network=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None):
+    def __init__(self, cpu_model=None, cpu_request=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -77,7 +81,9 @@ class V1KubeVirtConfiguration(object):
         self._machine_type = None
         self._mem_balloon_stats_period = None
         self._migrations = None
+        self._min_cpu_model = None
         self._network = None
+        self._obsolete_cpu_models = None
         self._ovmf_path = None
         self._permitted_host_devices = None
         self._selinux_launcher_type = None
@@ -100,8 +106,12 @@ class V1KubeVirtConfiguration(object):
           self.mem_balloon_stats_period = mem_balloon_stats_period
         if migrations is not None:
           self.migrations = migrations
+        if min_cpu_model is not None:
+          self.min_cpu_model = min_cpu_model
         if network is not None:
           self.network = network
+        if obsolete_cpu_models is not None:
+          self.obsolete_cpu_models = obsolete_cpu_models
         if ovmf_path is not None:
           self.ovmf_path = ovmf_path
         if permitted_host_devices is not None:
@@ -282,6 +292,27 @@ class V1KubeVirtConfiguration(object):
         self._migrations = migrations
 
     @property
+    def min_cpu_model(self):
+        """
+        Gets the min_cpu_model of this V1KubeVirtConfiguration.
+
+        :return: The min_cpu_model of this V1KubeVirtConfiguration.
+        :rtype: str
+        """
+        return self._min_cpu_model
+
+    @min_cpu_model.setter
+    def min_cpu_model(self, min_cpu_model):
+        """
+        Sets the min_cpu_model of this V1KubeVirtConfiguration.
+
+        :param min_cpu_model: The min_cpu_model of this V1KubeVirtConfiguration.
+        :type: str
+        """
+
+        self._min_cpu_model = min_cpu_model
+
+    @property
     def network(self):
         """
         Gets the network of this V1KubeVirtConfiguration.
@@ -301,6 +332,27 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._network = network
+
+    @property
+    def obsolete_cpu_models(self):
+        """
+        Gets the obsolete_cpu_models of this V1KubeVirtConfiguration.
+
+        :return: The obsolete_cpu_models of this V1KubeVirtConfiguration.
+        :rtype: dict(str, bool)
+        """
+        return self._obsolete_cpu_models
+
+    @obsolete_cpu_models.setter
+    def obsolete_cpu_models(self, obsolete_cpu_models):
+        """
+        Sets the obsolete_cpu_models of this V1KubeVirtConfiguration.
+
+        :param obsolete_cpu_models: The obsolete_cpu_models of this V1KubeVirtConfiguration.
+        :type: dict(str, bool)
+        """
+
+        self._obsolete_cpu_models = obsolete_cpu_models
 
     @property
     def ovmf_path(self):

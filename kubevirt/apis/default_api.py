@@ -12770,7 +12770,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def v1alpha3vm_addvolume(self, name, namespace, **kwargs):
+    def v1alpha3vm_addvolume(self, name, namespace, body, **kwargs):
         """
         Add a volume and disk to a running Virtual Machine.
         This method makes a synchronous HTTP request by default. To make an
@@ -12779,24 +12779,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1alpha3vm_addvolume(name, namespace, callback=callback_function)
+        >>> thread = api.v1alpha3vm_addvolume(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1AddVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.v1alpha3vm_addvolume_with_http_info(name, namespace, **kwargs)
+            return self.v1alpha3vm_addvolume_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.v1alpha3vm_addvolume_with_http_info(name, namespace, **kwargs)
+            (data) = self.v1alpha3vm_addvolume_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def v1alpha3vm_addvolume_with_http_info(self, name, namespace, **kwargs):
+    def v1alpha3vm_addvolume_with_http_info(self, name, namespace, body, **kwargs):
         """
         Add a volume and disk to a running Virtual Machine.
         This method makes a synchronous HTTP request by default. To make an
@@ -12805,18 +12806,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1alpha3vm_addvolume_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.v1alpha3vm_addvolume_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1AddVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -12837,6 +12839,9 @@ class DefaultApi(object):
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `v1alpha3vm_addvolume`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `v1alpha3vm_addvolume`")
 
 
         collection_formats = {}
@@ -12855,6 +12860,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # Authentication setting
         auth_settings = []
 
@@ -12873,7 +12880,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def v1alpha3vm_removevolume(self, name, namespace, **kwargs):
+    def v1alpha3vm_removevolume(self, name, namespace, body, **kwargs):
         """
         Removes a volume and disk from a running Virtual Machine.
         This method makes a synchronous HTTP request by default. To make an
@@ -12882,24 +12889,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1alpha3vm_removevolume(name, namespace, callback=callback_function)
+        >>> thread = api.v1alpha3vm_removevolume(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1RemoveVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.v1alpha3vm_removevolume_with_http_info(name, namespace, **kwargs)
+            return self.v1alpha3vm_removevolume_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.v1alpha3vm_removevolume_with_http_info(name, namespace, **kwargs)
+            (data) = self.v1alpha3vm_removevolume_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def v1alpha3vm_removevolume_with_http_info(self, name, namespace, **kwargs):
+    def v1alpha3vm_removevolume_with_http_info(self, name, namespace, body, **kwargs):
         """
         Removes a volume and disk from a running Virtual Machine.
         This method makes a synchronous HTTP request by default. To make an
@@ -12908,18 +12916,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1alpha3vm_removevolume_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.v1alpha3vm_removevolume_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1RemoveVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -12940,6 +12949,9 @@ class DefaultApi(object):
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `v1alpha3vm_removevolume`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `v1alpha3vm_removevolume`")
 
 
         collection_formats = {}
@@ -12958,6 +12970,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # Authentication setting
         auth_settings = []
 
@@ -12976,7 +12990,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def v1alpha3vmi_addvolume(self, name, namespace, **kwargs):
+    def v1alpha3vmi_addvolume(self, name, namespace, body, **kwargs):
         """
         Add a volume and disk to a running Virtual Machine Instance
         This method makes a synchronous HTTP request by default. To make an
@@ -12985,24 +12999,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1alpha3vmi_addvolume(name, namespace, callback=callback_function)
+        >>> thread = api.v1alpha3vmi_addvolume(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1AddVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.v1alpha3vmi_addvolume_with_http_info(name, namespace, **kwargs)
+            return self.v1alpha3vmi_addvolume_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.v1alpha3vmi_addvolume_with_http_info(name, namespace, **kwargs)
+            (data) = self.v1alpha3vmi_addvolume_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def v1alpha3vmi_addvolume_with_http_info(self, name, namespace, **kwargs):
+    def v1alpha3vmi_addvolume_with_http_info(self, name, namespace, body, **kwargs):
         """
         Add a volume and disk to a running Virtual Machine Instance
         This method makes a synchronous HTTP request by default. To make an
@@ -13011,18 +13026,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1alpha3vmi_addvolume_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.v1alpha3vmi_addvolume_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1AddVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -13043,6 +13059,9 @@ class DefaultApi(object):
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `v1alpha3vmi_addvolume`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `v1alpha3vmi_addvolume`")
 
 
         collection_formats = {}
@@ -13061,6 +13080,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # Authentication setting
         auth_settings = []
 
@@ -13079,7 +13100,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def v1alpha3vmi_removevolume(self, name, namespace, **kwargs):
+    def v1alpha3vmi_removevolume(self, name, namespace, body, **kwargs):
         """
         Removes a volume and disk from a running Virtual Machine Instance
         This method makes a synchronous HTTP request by default. To make an
@@ -13088,24 +13109,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1alpha3vmi_removevolume(name, namespace, callback=callback_function)
+        >>> thread = api.v1alpha3vmi_removevolume(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1RemoveVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.v1alpha3vmi_removevolume_with_http_info(name, namespace, **kwargs)
+            return self.v1alpha3vmi_removevolume_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.v1alpha3vmi_removevolume_with_http_info(name, namespace, **kwargs)
+            (data) = self.v1alpha3vmi_removevolume_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def v1alpha3vmi_removevolume_with_http_info(self, name, namespace, **kwargs):
+    def v1alpha3vmi_removevolume_with_http_info(self, name, namespace, body, **kwargs):
         """
         Removes a volume and disk from a running Virtual Machine Instance
         This method makes a synchronous HTTP request by default. To make an
@@ -13114,18 +13136,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1alpha3vmi_removevolume_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.v1alpha3vmi_removevolume_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1RemoveVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -13146,6 +13169,9 @@ class DefaultApi(object):
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `v1alpha3vmi_removevolume`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `v1alpha3vmi_removevolume`")
 
 
         collection_formats = {}
@@ -13164,6 +13190,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # Authentication setting
         auth_settings = []
 
@@ -13274,7 +13302,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def v1vm_addvolume(self, name, namespace, **kwargs):
+    def v1vm_addvolume(self, name, namespace, body, **kwargs):
         """
         Add a volume and disk to a running Virtual Machine.
         This method makes a synchronous HTTP request by default. To make an
@@ -13283,24 +13311,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1vm_addvolume(name, namespace, callback=callback_function)
+        >>> thread = api.v1vm_addvolume(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1AddVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.v1vm_addvolume_with_http_info(name, namespace, **kwargs)
+            return self.v1vm_addvolume_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.v1vm_addvolume_with_http_info(name, namespace, **kwargs)
+            (data) = self.v1vm_addvolume_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def v1vm_addvolume_with_http_info(self, name, namespace, **kwargs):
+    def v1vm_addvolume_with_http_info(self, name, namespace, body, **kwargs):
         """
         Add a volume and disk to a running Virtual Machine.
         This method makes a synchronous HTTP request by default. To make an
@@ -13309,18 +13338,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1vm_addvolume_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.v1vm_addvolume_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1AddVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -13341,6 +13371,9 @@ class DefaultApi(object):
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `v1vm_addvolume`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `v1vm_addvolume`")
 
 
         collection_formats = {}
@@ -13359,6 +13392,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # Authentication setting
         auth_settings = []
 
@@ -13377,7 +13412,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def v1vm_removevolume(self, name, namespace, **kwargs):
+    def v1vm_removevolume(self, name, namespace, body, **kwargs):
         """
         Removes a volume and disk from a running Virtual Machine.
         This method makes a synchronous HTTP request by default. To make an
@@ -13386,24 +13421,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1vm_removevolume(name, namespace, callback=callback_function)
+        >>> thread = api.v1vm_removevolume(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1RemoveVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.v1vm_removevolume_with_http_info(name, namespace, **kwargs)
+            return self.v1vm_removevolume_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.v1vm_removevolume_with_http_info(name, namespace, **kwargs)
+            (data) = self.v1vm_removevolume_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def v1vm_removevolume_with_http_info(self, name, namespace, **kwargs):
+    def v1vm_removevolume_with_http_info(self, name, namespace, body, **kwargs):
         """
         Removes a volume and disk from a running Virtual Machine.
         This method makes a synchronous HTTP request by default. To make an
@@ -13412,18 +13448,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1vm_removevolume_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.v1vm_removevolume_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1RemoveVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -13444,6 +13481,9 @@ class DefaultApi(object):
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `v1vm_removevolume`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `v1vm_removevolume`")
 
 
         collection_formats = {}
@@ -13462,6 +13502,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # Authentication setting
         auth_settings = []
 
@@ -13480,7 +13522,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def v1vmi_addvolume(self, name, namespace, **kwargs):
+    def v1vmi_addvolume(self, name, namespace, body, **kwargs):
         """
         Add a volume and disk to a running Virtual Machine Instance
         This method makes a synchronous HTTP request by default. To make an
@@ -13489,24 +13531,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1vmi_addvolume(name, namespace, callback=callback_function)
+        >>> thread = api.v1vmi_addvolume(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1AddVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.v1vmi_addvolume_with_http_info(name, namespace, **kwargs)
+            return self.v1vmi_addvolume_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.v1vmi_addvolume_with_http_info(name, namespace, **kwargs)
+            (data) = self.v1vmi_addvolume_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def v1vmi_addvolume_with_http_info(self, name, namespace, **kwargs):
+    def v1vmi_addvolume_with_http_info(self, name, namespace, body, **kwargs):
         """
         Add a volume and disk to a running Virtual Machine Instance
         This method makes a synchronous HTTP request by default. To make an
@@ -13515,18 +13558,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1vmi_addvolume_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.v1vmi_addvolume_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1AddVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -13547,6 +13591,9 @@ class DefaultApi(object):
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `v1vmi_addvolume`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `v1vmi_addvolume`")
 
 
         collection_formats = {}
@@ -13565,6 +13612,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # Authentication setting
         auth_settings = []
 
@@ -13583,7 +13632,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def v1vmi_removevolume(self, name, namespace, **kwargs):
+    def v1vmi_removevolume(self, name, namespace, body, **kwargs):
         """
         Removes a volume and disk from a running Virtual Machine Instance
         This method makes a synchronous HTTP request by default. To make an
@@ -13592,24 +13641,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1vmi_removevolume(name, namespace, callback=callback_function)
+        >>> thread = api.v1vmi_removevolume(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1RemoveVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.v1vmi_removevolume_with_http_info(name, namespace, **kwargs)
+            return self.v1vmi_removevolume_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.v1vmi_removevolume_with_http_info(name, namespace, **kwargs)
+            (data) = self.v1vmi_removevolume_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def v1vmi_removevolume_with_http_info(self, name, namespace, **kwargs):
+    def v1vmi_removevolume_with_http_info(self, name, namespace, body, **kwargs):
         """
         Removes a volume and disk from a running Virtual Machine Instance
         This method makes a synchronous HTTP request by default. To make an
@@ -13618,18 +13668,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1vmi_removevolume_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.v1vmi_removevolume_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1RemoveVolumeOptions body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -13650,6 +13701,9 @@ class DefaultApi(object):
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `v1vmi_removevolume`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `v1vmi_removevolume`")
 
 
         collection_formats = {}
@@ -13668,6 +13722,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # Authentication setting
         auth_settings = []
 

@@ -6000,7 +6000,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1alpha3vm_addvolume**
-> str v1alpha3vm_addvolume(name, namespace)
+> str v1alpha3vm_addvolume(name, namespace, body)
 
 
 
@@ -6018,9 +6018,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1AddVolumeOptions() # V1AddVolumeOptions | 
 
 try: 
-    api_response = api_instance.v1alpha3vm_addvolume(name, namespace)
+    api_response = api_instance.v1alpha3vm_addvolume(name, namespace, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1alpha3vm_addvolume: %s\n" % e)
@@ -6032,6 +6033,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1AddVolumeOptions**](V1AddVolumeOptions.md)|  | 
 
 ### Return type
 
@@ -6049,7 +6051,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1alpha3vm_removevolume**
-> str v1alpha3vm_removevolume(name, namespace)
+> str v1alpha3vm_removevolume(name, namespace, body)
 
 
 
@@ -6067,9 +6069,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1RemoveVolumeOptions() # V1RemoveVolumeOptions | 
 
 try: 
-    api_response = api_instance.v1alpha3vm_removevolume(name, namespace)
+    api_response = api_instance.v1alpha3vm_removevolume(name, namespace, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1alpha3vm_removevolume: %s\n" % e)
@@ -6081,6 +6084,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1RemoveVolumeOptions**](V1RemoveVolumeOptions.md)|  | 
 
 ### Return type
 
@@ -6098,7 +6102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1alpha3vmi_addvolume**
-> str v1alpha3vmi_addvolume(name, namespace)
+> str v1alpha3vmi_addvolume(name, namespace, body)
 
 
 
@@ -6116,9 +6120,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1AddVolumeOptions() # V1AddVolumeOptions | 
 
 try: 
-    api_response = api_instance.v1alpha3vmi_addvolume(name, namespace)
+    api_response = api_instance.v1alpha3vmi_addvolume(name, namespace, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1alpha3vmi_addvolume: %s\n" % e)
@@ -6130,6 +6135,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1AddVolumeOptions**](V1AddVolumeOptions.md)|  | 
 
 ### Return type
 
@@ -6147,7 +6153,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1alpha3vmi_removevolume**
-> str v1alpha3vmi_removevolume(name, namespace)
+> str v1alpha3vmi_removevolume(name, namespace, body)
 
 
 
@@ -6165,9 +6171,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1RemoveVolumeOptions() # V1RemoveVolumeOptions | 
 
 try: 
-    api_response = api_instance.v1alpha3vmi_removevolume(name, namespace)
+    api_response = api_instance.v1alpha3vmi_removevolume(name, namespace, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1alpha3vmi_removevolume: %s\n" % e)
@@ -6179,6 +6186,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1RemoveVolumeOptions**](V1RemoveVolumeOptions.md)|  | 
 
 ### Return type
 
@@ -6239,7 +6247,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1vm_addvolume**
-> str v1vm_addvolume(name, namespace)
+> str v1vm_addvolume(name, namespace, body)
 
 
 
@@ -6257,9 +6265,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1AddVolumeOptions() # V1AddVolumeOptions | 
 
 try: 
-    api_response = api_instance.v1vm_addvolume(name, namespace)
+    api_response = api_instance.v1vm_addvolume(name, namespace, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1vm_addvolume: %s\n" % e)
@@ -6271,6 +6280,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1AddVolumeOptions**](V1AddVolumeOptions.md)|  | 
 
 ### Return type
 
@@ -6288,7 +6298,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1vm_removevolume**
-> str v1vm_removevolume(name, namespace)
+> str v1vm_removevolume(name, namespace, body)
 
 
 
@@ -6306,9 +6316,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1RemoveVolumeOptions() # V1RemoveVolumeOptions | 
 
 try: 
-    api_response = api_instance.v1vm_removevolume(name, namespace)
+    api_response = api_instance.v1vm_removevolume(name, namespace, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1vm_removevolume: %s\n" % e)
@@ -6320,6 +6331,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1RemoveVolumeOptions**](V1RemoveVolumeOptions.md)|  | 
 
 ### Return type
 
@@ -6337,7 +6349,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1vmi_addvolume**
-> str v1vmi_addvolume(name, namespace)
+> str v1vmi_addvolume(name, namespace, body)
 
 
 
@@ -6355,9 +6367,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1AddVolumeOptions() # V1AddVolumeOptions | 
 
 try: 
-    api_response = api_instance.v1vmi_addvolume(name, namespace)
+    api_response = api_instance.v1vmi_addvolume(name, namespace, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1vmi_addvolume: %s\n" % e)
@@ -6369,6 +6382,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1AddVolumeOptions**](V1AddVolumeOptions.md)|  | 
 
 ### Return type
 
@@ -6386,7 +6400,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1vmi_removevolume**
-> str v1vmi_removevolume(name, namespace)
+> str v1vmi_removevolume(name, namespace, body)
 
 
 
@@ -6404,9 +6418,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1RemoveVolumeOptions() # V1RemoveVolumeOptions | 
 
 try: 
-    api_response = api_instance.v1vmi_removevolume(name, namespace)
+    api_response = api_instance.v1vmi_removevolume(name, namespace, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1vmi_removevolume: %s\n" % e)
@@ -6418,6 +6433,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1RemoveVolumeOptions**](V1RemoveVolumeOptions.md)|  | 
 
 ### Return type
 

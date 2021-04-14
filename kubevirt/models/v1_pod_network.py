@@ -31,22 +31,50 @@ class V1PodNetwork(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'vm_i_pv6_network_cidr': 'str',
         'vm_network_cidr': 'str'
     }
 
     attribute_map = {
+        'vm_i_pv6_network_cidr': 'vmIPv6NetworkCIDR',
         'vm_network_cidr': 'vmNetworkCIDR'
     }
 
-    def __init__(self, vm_network_cidr=None):
+    def __init__(self, vm_i_pv6_network_cidr=None, vm_network_cidr=None):
         """
         V1PodNetwork - a model defined in Swagger
         """
 
+        self._vm_i_pv6_network_cidr = None
         self._vm_network_cidr = None
 
+        if vm_i_pv6_network_cidr is not None:
+          self.vm_i_pv6_network_cidr = vm_i_pv6_network_cidr
         if vm_network_cidr is not None:
           self.vm_network_cidr = vm_network_cidr
+
+    @property
+    def vm_i_pv6_network_cidr(self):
+        """
+        Gets the vm_i_pv6_network_cidr of this V1PodNetwork.
+        IPv6 CIDR for the vm network. Defaults to fd10:0:2::/120 if not specified.
+
+        :return: The vm_i_pv6_network_cidr of this V1PodNetwork.
+        :rtype: str
+        """
+        return self._vm_i_pv6_network_cidr
+
+    @vm_i_pv6_network_cidr.setter
+    def vm_i_pv6_network_cidr(self, vm_i_pv6_network_cidr):
+        """
+        Sets the vm_i_pv6_network_cidr of this V1PodNetwork.
+        IPv6 CIDR for the vm network. Defaults to fd10:0:2::/120 if not specified.
+
+        :param vm_i_pv6_network_cidr: The vm_i_pv6_network_cidr of this V1PodNetwork.
+        :type: str
+        """
+
+        self._vm_i_pv6_network_cidr = vm_i_pv6_network_cidr
 
     @property
     def vm_network_cidr(self):

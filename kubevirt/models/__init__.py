@@ -73,6 +73,7 @@ from .v1_bootloader import V1Bootloader
 from .v1_cd_rom_target import V1CDRomTarget
 from .v1_cpu import V1CPU
 from .v1_cpu_feature import V1CPUFeature
+from .v1_cert_config import V1CertConfig
 from .v1_chassis import V1Chassis
 from .v1_clock import V1Clock
 from .v1_clock_offset_utc import V1ClockOffsetUTC

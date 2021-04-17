@@ -31,37 +31,71 @@ class V1KubeVirtSelfSignConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'ca': 'V1CertConfig',
         'ca_overlap_interval': 'K8sIoApimachineryPkgApisMetaV1Duration',
         'ca_rotate_interval': 'K8sIoApimachineryPkgApisMetaV1Duration',
-        'cert_rotate_interval': 'K8sIoApimachineryPkgApisMetaV1Duration'
+        'cert_rotate_interval': 'K8sIoApimachineryPkgApisMetaV1Duration',
+        'server': 'V1CertConfig'
     }
 
     attribute_map = {
+        'ca': 'ca',
         'ca_overlap_interval': 'caOverlapInterval',
         'ca_rotate_interval': 'caRotateInterval',
-        'cert_rotate_interval': 'certRotateInterval'
+        'cert_rotate_interval': 'certRotateInterval',
+        'server': 'server'
     }
 
-    def __init__(self, ca_overlap_interval=None, ca_rotate_interval=None, cert_rotate_interval=None):
+    def __init__(self, ca=None, ca_overlap_interval=None, ca_rotate_interval=None, cert_rotate_interval=None, server=None):
         """
         V1KubeVirtSelfSignConfiguration - a model defined in Swagger
         """
 
+        self._ca = None
         self._ca_overlap_interval = None
         self._ca_rotate_interval = None
         self._cert_rotate_interval = None
+        self._server = None
 
+        if ca is not None:
+          self.ca = ca
         if ca_overlap_interval is not None:
           self.ca_overlap_interval = ca_overlap_interval
         if ca_rotate_interval is not None:
           self.ca_rotate_interval = ca_rotate_interval
         if cert_rotate_interval is not None:
           self.cert_rotate_interval = cert_rotate_interval
+        if server is not None:
+          self.server = server
+
+    @property
+    def ca(self):
+        """
+        Gets the ca of this V1KubeVirtSelfSignConfiguration.
+        CA configuration CA certs are kept in the CA bundle as long as they are valid
+
+        :return: The ca of this V1KubeVirtSelfSignConfiguration.
+        :rtype: V1CertConfig
+        """
+        return self._ca
+
+    @ca.setter
+    def ca(self, ca):
+        """
+        Sets the ca of this V1KubeVirtSelfSignConfiguration.
+        CA configuration CA certs are kept in the CA bundle as long as they are valid
+
+        :param ca: The ca of this V1KubeVirtSelfSignConfiguration.
+        :type: V1CertConfig
+        """
+
+        self._ca = ca
 
     @property
     def ca_overlap_interval(self):
         """
         Gets the ca_overlap_interval of this V1KubeVirtSelfSignConfiguration.
+        Deprecated. Use CA.Duration and CA.RenewBefore instead
 
         :return: The ca_overlap_interval of this V1KubeVirtSelfSignConfiguration.
         :rtype: K8sIoApimachineryPkgApisMetaV1Duration
@@ -72,6 +106,7 @@ class V1KubeVirtSelfSignConfiguration(object):
     def ca_overlap_interval(self, ca_overlap_interval):
         """
         Sets the ca_overlap_interval of this V1KubeVirtSelfSignConfiguration.
+        Deprecated. Use CA.Duration and CA.RenewBefore instead
 
         :param ca_overlap_interval: The ca_overlap_interval of this V1KubeVirtSelfSignConfiguration.
         :type: K8sIoApimachineryPkgApisMetaV1Duration
@@ -83,6 +118,7 @@ class V1KubeVirtSelfSignConfiguration(object):
     def ca_rotate_interval(self):
         """
         Gets the ca_rotate_interval of this V1KubeVirtSelfSignConfiguration.
+        Deprecated. Use CA.Duration instead
 
         :return: The ca_rotate_interval of this V1KubeVirtSelfSignConfiguration.
         :rtype: K8sIoApimachineryPkgApisMetaV1Duration
@@ -93,6 +129,7 @@ class V1KubeVirtSelfSignConfiguration(object):
     def ca_rotate_interval(self, ca_rotate_interval):
         """
         Sets the ca_rotate_interval of this V1KubeVirtSelfSignConfiguration.
+        Deprecated. Use CA.Duration instead
 
         :param ca_rotate_interval: The ca_rotate_interval of this V1KubeVirtSelfSignConfiguration.
         :type: K8sIoApimachineryPkgApisMetaV1Duration
@@ -104,6 +141,7 @@ class V1KubeVirtSelfSignConfiguration(object):
     def cert_rotate_interval(self):
         """
         Gets the cert_rotate_interval of this V1KubeVirtSelfSignConfiguration.
+        Deprecated. Use Server.Duration instead
 
         :return: The cert_rotate_interval of this V1KubeVirtSelfSignConfiguration.
         :rtype: K8sIoApimachineryPkgApisMetaV1Duration
@@ -114,12 +152,36 @@ class V1KubeVirtSelfSignConfiguration(object):
     def cert_rotate_interval(self, cert_rotate_interval):
         """
         Sets the cert_rotate_interval of this V1KubeVirtSelfSignConfiguration.
+        Deprecated. Use Server.Duration instead
 
         :param cert_rotate_interval: The cert_rotate_interval of this V1KubeVirtSelfSignConfiguration.
         :type: K8sIoApimachineryPkgApisMetaV1Duration
         """
 
         self._cert_rotate_interval = cert_rotate_interval
+
+    @property
+    def server(self):
+        """
+        Gets the server of this V1KubeVirtSelfSignConfiguration.
+        Server configuration Certs are rotated and discarded
+
+        :return: The server of this V1KubeVirtSelfSignConfiguration.
+        :rtype: V1CertConfig
+        """
+        return self._server
+
+    @server.setter
+    def server(self, server):
+        """
+        Sets the server of this V1KubeVirtSelfSignConfiguration.
+        Server configuration Certs are rotated and discarded
+
+        :param server: The server of this V1KubeVirtSelfSignConfiguration.
+        :type: V1CertConfig
+        """
+
+        self._server = server
 
     def to_dict(self):
         """

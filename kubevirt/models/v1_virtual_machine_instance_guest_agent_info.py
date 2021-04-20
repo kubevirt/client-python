@@ -37,6 +37,7 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
         'hostname': 'str',
         'kind': 'str',
         'os': 'V1VirtualMachineInstanceGuestOSInfo',
+        'supported_commands': 'list[V1GuestAgentCommandInfo]',
         'timezone': 'str',
         'user_list': 'list[V1VirtualMachineInstanceGuestOSUser]'
     }
@@ -48,11 +49,12 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
         'hostname': 'hostname',
         'kind': 'kind',
         'os': 'os',
+        'supported_commands': 'supportedCommands',
         'timezone': 'timezone',
         'user_list': 'userList'
     }
 
-    def __init__(self, api_version=None, fs_info=None, guest_agent_version=None, hostname=None, kind=None, os=None, timezone=None, user_list=None):
+    def __init__(self, api_version=None, fs_info=None, guest_agent_version=None, hostname=None, kind=None, os=None, supported_commands=None, timezone=None, user_list=None):
         """
         V1VirtualMachineInstanceGuestAgentInfo - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
         self._hostname = None
         self._kind = None
         self._os = None
+        self._supported_commands = None
         self._timezone = None
         self._user_list = None
 
@@ -78,6 +81,8 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
           self.kind = kind
         if os is not None:
           self.os = os
+        if supported_commands is not None:
+          self.supported_commands = supported_commands
         if timezone is not None:
           self.timezone = timezone
         if user_list is not None:
@@ -220,6 +225,29 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
         """
 
         self._os = os
+
+    @property
+    def supported_commands(self):
+        """
+        Gets the supported_commands of this V1VirtualMachineInstanceGuestAgentInfo.
+        Return command list the guest agent supports
+
+        :return: The supported_commands of this V1VirtualMachineInstanceGuestAgentInfo.
+        :rtype: list[V1GuestAgentCommandInfo]
+        """
+        return self._supported_commands
+
+    @supported_commands.setter
+    def supported_commands(self, supported_commands):
+        """
+        Sets the supported_commands of this V1VirtualMachineInstanceGuestAgentInfo.
+        Return command list the guest agent supports
+
+        :param supported_commands: The supported_commands of this V1VirtualMachineInstanceGuestAgentInfo.
+        :type: list[V1GuestAgentCommandInfo]
+        """
+
+        self._supported_commands = supported_commands
 
     @property
     def timezone(self):

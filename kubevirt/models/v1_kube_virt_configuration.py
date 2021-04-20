@@ -442,6 +442,7 @@ class V1KubeVirtConfiguration(object):
     def supported_guest_agent_versions(self):
         """
         Gets the supported_guest_agent_versions of this V1KubeVirtConfiguration.
+        deprecated
 
         :return: The supported_guest_agent_versions of this V1KubeVirtConfiguration.
         :rtype: list[str]
@@ -452,6 +453,7 @@ class V1KubeVirtConfiguration(object):
     def supported_guest_agent_versions(self, supported_guest_agent_versions):
         """
         Sets the supported_guest_agent_versions of this V1KubeVirtConfiguration.
+        deprecated
 
         :param supported_guest_agent_versions: The supported_guest_agent_versions of this V1KubeVirtConfiguration.
         :type: list[str]

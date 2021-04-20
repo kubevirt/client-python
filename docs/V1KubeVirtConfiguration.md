@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **permitted_host_devices** | [**V1PermittedHostDevices**](V1PermittedHostDevices.md) |  | [optional] 
 **selinux_launcher_type** | **str** |  | [optional] 
 **smbios** | [**V1SMBiosConfiguration**](V1SMBiosConfiguration.md) |  | [optional] 
-**supported_guest_agent_versions** | **list[str]** |  | [optional] 
+**supported_guest_agent_versions** | **list[str]** | deprecated | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

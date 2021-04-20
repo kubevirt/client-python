@@ -111,6 +111,7 @@ from .v1_filesystem_virtiofs import V1FilesystemVirtiofs
 from .v1_firmware import V1Firmware
 from .v1_floppy_target import V1FloppyTarget
 from .v1_gpu import V1GPU
+from .v1_guest_agent_command_info import V1GuestAgentCommandInfo
 from .v1_hpet_timer import V1HPETTimer
 from .v1_host_device import V1HostDevice
 from .v1_host_disk import V1HostDisk

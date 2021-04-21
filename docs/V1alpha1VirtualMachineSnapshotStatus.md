@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **conditions** | [**list[V1alpha1Condition]**](V1alpha1Condition.md) |  | [optional] 
 **creation_time** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) |  | [optional] 
 **error** | [**V1alpha1Error**](V1alpha1Error.md) |  | [optional] 
+**indications** | **list[str]** |  | [optional] 
 **ready_to_use** | **bool** |  | [optional] 
 **source_uid** | **str** |  | [optional] 
 **virtual_machine_snapshot_content_name** | **str** |  | [optional] 

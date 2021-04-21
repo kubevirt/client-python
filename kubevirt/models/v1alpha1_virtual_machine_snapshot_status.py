@@ -34,6 +34,7 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         'conditions': 'list[V1alpha1Condition]',
         'creation_time': 'K8sIoApimachineryPkgApisMetaV1Time',
         'error': 'V1alpha1Error',
+        'indications': 'list[str]',
         'ready_to_use': 'bool',
         'source_uid': 'str',
         'virtual_machine_snapshot_content_name': 'str'
@@ -43,12 +44,13 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         'conditions': 'conditions',
         'creation_time': 'creationTime',
         'error': 'error',
+        'indications': 'indications',
         'ready_to_use': 'readyToUse',
         'source_uid': 'sourceUID',
         'virtual_machine_snapshot_content_name': 'virtualMachineSnapshotContentName'
     }
 
-    def __init__(self, conditions=None, creation_time=None, error=None, ready_to_use=None, source_uid=None, virtual_machine_snapshot_content_name=None):
+    def __init__(self, conditions=None, creation_time=None, error=None, indications=None, ready_to_use=None, source_uid=None, virtual_machine_snapshot_content_name=None):
         """
         V1alpha1VirtualMachineSnapshotStatus - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         self._conditions = None
         self._creation_time = None
         self._error = None
+        self._indications = None
         self._ready_to_use = None
         self._source_uid = None
         self._virtual_machine_snapshot_content_name = None
@@ -66,6 +69,8 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
           self.creation_time = creation_time
         if error is not None:
           self.error = error
+        if indications is not None:
+          self.indications = indications
         if ready_to_use is not None:
           self.ready_to_use = ready_to_use
         if source_uid is not None:
@@ -135,6 +140,27 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         """
 
         self._error = error
+
+    @property
+    def indications(self):
+        """
+        Gets the indications of this V1alpha1VirtualMachineSnapshotStatus.
+
+        :return: The indications of this V1alpha1VirtualMachineSnapshotStatus.
+        :rtype: list[str]
+        """
+        return self._indications
+
+    @indications.setter
+    def indications(self, indications):
+        """
+        Sets the indications of this V1alpha1VirtualMachineSnapshotStatus.
+
+        :param indications: The indications of this V1alpha1VirtualMachineSnapshotStatus.
+        :type: list[str]
+        """
+
+        self._indications = indications
 
     @property
     def ready_to_use(self):

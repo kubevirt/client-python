@@ -31,6 +31,7 @@ class V1Disk(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'block_size': 'V1BlockSize',
         'boot_order': 'int',
         'cache': 'str',
         'cdrom': 'V1CDRomTarget',
@@ -45,6 +46,7 @@ class V1Disk(object):
     }
 
     attribute_map = {
+        'block_size': 'blockSize',
         'boot_order': 'bootOrder',
         'cache': 'cache',
         'cdrom': 'cdrom',
@@ -58,11 +60,12 @@ class V1Disk(object):
         'tag': 'tag'
     }
 
-    def __init__(self, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, floppy=None, io=None, lun=None, name=None, serial=None, tag=None):
+    def __init__(self, block_size=None, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, floppy=None, io=None, lun=None, name=None, serial=None, tag=None):
         """
         V1Disk - a model defined in Swagger
         """
 
+        self._block_size = None
         self._boot_order = None
         self._cache = None
         self._cdrom = None
@@ -75,6 +78,8 @@ class V1Disk(object):
         self._serial = None
         self._tag = None
 
+        if block_size is not None:
+          self.block_size = block_size
         if boot_order is not None:
           self.boot_order = boot_order
         if cache is not None:
@@ -96,6 +101,29 @@ class V1Disk(object):
           self.serial = serial
         if tag is not None:
           self.tag = tag
+
+    @property
+    def block_size(self):
+        """
+        Gets the block_size of this V1Disk.
+        If specified, the virtual disk will be presented with the given block sizes.
+
+        :return: The block_size of this V1Disk.
+        :rtype: V1BlockSize
+        """
+        return self._block_size
+
+    @block_size.setter
+    def block_size(self, block_size):
+        """
+        Sets the block_size of this V1Disk.
+        If specified, the virtual disk will be presented with the given block sizes.
+
+        :param block_size: The block_size of this V1Disk.
+        :type: V1BlockSize
+        """
+
+        self._block_size = block_size
 
     @property
     def boot_order(self):

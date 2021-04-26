@@ -69,6 +69,7 @@ from .v1_access_credential import V1AccessCredential
 from .v1_access_credential_secret_source import V1AccessCredentialSecretSource
 from .v1_add_volume_options import V1AddVolumeOptions
 from .v1_bios import V1BIOS
+from .v1_block_size import V1BlockSize
 from .v1_bootloader import V1Bootloader
 from .v1_cd_rom_target import V1CDRomTarget
 from .v1_cpu import V1CPU
@@ -83,6 +84,7 @@ from .v1_component_config import V1ComponentConfig
 from .v1_config_drive_ssh_public_key_access_credential_propagation import V1ConfigDriveSSHPublicKeyAccessCredentialPropagation
 from .v1_config_map_volume_source import V1ConfigMapVolumeSource
 from .v1_container_disk_source import V1ContainerDiskSource
+from .v1_custom_block_size import V1CustomBlockSize
 from .v1_customize_components import V1CustomizeComponents
 from .v1_customize_components_patch import V1CustomizeComponentsPatch
 from .v1_dhcp_options import V1DHCPOptions

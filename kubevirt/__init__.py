@@ -111,6 +111,7 @@ from .models.v1_features import V1Features
 from .models.v1_filesystem import V1Filesystem
 from .models.v1_filesystem_virtiofs import V1FilesystemVirtiofs
 from .models.v1_firmware import V1Firmware
+from .models.v1_flags import V1Flags
 from .models.v1_floppy_target import V1FloppyTarget
 from .models.v1_gpu import V1GPU
 from .models.v1_guest_agent_command_info import V1GuestAgentCommandInfo

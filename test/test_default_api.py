@@ -719,14 +719,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_v1_rename(self):
-        """
-        Test case for v1_rename
-
-        
-        """
-        pass
-
     def test_v1_restart(self):
         """
         Test case for v1_restart
@@ -842,14 +834,6 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3_pause(self):
         """
         Test case for v1alpha3_pause
-
-        
-        """
-        pass
-
-    def test_v1alpha3_rename(self):
-        """
-        Test case for v1alpha3_rename
 
         
         """

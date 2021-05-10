@@ -229,6 +229,7 @@ from .models.v1alpha1_data_volume_spec import V1alpha1DataVolumeSpec
 from .models.v1alpha1_error import V1alpha1Error
 from .models.v1alpha1_persistent_volume_claim import V1alpha1PersistentVolumeClaim
 from .models.v1alpha1_source_spec import V1alpha1SourceSpec
+from .models.v1alpha1_storage_spec import V1alpha1StorageSpec
 from .models.v1alpha1_virtual_machine_restore import V1alpha1VirtualMachineRestore
 from .models.v1alpha1_virtual_machine_restore_list import V1alpha1VirtualMachineRestoreList
 from .models.v1alpha1_virtual_machine_restore_spec import V1alpha1VirtualMachineRestoreSpec

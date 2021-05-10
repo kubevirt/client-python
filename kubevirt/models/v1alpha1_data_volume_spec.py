@@ -35,8 +35,10 @@ class V1alpha1DataVolumeSpec(object):
         'content_type': 'str',
         'final_checkpoint': 'bool',
         'preallocation': 'bool',
+        'priority_class_name': 'str',
         'pvc': 'K8sIoApiCoreV1PersistentVolumeClaimSpec',
-        'source': 'V1alpha1DataVolumeSource'
+        'source': 'V1alpha1DataVolumeSource',
+        'storage': 'V1alpha1StorageSpec'
     }
 
     attribute_map = {
@@ -44,11 +46,13 @@ class V1alpha1DataVolumeSpec(object):
         'content_type': 'contentType',
         'final_checkpoint': 'finalCheckpoint',
         'preallocation': 'preallocation',
+        'priority_class_name': 'priorityClassName',
         'pvc': 'pvc',
-        'source': 'source'
+        'source': 'source',
+        'storage': 'storage'
     }
 
-    def __init__(self, checkpoints=None, content_type=None, final_checkpoint=None, preallocation=None, pvc=None, source=None):
+    def __init__(self, checkpoints=None, content_type=None, final_checkpoint=None, preallocation=None, priority_class_name=None, pvc=None, source=None, storage=None):
         """
         V1alpha1DataVolumeSpec - a model defined in Swagger
         """
@@ -57,8 +61,10 @@ class V1alpha1DataVolumeSpec(object):
         self._content_type = None
         self._final_checkpoint = None
         self._preallocation = None
+        self._priority_class_name = None
         self._pvc = None
         self._source = None
+        self._storage = None
 
         if checkpoints is not None:
           self.checkpoints = checkpoints
@@ -68,8 +74,13 @@ class V1alpha1DataVolumeSpec(object):
           self.final_checkpoint = final_checkpoint
         if preallocation is not None:
           self.preallocation = preallocation
-        self.pvc = pvc
+        if priority_class_name is not None:
+          self.priority_class_name = priority_class_name
+        if pvc is not None:
+          self.pvc = pvc
         self.source = source
+        if storage is not None:
+          self.storage = storage
 
     @property
     def checkpoints(self):
@@ -164,6 +175,29 @@ class V1alpha1DataVolumeSpec(object):
         self._preallocation = preallocation
 
     @property
+    def priority_class_name(self):
+        """
+        Gets the priority_class_name of this V1alpha1DataVolumeSpec.
+        PriorityClassName for Importer, Cloner and Uploader pod
+
+        :return: The priority_class_name of this V1alpha1DataVolumeSpec.
+        :rtype: str
+        """
+        return self._priority_class_name
+
+    @priority_class_name.setter
+    def priority_class_name(self, priority_class_name):
+        """
+        Sets the priority_class_name of this V1alpha1DataVolumeSpec.
+        PriorityClassName for Importer, Cloner and Uploader pod
+
+        :param priority_class_name: The priority_class_name of this V1alpha1DataVolumeSpec.
+        :type: str
+        """
+
+        self._priority_class_name = priority_class_name
+
+    @property
     def pvc(self):
         """
         Gets the pvc of this V1alpha1DataVolumeSpec.
@@ -183,8 +217,6 @@ class V1alpha1DataVolumeSpec(object):
         :param pvc: The pvc of this V1alpha1DataVolumeSpec.
         :type: K8sIoApiCoreV1PersistentVolumeClaimSpec
         """
-        if pvc is None:
-            raise ValueError("Invalid value for `pvc`, must not be `None`")
 
         self._pvc = pvc
 
@@ -212,6 +244,29 @@ class V1alpha1DataVolumeSpec(object):
             raise ValueError("Invalid value for `source`, must not be `None`")
 
         self._source = source
+
+    @property
+    def storage(self):
+        """
+        Gets the storage of this V1alpha1DataVolumeSpec.
+        Storage is the requested storage specification
+
+        :return: The storage of this V1alpha1DataVolumeSpec.
+        :rtype: V1alpha1StorageSpec
+        """
+        return self._storage
+
+    @storage.setter
+    def storage(self, storage):
+        """
+        Sets the storage of this V1alpha1DataVolumeSpec.
+        Storage is the requested storage specification
+
+        :param storage: The storage of this V1alpha1DataVolumeSpec.
+        :type: V1alpha1StorageSpec
+        """
+
+        self._storage = storage
 
     def to_dict(self):
         """

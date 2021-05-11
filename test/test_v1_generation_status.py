@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.github_com_openshift_api_operator_v1_generation_status import GithubComOpenshiftApiOperatorV1GenerationStatus
+from kubevirt.models.v1_generation_status import V1GenerationStatus
 
 
-class TestGithubComOpenshiftApiOperatorV1GenerationStatus(unittest.TestCase):
-    """ GithubComOpenshiftApiOperatorV1GenerationStatus unit test stubs """
+class TestV1GenerationStatus(unittest.TestCase):
+    """ V1GenerationStatus unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestGithubComOpenshiftApiOperatorV1GenerationStatus(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testGithubComOpenshiftApiOperatorV1GenerationStatus(self):
+    def testV1GenerationStatus(self):
         """
-        Test GithubComOpenshiftApiOperatorV1GenerationStatus
+        Test V1GenerationStatus
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.github_com_openshift_api_operator_v1_generation_status.GithubComOpenshiftApiOperatorV1GenerationStatus()
+        #model = kubevirt.models.v1_generation_status.V1GenerationStatus()
         pass
 
 

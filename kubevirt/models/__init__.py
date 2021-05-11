@@ -14,7 +14,6 @@
 from __future__ import absolute_import
 
 # import models into model package
-from .github_com_openshift_api_operator_v1_generation_status import GithubComOpenshiftApiOperatorV1GenerationStatus
 from .k8s_io_api_core_v1_affinity import K8sIoApiCoreV1Affinity
 from .k8s_io_api_core_v1_downward_api_volume_file import K8sIoApiCoreV1DownwardAPIVolumeFile
 from .k8s_io_api_core_v1_http_get_action import K8sIoApiCoreV1HTTPGetAction
@@ -114,6 +113,7 @@ from .v1_firmware import V1Firmware
 from .v1_flags import V1Flags
 from .v1_floppy_target import V1FloppyTarget
 from .v1_gpu import V1GPU
+from .v1_generation_status import V1GenerationStatus
 from .v1_guest_agent_command_info import V1GuestAgentCommandInfo
 from .v1_hpet_timer import V1HPETTimer
 from .v1_host_device import V1HostDevice

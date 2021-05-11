@@ -32,7 +32,7 @@ class V1KubeVirtStatus(object):
     """
     swagger_types = {
         'conditions': 'list[V1KubeVirtCondition]',
-        'generations': 'list[GithubComOpenshiftApiOperatorV1GenerationStatus]',
+        'generations': 'list[V1GenerationStatus]',
         'observed_deployment_config': 'str',
         'observed_deployment_id': 'str',
         'observed_kube_virt_registry': 'str',
@@ -135,7 +135,7 @@ class V1KubeVirtStatus(object):
         Gets the generations of this V1KubeVirtStatus.
 
         :return: The generations of this V1KubeVirtStatus.
-        :rtype: list[GithubComOpenshiftApiOperatorV1GenerationStatus]
+        :rtype: list[V1GenerationStatus]
         """
         return self._generations
 
@@ -145,7 +145,7 @@ class V1KubeVirtStatus(object):
         Sets the generations of this V1KubeVirtStatus.
 
         :param generations: The generations of this V1KubeVirtStatus.
-        :type: list[GithubComOpenshiftApiOperatorV1GenerationStatus]
+        :type: list[V1GenerationStatus]
         """
 
         self._generations = generations

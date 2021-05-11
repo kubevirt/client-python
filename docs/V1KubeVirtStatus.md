@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **conditions** | [**list[V1KubeVirtCondition]**](V1KubeVirtCondition.md) |  | [optional] 
-**generations** | [**list[GithubComOpenshiftApiOperatorV1GenerationStatus]**](GithubComOpenshiftApiOperatorV1GenerationStatus.md) |  | [optional] 
+**generations** | [**list[V1GenerationStatus]**](V1GenerationStatus.md) |  | [optional] 
 **observed_deployment_config** | **str** |  | [optional] 
 **observed_deployment_id** | **str** |  | [optional] 
 **observed_kube_virt_registry** | **str** |  | [optional] 

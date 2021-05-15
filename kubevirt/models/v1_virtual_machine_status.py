@@ -33,6 +33,7 @@ class V1VirtualMachineStatus(object):
     swagger_types = {
         'conditions': 'list[V1VirtualMachineCondition]',
         'created': 'bool',
+        'printable_status': 'str',
         'ready': 'bool',
         'snapshot_in_progress': 'str',
         'state_change_requests': 'list[V1VirtualMachineStateChangeRequest]',
@@ -43,6 +44,7 @@ class V1VirtualMachineStatus(object):
     attribute_map = {
         'conditions': 'conditions',
         'created': 'created',
+        'printable_status': 'printableStatus',
         'ready': 'ready',
         'snapshot_in_progress': 'snapshotInProgress',
         'state_change_requests': 'stateChangeRequests',
@@ -50,13 +52,14 @@ class V1VirtualMachineStatus(object):
         'volume_snapshot_statuses': 'volumeSnapshotStatuses'
     }
 
-    def __init__(self, conditions=None, created=None, ready=None, snapshot_in_progress=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None):
+    def __init__(self, conditions=None, created=None, printable_status=None, ready=None, snapshot_in_progress=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
 
         self._conditions = None
         self._created = None
+        self._printable_status = None
         self._ready = None
         self._snapshot_in_progress = None
         self._state_change_requests = None
@@ -67,6 +70,8 @@ class V1VirtualMachineStatus(object):
           self.conditions = conditions
         if created is not None:
           self.created = created
+        if printable_status is not None:
+          self.printable_status = printable_status
         if ready is not None:
           self.ready = ready
         if snapshot_in_progress is not None:
@@ -123,6 +128,29 @@ class V1VirtualMachineStatus(object):
         """
 
         self._created = created
+
+    @property
+    def printable_status(self):
+        """
+        Gets the printable_status of this V1VirtualMachineStatus.
+        PrintableStatus is a human readable, high-level representation of the status of the virtual machine
+
+        :return: The printable_status of this V1VirtualMachineStatus.
+        :rtype: str
+        """
+        return self._printable_status
+
+    @printable_status.setter
+    def printable_status(self, printable_status):
+        """
+        Sets the printable_status of this V1VirtualMachineStatus.
+        PrintableStatus is a human readable, high-level representation of the status of the virtual machine
+
+        :param printable_status: The printable_status of this V1VirtualMachineStatus.
+        :type: str
+        """
+
+        self._printable_status = printable_status
 
     @property
     def ready(self):

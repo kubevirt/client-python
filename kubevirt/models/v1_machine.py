@@ -45,7 +45,8 @@ class V1Machine(object):
 
         self._type = None
 
-        self.type = type
+        if type is not None:
+          self.type = type
 
     @property
     def type(self):
@@ -67,8 +68,6 @@ class V1Machine(object):
         :param type: The type of this V1Machine.
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")
 
         self._type = type
 

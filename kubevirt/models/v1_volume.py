@@ -37,6 +37,7 @@ class V1Volume(object):
         'container_disk': 'V1ContainerDiskSource',
         'data_volume': 'V1DataVolumeSource',
         'downward_api': 'V1DownwardAPIVolumeSource',
+        'downward_metrics': 'V1DownwardMetricsVolumeSource',
         'empty_disk': 'V1EmptyDiskSource',
         'ephemeral': 'V1EphemeralVolumeSource',
         'host_disk': 'V1HostDisk',
@@ -54,6 +55,7 @@ class V1Volume(object):
         'container_disk': 'containerDisk',
         'data_volume': 'dataVolume',
         'downward_api': 'downwardAPI',
+        'downward_metrics': 'downwardMetrics',
         'empty_disk': 'emptyDisk',
         'ephemeral': 'ephemeral',
         'host_disk': 'hostDisk',
@@ -64,7 +66,7 @@ class V1Volume(object):
         'sysprep': 'sysprep'
     }
 
-    def __init__(self, cloud_init_config_drive=None, cloud_init_no_cloud=None, config_map=None, container_disk=None, data_volume=None, downward_api=None, empty_disk=None, ephemeral=None, host_disk=None, name=None, persistent_volume_claim=None, secret=None, service_account=None, sysprep=None):
+    def __init__(self, cloud_init_config_drive=None, cloud_init_no_cloud=None, config_map=None, container_disk=None, data_volume=None, downward_api=None, downward_metrics=None, empty_disk=None, ephemeral=None, host_disk=None, name=None, persistent_volume_claim=None, secret=None, service_account=None, sysprep=None):
         """
         V1Volume - a model defined in Swagger
         """
@@ -75,6 +77,7 @@ class V1Volume(object):
         self._container_disk = None
         self._data_volume = None
         self._downward_api = None
+        self._downward_metrics = None
         self._empty_disk = None
         self._ephemeral = None
         self._host_disk = None
@@ -96,6 +99,8 @@ class V1Volume(object):
           self.data_volume = data_volume
         if downward_api is not None:
           self.downward_api = downward_api
+        if downward_metrics is not None:
+          self.downward_metrics = downward_metrics
         if empty_disk is not None:
           self.empty_disk = empty_disk
         if ephemeral is not None:
@@ -249,6 +254,29 @@ class V1Volume(object):
         """
 
         self._downward_api = downward_api
+
+    @property
+    def downward_metrics(self):
+        """
+        Gets the downward_metrics of this V1Volume.
+        DownwardMetrics adds a very small disk to VMIs which contains a limited view of host and guest metrics. The disk content is compatible with vhostmd (https://github.com/vhostmd/vhostmd) and vm-dump-metrics.
+
+        :return: The downward_metrics of this V1Volume.
+        :rtype: V1DownwardMetricsVolumeSource
+        """
+        return self._downward_metrics
+
+    @downward_metrics.setter
+    def downward_metrics(self, downward_metrics):
+        """
+        Sets the downward_metrics of this V1Volume.
+        DownwardMetrics adds a very small disk to VMIs which contains a limited view of host and guest metrics. The disk content is compatible with vhostmd (https://github.com/vhostmd/vhostmd) and vm-dump-metrics.
+
+        :param downward_metrics: The downward_metrics of this V1Volume.
+        :type: V1DownwardMetricsVolumeSource
+        """
+
+        self._downward_metrics = downward_metrics
 
     @property
     def empty_disk(self):

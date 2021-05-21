@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **container_disk** | [**V1ContainerDiskSource**](V1ContainerDiskSource.md) | ContainerDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html | [optional] 
 **data_volume** | [**V1DataVolumeSource**](V1DataVolumeSource.md) | DataVolume represents the dynamic creation a PVC for this volume as well as the process of populating that PVC with a disk image. | [optional] 
 **downward_api** | [**V1DownwardAPIVolumeSource**](V1DownwardAPIVolumeSource.md) | DownwardAPI represents downward API about the pod that should populate this volume | [optional] 
+**downward_metrics** | [**V1DownwardMetricsVolumeSource**](V1DownwardMetricsVolumeSource.md) | DownwardMetrics adds a very small disk to VMIs which contains a limited view of host and guest metrics. The disk content is compatible with vhostmd (https://github.com/vhostmd/vhostmd) and vm-dump-metrics. | [optional] 
 **empty_disk** | [**V1EmptyDiskSource**](V1EmptyDiskSource.md) | EmptyDisk represents a temporary disk which shares the vmis lifecycle. More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html | [optional] 
 **ephemeral** | [**V1EphemeralVolumeSource**](V1EphemeralVolumeSource.md) | Ephemeral is a special volume source that \&quot;wraps\&quot; specified source and provides copy-on-write image on top of it. | [optional] 
 **host_disk** | [**V1HostDisk**](V1HostDisk.md) | HostDisk represents a disk created on the cluster level | [optional] 

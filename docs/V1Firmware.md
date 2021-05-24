@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bootloader** | [**V1Bootloader**](V1Bootloader.md) | Settings to control the bootloader that is used. | [optional] 
+**kernel_boot** | [**V1KernelBoot**](V1KernelBoot.md) | Settings to set the kernel for booting. | [optional] 
 **serial** | **str** | The system-serial-number in SMBIOS | [optional] 
 **uuid** | **str** | UUID reported by the vmi bios. Defaults to a random generated uid. | [optional] 
 

@@ -132,6 +132,8 @@ from .models.v1_interface_masquerade import V1InterfaceMasquerade
 from .models.v1_interface_sriov import V1InterfaceSRIOV
 from .models.v1_interface_slirp import V1InterfaceSlirp
 from .models.v1_kvm_timer import V1KVMTimer
+from .models.v1_kernel_boot import V1KernelBoot
+from .models.v1_kernel_boot_container import V1KernelBootContainer
 from .models.v1_kube_virt import V1KubeVirt
 from .models.v1_kube_virt_certificate_rotate_strategy import V1KubeVirtCertificateRotateStrategy
 from .models.v1_kube_virt_condition import V1KubeVirtCondition

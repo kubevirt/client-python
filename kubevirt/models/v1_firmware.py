@@ -32,27 +32,32 @@ class V1Firmware(object):
     """
     swagger_types = {
         'bootloader': 'V1Bootloader',
+        'kernel_boot': 'V1KernelBoot',
         'serial': 'str',
         'uuid': 'str'
     }
 
     attribute_map = {
         'bootloader': 'bootloader',
+        'kernel_boot': 'kernelBoot',
         'serial': 'serial',
         'uuid': 'uuid'
     }
 
-    def __init__(self, bootloader=None, serial=None, uuid=None):
+    def __init__(self, bootloader=None, kernel_boot=None, serial=None, uuid=None):
         """
         V1Firmware - a model defined in Swagger
         """
 
         self._bootloader = None
+        self._kernel_boot = None
         self._serial = None
         self._uuid = None
 
         if bootloader is not None:
           self.bootloader = bootloader
+        if kernel_boot is not None:
+          self.kernel_boot = kernel_boot
         if serial is not None:
           self.serial = serial
         if uuid is not None:
@@ -80,6 +85,29 @@ class V1Firmware(object):
         """
 
         self._bootloader = bootloader
+
+    @property
+    def kernel_boot(self):
+        """
+        Gets the kernel_boot of this V1Firmware.
+        Settings to set the kernel for booting.
+
+        :return: The kernel_boot of this V1Firmware.
+        :rtype: V1KernelBoot
+        """
+        return self._kernel_boot
+
+    @kernel_boot.setter
+    def kernel_boot(self, kernel_boot):
+        """
+        Sets the kernel_boot of this V1Firmware.
+        Settings to set the kernel for booting.
+
+        :param kernel_boot: The kernel_boot of this V1Firmware.
+        :type: V1KernelBoot
+        """
+
+        self._kernel_boot = kernel_boot
 
     @property
     def serial(self):

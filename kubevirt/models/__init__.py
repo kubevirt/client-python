@@ -16,6 +16,7 @@ from __future__ import absolute_import
 # import models into model package
 from .k8s_io_api_core_v1_affinity import K8sIoApiCoreV1Affinity
 from .k8s_io_api_core_v1_downward_api_volume_file import K8sIoApiCoreV1DownwardAPIVolumeFile
+from .k8s_io_api_core_v1_exec_action import K8sIoApiCoreV1ExecAction
 from .k8s_io_api_core_v1_http_get_action import K8sIoApiCoreV1HTTPGetAction
 from .k8s_io_api_core_v1_http_header import K8sIoApiCoreV1HTTPHeader
 from .k8s_io_api_core_v1_local_object_reference import K8sIoApiCoreV1LocalObjectReference

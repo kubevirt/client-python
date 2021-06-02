@@ -31,6 +31,7 @@ class V1Probe(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        '_exec': 'K8sIoApiCoreV1ExecAction',
         'failure_threshold': 'int',
         'http_get': 'K8sIoApiCoreV1HTTPGetAction',
         'initial_delay_seconds': 'int',
@@ -41,6 +42,7 @@ class V1Probe(object):
     }
 
     attribute_map = {
+        '_exec': 'exec',
         'failure_threshold': 'failureThreshold',
         'http_get': 'httpGet',
         'initial_delay_seconds': 'initialDelaySeconds',
@@ -50,11 +52,12 @@ class V1Probe(object):
         'timeout_seconds': 'timeoutSeconds'
     }
 
-    def __init__(self, failure_threshold=None, http_get=None, initial_delay_seconds=None, period_seconds=None, success_threshold=None, tcp_socket=None, timeout_seconds=None):
+    def __init__(self, _exec=None, failure_threshold=None, http_get=None, initial_delay_seconds=None, period_seconds=None, success_threshold=None, tcp_socket=None, timeout_seconds=None):
         """
         V1Probe - a model defined in Swagger
         """
 
+        self.__exec = None
         self._failure_threshold = None
         self._http_get = None
         self._initial_delay_seconds = None
@@ -63,6 +66,8 @@ class V1Probe(object):
         self._tcp_socket = None
         self._timeout_seconds = None
 
+        if _exec is not None:
+          self._exec = _exec
         if failure_threshold is not None:
           self.failure_threshold = failure_threshold
         if http_get is not None:
@@ -77,6 +82,29 @@ class V1Probe(object):
           self.tcp_socket = tcp_socket
         if timeout_seconds is not None:
           self.timeout_seconds = timeout_seconds
+
+    @property
+    def _exec(self):
+        """
+        Gets the _exec of this V1Probe.
+        One and only one of the following should be specified. Exec specifies the action to take, it will be executed on the guest through the qemu-guest-agent. If the guest agent is not available, this probe will fail.
+
+        :return: The _exec of this V1Probe.
+        :rtype: K8sIoApiCoreV1ExecAction
+        """
+        return self.__exec
+
+    @_exec.setter
+    def _exec(self, _exec):
+        """
+        Sets the _exec of this V1Probe.
+        One and only one of the following should be specified. Exec specifies the action to take, it will be executed on the guest through the qemu-guest-agent. If the guest agent is not available, this probe will fail.
+
+        :param _exec: The _exec of this V1Probe.
+        :type: K8sIoApiCoreV1ExecAction
+        """
+
+        self.__exec = _exec
 
     @property
     def failure_threshold(self):
@@ -220,7 +248,7 @@ class V1Probe(object):
     def timeout_seconds(self):
         """
         Gets the timeout_seconds of this V1Probe.
-        Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+        Number of seconds after which the probe times out. For exec probes the timeout fails the probe but does not terminate the command running on the guest. This means a blocking command can result in an increasing load on the guest. A small buffer will be added to the resulting workload exec probe to compensate for delays caused by the qemu guest exec mechanism. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
 
         :return: The timeout_seconds of this V1Probe.
         :rtype: int
@@ -231,7 +259,7 @@ class V1Probe(object):
     def timeout_seconds(self, timeout_seconds):
         """
         Sets the timeout_seconds of this V1Probe.
-        Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+        Number of seconds after which the probe times out. For exec probes the timeout fails the probe but does not terminate the command running on the guest. This means a blocking command can result in an increasing load on the guest. A small buffer will be added to the resulting workload exec probe to compensate for delays caused by the qemu guest exec mechanism. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
 
         :param timeout_seconds: The timeout_seconds of this V1Probe.
         :type: int

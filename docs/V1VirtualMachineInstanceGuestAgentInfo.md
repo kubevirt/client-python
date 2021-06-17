@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_version** | **str** | APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources | [optional] 
+**fs_freeze_status** | **str** | FSFreezeStatus is the state of the fs of the guest it can be either frozen or thawed | [optional] 
 **fs_info** | [**V1VirtualMachineInstanceFileSystemInfo**](V1VirtualMachineInstanceFileSystemInfo.md) | FSInfo is a guest os filesystem information containing the disk mapping and disk mounts with usage | [optional] 
 **guest_agent_version** | **str** | GAVersion is a version of currently installed guest agent | [optional] 
 **hostname** | **str** | Hostname represents FQDN of a guest | [optional] 

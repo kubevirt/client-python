@@ -32,6 +32,7 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
     """
     swagger_types = {
         'api_version': 'str',
+        'fs_freeze_status': 'str',
         'fs_info': 'V1VirtualMachineInstanceFileSystemInfo',
         'guest_agent_version': 'str',
         'hostname': 'str',
@@ -44,6 +45,7 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
 
     attribute_map = {
         'api_version': 'apiVersion',
+        'fs_freeze_status': 'fsFreezeStatus',
         'fs_info': 'fsInfo',
         'guest_agent_version': 'guestAgentVersion',
         'hostname': 'hostname',
@@ -54,12 +56,13 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
         'user_list': 'userList'
     }
 
-    def __init__(self, api_version=None, fs_info=None, guest_agent_version=None, hostname=None, kind=None, os=None, supported_commands=None, timezone=None, user_list=None):
+    def __init__(self, api_version=None, fs_freeze_status=None, fs_info=None, guest_agent_version=None, hostname=None, kind=None, os=None, supported_commands=None, timezone=None, user_list=None):
         """
         V1VirtualMachineInstanceGuestAgentInfo - a model defined in Swagger
         """
 
         self._api_version = None
+        self._fs_freeze_status = None
         self._fs_info = None
         self._guest_agent_version = None
         self._hostname = None
@@ -71,6 +74,8 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
 
         if api_version is not None:
           self.api_version = api_version
+        if fs_freeze_status is not None:
+          self.fs_freeze_status = fs_freeze_status
         if fs_info is not None:
           self.fs_info = fs_info
         if guest_agent_version is not None:
@@ -110,6 +115,29 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
         """
 
         self._api_version = api_version
+
+    @property
+    def fs_freeze_status(self):
+        """
+        Gets the fs_freeze_status of this V1VirtualMachineInstanceGuestAgentInfo.
+        FSFreezeStatus is the state of the fs of the guest it can be either frozen or thawed
+
+        :return: The fs_freeze_status of this V1VirtualMachineInstanceGuestAgentInfo.
+        :rtype: str
+        """
+        return self._fs_freeze_status
+
+    @fs_freeze_status.setter
+    def fs_freeze_status(self, fs_freeze_status):
+        """
+        Sets the fs_freeze_status of this V1VirtualMachineInstanceGuestAgentInfo.
+        FSFreezeStatus is the state of the fs of the guest it can be either frozen or thawed
+
+        :param fs_freeze_status: The fs_freeze_status of this V1VirtualMachineInstanceGuestAgentInfo.
+        :type: str
+        """
+
+        self._fs_freeze_status = fs_freeze_status
 
     @property
     def fs_info(self):

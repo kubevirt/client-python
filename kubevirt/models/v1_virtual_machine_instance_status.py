@@ -34,6 +34,7 @@ class V1VirtualMachineInstanceStatus(object):
         'active_pods': 'dict(str, str)',
         'conditions': 'list[V1VirtualMachineInstanceCondition]',
         'evacuation_node_name': 'str',
+        'fs_freeze_status': 'str',
         'guest_os_info': 'V1VirtualMachineInstanceGuestOSInfo',
         'interfaces': 'list[V1VirtualMachineInstanceNetworkInterface]',
         'launcher_container_image_version': 'str',
@@ -50,6 +51,7 @@ class V1VirtualMachineInstanceStatus(object):
         'active_pods': 'activePods',
         'conditions': 'conditions',
         'evacuation_node_name': 'evacuationNodeName',
+        'fs_freeze_status': 'fsFreezeStatus',
         'guest_os_info': 'guestOSInfo',
         'interfaces': 'interfaces',
         'launcher_container_image_version': 'launcherContainerImageVersion',
@@ -62,7 +64,7 @@ class V1VirtualMachineInstanceStatus(object):
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, node_name=None, phase=None, qos_class=None, reason=None, volume_status=None):
+    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, node_name=None, phase=None, qos_class=None, reason=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -70,6 +72,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._active_pods = None
         self._conditions = None
         self._evacuation_node_name = None
+        self._fs_freeze_status = None
         self._guest_os_info = None
         self._interfaces = None
         self._launcher_container_image_version = None
@@ -87,6 +90,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.conditions = conditions
         if evacuation_node_name is not None:
           self.evacuation_node_name = evacuation_node_name
+        if fs_freeze_status is not None:
+          self.fs_freeze_status = fs_freeze_status
         if guest_os_info is not None:
           self.guest_os_info = guest_os_info
         if interfaces is not None:
@@ -176,6 +181,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._evacuation_node_name = evacuation_node_name
+
+    @property
+    def fs_freeze_status(self):
+        """
+        Gets the fs_freeze_status of this V1VirtualMachineInstanceStatus.
+        FSFreezeStatus is the state of the fs of the guest it can be either frozen or thawed
+
+        :return: The fs_freeze_status of this V1VirtualMachineInstanceStatus.
+        :rtype: str
+        """
+        return self._fs_freeze_status
+
+    @fs_freeze_status.setter
+    def fs_freeze_status(self, fs_freeze_status):
+        """
+        Sets the fs_freeze_status of this V1VirtualMachineInstanceStatus.
+        FSFreezeStatus is the state of the fs of the guest it can be either frozen or thawed
+
+        :param fs_freeze_status: The fs_freeze_status of this V1VirtualMachineInstanceStatus.
+        :type: str
+        """
+
+        self._fs_freeze_status = fs_freeze_status
 
     @property
     def guest_os_info(self):

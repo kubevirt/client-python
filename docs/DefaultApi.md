@@ -4879,7 +4879,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_stop**
-> str v1_stop(name, namespace)
+> str v1_stop(name, namespace, body=body)
 
 
 
@@ -4897,9 +4897,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1StopOptions() # V1StopOptions |  (optional)
 
 try: 
-    api_response = api_instance.v1_stop(name, namespace)
+    api_response = api_instance.v1_stop(name, namespace, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1_stop: %s\n" % e)
@@ -4911,6 +4912,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1StopOptions**](V1StopOptions.md)|  | [optional] 
 
 ### Return type
 
@@ -5580,7 +5582,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1alpha3_stop**
-> str v1alpha3_stop(name, namespace)
+> str v1alpha3_stop(name, namespace, body=body)
 
 
 
@@ -5598,9 +5600,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1StopOptions() # V1StopOptions |  (optional)
 
 try: 
-    api_response = api_instance.v1alpha3_stop(name, namespace)
+    api_response = api_instance.v1alpha3_stop(name, namespace, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1alpha3_stop: %s\n" % e)
@@ -5612,6 +5615,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1StopOptions**](V1StopOptions.md)|  | [optional] 
 
 ### Return type
 

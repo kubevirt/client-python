@@ -10377,6 +10377,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1StopOptions body:
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -10403,12 +10404,13 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1StopOptions body:
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10447,6 +10449,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # Authentication setting
         auth_settings = []
 
@@ -11889,6 +11893,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1StopOptions body:
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -11915,12 +11920,13 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1StopOptions body:
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11959,6 +11965,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # Authentication setting
         auth_settings = []
 

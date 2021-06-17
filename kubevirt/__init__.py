@@ -173,6 +173,7 @@ from .models.v1_ssh_public_key_access_credential_propagation_method import V1SSH
 from .models.v1_ssh_public_key_access_credential_source import V1SSHPublicKeyAccessCredentialSource
 from .models.v1_secret_volume_source import V1SecretVolumeSource
 from .models.v1_service_account_volume_source import V1ServiceAccountVolumeSource
+from .models.v1_stop_options import V1StopOptions
 from .models.v1_sy_nic_timer import V1SyNICTimer
 from .models.v1_sysprep_source import V1SysprepSource
 from .models.v1_timer import V1Timer

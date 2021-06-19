@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **migration_state** | [**V1VirtualMachineInstanceMigrationState**](V1VirtualMachineInstanceMigrationState.md) | Represents the status of a live migration | [optional] 
 **node_name** | **str** | NodeName is the name where the VirtualMachineInstance is currently running. | [optional] 
 **phase** | **str** | Phase is the status of the VirtualMachineInstance in kubernetes world. It is not the VirtualMachineInstance status, but partially correlates to it. | [optional] 
+**phase_transition_timestamps** | [**list[V1VirtualMachineInstancePhaseTransitionTimestamp]**](V1VirtualMachineInstancePhaseTransitionTimestamp.md) | PhaseTransitionTimestamp is the timestamp of when the last phase change occurred | [optional] 
 **qos_class** | **str** | The Quality of Service (QOS) classification assigned to the virtual machine instance based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md | [optional] 
 **reason** | **str** | A brief CamelCase message indicating details about why the VMI is in this state. e.g. &#39;NodeUnresponsive&#39; | [optional] 
 **volume_status** | [**list[V1VolumeStatus]**](V1VolumeStatus.md) | VolumeStatus contains the statuses of all the volumes | [optional] 

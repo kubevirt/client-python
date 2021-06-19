@@ -42,6 +42,7 @@ class V1VirtualMachineInstanceStatus(object):
         'migration_state': 'V1VirtualMachineInstanceMigrationState',
         'node_name': 'str',
         'phase': 'str',
+        'phase_transition_timestamps': 'list[V1VirtualMachineInstancePhaseTransitionTimestamp]',
         'qos_class': 'str',
         'reason': 'str',
         'volume_status': 'list[V1VolumeStatus]'
@@ -59,12 +60,13 @@ class V1VirtualMachineInstanceStatus(object):
         'migration_state': 'migrationState',
         'node_name': 'nodeName',
         'phase': 'phase',
+        'phase_transition_timestamps': 'phaseTransitionTimestamps',
         'qos_class': 'qosClass',
         'reason': 'reason',
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, node_name=None, phase=None, qos_class=None, reason=None, volume_status=None):
+    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -80,6 +82,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._migration_state = None
         self._node_name = None
         self._phase = None
+        self._phase_transition_timestamps = None
         self._qos_class = None
         self._reason = None
         self._volume_status = None
@@ -106,6 +109,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.node_name = node_name
         if phase is not None:
           self.phase = phase
+        if phase_transition_timestamps is not None:
+          self.phase_transition_timestamps = phase_transition_timestamps
         if qos_class is not None:
           self.qos_class = qos_class
         if reason is not None:
@@ -365,6 +370,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._phase = phase
+
+    @property
+    def phase_transition_timestamps(self):
+        """
+        Gets the phase_transition_timestamps of this V1VirtualMachineInstanceStatus.
+        PhaseTransitionTimestamp is the timestamp of when the last phase change occurred
+
+        :return: The phase_transition_timestamps of this V1VirtualMachineInstanceStatus.
+        :rtype: list[V1VirtualMachineInstancePhaseTransitionTimestamp]
+        """
+        return self._phase_transition_timestamps
+
+    @phase_transition_timestamps.setter
+    def phase_transition_timestamps(self, phase_transition_timestamps):
+        """
+        Sets the phase_transition_timestamps of this V1VirtualMachineInstanceStatus.
+        PhaseTransitionTimestamp is the timestamp of when the last phase change occurred
+
+        :param phase_transition_timestamps: The phase_transition_timestamps of this V1VirtualMachineInstanceStatus.
+        :type: list[V1VirtualMachineInstancePhaseTransitionTimestamp]
+        """
+
+        self._phase_transition_timestamps = phase_transition_timestamps
 
     @property
     def qos_class(self):

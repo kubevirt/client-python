@@ -177,6 +177,7 @@ from .models.v1_stop_options import V1StopOptions
 from .models.v1_sy_nic_timer import V1SyNICTimer
 from .models.v1_sysprep_source import V1SysprepSource
 from .models.v1_timer import V1Timer
+from .models.v1_topology_hints import V1TopologyHints
 from .models.v1_user_password_access_credential import V1UserPasswordAccessCredential
 from .models.v1_user_password_access_credential_propagation_method import V1UserPasswordAccessCredentialPropagationMethod
 from .models.v1_user_password_access_credential_source import V1UserPasswordAccessCredentialSource

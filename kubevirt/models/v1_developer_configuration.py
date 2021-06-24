@@ -35,6 +35,7 @@ class V1DeveloperConfiguration(object):
         'feature_gates': 'list[str]',
         'log_verbosity': 'V1LogVerbosity',
         'memory_overcommit': 'int',
+        'minimum_cluster_tsc_frequency': 'int',
         'minimum_reserve_pvc_bytes': 'int',
         'node_selectors': 'dict(str, str)',
         'pvc_tolerate_less_space_up_to_percent': 'int',
@@ -46,13 +47,14 @@ class V1DeveloperConfiguration(object):
         'feature_gates': 'featureGates',
         'log_verbosity': 'logVerbosity',
         'memory_overcommit': 'memoryOvercommit',
+        'minimum_cluster_tsc_frequency': 'minimumClusterTSCFrequency',
         'minimum_reserve_pvc_bytes': 'minimumReservePVCBytes',
         'node_selectors': 'nodeSelectors',
         'pvc_tolerate_less_space_up_to_percent': 'pvcTolerateLessSpaceUpToPercent',
         'use_emulation': 'useEmulation'
     }
 
-    def __init__(self, cpu_allocation_ratio=None, feature_gates=None, log_verbosity=None, memory_overcommit=None, minimum_reserve_pvc_bytes=None, node_selectors=None, pvc_tolerate_less_space_up_to_percent=None, use_emulation=None):
+    def __init__(self, cpu_allocation_ratio=None, feature_gates=None, log_verbosity=None, memory_overcommit=None, minimum_cluster_tsc_frequency=None, minimum_reserve_pvc_bytes=None, node_selectors=None, pvc_tolerate_less_space_up_to_percent=None, use_emulation=None):
         """
         V1DeveloperConfiguration - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class V1DeveloperConfiguration(object):
         self._feature_gates = None
         self._log_verbosity = None
         self._memory_overcommit = None
+        self._minimum_cluster_tsc_frequency = None
         self._minimum_reserve_pvc_bytes = None
         self._node_selectors = None
         self._pvc_tolerate_less_space_up_to_percent = None
@@ -74,6 +77,8 @@ class V1DeveloperConfiguration(object):
           self.log_verbosity = log_verbosity
         if memory_overcommit is not None:
           self.memory_overcommit = memory_overcommit
+        if minimum_cluster_tsc_frequency is not None:
+          self.minimum_cluster_tsc_frequency = minimum_cluster_tsc_frequency
         if minimum_reserve_pvc_bytes is not None:
           self.minimum_reserve_pvc_bytes = minimum_reserve_pvc_bytes
         if node_selectors is not None:
@@ -166,6 +171,29 @@ class V1DeveloperConfiguration(object):
         """
 
         self._memory_overcommit = memory_overcommit
+
+    @property
+    def minimum_cluster_tsc_frequency(self):
+        """
+        Gets the minimum_cluster_tsc_frequency of this V1DeveloperConfiguration.
+        Allow overriding the automatically determined minimum TSC frequency of the cluster and fixate the minimum to this frequency.
+
+        :return: The minimum_cluster_tsc_frequency of this V1DeveloperConfiguration.
+        :rtype: int
+        """
+        return self._minimum_cluster_tsc_frequency
+
+    @minimum_cluster_tsc_frequency.setter
+    def minimum_cluster_tsc_frequency(self, minimum_cluster_tsc_frequency):
+        """
+        Sets the minimum_cluster_tsc_frequency of this V1DeveloperConfiguration.
+        Allow overriding the automatically determined minimum TSC frequency of the cluster and fixate the minimum to this frequency.
+
+        :param minimum_cluster_tsc_frequency: The minimum_cluster_tsc_frequency of this V1DeveloperConfiguration.
+        :type: int
+        """
+
+        self._minimum_cluster_tsc_frequency = minimum_cluster_tsc_frequency
 
     @property
     def minimum_reserve_pvc_bytes(self):

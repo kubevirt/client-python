@@ -151,6 +151,8 @@ from .v1_mediated_host_device import V1MediatedHostDevice
 from .v1_memory import V1Memory
 from .v1_migration_configuration import V1MigrationConfiguration
 from .v1_multus_network import V1MultusNetwork
+from .v1_numa import V1NUMA
+from .v1_numa_guest_mapping_passthrough import V1NUMAGuestMappingPassthrough
 from .v1_network import V1Network
 from .v1_network_configuration import V1NetworkConfiguration
 from .v1_node_placement import V1NodePlacement

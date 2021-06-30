@@ -36,6 +36,7 @@ class V1CPU(object):
         'features': 'list[V1CPUFeature]',
         'isolate_emulator_thread': 'bool',
         'model': 'str',
+        'numa': 'V1NUMA',
         'sockets': 'int',
         'threads': 'int'
     }
@@ -46,11 +47,12 @@ class V1CPU(object):
         'features': 'features',
         'isolate_emulator_thread': 'isolateEmulatorThread',
         'model': 'model',
+        'numa': 'numa',
         'sockets': 'sockets',
         'threads': 'threads'
     }
 
-    def __init__(self, cores=None, dedicated_cpu_placement=None, features=None, isolate_emulator_thread=None, model=None, sockets=None, threads=None):
+    def __init__(self, cores=None, dedicated_cpu_placement=None, features=None, isolate_emulator_thread=None, model=None, numa=None, sockets=None, threads=None):
         """
         V1CPU - a model defined in Swagger
         """
@@ -60,6 +62,7 @@ class V1CPU(object):
         self._features = None
         self._isolate_emulator_thread = None
         self._model = None
+        self._numa = None
         self._sockets = None
         self._threads = None
 
@@ -73,6 +76,8 @@ class V1CPU(object):
           self.isolate_emulator_thread = isolate_emulator_thread
         if model is not None:
           self.model = model
+        if numa is not None:
+          self.numa = numa
         if sockets is not None:
           self.sockets = sockets
         if threads is not None:
@@ -192,6 +197,29 @@ class V1CPU(object):
         """
 
         self._model = model
+
+    @property
+    def numa(self):
+        """
+        Gets the numa of this V1CPU.
+        NUMA allows specifying settings for the guest NUMA topology
+
+        :return: The numa of this V1CPU.
+        :rtype: V1NUMA
+        """
+        return self._numa
+
+    @numa.setter
+    def numa(self, numa):
+        """
+        Sets the numa of this V1CPU.
+        NUMA allows specifying settings for the guest NUMA topology
+
+        :param numa: The numa of this V1CPU.
+        :type: V1NUMA
+        """
+
+        self._numa = numa
 
     @property
     def sockets(self):

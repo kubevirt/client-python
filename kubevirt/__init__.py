@@ -224,21 +224,9 @@ from .models.v1_volume_snapshot_status import V1VolumeSnapshotStatus
 from .models.v1_volume_status import V1VolumeStatus
 from .models.v1_watchdog import V1Watchdog
 from .models.v1alpha1_condition import V1alpha1Condition
-from .models.v1alpha1_data_volume_blank_image import V1alpha1DataVolumeBlankImage
-from .models.v1alpha1_data_volume_checkpoint import V1alpha1DataVolumeCheckpoint
-from .models.v1alpha1_data_volume_source import V1alpha1DataVolumeSource
-from .models.v1alpha1_data_volume_source_http import V1alpha1DataVolumeSourceHTTP
-from .models.v1alpha1_data_volume_source_image_io import V1alpha1DataVolumeSourceImageIO
-from .models.v1alpha1_data_volume_source_pvc import V1alpha1DataVolumeSourcePVC
-from .models.v1alpha1_data_volume_source_registry import V1alpha1DataVolumeSourceRegistry
-from .models.v1alpha1_data_volume_source_s3 import V1alpha1DataVolumeSourceS3
-from .models.v1alpha1_data_volume_source_upload import V1alpha1DataVolumeSourceUpload
-from .models.v1alpha1_data_volume_source_vddk import V1alpha1DataVolumeSourceVDDK
-from .models.v1alpha1_data_volume_spec import V1alpha1DataVolumeSpec
 from .models.v1alpha1_error import V1alpha1Error
 from .models.v1alpha1_persistent_volume_claim import V1alpha1PersistentVolumeClaim
 from .models.v1alpha1_source_spec import V1alpha1SourceSpec
-from .models.v1alpha1_storage_spec import V1alpha1StorageSpec
 from .models.v1alpha1_virtual_machine_restore import V1alpha1VirtualMachineRestore
 from .models.v1alpha1_virtual_machine_restore_list import V1alpha1VirtualMachineRestoreList
 from .models.v1alpha1_virtual_machine_restore_spec import V1alpha1VirtualMachineRestoreSpec
@@ -254,6 +242,18 @@ from .models.v1alpha1_virtual_machine_snapshot_status import V1alpha1VirtualMach
 from .models.v1alpha1_volume_backup import V1alpha1VolumeBackup
 from .models.v1alpha1_volume_restore import V1alpha1VolumeRestore
 from .models.v1alpha1_volume_snapshot_status import V1alpha1VolumeSnapshotStatus
+from .models.v1beta1_data_volume_blank_image import V1beta1DataVolumeBlankImage
+from .models.v1beta1_data_volume_checkpoint import V1beta1DataVolumeCheckpoint
+from .models.v1beta1_data_volume_source import V1beta1DataVolumeSource
+from .models.v1beta1_data_volume_source_http import V1beta1DataVolumeSourceHTTP
+from .models.v1beta1_data_volume_source_image_io import V1beta1DataVolumeSourceImageIO
+from .models.v1beta1_data_volume_source_pvc import V1beta1DataVolumeSourcePVC
+from .models.v1beta1_data_volume_source_registry import V1beta1DataVolumeSourceRegistry
+from .models.v1beta1_data_volume_source_s3 import V1beta1DataVolumeSourceS3
+from .models.v1beta1_data_volume_source_upload import V1beta1DataVolumeSourceUpload
+from .models.v1beta1_data_volume_source_vddk import V1beta1DataVolumeSourceVDDK
+from .models.v1beta1_data_volume_spec import V1beta1DataVolumeSpec
+from .models.v1beta1_storage_spec import V1beta1StorageSpec
 
 # import apis into sdk package
 from .apis.default_api import DefaultApi

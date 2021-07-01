@@ -34,7 +34,7 @@ class V1DataVolumeTemplateSpec(object):
         'api_version': 'str',
         'kind': 'str',
         'metadata': 'K8sIoApimachineryPkgApisMetaV1ObjectMeta',
-        'spec': 'V1alpha1DataVolumeSpec',
+        'spec': 'V1beta1DataVolumeSpec',
         'status': 'V1DataVolumeTemplateDummyStatus'
     }
 
@@ -141,7 +141,7 @@ class V1DataVolumeTemplateSpec(object):
         DataVolumeSpec contains the DataVolume specification.
 
         :return: The spec of this V1DataVolumeTemplateSpec.
-        :rtype: V1alpha1DataVolumeSpec
+        :rtype: V1beta1DataVolumeSpec
         """
         return self._spec
 
@@ -152,7 +152,7 @@ class V1DataVolumeTemplateSpec(object):
         DataVolumeSpec contains the DataVolume specification.
 
         :param spec: The spec of this V1DataVolumeTemplateSpec.
-        :type: V1alpha1DataVolumeSpec
+        :type: V1beta1DataVolumeSpec
         """
         if spec is None:
             raise ValueError("Invalid value for `spec`, must not be `None`")

@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cpu_model** | **str** |  | [optional] 
 **cpu_request** | [**K8sIoApimachineryPkgApiResourceQuantity**](K8sIoApimachineryPkgApiResourceQuantity.md) |  | [optional] 
+**default_runtime_class** | **str** |  | [optional] 
 **developer_configuration** | [**V1DeveloperConfiguration**](V1DeveloperConfiguration.md) |  | [optional] 
 **emulated_machines** | **list[str]** |  | [optional] 
 **image_pull_policy** | **str** |  | [optional] 

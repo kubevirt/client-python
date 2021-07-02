@@ -33,6 +33,7 @@ class V1KubeVirtConfiguration(object):
     swagger_types = {
         'cpu_model': 'str',
         'cpu_request': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'default_runtime_class': 'str',
         'developer_configuration': 'V1DeveloperConfiguration',
         'emulated_machines': 'list[str]',
         'image_pull_policy': 'str',
@@ -52,6 +53,7 @@ class V1KubeVirtConfiguration(object):
     attribute_map = {
         'cpu_model': 'cpuModel',
         'cpu_request': 'cpuRequest',
+        'default_runtime_class': 'defaultRuntimeClass',
         'developer_configuration': 'developerConfiguration',
         'emulated_machines': 'emulatedMachines',
         'image_pull_policy': 'imagePullPolicy',
@@ -68,13 +70,14 @@ class V1KubeVirtConfiguration(object):
         'supported_guest_agent_versions': 'supportedGuestAgentVersions'
     }
 
-    def __init__(self, cpu_model=None, cpu_request=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None):
+    def __init__(self, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
 
         self._cpu_model = None
         self._cpu_request = None
+        self._default_runtime_class = None
         self._developer_configuration = None
         self._emulated_machines = None
         self._image_pull_policy = None
@@ -94,6 +97,8 @@ class V1KubeVirtConfiguration(object):
           self.cpu_model = cpu_model
         if cpu_request is not None:
           self.cpu_request = cpu_request
+        if default_runtime_class is not None:
+          self.default_runtime_class = default_runtime_class
         if developer_configuration is not None:
           self.developer_configuration = developer_configuration
         if emulated_machines is not None:
@@ -164,6 +169,27 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._cpu_request = cpu_request
+
+    @property
+    def default_runtime_class(self):
+        """
+        Gets the default_runtime_class of this V1KubeVirtConfiguration.
+
+        :return: The default_runtime_class of this V1KubeVirtConfiguration.
+        :rtype: str
+        """
+        return self._default_runtime_class
+
+    @default_runtime_class.setter
+    def default_runtime_class(self, default_runtime_class):
+        """
+        Sets the default_runtime_class of this V1KubeVirtConfiguration.
+
+        :param default_runtime_class: The default_runtime_class of this V1KubeVirtConfiguration.
+        :type: str
+        """
+
+        self._default_runtime_class = default_runtime_class
 
     @property
     def developer_configuration(self):

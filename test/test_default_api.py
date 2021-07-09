@@ -695,6 +695,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_guestfs(self):
+        """
+        Test case for v1_guestfs
+
+        
+        """
+        pass
+
     def test_v1_guestosinfo(self):
         """
         Test case for v1_guestosinfo
@@ -810,6 +818,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3_get_sub_api_group(self):
         """
         Test case for v1alpha3_get_sub_api_group
+
+        
+        """
+        pass
+
+    def test_v1alpha3_guestfs(self):
+        """
+        Test case for v1alpha3_guestfs
 
         
         """

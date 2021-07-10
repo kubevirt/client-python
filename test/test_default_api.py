@@ -935,6 +935,22 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1alpha3vm_port_forward(self):
+        """
+        Test case for v1alpha3vm_port_forward
+
+        
+        """
+        pass
+
+    def test_v1alpha3vm_port_forward_with_protocol(self):
+        """
+        Test case for v1alpha3vm_port_forward_with_protocol
+
+        
+        """
+        pass
+
     def test_v1alpha3vm_removevolume(self):
         """
         Test case for v1alpha3vm_removevolume
@@ -946,6 +962,22 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3vmi_addvolume(self):
         """
         Test case for v1alpha3vmi_addvolume
+
+        
+        """
+        pass
+
+    def test_v1alpha3vmi_port_forward(self):
+        """
+        Test case for v1alpha3vmi_port_forward
+
+        
+        """
+        pass
+
+    def test_v1alpha3vmi_port_forward_with_protocol(self):
+        """
+        Test case for v1alpha3vmi_port_forward_with_protocol
 
         
         """
@@ -975,6 +1007,22 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1vm_port_forward(self):
+        """
+        Test case for v1vm_port_forward
+
+        
+        """
+        pass
+
+    def test_v1vm_port_forward_with_protocol(self):
+        """
+        Test case for v1vm_port_forward_with_protocol
+
+        
+        """
+        pass
+
     def test_v1vm_removevolume(self):
         """
         Test case for v1vm_removevolume
@@ -986,6 +1034,22 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1vmi_addvolume(self):
         """
         Test case for v1vmi_addvolume
+
+        
+        """
+        pass
+
+    def test_v1vmi_port_forward(self):
+        """
+        Test case for v1vmi_port_forward
+
+        
+        """
+        pass
+
+    def test_v1vmi_port_forward_with_protocol(self):
+        """
+        Test case for v1vmi_port_forward_with_protocol
 
         
         """

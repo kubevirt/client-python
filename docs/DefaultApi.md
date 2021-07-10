@@ -117,13 +117,21 @@ Method | HTTP request | Description
 [**v1alpha3_vnc**](DefaultApi.md#v1alpha3_vnc) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/vnc | 
 [**v1alpha3get_api_sub_resources**](DefaultApi.md#v1alpha3get_api_sub_resources) | **GET** /apis/subresources.kubevirt.io/v1alpha3/ | 
 [**v1alpha3vm_addvolume**](DefaultApi.md#v1alpha3vm_addvolume) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/addvolume | 
+[**v1alpha3vm_port_forward**](DefaultApi.md#v1alpha3vm_port_forward) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+} | 
+[**v1alpha3vm_port_forward_with_protocol**](DefaultApi.md#v1alpha3vm_port_forward_with_protocol) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}/{protocol:tcp|udp} | 
 [**v1alpha3vm_removevolume**](DefaultApi.md#v1alpha3vm_removevolume) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/removevolume | 
 [**v1alpha3vmi_addvolume**](DefaultApi.md#v1alpha3vmi_addvolume) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/addvolume | 
+[**v1alpha3vmi_port_forward**](DefaultApi.md#v1alpha3vmi_port_forward) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+} | 
+[**v1alpha3vmi_port_forward_with_protocol**](DefaultApi.md#v1alpha3vmi_port_forward_with_protocol) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}/{protocol:tcp|udp} | 
 [**v1alpha3vmi_removevolume**](DefaultApi.md#v1alpha3vmi_removevolume) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/removevolume | 
 [**v1get_api_sub_resources**](DefaultApi.md#v1get_api_sub_resources) | **GET** /apis/subresources.kubevirt.io/v1/ | 
 [**v1vm_addvolume**](DefaultApi.md#v1vm_addvolume) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/addvolume | 
+[**v1vm_port_forward**](DefaultApi.md#v1vm_port_forward) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+} | 
+[**v1vm_port_forward_with_protocol**](DefaultApi.md#v1vm_port_forward_with_protocol) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}/{protocol:tcp|udp} | 
 [**v1vm_removevolume**](DefaultApi.md#v1vm_removevolume) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/removevolume | 
 [**v1vmi_addvolume**](DefaultApi.md#v1vmi_addvolume) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/addvolume | 
+[**v1vmi_port_forward**](DefaultApi.md#v1vmi_port_forward) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+} | 
+[**v1vmi_port_forward_with_protocol**](DefaultApi.md#v1vmi_port_forward_with_protocol) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}/{protocol:tcp|udp} | 
 [**v1vmi_removevolume**](DefaultApi.md#v1vmi_removevolume) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/removevolume | 
 [**watch_kube_virt_list_for_all_namespaces**](DefaultApi.md#watch_kube_virt_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/watch/kubevirt | 
 [**watch_namespaced_kube_virt**](DefaultApi.md#watch_namespaced_kube_virt) | **GET** /apis/kubevirt.io/v1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/kubevirt | 
@@ -6038,6 +6046,108 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1alpha3vm_port_forward**
+> v1alpha3vm_port_forward(name, namespace, port)
+
+
+
+Open a websocket connection forwarding traffic to the running VMI for the specified VirtualMachine and port.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+port = 'port_example' # str | The target port for portforward on the VirtualMachineInstance.
+
+try: 
+    api_instance.v1alpha3vm_port_forward(name, namespace, port)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1alpha3vm_port_forward: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **port** | **str**| The target port for portforward on the VirtualMachineInstance. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1alpha3vm_port_forward_with_protocol**
+> v1alpha3vm_port_forward_with_protocol(name, namespace, port, protocol)
+
+
+
+Open a websocket connection forwarding traffic of the specified protocol (either tcp or udp) to the specified VirtualMachine and port.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+port = 'port_example' # str | The target port for portforward on the VirtualMachineInstance.
+protocol = 'protocol_example' # str | The protocol for portforward on the VirtualMachineInstance.
+
+try: 
+    api_instance.v1alpha3vm_port_forward_with_protocol(name, namespace, port, protocol)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1alpha3vm_port_forward_with_protocol: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **port** | **str**| The target port for portforward on the VirtualMachineInstance. | 
+ **protocol** | **str**| The protocol for portforward on the VirtualMachineInstance. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1alpha3vm_removevolume**
 > str v1alpha3vm_removevolume(name, namespace, body)
 
@@ -6128,6 +6238,108 @@ Name | Type | Description  | Notes
 ### Return type
 
 **str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1alpha3vmi_port_forward**
+> v1alpha3vmi_port_forward(name, namespace, port)
+
+
+
+Open a websocket connection forwarding traffic to the specified VirtualMachineInstance and port.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+port = 'port_example' # str | The target port for portforward on the VirtualMachineInstance.
+
+try: 
+    api_instance.v1alpha3vmi_port_forward(name, namespace, port)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1alpha3vmi_port_forward: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **port** | **str**| The target port for portforward on the VirtualMachineInstance. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1alpha3vmi_port_forward_with_protocol**
+> v1alpha3vmi_port_forward_with_protocol(name, namespace, port, protocol)
+
+
+
+Open a websocket connection forwarding traffic of the specified protocol (either tcp or udp) to the specified VirtualMachineInstance and port.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+port = 'port_example' # str | The target port for portforward on the VirtualMachineInstance.
+protocol = 'protocol_example' # str | The protocol for portforward on the VirtualMachineInstance.
+
+try: 
+    api_instance.v1alpha3vmi_port_forward_with_protocol(name, namespace, port, protocol)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1alpha3vmi_port_forward_with_protocol: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **port** | **str**| The target port for portforward on the VirtualMachineInstance. | 
+ **protocol** | **str**| The protocol for portforward on the VirtualMachineInstance. | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
@@ -6285,6 +6497,108 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1vm_port_forward**
+> v1vm_port_forward(name, namespace, port)
+
+
+
+Open a websocket connection forwarding traffic to the running VMI for the specified VirtualMachine and port.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+port = 'port_example' # str | The target port for portforward on the VirtualMachineInstance.
+
+try: 
+    api_instance.v1vm_port_forward(name, namespace, port)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1vm_port_forward: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **port** | **str**| The target port for portforward on the VirtualMachineInstance. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1vm_port_forward_with_protocol**
+> v1vm_port_forward_with_protocol(name, namespace, port, protocol)
+
+
+
+Open a websocket connection forwarding traffic of the specified protocol (either tcp or udp) to the specified VirtualMachine and port.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+port = 'port_example' # str | The target port for portforward on the VirtualMachineInstance.
+protocol = 'protocol_example' # str | The protocol for portforward on the VirtualMachineInstance.
+
+try: 
+    api_instance.v1vm_port_forward_with_protocol(name, namespace, port, protocol)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1vm_port_forward_with_protocol: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **port** | **str**| The target port for portforward on the VirtualMachineInstance. | 
+ **protocol** | **str**| The protocol for portforward on the VirtualMachineInstance. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1vm_removevolume**
 > str v1vm_removevolume(name, namespace, body)
 
@@ -6375,6 +6689,108 @@ Name | Type | Description  | Notes
 ### Return type
 
 **str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1vmi_port_forward**
+> v1vmi_port_forward(name, namespace, port)
+
+
+
+Open a websocket connection forwarding traffic to the specified VirtualMachineInstance and port.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+port = 'port_example' # str | The target port for portforward on the VirtualMachineInstance.
+
+try: 
+    api_instance.v1vmi_port_forward(name, namespace, port)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1vmi_port_forward: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **port** | **str**| The target port for portforward on the VirtualMachineInstance. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1vmi_port_forward_with_protocol**
+> v1vmi_port_forward_with_protocol(name, namespace, port, protocol)
+
+
+
+Open a websocket connection forwarding traffic of the specified protocol (either tcp or udp) to the specified VirtualMachineInstance and port.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+port = 'port_example' # str | The target port for portforward on the VirtualMachineInstance.
+protocol = 'protocol_example' # str | The protocol for portforward on the VirtualMachineInstance.
+
+try: 
+    api_instance.v1vmi_port_forward_with_protocol(name, namespace, port, protocol)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1vmi_port_forward_with_protocol: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **port** | **str**| The target port for portforward on the VirtualMachineInstance. | 
+ **protocol** | **str**| The protocol for portforward on the VirtualMachineInstance. | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

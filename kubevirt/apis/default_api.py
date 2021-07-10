@@ -12862,6 +12862,233 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def v1alpha3vm_port_forward(self, name, namespace, port, **kwargs):
+        """
+        Open a websocket connection forwarding traffic to the running VMI for the specified VirtualMachine and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1alpha3vm_port_forward(name, namespace, port, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.v1alpha3vm_port_forward_with_http_info(name, namespace, port, **kwargs)
+        else:
+            (data) = self.v1alpha3vm_port_forward_with_http_info(name, namespace, port, **kwargs)
+            return data
+
+    def v1alpha3vm_port_forward_with_http_info(self, name, namespace, port, **kwargs):
+        """
+        Open a websocket connection forwarding traffic to the running VMI for the specified VirtualMachine and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1alpha3vm_port_forward_with_http_info(name, namespace, port, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'namespace', 'port']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1alpha3vm_port_forward" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `v1alpha3vm_port_forward`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `v1alpha3vm_port_forward`")
+        # verify the required parameter 'port' is set
+        if ('port' not in params) or (params['port'] is None):
+            raise ValueError("Missing the required parameter `port` when calling `v1alpha3vm_port_forward`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'port' in params:
+            path_params['port'] = params['port']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def v1alpha3vm_port_forward_with_protocol(self, name, namespace, port, protocol, **kwargs):
+        """
+        Open a websocket connection forwarding traffic of the specified protocol (either tcp or udp) to the specified VirtualMachine and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1alpha3vm_port_forward_with_protocol(name, namespace, port, protocol, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :param str protocol: The protocol for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.v1alpha3vm_port_forward_with_protocol_with_http_info(name, namespace, port, protocol, **kwargs)
+        else:
+            (data) = self.v1alpha3vm_port_forward_with_protocol_with_http_info(name, namespace, port, protocol, **kwargs)
+            return data
+
+    def v1alpha3vm_port_forward_with_protocol_with_http_info(self, name, namespace, port, protocol, **kwargs):
+        """
+        Open a websocket connection forwarding traffic of the specified protocol (either tcp or udp) to the specified VirtualMachine and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1alpha3vm_port_forward_with_protocol_with_http_info(name, namespace, port, protocol, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :param str protocol: The protocol for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'namespace', 'port', 'protocol']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1alpha3vm_port_forward_with_protocol" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `v1alpha3vm_port_forward_with_protocol`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `v1alpha3vm_port_forward_with_protocol`")
+        # verify the required parameter 'port' is set
+        if ('port' not in params) or (params['port'] is None):
+            raise ValueError("Missing the required parameter `port` when calling `v1alpha3vm_port_forward_with_protocol`")
+        # verify the required parameter 'protocol' is set
+        if ('protocol' not in params) or (params['protocol'] is None):
+            raise ValueError("Missing the required parameter `protocol` when calling `v1alpha3vm_port_forward_with_protocol`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'port' in params:
+            path_params['port'] = params['port']
+        if 'protocol' in params:
+            path_params['protocol'] = params['protocol']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}/{protocol:tcp|udp}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def v1alpha3vm_removevolume(self, name, namespace, body, **kwargs):
         """
         Removes a volume and disk from a running Virtual Machine.
@@ -13075,6 +13302,233 @@ class DefaultApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='str',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def v1alpha3vmi_port_forward(self, name, namespace, port, **kwargs):
+        """
+        Open a websocket connection forwarding traffic to the specified VirtualMachineInstance and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1alpha3vmi_port_forward(name, namespace, port, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.v1alpha3vmi_port_forward_with_http_info(name, namespace, port, **kwargs)
+        else:
+            (data) = self.v1alpha3vmi_port_forward_with_http_info(name, namespace, port, **kwargs)
+            return data
+
+    def v1alpha3vmi_port_forward_with_http_info(self, name, namespace, port, **kwargs):
+        """
+        Open a websocket connection forwarding traffic to the specified VirtualMachineInstance and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1alpha3vmi_port_forward_with_http_info(name, namespace, port, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'namespace', 'port']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1alpha3vmi_port_forward" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `v1alpha3vmi_port_forward`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `v1alpha3vmi_port_forward`")
+        # verify the required parameter 'port' is set
+        if ('port' not in params) or (params['port'] is None):
+            raise ValueError("Missing the required parameter `port` when calling `v1alpha3vmi_port_forward`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'port' in params:
+            path_params['port'] = params['port']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def v1alpha3vmi_port_forward_with_protocol(self, name, namespace, port, protocol, **kwargs):
+        """
+        Open a websocket connection forwarding traffic of the specified protocol (either tcp or udp) to the specified VirtualMachineInstance and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1alpha3vmi_port_forward_with_protocol(name, namespace, port, protocol, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :param str protocol: The protocol for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.v1alpha3vmi_port_forward_with_protocol_with_http_info(name, namespace, port, protocol, **kwargs)
+        else:
+            (data) = self.v1alpha3vmi_port_forward_with_protocol_with_http_info(name, namespace, port, protocol, **kwargs)
+            return data
+
+    def v1alpha3vmi_port_forward_with_protocol_with_http_info(self, name, namespace, port, protocol, **kwargs):
+        """
+        Open a websocket connection forwarding traffic of the specified protocol (either tcp or udp) to the specified VirtualMachineInstance and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1alpha3vmi_port_forward_with_protocol_with_http_info(name, namespace, port, protocol, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :param str protocol: The protocol for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'namespace', 'port', 'protocol']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1alpha3vmi_port_forward_with_protocol" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `v1alpha3vmi_port_forward_with_protocol`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `v1alpha3vmi_port_forward_with_protocol`")
+        # verify the required parameter 'port' is set
+        if ('port' not in params) or (params['port'] is None):
+            raise ValueError("Missing the required parameter `port` when calling `v1alpha3vmi_port_forward_with_protocol`")
+        # verify the required parameter 'protocol' is set
+        if ('protocol' not in params) or (params['protocol'] is None):
+            raise ValueError("Missing the required parameter `protocol` when calling `v1alpha3vmi_port_forward_with_protocol`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'port' in params:
+            path_params['port'] = params['port']
+        if 'protocol' in params:
+            path_params['protocol'] = params['protocol']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}/{protocol:tcp|udp}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -13394,6 +13848,233 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def v1vm_port_forward(self, name, namespace, port, **kwargs):
+        """
+        Open a websocket connection forwarding traffic to the running VMI for the specified VirtualMachine and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1vm_port_forward(name, namespace, port, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.v1vm_port_forward_with_http_info(name, namespace, port, **kwargs)
+        else:
+            (data) = self.v1vm_port_forward_with_http_info(name, namespace, port, **kwargs)
+            return data
+
+    def v1vm_port_forward_with_http_info(self, name, namespace, port, **kwargs):
+        """
+        Open a websocket connection forwarding traffic to the running VMI for the specified VirtualMachine and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1vm_port_forward_with_http_info(name, namespace, port, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'namespace', 'port']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1vm_port_forward" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `v1vm_port_forward`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `v1vm_port_forward`")
+        # verify the required parameter 'port' is set
+        if ('port' not in params) or (params['port'] is None):
+            raise ValueError("Missing the required parameter `port` when calling `v1vm_port_forward`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'port' in params:
+            path_params['port'] = params['port']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def v1vm_port_forward_with_protocol(self, name, namespace, port, protocol, **kwargs):
+        """
+        Open a websocket connection forwarding traffic of the specified protocol (either tcp or udp) to the specified VirtualMachine and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1vm_port_forward_with_protocol(name, namespace, port, protocol, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :param str protocol: The protocol for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.v1vm_port_forward_with_protocol_with_http_info(name, namespace, port, protocol, **kwargs)
+        else:
+            (data) = self.v1vm_port_forward_with_protocol_with_http_info(name, namespace, port, protocol, **kwargs)
+            return data
+
+    def v1vm_port_forward_with_protocol_with_http_info(self, name, namespace, port, protocol, **kwargs):
+        """
+        Open a websocket connection forwarding traffic of the specified protocol (either tcp or udp) to the specified VirtualMachine and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1vm_port_forward_with_protocol_with_http_info(name, namespace, port, protocol, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :param str protocol: The protocol for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'namespace', 'port', 'protocol']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1vm_port_forward_with_protocol" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `v1vm_port_forward_with_protocol`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `v1vm_port_forward_with_protocol`")
+        # verify the required parameter 'port' is set
+        if ('port' not in params) or (params['port'] is None):
+            raise ValueError("Missing the required parameter `port` when calling `v1vm_port_forward_with_protocol`")
+        # verify the required parameter 'protocol' is set
+        if ('protocol' not in params) or (params['protocol'] is None):
+            raise ValueError("Missing the required parameter `protocol` when calling `v1vm_port_forward_with_protocol`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'port' in params:
+            path_params['port'] = params['port']
+        if 'protocol' in params:
+            path_params['protocol'] = params['protocol']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}/{protocol:tcp|udp}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def v1vm_removevolume(self, name, namespace, body, **kwargs):
         """
         Removes a volume and disk from a running Virtual Machine.
@@ -13607,6 +14288,233 @@ class DefaultApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='str',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def v1vmi_port_forward(self, name, namespace, port, **kwargs):
+        """
+        Open a websocket connection forwarding traffic to the specified VirtualMachineInstance and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1vmi_port_forward(name, namespace, port, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.v1vmi_port_forward_with_http_info(name, namespace, port, **kwargs)
+        else:
+            (data) = self.v1vmi_port_forward_with_http_info(name, namespace, port, **kwargs)
+            return data
+
+    def v1vmi_port_forward_with_http_info(self, name, namespace, port, **kwargs):
+        """
+        Open a websocket connection forwarding traffic to the specified VirtualMachineInstance and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1vmi_port_forward_with_http_info(name, namespace, port, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'namespace', 'port']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1vmi_port_forward" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `v1vmi_port_forward`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `v1vmi_port_forward`")
+        # verify the required parameter 'port' is set
+        if ('port' not in params) or (params['port'] is None):
+            raise ValueError("Missing the required parameter `port` when calling `v1vmi_port_forward`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'port' in params:
+            path_params['port'] = params['port']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def v1vmi_port_forward_with_protocol(self, name, namespace, port, protocol, **kwargs):
+        """
+        Open a websocket connection forwarding traffic of the specified protocol (either tcp or udp) to the specified VirtualMachineInstance and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1vmi_port_forward_with_protocol(name, namespace, port, protocol, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :param str protocol: The protocol for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.v1vmi_port_forward_with_protocol_with_http_info(name, namespace, port, protocol, **kwargs)
+        else:
+            (data) = self.v1vmi_port_forward_with_protocol_with_http_info(name, namespace, port, protocol, **kwargs)
+            return data
+
+    def v1vmi_port_forward_with_protocol_with_http_info(self, name, namespace, port, protocol, **kwargs):
+        """
+        Open a websocket connection forwarding traffic of the specified protocol (either tcp or udp) to the specified VirtualMachineInstance and port.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1vmi_port_forward_with_protocol_with_http_info(name, namespace, port, protocol, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param str port: The target port for portforward on the VirtualMachineInstance. (required)
+        :param str protocol: The protocol for portforward on the VirtualMachineInstance. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'namespace', 'port', 'protocol']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1vmi_port_forward_with_protocol" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `v1vmi_port_forward_with_protocol`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `v1vmi_port_forward_with_protocol`")
+        # verify the required parameter 'port' is set
+        if ('port' not in params) or (params['port'] is None):
+            raise ValueError("Missing the required parameter `port` when calling `v1vmi_port_forward_with_protocol`")
+        # verify the required parameter 'protocol' is set
+        if ('protocol' not in params) or (params['protocol'] is None):
+            raise ValueError("Missing the required parameter `protocol` when calling `v1vmi_port_forward_with_protocol`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+        if 'port' in params:
+            path_params['port'] = params['port']
+        if 'protocol' in params:
+            path_params['protocol'] = params['protocol']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}/{protocol:tcp|udp}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

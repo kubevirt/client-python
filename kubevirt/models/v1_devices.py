@@ -36,6 +36,7 @@ class V1Devices(object):
         'autoattach_pod_interface': 'bool',
         'autoattach_serial_console': 'bool',
         'block_multi_queue': 'bool',
+        'client_passthrough': 'V1ClientPassthroughDevices',
         'disable_hotplug': 'bool',
         'disks': 'list[V1Disk]',
         'filesystems': 'list[V1Filesystem]',
@@ -55,6 +56,7 @@ class V1Devices(object):
         'autoattach_pod_interface': 'autoattachPodInterface',
         'autoattach_serial_console': 'autoattachSerialConsole',
         'block_multi_queue': 'blockMultiQueue',
+        'client_passthrough': 'clientPassthrough',
         'disable_hotplug': 'disableHotplug',
         'disks': 'disks',
         'filesystems': 'filesystems',
@@ -68,7 +70,7 @@ class V1Devices(object):
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, disable_hotplug=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, use_virtio_transitional=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, use_virtio_transitional=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -78,6 +80,7 @@ class V1Devices(object):
         self._autoattach_pod_interface = None
         self._autoattach_serial_console = None
         self._block_multi_queue = None
+        self._client_passthrough = None
         self._disable_hotplug = None
         self._disks = None
         self._filesystems = None
@@ -100,6 +103,8 @@ class V1Devices(object):
           self.autoattach_serial_console = autoattach_serial_console
         if block_multi_queue is not None:
           self.block_multi_queue = block_multi_queue
+        if client_passthrough is not None:
+          self.client_passthrough = client_passthrough
         if disable_hotplug is not None:
           self.disable_hotplug = disable_hotplug
         if disks is not None:
@@ -237,6 +242,29 @@ class V1Devices(object):
         """
 
         self._block_multi_queue = block_multi_queue
+
+    @property
+    def client_passthrough(self):
+        """
+        Gets the client_passthrough of this V1Devices.
+        To configure and access client devices such as redirecting USB
+
+        :return: The client_passthrough of this V1Devices.
+        :rtype: V1ClientPassthroughDevices
+        """
+        return self._client_passthrough
+
+    @client_passthrough.setter
+    def client_passthrough(self, client_passthrough):
+        """
+        Sets the client_passthrough of this V1Devices.
+        To configure and access client devices such as redirecting USB
+
+        :param client_passthrough: The client_passthrough of this V1Devices.
+        :type: V1ClientPassthroughDevices
+        """
+
+        self._client_passthrough = client_passthrough
 
     @property
     def disable_hotplug(self):

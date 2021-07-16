@@ -76,6 +76,7 @@ from .models.v1_cpu import V1CPU
 from .models.v1_cpu_feature import V1CPUFeature
 from .models.v1_cert_config import V1CertConfig
 from .models.v1_chassis import V1Chassis
+from .models.v1_client_passthrough_devices import V1ClientPassthroughDevices
 from .models.v1_clock import V1Clock
 from .models.v1_clock_offset_utc import V1ClockOffsetUTC
 from .models.v1_cloud_init_config_drive_source import V1CloudInitConfigDriveSource

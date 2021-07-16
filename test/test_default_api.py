@@ -927,6 +927,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1alpha3usbredir(self):
+        """
+        Test case for v1alpha3usbredir
+
+        
+        """
+        pass
+
     def test_v1alpha3vm_addvolume(self):
         """
         Test case for v1alpha3vm_addvolume
@@ -994,6 +1002,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1get_api_sub_resources(self):
         """
         Test case for v1get_api_sub_resources
+
+        
+        """
+        pass
+
+    def test_v1usbredir(self):
+        """
+        Test case for v1usbredir
 
         
         """

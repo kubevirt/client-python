@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **autoattach_pod_interface** | **bool** | Whether to attach a pod network interface. Defaults to true. | [optional] 
 **autoattach_serial_console** | **bool** | Whether to attach the default serial console or not. Serial console access will not be available if set to false. Defaults to true. | [optional] 
 **block_multi_queue** | **bool** | Whether or not to enable virtio multi-queue for block devices. Defaults to false. | [optional] 
+**client_passthrough** | [**V1ClientPassthroughDevices**](V1ClientPassthroughDevices.md) | To configure and access client devices such as redirecting USB | [optional] 
 **disable_hotplug** | **bool** | DisableHotplug disabled the ability to hotplug disks. | [optional] 
 **disks** | [**list[V1Disk]**](V1Disk.md) | Disks describes disks, cdroms, floppy and luns which are connected to the vmi. | [optional] 
 **filesystems** | [**list[V1Filesystem]**](V1Filesystem.md) | Filesystems describes filesystem which is connected to the vmi. | [optional] 

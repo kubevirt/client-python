@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cpu_allocation_ratio** | **int** |  | [optional] 
+**disk_verification** | [**V1DiskVerification**](V1DiskVerification.md) |  | [optional] 
 **feature_gates** | **list[str]** |  | [optional] 
 **log_verbosity** | [**V1LogVerbosity**](V1LogVerbosity.md) |  | [optional] 
 **memory_overcommit** | **int** |  | [optional] 

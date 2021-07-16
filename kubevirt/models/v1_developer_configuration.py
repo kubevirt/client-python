@@ -32,6 +32,7 @@ class V1DeveloperConfiguration(object):
     """
     swagger_types = {
         'cpu_allocation_ratio': 'int',
+        'disk_verification': 'V1DiskVerification',
         'feature_gates': 'list[str]',
         'log_verbosity': 'V1LogVerbosity',
         'memory_overcommit': 'int',
@@ -44,6 +45,7 @@ class V1DeveloperConfiguration(object):
 
     attribute_map = {
         'cpu_allocation_ratio': 'cpuAllocationRatio',
+        'disk_verification': 'diskVerification',
         'feature_gates': 'featureGates',
         'log_verbosity': 'logVerbosity',
         'memory_overcommit': 'memoryOvercommit',
@@ -54,12 +56,13 @@ class V1DeveloperConfiguration(object):
         'use_emulation': 'useEmulation'
     }
 
-    def __init__(self, cpu_allocation_ratio=None, feature_gates=None, log_verbosity=None, memory_overcommit=None, minimum_cluster_tsc_frequency=None, minimum_reserve_pvc_bytes=None, node_selectors=None, pvc_tolerate_less_space_up_to_percent=None, use_emulation=None):
+    def __init__(self, cpu_allocation_ratio=None, disk_verification=None, feature_gates=None, log_verbosity=None, memory_overcommit=None, minimum_cluster_tsc_frequency=None, minimum_reserve_pvc_bytes=None, node_selectors=None, pvc_tolerate_less_space_up_to_percent=None, use_emulation=None):
         """
         V1DeveloperConfiguration - a model defined in Swagger
         """
 
         self._cpu_allocation_ratio = None
+        self._disk_verification = None
         self._feature_gates = None
         self._log_verbosity = None
         self._memory_overcommit = None
@@ -71,6 +74,8 @@ class V1DeveloperConfiguration(object):
 
         if cpu_allocation_ratio is not None:
           self.cpu_allocation_ratio = cpu_allocation_ratio
+        if disk_verification is not None:
+          self.disk_verification = disk_verification
         if feature_gates is not None:
           self.feature_gates = feature_gates
         if log_verbosity is not None:
@@ -108,6 +113,27 @@ class V1DeveloperConfiguration(object):
         """
 
         self._cpu_allocation_ratio = cpu_allocation_ratio
+
+    @property
+    def disk_verification(self):
+        """
+        Gets the disk_verification of this V1DeveloperConfiguration.
+
+        :return: The disk_verification of this V1DeveloperConfiguration.
+        :rtype: V1DiskVerification
+        """
+        return self._disk_verification
+
+    @disk_verification.setter
+    def disk_verification(self, disk_verification):
+        """
+        Sets the disk_verification of this V1DeveloperConfiguration.
+
+        :param disk_verification: The disk_verification of this V1DeveloperConfiguration.
+        :type: V1DiskVerification
+        """
+
+        self._disk_verification = disk_verification
 
     @property
     def feature_gates(self):

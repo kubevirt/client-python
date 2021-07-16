@@ -33,6 +33,7 @@ class V1Probe(object):
     swagger_types = {
         '_exec': 'K8sIoApiCoreV1ExecAction',
         'failure_threshold': 'int',
+        'guest_agent_ping': 'V1GuestAgentPing',
         'http_get': 'K8sIoApiCoreV1HTTPGetAction',
         'initial_delay_seconds': 'int',
         'period_seconds': 'int',
@@ -44,6 +45,7 @@ class V1Probe(object):
     attribute_map = {
         '_exec': 'exec',
         'failure_threshold': 'failureThreshold',
+        'guest_agent_ping': 'guestAgentPing',
         'http_get': 'httpGet',
         'initial_delay_seconds': 'initialDelaySeconds',
         'period_seconds': 'periodSeconds',
@@ -52,13 +54,14 @@ class V1Probe(object):
         'timeout_seconds': 'timeoutSeconds'
     }
 
-    def __init__(self, _exec=None, failure_threshold=None, http_get=None, initial_delay_seconds=None, period_seconds=None, success_threshold=None, tcp_socket=None, timeout_seconds=None):
+    def __init__(self, _exec=None, failure_threshold=None, guest_agent_ping=None, http_get=None, initial_delay_seconds=None, period_seconds=None, success_threshold=None, tcp_socket=None, timeout_seconds=None):
         """
         V1Probe - a model defined in Swagger
         """
 
         self.__exec = None
         self._failure_threshold = None
+        self._guest_agent_ping = None
         self._http_get = None
         self._initial_delay_seconds = None
         self._period_seconds = None
@@ -70,6 +73,8 @@ class V1Probe(object):
           self._exec = _exec
         if failure_threshold is not None:
           self.failure_threshold = failure_threshold
+        if guest_agent_ping is not None:
+          self.guest_agent_ping = guest_agent_ping
         if http_get is not None:
           self.http_get = http_get
         if initial_delay_seconds is not None:
@@ -128,6 +133,29 @@ class V1Probe(object):
         """
 
         self._failure_threshold = failure_threshold
+
+    @property
+    def guest_agent_ping(self):
+        """
+        Gets the guest_agent_ping of this V1Probe.
+        GuestAgentPing contacts the qemu-guest-agent for availability checks.
+
+        :return: The guest_agent_ping of this V1Probe.
+        :rtype: V1GuestAgentPing
+        """
+        return self._guest_agent_ping
+
+    @guest_agent_ping.setter
+    def guest_agent_ping(self, guest_agent_ping):
+        """
+        Sets the guest_agent_ping of this V1Probe.
+        GuestAgentPing contacts the qemu-guest-agent for availability checks.
+
+        :param guest_agent_ping: The guest_agent_ping of this V1Probe.
+        :type: V1GuestAgentPing
+        """
+
+        self._guest_agent_ping = guest_agent_ping
 
     @property
     def http_get(self):

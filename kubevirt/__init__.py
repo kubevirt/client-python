@@ -118,6 +118,7 @@ from .models.v1_floppy_target import V1FloppyTarget
 from .models.v1_gpu import V1GPU
 from .models.v1_generation_status import V1GenerationStatus
 from .models.v1_guest_agent_command_info import V1GuestAgentCommandInfo
+from .models.v1_guest_agent_ping import V1GuestAgentPing
 from .models.v1_hpet_timer import V1HPETTimer
 from .models.v1_host_device import V1HostDevice
 from .models.v1_host_disk import V1HostDisk

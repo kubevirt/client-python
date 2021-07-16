@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **_exec** | [**K8sIoApiCoreV1ExecAction**](K8sIoApiCoreV1ExecAction.md) | One and only one of the following should be specified. Exec specifies the action to take, it will be executed on the guest through the qemu-guest-agent. If the guest agent is not available, this probe will fail. | [optional] 
 **failure_threshold** | **int** | Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1. | [optional] 
+**guest_agent_ping** | [**V1GuestAgentPing**](V1GuestAgentPing.md) | GuestAgentPing contacts the qemu-guest-agent for availability checks. | [optional] 
 **http_get** | [**K8sIoApiCoreV1HTTPGetAction**](K8sIoApiCoreV1HTTPGetAction.md) | HTTPGet specifies the http request to perform. | [optional] 
 **initial_delay_seconds** | **int** | Number of seconds after the VirtualMachineInstance has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes | [optional] 
 **period_seconds** | **int** | How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. | [optional] 

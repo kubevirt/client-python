@@ -38,6 +38,7 @@ class V1beta1DataVolumeSpec(object):
         'priority_class_name': 'str',
         'pvc': 'K8sIoApiCoreV1PersistentVolumeClaimSpec',
         'source': 'V1beta1DataVolumeSource',
+        'source_ref': 'V1beta1DataVolumeSourceRef',
         'storage': 'V1beta1StorageSpec'
     }
 
@@ -49,10 +50,11 @@ class V1beta1DataVolumeSpec(object):
         'priority_class_name': 'priorityClassName',
         'pvc': 'pvc',
         'source': 'source',
+        'source_ref': 'sourceRef',
         'storage': 'storage'
     }
 
-    def __init__(self, checkpoints=None, content_type=None, final_checkpoint=None, preallocation=None, priority_class_name=None, pvc=None, source=None, storage=None):
+    def __init__(self, checkpoints=None, content_type=None, final_checkpoint=None, preallocation=None, priority_class_name=None, pvc=None, source=None, source_ref=None, storage=None):
         """
         V1beta1DataVolumeSpec - a model defined in Swagger
         """
@@ -64,6 +66,7 @@ class V1beta1DataVolumeSpec(object):
         self._priority_class_name = None
         self._pvc = None
         self._source = None
+        self._source_ref = None
         self._storage = None
 
         if checkpoints is not None:
@@ -78,7 +81,10 @@ class V1beta1DataVolumeSpec(object):
           self.priority_class_name = priority_class_name
         if pvc is not None:
           self.pvc = pvc
-        self.source = source
+        if source is not None:
+          self.source = source
+        if source_ref is not None:
+          self.source_ref = source_ref
         if storage is not None:
           self.storage = storage
 
@@ -240,10 +246,31 @@ class V1beta1DataVolumeSpec(object):
         :param source: The source of this V1beta1DataVolumeSpec.
         :type: V1beta1DataVolumeSource
         """
-        if source is None:
-            raise ValueError("Invalid value for `source`, must not be `None`")
 
         self._source = source
+
+    @property
+    def source_ref(self):
+        """
+        Gets the source_ref of this V1beta1DataVolumeSpec.
+        SourceRef is an indirect reference to the source of data for the requested DataVolume
+
+        :return: The source_ref of this V1beta1DataVolumeSpec.
+        :rtype: V1beta1DataVolumeSourceRef
+        """
+        return self._source_ref
+
+    @source_ref.setter
+    def source_ref(self, source_ref):
+        """
+        Sets the source_ref of this V1beta1DataVolumeSpec.
+        SourceRef is an indirect reference to the source of data for the requested DataVolume
+
+        :param source_ref: The source_ref of this V1beta1DataVolumeSpec.
+        :type: V1beta1DataVolumeSourceRef
+        """
+
+        self._source_ref = source_ref
 
     @property
     def storage(self):

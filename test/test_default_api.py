@@ -695,6 +695,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_freeze(self):
+        """
+        Test case for v1_freeze
+
+        
+        """
+        pass
+
     def test_v1_guestfs(self):
         """
         Test case for v1_guestfs
@@ -759,6 +767,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_unfreeze(self):
+        """
+        Test case for v1_unfreeze
+
+        
+        """
+        pass
+
     def test_v1_unpause(self):
         """
         Test case for v1_unpause
@@ -810,6 +826,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3_filesystemlist(self):
         """
         Test case for v1alpha3_filesystemlist
+
+        
+        """
+        pass
+
+    def test_v1alpha3_freeze(self):
+        """
+        Test case for v1alpha3_freeze
 
         
         """
@@ -882,6 +906,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3_test(self):
         """
         Test case for v1alpha3_test
+
+        
+        """
+        pass
+
+    def test_v1alpha3_unfreeze(self):
+        """
+        Test case for v1alpha3_unfreeze
 
         
         """

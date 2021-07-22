@@ -87,6 +87,7 @@ Method | HTTP request | Description
 [**v1_check_health**](DefaultApi.md#v1_check_health) | **GET** /apis/subresources.kubevirt.io/v1/healthz | 
 [**v1_console**](DefaultApi.md#v1_console) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/console | 
 [**v1_filesystemlist**](DefaultApi.md#v1_filesystemlist) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/filesystemlist | 
+[**v1_freeze**](DefaultApi.md#v1_freeze) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/freeze | 
 [**v1_guestfs**](DefaultApi.md#v1_guestfs) | **GET** /apis/subresources.kubevirt.io/v1/guestfs | 
 [**v1_guestosinfo**](DefaultApi.md#v1_guestosinfo) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/guestosinfo | 
 [**v1_migrate**](DefaultApi.md#v1_migrate) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/migrate | 
@@ -95,6 +96,7 @@ Method | HTTP request | Description
 [**v1_start**](DefaultApi.md#v1_start) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/start | 
 [**v1_stop**](DefaultApi.md#v1_stop) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/stop | 
 [**v1_test**](DefaultApi.md#v1_test) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/test | 
+[**v1_unfreeze**](DefaultApi.md#v1_unfreeze) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/unfreeze | 
 [**v1_unpause**](DefaultApi.md#v1_unpause) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/unpause | 
 [**v1_userlist**](DefaultApi.md#v1_userlist) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/userlist | 
 [**v1_version**](DefaultApi.md#v1_version) | **GET** /apis/subresources.kubevirt.io/v1/version | 
@@ -102,6 +104,7 @@ Method | HTTP request | Description
 [**v1alpha3_check_health**](DefaultApi.md#v1alpha3_check_health) | **GET** /apis/subresources.kubevirt.io/v1alpha3/healthz | 
 [**v1alpha3_console**](DefaultApi.md#v1alpha3_console) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/console | 
 [**v1alpha3_filesystemlist**](DefaultApi.md#v1alpha3_filesystemlist) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/filesystemlist | 
+[**v1alpha3_freeze**](DefaultApi.md#v1alpha3_freeze) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/freeze | 
 [**v1alpha3_get_sub_api_group**](DefaultApi.md#v1alpha3_get_sub_api_group) | **GET** /apis/subresources.kubevirt.io | 
 [**v1alpha3_guestfs**](DefaultApi.md#v1alpha3_guestfs) | **GET** /apis/subresources.kubevirt.io/v1alpha3/guestfs | 
 [**v1alpha3_guestosinfo**](DefaultApi.md#v1alpha3_guestosinfo) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/guestosinfo | 
@@ -111,6 +114,7 @@ Method | HTTP request | Description
 [**v1alpha3_start**](DefaultApi.md#v1alpha3_start) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/start | 
 [**v1alpha3_stop**](DefaultApi.md#v1alpha3_stop) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/stop | 
 [**v1alpha3_test**](DefaultApi.md#v1alpha3_test) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/test | 
+[**v1alpha3_unfreeze**](DefaultApi.md#v1alpha3_unfreeze) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/unfreeze | 
 [**v1alpha3_unpause**](DefaultApi.md#v1alpha3_unpause) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/unpause | 
 [**v1alpha3_userlist**](DefaultApi.md#v1alpha3_userlist) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/userlist | 
 [**v1alpha3_version**](DefaultApi.md#v1alpha3_version) | **GET** /apis/subresources.kubevirt.io/v1alpha3/version | 
@@ -4643,6 +4647,55 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1_freeze**
+> str v1_freeze(name, namespace)
+
+
+
+Freeze a VirtualMachineInstance object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+
+try: 
+    api_response = api_instance.v1_freeze(name, namespace)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1_freeze: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1_guestfs**
 > str v1_guestfs()
 
@@ -5030,6 +5083,55 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1_unfreeze**
+> str v1_unfreeze(name, namespace)
+
+
+
+Unfreeze a VirtualMachineInstance object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+
+try: 
+    api_response = api_instance.v1_unfreeze(name, namespace)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1_unfreeze: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1_unpause**
 > str v1_unpause(name, namespace)
 
@@ -5341,6 +5443,55 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1alpha3_freeze**
+> str v1alpha3_freeze(name, namespace)
+
+
+
+Freeze a VirtualMachineInstance object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+
+try: 
+    api_response = api_instance.v1alpha3_freeze(name, namespace)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1alpha3_freeze: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5762,6 +5913,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1alpha3_unfreeze**
+> str v1alpha3_unfreeze(name, namespace)
+
+
+
+Unfreeze a VirtualMachineInstance object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+
+try: 
+    api_response = api_instance.v1alpha3_unfreeze(name, namespace)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1alpha3_unfreeze: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+
+### Return type
+
+**str**
 
 ### Authorization
 

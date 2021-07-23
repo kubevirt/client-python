@@ -40,6 +40,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'mode': 'str',
         'source_node': 'str',
         'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'target_attachment_pod_uid': 'str',
         'target_direct_migration_node_ports': 'dict(str, int)',
         'target_node': 'str',
         'target_node_address': 'str',
@@ -57,6 +58,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'mode': 'mode',
         'source_node': 'sourceNode',
         'start_timestamp': 'startTimestamp',
+        'target_attachment_pod_uid': 'targetAttachmentPodUID',
         'target_direct_migration_node_ports': 'targetDirectMigrationNodePorts',
         'target_node': 'targetNode',
         'target_node_address': 'targetNodeAddress',
@@ -64,7 +66,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'target_pod': 'targetPod'
     }
 
-    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, migration_uid=None, mode=None, source_node=None, start_timestamp=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_pod=None):
+    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, migration_uid=None, mode=None, source_node=None, start_timestamp=None, target_attachment_pod_uid=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_pod=None):
         """
         V1VirtualMachineInstanceMigrationState - a model defined in Swagger
         """
@@ -78,6 +80,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._mode = None
         self._source_node = None
         self._start_timestamp = None
+        self._target_attachment_pod_uid = None
         self._target_direct_migration_node_ports = None
         self._target_node = None
         self._target_node_address = None
@@ -102,6 +105,8 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.source_node = source_node
         if start_timestamp is not None:
           self.start_timestamp = start_timestamp
+        if target_attachment_pod_uid is not None:
+          self.target_attachment_pod_uid = target_attachment_pod_uid
         if target_direct_migration_node_ports is not None:
           self.target_direct_migration_node_ports = target_direct_migration_node_ports
         if target_node is not None:
@@ -319,6 +324,29 @@ class V1VirtualMachineInstanceMigrationState(object):
         """
 
         self._start_timestamp = start_timestamp
+
+    @property
+    def target_attachment_pod_uid(self):
+        """
+        Gets the target_attachment_pod_uid of this V1VirtualMachineInstanceMigrationState.
+        The UID of the target attachment pod for hotplug volumes
+
+        :return: The target_attachment_pod_uid of this V1VirtualMachineInstanceMigrationState.
+        :rtype: str
+        """
+        return self._target_attachment_pod_uid
+
+    @target_attachment_pod_uid.setter
+    def target_attachment_pod_uid(self, target_attachment_pod_uid):
+        """
+        Sets the target_attachment_pod_uid of this V1VirtualMachineInstanceMigrationState.
+        The UID of the target attachment pod for hotplug volumes
+
+        :param target_attachment_pod_uid: The target_attachment_pod_uid of this V1VirtualMachineInstanceMigrationState.
+        :type: str
+        """
+
+        self._target_attachment_pod_uid = target_attachment_pod_uid
 
     @property
     def target_direct_migration_node_ports(self):

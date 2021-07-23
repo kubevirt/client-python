@@ -2,5 +2,5 @@
 "packageName": "kubevirt",
 "projectName": "kubevirt-py",
 "packageUrl": "https://github.com/kubevirt/client-python",
-"packageVersion": "v0.43.0-rc.0-279-gd32b8f964"
+"packageVersion": "v0.43.0-rc.0-298-gb46e128a2"
 }

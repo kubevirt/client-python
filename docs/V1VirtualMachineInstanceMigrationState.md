@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **mode** | **str** | Lets us know if the vmi is currently running pre or post copy migration | [optional] 
 **source_node** | **str** | The source node that the VMI originated on | [optional] 
 **start_timestamp** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) | The time the migration action began | [optional] 
+**target_attachment_pod_uid** | **str** | The UID of the target attachment pod for hotplug volumes | [optional] 
 **target_direct_migration_node_ports** | **dict(str, int)** | The list of ports opened for live migration on the destination node | [optional] 
 **target_node** | **str** | The target node that the VMI is moving to | [optional] 
 **target_node_address** | **str** | The address of the target node to use for the migration | [optional] 

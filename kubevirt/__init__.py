@@ -219,6 +219,7 @@ from .models.v1_virtual_machine_instance_status import V1VirtualMachineInstanceS
 from .models.v1_virtual_machine_instance_template_spec import V1VirtualMachineInstanceTemplateSpec
 from .models.v1_virtual_machine_list import V1VirtualMachineList
 from .models.v1_virtual_machine_spec import V1VirtualMachineSpec
+from .models.v1_virtual_machine_start_failure import V1VirtualMachineStartFailure
 from .models.v1_virtual_machine_state_change_request import V1VirtualMachineStateChangeRequest
 from .models.v1_virtual_machine_status import V1VirtualMachineStatus
 from .models.v1_virtual_machine_volume_request import V1VirtualMachineVolumeRequest

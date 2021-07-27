@@ -36,6 +36,7 @@ class V1VirtualMachineStatus(object):
         'printable_status': 'str',
         'ready': 'bool',
         'snapshot_in_progress': 'str',
+        'start_failure': 'V1VirtualMachineStartFailure',
         'state_change_requests': 'list[V1VirtualMachineStateChangeRequest]',
         'volume_requests': 'list[V1VirtualMachineVolumeRequest]',
         'volume_snapshot_statuses': 'list[V1VolumeSnapshotStatus]'
@@ -47,12 +48,13 @@ class V1VirtualMachineStatus(object):
         'printable_status': 'printableStatus',
         'ready': 'ready',
         'snapshot_in_progress': 'snapshotInProgress',
+        'start_failure': 'startFailure',
         'state_change_requests': 'stateChangeRequests',
         'volume_requests': 'volumeRequests',
         'volume_snapshot_statuses': 'volumeSnapshotStatuses'
     }
 
-    def __init__(self, conditions=None, created=None, printable_status=None, ready=None, snapshot_in_progress=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None):
+    def __init__(self, conditions=None, created=None, printable_status=None, ready=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
@@ -62,6 +64,7 @@ class V1VirtualMachineStatus(object):
         self._printable_status = None
         self._ready = None
         self._snapshot_in_progress = None
+        self._start_failure = None
         self._state_change_requests = None
         self._volume_requests = None
         self._volume_snapshot_statuses = None
@@ -76,6 +79,8 @@ class V1VirtualMachineStatus(object):
           self.ready = ready
         if snapshot_in_progress is not None:
           self.snapshot_in_progress = snapshot_in_progress
+        if start_failure is not None:
+          self.start_failure = start_failure
         if state_change_requests is not None:
           self.state_change_requests = state_change_requests
         if volume_requests is not None:
@@ -197,6 +202,29 @@ class V1VirtualMachineStatus(object):
         """
 
         self._snapshot_in_progress = snapshot_in_progress
+
+    @property
+    def start_failure(self):
+        """
+        Gets the start_failure of this V1VirtualMachineStatus.
+        StartFailure tracks consecutive VMI startup failures for the purposes of crash loop backoffs
+
+        :return: The start_failure of this V1VirtualMachineStatus.
+        :rtype: V1VirtualMachineStartFailure
+        """
+        return self._start_failure
+
+    @start_failure.setter
+    def start_failure(self, start_failure):
+        """
+        Sets the start_failure of this V1VirtualMachineStatus.
+        StartFailure tracks consecutive VMI startup failures for the purposes of crash loop backoffs
+
+        :param start_failure: The start_failure of this V1VirtualMachineStatus.
+        :type: V1VirtualMachineStartFailure
+        """
+
+        self._start_failure = start_failure
 
     @property
     def state_change_requests(self):

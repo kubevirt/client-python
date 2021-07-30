@@ -47,7 +47,8 @@ class V1KubeVirtConfiguration(object):
         'permitted_host_devices': 'V1PermittedHostDevices',
         'selinux_launcher_type': 'str',
         'smbios': 'V1SMBiosConfiguration',
-        'supported_guest_agent_versions': 'list[str]'
+        'supported_guest_agent_versions': 'list[str]',
+        'virtual_machine_instances_per_node': 'int'
     }
 
     attribute_map = {
@@ -67,10 +68,11 @@ class V1KubeVirtConfiguration(object):
         'permitted_host_devices': 'permittedHostDevices',
         'selinux_launcher_type': 'selinuxLauncherType',
         'smbios': 'smbios',
-        'supported_guest_agent_versions': 'supportedGuestAgentVersions'
+        'supported_guest_agent_versions': 'supportedGuestAgentVersions',
+        'virtual_machine_instances_per_node': 'virtualMachineInstancesPerNode'
     }
 
-    def __init__(self, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None):
+    def __init__(self, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None, virtual_machine_instances_per_node=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -92,6 +94,7 @@ class V1KubeVirtConfiguration(object):
         self._selinux_launcher_type = None
         self._smbios = None
         self._supported_guest_agent_versions = None
+        self._virtual_machine_instances_per_node = None
 
         if cpu_model is not None:
           self.cpu_model = cpu_model
@@ -127,6 +130,8 @@ class V1KubeVirtConfiguration(object):
           self.smbios = smbios
         if supported_guest_agent_versions is not None:
           self.supported_guest_agent_versions = supported_guest_agent_versions
+        if virtual_machine_instances_per_node is not None:
+          self.virtual_machine_instances_per_node = virtual_machine_instances_per_node
 
     @property
     def cpu_model(self):
@@ -486,6 +491,27 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._supported_guest_agent_versions = supported_guest_agent_versions
+
+    @property
+    def virtual_machine_instances_per_node(self):
+        """
+        Gets the virtual_machine_instances_per_node of this V1KubeVirtConfiguration.
+
+        :return: The virtual_machine_instances_per_node of this V1KubeVirtConfiguration.
+        :rtype: int
+        """
+        return self._virtual_machine_instances_per_node
+
+    @virtual_machine_instances_per_node.setter
+    def virtual_machine_instances_per_node(self, virtual_machine_instances_per_node):
+        """
+        Sets the virtual_machine_instances_per_node of this V1KubeVirtConfiguration.
+
+        :param virtual_machine_instances_per_node: The virtual_machine_instances_per_node of this V1KubeVirtConfiguration.
+        :type: int
+        """
+
+        self._virtual_machine_instances_per_node = virtual_machine_instances_per_node
 
     def to_dict(self):
         """

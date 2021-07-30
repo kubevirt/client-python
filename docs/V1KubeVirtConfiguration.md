@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **selinux_launcher_type** | **str** |  | [optional] 
 **smbios** | [**V1SMBiosConfiguration**](V1SMBiosConfiguration.md) |  | [optional] 
 **supported_guest_agent_versions** | **list[str]** | deprecated | [optional] 
+**virtual_machine_instances_per_node** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

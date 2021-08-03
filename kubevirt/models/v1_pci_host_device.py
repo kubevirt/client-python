@@ -83,7 +83,7 @@ class V1PciHostDevice(object):
     def pci_vendor_selector(self):
         """
         Gets the pci_vendor_selector of this V1PciHostDevice.
-        The vendor_id:product_id tupple of the PCI device
+        The vendor_id:product_id tuple of the PCI device
 
         :return: The pci_vendor_selector of this V1PciHostDevice.
         :rtype: str
@@ -94,7 +94,7 @@ class V1PciHostDevice(object):
     def pci_vendor_selector(self, pci_vendor_selector):
         """
         Sets the pci_vendor_selector of this V1PciHostDevice.
-        The vendor_id:product_id tupple of the PCI device
+        The vendor_id:product_id tuple of the PCI device
 
         :param pci_vendor_selector: The pci_vendor_selector of this V1PciHostDevice.
         :type: str

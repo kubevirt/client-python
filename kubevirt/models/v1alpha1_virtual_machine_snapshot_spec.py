@@ -32,24 +32,29 @@ class V1alpha1VirtualMachineSnapshotSpec(object):
     """
     swagger_types = {
         'deletion_policy': 'str',
+        'failure_deadline': 'K8sIoApimachineryPkgApisMetaV1Duration',
         'source': 'K8sIoApiCoreV1TypedLocalObjectReference'
     }
 
     attribute_map = {
         'deletion_policy': 'deletionPolicy',
+        'failure_deadline': 'failureDeadline',
         'source': 'source'
     }
 
-    def __init__(self, deletion_policy=None, source=None):
+    def __init__(self, deletion_policy=None, failure_deadline=None, source=None):
         """
         V1alpha1VirtualMachineSnapshotSpec - a model defined in Swagger
         """
 
         self._deletion_policy = None
+        self._failure_deadline = None
         self._source = None
 
         if deletion_policy is not None:
           self.deletion_policy = deletion_policy
+        if failure_deadline is not None:
+          self.failure_deadline = failure_deadline
         self.source = source
 
     @property
@@ -72,6 +77,29 @@ class V1alpha1VirtualMachineSnapshotSpec(object):
         """
 
         self._deletion_policy = deletion_policy
+
+    @property
+    def failure_deadline(self):
+        """
+        Gets the failure_deadline of this V1alpha1VirtualMachineSnapshotSpec.
+        This time represents the number of seconds we permit the vm snapshot to take. In case we pass this deadline we mark this snapshot as failed. Defaults to DefaultFailureDeadline - 5min
+
+        :return: The failure_deadline of this V1alpha1VirtualMachineSnapshotSpec.
+        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
+        """
+        return self._failure_deadline
+
+    @failure_deadline.setter
+    def failure_deadline(self, failure_deadline):
+        """
+        Sets the failure_deadline of this V1alpha1VirtualMachineSnapshotSpec.
+        This time represents the number of seconds we permit the vm snapshot to take. In case we pass this deadline we mark this snapshot as failed. Defaults to DefaultFailureDeadline - 5min
+
+        :param failure_deadline: The failure_deadline of this V1alpha1VirtualMachineSnapshotSpec.
+        :type: K8sIoApimachineryPkgApisMetaV1Duration
+        """
+
+        self._failure_deadline = failure_deadline
 
     @property
     def source(self):

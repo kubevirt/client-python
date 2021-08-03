@@ -35,6 +35,7 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         'creation_time': 'K8sIoApimachineryPkgApisMetaV1Time',
         'error': 'V1alpha1Error',
         'indications': 'list[str]',
+        'phase': 'str',
         'ready_to_use': 'bool',
         'source_uid': 'str',
         'virtual_machine_snapshot_content_name': 'str'
@@ -45,12 +46,13 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         'creation_time': 'creationTime',
         'error': 'error',
         'indications': 'indications',
+        'phase': 'phase',
         'ready_to_use': 'readyToUse',
         'source_uid': 'sourceUID',
         'virtual_machine_snapshot_content_name': 'virtualMachineSnapshotContentName'
     }
 
-    def __init__(self, conditions=None, creation_time=None, error=None, indications=None, ready_to_use=None, source_uid=None, virtual_machine_snapshot_content_name=None):
+    def __init__(self, conditions=None, creation_time=None, error=None, indications=None, phase=None, ready_to_use=None, source_uid=None, virtual_machine_snapshot_content_name=None):
         """
         V1alpha1VirtualMachineSnapshotStatus - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         self._creation_time = None
         self._error = None
         self._indications = None
+        self._phase = None
         self._ready_to_use = None
         self._source_uid = None
         self._virtual_machine_snapshot_content_name = None
@@ -71,6 +74,8 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
           self.error = error
         if indications is not None:
           self.indications = indications
+        if phase is not None:
+          self.phase = phase
         if ready_to_use is not None:
           self.ready_to_use = ready_to_use
         if source_uid is not None:
@@ -161,6 +166,27 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         """
 
         self._indications = indications
+
+    @property
+    def phase(self):
+        """
+        Gets the phase of this V1alpha1VirtualMachineSnapshotStatus.
+
+        :return: The phase of this V1alpha1VirtualMachineSnapshotStatus.
+        :rtype: str
+        """
+        return self._phase
+
+    @phase.setter
+    def phase(self, phase):
+        """
+        Sets the phase of this V1alpha1VirtualMachineSnapshotStatus.
+
+        :param phase: The phase of this V1alpha1VirtualMachineSnapshotStatus.
+        :type: str
+        """
+
+        self._phase = phase
 
     @property
     def ready_to_use(self):

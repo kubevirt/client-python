@@ -34,6 +34,7 @@ class V1VolumeStatus(object):
         'hotplug_volume': 'V1HotplugVolumeStatus',
         'message': 'str',
         'name': 'str',
+        'persistent_volume_claim_info': 'V1PersistentVolumeClaimInfo',
         'phase': 'str',
         'reason': 'str',
         'target': 'str'
@@ -43,12 +44,13 @@ class V1VolumeStatus(object):
         'hotplug_volume': 'hotplugVolume',
         'message': 'message',
         'name': 'name',
+        'persistent_volume_claim_info': 'persistentVolumeClaimInfo',
         'phase': 'phase',
         'reason': 'reason',
         'target': 'target'
     }
 
-    def __init__(self, hotplug_volume=None, message=None, name=None, phase=None, reason=None, target=None):
+    def __init__(self, hotplug_volume=None, message=None, name=None, persistent_volume_claim_info=None, phase=None, reason=None, target=None):
         """
         V1VolumeStatus - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class V1VolumeStatus(object):
         self._hotplug_volume = None
         self._message = None
         self._name = None
+        self._persistent_volume_claim_info = None
         self._phase = None
         self._reason = None
         self._target = None
@@ -65,6 +68,8 @@ class V1VolumeStatus(object):
         if message is not None:
           self.message = message
         self.name = name
+        if persistent_volume_claim_info is not None:
+          self.persistent_volume_claim_info = persistent_volume_claim_info
         if phase is not None:
           self.phase = phase
         if reason is not None:
@@ -141,6 +146,29 @@ class V1VolumeStatus(object):
             raise ValueError("Invalid value for `name`, must not be `None`")
 
         self._name = name
+
+    @property
+    def persistent_volume_claim_info(self):
+        """
+        Gets the persistent_volume_claim_info of this V1VolumeStatus.
+        PersistentVolumeClaimInfo is information about the PVC that handler requires during start flow
+
+        :return: The persistent_volume_claim_info of this V1VolumeStatus.
+        :rtype: V1PersistentVolumeClaimInfo
+        """
+        return self._persistent_volume_claim_info
+
+    @persistent_volume_claim_info.setter
+    def persistent_volume_claim_info(self, persistent_volume_claim_info):
+        """
+        Sets the persistent_volume_claim_info of this V1VolumeStatus.
+        PersistentVolumeClaimInfo is information about the PVC that handler requires during start flow
+
+        :param persistent_volume_claim_info: The persistent_volume_claim_info of this V1VolumeStatus.
+        :type: V1PersistentVolumeClaimInfo
+        """
+
+        self._persistent_volume_claim_info = persistent_volume_claim_info
 
     @property
     def phase(self):

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **emulated_machines** | **list[str]** |  | [optional] 
 **image_pull_policy** | **str** |  | [optional] 
 **machine_type** | **str** |  | [optional] 
+**mediated_devices_configuration** | [**V1MediatedDevicesConfiguration**](V1MediatedDevicesConfiguration.md) |  | [optional] 
 **mem_balloon_stats_period** | **int** |  | [optional] 
 **migrations** | [**V1MigrationConfiguration**](V1MigrationConfiguration.md) |  | [optional] 
 **min_cpu_model** | **str** |  | [optional] 

@@ -150,6 +150,7 @@ from .models.v1_kube_virt_workload_update_strategy import V1KubeVirtWorkloadUpda
 from .models.v1_log_verbosity import V1LogVerbosity
 from .models.v1_lun_target import V1LunTarget
 from .models.v1_machine import V1Machine
+from .models.v1_mediated_devices_configuration import V1MediatedDevicesConfiguration
 from .models.v1_mediated_host_device import V1MediatedHostDevice
 from .models.v1_memory import V1Memory
 from .models.v1_migration_configuration import V1MigrationConfiguration

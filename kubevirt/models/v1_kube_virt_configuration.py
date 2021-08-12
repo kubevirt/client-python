@@ -38,6 +38,7 @@ class V1KubeVirtConfiguration(object):
         'emulated_machines': 'list[str]',
         'image_pull_policy': 'str',
         'machine_type': 'str',
+        'mediated_devices_configuration': 'V1MediatedDevicesConfiguration',
         'mem_balloon_stats_period': 'int',
         'migrations': 'V1MigrationConfiguration',
         'min_cpu_model': 'str',
@@ -59,6 +60,7 @@ class V1KubeVirtConfiguration(object):
         'emulated_machines': 'emulatedMachines',
         'image_pull_policy': 'imagePullPolicy',
         'machine_type': 'machineType',
+        'mediated_devices_configuration': 'mediatedDevicesConfiguration',
         'mem_balloon_stats_period': 'memBalloonStatsPeriod',
         'migrations': 'migrations',
         'min_cpu_model': 'minCPUModel',
@@ -72,7 +74,7 @@ class V1KubeVirtConfiguration(object):
         'virtual_machine_instances_per_node': 'virtualMachineInstancesPerNode'
     }
 
-    def __init__(self, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None, virtual_machine_instances_per_node=None):
+    def __init__(self, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None, virtual_machine_instances_per_node=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -84,6 +86,7 @@ class V1KubeVirtConfiguration(object):
         self._emulated_machines = None
         self._image_pull_policy = None
         self._machine_type = None
+        self._mediated_devices_configuration = None
         self._mem_balloon_stats_period = None
         self._migrations = None
         self._min_cpu_model = None
@@ -110,6 +113,8 @@ class V1KubeVirtConfiguration(object):
           self.image_pull_policy = image_pull_policy
         if machine_type is not None:
           self.machine_type = machine_type
+        if mediated_devices_configuration is not None:
+          self.mediated_devices_configuration = mediated_devices_configuration
         if mem_balloon_stats_period is not None:
           self.mem_balloon_stats_period = mem_balloon_stats_period
         if migrations is not None:
@@ -279,6 +284,27 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._machine_type = machine_type
+
+    @property
+    def mediated_devices_configuration(self):
+        """
+        Gets the mediated_devices_configuration of this V1KubeVirtConfiguration.
+
+        :return: The mediated_devices_configuration of this V1KubeVirtConfiguration.
+        :rtype: V1MediatedDevicesConfiguration
+        """
+        return self._mediated_devices_configuration
+
+    @mediated_devices_configuration.setter
+    def mediated_devices_configuration(self, mediated_devices_configuration):
+        """
+        Sets the mediated_devices_configuration of this V1KubeVirtConfiguration.
+
+        :param mediated_devices_configuration: The mediated_devices_configuration of this V1KubeVirtConfiguration.
+        :type: V1MediatedDevicesConfiguration
+        """
+
+        self._mediated_devices_configuration = mediated_devices_configuration
 
     @property
     def mem_balloon_stats_period(self):

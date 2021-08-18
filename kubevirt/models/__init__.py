@@ -169,7 +169,10 @@ from .v1_port import V1Port
 from .v1_probe import V1Probe
 from .v1_qemu_guest_agent_ssh_public_key_access_credential_propagation import V1QemuGuestAgentSSHPublicKeyAccessCredentialPropagation
 from .v1_qemu_guest_agent_user_password_access_credential_propagation import V1QemuGuestAgentUserPasswordAccessCredentialPropagation
+from .v1_rest_client_configuration import V1RESTClientConfiguration
 from .v1_rtc_timer import V1RTCTimer
+from .v1_rate_limiter import V1RateLimiter
+from .v1_reloadable_component_configuration import V1ReloadableComponentConfiguration
 from .v1_remove_volume_options import V1RemoveVolumeOptions
 from .v1_resource_requirements import V1ResourceRequirements
 from .v1_restart_options import V1RestartOptions
@@ -184,6 +187,7 @@ from .v1_stop_options import V1StopOptions
 from .v1_sy_nic_timer import V1SyNICTimer
 from .v1_sysprep_source import V1SysprepSource
 from .v1_timer import V1Timer
+from .v1_token_bucket_rate_limiter import V1TokenBucketRateLimiter
 from .v1_topology_hints import V1TopologyHints
 from .v1_user_password_access_credential import V1UserPasswordAccessCredential
 from .v1_user_password_access_credential_propagation_method import V1UserPasswordAccessCredentialPropagationMethod

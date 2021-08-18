@@ -31,11 +31,14 @@ class V1KubeVirtConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'api_configuration': 'V1ReloadableComponentConfiguration',
+        'controller_configuration': 'V1ReloadableComponentConfiguration',
         'cpu_model': 'str',
         'cpu_request': 'K8sIoApimachineryPkgApiResourceQuantity',
         'default_runtime_class': 'str',
         'developer_configuration': 'V1DeveloperConfiguration',
         'emulated_machines': 'list[str]',
+        'handler_configuration': 'V1ReloadableComponentConfiguration',
         'image_pull_policy': 'str',
         'machine_type': 'str',
         'mediated_devices_configuration': 'V1MediatedDevicesConfiguration',
@@ -49,15 +52,19 @@ class V1KubeVirtConfiguration(object):
         'selinux_launcher_type': 'str',
         'smbios': 'V1SMBiosConfiguration',
         'supported_guest_agent_versions': 'list[str]',
-        'virtual_machine_instances_per_node': 'int'
+        'virtual_machine_instances_per_node': 'int',
+        'webhook_configuration': 'V1ReloadableComponentConfiguration'
     }
 
     attribute_map = {
+        'api_configuration': 'apiConfiguration',
+        'controller_configuration': 'controllerConfiguration',
         'cpu_model': 'cpuModel',
         'cpu_request': 'cpuRequest',
         'default_runtime_class': 'defaultRuntimeClass',
         'developer_configuration': 'developerConfiguration',
         'emulated_machines': 'emulatedMachines',
+        'handler_configuration': 'handlerConfiguration',
         'image_pull_policy': 'imagePullPolicy',
         'machine_type': 'machineType',
         'mediated_devices_configuration': 'mediatedDevicesConfiguration',
@@ -71,19 +78,23 @@ class V1KubeVirtConfiguration(object):
         'selinux_launcher_type': 'selinuxLauncherType',
         'smbios': 'smbios',
         'supported_guest_agent_versions': 'supportedGuestAgentVersions',
-        'virtual_machine_instances_per_node': 'virtualMachineInstancesPerNode'
+        'virtual_machine_instances_per_node': 'virtualMachineInstancesPerNode',
+        'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None, virtual_machine_instances_per_node=None):
+    def __init__(self, api_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None, virtual_machine_instances_per_node=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
 
+        self._api_configuration = None
+        self._controller_configuration = None
         self._cpu_model = None
         self._cpu_request = None
         self._default_runtime_class = None
         self._developer_configuration = None
         self._emulated_machines = None
+        self._handler_configuration = None
         self._image_pull_policy = None
         self._machine_type = None
         self._mediated_devices_configuration = None
@@ -98,7 +109,12 @@ class V1KubeVirtConfiguration(object):
         self._smbios = None
         self._supported_guest_agent_versions = None
         self._virtual_machine_instances_per_node = None
+        self._webhook_configuration = None
 
+        if api_configuration is not None:
+          self.api_configuration = api_configuration
+        if controller_configuration is not None:
+          self.controller_configuration = controller_configuration
         if cpu_model is not None:
           self.cpu_model = cpu_model
         if cpu_request is not None:
@@ -109,6 +125,8 @@ class V1KubeVirtConfiguration(object):
           self.developer_configuration = developer_configuration
         if emulated_machines is not None:
           self.emulated_machines = emulated_machines
+        if handler_configuration is not None:
+          self.handler_configuration = handler_configuration
         if image_pull_policy is not None:
           self.image_pull_policy = image_pull_policy
         if machine_type is not None:
@@ -137,6 +155,50 @@ class V1KubeVirtConfiguration(object):
           self.supported_guest_agent_versions = supported_guest_agent_versions
         if virtual_machine_instances_per_node is not None:
           self.virtual_machine_instances_per_node = virtual_machine_instances_per_node
+        if webhook_configuration is not None:
+          self.webhook_configuration = webhook_configuration
+
+    @property
+    def api_configuration(self):
+        """
+        Gets the api_configuration of this V1KubeVirtConfiguration.
+
+        :return: The api_configuration of this V1KubeVirtConfiguration.
+        :rtype: V1ReloadableComponentConfiguration
+        """
+        return self._api_configuration
+
+    @api_configuration.setter
+    def api_configuration(self, api_configuration):
+        """
+        Sets the api_configuration of this V1KubeVirtConfiguration.
+
+        :param api_configuration: The api_configuration of this V1KubeVirtConfiguration.
+        :type: V1ReloadableComponentConfiguration
+        """
+
+        self._api_configuration = api_configuration
+
+    @property
+    def controller_configuration(self):
+        """
+        Gets the controller_configuration of this V1KubeVirtConfiguration.
+
+        :return: The controller_configuration of this V1KubeVirtConfiguration.
+        :rtype: V1ReloadableComponentConfiguration
+        """
+        return self._controller_configuration
+
+    @controller_configuration.setter
+    def controller_configuration(self, controller_configuration):
+        """
+        Sets the controller_configuration of this V1KubeVirtConfiguration.
+
+        :param controller_configuration: The controller_configuration of this V1KubeVirtConfiguration.
+        :type: V1ReloadableComponentConfiguration
+        """
+
+        self._controller_configuration = controller_configuration
 
     @property
     def cpu_model(self):
@@ -242,6 +304,27 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._emulated_machines = emulated_machines
+
+    @property
+    def handler_configuration(self):
+        """
+        Gets the handler_configuration of this V1KubeVirtConfiguration.
+
+        :return: The handler_configuration of this V1KubeVirtConfiguration.
+        :rtype: V1ReloadableComponentConfiguration
+        """
+        return self._handler_configuration
+
+    @handler_configuration.setter
+    def handler_configuration(self, handler_configuration):
+        """
+        Sets the handler_configuration of this V1KubeVirtConfiguration.
+
+        :param handler_configuration: The handler_configuration of this V1KubeVirtConfiguration.
+        :type: V1ReloadableComponentConfiguration
+        """
+
+        self._handler_configuration = handler_configuration
 
     @property
     def image_pull_policy(self):
@@ -538,6 +621,27 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._virtual_machine_instances_per_node = virtual_machine_instances_per_node
+
+    @property
+    def webhook_configuration(self):
+        """
+        Gets the webhook_configuration of this V1KubeVirtConfiguration.
+
+        :return: The webhook_configuration of this V1KubeVirtConfiguration.
+        :rtype: V1ReloadableComponentConfiguration
+        """
+        return self._webhook_configuration
+
+    @webhook_configuration.setter
+    def webhook_configuration(self, webhook_configuration):
+        """
+        Sets the webhook_configuration of this V1KubeVirtConfiguration.
+
+        :param webhook_configuration: The webhook_configuration of this V1KubeVirtConfiguration.
+        :type: V1ReloadableComponentConfiguration
+        """
+
+        self._webhook_configuration = webhook_configuration
 
     def to_dict(self):
         """

@@ -169,7 +169,10 @@ from .models.v1_port import V1Port
 from .models.v1_probe import V1Probe
 from .models.v1_qemu_guest_agent_ssh_public_key_access_credential_propagation import V1QemuGuestAgentSSHPublicKeyAccessCredentialPropagation
 from .models.v1_qemu_guest_agent_user_password_access_credential_propagation import V1QemuGuestAgentUserPasswordAccessCredentialPropagation
+from .models.v1_rest_client_configuration import V1RESTClientConfiguration
 from .models.v1_rtc_timer import V1RTCTimer
+from .models.v1_rate_limiter import V1RateLimiter
+from .models.v1_reloadable_component_configuration import V1ReloadableComponentConfiguration
 from .models.v1_remove_volume_options import V1RemoveVolumeOptions
 from .models.v1_resource_requirements import V1ResourceRequirements
 from .models.v1_restart_options import V1RestartOptions
@@ -184,6 +187,7 @@ from .models.v1_stop_options import V1StopOptions
 from .models.v1_sy_nic_timer import V1SyNICTimer
 from .models.v1_sysprep_source import V1SysprepSource
 from .models.v1_timer import V1Timer
+from .models.v1_token_bucket_rate_limiter import V1TokenBucketRateLimiter
 from .models.v1_topology_hints import V1TopologyHints
 from .models.v1_user_password_access_credential import V1UserPasswordAccessCredential
 from .models.v1_user_password_access_credential_propagation_method import V1UserPasswordAccessCredentialPropagationMethod

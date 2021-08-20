@@ -32,7 +32,7 @@ class V1HotplugVolumeSource(object):
     """
     swagger_types = {
         'data_volume': 'V1DataVolumeSource',
-        'persistent_volume_claim': 'K8sIoApiCoreV1PersistentVolumeClaimVolumeSource'
+        'persistent_volume_claim': 'V1PersistentVolumeClaimVolumeSource'
     }
 
     attribute_map = {
@@ -83,7 +83,7 @@ class V1HotplugVolumeSource(object):
         PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
         :return: The persistent_volume_claim of this V1HotplugVolumeSource.
-        :rtype: K8sIoApiCoreV1PersistentVolumeClaimVolumeSource
+        :rtype: V1PersistentVolumeClaimVolumeSource
         """
         return self._persistent_volume_claim
 
@@ -94,7 +94,7 @@ class V1HotplugVolumeSource(object):
         PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
         :param persistent_volume_claim: The persistent_volume_claim of this V1HotplugVolumeSource.
-        :type: K8sIoApiCoreV1PersistentVolumeClaimVolumeSource
+        :type: V1PersistentVolumeClaimVolumeSource
         """
 
         self._persistent_volume_claim = persistent_volume_claim

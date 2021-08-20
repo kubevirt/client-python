@@ -164,6 +164,7 @@ from .v1_pit_timer import V1PITTimer
 from .v1_pci_host_device import V1PciHostDevice
 from .v1_permitted_host_devices import V1PermittedHostDevices
 from .v1_persistent_volume_claim_info import V1PersistentVolumeClaimInfo
+from .v1_persistent_volume_claim_volume_source import V1PersistentVolumeClaimVolumeSource
 from .v1_pod_network import V1PodNetwork
 from .v1_port import V1Port
 from .v1_probe import V1Probe

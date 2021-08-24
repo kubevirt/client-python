@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **minimum_reserve_pvc_bytes** | **int** |  | [optional] 
 **node_selectors** | **dict(str, str)** |  | [optional] 
 **pvc_tolerate_less_space_up_to_percent** | **int** |  | [optional] 
-**use_emulation** | **bool** |  | [optional] 
+**use_emulation** | **bool** | UseEmulation can be set to true to allow fallback to software emulation in case hardware-assisted emulation is not available. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

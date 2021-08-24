@@ -288,6 +288,7 @@ class V1DeveloperConfiguration(object):
     def use_emulation(self):
         """
         Gets the use_emulation of this V1DeveloperConfiguration.
+        UseEmulation can be set to true to allow fallback to software emulation in case hardware-assisted emulation is not available.
 
         :return: The use_emulation of this V1DeveloperConfiguration.
         :rtype: bool
@@ -298,6 +299,7 @@ class V1DeveloperConfiguration(object):
     def use_emulation(self, use_emulation):
         """
         Sets the use_emulation of this V1DeveloperConfiguration.
+        UseEmulation can be set to true to allow fallback to software emulation in case hardware-assisted emulation is not available.
 
         :param use_emulation: The use_emulation of this V1DeveloperConfiguration.
         :type: bool

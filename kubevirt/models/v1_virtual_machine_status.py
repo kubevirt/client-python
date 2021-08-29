@@ -35,6 +35,7 @@ class V1VirtualMachineStatus(object):
         'created': 'bool',
         'printable_status': 'str',
         'ready': 'bool',
+        'restore_in_progress': 'str',
         'snapshot_in_progress': 'str',
         'start_failure': 'V1VirtualMachineStartFailure',
         'state_change_requests': 'list[V1VirtualMachineStateChangeRequest]',
@@ -47,6 +48,7 @@ class V1VirtualMachineStatus(object):
         'created': 'created',
         'printable_status': 'printableStatus',
         'ready': 'ready',
+        'restore_in_progress': 'restoreInProgress',
         'snapshot_in_progress': 'snapshotInProgress',
         'start_failure': 'startFailure',
         'state_change_requests': 'stateChangeRequests',
@@ -54,7 +56,7 @@ class V1VirtualMachineStatus(object):
         'volume_snapshot_statuses': 'volumeSnapshotStatuses'
     }
 
-    def __init__(self, conditions=None, created=None, printable_status=None, ready=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None):
+    def __init__(self, conditions=None, created=None, printable_status=None, ready=None, restore_in_progress=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class V1VirtualMachineStatus(object):
         self._created = None
         self._printable_status = None
         self._ready = None
+        self._restore_in_progress = None
         self._snapshot_in_progress = None
         self._start_failure = None
         self._state_change_requests = None
@@ -77,6 +80,8 @@ class V1VirtualMachineStatus(object):
           self.printable_status = printable_status
         if ready is not None:
           self.ready = ready
+        if restore_in_progress is not None:
+          self.restore_in_progress = restore_in_progress
         if snapshot_in_progress is not None:
           self.snapshot_in_progress = snapshot_in_progress
         if start_failure is not None:
@@ -179,6 +184,29 @@ class V1VirtualMachineStatus(object):
         """
 
         self._ready = ready
+
+    @property
+    def restore_in_progress(self):
+        """
+        Gets the restore_in_progress of this V1VirtualMachineStatus.
+        RestoreInProgress is the name of the VirtualMachineRestore currently executing
+
+        :return: The restore_in_progress of this V1VirtualMachineStatus.
+        :rtype: str
+        """
+        return self._restore_in_progress
+
+    @restore_in_progress.setter
+    def restore_in_progress(self, restore_in_progress):
+        """
+        Sets the restore_in_progress of this V1VirtualMachineStatus.
+        RestoreInProgress is the name of the VirtualMachineRestore currently executing
+
+        :param restore_in_progress: The restore_in_progress of this V1VirtualMachineStatus.
+        :type: str
+        """
+
+        self._restore_in_progress = restore_in_progress
 
     @property
     def snapshot_in_progress(self):

@@ -46,6 +46,7 @@ class V1VirtualMachineInstanceStatus(object):
         'qos_class': 'str',
         'reason': 'str',
         'topology_hints': 'V1TopologyHints',
+        'virtual_machine_revision_name': 'str',
         'volume_status': 'list[V1VolumeStatus]'
     }
 
@@ -65,10 +66,11 @@ class V1VirtualMachineInstanceStatus(object):
         'qos_class': 'qosClass',
         'reason': 'reason',
         'topology_hints': 'topologyHints',
+        'virtual_machine_revision_name': 'virtualMachineRevisionName',
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, topology_hints=None, volume_status=None):
+    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -88,6 +90,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._qos_class = None
         self._reason = None
         self._topology_hints = None
+        self._virtual_machine_revision_name = None
         self._volume_status = None
 
         if active_pods is not None:
@@ -120,6 +123,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.reason = reason
         if topology_hints is not None:
           self.topology_hints = topology_hints
+        if virtual_machine_revision_name is not None:
+          self.virtual_machine_revision_name = virtual_machine_revision_name
         if volume_status is not None:
           self.volume_status = volume_status
 
@@ -465,6 +470,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._topology_hints = topology_hints
+
+    @property
+    def virtual_machine_revision_name(self):
+        """
+        Gets the virtual_machine_revision_name of this V1VirtualMachineInstanceStatus.
+        VirtualMachineRevisionName is used to get the vm revision of the vmi when doing an online vm snapshot
+
+        :return: The virtual_machine_revision_name of this V1VirtualMachineInstanceStatus.
+        :rtype: str
+        """
+        return self._virtual_machine_revision_name
+
+    @virtual_machine_revision_name.setter
+    def virtual_machine_revision_name(self, virtual_machine_revision_name):
+        """
+        Sets the virtual_machine_revision_name of this V1VirtualMachineInstanceStatus.
+        VirtualMachineRevisionName is used to get the vm revision of the vmi when doing an online vm snapshot
+
+        :param virtual_machine_revision_name: The virtual_machine_revision_name of this V1VirtualMachineInstanceStatus.
+        :type: str
+        """
+
+        self._virtual_machine_revision_name = virtual_machine_revision_name
 
     @property
     def volume_status(self):

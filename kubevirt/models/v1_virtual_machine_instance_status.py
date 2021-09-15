@@ -40,6 +40,7 @@ class V1VirtualMachineInstanceStatus(object):
         'launcher_container_image_version': 'str',
         'migration_method': 'str',
         'migration_state': 'V1VirtualMachineInstanceMigrationState',
+        'migration_transport': 'str',
         'node_name': 'str',
         'phase': 'str',
         'phase_transition_timestamps': 'list[V1VirtualMachineInstancePhaseTransitionTimestamp]',
@@ -60,6 +61,7 @@ class V1VirtualMachineInstanceStatus(object):
         'launcher_container_image_version': 'launcherContainerImageVersion',
         'migration_method': 'migrationMethod',
         'migration_state': 'migrationState',
+        'migration_transport': 'migrationTransport',
         'node_name': 'nodeName',
         'phase': 'phase',
         'phase_transition_timestamps': 'phaseTransitionTimestamps',
@@ -70,7 +72,7 @@ class V1VirtualMachineInstanceStatus(object):
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
+    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -84,6 +86,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._launcher_container_image_version = None
         self._migration_method = None
         self._migration_state = None
+        self._migration_transport = None
         self._node_name = None
         self._phase = None
         self._phase_transition_timestamps = None
@@ -111,6 +114,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.migration_method = migration_method
         if migration_state is not None:
           self.migration_state = migration_state
+        if migration_transport is not None:
+          self.migration_transport = migration_transport
         if node_name is not None:
           self.node_name = node_name
         if phase is not None:
@@ -334,6 +339,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._migration_state = migration_state
+
+    @property
+    def migration_transport(self):
+        """
+        Gets the migration_transport of this V1VirtualMachineInstanceStatus.
+        This represents the migration transport
+
+        :return: The migration_transport of this V1VirtualMachineInstanceStatus.
+        :rtype: str
+        """
+        return self._migration_transport
+
+    @migration_transport.setter
+    def migration_transport(self, migration_transport):
+        """
+        Sets the migration_transport of this V1VirtualMachineInstanceStatus.
+        This represents the migration transport
+
+        :param migration_transport: The migration_transport of this V1VirtualMachineInstanceStatus.
+        :type: str
+        """
+
+        self._migration_transport = migration_transport
 
     @property
     def node_name(self):

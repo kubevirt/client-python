@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **launcher_container_image_version** | **str** | LauncherContainerImageVersion indicates what container image is currently active for the vmi. | [optional] 
 **migration_method** | **str** | Represents the method using which the vmi can be migrated: live migration or block migration | [optional] 
 **migration_state** | [**V1VirtualMachineInstanceMigrationState**](V1VirtualMachineInstanceMigrationState.md) | Represents the status of a live migration | [optional] 
+**migration_transport** | **str** | This represents the migration transport | [optional] 
 **node_name** | **str** | NodeName is the name where the VirtualMachineInstance is currently running. | [optional] 
 **phase** | **str** | Phase is the status of the VirtualMachineInstance in kubernetes world. It is not the VirtualMachineInstance status, but partially correlates to it. | [optional] 
 **phase_transition_timestamps** | [**list[V1VirtualMachineInstancePhaseTransitionTimestamp]**](V1VirtualMachineInstancePhaseTransitionTimestamp.md) | PhaseTransitionTimestamp is the timestamp of when the last phase change occurred | [optional] 

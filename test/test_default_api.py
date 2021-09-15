@@ -311,6 +311,30 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_handle_dump_profiler(self):
+        """
+        Test case for handle_dump_profiler
+
+        
+        """
+        pass
+
+    def test_handle_start_profiler(self):
+        """
+        Test case for handle_start_profiler
+
+        
+        """
+        pass
+
+    def test_handle_stop_profiler(self):
+        """
+        Test case for handle_stop_profiler
+
+        
+        """
+        pass
+
     def test_list_kube_virt_for_all_namespaces(self):
         """
         Test case for list_kube_virt_for_all_namespaces
@@ -951,9 +975,33 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1alpha3dump_cluster_profiler(self):
+        """
+        Test case for v1alpha3dump_cluster_profiler
+
+        
+        """
+        pass
+
     def test_v1alpha3get_api_sub_resources(self):
         """
         Test case for v1alpha3get_api_sub_resources
+
+        
+        """
+        pass
+
+    def test_v1alpha3start_cluster_profiler(self):
+        """
+        Test case for v1alpha3start_cluster_profiler
+
+        
+        """
+        pass
+
+    def test_v1alpha3stop_cluster_profiler(self):
+        """
+        Test case for v1alpha3stop_cluster_profiler
 
         
         """
@@ -1031,9 +1079,33 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1dump_cluster_profiler(self):
+        """
+        Test case for v1dump_cluster_profiler
+
+        
+        """
+        pass
+
     def test_v1get_api_sub_resources(self):
         """
         Test case for v1get_api_sub_resources
+
+        
+        """
+        pass
+
+    def test_v1start_cluster_profiler(self):
+        """
+        Test case for v1start_cluster_profiler
+
+        
+        """
+        pass
+
+    def test_v1stop_cluster_profiler(self):
+        """
+        Test case for v1stop_cluster_profiler
 
         
         """

@@ -37,6 +37,7 @@ class V1VolumeStatus(object):
         'persistent_volume_claim_info': 'V1PersistentVolumeClaimInfo',
         'phase': 'str',
         'reason': 'str',
+        'size': 'int',
         'target': 'str'
     }
 
@@ -47,10 +48,11 @@ class V1VolumeStatus(object):
         'persistent_volume_claim_info': 'persistentVolumeClaimInfo',
         'phase': 'phase',
         'reason': 'reason',
+        'size': 'size',
         'target': 'target'
     }
 
-    def __init__(self, hotplug_volume=None, message=None, name=None, persistent_volume_claim_info=None, phase=None, reason=None, target=None):
+    def __init__(self, hotplug_volume=None, message=None, name=None, persistent_volume_claim_info=None, phase=None, reason=None, size=None, target=None):
         """
         V1VolumeStatus - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class V1VolumeStatus(object):
         self._persistent_volume_claim_info = None
         self._phase = None
         self._reason = None
+        self._size = None
         self._target = None
 
         if hotplug_volume is not None:
@@ -74,6 +77,8 @@ class V1VolumeStatus(object):
           self.phase = phase
         if reason is not None:
           self.reason = reason
+        if size is not None:
+          self.size = size
         self.target = target
 
     @property
@@ -215,6 +220,29 @@ class V1VolumeStatus(object):
         """
 
         self._reason = reason
+
+    @property
+    def size(self):
+        """
+        Gets the size of this V1VolumeStatus.
+        Represents the size of the volume
+
+        :return: The size of this V1VolumeStatus.
+        :rtype: int
+        """
+        return self._size
+
+    @size.setter
+    def size(self, size):
+        """
+        Sets the size of this V1VolumeStatus.
+        Represents the size of the volume
+
+        :param size: The size of this V1VolumeStatus.
+        :type: int
+        """
+
+        self._size = size
 
     @property
     def target(self):

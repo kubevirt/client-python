@@ -37,6 +37,7 @@ class V1CPU(object):
         'isolate_emulator_thread': 'bool',
         'model': 'str',
         'numa': 'V1NUMA',
+        'realtime': 'V1Realtime',
         'sockets': 'int',
         'threads': 'int'
     }
@@ -48,11 +49,12 @@ class V1CPU(object):
         'isolate_emulator_thread': 'isolateEmulatorThread',
         'model': 'model',
         'numa': 'numa',
+        'realtime': 'realtime',
         'sockets': 'sockets',
         'threads': 'threads'
     }
 
-    def __init__(self, cores=None, dedicated_cpu_placement=None, features=None, isolate_emulator_thread=None, model=None, numa=None, sockets=None, threads=None):
+    def __init__(self, cores=None, dedicated_cpu_placement=None, features=None, isolate_emulator_thread=None, model=None, numa=None, realtime=None, sockets=None, threads=None):
         """
         V1CPU - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class V1CPU(object):
         self._isolate_emulator_thread = None
         self._model = None
         self._numa = None
+        self._realtime = None
         self._sockets = None
         self._threads = None
 
@@ -78,6 +81,8 @@ class V1CPU(object):
           self.model = model
         if numa is not None:
           self.numa = numa
+        if realtime is not None:
+          self.realtime = realtime
         if sockets is not None:
           self.sockets = sockets
         if threads is not None:
@@ -220,6 +225,29 @@ class V1CPU(object):
         """
 
         self._numa = numa
+
+    @property
+    def realtime(self):
+        """
+        Gets the realtime of this V1CPU.
+        Realtime instructs the virt-launcher to tune the VMI for lower latency, optional for real time workloads
+
+        :return: The realtime of this V1CPU.
+        :rtype: V1Realtime
+        """
+        return self._realtime
+
+    @realtime.setter
+    def realtime(self, realtime):
+        """
+        Sets the realtime of this V1CPU.
+        Realtime instructs the virt-launcher to tune the VMI for lower latency, optional for real time workloads
+
+        :param realtime: The realtime of this V1CPU.
+        :type: V1Realtime
+        """
+
+        self._realtime = realtime
 
     @property
     def sockets(self):

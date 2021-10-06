@@ -173,6 +173,7 @@ from .models.v1_qemu_guest_agent_user_password_access_credential_propagation imp
 from .models.v1_rest_client_configuration import V1RESTClientConfiguration
 from .models.v1_rtc_timer import V1RTCTimer
 from .models.v1_rate_limiter import V1RateLimiter
+from .models.v1_realtime import V1Realtime
 from .models.v1_reloadable_component_configuration import V1ReloadableComponentConfiguration
 from .models.v1_remove_volume_options import V1RemoveVolumeOptions
 from .models.v1_resource_requirements import V1ResourceRequirements

@@ -32,6 +32,7 @@ class V1VirtualMachineSpec(object):
     """
     swagger_types = {
         'data_volume_templates': 'list[V1DataVolumeTemplateSpec]',
+        'flavor': 'V1FlavorMatcher',
         'run_strategy': 'str',
         'running': 'bool',
         'template': 'V1VirtualMachineInstanceTemplateSpec'
@@ -39,23 +40,27 @@ class V1VirtualMachineSpec(object):
 
     attribute_map = {
         'data_volume_templates': 'dataVolumeTemplates',
+        'flavor': 'flavor',
         'run_strategy': 'runStrategy',
         'running': 'running',
         'template': 'template'
     }
 
-    def __init__(self, data_volume_templates=None, run_strategy=None, running=None, template=None):
+    def __init__(self, data_volume_templates=None, flavor=None, run_strategy=None, running=None, template=None):
         """
         V1VirtualMachineSpec - a model defined in Swagger
         """
 
         self._data_volume_templates = None
+        self._flavor = None
         self._run_strategy = None
         self._running = None
         self._template = None
 
         if data_volume_templates is not None:
           self.data_volume_templates = data_volume_templates
+        if flavor is not None:
+          self.flavor = flavor
         if run_strategy is not None:
           self.run_strategy = run_strategy
         if running is not None:
@@ -84,6 +89,29 @@ class V1VirtualMachineSpec(object):
         """
 
         self._data_volume_templates = data_volume_templates
+
+    @property
+    def flavor(self):
+        """
+        Gets the flavor of this V1VirtualMachineSpec.
+        FlavorMatcher references a flavor that is used to fill fields in Template
+
+        :return: The flavor of this V1VirtualMachineSpec.
+        :rtype: V1FlavorMatcher
+        """
+        return self._flavor
+
+    @flavor.setter
+    def flavor(self, flavor):
+        """
+        Sets the flavor of this V1VirtualMachineSpec.
+        FlavorMatcher references a flavor that is used to fill fields in Template
+
+        :param flavor: The flavor of this V1VirtualMachineSpec.
+        :type: V1FlavorMatcher
+        """
+
+        self._flavor = flavor
 
     @property
     def run_strategy(self):

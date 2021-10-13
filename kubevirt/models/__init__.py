@@ -115,6 +115,7 @@ from .v1_filesystem import V1Filesystem
 from .v1_filesystem_virtiofs import V1FilesystemVirtiofs
 from .v1_firmware import V1Firmware
 from .v1_flags import V1Flags
+from .v1_flavor_matcher import V1FlavorMatcher
 from .v1_floppy_target import V1FloppyTarget
 from .v1_gpu import V1GPU
 from .v1_generation_status import V1GenerationStatus
@@ -239,6 +240,11 @@ from .v1alpha1_condition import V1alpha1Condition
 from .v1alpha1_error import V1alpha1Error
 from .v1alpha1_persistent_volume_claim import V1alpha1PersistentVolumeClaim
 from .v1alpha1_source_spec import V1alpha1SourceSpec
+from .v1alpha1_virtual_machine_cluster_flavor import V1alpha1VirtualMachineClusterFlavor
+from .v1alpha1_virtual_machine_cluster_flavor_list import V1alpha1VirtualMachineClusterFlavorList
+from .v1alpha1_virtual_machine_flavor import V1alpha1VirtualMachineFlavor
+from .v1alpha1_virtual_machine_flavor_list import V1alpha1VirtualMachineFlavorList
+from .v1alpha1_virtual_machine_flavor_profile import V1alpha1VirtualMachineFlavorProfile
 from .v1alpha1_virtual_machine_restore import V1alpha1VirtualMachineRestore
 from .v1alpha1_virtual_machine_restore_list import V1alpha1VirtualMachineRestoreList
 from .v1alpha1_virtual_machine_restore_spec import V1alpha1VirtualMachineRestoreSpec

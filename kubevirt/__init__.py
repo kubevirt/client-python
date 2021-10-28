@@ -117,6 +117,7 @@ from .models.v1_firmware import V1Firmware
 from .models.v1_flags import V1Flags
 from .models.v1_flavor_matcher import V1FlavorMatcher
 from .models.v1_floppy_target import V1FloppyTarget
+from .models.v1_freeze_unfreeze_timeout import V1FreezeUnfreezeTimeout
 from .models.v1_gpu import V1GPU
 from .models.v1_generation_status import V1GenerationStatus
 from .models.v1_guest_agent_command_info import V1GuestAgentCommandInfo

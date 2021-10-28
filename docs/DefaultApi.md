@@ -5708,7 +5708,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_freeze**
-> str v1_freeze(name, namespace)
+> str v1_freeze(name, namespace, body)
 
 
 
@@ -5726,9 +5726,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1FreezeUnfreezeTimeout() # V1FreezeUnfreezeTimeout | 
 
 try: 
-    api_response = api_instance.v1_freeze(name, namespace)
+    api_response = api_instance.v1_freeze(name, namespace, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1_freeze: %s\n" % e)
@@ -5740,6 +5741,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1FreezeUnfreezeTimeout**](V1FreezeUnfreezeTimeout.md)|  | 
 
 ### Return type
 
@@ -6507,7 +6509,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1alpha3_freeze**
-> str v1alpha3_freeze(name, namespace)
+> str v1alpha3_freeze(name, namespace, body)
 
 
 
@@ -6525,9 +6527,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1FreezeUnfreezeTimeout() # V1FreezeUnfreezeTimeout | 
 
 try: 
-    api_response = api_instance.v1alpha3_freeze(name, namespace)
+    api_response = api_instance.v1alpha3_freeze(name, namespace, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1alpha3_freeze: %s\n" % e)
@@ -6539,6 +6542,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1FreezeUnfreezeTimeout**](V1FreezeUnfreezeTimeout.md)|  | 
 
 ### Return type
 

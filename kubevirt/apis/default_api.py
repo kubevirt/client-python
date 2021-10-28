@@ -12064,7 +12064,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def v1_freeze(self, name, namespace, **kwargs):
+    def v1_freeze(self, name, namespace, body, **kwargs):
         """
         Freeze a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -12073,24 +12073,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1_freeze(name, namespace, callback=callback_function)
+        >>> thread = api.v1_freeze(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1FreezeUnfreezeTimeout body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.v1_freeze_with_http_info(name, namespace, **kwargs)
+            return self.v1_freeze_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.v1_freeze_with_http_info(name, namespace, **kwargs)
+            (data) = self.v1_freeze_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def v1_freeze_with_http_info(self, name, namespace, **kwargs):
+    def v1_freeze_with_http_info(self, name, namespace, body, **kwargs):
         """
         Freeze a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -12099,18 +12100,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1_freeze_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.v1_freeze_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1FreezeUnfreezeTimeout body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -12131,6 +12133,9 @@ class DefaultApi(object):
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `v1_freeze`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `v1_freeze`")
 
 
         collection_formats = {}
@@ -12149,6 +12154,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # Authentication setting
         auth_settings = []
 
@@ -13784,7 +13791,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def v1alpha3_freeze(self, name, namespace, **kwargs):
+    def v1alpha3_freeze(self, name, namespace, body, **kwargs):
         """
         Freeze a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -13793,24 +13800,25 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1alpha3_freeze(name, namespace, callback=callback_function)
+        >>> thread = api.v1alpha3_freeze(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1FreezeUnfreezeTimeout body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.v1alpha3_freeze_with_http_info(name, namespace, **kwargs)
+            return self.v1alpha3_freeze_with_http_info(name, namespace, body, **kwargs)
         else:
-            (data) = self.v1alpha3_freeze_with_http_info(name, namespace, **kwargs)
+            (data) = self.v1alpha3_freeze_with_http_info(name, namespace, body, **kwargs)
             return data
 
-    def v1alpha3_freeze_with_http_info(self, name, namespace, **kwargs):
+    def v1alpha3_freeze_with_http_info(self, name, namespace, body, **kwargs):
         """
         Freeze a VirtualMachineInstance object.
         This method makes a synchronous HTTP request by default. To make an
@@ -13819,18 +13827,19 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.v1alpha3_freeze_with_http_info(name, namespace, callback=callback_function)
+        >>> thread = api.v1alpha3_freeze_with_http_info(name, namespace, body, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1FreezeUnfreezeTimeout body: (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace']
+        all_params = ['name', 'namespace', 'body']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -13851,6 +13860,9 @@ class DefaultApi(object):
         # verify the required parameter 'namespace' is set
         if ('namespace' not in params) or (params['namespace'] is None):
             raise ValueError("Missing the required parameter `namespace` when calling `v1alpha3_freeze`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `v1alpha3_freeze`")
 
 
         collection_formats = {}
@@ -13869,6 +13881,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # Authentication setting
         auth_settings = []
 

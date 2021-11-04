@@ -31,28 +31,33 @@ class V1ComponentConfig(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'node_placement': 'V1NodePlacement'
+        'node_placement': 'V1NodePlacement',
+        'replicas': 'int'
     }
 
     attribute_map = {
-        'node_placement': 'nodePlacement'
+        'node_placement': 'nodePlacement',
+        'replicas': 'replicas'
     }
 
-    def __init__(self, node_placement=None):
+    def __init__(self, node_placement=None, replicas=None):
         """
         V1ComponentConfig - a model defined in Swagger
         """
 
         self._node_placement = None
+        self._replicas = None
 
         if node_placement is not None:
           self.node_placement = node_placement
+        if replicas is not None:
+          self.replicas = replicas
 
     @property
     def node_placement(self):
         """
         Gets the node_placement of this V1ComponentConfig.
-        nodePlacement decsribes scheduling confiuguration for specific KubeVirt components
+        nodePlacement describes scheduling configuration for specific KubeVirt components
 
         :return: The node_placement of this V1ComponentConfig.
         :rtype: V1NodePlacement
@@ -63,13 +68,36 @@ class V1ComponentConfig(object):
     def node_placement(self, node_placement):
         """
         Sets the node_placement of this V1ComponentConfig.
-        nodePlacement decsribes scheduling confiuguration for specific KubeVirt components
+        nodePlacement describes scheduling configuration for specific KubeVirt components
 
         :param node_placement: The node_placement of this V1ComponentConfig.
         :type: V1NodePlacement
         """
 
         self._node_placement = node_placement
+
+    @property
+    def replicas(self):
+        """
+        Gets the replicas of this V1ComponentConfig.
+        replicas indicates how many replicas should be created for each KubeVirt infrastructure component (like virt-api or virt-controller). Defaults to 2.
+
+        :return: The replicas of this V1ComponentConfig.
+        :rtype: int
+        """
+        return self._replicas
+
+    @replicas.setter
+    def replicas(self, replicas):
+        """
+        Sets the replicas of this V1ComponentConfig.
+        replicas indicates how many replicas should be created for each KubeVirt infrastructure component (like virt-api or virt-controller). Defaults to 2.
+
+        :param replicas: The replicas of this V1ComponentConfig.
+        :type: int
+        """
+
+        self._replicas = replicas
 
     def to_dict(self):
         """

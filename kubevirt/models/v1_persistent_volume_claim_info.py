@@ -33,6 +33,7 @@ class V1PersistentVolumeClaimInfo(object):
     swagger_types = {
         'access_modes': 'list[str]',
         'capacity': 'dict(str, K8sIoApimachineryPkgApiResourceQuantity)',
+        'filesystem_overhead': 'str',
         'preallocated': 'bool',
         'volume_mode': 'str'
     }
@@ -40,17 +41,19 @@ class V1PersistentVolumeClaimInfo(object):
     attribute_map = {
         'access_modes': 'accessModes',
         'capacity': 'capacity',
+        'filesystem_overhead': 'filesystemOverhead',
         'preallocated': 'preallocated',
         'volume_mode': 'volumeMode'
     }
 
-    def __init__(self, access_modes=None, capacity=None, preallocated=None, volume_mode=None):
+    def __init__(self, access_modes=None, capacity=None, filesystem_overhead=None, preallocated=None, volume_mode=None):
         """
         V1PersistentVolumeClaimInfo - a model defined in Swagger
         """
 
         self._access_modes = None
         self._capacity = None
+        self._filesystem_overhead = None
         self._preallocated = None
         self._volume_mode = None
 
@@ -58,6 +61,8 @@ class V1PersistentVolumeClaimInfo(object):
           self.access_modes = access_modes
         if capacity is not None:
           self.capacity = capacity
+        if filesystem_overhead is not None:
+          self.filesystem_overhead = filesystem_overhead
         if preallocated is not None:
           self.preallocated = preallocated
         if volume_mode is not None:
@@ -108,6 +113,29 @@ class V1PersistentVolumeClaimInfo(object):
         """
 
         self._capacity = capacity
+
+    @property
+    def filesystem_overhead(self):
+        """
+        Gets the filesystem_overhead of this V1PersistentVolumeClaimInfo.
+        Percentage of filesystem's size to be reserved when resizing the PVC
+
+        :return: The filesystem_overhead of this V1PersistentVolumeClaimInfo.
+        :rtype: str
+        """
+        return self._filesystem_overhead
+
+    @filesystem_overhead.setter
+    def filesystem_overhead(self, filesystem_overhead):
+        """
+        Sets the filesystem_overhead of this V1PersistentVolumeClaimInfo.
+        Percentage of filesystem's size to be reserved when resizing the PVC
+
+        :param filesystem_overhead: The filesystem_overhead of this V1PersistentVolumeClaimInfo.
+        :type: str
+        """
+
+        self._filesystem_overhead = filesystem_overhead
 
     @property
     def preallocated(self):

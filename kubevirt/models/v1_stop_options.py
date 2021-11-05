@@ -32,27 +32,32 @@ class V1StopOptions(object):
     """
     swagger_types = {
         'api_version': 'str',
+        'dry_run': 'list[str]',
         'grace_period': 'int',
         'kind': 'str'
     }
 
     attribute_map = {
         'api_version': 'apiVersion',
+        'dry_run': 'dryRun',
         'grace_period': 'gracePeriod',
         'kind': 'kind'
     }
 
-    def __init__(self, api_version=None, grace_period=None, kind=None):
+    def __init__(self, api_version=None, dry_run=None, grace_period=None, kind=None):
         """
         V1StopOptions - a model defined in Swagger
         """
 
         self._api_version = None
+        self._dry_run = None
         self._grace_period = None
         self._kind = None
 
         if api_version is not None:
           self.api_version = api_version
+        if dry_run is not None:
+          self.dry_run = dry_run
         if grace_period is not None:
           self.grace_period = grace_period
         if kind is not None:
@@ -80,6 +85,29 @@ class V1StopOptions(object):
         """
 
         self._api_version = api_version
+
+    @property
+    def dry_run(self):
+        """
+        Gets the dry_run of this V1StopOptions.
+        When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
+
+        :return: The dry_run of this V1StopOptions.
+        :rtype: list[str]
+        """
+        return self._dry_run
+
+    @dry_run.setter
+    def dry_run(self, dry_run):
+        """
+        Sets the dry_run of this V1StopOptions.
+        When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
+
+        :param dry_run: The dry_run of this V1StopOptions.
+        :type: list[str]
+        """
+
+        self._dry_run = dry_run
 
     @property
     def grace_period(self):

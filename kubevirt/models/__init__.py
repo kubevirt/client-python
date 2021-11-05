@@ -187,6 +187,7 @@ from .v1_ssh_public_key_access_credential_propagation_method import V1SSHPublicK
 from .v1_ssh_public_key_access_credential_source import V1SSHPublicKeyAccessCredentialSource
 from .v1_secret_volume_source import V1SecretVolumeSource
 from .v1_service_account_volume_source import V1ServiceAccountVolumeSource
+from .v1_start_options import V1StartOptions
 from .v1_stop_options import V1StopOptions
 from .v1_sy_nic_timer import V1SyNICTimer
 from .v1_sysprep_source import V1SysprepSource

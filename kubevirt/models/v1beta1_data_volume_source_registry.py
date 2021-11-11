@@ -32,30 +32,41 @@ class V1beta1DataVolumeSourceRegistry(object):
     """
     swagger_types = {
         'cert_config_map': 'str',
+        'image_stream': 'str',
+        'pull_method': 'str',
         'secret_ref': 'str',
         'url': 'str'
     }
 
     attribute_map = {
         'cert_config_map': 'certConfigMap',
+        'image_stream': 'imageStream',
+        'pull_method': 'pullMethod',
         'secret_ref': 'secretRef',
         'url': 'url'
     }
 
-    def __init__(self, cert_config_map=None, secret_ref=None, url=None):
+    def __init__(self, cert_config_map=None, image_stream=None, pull_method=None, secret_ref=None, url=None):
         """
         V1beta1DataVolumeSourceRegistry - a model defined in Swagger
         """
 
         self._cert_config_map = None
+        self._image_stream = None
+        self._pull_method = None
         self._secret_ref = None
         self._url = None
 
         if cert_config_map is not None:
           self.cert_config_map = cert_config_map
+        if image_stream is not None:
+          self.image_stream = image_stream
+        if pull_method is not None:
+          self.pull_method = pull_method
         if secret_ref is not None:
           self.secret_ref = secret_ref
-        self.url = url
+        if url is not None:
+          self.url = url
 
     @property
     def cert_config_map(self):
@@ -79,6 +90,52 @@ class V1beta1DataVolumeSourceRegistry(object):
         """
 
         self._cert_config_map = cert_config_map
+
+    @property
+    def image_stream(self):
+        """
+        Gets the image_stream of this V1beta1DataVolumeSourceRegistry.
+        ImageStream is the name of image stream for import
+
+        :return: The image_stream of this V1beta1DataVolumeSourceRegistry.
+        :rtype: str
+        """
+        return self._image_stream
+
+    @image_stream.setter
+    def image_stream(self, image_stream):
+        """
+        Sets the image_stream of this V1beta1DataVolumeSourceRegistry.
+        ImageStream is the name of image stream for import
+
+        :param image_stream: The image_stream of this V1beta1DataVolumeSourceRegistry.
+        :type: str
+        """
+
+        self._image_stream = image_stream
+
+    @property
+    def pull_method(self):
+        """
+        Gets the pull_method of this V1beta1DataVolumeSourceRegistry.
+        PullMethod can be either \"pod\" (default import), or \"node\" (node docker cache based import)
+
+        :return: The pull_method of this V1beta1DataVolumeSourceRegistry.
+        :rtype: str
+        """
+        return self._pull_method
+
+    @pull_method.setter
+    def pull_method(self, pull_method):
+        """
+        Sets the pull_method of this V1beta1DataVolumeSourceRegistry.
+        PullMethod can be either \"pod\" (default import), or \"node\" (node docker cache based import)
+
+        :param pull_method: The pull_method of this V1beta1DataVolumeSourceRegistry.
+        :type: str
+        """
+
+        self._pull_method = pull_method
 
     @property
     def secret_ref(self):
@@ -107,7 +164,7 @@ class V1beta1DataVolumeSourceRegistry(object):
     def url(self):
         """
         Gets the url of this V1beta1DataVolumeSourceRegistry.
-        URL is the url of the Docker registry source
+        URL is the url of the registry source (starting with the scheme: docker, oci-archive)
 
         :return: The url of this V1beta1DataVolumeSourceRegistry.
         :rtype: str
@@ -118,13 +175,11 @@ class V1beta1DataVolumeSourceRegistry(object):
     def url(self, url):
         """
         Sets the url of this V1beta1DataVolumeSourceRegistry.
-        URL is the url of the Docker registry source
+        URL is the url of the registry source (starting with the scheme: docker, oci-archive)
 
         :param url: The url of this V1beta1DataVolumeSourceRegistry.
         :type: str
         """
-        if url is None:
-            raise ValueError("Invalid value for `url`, must not be `None`")
 
         self._url = url
 

@@ -197,6 +197,8 @@ from .models.v1_topology_hints import V1TopologyHints
 from .models.v1_user_password_access_credential import V1UserPasswordAccessCredential
 from .models.v1_user_password_access_credential_propagation_method import V1UserPasswordAccessCredentialPropagationMethod
 from .models.v1_user_password_access_credential_source import V1UserPasswordAccessCredentialSource
+from .models.v1_vgpu_display_options import V1VGPUDisplayOptions
+from .models.v1_vgpu_options import V1VGPUOptions
 from .models.v1_virtual_machine import V1VirtualMachine
 from .models.v1_virtual_machine_condition import V1VirtualMachineCondition
 from .models.v1_virtual_machine_instance import V1VirtualMachineInstance

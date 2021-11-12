@@ -1,11 +1,9 @@
-# V1GPU
+# V1VGPUOptions
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**device_name** | **str** |  | 
-**name** | **str** | Name of the GPU device as exposed by a device plugin | 
-**virtual_gpu_options** | [**V1VGPUOptions**](V1VGPUOptions.md) |  | [optional] 
+**display** | [**V1VGPUDisplayOptions**](V1VGPUDisplayOptions.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -46,6 +46,7 @@ class V1Devices(object):
         'interfaces': 'list[V1Interface]',
         'network_interface_multiqueue': 'bool',
         'rng': 'V1Rng',
+        'sound': 'V1SoundDevice',
         'use_virtio_transitional': 'bool',
         'watchdog': 'V1Watchdog'
     }
@@ -66,11 +67,12 @@ class V1Devices(object):
         'interfaces': 'interfaces',
         'network_interface_multiqueue': 'networkInterfaceMultiqueue',
         'rng': 'rng',
+        'sound': 'sound',
         'use_virtio_transitional': 'useVirtioTransitional',
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, use_virtio_transitional=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, sound=None, use_virtio_transitional=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -90,6 +92,7 @@ class V1Devices(object):
         self._interfaces = None
         self._network_interface_multiqueue = None
         self._rng = None
+        self._sound = None
         self._use_virtio_transitional = None
         self._watchdog = None
 
@@ -123,6 +126,8 @@ class V1Devices(object):
           self.network_interface_multiqueue = network_interface_multiqueue
         if rng is not None:
           self.rng = rng
+        if sound is not None:
+          self.sound = sound
         if use_virtio_transitional is not None:
           self.use_virtio_transitional = use_virtio_transitional
         if watchdog is not None:
@@ -472,6 +477,29 @@ class V1Devices(object):
         """
 
         self._rng = rng
+
+    @property
+    def sound(self):
+        """
+        Gets the sound of this V1Devices.
+        Whether to emulate a sound device.
+
+        :return: The sound of this V1Devices.
+        :rtype: V1SoundDevice
+        """
+        return self._sound
+
+    @sound.setter
+    def sound(self, sound):
+        """
+        Sets the sound of this V1Devices.
+        Whether to emulate a sound device.
+
+        :param sound: The sound of this V1Devices.
+        :type: V1SoundDevice
+        """
+
+        self._sound = sound
 
     @property
     def use_virtio_transitional(self):

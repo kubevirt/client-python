@@ -40,6 +40,7 @@ class V1KubeVirtSpec(object):
         'infra': 'V1ComponentConfig',
         'monitor_account': 'str',
         'monitor_namespace': 'str',
+        'product_component': 'str',
         'product_name': 'str',
         'product_version': 'str',
         'uninstall_strategy': 'str',
@@ -57,6 +58,7 @@ class V1KubeVirtSpec(object):
         'infra': 'infra',
         'monitor_account': 'monitorAccount',
         'monitor_namespace': 'monitorNamespace',
+        'product_component': 'productComponent',
         'product_name': 'productName',
         'product_version': 'productVersion',
         'uninstall_strategy': 'uninstallStrategy',
@@ -64,7 +66,7 @@ class V1KubeVirtSpec(object):
         'workloads': 'workloads'
     }
 
-    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_registry=None, image_tag=None, infra=None, monitor_account=None, monitor_namespace=None, product_name=None, product_version=None, uninstall_strategy=None, workload_update_strategy=None, workloads=None):
+    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_registry=None, image_tag=None, infra=None, monitor_account=None, monitor_namespace=None, product_component=None, product_name=None, product_version=None, uninstall_strategy=None, workload_update_strategy=None, workloads=None):
         """
         V1KubeVirtSpec - a model defined in Swagger
         """
@@ -78,6 +80,7 @@ class V1KubeVirtSpec(object):
         self._infra = None
         self._monitor_account = None
         self._monitor_namespace = None
+        self._product_component = None
         self._product_name = None
         self._product_version = None
         self._uninstall_strategy = None
@@ -102,6 +105,8 @@ class V1KubeVirtSpec(object):
           self.monitor_account = monitor_account
         if monitor_namespace is not None:
           self.monitor_namespace = monitor_namespace
+        if product_component is not None:
+          self.product_component = product_component
         if product_name is not None:
           self.product_name = product_name
         if product_version is not None:
@@ -315,6 +320,29 @@ class V1KubeVirtSpec(object):
         """
 
         self._monitor_namespace = monitor_namespace
+
+    @property
+    def product_component(self):
+        """
+        Gets the product_component of this V1KubeVirtSpec.
+        Designate the apps.kubevirt.io/component label for KubeVirt components. Useful if KubeVirt is included as part of a product. If ProductComponent is not specified, the component label default value is kubevirt.
+
+        :return: The product_component of this V1KubeVirtSpec.
+        :rtype: str
+        """
+        return self._product_component
+
+    @product_component.setter
+    def product_component(self, product_component):
+        """
+        Sets the product_component of this V1KubeVirtSpec.
+        Designate the apps.kubevirt.io/component label for KubeVirt components. Useful if KubeVirt is included as part of a product. If ProductComponent is not specified, the component label default value is kubevirt.
+
+        :param product_component: The product_component of this V1KubeVirtSpec.
+        :type: str
+        """
+
+        self._product_component = product_component
 
     @property
     def product_name(self):

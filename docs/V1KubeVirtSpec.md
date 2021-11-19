@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **infra** | [**V1ComponentConfig**](V1ComponentConfig.md) | selectors and tolerations that should apply to KubeVirt infrastructure components | [optional] 
 **monitor_account** | **str** | The name of the Prometheus service account that needs read-access to KubeVirt endpoints Defaults to prometheus-k8s | [optional] 
 **monitor_namespace** | **str** | The namespace Prometheus is deployed in Defaults to openshift-monitor | [optional] 
+**product_component** | **str** | Designate the apps.kubevirt.io/component label for KubeVirt components. Useful if KubeVirt is included as part of a product. If ProductComponent is not specified, the component label default value is kubevirt. | [optional] 
 **product_name** | **str** | Designate the apps.kubevirt.io/part-of label for KubeVirt components. Useful if KubeVirt is included as part of a product. If ProductName is not specified, the part-of label will be omitted. | [optional] 
 **product_version** | **str** | Designate the apps.kubevirt.io/version label for KubeVirt components. Useful if KubeVirt is included as part of a product. If ProductVersion is not specified, KubeVirt&#39;s version will be used. | [optional] 
 **uninstall_strategy** | **str** | Specifies if kubevirt can be deleted if workloads are still present. This is mainly a precaution to avoid accidental data loss | [optional] 

@@ -5898,7 +5898,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_pause**
-> str v1_pause(name, namespace)
+> str v1_pause(name, namespace, body)
 
 
 
@@ -5916,9 +5916,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1PauseOptions() # V1PauseOptions | 
 
 try: 
-    api_response = api_instance.v1_pause(name, namespace)
+    api_response = api_instance.v1_pause(name, namespace, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1_pause: %s\n" % e)
@@ -5930,6 +5931,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1PauseOptions**](V1PauseOptions.md)|  | 
 
 ### Return type
 
@@ -6197,7 +6199,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_unpause**
-> str v1_unpause(name, namespace)
+> str v1_unpause(name, namespace, body)
 
 
 
@@ -6215,9 +6217,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1UnpauseOptions() # V1UnpauseOptions | 
 
 try: 
-    api_response = api_instance.v1_unpause(name, namespace)
+    api_response = api_instance.v1_unpause(name, namespace, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1_unpause: %s\n" % e)
@@ -6229,6 +6232,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1UnpauseOptions**](V1UnpauseOptions.md)|  | 
 
 ### Return type
 
@@ -6744,7 +6748,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1alpha3_pause**
-> str v1alpha3_pause(name, namespace)
+> str v1alpha3_pause(name, namespace, body)
 
 
 
@@ -6762,9 +6766,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1PauseOptions() # V1PauseOptions | 
 
 try: 
-    api_response = api_instance.v1alpha3_pause(name, namespace)
+    api_response = api_instance.v1alpha3_pause(name, namespace, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1alpha3_pause: %s\n" % e)
@@ -6776,6 +6781,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1PauseOptions**](V1PauseOptions.md)|  | 
 
 ### Return type
 
@@ -7043,7 +7049,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1alpha3_unpause**
-> str v1alpha3_unpause(name, namespace)
+> str v1alpha3_unpause(name, namespace, body)
 
 
 
@@ -7061,9 +7067,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1UnpauseOptions() # V1UnpauseOptions | 
 
 try: 
-    api_response = api_instance.v1alpha3_unpause(name, namespace)
+    api_response = api_instance.v1alpha3_unpause(name, namespace, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1alpha3_unpause: %s\n" % e)
@@ -7075,6 +7082,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1UnpauseOptions**](V1UnpauseOptions.md)|  | 
 
 ### Return type
 

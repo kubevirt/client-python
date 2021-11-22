@@ -163,6 +163,7 @@ from .models.v1_network import V1Network
 from .models.v1_network_configuration import V1NetworkConfiguration
 from .models.v1_node_placement import V1NodePlacement
 from .models.v1_pit_timer import V1PITTimer
+from .models.v1_pause_options import V1PauseOptions
 from .models.v1_pci_host_device import V1PciHostDevice
 from .models.v1_permitted_host_devices import V1PermittedHostDevices
 from .models.v1_persistent_volume_claim_info import V1PersistentVolumeClaimInfo
@@ -195,6 +196,7 @@ from .models.v1_sysprep_source import V1SysprepSource
 from .models.v1_timer import V1Timer
 from .models.v1_token_bucket_rate_limiter import V1TokenBucketRateLimiter
 from .models.v1_topology_hints import V1TopologyHints
+from .models.v1_unpause_options import V1UnpauseOptions
 from .models.v1_user_password_access_credential import V1UserPasswordAccessCredential
 from .models.v1_user_password_access_credential_propagation_method import V1UserPasswordAccessCredentialPropagationMethod
 from .models.v1_user_password_access_credential_source import V1UserPasswordAccessCredentialSource

@@ -163,6 +163,7 @@ from .v1_network import V1Network
 from .v1_network_configuration import V1NetworkConfiguration
 from .v1_node_placement import V1NodePlacement
 from .v1_pit_timer import V1PITTimer
+from .v1_pause_options import V1PauseOptions
 from .v1_pci_host_device import V1PciHostDevice
 from .v1_permitted_host_devices import V1PermittedHostDevices
 from .v1_persistent_volume_claim_info import V1PersistentVolumeClaimInfo
@@ -195,6 +196,7 @@ from .v1_sysprep_source import V1SysprepSource
 from .v1_timer import V1Timer
 from .v1_token_bucket_rate_limiter import V1TokenBucketRateLimiter
 from .v1_topology_hints import V1TopologyHints
+from .v1_unpause_options import V1UnpauseOptions
 from .v1_user_password_access_credential import V1UserPasswordAccessCredential
 from .v1_user_password_access_credential_propagation_method import V1UserPasswordAccessCredentialPropagationMethod
 from .v1_user_password_access_credential_source import V1UserPasswordAccessCredentialSource

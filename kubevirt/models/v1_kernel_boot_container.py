@@ -71,7 +71,7 @@ class V1KernelBootContainer(object):
     def image(self):
         """
         Gets the image of this V1KernelBootContainer.
-        Image that container initrd / kernel files.
+        Image that contains initrd / kernel files.
 
         :return: The image of this V1KernelBootContainer.
         :rtype: str
@@ -82,7 +82,7 @@ class V1KernelBootContainer(object):
     def image(self, image):
         """
         Sets the image of this V1KernelBootContainer.
-        Image that container initrd / kernel files.
+        Image that contains initrd / kernel files.
 
         :param image: The image of this V1KernelBootContainer.
         :type: str

@@ -31,22 +31,26 @@ class V1SoundDevice(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'model': 'str'
+        'model': 'str',
+        'name': 'str'
     }
 
     attribute_map = {
-        'model': 'model'
+        'model': 'model',
+        'name': 'name'
     }
 
-    def __init__(self, model=None):
+    def __init__(self, model=None, name=None):
         """
         V1SoundDevice - a model defined in Swagger
         """
 
         self._model = None
+        self._name = None
 
         if model is not None:
           self.model = model
+        self.name = name
 
     @property
     def model(self):
@@ -70,6 +74,31 @@ class V1SoundDevice(object):
         """
 
         self._model = model
+
+    @property
+    def name(self):
+        """
+        Gets the name of this V1SoundDevice.
+        User's defined name for this sound device
+
+        :return: The name of this V1SoundDevice.
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """
+        Sets the name of this V1SoundDevice.
+        User's defined name for this sound device
+
+        :param name: The name of this V1SoundDevice.
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")
+
+        self._name = name
 
     def to_dict(self):
         """

@@ -903,6 +903,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_soft_reboot(self):
+        """
+        Test case for v1_soft_reboot
+
+        
+        """
+        pass
+
     def test_v1_start(self):
         """
         Test case for v1_start
@@ -1042,6 +1050,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3_restart(self):
         """
         Test case for v1alpha3_restart
+
+        
+        """
+        pass
+
+    def test_v1alpha3_soft_reboot(self):
+        """
+        Test case for v1alpha3_soft_reboot
 
         
         """

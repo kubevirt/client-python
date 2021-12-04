@@ -155,6 +155,7 @@ from .models.v1_machine import V1Machine
 from .models.v1_mediated_devices_configuration import V1MediatedDevicesConfiguration
 from .models.v1_mediated_host_device import V1MediatedHostDevice
 from .models.v1_memory import V1Memory
+from .models.v1_migrate_options import V1MigrateOptions
 from .models.v1_migration_configuration import V1MigrationConfiguration
 from .models.v1_multus_network import V1MultusNetwork
 from .models.v1_numa import V1NUMA

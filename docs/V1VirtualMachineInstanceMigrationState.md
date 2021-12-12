@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **completed** | **bool** | Indicates the migration completed | [optional] 
 **end_timestamp** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) | The time the migration action ended | [optional] 
 **failed** | **bool** | Indicates that the migration failed | [optional] 
+**migration_configuration** | [**V1MigrationConfiguration**](V1MigrationConfiguration.md) | Migration configurations to apply | [optional] 
+**migration_policy_name** | **str** | Name of the migration policy. If string is empty, no policy is matched | [optional] 
 **migration_uid** | **str** | The VirtualMachineInstanceMigration object associated with this migration | [optional] 
 **mode** | **str** | Lets us know if the vmi is currently running pre or post copy migration | [optional] 
 **source_node** | **str** | The source node that the VMI originated on | [optional] 

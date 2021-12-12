@@ -36,6 +36,8 @@ class V1VirtualMachineInstanceMigrationState(object):
         'completed': 'bool',
         'end_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'failed': 'bool',
+        'migration_configuration': 'V1MigrationConfiguration',
+        'migration_policy_name': 'str',
         'migration_uid': 'str',
         'mode': 'str',
         'source_node': 'str',
@@ -54,6 +56,8 @@ class V1VirtualMachineInstanceMigrationState(object):
         'completed': 'completed',
         'end_timestamp': 'endTimestamp',
         'failed': 'failed',
+        'migration_configuration': 'migrationConfiguration',
+        'migration_policy_name': 'migrationPolicyName',
         'migration_uid': 'migrationUid',
         'mode': 'mode',
         'source_node': 'sourceNode',
@@ -66,7 +70,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'target_pod': 'targetPod'
     }
 
-    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, migration_uid=None, mode=None, source_node=None, start_timestamp=None, target_attachment_pod_uid=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_pod=None):
+    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, migration_configuration=None, migration_policy_name=None, migration_uid=None, mode=None, source_node=None, start_timestamp=None, target_attachment_pod_uid=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_pod=None):
         """
         V1VirtualMachineInstanceMigrationState - a model defined in Swagger
         """
@@ -76,6 +80,8 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._completed = None
         self._end_timestamp = None
         self._failed = None
+        self._migration_configuration = None
+        self._migration_policy_name = None
         self._migration_uid = None
         self._mode = None
         self._source_node = None
@@ -97,6 +103,10 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.end_timestamp = end_timestamp
         if failed is not None:
           self.failed = failed
+        if migration_configuration is not None:
+          self.migration_configuration = migration_configuration
+        if migration_policy_name is not None:
+          self.migration_policy_name = migration_policy_name
         if migration_uid is not None:
           self.migration_uid = migration_uid
         if mode is not None:
@@ -232,6 +242,52 @@ class V1VirtualMachineInstanceMigrationState(object):
         """
 
         self._failed = failed
+
+    @property
+    def migration_configuration(self):
+        """
+        Gets the migration_configuration of this V1VirtualMachineInstanceMigrationState.
+        Migration configurations to apply
+
+        :return: The migration_configuration of this V1VirtualMachineInstanceMigrationState.
+        :rtype: V1MigrationConfiguration
+        """
+        return self._migration_configuration
+
+    @migration_configuration.setter
+    def migration_configuration(self, migration_configuration):
+        """
+        Sets the migration_configuration of this V1VirtualMachineInstanceMigrationState.
+        Migration configurations to apply
+
+        :param migration_configuration: The migration_configuration of this V1VirtualMachineInstanceMigrationState.
+        :type: V1MigrationConfiguration
+        """
+
+        self._migration_configuration = migration_configuration
+
+    @property
+    def migration_policy_name(self):
+        """
+        Gets the migration_policy_name of this V1VirtualMachineInstanceMigrationState.
+        Name of the migration policy. If string is empty, no policy is matched
+
+        :return: The migration_policy_name of this V1VirtualMachineInstanceMigrationState.
+        :rtype: str
+        """
+        return self._migration_policy_name
+
+    @migration_policy_name.setter
+    def migration_policy_name(self, migration_policy_name):
+        """
+        Sets the migration_policy_name of this V1VirtualMachineInstanceMigrationState.
+        Name of the migration policy. If string is empty, no policy is matched
+
+        :param migration_policy_name: The migration_policy_name of this V1VirtualMachineInstanceMigrationState.
+        :type: str
+        """
+
+        self._migration_policy_name = migration_policy_name
 
     @property
     def migration_uid(self):

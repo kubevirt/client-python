@@ -31,6 +31,14 @@ class TestDefaultApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_create_migration_policy(self):
+        """
+        Test case for create_migration_policy
+
+        
+        """
+        pass
+
     def test_create_namespaced_kube_virt(self):
         """
         Test case for create_namespaced_kube_virt
@@ -119,6 +127,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_collection_migration_policy(self):
+        """
+        Test case for delete_collection_migration_policy
+
+        
+        """
+        pass
+
     def test_delete_collection_namespaced_kube_virt(self):
         """
         Test case for delete_collection_namespaced_kube_virt
@@ -202,6 +218,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_delete_collection_virtual_machine_cluster_flavor(self):
         """
         Test case for delete_collection_virtual_machine_cluster_flavor
+
+        
+        """
+        pass
+
+    def test_delete_migration_policy(self):
+        """
+        Test case for delete_migration_policy
 
         
         """
@@ -335,6 +359,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_get_api_group_migrations_kubevirt_io(self):
+        """
+        Test case for get_api_group_migrations_kubevirt_io
+
+        
+        """
+        pass
+
     def test_get_api_group_snapshot_kubevirt_io(self):
         """
         Test case for get_api_group_snapshot_kubevirt_io
@@ -354,6 +386,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_get_api_resources_kubevirt_io_v1(self):
         """
         Test case for get_api_resources_kubevirt_io_v1
+
+        
+        """
+        pass
+
+    def test_get_api_resources_migrations_kubevirt_io_v1alpha1(self):
+        """
+        Test case for get_api_resources_migrations_kubevirt_io_v1alpha1
 
         
         """
@@ -402,6 +442,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_list_kube_virt_for_all_namespaces(self):
         """
         Test case for list_kube_virt_for_all_namespaces
+
+        
+        """
+        pass
+
+    def test_list_migration_policy(self):
+        """
+        Test case for list_migration_policy
 
         
         """
@@ -567,6 +615,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_migration_policy(self):
+        """
+        Test case for patch_migration_policy
+
+        
+        """
+        pass
+
     def test_patch_namespaced_kube_virt(self):
         """
         Test case for patch_namespaced_kube_virt
@@ -655,6 +711,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_read_migration_policy(self):
+        """
+        Test case for read_migration_policy
+
+        
+        """
+        pass
+
     def test_read_namespaced_kube_virt(self):
         """
         Test case for read_namespaced_kube_virt
@@ -738,6 +802,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_read_virtual_machine_cluster_flavor(self):
         """
         Test case for read_virtual_machine_cluster_flavor
+
+        
+        """
+        pass
+
+    def test_replace_migration_policy(self):
+        """
+        Test case for replace_migration_policy
 
         
         """
@@ -1338,6 +1410,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_watch_kube_virt_list_for_all_namespaces(self):
         """
         Test case for watch_kube_virt_list_for_all_namespaces
+
+        
+        """
+        pass
+
+    def test_watch_migration_policy_list_for_all_namespaces(self):
+        """
+        Test case for watch_migration_policy_list_for_all_namespaces
 
         
         """

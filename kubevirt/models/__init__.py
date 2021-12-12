@@ -246,7 +246,12 @@ from .v1_volume_status import V1VolumeStatus
 from .v1_watchdog import V1Watchdog
 from .v1alpha1_condition import V1alpha1Condition
 from .v1alpha1_error import V1alpha1Error
+from .v1alpha1_migration_policy import V1alpha1MigrationPolicy
+from .v1alpha1_migration_policy_list import V1alpha1MigrationPolicyList
+from .v1alpha1_migration_policy_spec import V1alpha1MigrationPolicySpec
+from .v1alpha1_migration_policy_status import V1alpha1MigrationPolicyStatus
 from .v1alpha1_persistent_volume_claim import V1alpha1PersistentVolumeClaim
+from .v1alpha1_selectors import V1alpha1Selectors
 from .v1alpha1_source_spec import V1alpha1SourceSpec
 from .v1alpha1_virtual_machine_cluster_flavor import V1alpha1VirtualMachineClusterFlavor
 from .v1alpha1_virtual_machine_cluster_flavor_list import V1alpha1VirtualMachineClusterFlavorList

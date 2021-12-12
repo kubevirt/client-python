@@ -73,7 +73,7 @@ class ApiClient(object):
             self.host = host
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Swagger-Codegen/v0.48.0-rc.0-20-g77193f178/python'
+        self.user_agent = 'Swagger-Codegen/v0.48.0-98-g69ed3d661/python'
 
     @property
     def user_agent(self):

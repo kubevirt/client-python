@@ -31,21 +31,49 @@ class V1RemoveVolumeOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'dry_run': 'list[str]',
         'name': 'str'
     }
 
     attribute_map = {
+        'dry_run': 'dryRun',
         'name': 'name'
     }
 
-    def __init__(self, name=None):
+    def __init__(self, dry_run=None, name=None):
         """
         V1RemoveVolumeOptions - a model defined in Swagger
         """
 
+        self._dry_run = None
         self._name = None
 
+        if dry_run is not None:
+          self.dry_run = dry_run
         self.name = name
+
+    @property
+    def dry_run(self):
+        """
+        Gets the dry_run of this V1RemoveVolumeOptions.
+        When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
+
+        :return: The dry_run of this V1RemoveVolumeOptions.
+        :rtype: list[str]
+        """
+        return self._dry_run
+
+    @dry_run.setter
+    def dry_run(self, dry_run):
+        """
+        Sets the dry_run of this V1RemoveVolumeOptions.
+        When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
+
+        :param dry_run: The dry_run of this V1RemoveVolumeOptions.
+        :type: list[str]
+        """
+
+        self._dry_run = dry_run
 
     @property
     def name(self):

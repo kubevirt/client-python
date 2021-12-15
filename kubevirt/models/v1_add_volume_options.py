@@ -32,26 +32,31 @@ class V1AddVolumeOptions(object):
     """
     swagger_types = {
         'disk': 'V1Disk',
+        'dry_run': 'list[str]',
         'name': 'str',
         'volume_source': 'V1HotplugVolumeSource'
     }
 
     attribute_map = {
         'disk': 'disk',
+        'dry_run': 'dryRun',
         'name': 'name',
         'volume_source': 'volumeSource'
     }
 
-    def __init__(self, disk=None, name=None, volume_source=None):
+    def __init__(self, disk=None, dry_run=None, name=None, volume_source=None):
         """
         V1AddVolumeOptions - a model defined in Swagger
         """
 
         self._disk = None
+        self._dry_run = None
         self._name = None
         self._volume_source = None
 
         self.disk = disk
+        if dry_run is not None:
+          self.dry_run = dry_run
         self.name = name
         self.volume_source = volume_source
 
@@ -79,6 +84,29 @@ class V1AddVolumeOptions(object):
             raise ValueError("Invalid value for `disk`, must not be `None`")
 
         self._disk = disk
+
+    @property
+    def dry_run(self):
+        """
+        Gets the dry_run of this V1AddVolumeOptions.
+        When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
+
+        :return: The dry_run of this V1AddVolumeOptions.
+        :rtype: list[str]
+        """
+        return self._dry_run
+
+    @dry_run.setter
+    def dry_run(self, dry_run):
+        """
+        Sets the dry_run of this V1AddVolumeOptions.
+        When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
+
+        :param dry_run: The dry_run of this V1AddVolumeOptions.
+        :type: list[str]
+        """
+
+        self._dry_run = dry_run
 
     @property
     def name(self):

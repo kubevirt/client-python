@@ -95,6 +95,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_create_namespaced_virtual_machine_pool(self):
+        """
+        Test case for create_namespaced_virtual_machine_pool
+
+        
+        """
+        pass
+
     def test_create_namespaced_virtual_machine_restore(self):
         """
         Test case for create_namespaced_virtual_machine_restore
@@ -186,6 +194,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_delete_collection_namespaced_virtual_machine_instance_replica_set(self):
         """
         Test case for delete_collection_namespaced_virtual_machine_instance_replica_set
+
+        
+        """
+        pass
+
+    def test_delete_collection_namespaced_virtual_machine_pool(self):
+        """
+        Test case for delete_collection_namespaced_virtual_machine_pool
 
         
         """
@@ -287,6 +303,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_namespaced_virtual_machine_pool(self):
+        """
+        Test case for delete_namespaced_virtual_machine_pool
+
+        
+        """
+        pass
+
     def test_delete_namespaced_virtual_machine_restore(self):
         """
         Test case for delete_namespaced_virtual_machine_restore
@@ -367,6 +391,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_get_api_group_pool_kubevirt_io(self):
+        """
+        Test case for get_api_group_pool_kubevirt_io
+
+        
+        """
+        pass
+
     def test_get_api_group_snapshot_kubevirt_io(self):
         """
         Test case for get_api_group_snapshot_kubevirt_io
@@ -394,6 +426,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_get_api_resources_migrations_kubevirt_io_v1alpha1(self):
         """
         Test case for get_api_resources_migrations_kubevirt_io_v1alpha1
+
+        
+        """
+        pass
+
+    def test_get_api_resources_pool_kubevirt_io_v1alpha1(self):
+        """
+        Test case for get_api_resources_pool_kubevirt_io_v1alpha1
 
         
         """
@@ -511,6 +551,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_list_namespaced_virtual_machine_pool(self):
+        """
+        Test case for list_namespaced_virtual_machine_pool
+
+        
+        """
+        pass
+
     def test_list_namespaced_virtual_machine_restore(self):
         """
         Test case for list_namespaced_virtual_machine_restore
@@ -586,6 +634,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_list_virtual_machine_instance_replica_set_for_all_namespaces(self):
         """
         Test case for list_virtual_machine_instance_replica_set_for_all_namespaces
+
+        
+        """
+        pass
+
+    def test_list_virtual_machine_pool_for_all_namespaces(self):
+        """
+        Test case for list_virtual_machine_pool_for_all_namespaces
 
         
         """
@@ -674,6 +730,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_patch_namespaced_virtual_machine_instance_replica_set(self):
         """
         Test case for patch_namespaced_virtual_machine_instance_replica_set
+
+        
+        """
+        pass
+
+    def test_patch_namespaced_virtual_machine_pool(self):
+        """
+        Test case for patch_namespaced_virtual_machine_pool
 
         
         """
@@ -775,6 +839,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_read_namespaced_virtual_machine_pool(self):
+        """
+        Test case for read_namespaced_virtual_machine_pool
+
+        
+        """
+        pass
+
     def test_read_namespaced_virtual_machine_restore(self):
         """
         Test case for read_namespaced_virtual_machine_restore
@@ -866,6 +938,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_replace_namespaced_virtual_machine_instance_replica_set(self):
         """
         Test case for replace_namespaced_virtual_machine_instance_replica_set
+
+        
+        """
+        pass
+
+    def test_replace_namespaced_virtual_machine_pool(self):
+        """
+        Test case for replace_namespaced_virtual_machine_pool
 
         
         """
@@ -1479,6 +1559,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_watch_namespaced_virtual_machine_pool(self):
+        """
+        Test case for watch_namespaced_virtual_machine_pool
+
+        
+        """
+        pass
+
     def test_watch_namespaced_virtual_machine_restore(self):
         """
         Test case for watch_namespaced_virtual_machine_restore
@@ -1554,6 +1642,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_watch_virtual_machine_list_for_all_namespaces(self):
         """
         Test case for watch_virtual_machine_list_for_all_namespaces
+
+        
+        """
+        pass
+
+    def test_watch_virtual_machine_pool_list_for_all_namespaces(self):
+        """
+        Test case for watch_virtual_machine_pool_list_for_all_namespaces
 
         
         """

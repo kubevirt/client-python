@@ -36,6 +36,7 @@ class V1MigrationConfiguration(object):
         'bandwidth_per_migration': 'K8sIoApimachineryPkgApiResourceQuantity',
         'completion_timeout_per_gi_b': 'int',
         'disable_tls': 'bool',
+        'network': 'str',
         'node_drain_taint_key': 'str',
         'parallel_migrations_per_cluster': 'int',
         'parallel_outbound_migrations_per_node': 'int',
@@ -49,6 +50,7 @@ class V1MigrationConfiguration(object):
         'bandwidth_per_migration': 'bandwidthPerMigration',
         'completion_timeout_per_gi_b': 'completionTimeoutPerGiB',
         'disable_tls': 'disableTLS',
+        'network': 'network',
         'node_drain_taint_key': 'nodeDrainTaintKey',
         'parallel_migrations_per_cluster': 'parallelMigrationsPerCluster',
         'parallel_outbound_migrations_per_node': 'parallelOutboundMigrationsPerNode',
@@ -56,7 +58,7 @@ class V1MigrationConfiguration(object):
         'unsafe_migration_override': 'unsafeMigrationOverride'
     }
 
-    def __init__(self, allow_auto_converge=None, allow_post_copy=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, disable_tls=None, node_drain_taint_key=None, parallel_migrations_per_cluster=None, parallel_outbound_migrations_per_node=None, progress_timeout=None, unsafe_migration_override=None):
+    def __init__(self, allow_auto_converge=None, allow_post_copy=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, disable_tls=None, network=None, node_drain_taint_key=None, parallel_migrations_per_cluster=None, parallel_outbound_migrations_per_node=None, progress_timeout=None, unsafe_migration_override=None):
         """
         V1MigrationConfiguration - a model defined in Swagger
         """
@@ -66,6 +68,7 @@ class V1MigrationConfiguration(object):
         self._bandwidth_per_migration = None
         self._completion_timeout_per_gi_b = None
         self._disable_tls = None
+        self._network = None
         self._node_drain_taint_key = None
         self._parallel_migrations_per_cluster = None
         self._parallel_outbound_migrations_per_node = None
@@ -82,6 +85,8 @@ class V1MigrationConfiguration(object):
           self.completion_timeout_per_gi_b = completion_timeout_per_gi_b
         if disable_tls is not None:
           self.disable_tls = disable_tls
+        if network is not None:
+          self.network = network
         if node_drain_taint_key is not None:
           self.node_drain_taint_key = node_drain_taint_key
         if parallel_migrations_per_cluster is not None:
@@ -197,6 +202,27 @@ class V1MigrationConfiguration(object):
         """
 
         self._disable_tls = disable_tls
+
+    @property
+    def network(self):
+        """
+        Gets the network of this V1MigrationConfiguration.
+
+        :return: The network of this V1MigrationConfiguration.
+        :rtype: str
+        """
+        return self._network
+
+    @network.setter
+    def network(self, network):
+        """
+        Sets the network of this V1MigrationConfiguration.
+
+        :param network: The network of this V1MigrationConfiguration.
+        :type: str
+        """
+
+        self._network = network
 
     @property
     def node_drain_taint_key(self):

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **bandwidth_per_migration** | [**K8sIoApimachineryPkgApiResourceQuantity**](K8sIoApimachineryPkgApiResourceQuantity.md) |  | [optional] 
 **completion_timeout_per_gi_b** | **int** |  | [optional] 
 **disable_tls** | **bool** |  | [optional] 
+**network** | **str** |  | [optional] 
 **node_drain_taint_key** | **str** |  | [optional] 
 **parallel_migrations_per_cluster** | **int** |  | [optional] 
 **parallel_outbound_migrations_per_node** | **int** |  | [optional] 

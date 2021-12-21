@@ -162,6 +162,7 @@ from .v1_numa import V1NUMA
 from .v1_numa_guest_mapping_passthrough import V1NUMAGuestMappingPassthrough
 from .v1_network import V1Network
 from .v1_network_configuration import V1NetworkConfiguration
+from .v1_node_mediated_device_types_config import V1NodeMediatedDeviceTypesConfig
 from .v1_node_placement import V1NodePlacement
 from .v1_pit_timer import V1PITTimer
 from .v1_pause_options import V1PauseOptions

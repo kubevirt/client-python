@@ -35,7 +35,6 @@ class V1alpha1MigrationPolicySpec(object):
         'allow_post_copy': 'bool',
         'bandwidth_per_migration': 'K8sIoApimachineryPkgApiResourceQuantity',
         'completion_timeout_per_gi_b': 'int',
-        'disable_tls': 'bool',
         'selectors': 'V1alpha1Selectors'
     }
 
@@ -44,11 +43,10 @@ class V1alpha1MigrationPolicySpec(object):
         'allow_post_copy': 'allowPostCopy',
         'bandwidth_per_migration': 'bandwidthPerMigration',
         'completion_timeout_per_gi_b': 'completionTimeoutPerGiB',
-        'disable_tls': 'disableTLS',
         'selectors': 'selectors'
     }
 
-    def __init__(self, allow_auto_converge=None, allow_post_copy=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, disable_tls=None, selectors=None):
+    def __init__(self, allow_auto_converge=None, allow_post_copy=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, selectors=None):
         """
         V1alpha1MigrationPolicySpec - a model defined in Swagger
         """
@@ -57,7 +55,6 @@ class V1alpha1MigrationPolicySpec(object):
         self._allow_post_copy = None
         self._bandwidth_per_migration = None
         self._completion_timeout_per_gi_b = None
-        self._disable_tls = None
         self._selectors = None
 
         if allow_auto_converge is not None:
@@ -68,8 +65,6 @@ class V1alpha1MigrationPolicySpec(object):
           self.bandwidth_per_migration = bandwidth_per_migration
         if completion_timeout_per_gi_b is not None:
           self.completion_timeout_per_gi_b = completion_timeout_per_gi_b
-        if disable_tls is not None:
-          self.disable_tls = disable_tls
         self.selectors = selectors
 
     @property
@@ -155,27 +150,6 @@ class V1alpha1MigrationPolicySpec(object):
         """
 
         self._completion_timeout_per_gi_b = completion_timeout_per_gi_b
-
-    @property
-    def disable_tls(self):
-        """
-        Gets the disable_tls of this V1alpha1MigrationPolicySpec.
-
-        :return: The disable_tls of this V1alpha1MigrationPolicySpec.
-        :rtype: bool
-        """
-        return self._disable_tls
-
-    @disable_tls.setter
-    def disable_tls(self, disable_tls):
-        """
-        Sets the disable_tls of this V1alpha1MigrationPolicySpec.
-
-        :param disable_tls: The disable_tls of this V1alpha1MigrationPolicySpec.
-        :type: bool
-        """
-
-        self._disable_tls = disable_tls
 
     @property
     def selectors(self):

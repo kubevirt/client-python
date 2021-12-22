@@ -38,6 +38,7 @@ class V1DomainSpec(object):
         'features': 'V1Features',
         'firmware': 'V1Firmware',
         'io_threads_policy': 'str',
+        'launch_security': 'V1LaunchSecurity',
         'machine': 'V1Machine',
         'memory': 'V1Memory',
         'resources': 'V1ResourceRequirements'
@@ -51,12 +52,13 @@ class V1DomainSpec(object):
         'features': 'features',
         'firmware': 'firmware',
         'io_threads_policy': 'ioThreadsPolicy',
+        'launch_security': 'launchSecurity',
         'machine': 'machine',
         'memory': 'memory',
         'resources': 'resources'
     }
 
-    def __init__(self, chassis=None, clock=None, cpu=None, devices=None, features=None, firmware=None, io_threads_policy=None, machine=None, memory=None, resources=None):
+    def __init__(self, chassis=None, clock=None, cpu=None, devices=None, features=None, firmware=None, io_threads_policy=None, launch_security=None, machine=None, memory=None, resources=None):
         """
         V1DomainSpec - a model defined in Swagger
         """
@@ -68,6 +70,7 @@ class V1DomainSpec(object):
         self._features = None
         self._firmware = None
         self._io_threads_policy = None
+        self._launch_security = None
         self._machine = None
         self._memory = None
         self._resources = None
@@ -85,6 +88,8 @@ class V1DomainSpec(object):
           self.firmware = firmware
         if io_threads_policy is not None:
           self.io_threads_policy = io_threads_policy
+        if launch_security is not None:
+          self.launch_security = launch_security
         if machine is not None:
           self.machine = machine
         if memory is not None:
@@ -254,6 +259,29 @@ class V1DomainSpec(object):
         """
 
         self._io_threads_policy = io_threads_policy
+
+    @property
+    def launch_security(self):
+        """
+        Gets the launch_security of this V1DomainSpec.
+        Launch Security setting of the vmi.
+
+        :return: The launch_security of this V1DomainSpec.
+        :rtype: V1LaunchSecurity
+        """
+        return self._launch_security
+
+    @launch_security.setter
+    def launch_security(self, launch_security):
+        """
+        Sets the launch_security of this V1DomainSpec.
+        Launch Security setting of the vmi.
+
+        :param launch_security: The launch_security of this V1DomainSpec.
+        :type: V1LaunchSecurity
+        """
+
+        self._launch_security = launch_security
 
     @property
     def machine(self):

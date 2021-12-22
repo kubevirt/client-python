@@ -149,6 +149,7 @@ from .v1_kube_virt_self_sign_configuration import V1KubeVirtSelfSignConfiguratio
 from .v1_kube_virt_spec import V1KubeVirtSpec
 from .v1_kube_virt_status import V1KubeVirtStatus
 from .v1_kube_virt_workload_update_strategy import V1KubeVirtWorkloadUpdateStrategy
+from .v1_launch_security import V1LaunchSecurity
 from .v1_log_verbosity import V1LogVerbosity
 from .v1_lun_target import V1LunTarget
 from .v1_machine import V1Machine
@@ -184,6 +185,7 @@ from .v1_remove_volume_options import V1RemoveVolumeOptions
 from .v1_resource_requirements import V1ResourceRequirements
 from .v1_restart_options import V1RestartOptions
 from .v1_rng import V1Rng
+from .v1_sev import V1SEV
 from .v1_sm_bios_configuration import V1SMBiosConfiguration
 from .v1_ssh_public_key_access_credential import V1SSHPublicKeyAccessCredential
 from .v1_ssh_public_key_access_credential_propagation_method import V1SSHPublicKeyAccessCredentialPropagationMethod

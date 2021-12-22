@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **features** | [**V1Features**](V1Features.md) | Features like acpi, apic, hyperv, smm. | [optional] 
 **firmware** | [**V1Firmware**](V1Firmware.md) | Firmware. | [optional] 
 **io_threads_policy** | **str** | Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto | [optional] 
+**launch_security** | [**V1LaunchSecurity**](V1LaunchSecurity.md) | Launch Security setting of the vmi. | [optional] 
 **machine** | [**V1Machine**](V1Machine.md) | Machine type. | [optional] 
 **memory** | [**V1Memory**](V1Memory.md) | Memory allow specifying the VMI memory features. | [optional] 
 **resources** | [**V1ResourceRequirements**](V1ResourceRequirements.md) | Resources describes the Compute Resources required by this vmi. | [optional] 

@@ -31,6 +31,7 @@ class V1VirtualMachineInstanceNetworkInterface(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'info_source': 'str',
         'interface_name': 'str',
         'ip_address': 'str',
         'ip_addresses': 'list[str]',
@@ -39,6 +40,7 @@ class V1VirtualMachineInstanceNetworkInterface(object):
     }
 
     attribute_map = {
+        'info_source': 'infoSource',
         'interface_name': 'interfaceName',
         'ip_address': 'ipAddress',
         'ip_addresses': 'ipAddresses',
@@ -46,17 +48,20 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         'name': 'name'
     }
 
-    def __init__(self, interface_name=None, ip_address=None, ip_addresses=None, mac=None, name=None):
+    def __init__(self, info_source=None, interface_name=None, ip_address=None, ip_addresses=None, mac=None, name=None):
         """
         V1VirtualMachineInstanceNetworkInterface - a model defined in Swagger
         """
 
+        self._info_source = None
         self._interface_name = None
         self._ip_address = None
         self._ip_addresses = None
         self._mac = None
         self._name = None
 
+        if info_source is not None:
+          self.info_source = info_source
         if interface_name is not None:
           self.interface_name = interface_name
         if ip_address is not None:
@@ -67,6 +72,29 @@ class V1VirtualMachineInstanceNetworkInterface(object):
           self.mac = mac
         if name is not None:
           self.name = name
+
+    @property
+    def info_source(self):
+        """
+        Gets the info_source of this V1VirtualMachineInstanceNetworkInterface.
+        Specifies the origin of the interface data collected. values: domain, guest-agent, or both
+
+        :return: The info_source of this V1VirtualMachineInstanceNetworkInterface.
+        :rtype: str
+        """
+        return self._info_source
+
+    @info_source.setter
+    def info_source(self, info_source):
+        """
+        Sets the info_source of this V1VirtualMachineInstanceNetworkInterface.
+        Specifies the origin of the interface data collected. values: domain, guest-agent, or both
+
+        :param info_source: The info_source of this V1VirtualMachineInstanceNetworkInterface.
+        :type: str
+        """
+
+        self._info_source = info_source
 
     @property
     def interface_name(self):

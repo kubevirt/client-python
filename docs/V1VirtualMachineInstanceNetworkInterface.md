@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**info_source** | **str** | Specifies the origin of the interface data collected. values: domain, guest-agent, or both | [optional] 
 **interface_name** | **str** | The interface name inside the Virtual Machine | [optional] 
 **ip_address** | **str** | IP address of a Virtual Machine interface. It is always the first item of IPs | [optional] 
 **ip_addresses** | **list[str]** | List of all IP addresses of a Virtual Machine interface | [optional] 

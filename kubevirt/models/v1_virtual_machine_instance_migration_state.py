@@ -43,10 +43,12 @@ class V1VirtualMachineInstanceMigrationState(object):
         'source_node': 'str',
         'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'target_attachment_pod_uid': 'str',
+        'target_cpu_set': 'list[int]',
         'target_direct_migration_node_ports': 'dict(str, int)',
         'target_node': 'str',
         'target_node_address': 'str',
         'target_node_domain_detected': 'bool',
+        'target_node_topology': 'str',
         'target_pod': 'str'
     }
 
@@ -63,14 +65,16 @@ class V1VirtualMachineInstanceMigrationState(object):
         'source_node': 'sourceNode',
         'start_timestamp': 'startTimestamp',
         'target_attachment_pod_uid': 'targetAttachmentPodUID',
+        'target_cpu_set': 'targetCPUSet',
         'target_direct_migration_node_ports': 'targetDirectMigrationNodePorts',
         'target_node': 'targetNode',
         'target_node_address': 'targetNodeAddress',
         'target_node_domain_detected': 'targetNodeDomainDetected',
+        'target_node_topology': 'targetNodeTopology',
         'target_pod': 'targetPod'
     }
 
-    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, migration_configuration=None, migration_policy_name=None, migration_uid=None, mode=None, source_node=None, start_timestamp=None, target_attachment_pod_uid=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_pod=None):
+    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, migration_configuration=None, migration_policy_name=None, migration_uid=None, mode=None, source_node=None, start_timestamp=None, target_attachment_pod_uid=None, target_cpu_set=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_node_topology=None, target_pod=None):
         """
         V1VirtualMachineInstanceMigrationState - a model defined in Swagger
         """
@@ -87,10 +91,12 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._source_node = None
         self._start_timestamp = None
         self._target_attachment_pod_uid = None
+        self._target_cpu_set = None
         self._target_direct_migration_node_ports = None
         self._target_node = None
         self._target_node_address = None
         self._target_node_domain_detected = None
+        self._target_node_topology = None
         self._target_pod = None
 
         if abort_requested is not None:
@@ -117,6 +123,8 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.start_timestamp = start_timestamp
         if target_attachment_pod_uid is not None:
           self.target_attachment_pod_uid = target_attachment_pod_uid
+        if target_cpu_set is not None:
+          self.target_cpu_set = target_cpu_set
         if target_direct_migration_node_ports is not None:
           self.target_direct_migration_node_ports = target_direct_migration_node_ports
         if target_node is not None:
@@ -125,6 +133,8 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.target_node_address = target_node_address
         if target_node_domain_detected is not None:
           self.target_node_domain_detected = target_node_domain_detected
+        if target_node_topology is not None:
+          self.target_node_topology = target_node_topology
         if target_pod is not None:
           self.target_pod = target_pod
 
@@ -405,6 +415,29 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._target_attachment_pod_uid = target_attachment_pod_uid
 
     @property
+    def target_cpu_set(self):
+        """
+        Gets the target_cpu_set of this V1VirtualMachineInstanceMigrationState.
+        If the VMI requires dedicated CPUs, this field will hold the dedicated CPU set on the target node
+
+        :return: The target_cpu_set of this V1VirtualMachineInstanceMigrationState.
+        :rtype: list[int]
+        """
+        return self._target_cpu_set
+
+    @target_cpu_set.setter
+    def target_cpu_set(self, target_cpu_set):
+        """
+        Sets the target_cpu_set of this V1VirtualMachineInstanceMigrationState.
+        If the VMI requires dedicated CPUs, this field will hold the dedicated CPU set on the target node
+
+        :param target_cpu_set: The target_cpu_set of this V1VirtualMachineInstanceMigrationState.
+        :type: list[int]
+        """
+
+        self._target_cpu_set = target_cpu_set
+
+    @property
     def target_direct_migration_node_ports(self):
         """
         Gets the target_direct_migration_node_ports of this V1VirtualMachineInstanceMigrationState.
@@ -495,6 +528,29 @@ class V1VirtualMachineInstanceMigrationState(object):
         """
 
         self._target_node_domain_detected = target_node_domain_detected
+
+    @property
+    def target_node_topology(self):
+        """
+        Gets the target_node_topology of this V1VirtualMachineInstanceMigrationState.
+        If the VMI requires dedicated CPUs, this field will hold the numa topology on the target node
+
+        :return: The target_node_topology of this V1VirtualMachineInstanceMigrationState.
+        :rtype: str
+        """
+        return self._target_node_topology
+
+    @target_node_topology.setter
+    def target_node_topology(self, target_node_topology):
+        """
+        Sets the target_node_topology of this V1VirtualMachineInstanceMigrationState.
+        If the VMI requires dedicated CPUs, this field will hold the numa topology on the target node
+
+        :param target_node_topology: The target_node_topology of this V1VirtualMachineInstanceMigrationState.
+        :type: str
+        """
+
+        self._target_node_topology = target_node_topology
 
     @property
     def target_pod(self):

@@ -32,24 +32,29 @@ class V1HostDevice(object):
     """
     swagger_types = {
         'device_name': 'str',
-        'name': 'str'
+        'name': 'str',
+        'tag': 'str'
     }
 
     attribute_map = {
         'device_name': 'deviceName',
-        'name': 'name'
+        'name': 'name',
+        'tag': 'tag'
     }
 
-    def __init__(self, device_name=None, name=None):
+    def __init__(self, device_name=None, name=None, tag=None):
         """
         V1HostDevice - a model defined in Swagger
         """
 
         self._device_name = None
         self._name = None
+        self._tag = None
 
         self.device_name = device_name
         self.name = name
+        if tag is not None:
+          self.tag = tag
 
     @property
     def device_name(self):
@@ -98,6 +103,29 @@ class V1HostDevice(object):
             raise ValueError("Invalid value for `name`, must not be `None`")
 
         self._name = name
+
+    @property
+    def tag(self):
+        """
+        Gets the tag of this V1HostDevice.
+        If specified, the virtual network interface address and its tag will be provided to the guest via config drive
+
+        :return: The tag of this V1HostDevice.
+        :rtype: str
+        """
+        return self._tag
+
+    @tag.setter
+    def tag(self, tag):
+        """
+        Sets the tag of this V1HostDevice.
+        If specified, the virtual network interface address and its tag will be provided to the guest via config drive
+
+        :param tag: The tag of this V1HostDevice.
+        :type: str
+        """
+
+        self._tag = tag
 
     def to_dict(self):
         """

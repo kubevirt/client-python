@@ -33,26 +33,31 @@ class V1GPU(object):
     swagger_types = {
         'device_name': 'str',
         'name': 'str',
+        'tag': 'str',
         'virtual_gpu_options': 'V1VGPUOptions'
     }
 
     attribute_map = {
         'device_name': 'deviceName',
         'name': 'name',
+        'tag': 'tag',
         'virtual_gpu_options': 'virtualGPUOptions'
     }
 
-    def __init__(self, device_name=None, name=None, virtual_gpu_options=None):
+    def __init__(self, device_name=None, name=None, tag=None, virtual_gpu_options=None):
         """
         V1GPU - a model defined in Swagger
         """
 
         self._device_name = None
         self._name = None
+        self._tag = None
         self._virtual_gpu_options = None
 
         self.device_name = device_name
         self.name = name
+        if tag is not None:
+          self.tag = tag
         if virtual_gpu_options is not None:
           self.virtual_gpu_options = virtual_gpu_options
 
@@ -103,6 +108,29 @@ class V1GPU(object):
             raise ValueError("Invalid value for `name`, must not be `None`")
 
         self._name = name
+
+    @property
+    def tag(self):
+        """
+        Gets the tag of this V1GPU.
+        If specified, the virtual network interface address and its tag will be provided to the guest via config drive
+
+        :return: The tag of this V1GPU.
+        :rtype: str
+        """
+        return self._tag
+
+    @tag.setter
+    def tag(self, tag):
+        """
+        Sets the tag of this V1GPU.
+        If specified, the virtual network interface address and its tag will be provided to the guest via config drive
+
+        :param tag: The tag of this V1GPU.
+        :type: str
+        """
+
+        self._tag = tag
 
     @property
     def virtual_gpu_options(self):

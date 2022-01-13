@@ -35,6 +35,7 @@ class V1PersistentVolumeClaimInfo(object):
         'capacity': 'dict(str, K8sIoApimachineryPkgApiResourceQuantity)',
         'filesystem_overhead': 'str',
         'preallocated': 'bool',
+        'requests': 'dict(str, K8sIoApimachineryPkgApiResourceQuantity)',
         'volume_mode': 'str'
     }
 
@@ -43,10 +44,11 @@ class V1PersistentVolumeClaimInfo(object):
         'capacity': 'capacity',
         'filesystem_overhead': 'filesystemOverhead',
         'preallocated': 'preallocated',
+        'requests': 'requests',
         'volume_mode': 'volumeMode'
     }
 
-    def __init__(self, access_modes=None, capacity=None, filesystem_overhead=None, preallocated=None, volume_mode=None):
+    def __init__(self, access_modes=None, capacity=None, filesystem_overhead=None, preallocated=None, requests=None, volume_mode=None):
         """
         V1PersistentVolumeClaimInfo - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class V1PersistentVolumeClaimInfo(object):
         self._capacity = None
         self._filesystem_overhead = None
         self._preallocated = None
+        self._requests = None
         self._volume_mode = None
 
         if access_modes is not None:
@@ -65,6 +68,8 @@ class V1PersistentVolumeClaimInfo(object):
           self.filesystem_overhead = filesystem_overhead
         if preallocated is not None:
           self.preallocated = preallocated
+        if requests is not None:
+          self.requests = requests
         if volume_mode is not None:
           self.volume_mode = volume_mode
 
@@ -95,7 +100,7 @@ class V1PersistentVolumeClaimInfo(object):
     def capacity(self):
         """
         Gets the capacity of this V1PersistentVolumeClaimInfo.
-        Capacity represents the capacity set on the corresponding PVC spec
+        Capacity represents the capacity set on the corresponding PVC status
 
         :return: The capacity of this V1PersistentVolumeClaimInfo.
         :rtype: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
@@ -106,7 +111,7 @@ class V1PersistentVolumeClaimInfo(object):
     def capacity(self, capacity):
         """
         Sets the capacity of this V1PersistentVolumeClaimInfo.
-        Capacity represents the capacity set on the corresponding PVC spec
+        Capacity represents the capacity set on the corresponding PVC status
 
         :param capacity: The capacity of this V1PersistentVolumeClaimInfo.
         :type: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
@@ -159,6 +164,29 @@ class V1PersistentVolumeClaimInfo(object):
         """
 
         self._preallocated = preallocated
+
+    @property
+    def requests(self):
+        """
+        Gets the requests of this V1PersistentVolumeClaimInfo.
+        Requests represents the resources requested by the corresponding PVC spec
+
+        :return: The requests of this V1PersistentVolumeClaimInfo.
+        :rtype: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
+        """
+        return self._requests
+
+    @requests.setter
+    def requests(self, requests):
+        """
+        Sets the requests of this V1PersistentVolumeClaimInfo.
+        Requests represents the resources requested by the corresponding PVC spec
+
+        :param requests: The requests of this V1PersistentVolumeClaimInfo.
+        :type: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
+        """
+
+        self._requests = requests
 
     @property
     def volume_mode(self):

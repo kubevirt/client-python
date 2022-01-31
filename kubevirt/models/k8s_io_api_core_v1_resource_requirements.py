@@ -57,7 +57,7 @@ class K8sIoApiCoreV1ResourceRequirements(object):
     def limits(self):
         """
         Gets the limits of this K8sIoApiCoreV1ResourceRequirements.
-        Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+        Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
 
         :return: The limits of this K8sIoApiCoreV1ResourceRequirements.
         :rtype: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
@@ -68,7 +68,7 @@ class K8sIoApiCoreV1ResourceRequirements(object):
     def limits(self, limits):
         """
         Sets the limits of this K8sIoApiCoreV1ResourceRequirements.
-        Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+        Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
 
         :param limits: The limits of this K8sIoApiCoreV1ResourceRequirements.
         :type: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
@@ -80,7 +80,7 @@ class K8sIoApiCoreV1ResourceRequirements(object):
     def requests(self):
         """
         Gets the requests of this K8sIoApiCoreV1ResourceRequirements.
-        Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+        Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
 
         :return: The requests of this K8sIoApiCoreV1ResourceRequirements.
         :rtype: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
@@ -91,7 +91,7 @@ class K8sIoApiCoreV1ResourceRequirements(object):
     def requests(self, requests):
         """
         Sets the requests of this K8sIoApiCoreV1ResourceRequirements.
-        Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+        Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
 
         :param requests: The requests of this K8sIoApiCoreV1ResourceRequirements.
         :type: dict(str, K8sIoApimachineryPkgApiResourceQuantity)

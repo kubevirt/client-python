@@ -32,27 +32,32 @@ class K8sIoApiCoreV1PodAffinityTerm(object):
     """
     swagger_types = {
         'label_selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
+        'namespace_selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
         'namespaces': 'list[str]',
         'topology_key': 'str'
     }
 
     attribute_map = {
         'label_selector': 'labelSelector',
+        'namespace_selector': 'namespaceSelector',
         'namespaces': 'namespaces',
         'topology_key': 'topologyKey'
     }
 
-    def __init__(self, label_selector=None, namespaces=None, topology_key=None):
+    def __init__(self, label_selector=None, namespace_selector=None, namespaces=None, topology_key=None):
         """
         K8sIoApiCoreV1PodAffinityTerm - a model defined in Swagger
         """
 
         self._label_selector = None
+        self._namespace_selector = None
         self._namespaces = None
         self._topology_key = None
 
         if label_selector is not None:
           self.label_selector = label_selector
+        if namespace_selector is not None:
+          self.namespace_selector = namespace_selector
         if namespaces is not None:
           self.namespaces = namespaces
         self.topology_key = topology_key
@@ -81,10 +86,33 @@ class K8sIoApiCoreV1PodAffinityTerm(object):
         self._label_selector = label_selector
 
     @property
+    def namespace_selector(self):
+        """
+        Gets the namespace_selector of this K8sIoApiCoreV1PodAffinityTerm.
+        A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means \"this pod's namespace\". An empty selector ({}) matches all namespaces. This field is beta-level and is only honored when PodAffinityNamespaceSelector feature is enabled.
+
+        :return: The namespace_selector of this K8sIoApiCoreV1PodAffinityTerm.
+        :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        """
+        return self._namespace_selector
+
+    @namespace_selector.setter
+    def namespace_selector(self, namespace_selector):
+        """
+        Sets the namespace_selector of this K8sIoApiCoreV1PodAffinityTerm.
+        A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means \"this pod's namespace\". An empty selector ({}) matches all namespaces. This field is beta-level and is only honored when PodAffinityNamespaceSelector feature is enabled.
+
+        :param namespace_selector: The namespace_selector of this K8sIoApiCoreV1PodAffinityTerm.
+        :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        """
+
+        self._namespace_selector = namespace_selector
+
+    @property
     def namespaces(self):
         """
         Gets the namespaces of this K8sIoApiCoreV1PodAffinityTerm.
-        namespaces specifies which namespaces the labelSelector applies to (matches against); null or empty list means \"this pod's namespace\"
+        namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"
 
         :return: The namespaces of this K8sIoApiCoreV1PodAffinityTerm.
         :rtype: list[str]
@@ -95,7 +123,7 @@ class K8sIoApiCoreV1PodAffinityTerm(object):
     def namespaces(self, namespaces):
         """
         Sets the namespaces of this K8sIoApiCoreV1PodAffinityTerm.
-        namespaces specifies which namespaces the labelSelector applies to (matches against); null or empty list means \"this pod's namespace\"
+        namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"
 
         :param namespaces: The namespaces of this K8sIoApiCoreV1PodAffinityTerm.
         :type: list[str]

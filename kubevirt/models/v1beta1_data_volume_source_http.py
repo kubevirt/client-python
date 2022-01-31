@@ -32,27 +32,37 @@ class V1beta1DataVolumeSourceHTTP(object):
     """
     swagger_types = {
         'cert_config_map': 'str',
+        'extra_headers': 'list[str]',
+        'secret_extra_headers': 'list[str]',
         'secret_ref': 'str',
         'url': 'str'
     }
 
     attribute_map = {
         'cert_config_map': 'certConfigMap',
+        'extra_headers': 'extraHeaders',
+        'secret_extra_headers': 'secretExtraHeaders',
         'secret_ref': 'secretRef',
         'url': 'url'
     }
 
-    def __init__(self, cert_config_map=None, secret_ref=None, url=None):
+    def __init__(self, cert_config_map=None, extra_headers=None, secret_extra_headers=None, secret_ref=None, url=None):
         """
         V1beta1DataVolumeSourceHTTP - a model defined in Swagger
         """
 
         self._cert_config_map = None
+        self._extra_headers = None
+        self._secret_extra_headers = None
         self._secret_ref = None
         self._url = None
 
         if cert_config_map is not None:
           self.cert_config_map = cert_config_map
+        if extra_headers is not None:
+          self.extra_headers = extra_headers
+        if secret_extra_headers is not None:
+          self.secret_extra_headers = secret_extra_headers
         if secret_ref is not None:
           self.secret_ref = secret_ref
         self.url = url
@@ -79,6 +89,52 @@ class V1beta1DataVolumeSourceHTTP(object):
         """
 
         self._cert_config_map = cert_config_map
+
+    @property
+    def extra_headers(self):
+        """
+        Gets the extra_headers of this V1beta1DataVolumeSourceHTTP.
+        ExtraHeaders is a list of strings containing extra headers to include with HTTP transfer requests
+
+        :return: The extra_headers of this V1beta1DataVolumeSourceHTTP.
+        :rtype: list[str]
+        """
+        return self._extra_headers
+
+    @extra_headers.setter
+    def extra_headers(self, extra_headers):
+        """
+        Sets the extra_headers of this V1beta1DataVolumeSourceHTTP.
+        ExtraHeaders is a list of strings containing extra headers to include with HTTP transfer requests
+
+        :param extra_headers: The extra_headers of this V1beta1DataVolumeSourceHTTP.
+        :type: list[str]
+        """
+
+        self._extra_headers = extra_headers
+
+    @property
+    def secret_extra_headers(self):
+        """
+        Gets the secret_extra_headers of this V1beta1DataVolumeSourceHTTP.
+        SecretExtraHeaders is a list of Secret references, each containing an extra HTTP header that may include sensitive information
+
+        :return: The secret_extra_headers of this V1beta1DataVolumeSourceHTTP.
+        :rtype: list[str]
+        """
+        return self._secret_extra_headers
+
+    @secret_extra_headers.setter
+    def secret_extra_headers(self, secret_extra_headers):
+        """
+        Sets the secret_extra_headers of this V1beta1DataVolumeSourceHTTP.
+        SecretExtraHeaders is a list of Secret references, each containing an extra HTTP header that may include sensitive information
+
+        :param secret_extra_headers: The secret_extra_headers of this V1beta1DataVolumeSourceHTTP.
+        :type: list[str]
+        """
+
+        self._secret_extra_headers = secret_extra_headers
 
     @property
     def secret_ref(self):

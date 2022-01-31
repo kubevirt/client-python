@@ -36,6 +36,7 @@ class K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry(object):
         'fields_v1': 'K8sIoApimachineryPkgApisMetaV1FieldsV1',
         'manager': 'str',
         'operation': 'str',
+        'subresource': 'str',
         'time': 'K8sIoApimachineryPkgApisMetaV1Time'
     }
 
@@ -45,10 +46,11 @@ class K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry(object):
         'fields_v1': 'fieldsV1',
         'manager': 'manager',
         'operation': 'operation',
+        'subresource': 'subresource',
         'time': 'time'
     }
 
-    def __init__(self, api_version=None, fields_type=None, fields_v1=None, manager=None, operation=None, time=None):
+    def __init__(self, api_version=None, fields_type=None, fields_v1=None, manager=None, operation=None, subresource=None, time=None):
         """
         K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry(object):
         self._fields_v1 = None
         self._manager = None
         self._operation = None
+        self._subresource = None
         self._time = None
 
         if api_version is not None:
@@ -70,6 +73,8 @@ class K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry(object):
           self.manager = manager
         if operation is not None:
           self.operation = operation
+        if subresource is not None:
+          self.subresource = subresource
         if time is not None:
           self.time = time
 
@@ -187,6 +192,29 @@ class K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry(object):
         """
 
         self._operation = operation
+
+    @property
+    def subresource(self):
+        """
+        Gets the subresource of this K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry.
+        Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.
+
+        :return: The subresource of this K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry.
+        :rtype: str
+        """
+        return self._subresource
+
+    @subresource.setter
+    def subresource(self, subresource):
+        """
+        Sets the subresource of this K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry.
+        Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.
+
+        :param subresource: The subresource of this K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry.
+        :type: str
+        """
+
+        self._subresource = subresource
 
     @property
     def time(self):

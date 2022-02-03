@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **lun** | [**V1LunTarget**](V1LunTarget.md) | Attach a volume as a LUN to the vmi. | [optional] 
 **name** | **str** | Name is the device name | 
 **serial** | **str** | Serial provides the ability to specify a serial number for the disk device. | [optional] 
+**shareable** | **bool** | If specified the disk is made sharable and multiple write from different VMs are permitted | [optional] 
 **tag** | **str** | If specified, disk address and its tag will be provided to the guest via config drive metadata | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

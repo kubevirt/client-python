@@ -42,6 +42,7 @@ class V1Disk(object):
         'lun': 'V1LunTarget',
         'name': 'str',
         'serial': 'str',
+        'shareable': 'bool',
         'tag': 'str'
     }
 
@@ -57,10 +58,11 @@ class V1Disk(object):
         'lun': 'lun',
         'name': 'name',
         'serial': 'serial',
+        'shareable': 'shareable',
         'tag': 'tag'
     }
 
-    def __init__(self, block_size=None, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, floppy=None, io=None, lun=None, name=None, serial=None, tag=None):
+    def __init__(self, block_size=None, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, floppy=None, io=None, lun=None, name=None, serial=None, shareable=None, tag=None):
         """
         V1Disk - a model defined in Swagger
         """
@@ -76,6 +78,7 @@ class V1Disk(object):
         self._lun = None
         self._name = None
         self._serial = None
+        self._shareable = None
         self._tag = None
 
         if block_size is not None:
@@ -99,6 +102,8 @@ class V1Disk(object):
         self.name = name
         if serial is not None:
           self.serial = serial
+        if shareable is not None:
+          self.shareable = shareable
         if tag is not None:
           self.tag = tag
 
@@ -356,6 +361,29 @@ class V1Disk(object):
         """
 
         self._serial = serial
+
+    @property
+    def shareable(self):
+        """
+        Gets the shareable of this V1Disk.
+        If specified the disk is made sharable and multiple write from different VMs are permitted
+
+        :return: The shareable of this V1Disk.
+        :rtype: bool
+        """
+        return self._shareable
+
+    @shareable.setter
+    def shareable(self, shareable):
+        """
+        Sets the shareable of this V1Disk.
+        If specified the disk is made sharable and multiple write from different VMs are permitted
+
+        :param shareable: The shareable of this V1Disk.
+        :type: bool
+        """
+
+        self._shareable = shareable
 
     @property
     def tag(self):

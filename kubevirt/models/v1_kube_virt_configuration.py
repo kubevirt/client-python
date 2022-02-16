@@ -38,6 +38,7 @@ class V1KubeVirtConfiguration(object):
         'default_runtime_class': 'str',
         'developer_configuration': 'V1DeveloperConfiguration',
         'emulated_machines': 'list[str]',
+        'eviction_strategy': 'str',
         'handler_configuration': 'V1ReloadableComponentConfiguration',
         'image_pull_policy': 'str',
         'machine_type': 'str',
@@ -64,6 +65,7 @@ class V1KubeVirtConfiguration(object):
         'default_runtime_class': 'defaultRuntimeClass',
         'developer_configuration': 'developerConfiguration',
         'emulated_machines': 'emulatedMachines',
+        'eviction_strategy': 'evictionStrategy',
         'handler_configuration': 'handlerConfiguration',
         'image_pull_policy': 'imagePullPolicy',
         'machine_type': 'machineType',
@@ -82,7 +84,7 @@ class V1KubeVirtConfiguration(object):
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, api_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None, virtual_machine_instances_per_node=None, webhook_configuration=None):
+    def __init__(self, api_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None, virtual_machine_instances_per_node=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -94,6 +96,7 @@ class V1KubeVirtConfiguration(object):
         self._default_runtime_class = None
         self._developer_configuration = None
         self._emulated_machines = None
+        self._eviction_strategy = None
         self._handler_configuration = None
         self._image_pull_policy = None
         self._machine_type = None
@@ -125,6 +128,8 @@ class V1KubeVirtConfiguration(object):
           self.developer_configuration = developer_configuration
         if emulated_machines is not None:
           self.emulated_machines = emulated_machines
+        if eviction_strategy is not None:
+          self.eviction_strategy = eviction_strategy
         if handler_configuration is not None:
           self.handler_configuration = handler_configuration
         if image_pull_policy is not None:
@@ -304,6 +309,29 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._emulated_machines = emulated_machines
+
+    @property
+    def eviction_strategy(self):
+        """
+        Gets the eviction_strategy of this V1KubeVirtConfiguration.
+        EvictionStrategy defines at the cluster level if the VirtualMachineInstance should be migrated instead of shut-off in case of a node drain. If the VirtualMachineInstance specific field is set it overrides the cluster level one.
+
+        :return: The eviction_strategy of this V1KubeVirtConfiguration.
+        :rtype: str
+        """
+        return self._eviction_strategy
+
+    @eviction_strategy.setter
+    def eviction_strategy(self, eviction_strategy):
+        """
+        Sets the eviction_strategy of this V1KubeVirtConfiguration.
+        EvictionStrategy defines at the cluster level if the VirtualMachineInstance should be migrated instead of shut-off in case of a node drain. If the VirtualMachineInstance specific field is set it overrides the cluster level one.
+
+        :param eviction_strategy: The eviction_strategy of this V1KubeVirtConfiguration.
+        :type: str
+        """
+
+        self._eviction_strategy = eviction_strategy
 
     @property
     def handler_configuration(self):

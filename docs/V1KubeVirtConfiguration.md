@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **default_runtime_class** | **str** |  | [optional] 
 **developer_configuration** | [**V1DeveloperConfiguration**](V1DeveloperConfiguration.md) |  | [optional] 
 **emulated_machines** | **list[str]** |  | [optional] 
+**eviction_strategy** | **str** | EvictionStrategy defines at the cluster level if the VirtualMachineInstance should be migrated instead of shut-off in case of a node drain. If the VirtualMachineInstance specific field is set it overrides the cluster level one. | [optional] 
 **handler_configuration** | [**V1ReloadableComponentConfiguration**](V1ReloadableComponentConfiguration.md) |  | [optional] 
 **image_pull_policy** | **str** |  | [optional] 
 **machine_type** | **str** |  | [optional] 

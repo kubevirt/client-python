@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **block_multi_queue** | **bool** | Whether or not to enable virtio multi-queue for block devices. Defaults to false. | [optional] 
 **client_passthrough** | [**V1ClientPassthroughDevices**](V1ClientPassthroughDevices.md) | To configure and access client devices such as redirecting USB | [optional] 
 **disable_hotplug** | **bool** | DisableHotplug disabled the ability to hotplug disks. | [optional] 
-**disks** | [**list[V1Disk]**](V1Disk.md) | Disks describes disks, cdroms, floppy and luns which are connected to the vmi. | [optional] 
+**disks** | [**list[V1Disk]**](V1Disk.md) | Disks describes disks, cdroms and luns which are connected to the vmi. | [optional] 
 **filesystems** | [**list[V1Filesystem]**](V1Filesystem.md) | Filesystems describes filesystem which is connected to the vmi. | [optional] 
 **gpus** | [**list[V1GPU]**](V1GPU.md) | Whether to attach a GPU device to the vmi. | [optional] 
 **host_devices** | [**list[V1HostDevice]**](V1HostDevice.md) | Whether to attach a host device to the vmi. | [optional] 

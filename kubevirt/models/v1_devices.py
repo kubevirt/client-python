@@ -298,7 +298,7 @@ class V1Devices(object):
     def disks(self):
         """
         Gets the disks of this V1Devices.
-        Disks describes disks, cdroms, floppy and luns which are connected to the vmi.
+        Disks describes disks, cdroms and luns which are connected to the vmi.
 
         :return: The disks of this V1Devices.
         :rtype: list[V1Disk]
@@ -309,7 +309,7 @@ class V1Devices(object):
     def disks(self, disks):
         """
         Sets the disks of this V1Devices.
-        Disks describes disks, cdroms, floppy and luns which are connected to the vmi.
+        Disks describes disks, cdroms and luns which are connected to the vmi.
 
         :param disks: The disks of this V1Devices.
         :type: list[V1Disk]

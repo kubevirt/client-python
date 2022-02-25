@@ -37,7 +37,6 @@ class V1Disk(object):
         'cdrom': 'V1CDRomTarget',
         'dedicated_io_thread': 'bool',
         'disk': 'V1DiskTarget',
-        'floppy': 'V1FloppyTarget',
         'io': 'str',
         'lun': 'V1LunTarget',
         'name': 'str',
@@ -53,7 +52,6 @@ class V1Disk(object):
         'cdrom': 'cdrom',
         'dedicated_io_thread': 'dedicatedIOThread',
         'disk': 'disk',
-        'floppy': 'floppy',
         'io': 'io',
         'lun': 'lun',
         'name': 'name',
@@ -62,7 +60,7 @@ class V1Disk(object):
         'tag': 'tag'
     }
 
-    def __init__(self, block_size=None, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, floppy=None, io=None, lun=None, name=None, serial=None, shareable=None, tag=None):
+    def __init__(self, block_size=None, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, io=None, lun=None, name=None, serial=None, shareable=None, tag=None):
         """
         V1Disk - a model defined in Swagger
         """
@@ -73,7 +71,6 @@ class V1Disk(object):
         self._cdrom = None
         self._dedicated_io_thread = None
         self._disk = None
-        self._floppy = None
         self._io = None
         self._lun = None
         self._name = None
@@ -93,8 +90,6 @@ class V1Disk(object):
           self.dedicated_io_thread = dedicated_io_thread
         if disk is not None:
           self.disk = disk
-        if floppy is not None:
-          self.floppy = floppy
         if io is not None:
           self.io = io
         if lun is not None:
@@ -244,29 +239,6 @@ class V1Disk(object):
         """
 
         self._disk = disk
-
-    @property
-    def floppy(self):
-        """
-        Gets the floppy of this V1Disk.
-        Attach a volume as a floppy to the vmi.
-
-        :return: The floppy of this V1Disk.
-        :rtype: V1FloppyTarget
-        """
-        return self._floppy
-
-    @floppy.setter
-    def floppy(self, floppy):
-        """
-        Sets the floppy of this V1Disk.
-        Attach a volume as a floppy to the vmi.
-
-        :param floppy: The floppy of this V1Disk.
-        :type: V1FloppyTarget
-        """
-
-        self._floppy = floppy
 
     @property
     def io(self):

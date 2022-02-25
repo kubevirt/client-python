@@ -116,7 +116,6 @@ from .v1_filesystem_virtiofs import V1FilesystemVirtiofs
 from .v1_firmware import V1Firmware
 from .v1_flags import V1Flags
 from .v1_flavor_matcher import V1FlavorMatcher
-from .v1_floppy_target import V1FloppyTarget
 from .v1_freeze_unfreeze_timeout import V1FreezeUnfreezeTimeout
 from .v1_gpu import V1GPU
 from .v1_generation_status import V1GenerationStatus

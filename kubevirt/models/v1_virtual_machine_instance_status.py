@@ -46,6 +46,7 @@ class V1VirtualMachineInstanceStatus(object):
         'phase_transition_timestamps': 'list[V1VirtualMachineInstancePhaseTransitionTimestamp]',
         'qos_class': 'str',
         'reason': 'str',
+        'runtime_user': 'int',
         'topology_hints': 'V1TopologyHints',
         'virtual_machine_revision_name': 'str',
         'volume_status': 'list[V1VolumeStatus]'
@@ -67,12 +68,13 @@ class V1VirtualMachineInstanceStatus(object):
         'phase_transition_timestamps': 'phaseTransitionTimestamps',
         'qos_class': 'qosClass',
         'reason': 'reason',
+        'runtime_user': 'runtimeUser',
         'topology_hints': 'topologyHints',
         'virtual_machine_revision_name': 'virtualMachineRevisionName',
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
+    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -92,6 +94,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._phase_transition_timestamps = None
         self._qos_class = None
         self._reason = None
+        self._runtime_user = None
         self._topology_hints = None
         self._virtual_machine_revision_name = None
         self._volume_status = None
@@ -126,6 +129,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.qos_class = qos_class
         if reason is not None:
           self.reason = reason
+        if runtime_user is not None:
+          self.runtime_user = runtime_user
         if topology_hints is not None:
           self.topology_hints = topology_hints
         if virtual_machine_revision_name is not None:
@@ -477,6 +482,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._reason = reason
+
+    @property
+    def runtime_user(self):
+        """
+        Gets the runtime_user of this V1VirtualMachineInstanceStatus.
+        RuntimeUser is used to determine what user will be used in launcher
+
+        :return: The runtime_user of this V1VirtualMachineInstanceStatus.
+        :rtype: int
+        """
+        return self._runtime_user
+
+    @runtime_user.setter
+    def runtime_user(self, runtime_user):
+        """
+        Sets the runtime_user of this V1VirtualMachineInstanceStatus.
+        RuntimeUser is used to determine what user will be used in launcher
+
+        :param runtime_user: The runtime_user of this V1VirtualMachineInstanceStatus.
+        :type: int
+        """
+
+        self._runtime_user = runtime_user
 
     @property
     def topology_hints(self):

@@ -35,6 +35,7 @@ class V1KubeVirtStatus(object):
         'generations': 'list[V1GenerationStatus]',
         'observed_deployment_config': 'str',
         'observed_deployment_id': 'str',
+        'observed_generation': 'int',
         'observed_kube_virt_registry': 'str',
         'observed_kube_virt_version': 'str',
         'operator_version': 'str',
@@ -51,6 +52,7 @@ class V1KubeVirtStatus(object):
         'generations': 'generations',
         'observed_deployment_config': 'observedDeploymentConfig',
         'observed_deployment_id': 'observedDeploymentID',
+        'observed_generation': 'observedGeneration',
         'observed_kube_virt_registry': 'observedKubeVirtRegistry',
         'observed_kube_virt_version': 'observedKubeVirtVersion',
         'operator_version': 'operatorVersion',
@@ -62,7 +64,7 @@ class V1KubeVirtStatus(object):
         'target_kube_virt_version': 'targetKubeVirtVersion'
     }
 
-    def __init__(self, conditions=None, generations=None, observed_deployment_config=None, observed_deployment_id=None, observed_kube_virt_registry=None, observed_kube_virt_version=None, operator_version=None, outdated_virtual_machine_instance_workloads=None, phase=None, target_deployment_config=None, target_deployment_id=None, target_kube_virt_registry=None, target_kube_virt_version=None):
+    def __init__(self, conditions=None, generations=None, observed_deployment_config=None, observed_deployment_id=None, observed_generation=None, observed_kube_virt_registry=None, observed_kube_virt_version=None, operator_version=None, outdated_virtual_machine_instance_workloads=None, phase=None, target_deployment_config=None, target_deployment_id=None, target_kube_virt_registry=None, target_kube_virt_version=None):
         """
         V1KubeVirtStatus - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class V1KubeVirtStatus(object):
         self._generations = None
         self._observed_deployment_config = None
         self._observed_deployment_id = None
+        self._observed_generation = None
         self._observed_kube_virt_registry = None
         self._observed_kube_virt_version = None
         self._operator_version = None
@@ -89,6 +92,8 @@ class V1KubeVirtStatus(object):
           self.observed_deployment_config = observed_deployment_config
         if observed_deployment_id is not None:
           self.observed_deployment_id = observed_deployment_id
+        if observed_generation is not None:
+          self.observed_generation = observed_generation
         if observed_kube_virt_registry is not None:
           self.observed_kube_virt_registry = observed_kube_virt_registry
         if observed_kube_virt_version is not None:
@@ -191,6 +196,27 @@ class V1KubeVirtStatus(object):
         """
 
         self._observed_deployment_id = observed_deployment_id
+
+    @property
+    def observed_generation(self):
+        """
+        Gets the observed_generation of this V1KubeVirtStatus.
+
+        :return: The observed_generation of this V1KubeVirtStatus.
+        :rtype: int
+        """
+        return self._observed_generation
+
+    @observed_generation.setter
+    def observed_generation(self, observed_generation):
+        """
+        Sets the observed_generation of this V1KubeVirtStatus.
+
+        :param observed_generation: The observed_generation of this V1KubeVirtStatus.
+        :type: int
+        """
+
+        self._observed_generation = observed_generation
 
     @property
     def observed_kube_virt_registry(self):

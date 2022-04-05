@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **product_component** | **str** | Designate the apps.kubevirt.io/component label for KubeVirt components. Useful if KubeVirt is included as part of a product. If ProductComponent is not specified, the component label default value is kubevirt. | [optional] 
 **product_name** | **str** | Designate the apps.kubevirt.io/part-of label for KubeVirt components. Useful if KubeVirt is included as part of a product. If ProductName is not specified, the part-of label will be omitted. | [optional] 
 **product_version** | **str** | Designate the apps.kubevirt.io/version label for KubeVirt components. Useful if KubeVirt is included as part of a product. If ProductVersion is not specified, KubeVirt&#39;s version will be used. | [optional] 
+**service_monitor_namespace** | **str** | The namespace the service monitor will be deployed  When ServiceMonitorNamespace is set, then we&#39;ll install the service monitor object in that namespace otherwise we will use the monitoring namespace. | [optional] 
 **uninstall_strategy** | **str** | Specifies if kubevirt can be deleted if workloads are still present. This is mainly a precaution to avoid accidental data loss | [optional] 
 **workload_update_strategy** | [**V1KubeVirtWorkloadUpdateStrategy**](V1KubeVirtWorkloadUpdateStrategy.md) | WorkloadUpdateStrategy defines at the cluster level how to handle automated workload updates | [optional] 
 **workloads** | [**V1ComponentConfig**](V1ComponentConfig.md) | selectors and tolerations that should apply to KubeVirt workloads | [optional] 

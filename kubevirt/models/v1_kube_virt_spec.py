@@ -43,6 +43,7 @@ class V1KubeVirtSpec(object):
         'product_component': 'str',
         'product_name': 'str',
         'product_version': 'str',
+        'service_monitor_namespace': 'str',
         'uninstall_strategy': 'str',
         'workload_update_strategy': 'V1KubeVirtWorkloadUpdateStrategy',
         'workloads': 'V1ComponentConfig'
@@ -61,12 +62,13 @@ class V1KubeVirtSpec(object):
         'product_component': 'productComponent',
         'product_name': 'productName',
         'product_version': 'productVersion',
+        'service_monitor_namespace': 'serviceMonitorNamespace',
         'uninstall_strategy': 'uninstallStrategy',
         'workload_update_strategy': 'workloadUpdateStrategy',
         'workloads': 'workloads'
     }
 
-    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_registry=None, image_tag=None, infra=None, monitor_account=None, monitor_namespace=None, product_component=None, product_name=None, product_version=None, uninstall_strategy=None, workload_update_strategy=None, workloads=None):
+    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_registry=None, image_tag=None, infra=None, monitor_account=None, monitor_namespace=None, product_component=None, product_name=None, product_version=None, service_monitor_namespace=None, uninstall_strategy=None, workload_update_strategy=None, workloads=None):
         """
         V1KubeVirtSpec - a model defined in Swagger
         """
@@ -83,6 +85,7 @@ class V1KubeVirtSpec(object):
         self._product_component = None
         self._product_name = None
         self._product_version = None
+        self._service_monitor_namespace = None
         self._uninstall_strategy = None
         self._workload_update_strategy = None
         self._workloads = None
@@ -111,6 +114,8 @@ class V1KubeVirtSpec(object):
           self.product_name = product_name
         if product_version is not None:
           self.product_version = product_version
+        if service_monitor_namespace is not None:
+          self.service_monitor_namespace = service_monitor_namespace
         if uninstall_strategy is not None:
           self.uninstall_strategy = uninstall_strategy
         if workload_update_strategy is not None:
@@ -389,6 +394,29 @@ class V1KubeVirtSpec(object):
         """
 
         self._product_version = product_version
+
+    @property
+    def service_monitor_namespace(self):
+        """
+        Gets the service_monitor_namespace of this V1KubeVirtSpec.
+        The namespace the service monitor will be deployed  When ServiceMonitorNamespace is set, then we'll install the service monitor object in that namespace otherwise we will use the monitoring namespace.
+
+        :return: The service_monitor_namespace of this V1KubeVirtSpec.
+        :rtype: str
+        """
+        return self._service_monitor_namespace
+
+    @service_monitor_namespace.setter
+    def service_monitor_namespace(self, service_monitor_namespace):
+        """
+        Sets the service_monitor_namespace of this V1KubeVirtSpec.
+        The namespace the service monitor will be deployed  When ServiceMonitorNamespace is set, then we'll install the service monitor object in that namespace otherwise we will use the monitoring namespace.
+
+        :param service_monitor_namespace: The service_monitor_namespace of this V1KubeVirtSpec.
+        :type: str
+        """
+
+        self._service_monitor_namespace = service_monitor_namespace
 
     @property
     def uninstall_strategy(self):

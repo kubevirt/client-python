@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **network_interface_multiqueue** | **bool** | If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature for network devices. The number of queues created depends on additional factors of the VirtualMachineInstance, like the number of guest CPUs. | [optional] 
 **rng** | [**V1Rng**](V1Rng.md) | Whether to have random number generator from host | [optional] 
 **sound** | [**V1SoundDevice**](V1SoundDevice.md) | Whether to emulate a sound device. | [optional] 
+**tpm** | [**V1TPMDevice**](V1TPMDevice.md) | Whether to emulate a TPM device. | [optional] 
 **use_virtio_transitional** | **bool** | Fall back to legacy virtio 0.9 support if virtio bus is selected on devices. This is helpful for old machines like CentOS6 or RHEL6 which do not understand virtio_non_transitional (virtio 1.0). | [optional] 
 **watchdog** | [**V1Watchdog**](V1Watchdog.md) | Watchdog describes a watchdog device which can be added to the vmi. | [optional] 
 

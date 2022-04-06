@@ -47,6 +47,7 @@ class V1Devices(object):
         'network_interface_multiqueue': 'bool',
         'rng': 'V1Rng',
         'sound': 'V1SoundDevice',
+        'tpm': 'V1TPMDevice',
         'use_virtio_transitional': 'bool',
         'watchdog': 'V1Watchdog'
     }
@@ -68,11 +69,12 @@ class V1Devices(object):
         'network_interface_multiqueue': 'networkInterfaceMultiqueue',
         'rng': 'rng',
         'sound': 'sound',
+        'tpm': 'tpm',
         'use_virtio_transitional': 'useVirtioTransitional',
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, sound=None, use_virtio_transitional=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, sound=None, tpm=None, use_virtio_transitional=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -93,6 +95,7 @@ class V1Devices(object):
         self._network_interface_multiqueue = None
         self._rng = None
         self._sound = None
+        self._tpm = None
         self._use_virtio_transitional = None
         self._watchdog = None
 
@@ -128,6 +131,8 @@ class V1Devices(object):
           self.rng = rng
         if sound is not None:
           self.sound = sound
+        if tpm is not None:
+          self.tpm = tpm
         if use_virtio_transitional is not None:
           self.use_virtio_transitional = use_virtio_transitional
         if watchdog is not None:
@@ -500,6 +505,29 @@ class V1Devices(object):
         """
 
         self._sound = sound
+
+    @property
+    def tpm(self):
+        """
+        Gets the tpm of this V1Devices.
+        Whether to emulate a TPM device.
+
+        :return: The tpm of this V1Devices.
+        :rtype: V1TPMDevice
+        """
+        return self._tpm
+
+    @tpm.setter
+    def tpm(self, tpm):
+        """
+        Sets the tpm of this V1Devices.
+        Whether to emulate a TPM device.
+
+        :param tpm: The tpm of this V1Devices.
+        :type: V1TPMDevice
+        """
+
+        self._tpm = tpm
 
     @property
     def use_virtio_transitional(self):

@@ -101,6 +101,10 @@ class ApiClient(object):
 
         config = Configuration()
 
+        if not auth_settings:
+            # use default auth settings
+            auth_settings = ['BearerToken']
+
         # header parameters
         header_params = header_params or {}
         header_params.update(self.default_headers)
@@ -628,6 +632,6 @@ class ApiClient(object):
                 value = data[klass.attribute_map[attr]]
                 kwargs[attr] = self.__deserialize(value, attr_type)
 
-        instance = klass(**kwargs)     
+        instance = klass(**kwargs)
 
         return instance

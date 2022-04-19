@@ -116,9 +116,31 @@ class ApiClient(object):
             path_params = self.sanitize_for_serialization(path_params)
             path_params = self.parameters_to_tuples(path_params,
                                                     collection_formats)
+
+            # get regex on resource_path & get clean resource path
+            clean_resource_path = resource_path
+            path_params_validators = {}
+            validator_regex = r"{([^:]*):([^}]*)}"
+            matches_validator = re.finditer(validator_regex, resource_path, re.MULTILINE)
+
+            for match in matches_validator:
+                # save path regex
+                path_name = match.group(1)
+                path_regex = match.group(2)
+                path_params_validators[path_name] = path_regex
+
+                # remove regex from url
+                clean_resource_path = clean_resource_path.replace(f':{path_regex}', '')
+
             for k, v in path_params:
+                # check is have regex
+                if k in path_params_validators.keys():
+                    path_params_validator = path_params_validators[k]
+                    if not re.fullmatch(path_params_validator, v):
+                        raise ValueError(f'invalid {k}, should match {path_params_validator}')
+
                 # specified safe chars, encode everything
-                resource_path = resource_path.replace(
+                resource_path = clean_resource_path.replace(
                     '{%s}' % k, quote(str(v), safe=config.safe_chars_for_path_param))
 
         # query parameters
@@ -628,6 +650,6 @@ class ApiClient(object):
                 value = data[klass.attribute_map[attr]]
                 kwargs[attr] = self.__deserialize(value, attr_type)
 
-        instance = klass(**kwargs)     
+        instance = klass(**kwargs)
 
         return instance

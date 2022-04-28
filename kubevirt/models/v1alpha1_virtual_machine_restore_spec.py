@@ -31,25 +31,53 @@ class V1alpha1VirtualMachineRestoreSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'patches': 'list[str]',
         'target': 'K8sIoApiCoreV1TypedLocalObjectReference',
         'virtual_machine_snapshot_name': 'str'
     }
 
     attribute_map = {
+        'patches': 'patches',
         'target': 'target',
         'virtual_machine_snapshot_name': 'virtualMachineSnapshotName'
     }
 
-    def __init__(self, target=None, virtual_machine_snapshot_name=None):
+    def __init__(self, patches=None, target=None, virtual_machine_snapshot_name=None):
         """
         V1alpha1VirtualMachineRestoreSpec - a model defined in Swagger
         """
 
+        self._patches = None
         self._target = None
         self._virtual_machine_snapshot_name = None
 
+        if patches is not None:
+          self.patches = patches
         self.target = target
         self.virtual_machine_snapshot_name = virtual_machine_snapshot_name
+
+    @property
+    def patches(self):
+        """
+        Gets the patches of this V1alpha1VirtualMachineRestoreSpec.
+        If the target for the restore does not exist, it will be created. Patches holds JSON patches that would be applied to the target manifest before it's created. Patches should fit the target's Kind.  Example for a patch: {\"op\": \"replace\", \"path\": \"/metadata/name\", \"value\": \"new-vm-name\"}
+
+        :return: The patches of this V1alpha1VirtualMachineRestoreSpec.
+        :rtype: list[str]
+        """
+        return self._patches
+
+    @patches.setter
+    def patches(self, patches):
+        """
+        Sets the patches of this V1alpha1VirtualMachineRestoreSpec.
+        If the target for the restore does not exist, it will be created. Patches holds JSON patches that would be applied to the target manifest before it's created. Patches should fit the target's Kind.  Example for a patch: {\"op\": \"replace\", \"path\": \"/metadata/name\", \"value\": \"new-vm-name\"}
+
+        :param patches: The patches of this V1alpha1VirtualMachineRestoreSpec.
+        :type: list[str]
+        """
+
+        self._patches = patches
 
     @property
     def target(self):

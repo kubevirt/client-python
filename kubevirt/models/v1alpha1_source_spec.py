@@ -31,7 +31,7 @@ class V1alpha1SourceSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'virtual_machine': 'V1VirtualMachine'
+        'virtual_machine': 'V1alpha1VirtualMachine'
     }
 
     attribute_map = {
@@ -54,7 +54,7 @@ class V1alpha1SourceSpec(object):
         Gets the virtual_machine of this V1alpha1SourceSpec.
 
         :return: The virtual_machine of this V1alpha1SourceSpec.
-        :rtype: V1VirtualMachine
+        :rtype: V1alpha1VirtualMachine
         """
         return self._virtual_machine
 
@@ -64,7 +64,7 @@ class V1alpha1SourceSpec(object):
         Sets the virtual_machine of this V1alpha1SourceSpec.
 
         :param virtual_machine: The virtual_machine of this V1alpha1SourceSpec.
-        :type: V1VirtualMachine
+        :type: V1alpha1VirtualMachine
         """
 
         self._virtual_machine = virtual_machine

@@ -256,6 +256,7 @@ from .models.v1alpha1_migration_policy_status import V1alpha1MigrationPolicyStat
 from .models.v1alpha1_persistent_volume_claim import V1alpha1PersistentVolumeClaim
 from .models.v1alpha1_selectors import V1alpha1Selectors
 from .models.v1alpha1_source_spec import V1alpha1SourceSpec
+from .models.v1alpha1_virtual_machine import V1alpha1VirtualMachine
 from .models.v1alpha1_virtual_machine_cluster_flavor import V1alpha1VirtualMachineClusterFlavor
 from .models.v1alpha1_virtual_machine_cluster_flavor_list import V1alpha1VirtualMachineClusterFlavorList
 from .models.v1alpha1_virtual_machine_flavor import V1alpha1VirtualMachineFlavor

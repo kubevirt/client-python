@@ -34,17 +34,17 @@ class V1alpha1VirtualMachineClusterFlavor(object):
         'api_version': 'str',
         'kind': 'str',
         'metadata': 'K8sIoApimachineryPkgApisMetaV1ObjectMeta',
-        'profiles': 'list[V1alpha1VirtualMachineFlavorProfile]'
+        'spec': 'V1alpha1VirtualMachineFlavorSpec'
     }
 
     attribute_map = {
         'api_version': 'apiVersion',
         'kind': 'kind',
         'metadata': 'metadata',
-        'profiles': 'profiles'
+        'spec': 'spec'
     }
 
-    def __init__(self, api_version=None, kind=None, metadata=None, profiles=None):
+    def __init__(self, api_version=None, kind=None, metadata=None, spec=None):
         """
         V1alpha1VirtualMachineClusterFlavor - a model defined in Swagger
         """
@@ -52,7 +52,7 @@ class V1alpha1VirtualMachineClusterFlavor(object):
         self._api_version = None
         self._kind = None
         self._metadata = None
-        self._profiles = None
+        self._spec = None
 
         if api_version is not None:
           self.api_version = api_version
@@ -60,7 +60,7 @@ class V1alpha1VirtualMachineClusterFlavor(object):
           self.kind = kind
         if metadata is not None:
           self.metadata = metadata
-        self.profiles = profiles
+        self.spec = spec
 
     @property
     def api_version(self):
@@ -130,27 +130,29 @@ class V1alpha1VirtualMachineClusterFlavor(object):
         self._metadata = metadata
 
     @property
-    def profiles(self):
+    def spec(self):
         """
-        Gets the profiles of this V1alpha1VirtualMachineClusterFlavor.
+        Gets the spec of this V1alpha1VirtualMachineClusterFlavor.
+        VirtualMachineFlavorSpec for the flavor
 
-        :return: The profiles of this V1alpha1VirtualMachineClusterFlavor.
-        :rtype: list[V1alpha1VirtualMachineFlavorProfile]
+        :return: The spec of this V1alpha1VirtualMachineClusterFlavor.
+        :rtype: V1alpha1VirtualMachineFlavorSpec
         """
-        return self._profiles
+        return self._spec
 
-    @profiles.setter
-    def profiles(self, profiles):
+    @spec.setter
+    def spec(self, spec):
         """
-        Sets the profiles of this V1alpha1VirtualMachineClusterFlavor.
+        Sets the spec of this V1alpha1VirtualMachineClusterFlavor.
+        VirtualMachineFlavorSpec for the flavor
 
-        :param profiles: The profiles of this V1alpha1VirtualMachineClusterFlavor.
-        :type: list[V1alpha1VirtualMachineFlavorProfile]
+        :param spec: The spec of this V1alpha1VirtualMachineClusterFlavor.
+        :type: V1alpha1VirtualMachineFlavorSpec
         """
-        if profiles is None:
-            raise ValueError("Invalid value for `profiles`, must not be `None`")
+        if spec is None:
+            raise ValueError("Invalid value for `spec`, must not be `None`")
 
-        self._profiles = profiles
+        self._spec = spec
 
     def to_dict(self):
         """

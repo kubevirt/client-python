@@ -32,30 +32,25 @@ class V1FlavorMatcher(object):
     """
     swagger_types = {
         'kind': 'str',
-        'name': 'str',
-        'profile': 'str'
+        'name': 'str'
     }
 
     attribute_map = {
         'kind': 'kind',
-        'name': 'name',
-        'profile': 'profile'
+        'name': 'name'
     }
 
-    def __init__(self, kind=None, name=None, profile=None):
+    def __init__(self, kind=None, name=None):
         """
         V1FlavorMatcher - a model defined in Swagger
         """
 
         self._kind = None
         self._name = None
-        self._profile = None
 
         if kind is not None:
           self.kind = kind
         self.name = name
-        if profile is not None:
-          self.profile = profile
 
     @property
     def kind(self):
@@ -104,29 +99,6 @@ class V1FlavorMatcher(object):
             raise ValueError("Invalid value for `name`, must not be `None`")
 
         self._name = name
-
-    @property
-    def profile(self):
-        """
-        Gets the profile of this V1FlavorMatcher.
-        Profile is the name of a custom profile in the flavor. If left empty, the default profile is used.
-
-        :return: The profile of this V1FlavorMatcher.
-        :rtype: str
-        """
-        return self._profile
-
-    @profile.setter
-    def profile(self, profile):
-        """
-        Sets the profile of this V1FlavorMatcher.
-        Profile is the name of a custom profile in the flavor. If left empty, the default profile is used.
-
-        :param profile: The profile of this V1FlavorMatcher.
-        :type: str
-        """
-
-        self._profile = profile
 
     def to_dict(self):
         """

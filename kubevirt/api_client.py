@@ -118,7 +118,6 @@ class ApiClient(object):
                                                     collection_formats)
 
             # get regex on resource_path & get clean resource path
-            clean_resource_path = resource_path
             path_params_validators = {}
             validator_regex = r"{([^:]*):([^}]*)}"
             matches_validator = re.finditer(validator_regex, resource_path, re.MULTILINE)
@@ -130,7 +129,7 @@ class ApiClient(object):
                 path_params_validators[path_name] = path_regex
 
                 # remove regex from url
-                clean_resource_path = clean_resource_path.replace(f':{path_regex}', '')
+                resource_path = resource_path.replace(f':{path_regex}', '')
 
             for k, v in path_params:
                 # check is have regex
@@ -140,7 +139,7 @@ class ApiClient(object):
                         raise ValueError(f'invalid {k}, should match {path_params_validator}')
 
                 # specified safe chars, encode everything
-                resource_path = clean_resource_path.replace(
+                resource_path = resource_path.replace(
                     '{%s}' % k, quote(str(v), safe=config.safe_chars_for_path_param))
 
         # query parameters

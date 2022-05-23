@@ -33,6 +33,7 @@ class V1VirtualMachineSpec(object):
     swagger_types = {
         'data_volume_templates': 'list[V1DataVolumeTemplateSpec]',
         'flavor': 'V1FlavorMatcher',
+        'preference': 'V1PreferenceMatcher',
         'run_strategy': 'str',
         'running': 'bool',
         'template': 'V1VirtualMachineInstanceTemplateSpec'
@@ -41,18 +42,20 @@ class V1VirtualMachineSpec(object):
     attribute_map = {
         'data_volume_templates': 'dataVolumeTemplates',
         'flavor': 'flavor',
+        'preference': 'preference',
         'run_strategy': 'runStrategy',
         'running': 'running',
         'template': 'template'
     }
 
-    def __init__(self, data_volume_templates=None, flavor=None, run_strategy=None, running=None, template=None):
+    def __init__(self, data_volume_templates=None, flavor=None, preference=None, run_strategy=None, running=None, template=None):
         """
         V1VirtualMachineSpec - a model defined in Swagger
         """
 
         self._data_volume_templates = None
         self._flavor = None
+        self._preference = None
         self._run_strategy = None
         self._running = None
         self._template = None
@@ -61,6 +64,8 @@ class V1VirtualMachineSpec(object):
           self.data_volume_templates = data_volume_templates
         if flavor is not None:
           self.flavor = flavor
+        if preference is not None:
+          self.preference = preference
         if run_strategy is not None:
           self.run_strategy = run_strategy
         if running is not None:
@@ -112,6 +117,29 @@ class V1VirtualMachineSpec(object):
         """
 
         self._flavor = flavor
+
+    @property
+    def preference(self):
+        """
+        Gets the preference of this V1VirtualMachineSpec.
+        PreferenceMatcher references a set of preference that is used to fill fields in Template
+
+        :return: The preference of this V1VirtualMachineSpec.
+        :rtype: V1PreferenceMatcher
+        """
+        return self._preference
+
+    @preference.setter
+    def preference(self, preference):
+        """
+        Sets the preference of this V1VirtualMachineSpec.
+        PreferenceMatcher references a set of preference that is used to fill fields in Template
+
+        :param preference: The preference of this V1VirtualMachineSpec.
+        :type: V1PreferenceMatcher
+        """
+
+        self._preference = preference
 
     @property
     def run_strategy(self):

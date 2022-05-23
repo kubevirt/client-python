@@ -78,6 +78,7 @@ from .models.v1_cert_config import V1CertConfig
 from .models.v1_chassis import V1Chassis
 from .models.v1_client_passthrough_devices import V1ClientPassthroughDevices
 from .models.v1_clock import V1Clock
+from .models.v1_clock_offset import V1ClockOffset
 from .models.v1_clock_offset_utc import V1ClockOffsetUTC
 from .models.v1_cloud_init_config_drive_source import V1CloudInitConfigDriveSource
 from .models.v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
@@ -172,6 +173,7 @@ from .models.v1_persistent_volume_claim_info import V1PersistentVolumeClaimInfo
 from .models.v1_persistent_volume_claim_volume_source import V1PersistentVolumeClaimVolumeSource
 from .models.v1_pod_network import V1PodNetwork
 from .models.v1_port import V1Port
+from .models.v1_preference_matcher import V1PreferenceMatcher
 from .models.v1_probe import V1Probe
 from .models.v1_qemu_guest_agent_ssh_public_key_access_credential_propagation import V1QemuGuestAgentSSHPublicKeyAccessCredentialPropagation
 from .models.v1_qemu_guest_agent_user_password_access_credential_propagation import V1QemuGuestAgentUserPasswordAccessCredentialPropagation
@@ -247,8 +249,16 @@ from .models.v1_volume import V1Volume
 from .models.v1_volume_snapshot_status import V1VolumeSnapshotStatus
 from .models.v1_volume_status import V1VolumeStatus
 from .models.v1_watchdog import V1Watchdog
+from .models.v1alpha1_cpu_flavor import V1alpha1CPUFlavor
+from .models.v1alpha1_cpu_preferences import V1alpha1CPUPreferences
+from .models.v1alpha1_clock_preferences import V1alpha1ClockPreferences
 from .models.v1alpha1_condition import V1alpha1Condition
+from .models.v1alpha1_device_preferences import V1alpha1DevicePreferences
 from .models.v1alpha1_error import V1alpha1Error
+from .models.v1alpha1_feature_preferences import V1alpha1FeaturePreferences
+from .models.v1alpha1_firmware_preferences import V1alpha1FirmwarePreferences
+from .models.v1alpha1_machine_preferences import V1alpha1MachinePreferences
+from .models.v1alpha1_memory_flavor import V1alpha1MemoryFlavor
 from .models.v1alpha1_migration_policy import V1alpha1MigrationPolicy
 from .models.v1alpha1_migration_policy_list import V1alpha1MigrationPolicyList
 from .models.v1alpha1_migration_policy_spec import V1alpha1MigrationPolicySpec
@@ -259,6 +269,8 @@ from .models.v1alpha1_source_spec import V1alpha1SourceSpec
 from .models.v1alpha1_virtual_machine import V1alpha1VirtualMachine
 from .models.v1alpha1_virtual_machine_cluster_flavor import V1alpha1VirtualMachineClusterFlavor
 from .models.v1alpha1_virtual_machine_cluster_flavor_list import V1alpha1VirtualMachineClusterFlavorList
+from .models.v1alpha1_virtual_machine_cluster_preference import V1alpha1VirtualMachineClusterPreference
+from .models.v1alpha1_virtual_machine_cluster_preference_list import V1alpha1VirtualMachineClusterPreferenceList
 from .models.v1alpha1_virtual_machine_flavor import V1alpha1VirtualMachineFlavor
 from .models.v1alpha1_virtual_machine_flavor_list import V1alpha1VirtualMachineFlavorList
 from .models.v1alpha1_virtual_machine_flavor_spec import V1alpha1VirtualMachineFlavorSpec
@@ -267,6 +279,9 @@ from .models.v1alpha1_virtual_machine_pool_condition import V1alpha1VirtualMachi
 from .models.v1alpha1_virtual_machine_pool_list import V1alpha1VirtualMachinePoolList
 from .models.v1alpha1_virtual_machine_pool_spec import V1alpha1VirtualMachinePoolSpec
 from .models.v1alpha1_virtual_machine_pool_status import V1alpha1VirtualMachinePoolStatus
+from .models.v1alpha1_virtual_machine_preference import V1alpha1VirtualMachinePreference
+from .models.v1alpha1_virtual_machine_preference_list import V1alpha1VirtualMachinePreferenceList
+from .models.v1alpha1_virtual_machine_preference_spec import V1alpha1VirtualMachinePreferenceSpec
 from .models.v1alpha1_virtual_machine_restore import V1alpha1VirtualMachineRestore
 from .models.v1alpha1_virtual_machine_restore_list import V1alpha1VirtualMachineRestoreList
 from .models.v1alpha1_virtual_machine_restore_spec import V1alpha1VirtualMachineRestoreSpec

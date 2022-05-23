@@ -133,7 +133,7 @@ class V1alpha1VirtualMachineClusterFlavor(object):
     def spec(self):
         """
         Gets the spec of this V1alpha1VirtualMachineClusterFlavor.
-        VirtualMachineFlavorSpec for the flavor
+        Required spec describing the flavor
 
         :return: The spec of this V1alpha1VirtualMachineClusterFlavor.
         :rtype: V1alpha1VirtualMachineFlavorSpec
@@ -144,7 +144,7 @@ class V1alpha1VirtualMachineClusterFlavor(object):
     def spec(self, spec):
         """
         Sets the spec of this V1alpha1VirtualMachineClusterFlavor.
-        VirtualMachineFlavorSpec for the flavor
+        Required spec describing the flavor
 
         :param spec: The spec of this V1alpha1VirtualMachineClusterFlavor.
         :type: V1alpha1VirtualMachineFlavorSpec

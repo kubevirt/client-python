@@ -31,30 +31,54 @@ class V1alpha1VirtualMachineFlavorSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'cpu': 'V1CPU'
+        'cpu': 'V1alpha1CPUFlavor',
+        'gpus': 'list[V1GPU]',
+        'host_devices': 'list[V1HostDevice]',
+        'io_threads_policy': 'str',
+        'launch_security': 'V1LaunchSecurity',
+        'memory': 'V1alpha1MemoryFlavor'
     }
 
     attribute_map = {
-        'cpu': 'cpu'
+        'cpu': 'cpu',
+        'gpus': 'gpus',
+        'host_devices': 'hostDevices',
+        'io_threads_policy': 'ioThreadsPolicy',
+        'launch_security': 'launchSecurity',
+        'memory': 'memory'
     }
 
-    def __init__(self, cpu=None):
+    def __init__(self, cpu=None, gpus=None, host_devices=None, io_threads_policy=None, launch_security=None, memory=None):
         """
         V1alpha1VirtualMachineFlavorSpec - a model defined in Swagger
         """
 
         self._cpu = None
+        self._gpus = None
+        self._host_devices = None
+        self._io_threads_policy = None
+        self._launch_security = None
+        self._memory = None
 
-        if cpu is not None:
-          self.cpu = cpu
+        self.cpu = cpu
+        if gpus is not None:
+          self.gpus = gpus
+        if host_devices is not None:
+          self.host_devices = host_devices
+        if io_threads_policy is not None:
+          self.io_threads_policy = io_threads_policy
+        if launch_security is not None:
+          self.launch_security = launch_security
+        self.memory = memory
 
     @property
     def cpu(self):
         """
         Gets the cpu of this V1alpha1VirtualMachineFlavorSpec.
+        Required CPU related attributes of the flavor.
 
         :return: The cpu of this V1alpha1VirtualMachineFlavorSpec.
-        :rtype: V1CPU
+        :rtype: V1alpha1CPUFlavor
         """
         return self._cpu
 
@@ -62,12 +86,132 @@ class V1alpha1VirtualMachineFlavorSpec(object):
     def cpu(self, cpu):
         """
         Sets the cpu of this V1alpha1VirtualMachineFlavorSpec.
+        Required CPU related attributes of the flavor.
 
         :param cpu: The cpu of this V1alpha1VirtualMachineFlavorSpec.
-        :type: V1CPU
+        :type: V1alpha1CPUFlavor
         """
+        if cpu is None:
+            raise ValueError("Invalid value for `cpu`, must not be `None`")
 
         self._cpu = cpu
+
+    @property
+    def gpus(self):
+        """
+        Gets the gpus of this V1alpha1VirtualMachineFlavorSpec.
+        Optionally defines any GPU devices associated with the flavor.
+
+        :return: The gpus of this V1alpha1VirtualMachineFlavorSpec.
+        :rtype: list[V1GPU]
+        """
+        return self._gpus
+
+    @gpus.setter
+    def gpus(self, gpus):
+        """
+        Sets the gpus of this V1alpha1VirtualMachineFlavorSpec.
+        Optionally defines any GPU devices associated with the flavor.
+
+        :param gpus: The gpus of this V1alpha1VirtualMachineFlavorSpec.
+        :type: list[V1GPU]
+        """
+
+        self._gpus = gpus
+
+    @property
+    def host_devices(self):
+        """
+        Gets the host_devices of this V1alpha1VirtualMachineFlavorSpec.
+        Optionally defines any HostDevices associated with the flavor.
+
+        :return: The host_devices of this V1alpha1VirtualMachineFlavorSpec.
+        :rtype: list[V1HostDevice]
+        """
+        return self._host_devices
+
+    @host_devices.setter
+    def host_devices(self, host_devices):
+        """
+        Sets the host_devices of this V1alpha1VirtualMachineFlavorSpec.
+        Optionally defines any HostDevices associated with the flavor.
+
+        :param host_devices: The host_devices of this V1alpha1VirtualMachineFlavorSpec.
+        :type: list[V1HostDevice]
+        """
+
+        self._host_devices = host_devices
+
+    @property
+    def io_threads_policy(self):
+        """
+        Gets the io_threads_policy of this V1alpha1VirtualMachineFlavorSpec.
+        Optionally defines the IOThreadsPolicy to be used by the flavor.
+
+        :return: The io_threads_policy of this V1alpha1VirtualMachineFlavorSpec.
+        :rtype: str
+        """
+        return self._io_threads_policy
+
+    @io_threads_policy.setter
+    def io_threads_policy(self, io_threads_policy):
+        """
+        Sets the io_threads_policy of this V1alpha1VirtualMachineFlavorSpec.
+        Optionally defines the IOThreadsPolicy to be used by the flavor.
+
+        :param io_threads_policy: The io_threads_policy of this V1alpha1VirtualMachineFlavorSpec.
+        :type: str
+        """
+
+        self._io_threads_policy = io_threads_policy
+
+    @property
+    def launch_security(self):
+        """
+        Gets the launch_security of this V1alpha1VirtualMachineFlavorSpec.
+        Optionally defines the LaunchSecurity to be used by the flavor.
+
+        :return: The launch_security of this V1alpha1VirtualMachineFlavorSpec.
+        :rtype: V1LaunchSecurity
+        """
+        return self._launch_security
+
+    @launch_security.setter
+    def launch_security(self, launch_security):
+        """
+        Sets the launch_security of this V1alpha1VirtualMachineFlavorSpec.
+        Optionally defines the LaunchSecurity to be used by the flavor.
+
+        :param launch_security: The launch_security of this V1alpha1VirtualMachineFlavorSpec.
+        :type: V1LaunchSecurity
+        """
+
+        self._launch_security = launch_security
+
+    @property
+    def memory(self):
+        """
+        Gets the memory of this V1alpha1VirtualMachineFlavorSpec.
+        Required Memory related attributes of the flavor.
+
+        :return: The memory of this V1alpha1VirtualMachineFlavorSpec.
+        :rtype: V1alpha1MemoryFlavor
+        """
+        return self._memory
+
+    @memory.setter
+    def memory(self, memory):
+        """
+        Sets the memory of this V1alpha1VirtualMachineFlavorSpec.
+        Required Memory related attributes of the flavor.
+
+        :param memory: The memory of this V1alpha1VirtualMachineFlavorSpec.
+        :type: V1alpha1MemoryFlavor
+        """
+        if memory is None:
+            raise ValueError("Invalid value for `memory`, must not be `None`")
+
+        self._memory = memory
 
     def to_dict(self):
         """

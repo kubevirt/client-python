@@ -41,6 +41,7 @@ class V1Volume(object):
         'empty_disk': 'V1EmptyDiskSource',
         'ephemeral': 'V1EphemeralVolumeSource',
         'host_disk': 'V1HostDisk',
+        'memory_dump': 'V1MemoryDumpVolumeSource',
         'name': 'str',
         'persistent_volume_claim': 'V1PersistentVolumeClaimVolumeSource',
         'secret': 'V1SecretVolumeSource',
@@ -59,6 +60,7 @@ class V1Volume(object):
         'empty_disk': 'emptyDisk',
         'ephemeral': 'ephemeral',
         'host_disk': 'hostDisk',
+        'memory_dump': 'memoryDump',
         'name': 'name',
         'persistent_volume_claim': 'persistentVolumeClaim',
         'secret': 'secret',
@@ -66,7 +68,7 @@ class V1Volume(object):
         'sysprep': 'sysprep'
     }
 
-    def __init__(self, cloud_init_config_drive=None, cloud_init_no_cloud=None, config_map=None, container_disk=None, data_volume=None, downward_api=None, downward_metrics=None, empty_disk=None, ephemeral=None, host_disk=None, name=None, persistent_volume_claim=None, secret=None, service_account=None, sysprep=None):
+    def __init__(self, cloud_init_config_drive=None, cloud_init_no_cloud=None, config_map=None, container_disk=None, data_volume=None, downward_api=None, downward_metrics=None, empty_disk=None, ephemeral=None, host_disk=None, memory_dump=None, name=None, persistent_volume_claim=None, secret=None, service_account=None, sysprep=None):
         """
         V1Volume - a model defined in Swagger
         """
@@ -81,6 +83,7 @@ class V1Volume(object):
         self._empty_disk = None
         self._ephemeral = None
         self._host_disk = None
+        self._memory_dump = None
         self._name = None
         self._persistent_volume_claim = None
         self._secret = None
@@ -107,6 +110,8 @@ class V1Volume(object):
           self.ephemeral = ephemeral
         if host_disk is not None:
           self.host_disk = host_disk
+        if memory_dump is not None:
+          self.memory_dump = memory_dump
         self.name = name
         if persistent_volume_claim is not None:
           self.persistent_volume_claim = persistent_volume_claim
@@ -346,6 +351,29 @@ class V1Volume(object):
         """
 
         self._host_disk = host_disk
+
+    @property
+    def memory_dump(self):
+        """
+        Gets the memory_dump of this V1Volume.
+        MemoryDump is attached to the virt launcher and is populated with a memory dump of the vmi
+
+        :return: The memory_dump of this V1Volume.
+        :rtype: V1MemoryDumpVolumeSource
+        """
+        return self._memory_dump
+
+    @memory_dump.setter
+    def memory_dump(self, memory_dump):
+        """
+        Sets the memory_dump of this V1Volume.
+        MemoryDump is attached to the virt launcher and is populated with a memory dump of the vmi
+
+        :param memory_dump: The memory_dump of this V1Volume.
+        :type: V1MemoryDumpVolumeSource
+        """
+
+        self._memory_dump = memory_dump
 
     @property
     def name(self):

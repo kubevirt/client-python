@@ -144,8 +144,10 @@ Method | HTTP request | Description
 [**v1_freeze**](DefaultApi.md#v1_freeze) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/freeze | 
 [**v1_guestfs**](DefaultApi.md#v1_guestfs) | **GET** /apis/subresources.kubevirt.io/v1/guestfs | 
 [**v1_guestosinfo**](DefaultApi.md#v1_guestosinfo) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/guestosinfo | 
+[**v1_memory_dump**](DefaultApi.md#v1_memory_dump) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/memorydump | 
 [**v1_migrate**](DefaultApi.md#v1_migrate) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/migrate | 
 [**v1_pause**](DefaultApi.md#v1_pause) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/pause | 
+[**v1_remove_memory_dump**](DefaultApi.md#v1_remove_memory_dump) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/removememorydump | 
 [**v1_restart**](DefaultApi.md#v1_restart) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/restart | 
 [**v1_soft_reboot**](DefaultApi.md#v1_soft_reboot) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/softreboot | 
 [**v1_start**](DefaultApi.md#v1_start) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/start | 
@@ -163,8 +165,10 @@ Method | HTTP request | Description
 [**v1alpha3_get_sub_api_group**](DefaultApi.md#v1alpha3_get_sub_api_group) | **GET** /apis/subresources.kubevirt.io | 
 [**v1alpha3_guestfs**](DefaultApi.md#v1alpha3_guestfs) | **GET** /apis/subresources.kubevirt.io/v1alpha3/guestfs | 
 [**v1alpha3_guestosinfo**](DefaultApi.md#v1alpha3_guestosinfo) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/guestosinfo | 
+[**v1alpha3_memory_dump**](DefaultApi.md#v1alpha3_memory_dump) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/memorydump | 
 [**v1alpha3_migrate**](DefaultApi.md#v1alpha3_migrate) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/migrate | 
 [**v1alpha3_pause**](DefaultApi.md#v1alpha3_pause) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/pause | 
+[**v1alpha3_remove_memory_dump**](DefaultApi.md#v1alpha3_remove_memory_dump) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/removememorydump | 
 [**v1alpha3_restart**](DefaultApi.md#v1alpha3_restart) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/restart | 
 [**v1alpha3_soft_reboot**](DefaultApi.md#v1alpha3_soft_reboot) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/softreboot | 
 [**v1alpha3_start**](DefaultApi.md#v1alpha3_start) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/start | 
@@ -7700,6 +7704,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1_memory_dump**
+> str v1_memory_dump(name, namespace, body)
+
+
+
+Dumps a VirtualMachineInstance memory.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1VirtualMachineMemoryDumpRequest() # V1VirtualMachineMemoryDumpRequest | 
+
+try: 
+    api_response = api_instance.v1_memory_dump(name, namespace, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1_memory_dump: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1VirtualMachineMemoryDumpRequest**](V1VirtualMachineMemoryDumpRequest.md)|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1_migrate**
 > str v1_migrate(name, namespace, body)
 
@@ -7786,6 +7841,55 @@ Name | Type | Description  | Notes
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
  **body** | [**V1PauseOptions**](V1PauseOptions.md)|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_remove_memory_dump**
+> str v1_remove_memory_dump(name, namespace)
+
+
+
+Remove memory dump association.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+
+try: 
+    api_response = api_instance.v1_remove_memory_dump(name, namespace)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1_remove_memory_dump: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
 
 ### Return type
 
@@ -8601,6 +8705,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1alpha3_memory_dump**
+> str v1alpha3_memory_dump(name, namespace, body)
+
+
+
+Dumps a VirtualMachineInstance memory.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1VirtualMachineMemoryDumpRequest() # V1VirtualMachineMemoryDumpRequest | 
+
+try: 
+    api_response = api_instance.v1alpha3_memory_dump(name, namespace, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1alpha3_memory_dump: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1VirtualMachineMemoryDumpRequest**](V1VirtualMachineMemoryDumpRequest.md)|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1alpha3_migrate**
 > str v1alpha3_migrate(name, namespace, body)
 
@@ -8687,6 +8842,55 @@ Name | Type | Description  | Notes
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
  **body** | [**V1PauseOptions**](V1PauseOptions.md)|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1alpha3_remove_memory_dump**
+> str v1alpha3_remove_memory_dump(name, namespace)
+
+
+
+Remove memory dump association.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+
+try: 
+    api_response = api_instance.v1alpha3_remove_memory_dump(name, namespace)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1alpha3_remove_memory_dump: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
 
 ### Return type
 

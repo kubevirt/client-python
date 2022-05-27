@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **hotplug_volume** | [**V1HotplugVolumeStatus**](V1HotplugVolumeStatus.md) | If the volume is hotplug, this will contain the hotplug status. | [optional] 
+**memory_dump_volume** | [**V1DomainMemoryDumpInfo**](V1DomainMemoryDumpInfo.md) | If the volume is memorydump volume, this will contain the memorydump info. | [optional] 
 **message** | **str** | Message is a detailed message about the current hotplug volume phase | [optional] 
 **name** | **str** | Name is the name of the volume | 
 **persistent_volume_claim_info** | [**V1PersistentVolumeClaimInfo**](V1PersistentVolumeClaimInfo.md) | PersistentVolumeClaimInfo is information about the PVC that handler requires during start flow | [optional] 

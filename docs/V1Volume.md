@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **empty_disk** | [**V1EmptyDiskSource**](V1EmptyDiskSource.md) | EmptyDisk represents a temporary disk which shares the vmis lifecycle. More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html | [optional] 
 **ephemeral** | [**V1EphemeralVolumeSource**](V1EphemeralVolumeSource.md) | Ephemeral is a special volume source that \&quot;wraps\&quot; specified source and provides copy-on-write image on top of it. | [optional] 
 **host_disk** | [**V1HostDisk**](V1HostDisk.md) | HostDisk represents a disk created on the cluster level | [optional] 
+**memory_dump** | [**V1MemoryDumpVolumeSource**](V1MemoryDumpVolumeSource.md) | MemoryDump is attached to the virt launcher and is populated with a memory dump of the vmi | [optional] 
 **name** | **str** | Volume&#39;s name. Must be a DNS_LABEL and unique within the vmi. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names | 
 **persistent_volume_claim** | [**V1PersistentVolumeClaimVolumeSource**](V1PersistentVolumeClaimVolumeSource.md) | PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims | [optional] 
 **secret** | [**V1SecretVolumeSource**](V1SecretVolumeSource.md) | SecretVolumeSource represents a reference to a secret data in the same namespace. More info: https://kubernetes.io/docs/concepts/configuration/secret/ | [optional] 

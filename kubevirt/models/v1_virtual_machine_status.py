@@ -33,6 +33,7 @@ class V1VirtualMachineStatus(object):
     swagger_types = {
         'conditions': 'list[V1VirtualMachineCondition]',
         'created': 'bool',
+        'memory_dump_request': 'V1VirtualMachineMemoryDumpRequest',
         'printable_status': 'str',
         'ready': 'bool',
         'restore_in_progress': 'str',
@@ -46,6 +47,7 @@ class V1VirtualMachineStatus(object):
     attribute_map = {
         'conditions': 'conditions',
         'created': 'created',
+        'memory_dump_request': 'memoryDumpRequest',
         'printable_status': 'printableStatus',
         'ready': 'ready',
         'restore_in_progress': 'restoreInProgress',
@@ -56,13 +58,14 @@ class V1VirtualMachineStatus(object):
         'volume_snapshot_statuses': 'volumeSnapshotStatuses'
     }
 
-    def __init__(self, conditions=None, created=None, printable_status=None, ready=None, restore_in_progress=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None):
+    def __init__(self, conditions=None, created=None, memory_dump_request=None, printable_status=None, ready=None, restore_in_progress=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
 
         self._conditions = None
         self._created = None
+        self._memory_dump_request = None
         self._printable_status = None
         self._ready = None
         self._restore_in_progress = None
@@ -76,6 +79,8 @@ class V1VirtualMachineStatus(object):
           self.conditions = conditions
         if created is not None:
           self.created = created
+        if memory_dump_request is not None:
+          self.memory_dump_request = memory_dump_request
         if printable_status is not None:
           self.printable_status = printable_status
         if ready is not None:
@@ -138,6 +143,29 @@ class V1VirtualMachineStatus(object):
         """
 
         self._created = created
+
+    @property
+    def memory_dump_request(self):
+        """
+        Gets the memory_dump_request of this V1VirtualMachineStatus.
+        MemoryDumpRequest tracks memory dump request phase and info of getting a memory dump to the given pvc
+
+        :return: The memory_dump_request of this V1VirtualMachineStatus.
+        :rtype: V1VirtualMachineMemoryDumpRequest
+        """
+        return self._memory_dump_request
+
+    @memory_dump_request.setter
+    def memory_dump_request(self, memory_dump_request):
+        """
+        Sets the memory_dump_request of this V1VirtualMachineStatus.
+        MemoryDumpRequest tracks memory dump request phase and info of getting a memory dump to the given pvc
+
+        :param memory_dump_request: The memory_dump_request of this V1VirtualMachineStatus.
+        :type: V1VirtualMachineMemoryDumpRequest
+        """
+
+        self._memory_dump_request = memory_dump_request
 
     @property
     def printable_status(self):

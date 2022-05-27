@@ -99,6 +99,7 @@ from .v1_devices import V1Devices
 from .v1_disk import V1Disk
 from .v1_disk_target import V1DiskTarget
 from .v1_disk_verification import V1DiskVerification
+from .v1_domain_memory_dump_info import V1DomainMemoryDumpInfo
 from .v1_domain_spec import V1DomainSpec
 from .v1_downward_api_volume_source import V1DownwardAPIVolumeSource
 from .v1_downward_metrics_volume_source import V1DownwardMetricsVolumeSource
@@ -156,6 +157,7 @@ from .v1_machine import V1Machine
 from .v1_mediated_devices_configuration import V1MediatedDevicesConfiguration
 from .v1_mediated_host_device import V1MediatedHostDevice
 from .v1_memory import V1Memory
+from .v1_memory_dump_volume_source import V1MemoryDumpVolumeSource
 from .v1_migrate_options import V1MigrateOptions
 from .v1_migration_configuration import V1MigrationConfiguration
 from .v1_multus_network import V1MultusNetwork
@@ -240,6 +242,7 @@ from .v1_virtual_machine_instance_spec import V1VirtualMachineInstanceSpec
 from .v1_virtual_machine_instance_status import V1VirtualMachineInstanceStatus
 from .v1_virtual_machine_instance_template_spec import V1VirtualMachineInstanceTemplateSpec
 from .v1_virtual_machine_list import V1VirtualMachineList
+from .v1_virtual_machine_memory_dump_request import V1VirtualMachineMemoryDumpRequest
 from .v1_virtual_machine_spec import V1VirtualMachineSpec
 from .v1_virtual_machine_start_failure import V1VirtualMachineStartFailure
 from .v1_virtual_machine_state_change_request import V1VirtualMachineStateChangeRequest

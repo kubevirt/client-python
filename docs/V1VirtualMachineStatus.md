@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **conditions** | [**list[V1VirtualMachineCondition]**](V1VirtualMachineCondition.md) | Hold the state information of the VirtualMachine and its VirtualMachineInstance | [optional] 
 **created** | **bool** | Created indicates if the virtual machine is created in the cluster | [optional] 
+**memory_dump_request** | [**V1VirtualMachineMemoryDumpRequest**](V1VirtualMachineMemoryDumpRequest.md) | MemoryDumpRequest tracks memory dump request phase and info of getting a memory dump to the given pvc | [optional] 
 **printable_status** | **str** | PrintableStatus is a human readable, high-level representation of the status of the virtual machine | [optional] 
 **ready** | **bool** | Ready indicates if the virtual machine is running and ready | [optional] 
 **restore_in_progress** | **str** | RestoreInProgress is the name of the VirtualMachineRestore currently executing | [optional] 

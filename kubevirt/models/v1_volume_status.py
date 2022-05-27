@@ -32,6 +32,7 @@ class V1VolumeStatus(object):
     """
     swagger_types = {
         'hotplug_volume': 'V1HotplugVolumeStatus',
+        'memory_dump_volume': 'V1DomainMemoryDumpInfo',
         'message': 'str',
         'name': 'str',
         'persistent_volume_claim_info': 'V1PersistentVolumeClaimInfo',
@@ -43,6 +44,7 @@ class V1VolumeStatus(object):
 
     attribute_map = {
         'hotplug_volume': 'hotplugVolume',
+        'memory_dump_volume': 'memoryDumpVolume',
         'message': 'message',
         'name': 'name',
         'persistent_volume_claim_info': 'persistentVolumeClaimInfo',
@@ -52,12 +54,13 @@ class V1VolumeStatus(object):
         'target': 'target'
     }
 
-    def __init__(self, hotplug_volume=None, message=None, name=None, persistent_volume_claim_info=None, phase=None, reason=None, size=None, target=None):
+    def __init__(self, hotplug_volume=None, memory_dump_volume=None, message=None, name=None, persistent_volume_claim_info=None, phase=None, reason=None, size=None, target=None):
         """
         V1VolumeStatus - a model defined in Swagger
         """
 
         self._hotplug_volume = None
+        self._memory_dump_volume = None
         self._message = None
         self._name = None
         self._persistent_volume_claim_info = None
@@ -68,6 +71,8 @@ class V1VolumeStatus(object):
 
         if hotplug_volume is not None:
           self.hotplug_volume = hotplug_volume
+        if memory_dump_volume is not None:
+          self.memory_dump_volume = memory_dump_volume
         if message is not None:
           self.message = message
         self.name = name
@@ -103,6 +108,29 @@ class V1VolumeStatus(object):
         """
 
         self._hotplug_volume = hotplug_volume
+
+    @property
+    def memory_dump_volume(self):
+        """
+        Gets the memory_dump_volume of this V1VolumeStatus.
+        If the volume is memorydump volume, this will contain the memorydump info.
+
+        :return: The memory_dump_volume of this V1VolumeStatus.
+        :rtype: V1DomainMemoryDumpInfo
+        """
+        return self._memory_dump_volume
+
+    @memory_dump_volume.setter
+    def memory_dump_volume(self, memory_dump_volume):
+        """
+        Sets the memory_dump_volume of this V1VolumeStatus.
+        If the volume is memorydump volume, this will contain the memorydump info.
+
+        :param memory_dump_volume: The memory_dump_volume of this V1VolumeStatus.
+        :type: V1DomainMemoryDumpInfo
+        """
+
+        self._memory_dump_volume = memory_dump_volume
 
     @property
     def message(self):

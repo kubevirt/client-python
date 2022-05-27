@@ -276,6 +276,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_disk_verification.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_disk_verification.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1DiskVerification.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_domain_memory_dump_info.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_domain_memory_dump_info.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1DomainMemoryDumpInfo.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_domain_spec.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_domain_spec.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1DomainSpec.md
@@ -447,6 +450,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_memory.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_memory.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1Memory.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_memory_dump_volume_source.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_memory_dump_volume_source.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1MemoryDumpVolumeSource.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_migrate_options.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_migrate_options.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1MigrateOptions.md
@@ -699,6 +705,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_virtual_machine_list.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_virtual_machine_list.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1VirtualMachineList.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_virtual_machine_memory_dump_request.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_virtual_machine_memory_dump_request.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1VirtualMachineMemoryDumpRequest.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_virtual_machine_spec.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_virtual_machine_spec.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1VirtualMachineSpec.md

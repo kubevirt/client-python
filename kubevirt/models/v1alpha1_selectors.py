@@ -31,8 +31,8 @@ class V1alpha1Selectors(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'namespace_selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
-        'virtual_machine_instance_selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector'
+        'namespace_selector': 'dict(str, str)',
+        'virtual_machine_instance_selector': 'dict(str, str)'
     }
 
     attribute_map = {
@@ -59,7 +59,7 @@ class V1alpha1Selectors(object):
         Gets the namespace_selector of this V1alpha1Selectors.
 
         :return: The namespace_selector of this V1alpha1Selectors.
-        :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :rtype: dict(str, str)
         """
         return self._namespace_selector
 
@@ -69,7 +69,7 @@ class V1alpha1Selectors(object):
         Sets the namespace_selector of this V1alpha1Selectors.
 
         :param namespace_selector: The namespace_selector of this V1alpha1Selectors.
-        :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :type: dict(str, str)
         """
 
         self._namespace_selector = namespace_selector
@@ -80,7 +80,7 @@ class V1alpha1Selectors(object):
         Gets the virtual_machine_instance_selector of this V1alpha1Selectors.
 
         :return: The virtual_machine_instance_selector of this V1alpha1Selectors.
-        :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :rtype: dict(str, str)
         """
         return self._virtual_machine_instance_selector
 
@@ -90,7 +90,7 @@ class V1alpha1Selectors(object):
         Sets the virtual_machine_instance_selector of this V1alpha1Selectors.
 
         :param virtual_machine_instance_selector: The virtual_machine_instance_selector of this V1alpha1Selectors.
-        :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :type: dict(str, str)
         """
 
         self._virtual_machine_instance_selector = virtual_machine_instance_selector

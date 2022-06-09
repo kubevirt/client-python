@@ -52,7 +52,7 @@ class V1alpha1CPUPreferences(object):
     def preferred_cpu_topology(self):
         """
         Gets the preferred_cpu_topology of this V1alpha1CPUPreferences.
-        PreferredCPUTopology optionally defines the preferred guest visible CPU topology, defaults to PreferCores.
+        PreferredCPUTopology optionally defines the preferred guest visible CPU topology, defaults to PreferSockets.
 
         :return: The preferred_cpu_topology of this V1alpha1CPUPreferences.
         :rtype: str
@@ -63,7 +63,7 @@ class V1alpha1CPUPreferences(object):
     def preferred_cpu_topology(self, preferred_cpu_topology):
         """
         Sets the preferred_cpu_topology of this V1alpha1CPUPreferences.
-        PreferredCPUTopology optionally defines the preferred guest visible CPU topology, defaults to PreferCores.
+        PreferredCPUTopology optionally defines the preferred guest visible CPU topology, defaults to PreferSockets.
 
         :param preferred_cpu_topology: The preferred_cpu_topology of this V1alpha1CPUPreferences.
         :type: str

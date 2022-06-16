@@ -32,6 +32,7 @@ class V1beta1DataVolumeSourceVDDK(object):
     """
     swagger_types = {
         'backing_file': 'str',
+        'init_image_url': 'str',
         'secret_ref': 'str',
         'thumbprint': 'str',
         'url': 'str',
@@ -40,18 +41,20 @@ class V1beta1DataVolumeSourceVDDK(object):
 
     attribute_map = {
         'backing_file': 'backingFile',
+        'init_image_url': 'initImageURL',
         'secret_ref': 'secretRef',
         'thumbprint': 'thumbprint',
         'url': 'url',
         'uuid': 'uuid'
     }
 
-    def __init__(self, backing_file=None, secret_ref=None, thumbprint=None, url=None, uuid=None):
+    def __init__(self, backing_file=None, init_image_url=None, secret_ref=None, thumbprint=None, url=None, uuid=None):
         """
         V1beta1DataVolumeSourceVDDK - a model defined in Swagger
         """
 
         self._backing_file = None
+        self._init_image_url = None
         self._secret_ref = None
         self._thumbprint = None
         self._url = None
@@ -59,6 +62,8 @@ class V1beta1DataVolumeSourceVDDK(object):
 
         if backing_file is not None:
           self.backing_file = backing_file
+        if init_image_url is not None:
+          self.init_image_url = init_image_url
         if secret_ref is not None:
           self.secret_ref = secret_ref
         if thumbprint is not None:
@@ -90,6 +95,29 @@ class V1beta1DataVolumeSourceVDDK(object):
         """
 
         self._backing_file = backing_file
+
+    @property
+    def init_image_url(self):
+        """
+        Gets the init_image_url of this V1beta1DataVolumeSourceVDDK.
+        InitImageURL is an optional URL to an image containing an extracted VDDK library, overrides v2v-vmware config map
+
+        :return: The init_image_url of this V1beta1DataVolumeSourceVDDK.
+        :rtype: str
+        """
+        return self._init_image_url
+
+    @init_image_url.setter
+    def init_image_url(self, init_image_url):
+        """
+        Sets the init_image_url of this V1beta1DataVolumeSourceVDDK.
+        InitImageURL is an optional URL to an image containing an extracted VDDK library, overrides v2v-vmware config map
+
+        :param init_image_url: The init_image_url of this V1beta1DataVolumeSourceVDDK.
+        :type: str
+        """
+
+        self._init_image_url = init_image_url
 
     @property
     def secret_ref(self):

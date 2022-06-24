@@ -32,26 +32,31 @@ class V1VirtualMachineInstanceMigrationStatus(object):
     """
     swagger_types = {
         'conditions': 'list[V1VirtualMachineInstanceMigrationCondition]',
-        'phase': 'str'
+        'phase': 'str',
+        'phase_transition_timestamps': 'list[V1VirtualMachineInstanceMigrationPhaseTransitionTimestamp]'
     }
 
     attribute_map = {
         'conditions': 'conditions',
-        'phase': 'phase'
+        'phase': 'phase',
+        'phase_transition_timestamps': 'phaseTransitionTimestamps'
     }
 
-    def __init__(self, conditions=None, phase=None):
+    def __init__(self, conditions=None, phase=None, phase_transition_timestamps=None):
         """
         V1VirtualMachineInstanceMigrationStatus - a model defined in Swagger
         """
 
         self._conditions = None
         self._phase = None
+        self._phase_transition_timestamps = None
 
         if conditions is not None:
           self.conditions = conditions
         if phase is not None:
           self.phase = phase
+        if phase_transition_timestamps is not None:
+          self.phase_transition_timestamps = phase_transition_timestamps
 
     @property
     def conditions(self):
@@ -94,6 +99,29 @@ class V1VirtualMachineInstanceMigrationStatus(object):
         """
 
         self._phase = phase
+
+    @property
+    def phase_transition_timestamps(self):
+        """
+        Gets the phase_transition_timestamps of this V1VirtualMachineInstanceMigrationStatus.
+        PhaseTransitionTimestamp is the timestamp of when the last phase change occurred
+
+        :return: The phase_transition_timestamps of this V1VirtualMachineInstanceMigrationStatus.
+        :rtype: list[V1VirtualMachineInstanceMigrationPhaseTransitionTimestamp]
+        """
+        return self._phase_transition_timestamps
+
+    @phase_transition_timestamps.setter
+    def phase_transition_timestamps(self, phase_transition_timestamps):
+        """
+        Sets the phase_transition_timestamps of this V1VirtualMachineInstanceMigrationStatus.
+        PhaseTransitionTimestamp is the timestamp of when the last phase change occurred
+
+        :param phase_transition_timestamps: The phase_transition_timestamps of this V1VirtualMachineInstanceMigrationStatus.
+        :type: list[V1VirtualMachineInstanceMigrationPhaseTransitionTimestamp]
+        """
+
+        self._phase_transition_timestamps = phase_transition_timestamps
 
     def to_dict(self):
         """

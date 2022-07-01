@@ -32,25 +32,30 @@ class V1PreferenceMatcher(object):
     """
     swagger_types = {
         'kind': 'str',
-        'name': 'str'
+        'name': 'str',
+        'revision_name': 'str'
     }
 
     attribute_map = {
         'kind': 'kind',
-        'name': 'name'
+        'name': 'name',
+        'revision_name': 'revisionName'
     }
 
-    def __init__(self, kind=None, name=None):
+    def __init__(self, kind=None, name=None, revision_name=None):
         """
         V1PreferenceMatcher - a model defined in Swagger
         """
 
         self._kind = None
         self._name = None
+        self._revision_name = None
 
         if kind is not None:
           self.kind = kind
         self.name = name
+        if revision_name is not None:
+          self.revision_name = revision_name
 
     @property
     def kind(self):
@@ -99,6 +104,29 @@ class V1PreferenceMatcher(object):
             raise ValueError("Invalid value for `name`, must not be `None`")
 
         self._name = name
+
+    @property
+    def revision_name(self):
+        """
+        Gets the revision_name of this V1PreferenceMatcher.
+        RevisionName specifies a ControllerRevision containing a specific copy of the VirtualMachinePreference or VirtualMachineClusterPreference to be used. This is initially captured the first time the flavor is applied to the VirtualMachineInstance.
+
+        :return: The revision_name of this V1PreferenceMatcher.
+        :rtype: str
+        """
+        return self._revision_name
+
+    @revision_name.setter
+    def revision_name(self, revision_name):
+        """
+        Sets the revision_name of this V1PreferenceMatcher.
+        RevisionName specifies a ControllerRevision containing a specific copy of the VirtualMachinePreference or VirtualMachineClusterPreference to be used. This is initially captured the first time the flavor is applied to the VirtualMachineInstance.
+
+        :param revision_name: The revision_name of this V1PreferenceMatcher.
+        :type: str
+        """
+
+        self._revision_name = revision_name
 
     def to_dict(self):
         """

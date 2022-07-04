@@ -143,6 +143,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_create_virtual_machine_clone(self):
+        """
+        Test case for create_virtual_machine_clone
+
+        
+        """
+        pass
+
     def test_create_virtual_machine_cluster_flavor(self):
         """
         Test case for create_virtual_machine_cluster_flavor
@@ -266,6 +274,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_delete_collection_namespaced_virtual_machine_snapshot_content(self):
         """
         Test case for delete_collection_namespaced_virtual_machine_snapshot_content
+
+        
+        """
+        pass
+
+    def test_delete_collection_virtual_machine_clone(self):
+        """
+        Test case for delete_collection_virtual_machine_clone
 
         
         """
@@ -399,6 +415,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_virtual_machine_clone(self):
+        """
+        Test case for delete_virtual_machine_clone
+
+        
+        """
+        pass
+
     def test_delete_virtual_machine_cluster_flavor(self):
         """
         Test case for delete_virtual_machine_cluster_flavor
@@ -426,6 +450,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_func7(self):
         """
         Test case for func7
+
+        
+        """
+        pass
+
+    def test_get_api_group_clone_kubevirt_io(self):
+        """
+        Test case for get_api_group_clone_kubevirt_io
 
         
         """
@@ -482,6 +514,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_get_api_group_snapshot_kubevirt_io(self):
         """
         Test case for get_api_group_snapshot_kubevirt_io
+
+        
+        """
+        pass
+
+    def test_get_api_resources_clone_kubevirt_io_v1alpha1(self):
+        """
+        Test case for get_api_resources_clone_kubevirt_io_v1alpha1
 
         
         """
@@ -682,6 +722,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_list_namespaced_virtual_machine_snapshot_content(self):
         """
         Test case for list_namespaced_virtual_machine_snapshot_content
+
+        
+        """
+        pass
+
+    def test_list_virtual_machine_clone(self):
+        """
+        Test case for list_virtual_machine_clone
 
         
         """
@@ -911,6 +959,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_virtual_machine_clone(self):
+        """
+        Test case for patch_virtual_machine_clone
+
+        
+        """
+        pass
+
     def test_patch_virtual_machine_cluster_flavor(self):
         """
         Test case for patch_virtual_machine_cluster_flavor
@@ -1039,6 +1095,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_read_virtual_machine_clone(self):
+        """
+        Test case for read_virtual_machine_clone
+
+        
+        """
+        pass
+
     def test_read_virtual_machine_cluster_flavor(self):
         """
         Test case for read_virtual_machine_cluster_flavor
@@ -1162,6 +1226,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_replace_namespaced_virtual_machine_snapshot_content(self):
         """
         Test case for replace_namespaced_virtual_machine_snapshot_content
+
+        
+        """
+        pass
+
+    def test_replace_virtual_machine_clone(self):
+        """
+        Test case for replace_virtual_machine_clone
 
         
         """
@@ -1834,6 +1906,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_watch_namespaced_virtual_machine_snapshot_content(self):
         """
         Test case for watch_namespaced_virtual_machine_snapshot_content
+
+        
+        """
+        pass
+
+    def test_watch_virtual_machine_clone_list_for_all_namespaces(self):
+        """
+        Test case for watch_virtual_machine_clone_list_for_all_namespaces
 
         
         """

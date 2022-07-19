@@ -1,4 +1,4 @@
-# V1alpha1CPUFlavor
+# V1alpha1CPUInstancetype
 
 ## Properties
 Name | Type | Description | Notes

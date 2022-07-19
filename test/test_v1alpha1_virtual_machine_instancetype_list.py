@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1_flavor_matcher import V1FlavorMatcher
+from kubevirt.models.v1alpha1_virtual_machine_instancetype_list import V1alpha1VirtualMachineInstancetypeList
 
 
-class TestV1FlavorMatcher(unittest.TestCase):
-    """ V1FlavorMatcher unit test stubs """
+class TestV1alpha1VirtualMachineInstancetypeList(unittest.TestCase):
+    """ V1alpha1VirtualMachineInstancetypeList unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1FlavorMatcher(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1FlavorMatcher(self):
+    def testV1alpha1VirtualMachineInstancetypeList(self):
         """
-        Test V1FlavorMatcher
+        Test V1alpha1VirtualMachineInstancetypeList
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1_flavor_matcher.V1FlavorMatcher()
+        #model = kubevirt.models.v1alpha1_virtual_machine_instancetype_list.V1alpha1VirtualMachineInstancetypeList()
         pass
 
 

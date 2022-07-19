@@ -32,7 +32,7 @@ class V1VirtualMachineSpec(object):
     """
     swagger_types = {
         'data_volume_templates': 'list[V1DataVolumeTemplateSpec]',
-        'flavor': 'V1FlavorMatcher',
+        'instancetype': 'V1InstancetypeMatcher',
         'preference': 'V1PreferenceMatcher',
         'run_strategy': 'str',
         'running': 'bool',
@@ -41,20 +41,20 @@ class V1VirtualMachineSpec(object):
 
     attribute_map = {
         'data_volume_templates': 'dataVolumeTemplates',
-        'flavor': 'flavor',
+        'instancetype': 'instancetype',
         'preference': 'preference',
         'run_strategy': 'runStrategy',
         'running': 'running',
         'template': 'template'
     }
 
-    def __init__(self, data_volume_templates=None, flavor=None, preference=None, run_strategy=None, running=None, template=None):
+    def __init__(self, data_volume_templates=None, instancetype=None, preference=None, run_strategy=None, running=None, template=None):
         """
         V1VirtualMachineSpec - a model defined in Swagger
         """
 
         self._data_volume_templates = None
-        self._flavor = None
+        self._instancetype = None
         self._preference = None
         self._run_strategy = None
         self._running = None
@@ -62,8 +62,8 @@ class V1VirtualMachineSpec(object):
 
         if data_volume_templates is not None:
           self.data_volume_templates = data_volume_templates
-        if flavor is not None:
-          self.flavor = flavor
+        if instancetype is not None:
+          self.instancetype = instancetype
         if preference is not None:
           self.preference = preference
         if run_strategy is not None:
@@ -96,27 +96,27 @@ class V1VirtualMachineSpec(object):
         self._data_volume_templates = data_volume_templates
 
     @property
-    def flavor(self):
+    def instancetype(self):
         """
-        Gets the flavor of this V1VirtualMachineSpec.
-        FlavorMatcher references a flavor that is used to fill fields in Template
+        Gets the instancetype of this V1VirtualMachineSpec.
+        InstancetypeMatcher references a instancetype that is used to fill fields in Template
 
-        :return: The flavor of this V1VirtualMachineSpec.
-        :rtype: V1FlavorMatcher
+        :return: The instancetype of this V1VirtualMachineSpec.
+        :rtype: V1InstancetypeMatcher
         """
-        return self._flavor
+        return self._instancetype
 
-    @flavor.setter
-    def flavor(self, flavor):
+    @instancetype.setter
+    def instancetype(self, instancetype):
         """
-        Sets the flavor of this V1VirtualMachineSpec.
-        FlavorMatcher references a flavor that is used to fill fields in Template
+        Sets the instancetype of this V1VirtualMachineSpec.
+        InstancetypeMatcher references a instancetype that is used to fill fields in Template
 
-        :param flavor: The flavor of this V1VirtualMachineSpec.
-        :type: V1FlavorMatcher
+        :param instancetype: The instancetype of this V1VirtualMachineSpec.
+        :type: V1InstancetypeMatcher
         """
 
-        self._flavor = flavor
+        self._instancetype = instancetype
 
     @property
     def preference(self):

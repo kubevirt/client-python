@@ -63,14 +63,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_create_namespaced_virtual_machine_flavor(self):
-        """
-        Test case for create_namespaced_virtual_machine_flavor
-
-        
-        """
-        pass
-
     def test_create_namespaced_virtual_machine_instance(self):
         """
         Test case for create_namespaced_virtual_machine_instance
@@ -98,6 +90,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_create_namespaced_virtual_machine_instance_replica_set(self):
         """
         Test case for create_namespaced_virtual_machine_instance_replica_set
+
+        
+        """
+        pass
+
+    def test_create_namespaced_virtual_machine_instancetype(self):
+        """
+        Test case for create_namespaced_virtual_machine_instancetype
 
         
         """
@@ -151,9 +151,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_create_virtual_machine_cluster_flavor(self):
+    def test_create_virtual_machine_cluster_instancetype(self):
         """
-        Test case for create_virtual_machine_cluster_flavor
+        Test case for create_virtual_machine_cluster_instancetype
 
         
         """
@@ -199,14 +199,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_collection_namespaced_virtual_machine_flavor(self):
-        """
-        Test case for delete_collection_namespaced_virtual_machine_flavor
-
-        
-        """
-        pass
-
     def test_delete_collection_namespaced_virtual_machine_instance(self):
         """
         Test case for delete_collection_namespaced_virtual_machine_instance
@@ -234,6 +226,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_delete_collection_namespaced_virtual_machine_instance_replica_set(self):
         """
         Test case for delete_collection_namespaced_virtual_machine_instance_replica_set
+
+        
+        """
+        pass
+
+    def test_delete_collection_namespaced_virtual_machine_instancetype(self):
+        """
+        Test case for delete_collection_namespaced_virtual_machine_instancetype
 
         
         """
@@ -287,9 +287,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_collection_virtual_machine_cluster_flavor(self):
+    def test_delete_collection_virtual_machine_cluster_instancetype(self):
         """
-        Test case for delete_collection_virtual_machine_cluster_flavor
+        Test case for delete_collection_virtual_machine_cluster_instancetype
 
         
         """
@@ -335,14 +335,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_namespaced_virtual_machine_flavor(self):
-        """
-        Test case for delete_namespaced_virtual_machine_flavor
-
-        
-        """
-        pass
-
     def test_delete_namespaced_virtual_machine_instance(self):
         """
         Test case for delete_namespaced_virtual_machine_instance
@@ -370,6 +362,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_delete_namespaced_virtual_machine_instance_replica_set(self):
         """
         Test case for delete_namespaced_virtual_machine_instance_replica_set
+
+        
+        """
+        pass
+
+    def test_delete_namespaced_virtual_machine_instancetype(self):
+        """
+        Test case for delete_namespaced_virtual_machine_instancetype
 
         
         """
@@ -423,9 +423,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_virtual_machine_cluster_flavor(self):
+    def test_delete_virtual_machine_cluster_instancetype(self):
         """
-        Test case for delete_virtual_machine_cluster_flavor
+        Test case for delete_virtual_machine_cluster_instancetype
 
         
         """
@@ -471,9 +471,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_get_api_group_flavor_kubevirt_io(self):
+    def test_get_api_group_instancetype_kubevirt_io(self):
         """
-        Test case for get_api_group_flavor_kubevirt_io
+        Test case for get_api_group_instancetype_kubevirt_io
 
         
         """
@@ -535,9 +535,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_get_api_resources_flavor_kubevirt_io_v1alpha1(self):
+    def test_get_api_resources_instancetype_kubevirt_io_v1alpha1(self):
         """
-        Test case for get_api_resources_flavor_kubevirt_io_v1alpha1
+        Test case for get_api_resources_instancetype_kubevirt_io_v1alpha1
 
         
         """
@@ -647,14 +647,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_list_namespaced_virtual_machine_flavor(self):
-        """
-        Test case for list_namespaced_virtual_machine_flavor
-
-        
-        """
-        pass
-
     def test_list_namespaced_virtual_machine_instance(self):
         """
         Test case for list_namespaced_virtual_machine_instance
@@ -682,6 +674,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_list_namespaced_virtual_machine_instance_replica_set(self):
         """
         Test case for list_namespaced_virtual_machine_instance_replica_set
+
+        
+        """
+        pass
+
+    def test_list_namespaced_virtual_machine_instancetype(self):
+        """
+        Test case for list_namespaced_virtual_machine_instancetype
 
         
         """
@@ -735,9 +735,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_list_virtual_machine_cluster_flavor(self):
+    def test_list_virtual_machine_cluster_instancetype(self):
         """
-        Test case for list_virtual_machine_cluster_flavor
+        Test case for list_virtual_machine_cluster_instancetype
 
         
         """
@@ -754,14 +754,6 @@ class TestDefaultApi(unittest.TestCase):
     def test_list_virtual_machine_export_for_all_namespaces(self):
         """
         Test case for list_virtual_machine_export_for_all_namespaces
-
-        
-        """
-        pass
-
-    def test_list_virtual_machine_flavor_for_all_namespaces(self):
-        """
-        Test case for list_virtual_machine_flavor_for_all_namespaces
 
         
         """
@@ -802,6 +794,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_list_virtual_machine_instance_replica_set_for_all_namespaces(self):
         """
         Test case for list_virtual_machine_instance_replica_set_for_all_namespaces
+
+        
+        """
+        pass
+
+    def test_list_virtual_machine_instancetype_for_all_namespaces(self):
+        """
+        Test case for list_virtual_machine_instancetype_for_all_namespaces
 
         
         """
@@ -879,14 +879,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_patch_namespaced_virtual_machine_flavor(self):
-        """
-        Test case for patch_namespaced_virtual_machine_flavor
-
-        
-        """
-        pass
-
     def test_patch_namespaced_virtual_machine_instance(self):
         """
         Test case for patch_namespaced_virtual_machine_instance
@@ -914,6 +906,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_patch_namespaced_virtual_machine_instance_replica_set(self):
         """
         Test case for patch_namespaced_virtual_machine_instance_replica_set
+
+        
+        """
+        pass
+
+    def test_patch_namespaced_virtual_machine_instancetype(self):
+        """
+        Test case for patch_namespaced_virtual_machine_instancetype
 
         
         """
@@ -967,9 +967,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_patch_virtual_machine_cluster_flavor(self):
+    def test_patch_virtual_machine_cluster_instancetype(self):
         """
-        Test case for patch_virtual_machine_cluster_flavor
+        Test case for patch_virtual_machine_cluster_instancetype
 
         
         """
@@ -1015,14 +1015,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_read_namespaced_virtual_machine_flavor(self):
-        """
-        Test case for read_namespaced_virtual_machine_flavor
-
-        
-        """
-        pass
-
     def test_read_namespaced_virtual_machine_instance(self):
         """
         Test case for read_namespaced_virtual_machine_instance
@@ -1050,6 +1042,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_read_namespaced_virtual_machine_instance_replica_set(self):
         """
         Test case for read_namespaced_virtual_machine_instance_replica_set
+
+        
+        """
+        pass
+
+    def test_read_namespaced_virtual_machine_instancetype(self):
+        """
+        Test case for read_namespaced_virtual_machine_instancetype
 
         
         """
@@ -1103,9 +1103,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_read_virtual_machine_cluster_flavor(self):
+    def test_read_virtual_machine_cluster_instancetype(self):
         """
-        Test case for read_virtual_machine_cluster_flavor
+        Test case for read_virtual_machine_cluster_instancetype
 
         
         """
@@ -1151,14 +1151,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_replace_namespaced_virtual_machine_flavor(self):
-        """
-        Test case for replace_namespaced_virtual_machine_flavor
-
-        
-        """
-        pass
-
     def test_replace_namespaced_virtual_machine_instance(self):
         """
         Test case for replace_namespaced_virtual_machine_instance
@@ -1186,6 +1178,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_replace_namespaced_virtual_machine_instance_replica_set(self):
         """
         Test case for replace_namespaced_virtual_machine_instance_replica_set
+
+        
+        """
+        pass
+
+    def test_replace_namespaced_virtual_machine_instancetype(self):
+        """
+        Test case for replace_namespaced_virtual_machine_instancetype
 
         
         """
@@ -1239,9 +1239,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_replace_virtual_machine_cluster_flavor(self):
+    def test_replace_virtual_machine_cluster_instancetype(self):
         """
-        Test case for replace_virtual_machine_cluster_flavor
+        Test case for replace_virtual_machine_cluster_instancetype
 
         
         """
@@ -1831,14 +1831,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_watch_namespaced_virtual_machine_flavor(self):
-        """
-        Test case for watch_namespaced_virtual_machine_flavor
-
-        
-        """
-        pass
-
     def test_watch_namespaced_virtual_machine_instance(self):
         """
         Test case for watch_namespaced_virtual_machine_instance
@@ -1866,6 +1858,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_watch_namespaced_virtual_machine_instance_replica_set(self):
         """
         Test case for watch_namespaced_virtual_machine_instance_replica_set
+
+        
+        """
+        pass
+
+    def test_watch_namespaced_virtual_machine_instancetype(self):
+        """
+        Test case for watch_namespaced_virtual_machine_instancetype
 
         
         """
@@ -1919,9 +1919,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_watch_virtual_machine_cluster_flavor_list_for_all_namespaces(self):
+    def test_watch_virtual_machine_cluster_instancetype_list_for_all_namespaces(self):
         """
-        Test case for watch_virtual_machine_cluster_flavor_list_for_all_namespaces
+        Test case for watch_virtual_machine_cluster_instancetype_list_for_all_namespaces
 
         
         """
@@ -1938,14 +1938,6 @@ class TestDefaultApi(unittest.TestCase):
     def test_watch_virtual_machine_export_list_for_all_namespaces(self):
         """
         Test case for watch_virtual_machine_export_list_for_all_namespaces
-
-        
-        """
-        pass
-
-    def test_watch_virtual_machine_flavor_list_for_all_namespaces(self):
-        """
-        Test case for watch_virtual_machine_flavor_list_for_all_namespaces
 
         
         """
@@ -1978,6 +1970,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_watch_virtual_machine_instance_replica_set_list_for_all_namespaces(self):
         """
         Test case for watch_virtual_machine_instance_replica_set_list_for_all_namespaces
+
+        
+        """
+        pass
+
+    def test_watch_virtual_machine_instancetype_list_for_all_namespaces(self):
+        """
+        Test case for watch_virtual_machine_instancetype_list_for_all_namespaces
 
         
         """

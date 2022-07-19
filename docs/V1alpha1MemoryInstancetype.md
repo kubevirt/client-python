@@ -1,4 +1,4 @@
-# V1alpha1MemoryFlavor
+# V1alpha1MemoryInstancetype
 
 ## Properties
 Name | Type | Description | Notes

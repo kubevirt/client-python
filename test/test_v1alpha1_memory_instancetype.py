@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1alpha1_memory_flavor import V1alpha1MemoryFlavor
+from kubevirt.models.v1alpha1_memory_instancetype import V1alpha1MemoryInstancetype
 
 
-class TestV1alpha1MemoryFlavor(unittest.TestCase):
-    """ V1alpha1MemoryFlavor unit test stubs """
+class TestV1alpha1MemoryInstancetype(unittest.TestCase):
+    """ V1alpha1MemoryInstancetype unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1alpha1MemoryFlavor(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1alpha1MemoryFlavor(self):
+    def testV1alpha1MemoryInstancetype(self):
         """
-        Test V1alpha1MemoryFlavor
+        Test V1alpha1MemoryInstancetype
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1alpha1_memory_flavor.V1alpha1MemoryFlavor()
+        #model = kubevirt.models.v1alpha1_memory_instancetype.V1alpha1MemoryInstancetype()
         pass
 
 

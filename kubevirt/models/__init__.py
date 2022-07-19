@@ -117,7 +117,6 @@ from .v1_filesystem import V1Filesystem
 from .v1_filesystem_virtiofs import V1FilesystemVirtiofs
 from .v1_firmware import V1Firmware
 from .v1_flags import V1Flags
-from .v1_flavor_matcher import V1FlavorMatcher
 from .v1_freeze_unfreeze_timeout import V1FreezeUnfreezeTimeout
 from .v1_gpu import V1GPU
 from .v1_generation_status import V1GenerationStatus
@@ -132,6 +131,7 @@ from .v1_hugepages import V1Hugepages
 from .v1_hyperv_timer import V1HypervTimer
 from .v1_i6300_esb_watchdog import V1I6300ESBWatchdog
 from .v1_input import V1Input
+from .v1_instancetype_matcher import V1InstancetypeMatcher
 from .v1_interface import V1Interface
 from .v1_interface_bridge import V1InterfaceBridge
 from .v1_interface_macvtap import V1InterfaceMacvtap
@@ -253,7 +253,7 @@ from .v1_volume import V1Volume
 from .v1_volume_snapshot_status import V1VolumeSnapshotStatus
 from .v1_volume_status import V1VolumeStatus
 from .v1_watchdog import V1Watchdog
-from .v1alpha1_cpu_flavor import V1alpha1CPUFlavor
+from .v1alpha1_cpu_instancetype import V1alpha1CPUInstancetype
 from .v1alpha1_cpu_preferences import V1alpha1CPUPreferences
 from .v1alpha1_clock_preferences import V1alpha1ClockPreferences
 from .v1alpha1_condition import V1alpha1Condition
@@ -262,7 +262,7 @@ from .v1alpha1_error import V1alpha1Error
 from .v1alpha1_feature_preferences import V1alpha1FeaturePreferences
 from .v1alpha1_firmware_preferences import V1alpha1FirmwarePreferences
 from .v1alpha1_machine_preferences import V1alpha1MachinePreferences
-from .v1alpha1_memory_flavor import V1alpha1MemoryFlavor
+from .v1alpha1_memory_instancetype import V1alpha1MemoryInstancetype
 from .v1alpha1_migration_policy import V1alpha1MigrationPolicy
 from .v1alpha1_migration_policy_list import V1alpha1MigrationPolicyList
 from .v1alpha1_migration_policy_spec import V1alpha1MigrationPolicySpec
@@ -275,8 +275,8 @@ from .v1alpha1_virtual_machine_clone import V1alpha1VirtualMachineClone
 from .v1alpha1_virtual_machine_clone_list import V1alpha1VirtualMachineCloneList
 from .v1alpha1_virtual_machine_clone_spec import V1alpha1VirtualMachineCloneSpec
 from .v1alpha1_virtual_machine_clone_status import V1alpha1VirtualMachineCloneStatus
-from .v1alpha1_virtual_machine_cluster_flavor import V1alpha1VirtualMachineClusterFlavor
-from .v1alpha1_virtual_machine_cluster_flavor_list import V1alpha1VirtualMachineClusterFlavorList
+from .v1alpha1_virtual_machine_cluster_instancetype import V1alpha1VirtualMachineClusterInstancetype
+from .v1alpha1_virtual_machine_cluster_instancetype_list import V1alpha1VirtualMachineClusterInstancetypeList
 from .v1alpha1_virtual_machine_cluster_preference import V1alpha1VirtualMachineClusterPreference
 from .v1alpha1_virtual_machine_cluster_preference_list import V1alpha1VirtualMachineClusterPreferenceList
 from .v1alpha1_virtual_machine_export import V1alpha1VirtualMachineExport
@@ -287,9 +287,9 @@ from .v1alpha1_virtual_machine_export_spec import V1alpha1VirtualMachineExportSp
 from .v1alpha1_virtual_machine_export_status import V1alpha1VirtualMachineExportStatus
 from .v1alpha1_virtual_machine_export_volume import V1alpha1VirtualMachineExportVolume
 from .v1alpha1_virtual_machine_export_volume_format import V1alpha1VirtualMachineExportVolumeFormat
-from .v1alpha1_virtual_machine_flavor import V1alpha1VirtualMachineFlavor
-from .v1alpha1_virtual_machine_flavor_list import V1alpha1VirtualMachineFlavorList
-from .v1alpha1_virtual_machine_flavor_spec import V1alpha1VirtualMachineFlavorSpec
+from .v1alpha1_virtual_machine_instancetype import V1alpha1VirtualMachineInstancetype
+from .v1alpha1_virtual_machine_instancetype_list import V1alpha1VirtualMachineInstancetypeList
+from .v1alpha1_virtual_machine_instancetype_spec import V1alpha1VirtualMachineInstancetypeSpec
 from .v1alpha1_virtual_machine_pool import V1alpha1VirtualMachinePool
 from .v1alpha1_virtual_machine_pool_condition import V1alpha1VirtualMachinePoolCondition
 from .v1alpha1_virtual_machine_pool_list import V1alpha1VirtualMachinePoolList

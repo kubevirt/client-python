@@ -109,7 +109,7 @@ class V1PreferenceMatcher(object):
     def revision_name(self):
         """
         Gets the revision_name of this V1PreferenceMatcher.
-        RevisionName specifies a ControllerRevision containing a specific copy of the VirtualMachinePreference or VirtualMachineClusterPreference to be used. This is initially captured the first time the flavor is applied to the VirtualMachineInstance.
+        RevisionName specifies a ControllerRevision containing a specific copy of the VirtualMachinePreference or VirtualMachineClusterPreference to be used. This is initially captured the first time the instancetype is applied to the VirtualMachineInstance.
 
         :return: The revision_name of this V1PreferenceMatcher.
         :rtype: str
@@ -120,7 +120,7 @@ class V1PreferenceMatcher(object):
     def revision_name(self, revision_name):
         """
         Sets the revision_name of this V1PreferenceMatcher.
-        RevisionName specifies a ControllerRevision containing a specific copy of the VirtualMachinePreference or VirtualMachineClusterPreference to be used. This is initially captured the first time the flavor is applied to the VirtualMachineInstance.
+        RevisionName specifies a ControllerRevision containing a specific copy of the VirtualMachinePreference or VirtualMachineClusterPreference to be used. This is initially captured the first time the instancetype is applied to the VirtualMachineInstance.
 
         :param revision_name: The revision_name of this V1PreferenceMatcher.
         :type: str

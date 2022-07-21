@@ -36,6 +36,7 @@ class V1VirtualMachineMemoryDumpRequest(object):
         'file_name': 'str',
         'message': 'str',
         'phase': 'str',
+        'remove': 'bool',
         'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time'
     }
 
@@ -45,10 +46,11 @@ class V1VirtualMachineMemoryDumpRequest(object):
         'file_name': 'fileName',
         'message': 'message',
         'phase': 'phase',
+        'remove': 'remove',
         'start_timestamp': 'startTimestamp'
     }
 
-    def __init__(self, claim_name=None, end_timestamp=None, file_name=None, message=None, phase=None, start_timestamp=None):
+    def __init__(self, claim_name=None, end_timestamp=None, file_name=None, message=None, phase=None, remove=None, start_timestamp=None):
         """
         V1VirtualMachineMemoryDumpRequest - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class V1VirtualMachineMemoryDumpRequest(object):
         self._file_name = None
         self._message = None
         self._phase = None
+        self._remove = None
         self._start_timestamp = None
 
         self.claim_name = claim_name
@@ -68,6 +71,8 @@ class V1VirtualMachineMemoryDumpRequest(object):
         if message is not None:
           self.message = message
         self.phase = phase
+        if remove is not None:
+          self.remove = remove
         if start_timestamp is not None:
           self.start_timestamp = start_timestamp
 
@@ -189,6 +194,29 @@ class V1VirtualMachineMemoryDumpRequest(object):
             raise ValueError("Invalid value for `phase`, must not be `None`")
 
         self._phase = phase
+
+    @property
+    def remove(self):
+        """
+        Gets the remove of this V1VirtualMachineMemoryDumpRequest.
+        Remove represents request of dissociating the memory dump pvc
+
+        :return: The remove of this V1VirtualMachineMemoryDumpRequest.
+        :rtype: bool
+        """
+        return self._remove
+
+    @remove.setter
+    def remove(self, remove):
+        """
+        Sets the remove of this V1VirtualMachineMemoryDumpRequest.
+        Remove represents request of dissociating the memory dump pvc
+
+        :param remove: The remove of this V1VirtualMachineMemoryDumpRequest.
+        :type: bool
+        """
+
+        self._remove = remove
 
     @property
     def start_timestamp(self):

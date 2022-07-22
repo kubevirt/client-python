@@ -136,6 +136,7 @@ from .v1_interface import V1Interface
 from .v1_interface_bridge import V1InterfaceBridge
 from .v1_interface_macvtap import V1InterfaceMacvtap
 from .v1_interface_masquerade import V1InterfaceMasquerade
+from .v1_interface_passt import V1InterfacePasst
 from .v1_interface_sriov import V1InterfaceSRIOV
 from .v1_interface_slirp import V1InterfaceSlirp
 from .v1_kvm_timer import V1KVMTimer

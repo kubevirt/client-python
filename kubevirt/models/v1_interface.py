@@ -39,6 +39,7 @@ class V1Interface(object):
         'masquerade': 'V1InterfaceMasquerade',
         'model': 'str',
         'name': 'str',
+        'passt': 'V1InterfacePasst',
         'pci_address': 'str',
         'ports': 'list[V1Port]',
         'slirp': 'V1InterfaceSlirp',
@@ -55,6 +56,7 @@ class V1Interface(object):
         'masquerade': 'masquerade',
         'model': 'model',
         'name': 'name',
+        'passt': 'passt',
         'pci_address': 'pciAddress',
         'ports': 'ports',
         'slirp': 'slirp',
@@ -62,7 +64,7 @@ class V1Interface(object):
         'tag': 'tag'
     }
 
-    def __init__(self, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name=None, pci_address=None, ports=None, slirp=None, sriov=None, tag=None):
+    def __init__(self, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name=None, passt=None, pci_address=None, ports=None, slirp=None, sriov=None, tag=None):
         """
         V1Interface - a model defined in Swagger
         """
@@ -75,6 +77,7 @@ class V1Interface(object):
         self._masquerade = None
         self._model = None
         self._name = None
+        self._passt = None
         self._pci_address = None
         self._ports = None
         self._slirp = None
@@ -96,6 +99,8 @@ class V1Interface(object):
         if model is not None:
           self.model = model
         self.name = name
+        if passt is not None:
+          self.passt = passt
         if pci_address is not None:
           self.pci_address = pci_address
         if ports is not None:
@@ -286,6 +291,27 @@ class V1Interface(object):
             raise ValueError("Invalid value for `name`, must not be `None`")
 
         self._name = name
+
+    @property
+    def passt(self):
+        """
+        Gets the passt of this V1Interface.
+
+        :return: The passt of this V1Interface.
+        :rtype: V1InterfacePasst
+        """
+        return self._passt
+
+    @passt.setter
+    def passt(self, passt):
+        """
+        Sets the passt of this V1Interface.
+
+        :param passt: The passt of this V1Interface.
+        :type: V1InterfacePasst
+        """
+
+        self._passt = passt
 
     @property
     def pci_address(self):

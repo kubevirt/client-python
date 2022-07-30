@@ -48,8 +48,7 @@ class V1alpha1MemoryInstancetype(object):
         self._guest = None
         self._hugepages = None
 
-        if guest is not None:
-          self.guest = guest
+        self.guest = guest
         if hugepages is not None:
           self.hugepages = hugepages
 
@@ -73,6 +72,8 @@ class V1alpha1MemoryInstancetype(object):
         :param guest: The guest of this V1alpha1MemoryInstancetype.
         :type: K8sIoApimachineryPkgApiResourceQuantity
         """
+        if guest is None:
+            raise ValueError("Invalid value for `guest`, must not be `None`")
 
         self._guest = guest
 

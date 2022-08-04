@@ -36,7 +36,8 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         'ip_address': 'str',
         'ip_addresses': 'list[str]',
         'mac': 'str',
-        'name': 'str'
+        'name': 'str',
+        'queue_count': 'int'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         'ip_address': 'ipAddress',
         'ip_addresses': 'ipAddresses',
         'mac': 'mac',
-        'name': 'name'
+        'name': 'name',
+        'queue_count': 'queueCount'
     }
 
-    def __init__(self, info_source=None, interface_name=None, ip_address=None, ip_addresses=None, mac=None, name=None):
+    def __init__(self, info_source=None, interface_name=None, ip_address=None, ip_addresses=None, mac=None, name=None, queue_count=None):
         """
         V1VirtualMachineInstanceNetworkInterface - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         self._ip_addresses = None
         self._mac = None
         self._name = None
+        self._queue_count = None
 
         if info_source is not None:
           self.info_source = info_source
@@ -72,6 +75,8 @@ class V1VirtualMachineInstanceNetworkInterface(object):
           self.mac = mac
         if name is not None:
           self.name = name
+        if queue_count is not None:
+          self.queue_count = queue_count
 
     @property
     def info_source(self):
@@ -210,6 +215,29 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         """
 
         self._name = name
+
+    @property
+    def queue_count(self):
+        """
+        Gets the queue_count of this V1VirtualMachineInstanceNetworkInterface.
+        Specifies how many queues are allocated by MultiQueue
+
+        :return: The queue_count of this V1VirtualMachineInstanceNetworkInterface.
+        :rtype: int
+        """
+        return self._queue_count
+
+    @queue_count.setter
+    def queue_count(self, queue_count):
+        """
+        Sets the queue_count of this V1VirtualMachineInstanceNetworkInterface.
+        Specifies how many queues are allocated by MultiQueue
+
+        :param queue_count: The queue_count of this V1VirtualMachineInstanceNetworkInterface.
+        :type: int
+        """
+
+        self._queue_count = queue_count
 
     def to_dict(self):
         """

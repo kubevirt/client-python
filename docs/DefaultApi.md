@@ -159,6 +159,7 @@ Method | HTTP request | Description
 [**replace_virtual_machine_cluster_preference**](DefaultApi.md#replace_virtual_machine_cluster_preference) | **PUT** /apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*} | 
 [**v1_check_health**](DefaultApi.md#v1_check_health) | **GET** /apis/subresources.kubevirt.io/v1/healthz | 
 [**v1_console**](DefaultApi.md#v1_console) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/console | 
+[**v1_expand_spec**](DefaultApi.md#v1_expand_spec) | **PUT** /apis/subresources.kubevirt.io/v1/expand-spec | 
 [**v1_filesystemlist**](DefaultApi.md#v1_filesystemlist) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/filesystemlist | 
 [**v1_freeze**](DefaultApi.md#v1_freeze) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/freeze | 
 [**v1_guestfs**](DefaultApi.md#v1_guestfs) | **GET** /apis/subresources.kubevirt.io/v1/guestfs | 
@@ -179,6 +180,7 @@ Method | HTTP request | Description
 [**v1_vnc**](DefaultApi.md#v1_vnc) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/vnc | 
 [**v1alpha3_check_health**](DefaultApi.md#v1alpha3_check_health) | **GET** /apis/subresources.kubevirt.io/v1alpha3/healthz | 
 [**v1alpha3_console**](DefaultApi.md#v1alpha3_console) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/console | 
+[**v1alpha3_expand_spec**](DefaultApi.md#v1alpha3_expand_spec) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/expand-spec | 
 [**v1alpha3_filesystemlist**](DefaultApi.md#v1alpha3_filesystemlist) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/filesystemlist | 
 [**v1alpha3_freeze**](DefaultApi.md#v1alpha3_freeze) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/freeze | 
 [**v1alpha3_get_sub_api_group**](DefaultApi.md#v1alpha3_get_sub_api_group) | **GET** /apis/subresources.kubevirt.io | 
@@ -204,6 +206,7 @@ Method | HTTP request | Description
 [**v1alpha3stop_cluster_profiler**](DefaultApi.md#v1alpha3stop_cluster_profiler) | **GET** /apis/subresources.kubevirt.io/v1alpha3/stop-cluster-profiler | 
 [**v1alpha3usbredir**](DefaultApi.md#v1alpha3usbredir) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/usbredir | 
 [**v1alpha3vm_addvolume**](DefaultApi.md#v1alpha3vm_addvolume) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/addvolume | 
+[**v1alpha3vm_expand_spec**](DefaultApi.md#v1alpha3vm_expand_spec) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/expand-spec | 
 [**v1alpha3vm_port_forward**](DefaultApi.md#v1alpha3vm_port_forward) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+} | 
 [**v1alpha3vm_port_forward_with_protocol**](DefaultApi.md#v1alpha3vm_port_forward_with_protocol) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}/{protocol:tcp|udp} | 
 [**v1alpha3vm_removevolume**](DefaultApi.md#v1alpha3vm_removevolume) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/removevolume | 
@@ -217,6 +220,7 @@ Method | HTTP request | Description
 [**v1stop_cluster_profiler**](DefaultApi.md#v1stop_cluster_profiler) | **GET** /apis/subresources.kubevirt.io/v1/stop-cluster-profiler | 
 [**v1usbredir**](DefaultApi.md#v1usbredir) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/usbredir | 
 [**v1vm_addvolume**](DefaultApi.md#v1vm_addvolume) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/addvolume | 
+[**v1vm_expand_spec**](DefaultApi.md#v1vm_expand_spec) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/expand-spec | 
 [**v1vm_port_forward**](DefaultApi.md#v1vm_port_forward) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+} | 
 [**v1vm_port_forward_with_protocol**](DefaultApi.md#v1vm_port_forward_with_protocol) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}/{protocol:tcp|udp} | 
 [**v1vm_removevolume**](DefaultApi.md#v1vm_removevolume) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/removevolume | 
@@ -8533,6 +8537,49 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1_expand_spec**
+> str v1_expand_spec()
+
+
+
+Expands instancetype and preference into the passed VirtualMachine object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+
+try: 
+    api_response = api_instance.v1_expand_spec()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1_expand_spec: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1_filesystemlist**
 > V1VirtualMachineInstanceFileSystemList v1_filesystemlist()
 
@@ -9488,6 +9535,49 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1alpha3_expand_spec**
+> str v1alpha3_expand_spec()
+
+
+
+Expands instancetype and preference into the passed VirtualMachine object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+
+try: 
+    api_response = api_instance.v1alpha3_expand_spec()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1alpha3_expand_spec: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -10663,6 +10753,55 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1alpha3vm_expand_spec**
+> str v1alpha3vm_expand_spec(name, namespace)
+
+
+
+Get VirtualMachine object with expanded instancetype and preference.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+
+try: 
+    api_response = api_instance.v1alpha3vm_expand_spec(name, namespace)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1alpha3vm_expand_spec: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1alpha3vm_port_forward**
 > v1alpha3vm_port_forward(name, namespace, port)
 
@@ -11279,6 +11418,55 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1vm_expand_spec**
+> str v1vm_expand_spec(name, namespace)
+
+
+
+Get VirtualMachine object with expanded instancetype and preference.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+
+try: 
+    api_response = api_instance.v1vm_expand_spec(name, namespace)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1vm_expand_spec: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

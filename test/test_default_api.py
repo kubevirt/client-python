@@ -1271,6 +1271,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_expand_spec(self):
+        """
+        Test case for v1_expand_spec
+
+        
+        """
+        pass
+
     def test_v1_filesystemlist(self):
         """
         Test case for v1_filesystemlist
@@ -1426,6 +1434,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3_console(self):
         """
         Test case for v1alpha3_console
+
+        
+        """
+        pass
+
+    def test_v1alpha3_expand_spec(self):
+        """
+        Test case for v1alpha3_expand_spec
 
         
         """
@@ -1631,6 +1647,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1alpha3vm_expand_spec(self):
+        """
+        Test case for v1alpha3vm_expand_spec
+
+        
+        """
+        pass
+
     def test_v1alpha3vm_port_forward(self):
         """
         Test case for v1alpha3vm_port_forward
@@ -1730,6 +1754,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1vm_addvolume(self):
         """
         Test case for v1vm_addvolume
+
+        
+        """
+        pass
+
+    def test_v1vm_expand_spec(self):
+        """
+        Test case for v1vm_expand_spec
 
         
         """

@@ -48,6 +48,7 @@ class V1VirtualMachineInstanceSpec(object):
         'subdomain': 'str',
         'termination_grace_period_seconds': 'int',
         'tolerations': 'list[K8sIoApiCoreV1Toleration]',
+        'topology_spread_constraints': 'list[K8sIoApiCoreV1TopologySpreadConstraint]',
         'volumes': 'list[V1Volume]'
     }
 
@@ -69,10 +70,11 @@ class V1VirtualMachineInstanceSpec(object):
         'subdomain': 'subdomain',
         'termination_grace_period_seconds': 'terminationGracePeriodSeconds',
         'tolerations': 'tolerations',
+        'topology_spread_constraints': 'topologySpreadConstraints',
         'volumes': 'volumes'
     }
 
-    def __init__(self, access_credentials=None, affinity=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, scheduler_name=None, start_strategy=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, volumes=None):
+    def __init__(self, access_credentials=None, affinity=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, scheduler_name=None, start_strategy=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, topology_spread_constraints=None, volumes=None):
         """
         V1VirtualMachineInstanceSpec - a model defined in Swagger
         """
@@ -94,6 +96,7 @@ class V1VirtualMachineInstanceSpec(object):
         self._subdomain = None
         self._termination_grace_period_seconds = None
         self._tolerations = None
+        self._topology_spread_constraints = None
         self._volumes = None
 
         if access_credentials is not None:
@@ -129,6 +132,8 @@ class V1VirtualMachineInstanceSpec(object):
           self.termination_grace_period_seconds = termination_grace_period_seconds
         if tolerations is not None:
           self.tolerations = tolerations
+        if topology_spread_constraints is not None:
+          self.topology_spread_constraints = topology_spread_constraints
         if volumes is not None:
           self.volumes = volumes
 
@@ -524,6 +529,29 @@ class V1VirtualMachineInstanceSpec(object):
         """
 
         self._tolerations = tolerations
+
+    @property
+    def topology_spread_constraints(self):
+        """
+        Gets the topology_spread_constraints of this V1VirtualMachineInstanceSpec.
+        TopologySpreadConstraints describes how a group of VMIs will be spread across a given topology domains. K8s scheduler will schedule VMI pods in a way which abides by the constraints.
+
+        :return: The topology_spread_constraints of this V1VirtualMachineInstanceSpec.
+        :rtype: list[K8sIoApiCoreV1TopologySpreadConstraint]
+        """
+        return self._topology_spread_constraints
+
+    @topology_spread_constraints.setter
+    def topology_spread_constraints(self, topology_spread_constraints):
+        """
+        Sets the topology_spread_constraints of this V1VirtualMachineInstanceSpec.
+        TopologySpreadConstraints describes how a group of VMIs will be spread across a given topology domains. K8s scheduler will schedule VMI pods in a way which abides by the constraints.
+
+        :param topology_spread_constraints: The topology_spread_constraints of this V1VirtualMachineInstanceSpec.
+        :type: list[K8sIoApiCoreV1TopologySpreadConstraint]
+        """
+
+        self._topology_spread_constraints = topology_spread_constraints
 
     @property
     def volumes(self):

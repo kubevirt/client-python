@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **autoattach_graphics_device** | **bool** | Whether to attach the default graphics device or not. VNC will not be available if set to false. Defaults to true. | [optional] 
+**autoattach_input_device** | **bool** | Whether to attach an Input Device. Defaults to false. | [optional] 
 **autoattach_mem_balloon** | **bool** | Whether to attach the Memory balloon device with default period. Period can be adjusted in virt-config. Defaults to true. | [optional] 
 **autoattach_pod_interface** | **bool** | Whether to attach a pod network interface. Defaults to true. | [optional] 
 **autoattach_serial_console** | **bool** | Whether to attach the default serial console or not. Serial console access will not be available if set to false. Defaults to true. | [optional] 

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **preferred_autoattach_graphics_device** | **bool** | PreferredAutoattachGraphicsDevice optionally defines the preferred value of AutoattachGraphicsDevice | [optional] 
+**preferred_autoattach_input_device** | **bool** | PreferredAutoattachInputDevice optionally defines the preferred value of AutoattachInputDevice | [optional] 
 **preferred_autoattach_mem_balloon** | **bool** | PreferredAutoattachMemBalloon optionally defines the preferred value of AutoattachMemBalloon | [optional] 
 **preferred_autoattach_pod_interface** | **bool** | PreferredAutoattachPodInterface optionally defines the preferred value of AutoattachPodInterface | [optional] 
 **preferred_autoattach_serial_console** | **bool** | PreferredAutoattachSerialConsole optionally defines the preferred value of AutoattachSerialConsole | [optional] 

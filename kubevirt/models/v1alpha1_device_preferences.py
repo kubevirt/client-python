@@ -32,6 +32,7 @@ class V1alpha1DevicePreferences(object):
     """
     swagger_types = {
         'preferred_autoattach_graphics_device': 'bool',
+        'preferred_autoattach_input_device': 'bool',
         'preferred_autoattach_mem_balloon': 'bool',
         'preferred_autoattach_pod_interface': 'bool',
         'preferred_autoattach_serial_console': 'bool',
@@ -57,6 +58,7 @@ class V1alpha1DevicePreferences(object):
 
     attribute_map = {
         'preferred_autoattach_graphics_device': 'preferredAutoattachGraphicsDevice',
+        'preferred_autoattach_input_device': 'preferredAutoattachInputDevice',
         'preferred_autoattach_mem_balloon': 'preferredAutoattachMemBalloon',
         'preferred_autoattach_pod_interface': 'preferredAutoattachPodInterface',
         'preferred_autoattach_serial_console': 'preferredAutoattachSerialConsole',
@@ -80,12 +82,13 @@ class V1alpha1DevicePreferences(object):
         'preferred_virtual_gpu_options': 'preferredVirtualGPUOptions'
     }
 
-    def __init__(self, preferred_autoattach_graphics_device=None, preferred_autoattach_mem_balloon=None, preferred_autoattach_pod_interface=None, preferred_autoattach_serial_console=None, preferred_block_multi_queue=None, preferred_cdrom_bus=None, preferred_disable_hotplug=None, preferred_disk_block_size=None, preferred_disk_bus=None, preferred_disk_cache=None, preferred_disk_dedicated_io_thread=None, preferred_disk_io=None, preferred_input_bus=None, preferred_input_type=None, preferred_interface_model=None, preferred_lun_bus=None, preferred_network_interface_multi_queue=None, preferred_rng=None, preferred_sound_model=None, preferred_tpm=None, preferred_use_virtio_transitional=None, preferred_virtual_gpu_options=None):
+    def __init__(self, preferred_autoattach_graphics_device=None, preferred_autoattach_input_device=None, preferred_autoattach_mem_balloon=None, preferred_autoattach_pod_interface=None, preferred_autoattach_serial_console=None, preferred_block_multi_queue=None, preferred_cdrom_bus=None, preferred_disable_hotplug=None, preferred_disk_block_size=None, preferred_disk_bus=None, preferred_disk_cache=None, preferred_disk_dedicated_io_thread=None, preferred_disk_io=None, preferred_input_bus=None, preferred_input_type=None, preferred_interface_model=None, preferred_lun_bus=None, preferred_network_interface_multi_queue=None, preferred_rng=None, preferred_sound_model=None, preferred_tpm=None, preferred_use_virtio_transitional=None, preferred_virtual_gpu_options=None):
         """
         V1alpha1DevicePreferences - a model defined in Swagger
         """
 
         self._preferred_autoattach_graphics_device = None
+        self._preferred_autoattach_input_device = None
         self._preferred_autoattach_mem_balloon = None
         self._preferred_autoattach_pod_interface = None
         self._preferred_autoattach_serial_console = None
@@ -110,6 +113,8 @@ class V1alpha1DevicePreferences(object):
 
         if preferred_autoattach_graphics_device is not None:
           self.preferred_autoattach_graphics_device = preferred_autoattach_graphics_device
+        if preferred_autoattach_input_device is not None:
+          self.preferred_autoattach_input_device = preferred_autoattach_input_device
         if preferred_autoattach_mem_balloon is not None:
           self.preferred_autoattach_mem_balloon = preferred_autoattach_mem_balloon
         if preferred_autoattach_pod_interface is not None:
@@ -175,6 +180,29 @@ class V1alpha1DevicePreferences(object):
         """
 
         self._preferred_autoattach_graphics_device = preferred_autoattach_graphics_device
+
+    @property
+    def preferred_autoattach_input_device(self):
+        """
+        Gets the preferred_autoattach_input_device of this V1alpha1DevicePreferences.
+        PreferredAutoattachInputDevice optionally defines the preferred value of AutoattachInputDevice
+
+        :return: The preferred_autoattach_input_device of this V1alpha1DevicePreferences.
+        :rtype: bool
+        """
+        return self._preferred_autoattach_input_device
+
+    @preferred_autoattach_input_device.setter
+    def preferred_autoattach_input_device(self, preferred_autoattach_input_device):
+        """
+        Sets the preferred_autoattach_input_device of this V1alpha1DevicePreferences.
+        PreferredAutoattachInputDevice optionally defines the preferred value of AutoattachInputDevice
+
+        :param preferred_autoattach_input_device: The preferred_autoattach_input_device of this V1alpha1DevicePreferences.
+        :type: bool
+        """
+
+        self._preferred_autoattach_input_device = preferred_autoattach_input_device
 
     @property
     def preferred_autoattach_mem_balloon(self):

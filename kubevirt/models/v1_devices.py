@@ -32,6 +32,7 @@ class V1Devices(object):
     """
     swagger_types = {
         'autoattach_graphics_device': 'bool',
+        'autoattach_input_device': 'bool',
         'autoattach_mem_balloon': 'bool',
         'autoattach_pod_interface': 'bool',
         'autoattach_serial_console': 'bool',
@@ -54,6 +55,7 @@ class V1Devices(object):
 
     attribute_map = {
         'autoattach_graphics_device': 'autoattachGraphicsDevice',
+        'autoattach_input_device': 'autoattachInputDevice',
         'autoattach_mem_balloon': 'autoattachMemBalloon',
         'autoattach_pod_interface': 'autoattachPodInterface',
         'autoattach_serial_console': 'autoattachSerialConsole',
@@ -74,12 +76,13 @@ class V1Devices(object):
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, sound=None, tpm=None, use_virtio_transitional=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_input_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, sound=None, tpm=None, use_virtio_transitional=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
 
         self._autoattach_graphics_device = None
+        self._autoattach_input_device = None
         self._autoattach_mem_balloon = None
         self._autoattach_pod_interface = None
         self._autoattach_serial_console = None
@@ -101,6 +104,8 @@ class V1Devices(object):
 
         if autoattach_graphics_device is not None:
           self.autoattach_graphics_device = autoattach_graphics_device
+        if autoattach_input_device is not None:
+          self.autoattach_input_device = autoattach_input_device
         if autoattach_mem_balloon is not None:
           self.autoattach_mem_balloon = autoattach_mem_balloon
         if autoattach_pod_interface is not None:
@@ -160,6 +165,29 @@ class V1Devices(object):
         """
 
         self._autoattach_graphics_device = autoattach_graphics_device
+
+    @property
+    def autoattach_input_device(self):
+        """
+        Gets the autoattach_input_device of this V1Devices.
+        Whether to attach an Input Device. Defaults to false.
+
+        :return: The autoattach_input_device of this V1Devices.
+        :rtype: bool
+        """
+        return self._autoattach_input_device
+
+    @autoattach_input_device.setter
+    def autoattach_input_device(self, autoattach_input_device):
+        """
+        Sets the autoattach_input_device of this V1Devices.
+        Whether to attach an Input Device. Defaults to false.
+
+        :param autoattach_input_device: The autoattach_input_device of this V1Devices.
+        :type: bool
+        """
+
+        self._autoattach_input_device = autoattach_input_device
 
     @property
     def autoattach_mem_balloon(self):

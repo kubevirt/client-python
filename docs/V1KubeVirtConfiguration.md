@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **selinux_launcher_type** | **str** |  | [optional] 
 **smbios** | [**V1SMBiosConfiguration**](V1SMBiosConfiguration.md) |  | [optional] 
 **supported_guest_agent_versions** | **list[str]** | deprecated | [optional] 
+**tls_configuration** | [**V1TLSConfiguration**](V1TLSConfiguration.md) |  | [optional] 
 **virtual_machine_instances_per_node** | **int** |  | [optional] 
 **webhook_configuration** | [**V1ReloadableComponentConfiguration**](V1ReloadableComponentConfiguration.md) |  | [optional] 
 

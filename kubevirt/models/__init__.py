@@ -202,6 +202,7 @@ from .v1_start_options import V1StartOptions
 from .v1_stop_options import V1StopOptions
 from .v1_sy_nic_timer import V1SyNICTimer
 from .v1_sysprep_source import V1SysprepSource
+from .v1_tls_configuration import V1TLSConfiguration
 from .v1_tpm_device import V1TPMDevice
 from .v1_timer import V1Timer
 from .v1_token_bucket_rate_limiter import V1TokenBucketRateLimiter

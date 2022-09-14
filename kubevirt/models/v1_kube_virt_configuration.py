@@ -53,6 +53,7 @@ class V1KubeVirtConfiguration(object):
         'selinux_launcher_type': 'str',
         'smbios': 'V1SMBiosConfiguration',
         'supported_guest_agent_versions': 'list[str]',
+        'tls_configuration': 'V1TLSConfiguration',
         'virtual_machine_instances_per_node': 'int',
         'webhook_configuration': 'V1ReloadableComponentConfiguration'
     }
@@ -80,11 +81,12 @@ class V1KubeVirtConfiguration(object):
         'selinux_launcher_type': 'selinuxLauncherType',
         'smbios': 'smbios',
         'supported_guest_agent_versions': 'supportedGuestAgentVersions',
+        'tls_configuration': 'tlsConfiguration',
         'virtual_machine_instances_per_node': 'virtualMachineInstancesPerNode',
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, api_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None, virtual_machine_instances_per_node=None, webhook_configuration=None):
+    def __init__(self, api_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -111,6 +113,7 @@ class V1KubeVirtConfiguration(object):
         self._selinux_launcher_type = None
         self._smbios = None
         self._supported_guest_agent_versions = None
+        self._tls_configuration = None
         self._virtual_machine_instances_per_node = None
         self._webhook_configuration = None
 
@@ -158,6 +161,8 @@ class V1KubeVirtConfiguration(object):
           self.smbios = smbios
         if supported_guest_agent_versions is not None:
           self.supported_guest_agent_versions = supported_guest_agent_versions
+        if tls_configuration is not None:
+          self.tls_configuration = tls_configuration
         if virtual_machine_instances_per_node is not None:
           self.virtual_machine_instances_per_node = virtual_machine_instances_per_node
         if webhook_configuration is not None:
@@ -628,6 +633,27 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._supported_guest_agent_versions = supported_guest_agent_versions
+
+    @property
+    def tls_configuration(self):
+        """
+        Gets the tls_configuration of this V1KubeVirtConfiguration.
+
+        :return: The tls_configuration of this V1KubeVirtConfiguration.
+        :rtype: V1TLSConfiguration
+        """
+        return self._tls_configuration
+
+    @tls_configuration.setter
+    def tls_configuration(self, tls_configuration):
+        """
+        Sets the tls_configuration of this V1KubeVirtConfiguration.
+
+        :param tls_configuration: The tls_configuration of this V1KubeVirtConfiguration.
+        :type: V1TLSConfiguration
+        """
+
+        self._tls_configuration = tls_configuration
 
     @property
     def virtual_machine_instances_per_node(self):

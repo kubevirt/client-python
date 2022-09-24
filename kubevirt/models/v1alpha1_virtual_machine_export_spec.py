@@ -49,7 +49,8 @@ class V1alpha1VirtualMachineExportSpec(object):
         self._token_secret_ref = None
 
         self.source = source
-        self.token_secret_ref = token_secret_ref
+        if token_secret_ref is not None:
+          self.token_secret_ref = token_secret_ref
 
     @property
     def source(self):
@@ -78,7 +79,7 @@ class V1alpha1VirtualMachineExportSpec(object):
     def token_secret_ref(self):
         """
         Gets the token_secret_ref of this V1alpha1VirtualMachineExportSpec.
-        TokenSecretRef is the name of the secret that contains the token used by the export server pod
+        TokenSecretRef is the name of the custom-defined secret that contains the token used by the export server pod
 
         :return: The token_secret_ref of this V1alpha1VirtualMachineExportSpec.
         :rtype: str
@@ -89,13 +90,11 @@ class V1alpha1VirtualMachineExportSpec(object):
     def token_secret_ref(self, token_secret_ref):
         """
         Sets the token_secret_ref of this V1alpha1VirtualMachineExportSpec.
-        TokenSecretRef is the name of the secret that contains the token used by the export server pod
+        TokenSecretRef is the name of the custom-defined secret that contains the token used by the export server pod
 
         :param token_secret_ref: The token_secret_ref of this V1alpha1VirtualMachineExportSpec.
         :type: str
         """
-        if token_secret_ref is None:
-            raise ValueError("Invalid value for `token_secret_ref`, must not be `None`")
 
         self._token_secret_ref = token_secret_ref
 

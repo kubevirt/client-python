@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **links** | [**V1alpha1VirtualMachineExportLinks**](V1alpha1VirtualMachineExportLinks.md) |  | [optional] 
 **phase** | **str** |  | [optional] 
 **service_name** | **str** | ServiceName is the name of the service created associated with the Virtual Machine export. It will be used to create the internal URLs for downloading the images | [optional] 
+**token_secret_ref** | **str** | TokenSecretRef is the name of the secret that contains the token used by the export server pod | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

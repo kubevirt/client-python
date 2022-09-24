@@ -34,17 +34,19 @@ class V1alpha1VirtualMachineExportStatus(object):
         'conditions': 'list[V1alpha1Condition]',
         'links': 'V1alpha1VirtualMachineExportLinks',
         'phase': 'str',
-        'service_name': 'str'
+        'service_name': 'str',
+        'token_secret_ref': 'str'
     }
 
     attribute_map = {
         'conditions': 'conditions',
         'links': 'links',
         'phase': 'phase',
-        'service_name': 'serviceName'
+        'service_name': 'serviceName',
+        'token_secret_ref': 'tokenSecretRef'
     }
 
-    def __init__(self, conditions=None, links=None, phase=None, service_name=None):
+    def __init__(self, conditions=None, links=None, phase=None, service_name=None, token_secret_ref=None):
         """
         V1alpha1VirtualMachineExportStatus - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class V1alpha1VirtualMachineExportStatus(object):
         self._links = None
         self._phase = None
         self._service_name = None
+        self._token_secret_ref = None
 
         if conditions is not None:
           self.conditions = conditions
@@ -62,6 +65,8 @@ class V1alpha1VirtualMachineExportStatus(object):
           self.phase = phase
         if service_name is not None:
           self.service_name = service_name
+        if token_secret_ref is not None:
+          self.token_secret_ref = token_secret_ref
 
     @property
     def conditions(self):
@@ -148,6 +153,29 @@ class V1alpha1VirtualMachineExportStatus(object):
         """
 
         self._service_name = service_name
+
+    @property
+    def token_secret_ref(self):
+        """
+        Gets the token_secret_ref of this V1alpha1VirtualMachineExportStatus.
+        TokenSecretRef is the name of the secret that contains the token used by the export server pod
+
+        :return: The token_secret_ref of this V1alpha1VirtualMachineExportStatus.
+        :rtype: str
+        """
+        return self._token_secret_ref
+
+    @token_secret_ref.setter
+    def token_secret_ref(self, token_secret_ref):
+        """
+        Sets the token_secret_ref of this V1alpha1VirtualMachineExportStatus.
+        TokenSecretRef is the name of the secret that contains the token used by the export server pod
+
+        :param token_secret_ref: The token_secret_ref of this V1alpha1VirtualMachineExportStatus.
+        :type: str
+        """
+
+        self._token_secret_ref = token_secret_ref
 
     def to_dict(self):
         """

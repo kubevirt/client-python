@@ -1423,6 +1423,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_vnc_screenshot(self):
+        """
+        Test case for v1_vnc_screenshot
+
+        
+        """
+        pass
+
     def test_v1alpha3_check_health(self):
         """
         Test case for v1alpha3_check_health
@@ -1594,6 +1602,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3_vnc(self):
         """
         Test case for v1alpha3_vnc
+
+        
+        """
+        pass
+
+    def test_v1alpha3_vnc_screenshot(self):
+        """
+        Test case for v1alpha3_vnc_screenshot
 
         
         """

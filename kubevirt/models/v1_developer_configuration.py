@@ -97,6 +97,7 @@ class V1DeveloperConfiguration(object):
     def cpu_allocation_ratio(self):
         """
         Gets the cpu_allocation_ratio of this V1DeveloperConfiguration.
+        For each requested virtual CPU, CPUAllocationRatio defines how much physical CPU to request per VMI from the hosting node. The value is in fraction of a CPU thread (or core on non-hyperthreaded nodes). For example, a value of 1 means 1 physical CPU thread per VMI CPU thread. A value of 100 would be 1% of a physical thread allocated for each requested VMI thread. This option has no effect on VMIs that request dedicated CPUs. More information at: https://kubevirt.io/user-guide/operations/node_overcommit/#node-cpu-allocation-ratio Defaults to 10
 
         :return: The cpu_allocation_ratio of this V1DeveloperConfiguration.
         :rtype: int
@@ -107,6 +108,7 @@ class V1DeveloperConfiguration(object):
     def cpu_allocation_ratio(self, cpu_allocation_ratio):
         """
         Sets the cpu_allocation_ratio of this V1DeveloperConfiguration.
+        For each requested virtual CPU, CPUAllocationRatio defines how much physical CPU to request per VMI from the hosting node. The value is in fraction of a CPU thread (or core on non-hyperthreaded nodes). For example, a value of 1 means 1 physical CPU thread per VMI CPU thread. A value of 100 would be 1% of a physical thread allocated for each requested VMI thread. This option has no effect on VMIs that request dedicated CPUs. More information at: https://kubevirt.io/user-guide/operations/node_overcommit/#node-cpu-allocation-ratio Defaults to 10
 
         :param cpu_allocation_ratio: The cpu_allocation_ratio of this V1DeveloperConfiguration.
         :type: int
@@ -139,6 +141,7 @@ class V1DeveloperConfiguration(object):
     def feature_gates(self):
         """
         Gets the feature_gates of this V1DeveloperConfiguration.
+        FeatureGates is the list of experimental features to enable. Defaults to none
 
         :return: The feature_gates of this V1DeveloperConfiguration.
         :rtype: list[str]
@@ -149,6 +152,7 @@ class V1DeveloperConfiguration(object):
     def feature_gates(self, feature_gates):
         """
         Sets the feature_gates of this V1DeveloperConfiguration.
+        FeatureGates is the list of experimental features to enable. Defaults to none
 
         :param feature_gates: The feature_gates of this V1DeveloperConfiguration.
         :type: list[str]
@@ -181,6 +185,7 @@ class V1DeveloperConfiguration(object):
     def memory_overcommit(self):
         """
         Gets the memory_overcommit of this V1DeveloperConfiguration.
+        MemoryOvercommit is the percentage of memory we want to give VMIs compared to the amount given to its parent pod (virt-launcher). For example, a value of 102 means the VMI will \"see\" 2% more memory than its parent pod. Values under 100 are effectively \"undercommits\". Overcommits can lead to memory exhaustion, which in turn can lead to crashes. Use carefully. Defaults to 100
 
         :return: The memory_overcommit of this V1DeveloperConfiguration.
         :rtype: int
@@ -191,6 +196,7 @@ class V1DeveloperConfiguration(object):
     def memory_overcommit(self, memory_overcommit):
         """
         Sets the memory_overcommit of this V1DeveloperConfiguration.
+        MemoryOvercommit is the percentage of memory we want to give VMIs compared to the amount given to its parent pod (virt-launcher). For example, a value of 102 means the VMI will \"see\" 2% more memory than its parent pod. Values under 100 are effectively \"undercommits\". Overcommits can lead to memory exhaustion, which in turn can lead to crashes. Use carefully. Defaults to 100
 
         :param memory_overcommit: The memory_overcommit of this V1DeveloperConfiguration.
         :type: int
@@ -225,6 +231,7 @@ class V1DeveloperConfiguration(object):
     def minimum_reserve_pvc_bytes(self):
         """
         Gets the minimum_reserve_pvc_bytes of this V1DeveloperConfiguration.
+        MinimumReservePVCBytes is the amount of space, in bytes, to leave unused on disks. Defaults to 131072 (128KiB)
 
         :return: The minimum_reserve_pvc_bytes of this V1DeveloperConfiguration.
         :rtype: int
@@ -235,6 +242,7 @@ class V1DeveloperConfiguration(object):
     def minimum_reserve_pvc_bytes(self, minimum_reserve_pvc_bytes):
         """
         Sets the minimum_reserve_pvc_bytes of this V1DeveloperConfiguration.
+        MinimumReservePVCBytes is the amount of space, in bytes, to leave unused on disks. Defaults to 131072 (128KiB)
 
         :param minimum_reserve_pvc_bytes: The minimum_reserve_pvc_bytes of this V1DeveloperConfiguration.
         :type: int
@@ -246,6 +254,7 @@ class V1DeveloperConfiguration(object):
     def node_selectors(self):
         """
         Gets the node_selectors of this V1DeveloperConfiguration.
+        NodeSelectors allows restricting VMI creation to nodes that match a set of labels. Defaults to none
 
         :return: The node_selectors of this V1DeveloperConfiguration.
         :rtype: dict(str, str)
@@ -256,6 +265,7 @@ class V1DeveloperConfiguration(object):
     def node_selectors(self, node_selectors):
         """
         Sets the node_selectors of this V1DeveloperConfiguration.
+        NodeSelectors allows restricting VMI creation to nodes that match a set of labels. Defaults to none
 
         :param node_selectors: The node_selectors of this V1DeveloperConfiguration.
         :type: dict(str, str)
@@ -267,6 +277,7 @@ class V1DeveloperConfiguration(object):
     def pvc_tolerate_less_space_up_to_percent(self):
         """
         Gets the pvc_tolerate_less_space_up_to_percent of this V1DeveloperConfiguration.
+        LessPVCSpaceToleration determines how much smaller, in percentage, disk PVCs are allowed to be compared to the requested size (to account for various overheads). Defaults to 10
 
         :return: The pvc_tolerate_less_space_up_to_percent of this V1DeveloperConfiguration.
         :rtype: int
@@ -277,6 +288,7 @@ class V1DeveloperConfiguration(object):
     def pvc_tolerate_less_space_up_to_percent(self, pvc_tolerate_less_space_up_to_percent):
         """
         Sets the pvc_tolerate_less_space_up_to_percent of this V1DeveloperConfiguration.
+        LessPVCSpaceToleration determines how much smaller, in percentage, disk PVCs are allowed to be compared to the requested size (to account for various overheads). Defaults to 10
 
         :param pvc_tolerate_less_space_up_to_percent: The pvc_tolerate_less_space_up_to_percent of this V1DeveloperConfiguration.
         :type: int
@@ -288,7 +300,7 @@ class V1DeveloperConfiguration(object):
     def use_emulation(self):
         """
         Gets the use_emulation of this V1DeveloperConfiguration.
-        UseEmulation can be set to true to allow fallback to software emulation in case hardware-assisted emulation is not available.
+        UseEmulation can be set to true to allow fallback to software emulation in case hardware-assisted emulation is not available. Defaults to false
 
         :return: The use_emulation of this V1DeveloperConfiguration.
         :rtype: bool
@@ -299,7 +311,7 @@ class V1DeveloperConfiguration(object):
     def use_emulation(self, use_emulation):
         """
         Sets the use_emulation of this V1DeveloperConfiguration.
-        UseEmulation can be set to true to allow fallback to software emulation in case hardware-assisted emulation is not available.
+        UseEmulation can be set to true to allow fallback to software emulation in case hardware-assisted emulation is not available. Defaults to false
 
         :param use_emulation: The use_emulation of this V1DeveloperConfiguration.
         :type: bool

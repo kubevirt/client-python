@@ -102,6 +102,7 @@ class V1MigrationConfiguration(object):
     def allow_auto_converge(self):
         """
         Gets the allow_auto_converge of this V1MigrationConfiguration.
+        AllowAutoConverge allows the platform to compromise performance/availability of VMIs to guarantee successful VMI live migrations. Defaults to false
 
         :return: The allow_auto_converge of this V1MigrationConfiguration.
         :rtype: bool
@@ -112,6 +113,7 @@ class V1MigrationConfiguration(object):
     def allow_auto_converge(self, allow_auto_converge):
         """
         Sets the allow_auto_converge of this V1MigrationConfiguration.
+        AllowAutoConverge allows the platform to compromise performance/availability of VMIs to guarantee successful VMI live migrations. Defaults to false
 
         :param allow_auto_converge: The allow_auto_converge of this V1MigrationConfiguration.
         :type: bool
@@ -123,6 +125,7 @@ class V1MigrationConfiguration(object):
     def allow_post_copy(self):
         """
         Gets the allow_post_copy of this V1MigrationConfiguration.
+        AllowPostCopy enables post-copy live migrations. Such migrations allow even the busiest VMIs to successfully live-migrate. However, events like a network failure can cause a VMI crash. If set to true, migrations will still start in pre-copy, but switch to post-copy when CompletionTimeoutPerGiB triggers. Defaults to false
 
         :return: The allow_post_copy of this V1MigrationConfiguration.
         :rtype: bool
@@ -133,6 +136,7 @@ class V1MigrationConfiguration(object):
     def allow_post_copy(self, allow_post_copy):
         """
         Sets the allow_post_copy of this V1MigrationConfiguration.
+        AllowPostCopy enables post-copy live migrations. Such migrations allow even the busiest VMIs to successfully live-migrate. However, events like a network failure can cause a VMI crash. If set to true, migrations will still start in pre-copy, but switch to post-copy when CompletionTimeoutPerGiB triggers. Defaults to false
 
         :param allow_post_copy: The allow_post_copy of this V1MigrationConfiguration.
         :type: bool
@@ -144,6 +148,7 @@ class V1MigrationConfiguration(object):
     def bandwidth_per_migration(self):
         """
         Gets the bandwidth_per_migration of this V1MigrationConfiguration.
+        BandwidthPerMigration limits the amount of network bandwith live migrations are allowed to use. The value is in quantity per second. Defaults to 0 (no limit)
 
         :return: The bandwidth_per_migration of this V1MigrationConfiguration.
         :rtype: K8sIoApimachineryPkgApiResourceQuantity
@@ -154,6 +159,7 @@ class V1MigrationConfiguration(object):
     def bandwidth_per_migration(self, bandwidth_per_migration):
         """
         Sets the bandwidth_per_migration of this V1MigrationConfiguration.
+        BandwidthPerMigration limits the amount of network bandwith live migrations are allowed to use. The value is in quantity per second. Defaults to 0 (no limit)
 
         :param bandwidth_per_migration: The bandwidth_per_migration of this V1MigrationConfiguration.
         :type: K8sIoApimachineryPkgApiResourceQuantity
@@ -165,6 +171,7 @@ class V1MigrationConfiguration(object):
     def completion_timeout_per_gi_b(self):
         """
         Gets the completion_timeout_per_gi_b of this V1MigrationConfiguration.
+        CompletionTimeoutPerGiB is the maximum number of seconds per GiB a migration is allowed to take. If a live-migration takes longer to migrate than this value multiplied by the size of the VMI, the migration will be cancelled, unless AllowPostCopy is true. Defaults to 800
 
         :return: The completion_timeout_per_gi_b of this V1MigrationConfiguration.
         :rtype: int
@@ -175,6 +182,7 @@ class V1MigrationConfiguration(object):
     def completion_timeout_per_gi_b(self, completion_timeout_per_gi_b):
         """
         Sets the completion_timeout_per_gi_b of this V1MigrationConfiguration.
+        CompletionTimeoutPerGiB is the maximum number of seconds per GiB a migration is allowed to take. If a live-migration takes longer to migrate than this value multiplied by the size of the VMI, the migration will be cancelled, unless AllowPostCopy is true. Defaults to 800
 
         :param completion_timeout_per_gi_b: The completion_timeout_per_gi_b of this V1MigrationConfiguration.
         :type: int
@@ -186,6 +194,7 @@ class V1MigrationConfiguration(object):
     def disable_tls(self):
         """
         Gets the disable_tls of this V1MigrationConfiguration.
+        When set to true, DisableTLS will disable the additional layer of live migration encryption provided by KubeVirt. This is usually a bad idea. Defaults to false
 
         :return: The disable_tls of this V1MigrationConfiguration.
         :rtype: bool
@@ -196,6 +205,7 @@ class V1MigrationConfiguration(object):
     def disable_tls(self, disable_tls):
         """
         Sets the disable_tls of this V1MigrationConfiguration.
+        When set to true, DisableTLS will disable the additional layer of live migration encryption provided by KubeVirt. This is usually a bad idea. Defaults to false
 
         :param disable_tls: The disable_tls of this V1MigrationConfiguration.
         :type: bool
@@ -207,6 +217,7 @@ class V1MigrationConfiguration(object):
     def network(self):
         """
         Gets the network of this V1MigrationConfiguration.
+        Network is the name of the CNI network to use for live migrations. By default, migrations go through the pod network.
 
         :return: The network of this V1MigrationConfiguration.
         :rtype: str
@@ -217,6 +228,7 @@ class V1MigrationConfiguration(object):
     def network(self, network):
         """
         Sets the network of this V1MigrationConfiguration.
+        Network is the name of the CNI network to use for live migrations. By default, migrations go through the pod network.
 
         :param network: The network of this V1MigrationConfiguration.
         :type: str
@@ -228,6 +240,7 @@ class V1MigrationConfiguration(object):
     def node_drain_taint_key(self):
         """
         Gets the node_drain_taint_key of this V1MigrationConfiguration.
+        NodeDrainTaintKey defines the taint key that indicates a node should be drained. Note: this option relies on the deprecated node taint feature. Default: kubevirt.io/drain
 
         :return: The node_drain_taint_key of this V1MigrationConfiguration.
         :rtype: str
@@ -238,6 +251,7 @@ class V1MigrationConfiguration(object):
     def node_drain_taint_key(self, node_drain_taint_key):
         """
         Sets the node_drain_taint_key of this V1MigrationConfiguration.
+        NodeDrainTaintKey defines the taint key that indicates a node should be drained. Note: this option relies on the deprecated node taint feature. Default: kubevirt.io/drain
 
         :param node_drain_taint_key: The node_drain_taint_key of this V1MigrationConfiguration.
         :type: str
@@ -249,6 +263,7 @@ class V1MigrationConfiguration(object):
     def parallel_migrations_per_cluster(self):
         """
         Gets the parallel_migrations_per_cluster of this V1MigrationConfiguration.
+        ParallelMigrationsPerCluster is the total number of concurrent live migrations allowed cluster-wide. Defaults to 5
 
         :return: The parallel_migrations_per_cluster of this V1MigrationConfiguration.
         :rtype: int
@@ -259,6 +274,7 @@ class V1MigrationConfiguration(object):
     def parallel_migrations_per_cluster(self, parallel_migrations_per_cluster):
         """
         Sets the parallel_migrations_per_cluster of this V1MigrationConfiguration.
+        ParallelMigrationsPerCluster is the total number of concurrent live migrations allowed cluster-wide. Defaults to 5
 
         :param parallel_migrations_per_cluster: The parallel_migrations_per_cluster of this V1MigrationConfiguration.
         :type: int
@@ -270,6 +286,7 @@ class V1MigrationConfiguration(object):
     def parallel_outbound_migrations_per_node(self):
         """
         Gets the parallel_outbound_migrations_per_node of this V1MigrationConfiguration.
+        ParallelOutboundMigrationsPerNode is the maximum number of concurrent outgoing live migrations allowed per node. Defaults to 2
 
         :return: The parallel_outbound_migrations_per_node of this V1MigrationConfiguration.
         :rtype: int
@@ -280,6 +297,7 @@ class V1MigrationConfiguration(object):
     def parallel_outbound_migrations_per_node(self, parallel_outbound_migrations_per_node):
         """
         Sets the parallel_outbound_migrations_per_node of this V1MigrationConfiguration.
+        ParallelOutboundMigrationsPerNode is the maximum number of concurrent outgoing live migrations allowed per node. Defaults to 2
 
         :param parallel_outbound_migrations_per_node: The parallel_outbound_migrations_per_node of this V1MigrationConfiguration.
         :type: int
@@ -291,6 +309,7 @@ class V1MigrationConfiguration(object):
     def progress_timeout(self):
         """
         Gets the progress_timeout of this V1MigrationConfiguration.
+        ProgressTimeout is the maximum number of seconds a live migration is allowed to make no progress. Hitting this timeout means a migration transferred 0 data for that many seconds. The migration is then considered stuck and therefore cancelled. Defaults to 150
 
         :return: The progress_timeout of this V1MigrationConfiguration.
         :rtype: int
@@ -301,6 +320,7 @@ class V1MigrationConfiguration(object):
     def progress_timeout(self, progress_timeout):
         """
         Sets the progress_timeout of this V1MigrationConfiguration.
+        ProgressTimeout is the maximum number of seconds a live migration is allowed to make no progress. Hitting this timeout means a migration transferred 0 data for that many seconds. The migration is then considered stuck and therefore cancelled. Defaults to 150
 
         :param progress_timeout: The progress_timeout of this V1MigrationConfiguration.
         :type: int
@@ -312,6 +332,7 @@ class V1MigrationConfiguration(object):
     def unsafe_migration_override(self):
         """
         Gets the unsafe_migration_override of this V1MigrationConfiguration.
+        UnsafeMigrationOverride allows live migrations to occur even if the compatibility check indicates the migration will be unsafe to the guest. Defaults to false
 
         :return: The unsafe_migration_override of this V1MigrationConfiguration.
         :rtype: bool
@@ -322,6 +343,7 @@ class V1MigrationConfiguration(object):
     def unsafe_migration_override(self, unsafe_migration_override):
         """
         Sets the unsafe_migration_override of this V1MigrationConfiguration.
+        UnsafeMigrationOverride allows live migrations to occur even if the compatibility check indicates the migration will be unsafe to the guest. Defaults to false
 
         :param unsafe_migration_override: The unsafe_migration_override of this V1MigrationConfiguration.
         :type: bool

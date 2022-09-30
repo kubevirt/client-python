@@ -934,9 +934,9 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1alpha1VirtualMachineInstancetype body: (required)
+        :param V1alpha2VirtualMachineInstancetype body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1alpha1VirtualMachineInstancetype
+        :return: V1alpha2VirtualMachineInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -960,9 +960,9 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1alpha1VirtualMachineInstancetype body: (required)
+        :param V1alpha2VirtualMachineInstancetype body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1alpha1VirtualMachineInstancetype
+        :return: V1alpha2VirtualMachineInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1017,14 +1017,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes', 'POST',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineInstancetype',
+                                        response_type='V1alpha2VirtualMachineInstancetype',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1156,9 +1156,9 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1alpha1VirtualMachinePreference body: (required)
+        :param V1alpha2VirtualMachinePreference body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1alpha1VirtualMachinePreference
+        :return: V1alpha2VirtualMachinePreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1182,9 +1182,9 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1alpha1VirtualMachinePreference body: (required)
+        :param V1alpha2VirtualMachinePreference body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1alpha1VirtualMachinePreference
+        :return: V1alpha2VirtualMachinePreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1239,14 +1239,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences', 'POST',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachinePreference',
+                                        response_type='V1alpha2VirtualMachinePreference',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1704,8 +1704,8 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1alpha1VirtualMachineClusterInstancetype body: (required)
-        :return: V1alpha1VirtualMachineClusterInstancetype
+        :param V1alpha2VirtualMachineClusterInstancetype body: (required)
+        :return: V1alpha2VirtualMachineClusterInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1729,8 +1729,8 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1alpha1VirtualMachineClusterInstancetype body: (required)
-        :return: V1alpha1VirtualMachineClusterInstancetype
+        :param V1alpha2VirtualMachineClusterInstancetype body: (required)
+        :return: V1alpha2VirtualMachineClusterInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1780,14 +1780,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterinstancetypes', 'POST',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterinstancetypes', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineClusterInstancetype',
+                                        response_type='V1alpha2VirtualMachineClusterInstancetype',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -1808,8 +1808,8 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1alpha1VirtualMachineClusterPreference body: (required)
-        :return: V1alpha1VirtualMachineClusterPreference
+        :param V1alpha2VirtualMachineClusterPreference body: (required)
+        :return: V1alpha2VirtualMachineClusterPreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1833,8 +1833,8 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1alpha1VirtualMachineClusterPreference body: (required)
-        :return: V1alpha1VirtualMachineClusterPreference
+        :param V1alpha2VirtualMachineClusterPreference body: (required)
+        :return: V1alpha2VirtualMachineClusterPreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1884,14 +1884,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterpreferences', 'POST',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterpreferences', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineClusterPreference',
+                                        response_type='V1alpha2VirtualMachineClusterPreference',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3009,7 +3009,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes', 'DELETE',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3259,7 +3259,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences', 'DELETE',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -3884,7 +3884,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterinstancetypes', 'DELETE',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterinstancetypes', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4009,7 +4009,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterpreferences', 'DELETE',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterpreferences', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5172,7 +5172,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'DELETE',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -5432,7 +5432,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*}', 'DELETE',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -6068,7 +6068,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'DELETE',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -6191,7 +6191,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*}', 'DELETE',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -7308,7 +7308,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_api_resources_instancetype_kubevirt_io_v1alpha1(self, **kwargs):
+    def get_api_resources_instancetype_kubevirt_io_v1alpha2(self, **kwargs):
         """
         Get KubeVirt API Resources
         This method makes a synchronous HTTP request by default. To make an
@@ -7317,7 +7317,7 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_api_resources_instancetype_kubevirt_io_v1alpha1(callback=callback_function)
+        >>> thread = api.get_api_resources_instancetype_kubevirt_io_v1alpha2(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7327,12 +7327,12 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_api_resources_instancetype_kubevirt_io_v1alpha1_with_http_info(**kwargs)
+            return self.get_api_resources_instancetype_kubevirt_io_v1alpha2_with_http_info(**kwargs)
         else:
-            (data) = self.get_api_resources_instancetype_kubevirt_io_v1alpha1_with_http_info(**kwargs)
+            (data) = self.get_api_resources_instancetype_kubevirt_io_v1alpha2_with_http_info(**kwargs)
             return data
 
-    def get_api_resources_instancetype_kubevirt_io_v1alpha1_with_http_info(self, **kwargs):
+    def get_api_resources_instancetype_kubevirt_io_v1alpha2_with_http_info(self, **kwargs):
         """
         Get KubeVirt API Resources
         This method makes a synchronous HTTP request by default. To make an
@@ -7341,7 +7341,7 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_api_resources_instancetype_kubevirt_io_v1alpha1_with_http_info(callback=callback_function)
+        >>> thread = api.get_api_resources_instancetype_kubevirt_io_v1alpha2_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7361,7 +7361,7 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_api_resources_instancetype_kubevirt_io_v1alpha1" % key
+                    " to method get_api_resources_instancetype_kubevirt_io_v1alpha2" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -7385,7 +7385,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -9320,7 +9320,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1alpha1VirtualMachineInstancetypeList
+        :return: V1alpha2VirtualMachineInstancetypeList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -9353,7 +9353,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1alpha1VirtualMachineInstancetypeList
+        :return: V1alpha2VirtualMachineInstancetypeList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -9415,14 +9415,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineInstancetypeList',
+                                        response_type='V1alpha2VirtualMachineInstancetypeList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -9584,7 +9584,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1alpha1VirtualMachinePreferenceList
+        :return: V1alpha2VirtualMachinePreferenceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -9617,7 +9617,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1alpha1VirtualMachinePreferenceList
+        :return: V1alpha2VirtualMachinePreferenceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -9679,14 +9679,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachinePreferenceList',
+                                        response_type='V1alpha2VirtualMachinePreferenceList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -10236,7 +10236,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1alpha1VirtualMachineClusterInstancetypeList
+        :return: V1alpha2VirtualMachineClusterInstancetypeList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -10268,7 +10268,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1alpha1VirtualMachineClusterInstancetypeList
+        :return: V1alpha2VirtualMachineClusterInstancetypeList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -10325,14 +10325,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterinstancetypes', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterinstancetypes', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineClusterInstancetypeList',
+                                        response_type='V1alpha2VirtualMachineClusterInstancetypeList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -10361,7 +10361,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1alpha1VirtualMachineClusterPreferenceList
+        :return: V1alpha2VirtualMachineClusterPreferenceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -10393,7 +10393,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1alpha1VirtualMachineClusterPreferenceList
+        :return: V1alpha2VirtualMachineClusterPreferenceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -10450,14 +10450,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterpreferences', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterpreferences', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineClusterPreferenceList',
+                                        response_type='V1alpha2VirtualMachineClusterPreferenceList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -11236,7 +11236,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1alpha1VirtualMachineInstancetypeList
+        :return: V1alpha2VirtualMachineInstancetypeList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11268,7 +11268,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1alpha1VirtualMachineInstancetypeList
+        :return: V1alpha2VirtualMachineInstancetypeList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11325,14 +11325,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineinstancetypes', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineinstancetypes', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineInstancetypeList',
+                                        response_type='V1alpha2VirtualMachineInstancetypeList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -11486,7 +11486,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1alpha1VirtualMachinePreferenceList
+        :return: V1alpha2VirtualMachinePreferenceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11518,7 +11518,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1alpha1VirtualMachinePreferenceList
+        :return: V1alpha2VirtualMachinePreferenceList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11575,14 +11575,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachinepreferences', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachinepreferences', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachinePreferenceList',
+                                        response_type='V1alpha2VirtualMachinePreferenceList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -12918,7 +12918,7 @@ class DefaultApi(object):
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
-        :return: V1alpha1VirtualMachineInstancetype
+        :return: V1alpha2VirtualMachineInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -12945,7 +12945,7 @@ class DefaultApi(object):
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
-        :return: V1alpha1VirtualMachineInstancetype
+        :return: V1alpha2VirtualMachineInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13005,14 +13005,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'PATCH',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineInstancetype',
+                                        response_type='V1alpha2VirtualMachineInstancetype',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -13154,7 +13154,7 @@ class DefaultApi(object):
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
-        :return: V1alpha1VirtualMachinePreference
+        :return: V1alpha2VirtualMachinePreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13181,7 +13181,7 @@ class DefaultApi(object):
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
-        :return: V1alpha1VirtualMachinePreference
+        :return: V1alpha2VirtualMachinePreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13241,14 +13241,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*}', 'PATCH',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachinePreference',
+                                        response_type='V1alpha2VirtualMachinePreference',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -13736,7 +13736,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
-        :return: V1alpha1VirtualMachineClusterInstancetype
+        :return: V1alpha2VirtualMachineClusterInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13762,7 +13762,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
-        :return: V1alpha1VirtualMachineClusterInstancetype
+        :return: V1alpha2VirtualMachineClusterInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13817,14 +13817,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'PATCH',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineClusterInstancetype',
+                                        response_type='V1alpha2VirtualMachineClusterInstancetype',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -13847,7 +13847,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
-        :return: V1alpha1VirtualMachineClusterPreference
+        :return: V1alpha2VirtualMachineClusterPreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13873,7 +13873,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
-        :return: V1alpha1VirtualMachineClusterPreference
+        :return: V1alpha2VirtualMachineClusterPreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13928,14 +13928,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*}', 'PATCH',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineClusterPreference',
+                                        response_type='V1alpha2VirtualMachineClusterPreference',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -14873,7 +14873,7 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1alpha1VirtualMachineInstancetype
+        :return: V1alpha2VirtualMachineInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -14901,7 +14901,7 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1alpha1VirtualMachineInstancetype
+        :return: V1alpha2VirtualMachineInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -14956,14 +14956,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineInstancetype',
+                                        response_type='V1alpha2VirtualMachineInstancetype',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -15103,7 +15103,7 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1alpha1VirtualMachinePreference
+        :return: V1alpha2VirtualMachinePreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -15131,7 +15131,7 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1alpha1VirtualMachinePreference
+        :return: V1alpha2VirtualMachinePreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -15186,14 +15186,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*}', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachinePreference',
+                                        response_type='V1alpha2VirtualMachinePreference',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -15670,7 +15670,7 @@ class DefaultApi(object):
         :param str name: Name of the resource (required)
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1alpha1VirtualMachineClusterInstancetype
+        :return: V1alpha2VirtualMachineClusterInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -15697,7 +15697,7 @@ class DefaultApi(object):
         :param str name: Name of the resource (required)
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1alpha1VirtualMachineClusterInstancetype
+        :return: V1alpha2VirtualMachineClusterInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -15747,14 +15747,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineClusterInstancetype',
+                                        response_type='V1alpha2VirtualMachineClusterInstancetype',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -15778,7 +15778,7 @@ class DefaultApi(object):
         :param str name: Name of the resource (required)
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1alpha1VirtualMachineClusterPreference
+        :return: V1alpha2VirtualMachineClusterPreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -15805,7 +15805,7 @@ class DefaultApi(object):
         :param str name: Name of the resource (required)
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1alpha1VirtualMachineClusterPreference
+        :return: V1alpha2VirtualMachineClusterPreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -15855,14 +15855,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*}', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineClusterPreference',
+                                        response_type='V1alpha2VirtualMachineClusterPreference',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -16822,8 +16822,8 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1alpha1VirtualMachineInstancetype body: (required)
-        :return: V1alpha1VirtualMachineInstancetype
+        :param V1alpha2VirtualMachineInstancetype body: (required)
+        :return: V1alpha2VirtualMachineInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -16849,8 +16849,8 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1alpha1VirtualMachineInstancetype body: (required)
-        :return: V1alpha1VirtualMachineInstancetype
+        :param V1alpha2VirtualMachineInstancetype body: (required)
+        :return: V1alpha2VirtualMachineInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -16910,14 +16910,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'PUT',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineInstancetype',
+                                        response_type='V1alpha2VirtualMachineInstancetype',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -17058,8 +17058,8 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1alpha1VirtualMachinePreference body: (required)
-        :return: V1alpha1VirtualMachinePreference
+        :param V1alpha2VirtualMachinePreference body: (required)
+        :return: V1alpha2VirtualMachinePreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -17085,8 +17085,8 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1alpha1VirtualMachinePreference body: (required)
-        :return: V1alpha1VirtualMachinePreference
+        :param V1alpha2VirtualMachinePreference body: (required)
+        :return: V1alpha2VirtualMachinePreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -17146,14 +17146,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*}', 'PUT',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachinePreference',
+                                        response_type='V1alpha2VirtualMachinePreference',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -17640,8 +17640,8 @@ class DefaultApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
-        :param V1alpha1VirtualMachineClusterInstancetype body: (required)
-        :return: V1alpha1VirtualMachineClusterInstancetype
+        :param V1alpha2VirtualMachineClusterInstancetype body: (required)
+        :return: V1alpha2VirtualMachineClusterInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -17666,8 +17666,8 @@ class DefaultApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
-        :param V1alpha1VirtualMachineClusterInstancetype body: (required)
-        :return: V1alpha1VirtualMachineClusterInstancetype
+        :param V1alpha2VirtualMachineClusterInstancetype body: (required)
+        :return: V1alpha2VirtualMachineClusterInstancetype
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -17722,14 +17722,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'PUT',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineClusterInstancetype',
+                                        response_type='V1alpha2VirtualMachineClusterInstancetype',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -17751,8 +17751,8 @@ class DefaultApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
-        :param V1alpha1VirtualMachineClusterPreference body: (required)
-        :return: V1alpha1VirtualMachineClusterPreference
+        :param V1alpha2VirtualMachineClusterPreference body: (required)
+        :return: V1alpha2VirtualMachineClusterPreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -17777,8 +17777,8 @@ class DefaultApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
-        :param V1alpha1VirtualMachineClusterPreference body: (required)
-        :return: V1alpha1VirtualMachineClusterPreference
+        :param V1alpha2VirtualMachineClusterPreference body: (required)
+        :return: V1alpha2VirtualMachineClusterPreference
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -17833,14 +17833,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*}', 'PUT',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1alpha1VirtualMachineClusterPreference',
+                                        response_type='V1alpha2VirtualMachineClusterPreference',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -26711,7 +26711,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -26975,7 +26975,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -27621,7 +27621,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/watch/virtualmachineclusterinstancetypes', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/watch/virtualmachineclusterinstancetypes', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -27746,7 +27746,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/watch/virtualmachineclusterpreferences', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/watch/virtualmachineclusterpreferences', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -28496,7 +28496,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/watch/virtualmachineinstancetypes', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/watch/virtualmachineinstancetypes', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -28871,7 +28871,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha1/watch/virtualmachinepreferences', 'GET',
+        return self.api_client.call_api('/apis/instancetype.kubevirt.io/v1alpha2/watch/virtualmachinepreferences', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

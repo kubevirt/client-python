@@ -32,25 +32,30 @@ class V1alpha1VirtualMachineExportSpec(object):
     """
     swagger_types = {
         'source': 'K8sIoApiCoreV1TypedLocalObjectReference',
-        'token_secret_ref': 'str'
+        'token_secret_ref': 'str',
+        'ttl_duration': 'K8sIoApimachineryPkgApisMetaV1Duration'
     }
 
     attribute_map = {
         'source': 'source',
-        'token_secret_ref': 'tokenSecretRef'
+        'token_secret_ref': 'tokenSecretRef',
+        'ttl_duration': 'ttlDuration'
     }
 
-    def __init__(self, source=None, token_secret_ref=None):
+    def __init__(self, source=None, token_secret_ref=None, ttl_duration=None):
         """
         V1alpha1VirtualMachineExportSpec - a model defined in Swagger
         """
 
         self._source = None
         self._token_secret_ref = None
+        self._ttl_duration = None
 
         self.source = source
         if token_secret_ref is not None:
           self.token_secret_ref = token_secret_ref
+        if ttl_duration is not None:
+          self.ttl_duration = ttl_duration
 
     @property
     def source(self):
@@ -97,6 +102,29 @@ class V1alpha1VirtualMachineExportSpec(object):
         """
 
         self._token_secret_ref = token_secret_ref
+
+    @property
+    def ttl_duration(self):
+        """
+        Gets the ttl_duration of this V1alpha1VirtualMachineExportSpec.
+        ttlDuration limits the lifetime of an export If this field is set, after this duration has passed from counting from CreationTimestamp, the export is eligible to be automatically deleted. If this field is omitted, a reasonable default is applied.
+
+        :return: The ttl_duration of this V1alpha1VirtualMachineExportSpec.
+        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
+        """
+        return self._ttl_duration
+
+    @ttl_duration.setter
+    def ttl_duration(self, ttl_duration):
+        """
+        Sets the ttl_duration of this V1alpha1VirtualMachineExportSpec.
+        ttlDuration limits the lifetime of an export If this field is set, after this duration has passed from counting from CreationTimestamp, the export is eligible to be automatically deleted. If this field is omitted, a reasonable default is applied.
+
+        :param ttl_duration: The ttl_duration of this V1alpha1VirtualMachineExportSpec.
+        :type: K8sIoApimachineryPkgApisMetaV1Duration
+        """
+
+        self._ttl_duration = ttl_duration
 
     def to_dict(self):
         """

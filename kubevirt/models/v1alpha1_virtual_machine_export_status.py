@@ -35,7 +35,8 @@ class V1alpha1VirtualMachineExportStatus(object):
         'links': 'V1alpha1VirtualMachineExportLinks',
         'phase': 'str',
         'service_name': 'str',
-        'token_secret_ref': 'str'
+        'token_secret_ref': 'str',
+        'ttl_expiration_time': 'K8sIoApimachineryPkgApisMetaV1Time'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class V1alpha1VirtualMachineExportStatus(object):
         'links': 'links',
         'phase': 'phase',
         'service_name': 'serviceName',
-        'token_secret_ref': 'tokenSecretRef'
+        'token_secret_ref': 'tokenSecretRef',
+        'ttl_expiration_time': 'ttlExpirationTime'
     }
 
-    def __init__(self, conditions=None, links=None, phase=None, service_name=None, token_secret_ref=None):
+    def __init__(self, conditions=None, links=None, phase=None, service_name=None, token_secret_ref=None, ttl_expiration_time=None):
         """
         V1alpha1VirtualMachineExportStatus - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class V1alpha1VirtualMachineExportStatus(object):
         self._phase = None
         self._service_name = None
         self._token_secret_ref = None
+        self._ttl_expiration_time = None
 
         if conditions is not None:
           self.conditions = conditions
@@ -67,6 +70,8 @@ class V1alpha1VirtualMachineExportStatus(object):
           self.service_name = service_name
         if token_secret_ref is not None:
           self.token_secret_ref = token_secret_ref
+        if ttl_expiration_time is not None:
+          self.ttl_expiration_time = ttl_expiration_time
 
     @property
     def conditions(self):
@@ -176,6 +181,29 @@ class V1alpha1VirtualMachineExportStatus(object):
         """
 
         self._token_secret_ref = token_secret_ref
+
+    @property
+    def ttl_expiration_time(self):
+        """
+        Gets the ttl_expiration_time of this V1alpha1VirtualMachineExportStatus.
+        The time at which the VM Export will be completely removed according to specified TTL Formula is CreationTimestamp + TTL
+
+        :return: The ttl_expiration_time of this V1alpha1VirtualMachineExportStatus.
+        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        """
+        return self._ttl_expiration_time
+
+    @ttl_expiration_time.setter
+    def ttl_expiration_time(self, ttl_expiration_time):
+        """
+        Sets the ttl_expiration_time of this V1alpha1VirtualMachineExportStatus.
+        The time at which the VM Export will be completely removed according to specified TTL Formula is CreationTimestamp + TTL
+
+        :param ttl_expiration_time: The ttl_expiration_time of this V1alpha1VirtualMachineExportStatus.
+        :type: K8sIoApimachineryPkgApisMetaV1Time
+        """
+
+        self._ttl_expiration_time = ttl_expiration_time
 
     def to_dict(self):
         """

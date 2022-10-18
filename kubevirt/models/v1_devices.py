@@ -36,6 +36,7 @@ class V1Devices(object):
         'autoattach_mem_balloon': 'bool',
         'autoattach_pod_interface': 'bool',
         'autoattach_serial_console': 'bool',
+        'autoattach_vsock': 'bool',
         'block_multi_queue': 'bool',
         'client_passthrough': 'V1ClientPassthroughDevices',
         'disable_hotplug': 'bool',
@@ -59,6 +60,7 @@ class V1Devices(object):
         'autoattach_mem_balloon': 'autoattachMemBalloon',
         'autoattach_pod_interface': 'autoattachPodInterface',
         'autoattach_serial_console': 'autoattachSerialConsole',
+        'autoattach_vsock': 'autoattachVSOCK',
         'block_multi_queue': 'blockMultiQueue',
         'client_passthrough': 'clientPassthrough',
         'disable_hotplug': 'disableHotplug',
@@ -76,7 +78,7 @@ class V1Devices(object):
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_input_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, sound=None, tpm=None, use_virtio_transitional=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_input_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, autoattach_vsock=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, sound=None, tpm=None, use_virtio_transitional=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -86,6 +88,7 @@ class V1Devices(object):
         self._autoattach_mem_balloon = None
         self._autoattach_pod_interface = None
         self._autoattach_serial_console = None
+        self._autoattach_vsock = None
         self._block_multi_queue = None
         self._client_passthrough = None
         self._disable_hotplug = None
@@ -112,6 +115,8 @@ class V1Devices(object):
           self.autoattach_pod_interface = autoattach_pod_interface
         if autoattach_serial_console is not None:
           self.autoattach_serial_console = autoattach_serial_console
+        if autoattach_vsock is not None:
+          self.autoattach_vsock = autoattach_vsock
         if block_multi_queue is not None:
           self.block_multi_queue = block_multi_queue
         if client_passthrough is not None:
@@ -257,6 +262,29 @@ class V1Devices(object):
         """
 
         self._autoattach_serial_console = autoattach_serial_console
+
+    @property
+    def autoattach_vsock(self):
+        """
+        Gets the autoattach_vsock of this V1Devices.
+        Whether to attach the VSOCK CID to the VM or not. VSOCK access will be available if set to true. Defaults to false.
+
+        :return: The autoattach_vsock of this V1Devices.
+        :rtype: bool
+        """
+        return self._autoattach_vsock
+
+    @autoattach_vsock.setter
+    def autoattach_vsock(self, autoattach_vsock):
+        """
+        Sets the autoattach_vsock of this V1Devices.
+        Whether to attach the VSOCK CID to the VM or not. VSOCK access will be available if set to true. Defaults to false.
+
+        :param autoattach_vsock: The autoattach_vsock of this V1Devices.
+        :type: bool
+        """
+
+        self._autoattach_vsock = autoattach_vsock
 
     @property
     def block_multi_queue(self):

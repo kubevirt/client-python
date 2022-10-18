@@ -31,6 +31,7 @@ class V1VirtualMachineInstanceStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'vsockcid': 'int',
         'active_pods': 'dict(str, str)',
         'conditions': 'list[V1VirtualMachineInstanceCondition]',
         'evacuation_node_name': 'str',
@@ -53,6 +54,7 @@ class V1VirtualMachineInstanceStatus(object):
     }
 
     attribute_map = {
+        'vsockcid': 'VSOCKCID',
         'active_pods': 'activePods',
         'conditions': 'conditions',
         'evacuation_node_name': 'evacuationNodeName',
@@ -74,11 +76,12 @@ class V1VirtualMachineInstanceStatus(object):
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
+    def __init__(self, vsockcid=None, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
 
+        self._vsockcid = None
         self._active_pods = None
         self._conditions = None
         self._evacuation_node_name = None
@@ -99,6 +102,8 @@ class V1VirtualMachineInstanceStatus(object):
         self._virtual_machine_revision_name = None
         self._volume_status = None
 
+        if vsockcid is not None:
+          self.vsockcid = vsockcid
         if active_pods is not None:
           self.active_pods = active_pods
         if conditions is not None:
@@ -137,6 +142,29 @@ class V1VirtualMachineInstanceStatus(object):
           self.virtual_machine_revision_name = virtual_machine_revision_name
         if volume_status is not None:
           self.volume_status = volume_status
+
+    @property
+    def vsockcid(self):
+        """
+        Gets the vsockcid of this V1VirtualMachineInstanceStatus.
+        VSOCKCID is used to track the allocated VSOCK CID in the VM.
+
+        :return: The vsockcid of this V1VirtualMachineInstanceStatus.
+        :rtype: int
+        """
+        return self._vsockcid
+
+    @vsockcid.setter
+    def vsockcid(self, vsockcid):
+        """
+        Sets the vsockcid of this V1VirtualMachineInstanceStatus.
+        VSOCKCID is used to track the allocated VSOCK CID in the VM.
+
+        :param vsockcid: The vsockcid of this V1VirtualMachineInstanceStatus.
+        :type: int
+        """
+
+        self._vsockcid = vsockcid
 
     @property
     def active_pods(self):

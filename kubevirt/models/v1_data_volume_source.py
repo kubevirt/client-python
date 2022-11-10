@@ -79,7 +79,7 @@ class V1DataVolumeSource(object):
     def name(self):
         """
         Gets the name of this V1DataVolumeSource.
-        Name of both the DataVolume and the PVC in the same namespace. After PVC population the DataVolume is garbage collected by default.
+        Name represents the name of the DataVolume in the same namespace
 
         :return: The name of this V1DataVolumeSource.
         :rtype: str
@@ -90,7 +90,7 @@ class V1DataVolumeSource(object):
     def name(self, name):
         """
         Sets the name of this V1DataVolumeSource.
-        Name of both the DataVolume and the PVC in the same namespace. After PVC population the DataVolume is garbage collected by default.
+        Name represents the name of the DataVolume in the same namespace
 
         :param name: The name of this V1DataVolumeSource.
         :type: str

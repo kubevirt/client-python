@@ -18128,7 +18128,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1/expand-spec', 'PUT',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/expand-vm-spec', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -20512,7 +20512,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/expand-spec', 'PUT',
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/expand-vm-spec', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,

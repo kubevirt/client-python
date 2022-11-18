@@ -48,6 +48,7 @@ class V1VirtualMachineInstanceStatus(object):
         'qos_class': 'str',
         'reason': 'str',
         'runtime_user': 'int',
+        'selinux_context': 'str',
         'topology_hints': 'V1TopologyHints',
         'virtual_machine_revision_name': 'str',
         'volume_status': 'list[V1VolumeStatus]'
@@ -71,12 +72,13 @@ class V1VirtualMachineInstanceStatus(object):
         'qos_class': 'qosClass',
         'reason': 'reason',
         'runtime_user': 'runtimeUser',
+        'selinux_context': 'selinuxContext',
         'topology_hints': 'topologyHints',
         'virtual_machine_revision_name': 'virtualMachineRevisionName',
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, vsockcid=None, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
+    def __init__(self, vsockcid=None, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=None, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -98,6 +100,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._qos_class = None
         self._reason = None
         self._runtime_user = None
+        self._selinux_context = None
         self._topology_hints = None
         self._virtual_machine_revision_name = None
         self._volume_status = None
@@ -136,6 +139,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.reason = reason
         if runtime_user is not None:
           self.runtime_user = runtime_user
+        if selinux_context is not None:
+          self.selinux_context = selinux_context
         if topology_hints is not None:
           self.topology_hints = topology_hints
         if virtual_machine_revision_name is not None:
@@ -533,6 +538,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._runtime_user = runtime_user
+
+    @property
+    def selinux_context(self):
+        """
+        Gets the selinux_context of this V1VirtualMachineInstanceStatus.
+        SELinuxContext is the actual SELinux context of the virt-launcher pod
+
+        :return: The selinux_context of this V1VirtualMachineInstanceStatus.
+        :rtype: str
+        """
+        return self._selinux_context
+
+    @selinux_context.setter
+    def selinux_context(self, selinux_context):
+        """
+        Sets the selinux_context of this V1VirtualMachineInstanceStatus.
+        SELinuxContext is the actual SELinux context of the virt-launcher pod
+
+        :param selinux_context: The selinux_context of this V1VirtualMachineInstanceStatus.
+        :type: str
+        """
+
+        self._selinux_context = selinux_context
 
     @property
     def topology_hints(self):

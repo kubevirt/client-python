@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **qos_class** | **str** | The Quality of Service (QOS) classification assigned to the virtual machine instance based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md | [optional] 
 **reason** | **str** | A brief CamelCase message indicating details about why the VMI is in this state. e.g. &#39;NodeUnresponsive&#39; | [optional] 
 **runtime_user** | **int** | RuntimeUser is used to determine what user will be used in launcher | [optional] 
+**selinux_context** | **str** | SELinuxContext is the actual SELinux context of the virt-launcher pod | [optional] 
 **topology_hints** | [**V1TopologyHints**](V1TopologyHints.md) |  | [optional] 
 **virtual_machine_revision_name** | **str** | VirtualMachineRevisionName is used to get the vm revision of the vmi when doing an online vm snapshot | [optional] 
 **volume_status** | [**list[V1VolumeStatus]**](V1VolumeStatus.md) | VolumeStatus contains the statuses of all the volumes | [optional] 

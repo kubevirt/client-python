@@ -31,32 +31,59 @@ class V1MediatedDevicesConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'mediated_device_types': 'list[str]',
         'mediated_devices_types': 'list[str]',
         'node_mediated_device_types': 'list[V1NodeMediatedDeviceTypesConfig]'
     }
 
     attribute_map = {
+        'mediated_device_types': 'mediatedDeviceTypes',
         'mediated_devices_types': 'mediatedDevicesTypes',
         'node_mediated_device_types': 'nodeMediatedDeviceTypes'
     }
 
-    def __init__(self, mediated_devices_types=None, node_mediated_device_types=None):
+    def __init__(self, mediated_device_types=None, mediated_devices_types=None, node_mediated_device_types=None):
         """
         V1MediatedDevicesConfiguration - a model defined in Swagger
         """
 
+        self._mediated_device_types = None
         self._mediated_devices_types = None
         self._node_mediated_device_types = None
 
+        if mediated_device_types is not None:
+          self.mediated_device_types = mediated_device_types
         if mediated_devices_types is not None:
           self.mediated_devices_types = mediated_devices_types
         if node_mediated_device_types is not None:
           self.node_mediated_device_types = node_mediated_device_types
 
     @property
+    def mediated_device_types(self):
+        """
+        Gets the mediated_device_types of this V1MediatedDevicesConfiguration.
+
+        :return: The mediated_device_types of this V1MediatedDevicesConfiguration.
+        :rtype: list[str]
+        """
+        return self._mediated_device_types
+
+    @mediated_device_types.setter
+    def mediated_device_types(self, mediated_device_types):
+        """
+        Sets the mediated_device_types of this V1MediatedDevicesConfiguration.
+
+        :param mediated_device_types: The mediated_device_types of this V1MediatedDevicesConfiguration.
+        :type: list[str]
+        """
+
+        self._mediated_device_types = mediated_device_types
+
+    @property
     def mediated_devices_types(self):
         """
         Gets the mediated_devices_types of this V1MediatedDevicesConfiguration.
+        Deprecated. Use mediatedDeviceTypes instead.
 
         :return: The mediated_devices_types of this V1MediatedDevicesConfiguration.
         :rtype: list[str]
@@ -67,6 +94,7 @@ class V1MediatedDevicesConfiguration(object):
     def mediated_devices_types(self, mediated_devices_types):
         """
         Sets the mediated_devices_types of this V1MediatedDevicesConfiguration.
+        Deprecated. Use mediatedDeviceTypes instead.
 
         :param mediated_devices_types: The mediated_devices_types of this V1MediatedDevicesConfiguration.
         :type: list[str]

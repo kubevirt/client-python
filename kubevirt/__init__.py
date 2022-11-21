@@ -264,6 +264,7 @@ from .models.v1alpha1_migration_policy_spec import V1alpha1MigrationPolicySpec
 from .models.v1alpha1_migration_policy_status import V1alpha1MigrationPolicyStatus
 from .models.v1alpha1_persistent_volume_claim import V1alpha1PersistentVolumeClaim
 from .models.v1alpha1_selectors import V1alpha1Selectors
+from .models.v1alpha1_snapshot_volumes_lists import V1alpha1SnapshotVolumesLists
 from .models.v1alpha1_source_spec import V1alpha1SourceSpec
 from .models.v1alpha1_virtual_machine import V1alpha1VirtualMachine
 from .models.v1alpha1_virtual_machine_clone import V1alpha1VirtualMachineClone

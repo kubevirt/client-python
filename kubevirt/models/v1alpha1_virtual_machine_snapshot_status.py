@@ -37,6 +37,7 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         'indications': 'list[str]',
         'phase': 'str',
         'ready_to_use': 'bool',
+        'snapshot_volumes': 'V1alpha1SnapshotVolumesLists',
         'source_uid': 'str',
         'virtual_machine_snapshot_content_name': 'str'
     }
@@ -48,11 +49,12 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         'indications': 'indications',
         'phase': 'phase',
         'ready_to_use': 'readyToUse',
+        'snapshot_volumes': 'snapshotVolumes',
         'source_uid': 'sourceUID',
         'virtual_machine_snapshot_content_name': 'virtualMachineSnapshotContentName'
     }
 
-    def __init__(self, conditions=None, creation_time=None, error=None, indications=None, phase=None, ready_to_use=None, source_uid=None, virtual_machine_snapshot_content_name=None):
+    def __init__(self, conditions=None, creation_time=None, error=None, indications=None, phase=None, ready_to_use=None, snapshot_volumes=None, source_uid=None, virtual_machine_snapshot_content_name=None):
         """
         V1alpha1VirtualMachineSnapshotStatus - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         self._indications = None
         self._phase = None
         self._ready_to_use = None
+        self._snapshot_volumes = None
         self._source_uid = None
         self._virtual_machine_snapshot_content_name = None
 
@@ -78,6 +81,8 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
           self.phase = phase
         if ready_to_use is not None:
           self.ready_to_use = ready_to_use
+        if snapshot_volumes is not None:
+          self.snapshot_volumes = snapshot_volumes
         if source_uid is not None:
           self.source_uid = source_uid
         if virtual_machine_snapshot_content_name is not None:
@@ -208,6 +213,27 @@ class V1alpha1VirtualMachineSnapshotStatus(object):
         """
 
         self._ready_to_use = ready_to_use
+
+    @property
+    def snapshot_volumes(self):
+        """
+        Gets the snapshot_volumes of this V1alpha1VirtualMachineSnapshotStatus.
+
+        :return: The snapshot_volumes of this V1alpha1VirtualMachineSnapshotStatus.
+        :rtype: V1alpha1SnapshotVolumesLists
+        """
+        return self._snapshot_volumes
+
+    @snapshot_volumes.setter
+    def snapshot_volumes(self, snapshot_volumes):
+        """
+        Sets the snapshot_volumes of this V1alpha1VirtualMachineSnapshotStatus.
+
+        :param snapshot_volumes: The snapshot_volumes of this V1alpha1VirtualMachineSnapshotStatus.
+        :type: V1alpha1SnapshotVolumesLists
+        """
+
+        self._snapshot_volumes = snapshot_volumes
 
     @property
     def source_uid(self):

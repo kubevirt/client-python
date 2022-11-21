@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **indications** | **list[str]** |  | [optional] 
 **phase** | **str** |  | [optional] 
 **ready_to_use** | **bool** |  | [optional] 
+**snapshot_volumes** | [**V1alpha1SnapshotVolumesLists**](V1alpha1SnapshotVolumesLists.md) |  | [optional] 
 **source_uid** | **str** |  | [optional] 
 **virtual_machine_snapshot_content_name** | **str** |  | [optional] 
 

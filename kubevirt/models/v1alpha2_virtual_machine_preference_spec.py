@@ -36,7 +36,8 @@ class V1alpha2VirtualMachinePreferenceSpec(object):
         'devices': 'V1alpha2DevicePreferences',
         'features': 'V1alpha2FeaturePreferences',
         'firmware': 'V1alpha2FirmwarePreferences',
-        'machine': 'V1alpha2MachinePreferences'
+        'machine': 'V1alpha2MachinePreferences',
+        'volumes': 'V1alpha2VolumePreferences'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class V1alpha2VirtualMachinePreferenceSpec(object):
         'devices': 'devices',
         'features': 'features',
         'firmware': 'firmware',
-        'machine': 'machine'
+        'machine': 'machine',
+        'volumes': 'volumes'
     }
 
-    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None):
+    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, volumes=None):
         """
         V1alpha2VirtualMachinePreferenceSpec - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class V1alpha2VirtualMachinePreferenceSpec(object):
         self._features = None
         self._firmware = None
         self._machine = None
+        self._volumes = None
 
         if clock is not None:
           self.clock = clock
@@ -72,6 +75,8 @@ class V1alpha2VirtualMachinePreferenceSpec(object):
           self.firmware = firmware
         if machine is not None:
           self.machine = machine
+        if volumes is not None:
+          self.volumes = volumes
 
     @property
     def clock(self):
@@ -210,6 +215,29 @@ class V1alpha2VirtualMachinePreferenceSpec(object):
         """
 
         self._machine = machine
+
+    @property
+    def volumes(self):
+        """
+        Gets the volumes of this V1alpha2VirtualMachinePreferenceSpec.
+        Volumes optionally defines preferences associated with the Volumes attribute of a VirtualMachineInstace DomainSpec
+
+        :return: The volumes of this V1alpha2VirtualMachinePreferenceSpec.
+        :rtype: V1alpha2VolumePreferences
+        """
+        return self._volumes
+
+    @volumes.setter
+    def volumes(self, volumes):
+        """
+        Sets the volumes of this V1alpha2VirtualMachinePreferenceSpec.
+        Volumes optionally defines preferences associated with the Volumes attribute of a VirtualMachineInstace DomainSpec
+
+        :param volumes: The volumes of this V1alpha2VirtualMachinePreferenceSpec.
+        :type: V1alpha2VolumePreferences
+        """
+
+        self._volumes = volumes
 
     def to_dict(self):
         """

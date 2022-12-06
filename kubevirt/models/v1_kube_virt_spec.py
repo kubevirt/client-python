@@ -35,6 +35,7 @@ class V1KubeVirtSpec(object):
         'configuration': 'V1KubeVirtConfiguration',
         'customize_components': 'V1CustomizeComponents',
         'image_pull_policy': 'str',
+        'image_pull_secrets': 'list[K8sIoApiCoreV1LocalObjectReference]',
         'image_registry': 'str',
         'image_tag': 'str',
         'infra': 'V1ComponentConfig',
@@ -54,6 +55,7 @@ class V1KubeVirtSpec(object):
         'configuration': 'configuration',
         'customize_components': 'customizeComponents',
         'image_pull_policy': 'imagePullPolicy',
+        'image_pull_secrets': 'imagePullSecrets',
         'image_registry': 'imageRegistry',
         'image_tag': 'imageTag',
         'infra': 'infra',
@@ -68,7 +70,7 @@ class V1KubeVirtSpec(object):
         'workloads': 'workloads'
     }
 
-    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_registry=None, image_tag=None, infra=None, monitor_account=None, monitor_namespace=None, product_component=None, product_name=None, product_version=None, service_monitor_namespace=None, uninstall_strategy=None, workload_update_strategy=None, workloads=None):
+    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_pull_secrets=None, image_registry=None, image_tag=None, infra=None, monitor_account=None, monitor_namespace=None, product_component=None, product_name=None, product_version=None, service_monitor_namespace=None, uninstall_strategy=None, workload_update_strategy=None, workloads=None):
         """
         V1KubeVirtSpec - a model defined in Swagger
         """
@@ -77,6 +79,7 @@ class V1KubeVirtSpec(object):
         self._configuration = None
         self._customize_components = None
         self._image_pull_policy = None
+        self._image_pull_secrets = None
         self._image_registry = None
         self._image_tag = None
         self._infra = None
@@ -98,6 +101,8 @@ class V1KubeVirtSpec(object):
           self.customize_components = customize_components
         if image_pull_policy is not None:
           self.image_pull_policy = image_pull_policy
+        if image_pull_secrets is not None:
+          self.image_pull_secrets = image_pull_secrets
         if image_registry is not None:
           self.image_registry = image_registry
         if image_tag is not None:
@@ -210,6 +215,29 @@ class V1KubeVirtSpec(object):
         """
 
         self._image_pull_policy = image_pull_policy
+
+    @property
+    def image_pull_secrets(self):
+        """
+        Gets the image_pull_secrets of this V1KubeVirtSpec.
+        The imagePullSecrets to pull the container images from Defaults to none
+
+        :return: The image_pull_secrets of this V1KubeVirtSpec.
+        :rtype: list[K8sIoApiCoreV1LocalObjectReference]
+        """
+        return self._image_pull_secrets
+
+    @image_pull_secrets.setter
+    def image_pull_secrets(self, image_pull_secrets):
+        """
+        Sets the image_pull_secrets of this V1KubeVirtSpec.
+        The imagePullSecrets to pull the container images from Defaults to none
+
+        :param image_pull_secrets: The image_pull_secrets of this V1KubeVirtSpec.
+        :type: list[K8sIoApiCoreV1LocalObjectReference]
+        """
+
+        self._image_pull_secrets = image_pull_secrets
 
     @property
     def image_registry(self):

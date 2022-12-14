@@ -31,31 +31,60 @@ class V1PreferenceMatcher(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'infer_from_volume': 'str',
         'kind': 'str',
         'name': 'str',
         'revision_name': 'str'
     }
 
     attribute_map = {
+        'infer_from_volume': 'inferFromVolume',
         'kind': 'kind',
         'name': 'name',
         'revision_name': 'revisionName'
     }
 
-    def __init__(self, kind=None, name=None, revision_name=None):
+    def __init__(self, infer_from_volume=None, kind=None, name=None, revision_name=None):
         """
         V1PreferenceMatcher - a model defined in Swagger
         """
 
+        self._infer_from_volume = None
         self._kind = None
         self._name = None
         self._revision_name = None
 
+        if infer_from_volume is not None:
+          self.infer_from_volume = infer_from_volume
         if kind is not None:
           self.kind = kind
-        self.name = name
+        if name is not None:
+          self.name = name
         if revision_name is not None:
           self.revision_name = revision_name
+
+    @property
+    def infer_from_volume(self):
+        """
+        Gets the infer_from_volume of this V1PreferenceMatcher.
+        InferFromVolume lists the name of a volume that should be used to infer or discover the preference to be used through known annotations on the underlying resource. Once applied to the PreferenceMatcher this field is removed.
+
+        :return: The infer_from_volume of this V1PreferenceMatcher.
+        :rtype: str
+        """
+        return self._infer_from_volume
+
+    @infer_from_volume.setter
+    def infer_from_volume(self, infer_from_volume):
+        """
+        Sets the infer_from_volume of this V1PreferenceMatcher.
+        InferFromVolume lists the name of a volume that should be used to infer or discover the preference to be used through known annotations on the underlying resource. Once applied to the PreferenceMatcher this field is removed.
+
+        :param infer_from_volume: The infer_from_volume of this V1PreferenceMatcher.
+        :type: str
+        """
+
+        self._infer_from_volume = infer_from_volume
 
     @property
     def kind(self):
@@ -100,8 +129,6 @@ class V1PreferenceMatcher(object):
         :param name: The name of this V1PreferenceMatcher.
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")
 
         self._name = name
 

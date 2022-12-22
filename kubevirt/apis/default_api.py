@@ -20138,6 +20138,7 @@ class DefaultApi(object):
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param int port: The port which the VSOCK application listens to. (required)
+        :param bool tls: Weather to request a TLS encrypted session from the VSOCK application.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -20165,12 +20166,13 @@ class DefaultApi(object):
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param int port: The port which the VSOCK application listens to. (required)
+        :param bool tls: Weather to request a TLS encrypted session from the VSOCK application.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace', 'port']
+        all_params = ['name', 'namespace', 'port', 'tls']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -20207,6 +20209,8 @@ class DefaultApi(object):
         query_params = []
         if 'port' in params:
             query_params.append(('port', params['port']))
+        if 'tls' in params:
+            query_params.append(('tls', params['tls']))
 
         header_params = {}
 
@@ -22614,6 +22618,7 @@ class DefaultApi(object):
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param int port: The port which the VSOCK application listens to. (required)
+        :param bool tls: Weather to request a TLS encrypted session from the VSOCK application.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -22641,12 +22646,13 @@ class DefaultApi(object):
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param int port: The port which the VSOCK application listens to. (required)
+        :param bool tls: Weather to request a TLS encrypted session from the VSOCK application.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace', 'port']
+        all_params = ['name', 'namespace', 'port', 'tls']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -22683,6 +22689,8 @@ class DefaultApi(object):
         query_params = []
         if 'port' in params:
             query_params.append(('port', params['port']))
+        if 'tls' in params:
+            query_params.append(('tls', params['tls']))
 
         header_params = {}
 

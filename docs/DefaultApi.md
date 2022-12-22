@@ -9502,7 +9502,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_vsock**
-> v1_vsock(name, namespace, port)
+> v1_vsock(name, namespace, port, tls=tls)
 
 
 
@@ -9521,9 +9521,10 @@ api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 port = 56 # int | The port which the VSOCK application listens to.
+tls = true # bool | Weather to request a TLS encrypted session from the VSOCK application. (optional)
 
 try: 
-    api_instance.v1_vsock(name, namespace, port)
+    api_instance.v1_vsock(name, namespace, port, tls=tls)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1_vsock: %s\n" % e)
 ```
@@ -9535,6 +9536,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
  **port** | **int**| The port which the VSOCK application listens to. | 
+ **tls** | **bool**| Weather to request a TLS encrypted session from the VSOCK application. | [optional] 
 
 ### Return type
 
@@ -10646,7 +10648,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1alpha3_vsock**
-> v1alpha3_vsock(name, namespace, port)
+> v1alpha3_vsock(name, namespace, port, tls=tls)
 
 
 
@@ -10665,9 +10667,10 @@ api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 port = 56 # int | The port which the VSOCK application listens to.
+tls = true # bool | Weather to request a TLS encrypted session from the VSOCK application. (optional)
 
 try: 
-    api_instance.v1alpha3_vsock(name, namespace, port)
+    api_instance.v1alpha3_vsock(name, namespace, port, tls=tls)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1alpha3_vsock: %s\n" % e)
 ```
@@ -10679,6 +10682,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
  **port** | **int**| The port which the VSOCK application listens to. | 
+ **tls** | **bool**| Weather to request a TLS encrypted session from the VSOCK application. | [optional] 
 
 ### Return type
 

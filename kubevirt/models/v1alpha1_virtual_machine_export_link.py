@@ -32,23 +32,28 @@ class V1alpha1VirtualMachineExportLink(object):
     """
     swagger_types = {
         'cert': 'str',
+        'manifests': 'list[V1alpha1VirtualMachineExportManifest]',
         'volumes': 'list[V1alpha1VirtualMachineExportVolume]'
     }
 
     attribute_map = {
         'cert': 'cert',
+        'manifests': 'manifests',
         'volumes': 'volumes'
     }
 
-    def __init__(self, cert=None, volumes=None):
+    def __init__(self, cert=None, manifests=None, volumes=None):
         """
         V1alpha1VirtualMachineExportLink - a model defined in Swagger
         """
 
         self._cert = None
+        self._manifests = None
         self._volumes = None
 
         self.cert = cert
+        if manifests is not None:
+          self.manifests = manifests
         if volumes is not None:
           self.volumes = volumes
 
@@ -76,6 +81,29 @@ class V1alpha1VirtualMachineExportLink(object):
             raise ValueError("Invalid value for `cert`, must not be `None`")
 
         self._cert = cert
+
+    @property
+    def manifests(self):
+        """
+        Gets the manifests of this V1alpha1VirtualMachineExportLink.
+        Manifests is a list of available manifests for the export
+
+        :return: The manifests of this V1alpha1VirtualMachineExportLink.
+        :rtype: list[V1alpha1VirtualMachineExportManifest]
+        """
+        return self._manifests
+
+    @manifests.setter
+    def manifests(self, manifests):
+        """
+        Sets the manifests of this V1alpha1VirtualMachineExportLink.
+        Manifests is a list of available manifests for the export
+
+        :param manifests: The manifests of this V1alpha1VirtualMachineExportLink.
+        :type: list[V1alpha1VirtualMachineExportManifest]
+        """
+
+        self._manifests = manifests
 
     @property
     def volumes(self):

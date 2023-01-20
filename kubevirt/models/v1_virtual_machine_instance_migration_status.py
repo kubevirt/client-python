@@ -32,27 +32,32 @@ class V1VirtualMachineInstanceMigrationStatus(object):
     """
     swagger_types = {
         'conditions': 'list[V1VirtualMachineInstanceMigrationCondition]',
+        'migration_state': 'V1VirtualMachineInstanceMigrationState',
         'phase': 'str',
         'phase_transition_timestamps': 'list[V1VirtualMachineInstanceMigrationPhaseTransitionTimestamp]'
     }
 
     attribute_map = {
         'conditions': 'conditions',
+        'migration_state': 'migrationState',
         'phase': 'phase',
         'phase_transition_timestamps': 'phaseTransitionTimestamps'
     }
 
-    def __init__(self, conditions=None, phase=None, phase_transition_timestamps=None):
+    def __init__(self, conditions=None, migration_state=None, phase=None, phase_transition_timestamps=None):
         """
         V1VirtualMachineInstanceMigrationStatus - a model defined in Swagger
         """
 
         self._conditions = None
+        self._migration_state = None
         self._phase = None
         self._phase_transition_timestamps = None
 
         if conditions is not None:
           self.conditions = conditions
+        if migration_state is not None:
+          self.migration_state = migration_state
         if phase is not None:
           self.phase = phase
         if phase_transition_timestamps is not None:
@@ -78,6 +83,29 @@ class V1VirtualMachineInstanceMigrationStatus(object):
         """
 
         self._conditions = conditions
+
+    @property
+    def migration_state(self):
+        """
+        Gets the migration_state of this V1VirtualMachineInstanceMigrationStatus.
+        Represents the status of a live migration
+
+        :return: The migration_state of this V1VirtualMachineInstanceMigrationStatus.
+        :rtype: V1VirtualMachineInstanceMigrationState
+        """
+        return self._migration_state
+
+    @migration_state.setter
+    def migration_state(self, migration_state):
+        """
+        Sets the migration_state of this V1VirtualMachineInstanceMigrationStatus.
+        Represents the status of a live migration
+
+        :param migration_state: The migration_state of this V1VirtualMachineInstanceMigrationStatus.
+        :type: V1VirtualMachineInstanceMigrationState
+        """
+
+        self._migration_state = migration_state
 
     @property
     def phase(self):

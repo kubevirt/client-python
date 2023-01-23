@@ -50,6 +50,7 @@ class V1KubeVirtConfiguration(object):
         'obsolete_cpu_models': 'dict(str, bool)',
         'ovmf_path': 'str',
         'permitted_host_devices': 'V1PermittedHostDevices',
+        'seccomp_configuration': 'V1SeccompConfiguration',
         'selinux_launcher_type': 'str',
         'smbios': 'V1SMBiosConfiguration',
         'supported_guest_agent_versions': 'list[str]',
@@ -78,6 +79,7 @@ class V1KubeVirtConfiguration(object):
         'obsolete_cpu_models': 'obsoleteCPUModels',
         'ovmf_path': 'ovmfPath',
         'permitted_host_devices': 'permittedHostDevices',
+        'seccomp_configuration': 'seccompConfiguration',
         'selinux_launcher_type': 'selinuxLauncherType',
         'smbios': 'smbios',
         'supported_guest_agent_versions': 'supportedGuestAgentVersions',
@@ -86,7 +88,7 @@ class V1KubeVirtConfiguration(object):
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, api_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, webhook_configuration=None):
+    def __init__(self, api_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -110,6 +112,7 @@ class V1KubeVirtConfiguration(object):
         self._obsolete_cpu_models = None
         self._ovmf_path = None
         self._permitted_host_devices = None
+        self._seccomp_configuration = None
         self._selinux_launcher_type = None
         self._smbios = None
         self._supported_guest_agent_versions = None
@@ -155,6 +158,8 @@ class V1KubeVirtConfiguration(object):
           self.ovmf_path = ovmf_path
         if permitted_host_devices is not None:
           self.permitted_host_devices = permitted_host_devices
+        if seccomp_configuration is not None:
+          self.seccomp_configuration = seccomp_configuration
         if selinux_launcher_type is not None:
           self.selinux_launcher_type = selinux_launcher_type
         if smbios is not None:
@@ -568,6 +573,27 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._permitted_host_devices = permitted_host_devices
+
+    @property
+    def seccomp_configuration(self):
+        """
+        Gets the seccomp_configuration of this V1KubeVirtConfiguration.
+
+        :return: The seccomp_configuration of this V1KubeVirtConfiguration.
+        :rtype: V1SeccompConfiguration
+        """
+        return self._seccomp_configuration
+
+    @seccomp_configuration.setter
+    def seccomp_configuration(self, seccomp_configuration):
+        """
+        Sets the seccomp_configuration of this V1KubeVirtConfiguration.
+
+        :param seccomp_configuration: The seccomp_configuration of this V1KubeVirtConfiguration.
+        :type: V1SeccompConfiguration
+        """
+
+        self._seccomp_configuration = seccomp_configuration
 
     @property
     def selinux_launcher_type(self):

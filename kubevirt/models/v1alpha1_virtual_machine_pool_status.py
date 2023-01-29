@@ -33,28 +33,33 @@ class V1alpha1VirtualMachinePoolStatus(object):
     swagger_types = {
         'conditions': 'list[V1alpha1VirtualMachinePoolCondition]',
         'label_selector': 'str',
+        'ready_replicas': 'int',
         'replicas': 'int'
     }
 
     attribute_map = {
         'conditions': 'conditions',
         'label_selector': 'labelSelector',
+        'ready_replicas': 'readyReplicas',
         'replicas': 'replicas'
     }
 
-    def __init__(self, conditions=None, label_selector=None, replicas=None):
+    def __init__(self, conditions=None, label_selector=None, ready_replicas=None, replicas=None):
         """
         V1alpha1VirtualMachinePoolStatus - a model defined in Swagger
         """
 
         self._conditions = None
         self._label_selector = None
+        self._ready_replicas = None
         self._replicas = None
 
         if conditions is not None:
           self.conditions = conditions
         if label_selector is not None:
           self.label_selector = label_selector
+        if ready_replicas is not None:
+          self.ready_replicas = ready_replicas
         if replicas is not None:
           self.replicas = replicas
 
@@ -101,6 +106,27 @@ class V1alpha1VirtualMachinePoolStatus(object):
         """
 
         self._label_selector = label_selector
+
+    @property
+    def ready_replicas(self):
+        """
+        Gets the ready_replicas of this V1alpha1VirtualMachinePoolStatus.
+
+        :return: The ready_replicas of this V1alpha1VirtualMachinePoolStatus.
+        :rtype: int
+        """
+        return self._ready_replicas
+
+    @ready_replicas.setter
+    def ready_replicas(self, ready_replicas):
+        """
+        Sets the ready_replicas of this V1alpha1VirtualMachinePoolStatus.
+
+        :param ready_replicas: The ready_replicas of this V1alpha1VirtualMachinePoolStatus.
+        :type: int
+        """
+
+        self._ready_replicas = ready_replicas
 
     @property
     def replicas(self):

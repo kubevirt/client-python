@@ -31,6 +31,7 @@ class V1Interface(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'acpi_index': 'int',
         'boot_order': 'int',
         'bridge': 'V1InterfaceBridge',
         'dhcp_options': 'V1DHCPOptions',
@@ -48,6 +49,7 @@ class V1Interface(object):
     }
 
     attribute_map = {
+        'acpi_index': 'acpiIndex',
         'boot_order': 'bootOrder',
         'bridge': 'bridge',
         'dhcp_options': 'dhcpOptions',
@@ -64,11 +66,12 @@ class V1Interface(object):
         'tag': 'tag'
     }
 
-    def __init__(self, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name=None, passt=None, pci_address=None, ports=None, slirp=None, sriov=None, tag=None):
+    def __init__(self, acpi_index=None, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name=None, passt=None, pci_address=None, ports=None, slirp=None, sriov=None, tag=None):
         """
         V1Interface - a model defined in Swagger
         """
 
+        self._acpi_index = None
         self._boot_order = None
         self._bridge = None
         self._dhcp_options = None
@@ -84,6 +87,8 @@ class V1Interface(object):
         self._sriov = None
         self._tag = None
 
+        if acpi_index is not None:
+          self.acpi_index = acpi_index
         if boot_order is not None:
           self.boot_order = boot_order
         if bridge is not None:
@@ -111,6 +116,29 @@ class V1Interface(object):
           self.sriov = sriov
         if tag is not None:
           self.tag = tag
+
+    @property
+    def acpi_index(self):
+        """
+        Gets the acpi_index of this V1Interface.
+        If specified, the ACPI index is used to provide network interface device naming, that is stable across changes in PCI addresses assigned to the device. This value is required to be unique across all devices and be between 1 and (16*1024-1).
+
+        :return: The acpi_index of this V1Interface.
+        :rtype: int
+        """
+        return self._acpi_index
+
+    @acpi_index.setter
+    def acpi_index(self, acpi_index):
+        """
+        Sets the acpi_index of this V1Interface.
+        If specified, the ACPI index is used to provide network interface device naming, that is stable across changes in PCI addresses assigned to the device. This value is required to be unique across all devices and be between 1 and (16*1024-1).
+
+        :param acpi_index: The acpi_index of this V1Interface.
+        :type: int
+        """
+
+        self._acpi_index = acpi_index
 
     @property
     def boot_order(self):

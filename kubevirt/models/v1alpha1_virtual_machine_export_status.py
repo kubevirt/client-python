@@ -36,7 +36,8 @@ class V1alpha1VirtualMachineExportStatus(object):
         'phase': 'str',
         'service_name': 'str',
         'token_secret_ref': 'str',
-        'ttl_expiration_time': 'K8sIoApimachineryPkgApisMetaV1Time'
+        'ttl_expiration_time': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'virtual_machine_name': 'str'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class V1alpha1VirtualMachineExportStatus(object):
         'phase': 'phase',
         'service_name': 'serviceName',
         'token_secret_ref': 'tokenSecretRef',
-        'ttl_expiration_time': 'ttlExpirationTime'
+        'ttl_expiration_time': 'ttlExpirationTime',
+        'virtual_machine_name': 'virtualMachineName'
     }
 
-    def __init__(self, conditions=None, links=None, phase=None, service_name=None, token_secret_ref=None, ttl_expiration_time=None):
+    def __init__(self, conditions=None, links=None, phase=None, service_name=None, token_secret_ref=None, ttl_expiration_time=None, virtual_machine_name=None):
         """
         V1alpha1VirtualMachineExportStatus - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class V1alpha1VirtualMachineExportStatus(object):
         self._service_name = None
         self._token_secret_ref = None
         self._ttl_expiration_time = None
+        self._virtual_machine_name = None
 
         if conditions is not None:
           self.conditions = conditions
@@ -72,6 +75,8 @@ class V1alpha1VirtualMachineExportStatus(object):
           self.token_secret_ref = token_secret_ref
         if ttl_expiration_time is not None:
           self.ttl_expiration_time = ttl_expiration_time
+        if virtual_machine_name is not None:
+          self.virtual_machine_name = virtual_machine_name
 
     @property
     def conditions(self):
@@ -204,6 +209,29 @@ class V1alpha1VirtualMachineExportStatus(object):
         """
 
         self._ttl_expiration_time = ttl_expiration_time
+
+    @property
+    def virtual_machine_name(self):
+        """
+        Gets the virtual_machine_name of this V1alpha1VirtualMachineExportStatus.
+        VirtualMachineName shows the name of the source virtual machine if the source is either a VirtualMachine or a VirtualMachineSnapshot. This is mainly to easily identify the source VirtualMachine in case of a VirtualMachineSnapshot
+
+        :return: The virtual_machine_name of this V1alpha1VirtualMachineExportStatus.
+        :rtype: str
+        """
+        return self._virtual_machine_name
+
+    @virtual_machine_name.setter
+    def virtual_machine_name(self, virtual_machine_name):
+        """
+        Sets the virtual_machine_name of this V1alpha1VirtualMachineExportStatus.
+        VirtualMachineName shows the name of the source virtual machine if the source is either a VirtualMachine or a VirtualMachineSnapshot. This is mainly to easily identify the source VirtualMachine in case of a VirtualMachineSnapshot
+
+        :param virtual_machine_name: The virtual_machine_name of this V1alpha1VirtualMachineExportStatus.
+        :type: str
+        """
+
+        self._virtual_machine_name = virtual_machine_name
 
     def to_dict(self):
         """

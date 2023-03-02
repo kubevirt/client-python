@@ -31,6 +31,7 @@ class V1KubeVirtConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'additional_guest_memory_overhead_ratio': 'str',
         'api_configuration': 'V1ReloadableComponentConfiguration',
         'controller_configuration': 'V1ReloadableComponentConfiguration',
         'cpu_model': 'str',
@@ -60,6 +61,7 @@ class V1KubeVirtConfiguration(object):
     }
 
     attribute_map = {
+        'additional_guest_memory_overhead_ratio': 'additionalGuestMemoryOverheadRatio',
         'api_configuration': 'apiConfiguration',
         'controller_configuration': 'controllerConfiguration',
         'cpu_model': 'cpuModel',
@@ -88,11 +90,12 @@ class V1KubeVirtConfiguration(object):
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, api_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, webhook_configuration=None):
+    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
 
+        self._additional_guest_memory_overhead_ratio = None
         self._api_configuration = None
         self._controller_configuration = None
         self._cpu_model = None
@@ -120,6 +123,8 @@ class V1KubeVirtConfiguration(object):
         self._virtual_machine_instances_per_node = None
         self._webhook_configuration = None
 
+        if additional_guest_memory_overhead_ratio is not None:
+          self.additional_guest_memory_overhead_ratio = additional_guest_memory_overhead_ratio
         if api_configuration is not None:
           self.api_configuration = api_configuration
         if controller_configuration is not None:
@@ -172,6 +177,29 @@ class V1KubeVirtConfiguration(object):
           self.virtual_machine_instances_per_node = virtual_machine_instances_per_node
         if webhook_configuration is not None:
           self.webhook_configuration = webhook_configuration
+
+    @property
+    def additional_guest_memory_overhead_ratio(self):
+        """
+        Gets the additional_guest_memory_overhead_ratio of this V1KubeVirtConfiguration.
+        AdditionalGuestMemoryOverheadRatio can be used to increase the virtualization infrastructure overhead. This is useful, since the calculation of this overhead is not accurate and cannot be entirely known in advance. The ratio that is being set determines by which factor to increase the overhead calculated by Kubevirt. A higher ratio means that the VMs would be less compromised by node pressures, but would mean that fewer VMs could be scheduled to a node. If not set, the default is 1.
+
+        :return: The additional_guest_memory_overhead_ratio of this V1KubeVirtConfiguration.
+        :rtype: str
+        """
+        return self._additional_guest_memory_overhead_ratio
+
+    @additional_guest_memory_overhead_ratio.setter
+    def additional_guest_memory_overhead_ratio(self, additional_guest_memory_overhead_ratio):
+        """
+        Sets the additional_guest_memory_overhead_ratio of this V1KubeVirtConfiguration.
+        AdditionalGuestMemoryOverheadRatio can be used to increase the virtualization infrastructure overhead. This is useful, since the calculation of this overhead is not accurate and cannot be entirely known in advance. The ratio that is being set determines by which factor to increase the overhead calculated by Kubevirt. A higher ratio means that the VMs would be less compromised by node pressures, but would mean that fewer VMs could be scheduled to a node. If not set, the default is 1.
+
+        :param additional_guest_memory_overhead_ratio: The additional_guest_memory_overhead_ratio of this V1KubeVirtConfiguration.
+        :type: str
+        """
+
+        self._additional_guest_memory_overhead_ratio = additional_guest_memory_overhead_ratio
 
     @property
     def api_configuration(self):

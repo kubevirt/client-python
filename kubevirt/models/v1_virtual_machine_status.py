@@ -33,7 +33,9 @@ class V1VirtualMachineStatus(object):
     swagger_types = {
         'conditions': 'list[V1VirtualMachineCondition]',
         'created': 'bool',
+        'desired_generation': 'int',
         'memory_dump_request': 'V1VirtualMachineMemoryDumpRequest',
+        'observed_generation': 'int',
         'printable_status': 'str',
         'ready': 'bool',
         'restore_in_progress': 'str',
@@ -47,7 +49,9 @@ class V1VirtualMachineStatus(object):
     attribute_map = {
         'conditions': 'conditions',
         'created': 'created',
+        'desired_generation': 'desiredGeneration',
         'memory_dump_request': 'memoryDumpRequest',
+        'observed_generation': 'observedGeneration',
         'printable_status': 'printableStatus',
         'ready': 'ready',
         'restore_in_progress': 'restoreInProgress',
@@ -58,14 +62,16 @@ class V1VirtualMachineStatus(object):
         'volume_snapshot_statuses': 'volumeSnapshotStatuses'
     }
 
-    def __init__(self, conditions=None, created=None, memory_dump_request=None, printable_status=None, ready=None, restore_in_progress=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None):
+    def __init__(self, conditions=None, created=None, desired_generation=None, memory_dump_request=None, observed_generation=None, printable_status=None, ready=None, restore_in_progress=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
 
         self._conditions = None
         self._created = None
+        self._desired_generation = None
         self._memory_dump_request = None
+        self._observed_generation = None
         self._printable_status = None
         self._ready = None
         self._restore_in_progress = None
@@ -79,8 +85,12 @@ class V1VirtualMachineStatus(object):
           self.conditions = conditions
         if created is not None:
           self.created = created
+        if desired_generation is not None:
+          self.desired_generation = desired_generation
         if memory_dump_request is not None:
           self.memory_dump_request = memory_dump_request
+        if observed_generation is not None:
+          self.observed_generation = observed_generation
         if printable_status is not None:
           self.printable_status = printable_status
         if ready is not None:
@@ -145,6 +155,29 @@ class V1VirtualMachineStatus(object):
         self._created = created
 
     @property
+    def desired_generation(self):
+        """
+        Gets the desired_generation of this V1VirtualMachineStatus.
+        DesiredGeneration is the generation which is desired for the VMI. This will be used in comparisons with ObservedGeneration to understand when the VMI is out of sync. This will be changed at the same time as ObservedGeneration to remove errors which could occur if Generation is updated through an Update() before ObservedGeneration in Status.
+
+        :return: The desired_generation of this V1VirtualMachineStatus.
+        :rtype: int
+        """
+        return self._desired_generation
+
+    @desired_generation.setter
+    def desired_generation(self, desired_generation):
+        """
+        Sets the desired_generation of this V1VirtualMachineStatus.
+        DesiredGeneration is the generation which is desired for the VMI. This will be used in comparisons with ObservedGeneration to understand when the VMI is out of sync. This will be changed at the same time as ObservedGeneration to remove errors which could occur if Generation is updated through an Update() before ObservedGeneration in Status.
+
+        :param desired_generation: The desired_generation of this V1VirtualMachineStatus.
+        :type: int
+        """
+
+        self._desired_generation = desired_generation
+
+    @property
     def memory_dump_request(self):
         """
         Gets the memory_dump_request of this V1VirtualMachineStatus.
@@ -166,6 +199,29 @@ class V1VirtualMachineStatus(object):
         """
 
         self._memory_dump_request = memory_dump_request
+
+    @property
+    def observed_generation(self):
+        """
+        Gets the observed_generation of this V1VirtualMachineStatus.
+        ObservedGeneration is the generation observed by the vmi when started.
+
+        :return: The observed_generation of this V1VirtualMachineStatus.
+        :rtype: int
+        """
+        return self._observed_generation
+
+    @observed_generation.setter
+    def observed_generation(self, observed_generation):
+        """
+        Sets the observed_generation of this V1VirtualMachineStatus.
+        ObservedGeneration is the generation observed by the vmi when started.
+
+        :param observed_generation: The observed_generation of this V1VirtualMachineStatus.
+        :type: int
+        """
+
+        self._observed_generation = observed_generation
 
     @property
     def printable_status(self):

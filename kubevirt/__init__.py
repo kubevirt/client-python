@@ -68,6 +68,7 @@ from .models.k8s_io_apimachinery_pkg_runtime_raw_extension import K8sIoApimachin
 from .models.k8s_io_apimachinery_pkg_util_intstr_int_or_string import K8sIoApimachineryPkgUtilIntstrIntOrString
 from .models.v1_access_credential import V1AccessCredential
 from .models.v1_access_credential_secret_source import V1AccessCredentialSecretSource
+from .models.v1_add_interface_options import V1AddInterfaceOptions
 from .models.v1_add_volume_options import V1AddVolumeOptions
 from .models.v1_bios import V1BIOS
 from .models.v1_block_size import V1BlockSize
@@ -248,6 +249,7 @@ from .models.v1_virtual_machine_instance_replica_set_status import V1VirtualMach
 from .models.v1_virtual_machine_instance_spec import V1VirtualMachineInstanceSpec
 from .models.v1_virtual_machine_instance_status import V1VirtualMachineInstanceStatus
 from .models.v1_virtual_machine_instance_template_spec import V1VirtualMachineInstanceTemplateSpec
+from .models.v1_virtual_machine_interface_request import V1VirtualMachineInterfaceRequest
 from .models.v1_virtual_machine_list import V1VirtualMachineList
 from .models.v1_virtual_machine_memory_dump_request import V1VirtualMachineMemoryDumpRequest
 from .models.v1_virtual_machine_spec import V1VirtualMachineSpec

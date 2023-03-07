@@ -37,6 +37,7 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         'ip_addresses': 'list[str]',
         'mac': 'str',
         'name': 'str',
+        'pod_config_done': 'bool',
         'queue_count': 'int'
     }
 
@@ -47,10 +48,11 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         'ip_addresses': 'ipAddresses',
         'mac': 'mac',
         'name': 'name',
+        'pod_config_done': 'podConfigDone',
         'queue_count': 'queueCount'
     }
 
-    def __init__(self, info_source=None, interface_name=None, ip_address=None, ip_addresses=None, mac=None, name=None, queue_count=None):
+    def __init__(self, info_source=None, interface_name=None, ip_address=None, ip_addresses=None, mac=None, name=None, pod_config_done=None, queue_count=None):
         """
         V1VirtualMachineInstanceNetworkInterface - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         self._ip_addresses = None
         self._mac = None
         self._name = None
+        self._pod_config_done = None
         self._queue_count = None
 
         if info_source is not None:
@@ -75,6 +78,8 @@ class V1VirtualMachineInstanceNetworkInterface(object):
           self.mac = mac
         if name is not None:
           self.name = name
+        if pod_config_done is not None:
+          self.pod_config_done = pod_config_done
         if queue_count is not None:
           self.queue_count = queue_count
 
@@ -215,6 +220,29 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         """
 
         self._name = name
+
+    @property
+    def pod_config_done(self):
+        """
+        Gets the pod_config_done of this V1VirtualMachineInstanceNetworkInterface.
+        PodConfigDone specifies if the corresponding pod interface is properly configured by CNI
+
+        :return: The pod_config_done of this V1VirtualMachineInstanceNetworkInterface.
+        :rtype: bool
+        """
+        return self._pod_config_done
+
+    @pod_config_done.setter
+    def pod_config_done(self, pod_config_done):
+        """
+        Sets the pod_config_done of this V1VirtualMachineInstanceNetworkInterface.
+        PodConfigDone specifies if the corresponding pod interface is properly configured by CNI
+
+        :param pod_config_done: The pod_config_done of this V1VirtualMachineInstanceNetworkInterface.
+        :type: bool
+        """
+
+        self._pod_config_done = pod_config_done
 
     @property
     def queue_count(self):

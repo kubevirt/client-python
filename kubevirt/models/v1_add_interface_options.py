@@ -31,75 +31,75 @@ class V1AddInterfaceOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'interface_name': 'str',
-        'network_name': 'str'
+        'name': 'str',
+        'network_attachment_definition_name': 'str'
     }
 
     attribute_map = {
-        'interface_name': 'interfaceName',
-        'network_name': 'networkName'
+        'name': 'name',
+        'network_attachment_definition_name': 'networkAttachmentDefinitionName'
     }
 
-    def __init__(self, interface_name=None, network_name=None):
+    def __init__(self, name=None, network_attachment_definition_name=None):
         """
         V1AddInterfaceOptions - a model defined in Swagger
         """
 
-        self._interface_name = None
-        self._network_name = None
+        self._name = None
+        self._network_attachment_definition_name = None
 
-        self.interface_name = interface_name
-        self.network_name = network_name
-
-    @property
-    def interface_name(self):
-        """
-        Gets the interface_name of this V1AddInterfaceOptions.
-        InterfaceName indicates the logical name of the interface.
-
-        :return: The interface_name of this V1AddInterfaceOptions.
-        :rtype: str
-        """
-        return self._interface_name
-
-    @interface_name.setter
-    def interface_name(self, interface_name):
-        """
-        Sets the interface_name of this V1AddInterfaceOptions.
-        InterfaceName indicates the logical name of the interface.
-
-        :param interface_name: The interface_name of this V1AddInterfaceOptions.
-        :type: str
-        """
-        if interface_name is None:
-            raise ValueError("Invalid value for `interface_name`, must not be `None`")
-
-        self._interface_name = interface_name
+        self.name = name
+        self.network_attachment_definition_name = network_attachment_definition_name
 
     @property
-    def network_name(self):
+    def name(self):
         """
-        Gets the network_name of this V1AddInterfaceOptions.
-        NetworkName references a NetworkAttachmentDefinition CRD object. Format: <networkName>, <namespace>/<networkName>. If namespace is not specified, VMI namespace is assumed.
+        Gets the name of this V1AddInterfaceOptions.
+        Name indicates the logical name of the interface.
 
-        :return: The network_name of this V1AddInterfaceOptions.
+        :return: The name of this V1AddInterfaceOptions.
         :rtype: str
         """
-        return self._network_name
+        return self._name
 
-    @network_name.setter
-    def network_name(self, network_name):
+    @name.setter
+    def name(self, name):
         """
-        Sets the network_name of this V1AddInterfaceOptions.
-        NetworkName references a NetworkAttachmentDefinition CRD object. Format: <networkName>, <namespace>/<networkName>. If namespace is not specified, VMI namespace is assumed.
+        Sets the name of this V1AddInterfaceOptions.
+        Name indicates the logical name of the interface.
 
-        :param network_name: The network_name of this V1AddInterfaceOptions.
+        :param name: The name of this V1AddInterfaceOptions.
         :type: str
         """
-        if network_name is None:
-            raise ValueError("Invalid value for `network_name`, must not be `None`")
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")
 
-        self._network_name = network_name
+        self._name = name
+
+    @property
+    def network_attachment_definition_name(self):
+        """
+        Gets the network_attachment_definition_name of this V1AddInterfaceOptions.
+        NetworkAttachmentDefinitionName references a NetworkAttachmentDefinition CRD object. Format: <networkAttachmentDefinitionName>, <namespace>/<networkAttachmentDefinitionName>. If namespace is not specified, VMI namespace is assumed.
+
+        :return: The network_attachment_definition_name of this V1AddInterfaceOptions.
+        :rtype: str
+        """
+        return self._network_attachment_definition_name
+
+    @network_attachment_definition_name.setter
+    def network_attachment_definition_name(self, network_attachment_definition_name):
+        """
+        Sets the network_attachment_definition_name of this V1AddInterfaceOptions.
+        NetworkAttachmentDefinitionName references a NetworkAttachmentDefinition CRD object. Format: <networkAttachmentDefinitionName>, <namespace>/<networkAttachmentDefinitionName>. If namespace is not specified, VMI namespace is assumed.
+
+        :param network_attachment_definition_name: The network_attachment_definition_name of this V1AddInterfaceOptions.
+        :type: str
+        """
+        if network_attachment_definition_name is None:
+            raise ValueError("Invalid value for `network_attachment_definition_name`, must not be `None`")
+
+        self._network_attachment_definition_name = network_attachment_definition_name
 
     def to_dict(self):
         """

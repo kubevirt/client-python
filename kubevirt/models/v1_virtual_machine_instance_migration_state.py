@@ -48,6 +48,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'target_node': 'str',
         'target_node_address': 'str',
         'target_node_domain_detected': 'bool',
+        'target_node_domain_ready_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'target_node_topology': 'str',
         'target_pod': 'str'
     }
@@ -70,11 +71,12 @@ class V1VirtualMachineInstanceMigrationState(object):
         'target_node': 'targetNode',
         'target_node_address': 'targetNodeAddress',
         'target_node_domain_detected': 'targetNodeDomainDetected',
+        'target_node_domain_ready_timestamp': 'targetNodeDomainReadyTimestamp',
         'target_node_topology': 'targetNodeTopology',
         'target_pod': 'targetPod'
     }
 
-    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, migration_configuration=None, migration_policy_name=None, migration_uid=None, mode=None, source_node=None, start_timestamp=None, target_attachment_pod_uid=None, target_cpu_set=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_node_topology=None, target_pod=None):
+    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, migration_configuration=None, migration_policy_name=None, migration_uid=None, mode=None, source_node=None, start_timestamp=None, target_attachment_pod_uid=None, target_cpu_set=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_node_domain_ready_timestamp=None, target_node_topology=None, target_pod=None):
         """
         V1VirtualMachineInstanceMigrationState - a model defined in Swagger
         """
@@ -96,6 +98,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._target_node = None
         self._target_node_address = None
         self._target_node_domain_detected = None
+        self._target_node_domain_ready_timestamp = None
         self._target_node_topology = None
         self._target_pod = None
 
@@ -133,6 +136,8 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.target_node_address = target_node_address
         if target_node_domain_detected is not None:
           self.target_node_domain_detected = target_node_domain_detected
+        if target_node_domain_ready_timestamp is not None:
+          self.target_node_domain_ready_timestamp = target_node_domain_ready_timestamp
         if target_node_topology is not None:
           self.target_node_topology = target_node_topology
         if target_pod is not None:
@@ -528,6 +533,29 @@ class V1VirtualMachineInstanceMigrationState(object):
         """
 
         self._target_node_domain_detected = target_node_domain_detected
+
+    @property
+    def target_node_domain_ready_timestamp(self):
+        """
+        Gets the target_node_domain_ready_timestamp of this V1VirtualMachineInstanceMigrationState.
+        The timestamp at which the target node detects the domain is active
+
+        :return: The target_node_domain_ready_timestamp of this V1VirtualMachineInstanceMigrationState.
+        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        """
+        return self._target_node_domain_ready_timestamp
+
+    @target_node_domain_ready_timestamp.setter
+    def target_node_domain_ready_timestamp(self, target_node_domain_ready_timestamp):
+        """
+        Sets the target_node_domain_ready_timestamp of this V1VirtualMachineInstanceMigrationState.
+        The timestamp at which the target node detects the domain is active
+
+        :param target_node_domain_ready_timestamp: The target_node_domain_ready_timestamp of this V1VirtualMachineInstanceMigrationState.
+        :type: K8sIoApimachineryPkgApisMetaV1Time
+        """
+
+        self._target_node_domain_ready_timestamp = target_node_domain_ready_timestamp
 
     @property
     def target_node_topology(self):

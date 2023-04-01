@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **target_node** | **str** | The target node that the VMI is moving to | [optional] 
 **target_node_address** | **str** | The address of the target node to use for the migration | [optional] 
 **target_node_domain_detected** | **bool** | The Target Node has seen the Domain Start Event | [optional] 
+**target_node_domain_ready_timestamp** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) | The timestamp at which the target node detects the domain is active | [optional] 
 **target_node_topology** | **str** | If the VMI requires dedicated CPUs, this field will hold the numa topology on the target node | [optional] 
 **target_pod** | **str** | The target pod that the VMI is moving to | [optional] 
 

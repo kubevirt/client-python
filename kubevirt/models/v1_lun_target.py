@@ -32,26 +32,31 @@ class V1LunTarget(object):
     """
     swagger_types = {
         'bus': 'str',
-        'readonly': 'bool'
+        'readonly': 'bool',
+        'reservation': 'bool'
     }
 
     attribute_map = {
         'bus': 'bus',
-        'readonly': 'readonly'
+        'readonly': 'readonly',
+        'reservation': 'reservation'
     }
 
-    def __init__(self, bus=None, readonly=None):
+    def __init__(self, bus=None, readonly=None, reservation=None):
         """
         V1LunTarget - a model defined in Swagger
         """
 
         self._bus = None
         self._readonly = None
+        self._reservation = None
 
         if bus is not None:
           self.bus = bus
         if readonly is not None:
           self.readonly = readonly
+        if reservation is not None:
+          self.reservation = reservation
 
     @property
     def bus(self):
@@ -98,6 +103,29 @@ class V1LunTarget(object):
         """
 
         self._readonly = readonly
+
+    @property
+    def reservation(self):
+        """
+        Gets the reservation of this V1LunTarget.
+        Reservation indicates if the disk needs to support the persistent reservation for the SCSI disk
+
+        :return: The reservation of this V1LunTarget.
+        :rtype: bool
+        """
+        return self._reservation
+
+    @reservation.setter
+    def reservation(self, reservation):
+        """
+        Sets the reservation of this V1LunTarget.
+        Reservation indicates if the disk needs to support the persistent reservation for the SCSI disk
+
+        :param reservation: The reservation of this V1LunTarget.
+        :type: bool
+        """
+
+        self._reservation = reservation
 
     def to_dict(self):
         """

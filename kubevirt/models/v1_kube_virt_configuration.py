@@ -54,6 +54,7 @@ class V1KubeVirtConfiguration(object):
         'seccomp_configuration': 'V1SeccompConfiguration',
         'selinux_launcher_type': 'str',
         'smbios': 'V1SMBiosConfiguration',
+        'support_container_resources': 'list[V1SupportContainerResources]',
         'supported_guest_agent_versions': 'list[str]',
         'tls_configuration': 'V1TLSConfiguration',
         'virtual_machine_instances_per_node': 'int',
@@ -84,13 +85,14 @@ class V1KubeVirtConfiguration(object):
         'seccomp_configuration': 'seccompConfiguration',
         'selinux_launcher_type': 'selinuxLauncherType',
         'smbios': 'smbios',
+        'support_container_resources': 'supportContainerResources',
         'supported_guest_agent_versions': 'supportedGuestAgentVersions',
         'tls_configuration': 'tlsConfiguration',
         'virtual_machine_instances_per_node': 'virtualMachineInstancesPerNode',
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, webhook_configuration=None):
+    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -118,6 +120,7 @@ class V1KubeVirtConfiguration(object):
         self._seccomp_configuration = None
         self._selinux_launcher_type = None
         self._smbios = None
+        self._support_container_resources = None
         self._supported_guest_agent_versions = None
         self._tls_configuration = None
         self._virtual_machine_instances_per_node = None
@@ -169,6 +172,8 @@ class V1KubeVirtConfiguration(object):
           self.selinux_launcher_type = selinux_launcher_type
         if smbios is not None:
           self.smbios = smbios
+        if support_container_resources is not None:
+          self.support_container_resources = support_container_resources
         if supported_guest_agent_versions is not None:
           self.supported_guest_agent_versions = supported_guest_agent_versions
         if tls_configuration is not None:
@@ -664,6 +669,29 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._smbios = smbios
+
+    @property
+    def support_container_resources(self):
+        """
+        Gets the support_container_resources of this V1KubeVirtConfiguration.
+        SupportContainerResources specifies the resource requirements for various types of supporting containers such as container disks/virtiofs/sidecars and hotplug attachment pods. If omitted a sensible default will be supplied.
+
+        :return: The support_container_resources of this V1KubeVirtConfiguration.
+        :rtype: list[V1SupportContainerResources]
+        """
+        return self._support_container_resources
+
+    @support_container_resources.setter
+    def support_container_resources(self, support_container_resources):
+        """
+        Sets the support_container_resources of this V1KubeVirtConfiguration.
+        SupportContainerResources specifies the resource requirements for various types of supporting containers such as container disks/virtiofs/sidecars and hotplug attachment pods. If omitted a sensible default will be supplied.
+
+        :param support_container_resources: The support_container_resources of this V1KubeVirtConfiguration.
+        :type: list[V1SupportContainerResources]
+        """
+
+        self._support_container_resources = support_container_resources
 
     @property
     def supported_guest_agent_versions(self):

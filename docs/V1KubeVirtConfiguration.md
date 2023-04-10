@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **seccomp_configuration** | [**V1SeccompConfiguration**](V1SeccompConfiguration.md) |  | [optional] 
 **selinux_launcher_type** | **str** |  | [optional] 
 **smbios** | [**V1SMBiosConfiguration**](V1SMBiosConfiguration.md) |  | [optional] 
+**support_container_resources** | [**list[V1SupportContainerResources]**](V1SupportContainerResources.md) | SupportContainerResources specifies the resource requirements for various types of supporting containers such as container disks/virtiofs/sidecars and hotplug attachment pods. If omitted a sensible default will be supplied. | [optional] 
 **supported_guest_agent_versions** | **list[str]** | deprecated | [optional] 
 **tls_configuration** | [**V1TLSConfiguration**](V1TLSConfiguration.md) |  | [optional] 
 **virtual_machine_instances_per_node** | **int** |  | [optional] 

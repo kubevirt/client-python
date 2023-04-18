@@ -447,9 +447,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_func7(self):
+    def test_func6(self):
         """
-        Test case for func7
+        Test case for func6
 
         
         """
@@ -1295,6 +1295,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_get_sub_api_group(self):
+        """
+        Test case for v1_get_sub_api_group
+
+        
+        """
+        pass
+
     def test_v1_guestfs(self):
         """
         Test case for v1_guestfs
@@ -1370,14 +1378,6 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1_stop(self):
         """
         Test case for v1_stop
-
-        
-        """
-        pass
-
-    def test_v1_test(self):
-        """
-        Test case for v1_test
 
         
         """
@@ -1479,14 +1479,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_v1alpha3_get_sub_api_group(self):
-        """
-        Test case for v1alpha3_get_sub_api_group
-
-        
-        """
-        pass
-
     def test_v1alpha3_guestfs(self):
         """
         Test case for v1alpha3_guestfs
@@ -1562,14 +1554,6 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3_stop(self):
         """
         Test case for v1alpha3_stop
-
-        
-        """
-        pass
-
-    def test_v1alpha3_test(self):
-        """
-        Test case for v1alpha3_test
 
         
         """

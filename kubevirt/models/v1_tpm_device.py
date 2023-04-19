@@ -31,19 +31,45 @@ class V1TPMDevice(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        
+        'persistent': 'bool'
     }
 
     attribute_map = {
-        
+        'persistent': 'persistent'
     }
 
-    def __init__(self):
+    def __init__(self, persistent=None):
         """
         V1TPMDevice - a model defined in Swagger
         """
 
+        self._persistent = None
 
+        if persistent is not None:
+          self.persistent = persistent
+
+    @property
+    def persistent(self):
+        """
+        Gets the persistent of this V1TPMDevice.
+        Persistent indicates the state of the TPM device should be kept accross reboots Defaults to false
+
+        :return: The persistent of this V1TPMDevice.
+        :rtype: bool
+        """
+        return self._persistent
+
+    @persistent.setter
+    def persistent(self, persistent):
+        """
+        Sets the persistent of this V1TPMDevice.
+        Persistent indicates the state of the TPM device should be kept accross reboots Defaults to false
+
+        :param persistent: The persistent of this V1TPMDevice.
+        :type: bool
+        """
+
+        self._persistent = persistent
 
     def to_dict(self):
         """

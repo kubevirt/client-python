@@ -33,6 +33,7 @@ class V1VirtualMachineInstanceSpec(object):
     swagger_types = {
         'access_credentials': 'list[V1AccessCredential]',
         'affinity': 'K8sIoApiCoreV1Affinity',
+        'architecture': 'str',
         'dns_config': 'K8sIoApiCoreV1PodDNSConfig',
         'dns_policy': 'str',
         'domain': 'V1DomainSpec',
@@ -55,6 +56,7 @@ class V1VirtualMachineInstanceSpec(object):
     attribute_map = {
         'access_credentials': 'accessCredentials',
         'affinity': 'affinity',
+        'architecture': 'architecture',
         'dns_config': 'dnsConfig',
         'dns_policy': 'dnsPolicy',
         'domain': 'domain',
@@ -74,13 +76,14 @@ class V1VirtualMachineInstanceSpec(object):
         'volumes': 'volumes'
     }
 
-    def __init__(self, access_credentials=None, affinity=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, scheduler_name=None, start_strategy=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, topology_spread_constraints=None, volumes=None):
+    def __init__(self, access_credentials=None, affinity=None, architecture=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, scheduler_name=None, start_strategy=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, topology_spread_constraints=None, volumes=None):
         """
         V1VirtualMachineInstanceSpec - a model defined in Swagger
         """
 
         self._access_credentials = None
         self._affinity = None
+        self._architecture = None
         self._dns_config = None
         self._dns_policy = None
         self._domain = None
@@ -103,6 +106,8 @@ class V1VirtualMachineInstanceSpec(object):
           self.access_credentials = access_credentials
         if affinity is not None:
           self.affinity = affinity
+        if architecture is not None:
+          self.architecture = architecture
         if dns_config is not None:
           self.dns_config = dns_config
         if dns_policy is not None:
@@ -182,6 +187,29 @@ class V1VirtualMachineInstanceSpec(object):
         """
 
         self._affinity = affinity
+
+    @property
+    def architecture(self):
+        """
+        Gets the architecture of this V1VirtualMachineInstanceSpec.
+        Specifies the architecture of the vm guest you are attempting to run. Defaults to the compiled architecture of the KubeVirt components
+
+        :return: The architecture of this V1VirtualMachineInstanceSpec.
+        :rtype: str
+        """
+        return self._architecture
+
+    @architecture.setter
+    def architecture(self, architecture):
+        """
+        Sets the architecture of this V1VirtualMachineInstanceSpec.
+        Specifies the architecture of the vm guest you are attempting to run. Defaults to the compiled architecture of the KubeVirt components
+
+        :param architecture: The architecture of this V1VirtualMachineInstanceSpec.
+        :type: str
+        """
+
+        self._architecture = architecture
 
     @property
     def dns_config(self):

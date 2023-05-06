@@ -33,6 +33,7 @@ class V1KubeVirtConfiguration(object):
     swagger_types = {
         'additional_guest_memory_overhead_ratio': 'str',
         'api_configuration': 'V1ReloadableComponentConfiguration',
+        'architecture_configuration': 'V1ArchConfiguration',
         'controller_configuration': 'V1ReloadableComponentConfiguration',
         'cpu_model': 'str',
         'cpu_request': 'K8sIoApimachineryPkgApiResourceQuantity',
@@ -65,6 +66,7 @@ class V1KubeVirtConfiguration(object):
     attribute_map = {
         'additional_guest_memory_overhead_ratio': 'additionalGuestMemoryOverheadRatio',
         'api_configuration': 'apiConfiguration',
+        'architecture_configuration': 'architectureConfiguration',
         'controller_configuration': 'controllerConfiguration',
         'cpu_model': 'cpuModel',
         'cpu_request': 'cpuRequest',
@@ -94,13 +96,14 @@ class V1KubeVirtConfiguration(object):
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, vm_state_storage_class=None, webhook_configuration=None):
+    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, vm_state_storage_class=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
 
         self._additional_guest_memory_overhead_ratio = None
         self._api_configuration = None
+        self._architecture_configuration = None
         self._controller_configuration = None
         self._cpu_model = None
         self._cpu_request = None
@@ -133,6 +136,8 @@ class V1KubeVirtConfiguration(object):
           self.additional_guest_memory_overhead_ratio = additional_guest_memory_overhead_ratio
         if api_configuration is not None:
           self.api_configuration = api_configuration
+        if architecture_configuration is not None:
+          self.architecture_configuration = architecture_configuration
         if controller_configuration is not None:
           self.controller_configuration = controller_configuration
         if cpu_model is not None:
@@ -231,6 +236,27 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._api_configuration = api_configuration
+
+    @property
+    def architecture_configuration(self):
+        """
+        Gets the architecture_configuration of this V1KubeVirtConfiguration.
+
+        :return: The architecture_configuration of this V1KubeVirtConfiguration.
+        :rtype: V1ArchConfiguration
+        """
+        return self._architecture_configuration
+
+    @architecture_configuration.setter
+    def architecture_configuration(self, architecture_configuration):
+        """
+        Sets the architecture_configuration of this V1KubeVirtConfiguration.
+
+        :param architecture_configuration: The architecture_configuration of this V1KubeVirtConfiguration.
+        :type: V1ArchConfiguration
+        """
+
+        self._architecture_configuration = architecture_configuration
 
     @property
     def controller_configuration(self):

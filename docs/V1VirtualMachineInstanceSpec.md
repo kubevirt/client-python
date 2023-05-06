@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **access_credentials** | [**list[V1AccessCredential]**](V1AccessCredential.md) | Specifies a set of public keys to inject into the vm guest | [optional] 
 **affinity** | [**K8sIoApiCoreV1Affinity**](K8sIoApiCoreV1Affinity.md) | If affinity is specifies, obey all the affinity rules | [optional] 
+**architecture** | **str** | Specifies the architecture of the vm guest you are attempting to run. Defaults to the compiled architecture of the KubeVirt components | [optional] 
 **dns_config** | [**K8sIoApiCoreV1PodDNSConfig**](K8sIoApiCoreV1PodDNSConfig.md) | Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy. | [optional] 
 **dns_policy** | **str** | Set DNS policy for the pod. Defaults to \&quot;ClusterFirst\&quot;. Valid values are &#39;ClusterFirstWithHostNet&#39;, &#39;ClusterFirst&#39;, &#39;Default&#39; or &#39;None&#39;. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to &#39;ClusterFirstWithHostNet&#39;. | [optional] 
 **domain** | [**V1DomainSpec**](V1DomainSpec.md) | Specification of the desired behavior of the VirtualMachineInstance on the host. | 

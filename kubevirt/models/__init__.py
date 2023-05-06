@@ -70,6 +70,8 @@ from .v1_access_credential import V1AccessCredential
 from .v1_access_credential_secret_source import V1AccessCredentialSecretSource
 from .v1_add_interface_options import V1AddInterfaceOptions
 from .v1_add_volume_options import V1AddVolumeOptions
+from .v1_arch_configuration import V1ArchConfiguration
+from .v1_arch_specific_configuration import V1ArchSpecificConfiguration
 from .v1_bios import V1BIOS
 from .v1_block_size import V1BlockSize
 from .v1_bootloader import V1Bootloader

@@ -32,6 +32,7 @@ class V1KubeVirtStatus(object):
     """
     swagger_types = {
         'conditions': 'list[V1KubeVirtCondition]',
+        'default_architecture': 'str',
         'generations': 'list[V1GenerationStatus]',
         'observed_deployment_config': 'str',
         'observed_deployment_id': 'str',
@@ -49,6 +50,7 @@ class V1KubeVirtStatus(object):
 
     attribute_map = {
         'conditions': 'conditions',
+        'default_architecture': 'defaultArchitecture',
         'generations': 'generations',
         'observed_deployment_config': 'observedDeploymentConfig',
         'observed_deployment_id': 'observedDeploymentID',
@@ -64,12 +66,13 @@ class V1KubeVirtStatus(object):
         'target_kube_virt_version': 'targetKubeVirtVersion'
     }
 
-    def __init__(self, conditions=None, generations=None, observed_deployment_config=None, observed_deployment_id=None, observed_generation=None, observed_kube_virt_registry=None, observed_kube_virt_version=None, operator_version=None, outdated_virtual_machine_instance_workloads=None, phase=None, target_deployment_config=None, target_deployment_id=None, target_kube_virt_registry=None, target_kube_virt_version=None):
+    def __init__(self, conditions=None, default_architecture=None, generations=None, observed_deployment_config=None, observed_deployment_id=None, observed_generation=None, observed_kube_virt_registry=None, observed_kube_virt_version=None, operator_version=None, outdated_virtual_machine_instance_workloads=None, phase=None, target_deployment_config=None, target_deployment_id=None, target_kube_virt_registry=None, target_kube_virt_version=None):
         """
         V1KubeVirtStatus - a model defined in Swagger
         """
 
         self._conditions = None
+        self._default_architecture = None
         self._generations = None
         self._observed_deployment_config = None
         self._observed_deployment_id = None
@@ -86,6 +89,8 @@ class V1KubeVirtStatus(object):
 
         if conditions is not None:
           self.conditions = conditions
+        if default_architecture is not None:
+          self.default_architecture = default_architecture
         if generations is not None:
           self.generations = generations
         if observed_deployment_config is not None:
@@ -133,6 +138,27 @@ class V1KubeVirtStatus(object):
         """
 
         self._conditions = conditions
+
+    @property
+    def default_architecture(self):
+        """
+        Gets the default_architecture of this V1KubeVirtStatus.
+
+        :return: The default_architecture of this V1KubeVirtStatus.
+        :rtype: str
+        """
+        return self._default_architecture
+
+    @default_architecture.setter
+    def default_architecture(self, default_architecture):
+        """
+        Sets the default_architecture of this V1KubeVirtStatus.
+
+        :param default_architecture: The default_architecture of this V1KubeVirtStatus.
+        :type: str
+        """
+
+        self._default_architecture = default_architecture
 
     @property
     def generations(self):

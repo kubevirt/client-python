@@ -42,7 +42,7 @@ class V1PciHostDevice(object):
         'resource_name': 'resourceName'
     }
 
-    def __init__(self, external_resource_provider=None, pci_vendor_selector=None, resource_name=None):
+    def __init__(self, external_resource_provider=None, pci_vendor_selector='', resource_name=''):
         """
         V1PciHostDevice - a model defined in Swagger
         """

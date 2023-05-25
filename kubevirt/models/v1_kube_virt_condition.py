@@ -44,7 +44,7 @@ class V1KubeVirtCondition(object):
         'type': 'type'
     }
 
-    def __init__(self, message=None, reason=None, status=None, type=None):
+    def __init__(self, message=None, reason=None, status='', type=''):
         """
         V1KubeVirtCondition - a model defined in Swagger
         """

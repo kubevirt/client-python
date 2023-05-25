@@ -40,7 +40,7 @@ class V1GuestAgentCommandInfo(object):
         'name': 'name'
     }
 
-    def __init__(self, enabled=None, name=None):
+    def __init__(self, enabled=None, name=''):
         """
         V1GuestAgentCommandInfo - a model defined in Swagger
         """

@@ -40,7 +40,7 @@ class V1beta1DataVolumeSourcePVC(object):
         'namespace': 'namespace'
     }
 
-    def __init__(self, name=None, namespace=None):
+    def __init__(self, name='', namespace=''):
         """
         V1beta1DataVolumeSourcePVC - a model defined in Swagger
         """

@@ -40,7 +40,7 @@ class V1CustomBlockSize(object):
         'physical': 'physical'
     }
 
-    def __init__(self, logical=None, physical=None):
+    def __init__(self, logical=0, physical=0):
         """
         V1CustomBlockSize - a model defined in Swagger
         """

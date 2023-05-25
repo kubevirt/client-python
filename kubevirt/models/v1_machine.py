@@ -38,7 +38,7 @@ class V1Machine(object):
         'type': 'type'
     }
 
-    def __init__(self, type=None):
+    def __init__(self, type=''):
         """
         V1Machine - a model defined in Swagger
         """

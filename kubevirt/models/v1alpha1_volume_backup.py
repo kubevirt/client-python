@@ -42,7 +42,7 @@ class V1alpha1VolumeBackup(object):
         'volume_snapshot_name': 'volumeSnapshotName'
     }
 
-    def __init__(self, persistent_volume_claim=None, volume_name=None, volume_snapshot_name=None):
+    def __init__(self, persistent_volume_claim=None, volume_name='', volume_snapshot_name=None):
         """
         V1alpha1VolumeBackup - a model defined in Swagger
         """

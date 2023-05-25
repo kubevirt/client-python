@@ -44,7 +44,7 @@ class V1HostDisk(object):
         'type': 'type'
     }
 
-    def __init__(self, capacity=None, path=None, shared=None, type=None):
+    def __init__(self, capacity=None, path='', shared=None, type=''):
         """
         V1HostDisk - a model defined in Swagger
         """

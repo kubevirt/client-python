@@ -40,7 +40,7 @@ class V1SoundDevice(object):
         'name': 'name'
     }
 
-    def __init__(self, model=None, name=None):
+    def __init__(self, model=None, name=''):
         """
         V1SoundDevice - a model defined in Swagger
         """

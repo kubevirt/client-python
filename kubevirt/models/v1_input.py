@@ -42,7 +42,7 @@ class V1Input(object):
         'type': 'type'
     }
 
-    def __init__(self, bus=None, name=None, type=None):
+    def __init__(self, bus=None, name='', type=''):
         """
         V1Input - a model defined in Swagger
         """

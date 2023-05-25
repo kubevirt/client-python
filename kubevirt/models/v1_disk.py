@@ -60,7 +60,7 @@ class V1Disk(object):
         'tag': 'tag'
     }
 
-    def __init__(self, block_size=None, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, io=None, lun=None, name=None, serial=None, shareable=None, tag=None):
+    def __init__(self, block_size=None, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, io=None, lun=None, name='', serial=None, shareable=None, tag=None):
         """
         V1Disk - a model defined in Swagger
         """

@@ -197,7 +197,7 @@ class V1beta1StorageSpec(object):
     def volume_mode(self):
         """
         Gets the volume_mode of this V1beta1StorageSpec.
-        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.
+        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.  Possible enum values:  - `\"Block\"` means the volume will not be formatted with a filesystem and will remain a raw block device.  - `\"Filesystem\"` means the volume will be or is formatted with a filesystem.
 
         :return: The volume_mode of this V1beta1StorageSpec.
         :rtype: str
@@ -208,11 +208,17 @@ class V1beta1StorageSpec(object):
     def volume_mode(self, volume_mode):
         """
         Sets the volume_mode of this V1beta1StorageSpec.
-        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.
+        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.  Possible enum values:  - `\"Block\"` means the volume will not be formatted with a filesystem and will remain a raw block device.  - `\"Filesystem\"` means the volume will be or is formatted with a filesystem.
 
         :param volume_mode: The volume_mode of this V1beta1StorageSpec.
         :type: str
         """
+        allowed_values = ["Block", "Filesystem"]
+        if volume_mode not in allowed_values:
+            raise ValueError(
+                "Invalid value for `volume_mode` ({0}), must be one of {1}"
+                .format(volume_mode, allowed_values)
+            )
 
         self._volume_mode = volume_mode
 

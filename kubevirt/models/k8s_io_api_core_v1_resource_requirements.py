@@ -31,27 +31,55 @@ class K8sIoApiCoreV1ResourceRequirements(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'claims': 'list[K8sIoApiCoreV1ResourceClaim]',
         'limits': 'dict(str, K8sIoApimachineryPkgApiResourceQuantity)',
         'requests': 'dict(str, K8sIoApimachineryPkgApiResourceQuantity)'
     }
 
     attribute_map = {
+        'claims': 'claims',
         'limits': 'limits',
         'requests': 'requests'
     }
 
-    def __init__(self, limits=None, requests=None):
+    def __init__(self, claims=None, limits=None, requests=None):
         """
         K8sIoApiCoreV1ResourceRequirements - a model defined in Swagger
         """
 
+        self._claims = None
         self._limits = None
         self._requests = None
 
+        if claims is not None:
+          self.claims = claims
         if limits is not None:
           self.limits = limits
         if requests is not None:
           self.requests = requests
+
+    @property
+    def claims(self):
+        """
+        Gets the claims of this K8sIoApiCoreV1ResourceRequirements.
+        Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.  This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.  This field is immutable. It can only be set for containers.
+
+        :return: The claims of this K8sIoApiCoreV1ResourceRequirements.
+        :rtype: list[K8sIoApiCoreV1ResourceClaim]
+        """
+        return self._claims
+
+    @claims.setter
+    def claims(self, claims):
+        """
+        Sets the claims of this K8sIoApiCoreV1ResourceRequirements.
+        Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.  This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.  This field is immutable. It can only be set for containers.
+
+        :param claims: The claims of this K8sIoApiCoreV1ResourceRequirements.
+        :type: list[K8sIoApiCoreV1ResourceClaim]
+        """
+
+        self._claims = claims
 
     @property
     def limits(self):

@@ -72,7 +72,7 @@ class K8sIoApiCoreV1Toleration(object):
     def effect(self):
         """
         Gets the effect of this K8sIoApiCoreV1Toleration.
-        Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.
+        Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.  Possible enum values:  - `\"NoExecute\"` Evict any already-running pods that do not tolerate the taint. Currently enforced by NodeController.  - `\"NoSchedule\"` Do not allow new pods to schedule onto the node unless they tolerate the taint, but allow all pods submitted to Kubelet without going through the scheduler to start, and allow all already-running pods to continue running. Enforced by the scheduler.  - `\"PreferNoSchedule\"` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
 
         :return: The effect of this K8sIoApiCoreV1Toleration.
         :rtype: str
@@ -83,11 +83,17 @@ class K8sIoApiCoreV1Toleration(object):
     def effect(self, effect):
         """
         Sets the effect of this K8sIoApiCoreV1Toleration.
-        Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.
+        Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.  Possible enum values:  - `\"NoExecute\"` Evict any already-running pods that do not tolerate the taint. Currently enforced by NodeController.  - `\"NoSchedule\"` Do not allow new pods to schedule onto the node unless they tolerate the taint, but allow all pods submitted to Kubelet without going through the scheduler to start, and allow all already-running pods to continue running. Enforced by the scheduler.  - `\"PreferNoSchedule\"` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
 
         :param effect: The effect of this K8sIoApiCoreV1Toleration.
         :type: str
         """
+        allowed_values = ["NoExecute", "NoSchedule", "PreferNoSchedule"]
+        if effect not in allowed_values:
+            raise ValueError(
+                "Invalid value for `effect` ({0}), must be one of {1}"
+                .format(effect, allowed_values)
+            )
 
         self._effect = effect
 
@@ -118,7 +124,7 @@ class K8sIoApiCoreV1Toleration(object):
     def operator(self):
         """
         Gets the operator of this K8sIoApiCoreV1Toleration.
-        Operator represents a key's relationship to the value. Valid operators are Exists and Equal. Defaults to Equal. Exists is equivalent to wildcard for value, so that a pod can tolerate all taints of a particular category.
+        Operator represents a key's relationship to the value. Valid operators are Exists and Equal. Defaults to Equal. Exists is equivalent to wildcard for value, so that a pod can tolerate all taints of a particular category.  Possible enum values:  - `\"Equal\"`  - `\"Exists\"`
 
         :return: The operator of this K8sIoApiCoreV1Toleration.
         :rtype: str
@@ -129,11 +135,17 @@ class K8sIoApiCoreV1Toleration(object):
     def operator(self, operator):
         """
         Sets the operator of this K8sIoApiCoreV1Toleration.
-        Operator represents a key's relationship to the value. Valid operators are Exists and Equal. Defaults to Equal. Exists is equivalent to wildcard for value, so that a pod can tolerate all taints of a particular category.
+        Operator represents a key's relationship to the value. Valid operators are Exists and Equal. Defaults to Equal. Exists is equivalent to wildcard for value, so that a pod can tolerate all taints of a particular category.  Possible enum values:  - `\"Equal\"`  - `\"Exists\"`
 
         :param operator: The operator of this K8sIoApiCoreV1Toleration.
         :type: str
         """
+        allowed_values = ["Equal", "Exists"]
+        if operator not in allowed_values:
+            raise ValueError(
+                "Invalid value for `operator` ({0}), must be one of {1}"
+                .format(operator, allowed_values)
+            )
 
         self._operator = operator
 

@@ -38,7 +38,7 @@ class V1AccessCredentialSecretSource(object):
         'secret_name': 'secretName'
     }
 
-    def __init__(self, secret_name=None):
+    def __init__(self, secret_name=''):
         """
         V1AccessCredentialSecretSource - a model defined in Swagger
         """

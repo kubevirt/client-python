@@ -40,7 +40,7 @@ class V1DHCPPrivateOptions(object):
         'value': 'value'
     }
 
-    def __init__(self, option=None, value=None):
+    def __init__(self, option=0, value=''):
         """
         V1DHCPPrivateOptions - a model defined in Swagger
         """

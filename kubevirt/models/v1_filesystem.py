@@ -40,7 +40,7 @@ class V1Filesystem(object):
         'virtiofs': 'virtiofs'
     }
 
-    def __init__(self, name=None, virtiofs=None):
+    def __init__(self, name='', virtiofs=None):
         """
         V1Filesystem - a model defined in Swagger
         """

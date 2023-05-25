@@ -44,7 +44,7 @@ class V1VirtualMachineInstanceCondition(object):
         'type': 'type'
     }
 
-    def __init__(self, message=None, reason=None, status=None, type=None):
+    def __init__(self, message=None, reason=None, status='', type=''):
         """
         V1VirtualMachineInstanceCondition - a model defined in Swagger
         """

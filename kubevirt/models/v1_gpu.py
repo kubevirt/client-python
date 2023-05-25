@@ -44,7 +44,7 @@ class V1GPU(object):
         'virtual_gpu_options': 'virtualGPUOptions'
     }
 
-    def __init__(self, device_name=None, name=None, tag=None, virtual_gpu_options=None):
+    def __init__(self, device_name='', name='', tag=None, virtual_gpu_options=None):
         """
         V1GPU - a model defined in Swagger
         """

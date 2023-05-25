@@ -40,7 +40,7 @@ class V1AddInterfaceOptions(object):
         'network_attachment_definition_name': 'networkAttachmentDefinitionName'
     }
 
-    def __init__(self, name=None, network_attachment_definition_name=None):
+    def __init__(self, name='', network_attachment_definition_name=''):
         """
         V1AddInterfaceOptions - a model defined in Swagger
         """

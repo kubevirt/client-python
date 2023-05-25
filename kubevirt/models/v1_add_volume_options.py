@@ -44,7 +44,7 @@ class V1AddVolumeOptions(object):
         'volume_source': 'volumeSource'
     }
 
-    def __init__(self, disk=None, dry_run=None, name=None, volume_source=None):
+    def __init__(self, disk=None, dry_run=None, name='', volume_source=None):
         """
         V1AddVolumeOptions - a model defined in Swagger
         """

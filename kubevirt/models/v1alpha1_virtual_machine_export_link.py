@@ -42,7 +42,7 @@ class V1alpha1VirtualMachineExportLink(object):
         'volumes': 'volumes'
     }
 
-    def __init__(self, cert=None, manifests=None, volumes=None):
+    def __init__(self, cert='', manifests=None, volumes=None):
         """
         V1alpha1VirtualMachineExportLink - a model defined in Swagger
         """

@@ -40,7 +40,7 @@ class K8sIoApiCoreV1WeightedPodAffinityTerm(object):
         'weight': 'weight'
     }
 
-    def __init__(self, pod_affinity_term=None, weight=None):
+    def __init__(self, pod_affinity_term=None, weight=0):
         """
         K8sIoApiCoreV1WeightedPodAffinityTerm - a model defined in Swagger
         """

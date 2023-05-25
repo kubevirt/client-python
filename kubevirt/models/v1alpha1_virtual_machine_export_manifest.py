@@ -40,7 +40,7 @@ class V1alpha1VirtualMachineExportManifest(object):
         'url': 'url'
     }
 
-    def __init__(self, type=None, url=None):
+    def __init__(self, type='', url=''):
         """
         V1alpha1VirtualMachineExportManifest - a model defined in Swagger
         """

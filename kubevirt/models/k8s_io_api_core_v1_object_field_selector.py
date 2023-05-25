@@ -40,7 +40,7 @@ class K8sIoApiCoreV1ObjectFieldSelector(object):
         'field_path': 'fieldPath'
     }
 
-    def __init__(self, api_version=None, field_path=None):
+    def __init__(self, api_version=None, field_path=''):
         """
         K8sIoApiCoreV1ObjectFieldSelector - a model defined in Swagger
         """

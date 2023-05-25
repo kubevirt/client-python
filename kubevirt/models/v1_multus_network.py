@@ -40,7 +40,7 @@ class V1MultusNetwork(object):
         'network_name': 'networkName'
     }
 
-    def __init__(self, default=None, network_name=None):
+    def __init__(self, default=None, network_name=''):
         """
         V1MultusNetwork - a model defined in Swagger
         """

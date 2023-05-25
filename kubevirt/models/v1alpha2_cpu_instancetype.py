@@ -48,7 +48,7 @@ class V1alpha2CPUInstancetype(object):
         'realtime': 'realtime'
     }
 
-    def __init__(self, dedicated_cpu_placement=None, guest=None, isolate_emulator_thread=None, model=None, numa=None, realtime=None):
+    def __init__(self, dedicated_cpu_placement=None, guest=0, isolate_emulator_thread=None, model=None, numa=None, realtime=None):
         """
         V1alpha2CPUInstancetype - a model defined in Swagger
         """

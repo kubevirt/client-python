@@ -80,7 +80,7 @@ class V1VirtualMachineInstanceStatus(object):
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, vsockcid=None, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, machine=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=None, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
+    def __init__(self, vsockcid=None, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, machine=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -502,7 +502,7 @@ class V1VirtualMachineInstanceStatus(object):
     def qos_class(self):
         """
         Gets the qos_class of this V1VirtualMachineInstanceStatus.
-        The Quality of Service (QOS) classification assigned to the virtual machine instance based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md
+        The Quality of Service (QOS) classification assigned to the virtual machine instance based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md  Possible enum values:  - `\"BestEffort\"` is the BestEffort qos class.  - `\"Burstable\"` is the Burstable qos class.  - `\"Guaranteed\"` is the Guaranteed qos class.
 
         :return: The qos_class of this V1VirtualMachineInstanceStatus.
         :rtype: str
@@ -513,11 +513,17 @@ class V1VirtualMachineInstanceStatus(object):
     def qos_class(self, qos_class):
         """
         Sets the qos_class of this V1VirtualMachineInstanceStatus.
-        The Quality of Service (QOS) classification assigned to the virtual machine instance based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md
+        The Quality of Service (QOS) classification assigned to the virtual machine instance based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md  Possible enum values:  - `\"BestEffort\"` is the BestEffort qos class.  - `\"Burstable\"` is the Burstable qos class.  - `\"Guaranteed\"` is the Guaranteed qos class.
 
         :param qos_class: The qos_class of this V1VirtualMachineInstanceStatus.
         :type: str
         """
+        allowed_values = ["BestEffort", "Burstable", "Guaranteed"]
+        if qos_class not in allowed_values:
+            raise ValueError(
+                "Invalid value for `qos_class` ({0}), must be one of {1}"
+                .format(qos_class, allowed_values)
+            )
 
         self._qos_class = qos_class
 

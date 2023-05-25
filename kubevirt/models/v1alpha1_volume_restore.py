@@ -44,7 +44,7 @@ class V1alpha1VolumeRestore(object):
         'volume_snapshot_name': 'volumeSnapshotName'
     }
 
-    def __init__(self, data_volume_name=None, persistent_volume_claim=None, volume_name=None, volume_snapshot_name=None):
+    def __init__(self, data_volume_name=None, persistent_volume_claim='', volume_name='', volume_snapshot_name=''):
         """
         V1alpha1VolumeRestore - a model defined in Swagger
         """

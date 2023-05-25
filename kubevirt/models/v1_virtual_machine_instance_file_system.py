@@ -46,7 +46,7 @@ class V1VirtualMachineInstanceFileSystem(object):
         'used_bytes': 'usedBytes'
     }
 
-    def __init__(self, disk_name=None, file_system_type=None, mount_point=None, total_bytes=None, used_bytes=None):
+    def __init__(self, disk_name='', file_system_type='', mount_point='', total_bytes=0, used_bytes=0):
         """
         V1VirtualMachineInstanceFileSystem - a model defined in Swagger
         """

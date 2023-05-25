@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cert** | **str** | Cert is the public CA certificate base64 encoded | 
+**cert** | **str** | Cert is the public CA certificate base64 encoded | [default to '']
 **manifests** | [**list[V1alpha1VirtualMachineExportManifest]**](V1alpha1VirtualMachineExportManifest.md) | Manifests is a list of available manifests for the export | [optional] 
 **volumes** | [**list[V1alpha1VirtualMachineExportVolume]**](V1alpha1VirtualMachineExportVolume.md) | Volumes is a list of available volumes to export | [optional] 
 

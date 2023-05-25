@@ -40,7 +40,7 @@ class V1CPUFeature(object):
         'policy': 'policy'
     }
 
-    def __init__(self, name=None, policy=None):
+    def __init__(self, name='', policy=None):
         """
         V1CPUFeature - a model defined in Swagger
         """

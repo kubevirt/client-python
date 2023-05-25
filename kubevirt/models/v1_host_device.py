@@ -42,7 +42,7 @@ class V1HostDevice(object):
         'tag': 'tag'
     }
 
-    def __init__(self, device_name=None, name=None, tag=None):
+    def __init__(self, device_name='', name='', tag=None):
         """
         V1HostDevice - a model defined in Swagger
         """

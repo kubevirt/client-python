@@ -42,7 +42,7 @@ class K8sIoApiCoreV1ResourceFieldSelector(object):
         'resource': 'resource'
     }
 
-    def __init__(self, container_name=None, divisor=None, resource=None):
+    def __init__(self, container_name=None, divisor=None, resource=''):
         """
         K8sIoApiCoreV1ResourceFieldSelector - a model defined in Swagger
         """

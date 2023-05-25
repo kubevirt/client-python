@@ -54,7 +54,7 @@ class V1VolumeStatus(object):
         'target': 'target'
     }
 
-    def __init__(self, hotplug_volume=None, memory_dump_volume=None, message=None, name=None, persistent_volume_claim_info=None, phase=None, reason=None, size=None, target=None):
+    def __init__(self, hotplug_volume=None, memory_dump_volume=None, message=None, name='', persistent_volume_claim_info=None, phase=None, reason=None, size=None, target=''):
         """
         V1VolumeStatus - a model defined in Swagger
         """

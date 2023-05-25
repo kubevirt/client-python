@@ -32,7 +32,6 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     """
     swagger_types = {
         'annotations': 'dict(str, str)',
-        'cluster_name': 'str',
         'deletion_grace_period_seconds': 'int',
         'deletion_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'finalizers': 'list[str]',
@@ -50,7 +49,6 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
 
     attribute_map = {
         'annotations': 'annotations',
-        'cluster_name': 'clusterName',
         'deletion_grace_period_seconds': 'deletionGracePeriodSeconds',
         'deletion_timestamp': 'deletionTimestamp',
         'finalizers': 'finalizers',
@@ -66,13 +64,12 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
         'uid': 'uid'
     }
 
-    def __init__(self, annotations=None, cluster_name=None, deletion_grace_period_seconds=None, deletion_timestamp=None, finalizers=None, generate_name=None, generation=None, labels=None, managed_fields=None, name=None, namespace=None, owner_references=None, resource_version=None, self_link=None, uid=None):
+    def __init__(self, annotations=None, deletion_grace_period_seconds=None, deletion_timestamp=None, finalizers=None, generate_name=None, generation=None, labels=None, managed_fields=None, name=None, namespace=None, owner_references=None, resource_version=None, self_link=None, uid=None):
         """
         K8sIoApimachineryPkgApisMetaV1ObjectMeta - a model defined in Swagger
         """
 
         self._annotations = None
-        self._cluster_name = None
         self._deletion_grace_period_seconds = None
         self._deletion_timestamp = None
         self._finalizers = None
@@ -89,8 +86,6 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
 
         if annotations is not None:
           self.annotations = annotations
-        if cluster_name is not None:
-          self.cluster_name = cluster_name
         if deletion_grace_period_seconds is not None:
           self.deletion_grace_period_seconds = deletion_grace_period_seconds
         if deletion_timestamp is not None:
@@ -140,29 +135,6 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
         """
 
         self._annotations = annotations
-
-    @property
-    def cluster_name(self):
-        """
-        Gets the cluster_name of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.
-
-        :return: The cluster_name of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        :rtype: str
-        """
-        return self._cluster_name
-
-    @cluster_name.setter
-    def cluster_name(self, cluster_name):
-        """
-        Sets the cluster_name of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.
-
-        :param cluster_name: The cluster_name of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        :type: str
-        """
-
-        self._cluster_name = cluster_name
 
     @property
     def deletion_grace_period_seconds(self):
@@ -237,7 +209,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def generate_name(self):
         """
         Gets the generate_name of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.  If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).  Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
+        GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.  If this field is specified and the generated name exists, the server will return a 409.  Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
 
         :return: The generate_name of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :rtype: str
@@ -248,7 +220,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def generate_name(self, generate_name):
         """
         Sets the generate_name of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.  If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).  Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
+        GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.  If this field is specified and the generated name exists, the server will return a 409.  Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
 
         :param generate_name: The generate_name of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :type: str
@@ -421,7 +393,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def self_link(self):
         """
         Gets the self_link of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        SelfLink is a URL representing this object. Populated by the system. Read-only.  DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+        Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
 
         :return: The self_link of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :rtype: str
@@ -432,7 +404,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def self_link(self, self_link):
         """
         Sets the self_link of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        SelfLink is a URL representing this object. Populated by the system. Read-only.  DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+        Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
 
         :param self_link: The self_link of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :type: str

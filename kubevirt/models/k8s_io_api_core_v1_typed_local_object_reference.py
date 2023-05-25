@@ -42,7 +42,7 @@ class K8sIoApiCoreV1TypedLocalObjectReference(object):
         'name': 'name'
     }
 
-    def __init__(self, api_group=None, kind=None, name=None):
+    def __init__(self, api_group=None, kind='', name=''):
         """
         K8sIoApiCoreV1TypedLocalObjectReference - a model defined in Swagger
         """

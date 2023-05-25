@@ -42,7 +42,7 @@ class K8sIoApimachineryPkgApisMetaV1LabelSelectorRequirement(object):
         'values': 'values'
     }
 
-    def __init__(self, key=None, operator=None, values=None):
+    def __init__(self, key='', operator='', values=None):
         """
         K8sIoApimachineryPkgApisMetaV1LabelSelectorRequirement - a model defined in Swagger
         """

@@ -68,7 +68,7 @@ class V1Volume(object):
         'sysprep': 'sysprep'
     }
 
-    def __init__(self, cloud_init_config_drive=None, cloud_init_no_cloud=None, config_map=None, container_disk=None, data_volume=None, downward_api=None, downward_metrics=None, empty_disk=None, ephemeral=None, host_disk=None, memory_dump=None, name=None, persistent_volume_claim=None, secret=None, service_account=None, sysprep=None):
+    def __init__(self, cloud_init_config_drive=None, cloud_init_no_cloud=None, config_map=None, container_disk=None, data_volume=None, downward_api=None, downward_metrics=None, empty_disk=None, ephemeral=None, host_disk=None, memory_dump=None, name='', persistent_volume_claim=None, secret=None, service_account=None, sysprep=None):
         """
         V1Volume - a model defined in Swagger
         """

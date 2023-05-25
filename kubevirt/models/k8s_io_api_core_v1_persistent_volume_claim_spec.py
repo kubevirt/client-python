@@ -33,7 +33,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     swagger_types = {
         'access_modes': 'list[str]',
         'data_source': 'K8sIoApiCoreV1TypedLocalObjectReference',
-        'data_source_ref': 'K8sIoApiCoreV1TypedLocalObjectReference',
+        'data_source_ref': 'K8sIoApiCoreV1TypedObjectReference',
         'resources': 'K8sIoApiCoreV1ResourceRequirements',
         'selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
         'storage_class_name': 'str',
@@ -87,7 +87,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def access_modes(self):
         """
         Gets the access_modes of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+        accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
 
         :return: The access_modes of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :rtype: list[str]
@@ -98,7 +98,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def access_modes(self, access_modes):
         """
         Sets the access_modes of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+        accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
 
         :param access_modes: The access_modes of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :type: list[str]
@@ -110,7 +110,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def data_source(self):
         """
         Gets the data_source of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
+        dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource.
 
         :return: The data_source of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :rtype: K8sIoApiCoreV1TypedLocalObjectReference
@@ -121,7 +121,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def data_source(self, data_source):
         """
         Sets the data_source of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
+        dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource.
 
         :param data_source: The data_source of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :type: K8sIoApiCoreV1TypedLocalObjectReference
@@ -133,10 +133,10 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def data_source_ref(self):
         """
         Gets the data_source_ref of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef   allows any non-core object, as well as PersistentVolumeClaim objects. * While DataSource ignores disallowed values (dropping them), DataSourceRef   preserves all values, and generates an error if a disallowed value is   specified. (Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
+        dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef   allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef   preserves all values, and generates an error if a disallowed value is   specified. * While dataSource only allows local objects, dataSourceRef allows objects   in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled.
 
         :return: The data_source_ref of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        :rtype: K8sIoApiCoreV1TypedLocalObjectReference
+        :rtype: K8sIoApiCoreV1TypedObjectReference
         """
         return self._data_source_ref
 
@@ -144,10 +144,10 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def data_source_ref(self, data_source_ref):
         """
         Sets the data_source_ref of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef   allows any non-core object, as well as PersistentVolumeClaim objects. * While DataSource ignores disallowed values (dropping them), DataSourceRef   preserves all values, and generates an error if a disallowed value is   specified. (Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
+        dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef   allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef   preserves all values, and generates an error if a disallowed value is   specified. * While dataSource only allows local objects, dataSourceRef allows objects   in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled.
 
         :param data_source_ref: The data_source_ref of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        :type: K8sIoApiCoreV1TypedLocalObjectReference
+        :type: K8sIoApiCoreV1TypedObjectReference
         """
 
         self._data_source_ref = data_source_ref
@@ -156,7 +156,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def resources(self):
         """
         Gets the resources of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        Resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+        resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
 
         :return: The resources of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :rtype: K8sIoApiCoreV1ResourceRequirements
@@ -167,7 +167,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def resources(self, resources):
         """
         Sets the resources of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        Resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+        resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
 
         :param resources: The resources of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :type: K8sIoApiCoreV1ResourceRequirements
@@ -179,7 +179,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def selector(self):
         """
         Gets the selector of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        A label query over volumes to consider for binding.
+        selector is a label query over volumes to consider for binding.
 
         :return: The selector of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
@@ -190,7 +190,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def selector(self, selector):
         """
         Sets the selector of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        A label query over volumes to consider for binding.
+        selector is a label query over volumes to consider for binding.
 
         :param selector: The selector of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
@@ -202,7 +202,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def storage_class_name(self):
         """
         Gets the storage_class_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        Name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
+        storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
 
         :return: The storage_class_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :rtype: str
@@ -213,7 +213,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def storage_class_name(self, storage_class_name):
         """
         Sets the storage_class_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        Name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
+        storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
 
         :param storage_class_name: The storage_class_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :type: str
@@ -225,7 +225,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def volume_mode(self):
         """
         Gets the volume_mode of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.
+        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.  Possible enum values:  - `\"Block\"` means the volume will not be formatted with a filesystem and will remain a raw block device.  - `\"Filesystem\"` means the volume will be or is formatted with a filesystem.
 
         :return: The volume_mode of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :rtype: str
@@ -236,11 +236,17 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def volume_mode(self, volume_mode):
         """
         Sets the volume_mode of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.
+        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.  Possible enum values:  - `\"Block\"` means the volume will not be formatted with a filesystem and will remain a raw block device.  - `\"Filesystem\"` means the volume will be or is formatted with a filesystem.
 
         :param volume_mode: The volume_mode of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :type: str
         """
+        allowed_values = ["Block", "Filesystem"]
+        if volume_mode not in allowed_values:
+            raise ValueError(
+                "Invalid value for `volume_mode` ({0}), must be one of {1}"
+                .format(volume_mode, allowed_values)
+            )
 
         self._volume_mode = volume_mode
 
@@ -248,7 +254,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def volume_name(self):
         """
         Gets the volume_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        VolumeName is the binding reference to the PersistentVolume backing this claim.
+        volumeName is the binding reference to the PersistentVolume backing this claim.
 
         :return: The volume_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :rtype: str
@@ -259,7 +265,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def volume_name(self, volume_name):
         """
         Sets the volume_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        VolumeName is the binding reference to the PersistentVolume backing this claim.
+        volumeName is the binding reference to the PersistentVolume backing this claim.
 
         :param volume_name: The volume_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :type: str

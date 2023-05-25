@@ -44,7 +44,7 @@ class V1alpha1VirtualMachinePoolCondition(object):
         'type': 'type'
     }
 
-    def __init__(self, message=None, reason=None, status=None, type=None):
+    def __init__(self, message=None, reason=None, status='', type=''):
         """
         V1alpha1VirtualMachinePoolCondition - a model defined in Swagger
         """

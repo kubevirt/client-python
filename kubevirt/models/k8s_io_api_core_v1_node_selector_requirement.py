@@ -42,7 +42,7 @@ class K8sIoApiCoreV1NodeSelectorRequirement(object):
         'values': 'values'
     }
 
-    def __init__(self, key=None, operator=None, values=None):
+    def __init__(self, key='', operator='', values=None):
         """
         K8sIoApiCoreV1NodeSelectorRequirement - a model defined in Swagger
         """
@@ -85,7 +85,7 @@ class K8sIoApiCoreV1NodeSelectorRequirement(object):
     def operator(self):
         """
         Gets the operator of this K8sIoApiCoreV1NodeSelectorRequirement.
-        Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
+        Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.  Possible enum values:  - `\"DoesNotExist\"`  - `\"Exists\"`  - `\"Gt\"`  - `\"In\"`  - `\"Lt\"`  - `\"NotIn\"`
 
         :return: The operator of this K8sIoApiCoreV1NodeSelectorRequirement.
         :rtype: str
@@ -96,13 +96,19 @@ class K8sIoApiCoreV1NodeSelectorRequirement(object):
     def operator(self, operator):
         """
         Sets the operator of this K8sIoApiCoreV1NodeSelectorRequirement.
-        Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
+        Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.  Possible enum values:  - `\"DoesNotExist\"`  - `\"Exists\"`  - `\"Gt\"`  - `\"In\"`  - `\"Lt\"`  - `\"NotIn\"`
 
         :param operator: The operator of this K8sIoApiCoreV1NodeSelectorRequirement.
         :type: str
         """
         if operator is None:
             raise ValueError("Invalid value for `operator`, must not be `None`")
+        allowed_values = ["DoesNotExist", "Exists", "Gt", "In", "Lt", "NotIn"]
+        if operator not in allowed_values:
+            raise ValueError(
+                "Invalid value for `operator` ({0}), must be one of {1}"
+                .format(operator, allowed_values)
+            )
 
         self._operator = operator
 

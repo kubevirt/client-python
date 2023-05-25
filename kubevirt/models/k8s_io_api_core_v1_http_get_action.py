@@ -136,7 +136,7 @@ class K8sIoApiCoreV1HTTPGetAction(object):
     def scheme(self):
         """
         Gets the scheme of this K8sIoApiCoreV1HTTPGetAction.
-        Scheme to use for connecting to the host. Defaults to HTTP.
+        Scheme to use for connecting to the host. Defaults to HTTP.  Possible enum values:  - `\"HTTP\"` means that the scheme used will be http://  - `\"HTTPS\"` means that the scheme used will be https://
 
         :return: The scheme of this K8sIoApiCoreV1HTTPGetAction.
         :rtype: str
@@ -147,11 +147,17 @@ class K8sIoApiCoreV1HTTPGetAction(object):
     def scheme(self, scheme):
         """
         Sets the scheme of this K8sIoApiCoreV1HTTPGetAction.
-        Scheme to use for connecting to the host. Defaults to HTTP.
+        Scheme to use for connecting to the host. Defaults to HTTP.  Possible enum values:  - `\"HTTP\"` means that the scheme used will be http://  - `\"HTTPS\"` means that the scheme used will be https://
 
         :param scheme: The scheme of this K8sIoApiCoreV1HTTPGetAction.
         :type: str
         """
+        allowed_values = ["HTTP", "HTTPS"]
+        if scheme not in allowed_values:
+            raise ValueError(
+                "Invalid value for `scheme` ({0}), must be one of {1}"
+                .format(scheme, allowed_values)
+            )
 
         self._scheme = scheme
 

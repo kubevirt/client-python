@@ -40,7 +40,7 @@ class V1alpha1VirtualMachineExportVolume(object):
         'name': 'name'
     }
 
-    def __init__(self, formats=None, name=None):
+    def __init__(self, formats=None, name=''):
         """
         V1alpha1VirtualMachineExportVolume - a model defined in Swagger
         """

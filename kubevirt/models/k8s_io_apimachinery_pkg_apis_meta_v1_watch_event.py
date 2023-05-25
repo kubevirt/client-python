@@ -40,7 +40,7 @@ class K8sIoApimachineryPkgApisMetaV1WatchEvent(object):
         'type': 'type'
     }
 
-    def __init__(self, object=None, type=None):
+    def __init__(self, object=None, type=''):
         """
         K8sIoApimachineryPkgApisMetaV1WatchEvent - a model defined in Swagger
         """

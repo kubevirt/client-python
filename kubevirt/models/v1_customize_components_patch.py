@@ -44,7 +44,7 @@ class V1CustomizeComponentsPatch(object):
         'type': 'type'
     }
 
-    def __init__(self, patch=None, resource_name=None, resource_type=None, type=None):
+    def __init__(self, patch='', resource_name='', resource_type='', type=''):
         """
         V1CustomizeComponentsPatch - a model defined in Swagger
         """

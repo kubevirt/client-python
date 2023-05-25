@@ -42,7 +42,7 @@ class V1alpha1VirtualMachineRestoreSpec(object):
         'virtual_machine_snapshot_name': 'virtualMachineSnapshotName'
     }
 
-    def __init__(self, patches=None, target=None, virtual_machine_snapshot_name=None):
+    def __init__(self, patches=None, target=None, virtual_machine_snapshot_name=''):
         """
         V1alpha1VirtualMachineRestoreSpec - a model defined in Swagger
         """

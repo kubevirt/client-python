@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**device_name** | **str** |  | 
-**name** | **str** | Name of the GPU device as exposed by a device plugin | 
+**device_name** | **str** |  | [default to '']
+**name** | **str** | Name of the GPU device as exposed by a device plugin | [default to '']
 **tag** | **str** | If specified, the virtual network interface address and its tag will be provided to the guest via config drive | [optional] 
 **virtual_gpu_options** | [**V1VGPUOptions**](V1VGPUOptions.md) |  | [optional] 
 

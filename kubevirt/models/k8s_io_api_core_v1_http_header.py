@@ -40,7 +40,7 @@ class K8sIoApiCoreV1HTTPHeader(object):
         'value': 'value'
     }
 
-    def __init__(self, name=None, value=None):
+    def __init__(self, name='', value=''):
         """
         K8sIoApiCoreV1HTTPHeader - a model defined in Swagger
         """

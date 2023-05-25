@@ -40,7 +40,7 @@ class K8sIoApimachineryPkgApisMetaV1GroupVersionForDiscovery(object):
         'version': 'version'
     }
 
-    def __init__(self, group_version=None, version=None):
+    def __init__(self, group_version='', version=''):
         """
         K8sIoApimachineryPkgApisMetaV1GroupVersionForDiscovery - a model defined in Swagger
         """

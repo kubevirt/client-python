@@ -40,7 +40,7 @@ class V1beta1DataVolumeCheckpoint(object):
         'previous': 'previous'
     }
 
-    def __init__(self, current=None, previous=None):
+    def __init__(self, current='', previous=''):
         """
         V1beta1DataVolumeCheckpoint - a model defined in Swagger
         """

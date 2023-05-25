@@ -44,7 +44,7 @@ class K8sIoApiCoreV1DownwardAPIVolumeFile(object):
         'resource_field_ref': 'resourceFieldRef'
     }
 
-    def __init__(self, field_ref=None, mode=None, path=None, resource_field_ref=None):
+    def __init__(self, field_ref=None, mode=None, path='', resource_field_ref=None):
         """
         K8sIoApiCoreV1DownwardAPIVolumeFile - a model defined in Swagger
         """

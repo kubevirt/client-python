@@ -66,7 +66,7 @@ class V1Interface(object):
         'tag': 'tag'
     }
 
-    def __init__(self, acpi_index=None, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name=None, passt=None, pci_address=None, ports=None, slirp=None, sriov=None, tag=None):
+    def __init__(self, acpi_index=None, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name='', passt=None, pci_address=None, ports=None, slirp=None, sriov=None, tag=None):
         """
         V1Interface - a model defined in Swagger
         """

@@ -42,7 +42,7 @@ class V1Port(object):
         'protocol': 'protocol'
     }
 
-    def __init__(self, name=None, port=None, protocol=None):
+    def __init__(self, name=None, port=0, protocol=None):
         """
         V1Port - a model defined in Swagger
         """

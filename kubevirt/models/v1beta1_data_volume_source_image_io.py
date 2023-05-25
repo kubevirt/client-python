@@ -44,7 +44,7 @@ class V1beta1DataVolumeSourceImageIO(object):
         'url': 'url'
     }
 
-    def __init__(self, cert_config_map=None, disk_id=None, secret_ref=None, url=None):
+    def __init__(self, cert_config_map=None, disk_id='', secret_ref=None, url=''):
         """
         V1beta1DataVolumeSourceImageIO - a model defined in Swagger
         """

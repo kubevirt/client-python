@@ -42,7 +42,7 @@ class V1beta1DataVolumeSourceS3(object):
         'url': 'url'
     }
 
-    def __init__(self, cert_config_map=None, secret_ref=None, url=None):
+    def __init__(self, cert_config_map=None, secret_ref=None, url=''):
         """
         V1beta1DataVolumeSourceS3 - a model defined in Swagger
         """

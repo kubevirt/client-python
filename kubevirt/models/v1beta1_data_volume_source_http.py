@@ -46,7 +46,7 @@ class V1beta1DataVolumeSourceHTTP(object):
         'url': 'url'
     }
 
-    def __init__(self, cert_config_map=None, extra_headers=None, secret_extra_headers=None, secret_ref=None, url=None):
+    def __init__(self, cert_config_map=None, extra_headers=None, secret_extra_headers=None, secret_ref=None, url=''):
         """
         V1beta1DataVolumeSourceHTTP - a model defined in Swagger
         """

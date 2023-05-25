@@ -42,7 +42,7 @@ class V1PersistentVolumeClaimVolumeSource(object):
         'read_only': 'readOnly'
     }
 
-    def __init__(self, claim_name=None, hotpluggable=None, read_only=None):
+    def __init__(self, claim_name='', hotpluggable=None, read_only=None):
         """
         V1PersistentVolumeClaimVolumeSource - a model defined in Swagger
         """
@@ -61,7 +61,7 @@ class V1PersistentVolumeClaimVolumeSource(object):
     def claim_name(self):
         """
         Gets the claim_name of this V1PersistentVolumeClaimVolumeSource.
-        ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+        claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
         :return: The claim_name of this V1PersistentVolumeClaimVolumeSource.
         :rtype: str
@@ -72,7 +72,7 @@ class V1PersistentVolumeClaimVolumeSource(object):
     def claim_name(self, claim_name):
         """
         Sets the claim_name of this V1PersistentVolumeClaimVolumeSource.
-        ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+        claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
         :param claim_name: The claim_name of this V1PersistentVolumeClaimVolumeSource.
         :type: str
@@ -109,7 +109,7 @@ class V1PersistentVolumeClaimVolumeSource(object):
     def read_only(self):
         """
         Gets the read_only of this V1PersistentVolumeClaimVolumeSource.
-        Will force the ReadOnly setting in VolumeMounts. Default false.
+        readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
 
         :return: The read_only of this V1PersistentVolumeClaimVolumeSource.
         :rtype: bool
@@ -120,7 +120,7 @@ class V1PersistentVolumeClaimVolumeSource(object):
     def read_only(self, read_only):
         """
         Sets the read_only of this V1PersistentVolumeClaimVolumeSource.
-        Will force the ReadOnly setting in VolumeMounts. Default false.
+        readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
 
         :param read_only: The read_only of this V1PersistentVolumeClaimVolumeSource.
         :type: bool

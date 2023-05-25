@@ -42,7 +42,7 @@ class V1beta1DataVolumeSourceRef(object):
         'namespace': 'namespace'
     }
 
-    def __init__(self, kind=None, name=None, namespace=None):
+    def __init__(self, kind='', name='', namespace=None):
         """
         V1beta1DataVolumeSourceRef - a model defined in Swagger
         """

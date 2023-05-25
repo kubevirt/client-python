@@ -42,7 +42,7 @@ class V1VirtualMachineInstanceGuestOSUser(object):
         'user_name': 'userName'
     }
 
-    def __init__(self, domain=None, login_time=None, user_name=None):
+    def __init__(self, domain=None, login_time=None, user_name=''):
         """
         V1VirtualMachineInstanceGuestOSUser - a model defined in Swagger
         """

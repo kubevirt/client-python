@@ -50,7 +50,7 @@ class V1VirtualMachineMemoryDumpRequest(object):
         'start_timestamp': 'startTimestamp'
     }
 
-    def __init__(self, claim_name=None, end_timestamp=None, file_name=None, message=None, phase=None, remove=None, start_timestamp=None):
+    def __init__(self, claim_name='', end_timestamp=None, file_name=None, message=None, phase='', remove=None, start_timestamp=None):
         """
         V1VirtualMachineMemoryDumpRequest - a model defined in Swagger
         """

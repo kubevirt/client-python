@@ -40,7 +40,7 @@ class V1RemoveVolumeOptions(object):
         'name': 'name'
     }
 
-    def __init__(self, dry_run=None, name=None):
+    def __init__(self, dry_run=None, name=''):
         """
         V1RemoveVolumeOptions - a model defined in Swagger
         """

@@ -136,7 +136,7 @@ class K8sIoApimachineryPkgApisMetaV1ListMeta(object):
     def self_link(self):
         """
         Gets the self_link of this K8sIoApimachineryPkgApisMetaV1ListMeta.
-        selfLink is a URL representing this object. Populated by the system. Read-only.  DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+        Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
 
         :return: The self_link of this K8sIoApimachineryPkgApisMetaV1ListMeta.
         :rtype: str
@@ -147,7 +147,7 @@ class K8sIoApimachineryPkgApisMetaV1ListMeta(object):
     def self_link(self, self_link):
         """
         Sets the self_link of this K8sIoApimachineryPkgApisMetaV1ListMeta.
-        selfLink is a URL representing this object. Populated by the system. Read-only.  DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+        Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
 
         :param self_link: The self_link of this K8sIoApimachineryPkgApisMetaV1ListMeta.
         :type: str

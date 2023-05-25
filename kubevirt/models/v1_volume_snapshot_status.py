@@ -42,7 +42,7 @@ class V1VolumeSnapshotStatus(object):
         'reason': 'reason'
     }
 
-    def __init__(self, enabled=None, name=None, reason=None):
+    def __init__(self, enabled=False, name='', reason=None):
         """
         V1VolumeSnapshotStatus - a model defined in Swagger
         """

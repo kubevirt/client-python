@@ -44,7 +44,7 @@ class K8sIoApimachineryPkgApisMetaV1APIResourceList(object):
         'resources': 'resources'
     }
 
-    def __init__(self, api_version=None, group_version=None, kind=None, resources=None):
+    def __init__(self, api_version=None, group_version='', kind=None, resources=None):
         """
         K8sIoApimachineryPkgApisMetaV1APIResourceList - a model defined in Swagger
         """

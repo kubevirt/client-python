@@ -44,7 +44,7 @@ class V1alpha1VolumeSnapshotStatus(object):
         'volume_snapshot_name': 'volumeSnapshotName'
     }
 
-    def __init__(self, creation_time=None, error=None, ready_to_use=None, volume_snapshot_name=None):
+    def __init__(self, creation_time=None, error=None, ready_to_use=None, volume_snapshot_name=''):
         """
         V1alpha1VolumeSnapshotStatus - a model defined in Swagger
         """

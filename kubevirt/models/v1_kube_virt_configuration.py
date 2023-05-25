@@ -432,6 +432,7 @@ class V1KubeVirtConfiguration(object):
     def image_pull_policy(self):
         """
         Gets the image_pull_policy of this V1KubeVirtConfiguration.
+        Possible enum values:  - `\"Always\"` means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.  - `\"IfNotPresent\"` means that kubelet pulls if the image isn't present on disk. Container will fail if the image isn't present and the pull fails.  - `\"Never\"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
 
         :return: The image_pull_policy of this V1KubeVirtConfiguration.
         :rtype: str
@@ -442,10 +443,17 @@ class V1KubeVirtConfiguration(object):
     def image_pull_policy(self, image_pull_policy):
         """
         Sets the image_pull_policy of this V1KubeVirtConfiguration.
+        Possible enum values:  - `\"Always\"` means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.  - `\"IfNotPresent\"` means that kubelet pulls if the image isn't present on disk. Container will fail if the image isn't present and the pull fails.  - `\"Never\"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
 
         :param image_pull_policy: The image_pull_policy of this V1KubeVirtConfiguration.
         :type: str
         """
+        allowed_values = ["Always", "IfNotPresent", "Never"]
+        if image_pull_policy not in allowed_values:
+            raise ValueError(
+                "Invalid value for `image_pull_policy` ({0}), must be one of {1}"
+                .format(image_pull_policy, allowed_values)
+            )
 
         self._image_pull_policy = image_pull_policy
 

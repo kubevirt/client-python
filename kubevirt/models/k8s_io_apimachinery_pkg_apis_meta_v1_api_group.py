@@ -48,7 +48,7 @@ class K8sIoApimachineryPkgApisMetaV1APIGroup(object):
         'versions': 'versions'
     }
 
-    def __init__(self, api_version=None, kind=None, name=None, preferred_version=None, server_address_by_client_cid_rs=None, versions=None):
+    def __init__(self, api_version=None, kind=None, name='', preferred_version=None, server_address_by_client_cid_rs=None, versions=None):
         """
         K8sIoApimachineryPkgApisMetaV1APIGroup - a model defined in Swagger
         """

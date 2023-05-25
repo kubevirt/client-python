@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**action** | **str** | Indicates the type of action that is requested. e.g. Start or Stop | 
+**action** | **str** | Indicates the type of action that is requested. e.g. Start or Stop | [default to '']
 **data** | **dict(str, str)** | Provides additional data in order to perform the Action | [optional] 
 **uid** | **str** | Indicates the UUID of an existing Virtual Machine Instance that this change request applies to -- if applicable | [optional] 
 

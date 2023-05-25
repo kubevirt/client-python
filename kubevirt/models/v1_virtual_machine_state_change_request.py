@@ -42,7 +42,7 @@ class V1VirtualMachineStateChangeRequest(object):
         'uid': 'uid'
     }
 
-    def __init__(self, action=None, data=None, uid=None):
+    def __init__(self, action='', data=None, uid=None):
         """
         V1VirtualMachineStateChangeRequest - a model defined in Swagger
         """

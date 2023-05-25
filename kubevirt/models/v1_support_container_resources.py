@@ -40,7 +40,7 @@ class V1SupportContainerResources(object):
         'type': 'type'
     }
 
-    def __init__(self, resources=None, type=None):
+    def __init__(self, resources=None, type=''):
         """
         V1SupportContainerResources - a model defined in Swagger
         """

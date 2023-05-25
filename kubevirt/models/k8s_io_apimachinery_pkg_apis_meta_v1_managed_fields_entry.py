@@ -220,7 +220,7 @@ class K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry(object):
     def time(self):
         """
         Gets the time of this K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry.
-        Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'
+        Time is the timestamp of when the ManagedFields entry was added. The timestamp will also be updated if a field is added, the manager changes any of the owned fields value or removes a field. The timestamp does not update when a field is removed from the entry because another manager took it over.
 
         :return: The time of this K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry.
         :rtype: K8sIoApimachineryPkgApisMetaV1Time
@@ -231,7 +231,7 @@ class K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry(object):
     def time(self, time):
         """
         Sets the time of this K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry.
-        Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'
+        Time is the timestamp of when the ManagedFields entry was added. The timestamp will also be updated if a field is added, the manager changes any of the owned fields value or removes a field. The timestamp does not update when a field is removed from the entry because another manager took it over.
 
         :param time: The time of this K8sIoApimachineryPkgApisMetaV1ManagedFieldsEntry.
         :type: K8sIoApimachineryPkgApisMetaV1Time

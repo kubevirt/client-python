@@ -40,7 +40,7 @@ class V1Watchdog(object):
         'name': 'name'
     }
 
-    def __init__(self, i6300esb=None, name=None):
+    def __init__(self, i6300esb=None, name=''):
         """
         V1Watchdog - a model defined in Swagger
         """

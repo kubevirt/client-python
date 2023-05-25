@@ -42,7 +42,7 @@ class V1Network(object):
         'pod': 'pod'
     }
 
-    def __init__(self, multus=None, name=None, pod=None):
+    def __init__(self, multus=None, name='', pod=None):
         """
         V1Network - a model defined in Swagger
         """

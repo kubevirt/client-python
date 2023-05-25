@@ -40,7 +40,7 @@ class K8sIoApimachineryPkgApisMetaV1ServerAddressByClientCIDR(object):
         'server_address': 'serverAddress'
     }
 
-    def __init__(self, client_cidr=None, server_address=None):
+    def __init__(self, client_cidr='', server_address=''):
         """
         K8sIoApimachineryPkgApisMetaV1ServerAddressByClientCIDR - a model defined in Swagger
         """

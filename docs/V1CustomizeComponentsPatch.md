@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**patch** | **str** |  | 
-**resource_name** | **str** |  | 
-**resource_type** | **str** |  | 
-**type** | **str** |  | 
+**patch** | **str** |  | [default to '']
+**resource_name** | **str** |  | [default to '']
+**resource_type** | **str** |  | [default to '']
+**type** | **str** |  | [default to '']
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

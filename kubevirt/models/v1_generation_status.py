@@ -48,7 +48,7 @@ class V1GenerationStatus(object):
         'resource': 'resource'
     }
 
-    def __init__(self, group=None, hash=None, last_generation=None, name=None, namespace=None, resource=None):
+    def __init__(self, group='', hash=None, last_generation=0, name='', namespace=None, resource=''):
         """
         V1GenerationStatus - a model defined in Swagger
         """

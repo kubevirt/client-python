@@ -42,7 +42,7 @@ class V1MediatedHostDevice(object):
         'resource_name': 'resourceName'
     }
 
-    def __init__(self, external_resource_provider=None, mdev_name_selector=None, resource_name=None):
+    def __init__(self, external_resource_provider=None, mdev_name_selector='', resource_name=''):
         """
         V1MediatedHostDevice - a model defined in Swagger
         """

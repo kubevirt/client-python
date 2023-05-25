@@ -40,7 +40,7 @@ class V1TokenBucketRateLimiter(object):
         'qps': 'qps'
     }
 
-    def __init__(self, burst=None, qps=None):
+    def __init__(self, burst=0, qps=0.0):
         """
         V1TokenBucketRateLimiter - a model defined in Swagger
         """

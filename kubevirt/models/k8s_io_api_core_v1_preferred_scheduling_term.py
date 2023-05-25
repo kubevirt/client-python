@@ -40,7 +40,7 @@ class K8sIoApiCoreV1PreferredSchedulingTerm(object):
         'weight': 'weight'
     }
 
-    def __init__(self, preference=None, weight=None):
+    def __init__(self, preference=None, weight=0):
         """
         K8sIoApiCoreV1PreferredSchedulingTerm - a model defined in Swagger
         """

@@ -40,7 +40,7 @@ class V1DataVolumeSource(object):
         'name': 'name'
     }
 
-    def __init__(self, hotpluggable=None, name=None):
+    def __init__(self, hotpluggable=None, name=''):
         """
         V1DataVolumeSource - a model defined in Swagger
         """

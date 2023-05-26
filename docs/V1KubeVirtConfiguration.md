@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **supported_guest_agent_versions** | **list[str]** | deprecated | [optional] 
 **tls_configuration** | [**V1TLSConfiguration**](V1TLSConfiguration.md) |  | [optional] 
 **virtual_machine_instances_per_node** | **int** |  | [optional] 
+**virtual_machine_options** | [**V1VirtualMachineOptions**](V1VirtualMachineOptions.md) |  | [optional] 
 **vm_state_storage_class** | **str** | VMStateStorageClass is the name of the storage class to use for the PVCs created to preserve VM state, like TPM. The storage class must support RWX in filesystem mode. | [optional] 
 **webhook_configuration** | [**V1ReloadableComponentConfiguration**](V1ReloadableComponentConfiguration.md) |  | [optional] 
 

@@ -59,6 +59,7 @@ class V1KubeVirtConfiguration(object):
         'supported_guest_agent_versions': 'list[str]',
         'tls_configuration': 'V1TLSConfiguration',
         'virtual_machine_instances_per_node': 'int',
+        'virtual_machine_options': 'V1VirtualMachineOptions',
         'vm_state_storage_class': 'str',
         'webhook_configuration': 'V1ReloadableComponentConfiguration'
     }
@@ -92,11 +93,12 @@ class V1KubeVirtConfiguration(object):
         'supported_guest_agent_versions': 'supportedGuestAgentVersions',
         'tls_configuration': 'tlsConfiguration',
         'virtual_machine_instances_per_node': 'virtualMachineInstancesPerNode',
+        'virtual_machine_options': 'virtualMachineOptions',
         'vm_state_storage_class': 'vmStateStorageClass',
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, vm_state_storage_class=None, webhook_configuration=None):
+    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_state_storage_class=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -129,6 +131,7 @@ class V1KubeVirtConfiguration(object):
         self._supported_guest_agent_versions = None
         self._tls_configuration = None
         self._virtual_machine_instances_per_node = None
+        self._virtual_machine_options = None
         self._vm_state_storage_class = None
         self._webhook_configuration = None
 
@@ -188,6 +191,8 @@ class V1KubeVirtConfiguration(object):
           self.tls_configuration = tls_configuration
         if virtual_machine_instances_per_node is not None:
           self.virtual_machine_instances_per_node = virtual_machine_instances_per_node
+        if virtual_machine_options is not None:
+          self.virtual_machine_options = virtual_machine_options
         if vm_state_storage_class is not None:
           self.vm_state_storage_class = vm_state_storage_class
         if webhook_configuration is not None:
@@ -796,6 +801,27 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._virtual_machine_instances_per_node = virtual_machine_instances_per_node
+
+    @property
+    def virtual_machine_options(self):
+        """
+        Gets the virtual_machine_options of this V1KubeVirtConfiguration.
+
+        :return: The virtual_machine_options of this V1KubeVirtConfiguration.
+        :rtype: V1VirtualMachineOptions
+        """
+        return self._virtual_machine_options
+
+    @virtual_machine_options.setter
+    def virtual_machine_options(self, virtual_machine_options):
+        """
+        Sets the virtual_machine_options of this V1KubeVirtConfiguration.
+
+        :param virtual_machine_options: The virtual_machine_options of this V1KubeVirtConfiguration.
+        :type: V1VirtualMachineOptions
+        """
+
+        self._virtual_machine_options = virtual_machine_options
 
     @property
     def vm_state_storage_class(self):

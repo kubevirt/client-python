@@ -103,6 +103,7 @@ from .models.v1_data_volume_template_dummy_status import V1DataVolumeTemplateDum
 from .models.v1_data_volume_template_spec import V1DataVolumeTemplateSpec
 from .models.v1_developer_configuration import V1DeveloperConfiguration
 from .models.v1_devices import V1Devices
+from .models.v1_disable_free_page_reporting import V1DisableFreePageReporting
 from .models.v1_disk import V1Disk
 from .models.v1_disk_target import V1DiskTarget
 from .models.v1_disk_verification import V1DiskVerification
@@ -257,6 +258,7 @@ from .models.v1_virtual_machine_instance_template_spec import V1VirtualMachineIn
 from .models.v1_virtual_machine_interface_request import V1VirtualMachineInterfaceRequest
 from .models.v1_virtual_machine_list import V1VirtualMachineList
 from .models.v1_virtual_machine_memory_dump_request import V1VirtualMachineMemoryDumpRequest
+from .models.v1_virtual_machine_options import V1VirtualMachineOptions
 from .models.v1_virtual_machine_spec import V1VirtualMachineSpec
 from .models.v1_virtual_machine_start_failure import V1VirtualMachineStartFailure
 from .models.v1_virtual_machine_state_change_request import V1VirtualMachineStateChangeRequest

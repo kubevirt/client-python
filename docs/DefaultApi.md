@@ -12,15 +12,15 @@ Method | HTTP request | Description
 [**create_namespaced_virtual_machine_instance_migration**](DefaultApi.md#create_namespaced_virtual_machine_instance_migration) | **POST** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations | 
 [**create_namespaced_virtual_machine_instance_preset**](DefaultApi.md#create_namespaced_virtual_machine_instance_preset) | **POST** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets | 
 [**create_namespaced_virtual_machine_instance_replica_set**](DefaultApi.md#create_namespaced_virtual_machine_instance_replica_set) | **POST** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets | 
-[**create_namespaced_virtual_machine_instancetype**](DefaultApi.md#create_namespaced_virtual_machine_instancetype) | **POST** /apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes | 
+[**create_namespaced_virtual_machine_instancetype**](DefaultApi.md#create_namespaced_virtual_machine_instancetype) | **POST** /apis/instancetype.kubevirt.io/v1beta1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes | 
 [**create_namespaced_virtual_machine_pool**](DefaultApi.md#create_namespaced_virtual_machine_pool) | **POST** /apis/pool.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepools | 
-[**create_namespaced_virtual_machine_preference**](DefaultApi.md#create_namespaced_virtual_machine_preference) | **POST** /apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences | 
+[**create_namespaced_virtual_machine_preference**](DefaultApi.md#create_namespaced_virtual_machine_preference) | **POST** /apis/instancetype.kubevirt.io/v1beta1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences | 
 [**create_namespaced_virtual_machine_restore**](DefaultApi.md#create_namespaced_virtual_machine_restore) | **POST** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinerestores | 
 [**create_namespaced_virtual_machine_snapshot**](DefaultApi.md#create_namespaced_virtual_machine_snapshot) | **POST** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshots | 
 [**create_namespaced_virtual_machine_snapshot_content**](DefaultApi.md#create_namespaced_virtual_machine_snapshot_content) | **POST** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshotcontents | 
 [**create_virtual_machine_clone**](DefaultApi.md#create_virtual_machine_clone) | **POST** /apis/clone.kubevirt.io/v1alpha1/virtualmachineclones | 
-[**create_virtual_machine_cluster_instancetype**](DefaultApi.md#create_virtual_machine_cluster_instancetype) | **POST** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterinstancetypes | 
-[**create_virtual_machine_cluster_preference**](DefaultApi.md#create_virtual_machine_cluster_preference) | **POST** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterpreferences | 
+[**create_virtual_machine_cluster_instancetype**](DefaultApi.md#create_virtual_machine_cluster_instancetype) | **POST** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterinstancetypes | 
+[**create_virtual_machine_cluster_preference**](DefaultApi.md#create_virtual_machine_cluster_preference) | **POST** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterpreferences | 
 [**delete_collection_migration_policy**](DefaultApi.md#delete_collection_migration_policy) | **DELETE** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies | 
 [**delete_collection_namespaced_kube_virt**](DefaultApi.md#delete_collection_namespaced_kube_virt) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/kubevirt | 
 [**delete_collection_namespaced_virtual_machine**](DefaultApi.md#delete_collection_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines | 
@@ -29,15 +29,15 @@ Method | HTTP request | Description
 [**delete_collection_namespaced_virtual_machine_instance_migration**](DefaultApi.md#delete_collection_namespaced_virtual_machine_instance_migration) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations | 
 [**delete_collection_namespaced_virtual_machine_instance_preset**](DefaultApi.md#delete_collection_namespaced_virtual_machine_instance_preset) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets | 
 [**delete_collection_namespaced_virtual_machine_instance_replica_set**](DefaultApi.md#delete_collection_namespaced_virtual_machine_instance_replica_set) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets | 
-[**delete_collection_namespaced_virtual_machine_instancetype**](DefaultApi.md#delete_collection_namespaced_virtual_machine_instancetype) | **DELETE** /apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes | 
+[**delete_collection_namespaced_virtual_machine_instancetype**](DefaultApi.md#delete_collection_namespaced_virtual_machine_instancetype) | **DELETE** /apis/instancetype.kubevirt.io/v1beta1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes | 
 [**delete_collection_namespaced_virtual_machine_pool**](DefaultApi.md#delete_collection_namespaced_virtual_machine_pool) | **DELETE** /apis/pool.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepools | 
-[**delete_collection_namespaced_virtual_machine_preference**](DefaultApi.md#delete_collection_namespaced_virtual_machine_preference) | **DELETE** /apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences | 
+[**delete_collection_namespaced_virtual_machine_preference**](DefaultApi.md#delete_collection_namespaced_virtual_machine_preference) | **DELETE** /apis/instancetype.kubevirt.io/v1beta1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences | 
 [**delete_collection_namespaced_virtual_machine_restore**](DefaultApi.md#delete_collection_namespaced_virtual_machine_restore) | **DELETE** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinerestores | 
 [**delete_collection_namespaced_virtual_machine_snapshot**](DefaultApi.md#delete_collection_namespaced_virtual_machine_snapshot) | **DELETE** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshots | 
 [**delete_collection_namespaced_virtual_machine_snapshot_content**](DefaultApi.md#delete_collection_namespaced_virtual_machine_snapshot_content) | **DELETE** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshotcontents | 
 [**delete_collection_virtual_machine_clone**](DefaultApi.md#delete_collection_virtual_machine_clone) | **DELETE** /apis/clone.kubevirt.io/v1alpha1/virtualmachineclones | 
-[**delete_collection_virtual_machine_cluster_instancetype**](DefaultApi.md#delete_collection_virtual_machine_cluster_instancetype) | **DELETE** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterinstancetypes | 
-[**delete_collection_virtual_machine_cluster_preference**](DefaultApi.md#delete_collection_virtual_machine_cluster_preference) | **DELETE** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterpreferences | 
+[**delete_collection_virtual_machine_cluster_instancetype**](DefaultApi.md#delete_collection_virtual_machine_cluster_instancetype) | **DELETE** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterinstancetypes | 
+[**delete_collection_virtual_machine_cluster_preference**](DefaultApi.md#delete_collection_virtual_machine_cluster_preference) | **DELETE** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterpreferences | 
 [**delete_migration_policy**](DefaultApi.md#delete_migration_policy) | **DELETE** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies/{name:[a-z0-9][a-z0-9\-]*} | 
 [**delete_namespaced_kube_virt**](DefaultApi.md#delete_namespaced_kube_virt) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/kubevirt/{name:[a-z0-9][a-z0-9\-]*} | 
 [**delete_namespaced_virtual_machine**](DefaultApi.md#delete_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | 
@@ -46,15 +46,15 @@ Method | HTTP request | Description
 [**delete_namespaced_virtual_machine_instance_migration**](DefaultApi.md#delete_namespaced_virtual_machine_instance_migration) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations/{name:[a-z0-9][a-z0-9\-]*} | 
 [**delete_namespaced_virtual_machine_instance_preset**](DefaultApi.md#delete_namespaced_virtual_machine_instance_preset) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets/{name:[a-z0-9][a-z0-9\-]*} | 
 [**delete_namespaced_virtual_machine_instance_replica_set**](DefaultApi.md#delete_namespaced_virtual_machine_instance_replica_set) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets/{name:[a-z0-9][a-z0-9\-]*} | 
-[**delete_namespaced_virtual_machine_instancetype**](DefaultApi.md#delete_namespaced_virtual_machine_instancetype) | **DELETE** /apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
+[**delete_namespaced_virtual_machine_instancetype**](DefaultApi.md#delete_namespaced_virtual_machine_instancetype) | **DELETE** /apis/instancetype.kubevirt.io/v1beta1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
 [**delete_namespaced_virtual_machine_pool**](DefaultApi.md#delete_namespaced_virtual_machine_pool) | **DELETE** /apis/pool.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepools/{name:[a-z0-9][a-z0-9\-]*} | 
-[**delete_namespaced_virtual_machine_preference**](DefaultApi.md#delete_namespaced_virtual_machine_preference) | **DELETE** /apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*} | 
+[**delete_namespaced_virtual_machine_preference**](DefaultApi.md#delete_namespaced_virtual_machine_preference) | **DELETE** /apis/instancetype.kubevirt.io/v1beta1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*} | 
 [**delete_namespaced_virtual_machine_restore**](DefaultApi.md#delete_namespaced_virtual_machine_restore) | **DELETE** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinerestores/{name:[a-z0-9][a-z0-9\-]*} | 
 [**delete_namespaced_virtual_machine_snapshot**](DefaultApi.md#delete_namespaced_virtual_machine_snapshot) | **DELETE** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshots/{name:[a-z0-9][a-z0-9\-]*} | 
 [**delete_namespaced_virtual_machine_snapshot_content**](DefaultApi.md#delete_namespaced_virtual_machine_snapshot_content) | **DELETE** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshotcontents/{name:[a-z0-9][a-z0-9\-]*} | 
 [**delete_virtual_machine_clone**](DefaultApi.md#delete_virtual_machine_clone) | **DELETE** /apis/clone.kubevirt.io/v1alpha1/virtualmachineclones/{name:[a-z0-9][a-z0-9\-]*} | 
-[**delete_virtual_machine_cluster_instancetype**](DefaultApi.md#delete_virtual_machine_cluster_instancetype) | **DELETE** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
-[**delete_virtual_machine_cluster_preference**](DefaultApi.md#delete_virtual_machine_cluster_preference) | **DELETE** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*} | 
+[**delete_virtual_machine_cluster_instancetype**](DefaultApi.md#delete_virtual_machine_cluster_instancetype) | **DELETE** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
+[**delete_virtual_machine_cluster_preference**](DefaultApi.md#delete_virtual_machine_cluster_preference) | **DELETE** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*} | 
 [**func1**](DefaultApi.md#func1) | **GET** /healthz | 
 [**func6**](DefaultApi.md#func6) | **GET** /openapi/v2 | 
 [**get_api_group_clone_kubevirt_io**](DefaultApi.md#get_api_group_clone_kubevirt_io) | **GET** /apis/clone.kubevirt.io/ | 
@@ -67,7 +67,7 @@ Method | HTTP request | Description
 [**get_api_group_snapshot_kubevirt_io**](DefaultApi.md#get_api_group_snapshot_kubevirt_io) | **GET** /apis/snapshot.kubevirt.io/ | 
 [**get_api_resources_clone_kubevirt_io_v1alpha1**](DefaultApi.md#get_api_resources_clone_kubevirt_io_v1alpha1) | **GET** /apis/clone.kubevirt.io/v1alpha1/ | 
 [**get_api_resources_export_kubevirt_io_v1alpha1**](DefaultApi.md#get_api_resources_export_kubevirt_io_v1alpha1) | **GET** /apis/export.kubevirt.io/v1alpha1/ | 
-[**get_api_resources_instancetype_kubevirt_io_v1alpha2**](DefaultApi.md#get_api_resources_instancetype_kubevirt_io_v1alpha2) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/ | 
+[**get_api_resources_instancetype_kubevirt_io_v1beta1**](DefaultApi.md#get_api_resources_instancetype_kubevirt_io_v1beta1) | **GET** /apis/instancetype.kubevirt.io/v1beta1/ | 
 [**get_api_resources_kubevirt_io_v1**](DefaultApi.md#get_api_resources_kubevirt_io_v1) | **GET** /apis/kubevirt.io/v1/ | 
 [**get_api_resources_migrations_kubevirt_io_v1alpha1**](DefaultApi.md#get_api_resources_migrations_kubevirt_io_v1alpha1) | **GET** /apis/migrations.kubevirt.io/v1alpha1/ | 
 [**get_api_resources_pool_kubevirt_io_v1alpha1**](DefaultApi.md#get_api_resources_pool_kubevirt_io_v1alpha1) | **GET** /apis/pool.kubevirt.io/v1alpha1/ | 
@@ -85,24 +85,24 @@ Method | HTTP request | Description
 [**list_namespaced_virtual_machine_instance_migration**](DefaultApi.md#list_namespaced_virtual_machine_instance_migration) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations | 
 [**list_namespaced_virtual_machine_instance_preset**](DefaultApi.md#list_namespaced_virtual_machine_instance_preset) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets | 
 [**list_namespaced_virtual_machine_instance_replica_set**](DefaultApi.md#list_namespaced_virtual_machine_instance_replica_set) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets | 
-[**list_namespaced_virtual_machine_instancetype**](DefaultApi.md#list_namespaced_virtual_machine_instancetype) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes | 
+[**list_namespaced_virtual_machine_instancetype**](DefaultApi.md#list_namespaced_virtual_machine_instancetype) | **GET** /apis/instancetype.kubevirt.io/v1beta1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes | 
 [**list_namespaced_virtual_machine_pool**](DefaultApi.md#list_namespaced_virtual_machine_pool) | **GET** /apis/pool.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepools | 
-[**list_namespaced_virtual_machine_preference**](DefaultApi.md#list_namespaced_virtual_machine_preference) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences | 
+[**list_namespaced_virtual_machine_preference**](DefaultApi.md#list_namespaced_virtual_machine_preference) | **GET** /apis/instancetype.kubevirt.io/v1beta1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences | 
 [**list_namespaced_virtual_machine_restore**](DefaultApi.md#list_namespaced_virtual_machine_restore) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinerestores | 
 [**list_namespaced_virtual_machine_snapshot**](DefaultApi.md#list_namespaced_virtual_machine_snapshot) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshots | 
 [**list_namespaced_virtual_machine_snapshot_content**](DefaultApi.md#list_namespaced_virtual_machine_snapshot_content) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshotcontents | 
 [**list_virtual_machine_clone**](DefaultApi.md#list_virtual_machine_clone) | **GET** /apis/clone.kubevirt.io/v1alpha1/virtualmachineclones | 
-[**list_virtual_machine_cluster_instancetype**](DefaultApi.md#list_virtual_machine_cluster_instancetype) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterinstancetypes | 
-[**list_virtual_machine_cluster_preference**](DefaultApi.md#list_virtual_machine_cluster_preference) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterpreferences | 
+[**list_virtual_machine_cluster_instancetype**](DefaultApi.md#list_virtual_machine_cluster_instancetype) | **GET** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterinstancetypes | 
+[**list_virtual_machine_cluster_preference**](DefaultApi.md#list_virtual_machine_cluster_preference) | **GET** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterpreferences | 
 [**list_virtual_machine_export_for_all_namespaces**](DefaultApi.md#list_virtual_machine_export_for_all_namespaces) | **GET** /apis/export.kubevirt.io/v1alpha1/virtualmachineexports | 
 [**list_virtual_machine_for_all_namespaces**](DefaultApi.md#list_virtual_machine_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/virtualmachines | 
 [**list_virtual_machine_instance_for_all_namespaces**](DefaultApi.md#list_virtual_machine_instance_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/virtualmachineinstances | 
 [**list_virtual_machine_instance_migration_for_all_namespaces**](DefaultApi.md#list_virtual_machine_instance_migration_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/virtualmachineinstancemigrations | 
 [**list_virtual_machine_instance_preset_for_all_namespaces**](DefaultApi.md#list_virtual_machine_instance_preset_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/virtualmachineinstancepresets | 
 [**list_virtual_machine_instance_replica_set_for_all_namespaces**](DefaultApi.md#list_virtual_machine_instance_replica_set_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/virtualmachineinstancereplicasets | 
-[**list_virtual_machine_instancetype_for_all_namespaces**](DefaultApi.md#list_virtual_machine_instancetype_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineinstancetypes | 
+[**list_virtual_machine_instancetype_for_all_namespaces**](DefaultApi.md#list_virtual_machine_instancetype_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineinstancetypes | 
 [**list_virtual_machine_pool_for_all_namespaces**](DefaultApi.md#list_virtual_machine_pool_for_all_namespaces) | **GET** /apis/pool.kubevirt.io/v1alpha1/virtualmachinepools | 
-[**list_virtual_machine_preference_for_all_namespaces**](DefaultApi.md#list_virtual_machine_preference_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachinepreferences | 
+[**list_virtual_machine_preference_for_all_namespaces**](DefaultApi.md#list_virtual_machine_preference_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1beta1/virtualmachinepreferences | 
 [**list_virtual_machine_restore_for_all_namespaces**](DefaultApi.md#list_virtual_machine_restore_for_all_namespaces) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/virtualmachinerestores | 
 [**list_virtual_machine_snapshot_content_for_all_namespaces**](DefaultApi.md#list_virtual_machine_snapshot_content_for_all_namespaces) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/virtualmachinesnapshotcontents | 
 [**list_virtual_machine_snapshot_for_all_namespaces**](DefaultApi.md#list_virtual_machine_snapshot_for_all_namespaces) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/virtualmachinesnapshots | 
@@ -114,15 +114,15 @@ Method | HTTP request | Description
 [**patch_namespaced_virtual_machine_instance_migration**](DefaultApi.md#patch_namespaced_virtual_machine_instance_migration) | **PATCH** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations/{name:[a-z0-9][a-z0-9\-]*} | 
 [**patch_namespaced_virtual_machine_instance_preset**](DefaultApi.md#patch_namespaced_virtual_machine_instance_preset) | **PATCH** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets/{name:[a-z0-9][a-z0-9\-]*} | 
 [**patch_namespaced_virtual_machine_instance_replica_set**](DefaultApi.md#patch_namespaced_virtual_machine_instance_replica_set) | **PATCH** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets/{name:[a-z0-9][a-z0-9\-]*} | 
-[**patch_namespaced_virtual_machine_instancetype**](DefaultApi.md#patch_namespaced_virtual_machine_instancetype) | **PATCH** /apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
+[**patch_namespaced_virtual_machine_instancetype**](DefaultApi.md#patch_namespaced_virtual_machine_instancetype) | **PATCH** /apis/instancetype.kubevirt.io/v1beta1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
 [**patch_namespaced_virtual_machine_pool**](DefaultApi.md#patch_namespaced_virtual_machine_pool) | **PATCH** /apis/pool.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepools/{name:[a-z0-9][a-z0-9\-]*} | 
-[**patch_namespaced_virtual_machine_preference**](DefaultApi.md#patch_namespaced_virtual_machine_preference) | **PATCH** /apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*} | 
+[**patch_namespaced_virtual_machine_preference**](DefaultApi.md#patch_namespaced_virtual_machine_preference) | **PATCH** /apis/instancetype.kubevirt.io/v1beta1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*} | 
 [**patch_namespaced_virtual_machine_restore**](DefaultApi.md#patch_namespaced_virtual_machine_restore) | **PATCH** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinerestores/{name:[a-z0-9][a-z0-9\-]*} | 
 [**patch_namespaced_virtual_machine_snapshot**](DefaultApi.md#patch_namespaced_virtual_machine_snapshot) | **PATCH** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshots/{name:[a-z0-9][a-z0-9\-]*} | 
 [**patch_namespaced_virtual_machine_snapshot_content**](DefaultApi.md#patch_namespaced_virtual_machine_snapshot_content) | **PATCH** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshotcontents/{name:[a-z0-9][a-z0-9\-]*} | 
 [**patch_virtual_machine_clone**](DefaultApi.md#patch_virtual_machine_clone) | **PATCH** /apis/clone.kubevirt.io/v1alpha1/virtualmachineclones/{name:[a-z0-9][a-z0-9\-]*} | 
-[**patch_virtual_machine_cluster_instancetype**](DefaultApi.md#patch_virtual_machine_cluster_instancetype) | **PATCH** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
-[**patch_virtual_machine_cluster_preference**](DefaultApi.md#patch_virtual_machine_cluster_preference) | **PATCH** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*} | 
+[**patch_virtual_machine_cluster_instancetype**](DefaultApi.md#patch_virtual_machine_cluster_instancetype) | **PATCH** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
+[**patch_virtual_machine_cluster_preference**](DefaultApi.md#patch_virtual_machine_cluster_preference) | **PATCH** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*} | 
 [**read_migration_policy**](DefaultApi.md#read_migration_policy) | **GET** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies/{name:[a-z0-9][a-z0-9\-]*} | 
 [**read_namespaced_kube_virt**](DefaultApi.md#read_namespaced_kube_virt) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/kubevirt/{name:[a-z0-9][a-z0-9\-]*} | 
 [**read_namespaced_virtual_machine**](DefaultApi.md#read_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | 
@@ -131,15 +131,15 @@ Method | HTTP request | Description
 [**read_namespaced_virtual_machine_instance_migration**](DefaultApi.md#read_namespaced_virtual_machine_instance_migration) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations/{name:[a-z0-9][a-z0-9\-]*} | 
 [**read_namespaced_virtual_machine_instance_preset**](DefaultApi.md#read_namespaced_virtual_machine_instance_preset) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets/{name:[a-z0-9][a-z0-9\-]*} | 
 [**read_namespaced_virtual_machine_instance_replica_set**](DefaultApi.md#read_namespaced_virtual_machine_instance_replica_set) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets/{name:[a-z0-9][a-z0-9\-]*} | 
-[**read_namespaced_virtual_machine_instancetype**](DefaultApi.md#read_namespaced_virtual_machine_instancetype) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
+[**read_namespaced_virtual_machine_instancetype**](DefaultApi.md#read_namespaced_virtual_machine_instancetype) | **GET** /apis/instancetype.kubevirt.io/v1beta1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
 [**read_namespaced_virtual_machine_pool**](DefaultApi.md#read_namespaced_virtual_machine_pool) | **GET** /apis/pool.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepools/{name:[a-z0-9][a-z0-9\-]*} | 
-[**read_namespaced_virtual_machine_preference**](DefaultApi.md#read_namespaced_virtual_machine_preference) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*} | 
+[**read_namespaced_virtual_machine_preference**](DefaultApi.md#read_namespaced_virtual_machine_preference) | **GET** /apis/instancetype.kubevirt.io/v1beta1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*} | 
 [**read_namespaced_virtual_machine_restore**](DefaultApi.md#read_namespaced_virtual_machine_restore) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinerestores/{name:[a-z0-9][a-z0-9\-]*} | 
 [**read_namespaced_virtual_machine_snapshot**](DefaultApi.md#read_namespaced_virtual_machine_snapshot) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshots/{name:[a-z0-9][a-z0-9\-]*} | 
 [**read_namespaced_virtual_machine_snapshot_content**](DefaultApi.md#read_namespaced_virtual_machine_snapshot_content) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshotcontents/{name:[a-z0-9][a-z0-9\-]*} | 
 [**read_virtual_machine_clone**](DefaultApi.md#read_virtual_machine_clone) | **GET** /apis/clone.kubevirt.io/v1alpha1/virtualmachineclones/{name:[a-z0-9][a-z0-9\-]*} | 
-[**read_virtual_machine_cluster_instancetype**](DefaultApi.md#read_virtual_machine_cluster_instancetype) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
-[**read_virtual_machine_cluster_preference**](DefaultApi.md#read_virtual_machine_cluster_preference) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*} | 
+[**read_virtual_machine_cluster_instancetype**](DefaultApi.md#read_virtual_machine_cluster_instancetype) | **GET** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
+[**read_virtual_machine_cluster_preference**](DefaultApi.md#read_virtual_machine_cluster_preference) | **GET** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*} | 
 [**replace_migration_policy**](DefaultApi.md#replace_migration_policy) | **PUT** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies/{name:[a-z0-9][a-z0-9\-]*} | 
 [**replace_namespaced_kube_virt**](DefaultApi.md#replace_namespaced_kube_virt) | **PUT** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/kubevirt/{name:[a-z0-9][a-z0-9\-]*} | 
 [**replace_namespaced_virtual_machine**](DefaultApi.md#replace_namespaced_virtual_machine) | **PUT** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*} | 
@@ -148,15 +148,15 @@ Method | HTTP request | Description
 [**replace_namespaced_virtual_machine_instance_migration**](DefaultApi.md#replace_namespaced_virtual_machine_instance_migration) | **PUT** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations/{name:[a-z0-9][a-z0-9\-]*} | 
 [**replace_namespaced_virtual_machine_instance_preset**](DefaultApi.md#replace_namespaced_virtual_machine_instance_preset) | **PUT** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets/{name:[a-z0-9][a-z0-9\-]*} | 
 [**replace_namespaced_virtual_machine_instance_replica_set**](DefaultApi.md#replace_namespaced_virtual_machine_instance_replica_set) | **PUT** /apis/kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets/{name:[a-z0-9][a-z0-9\-]*} | 
-[**replace_namespaced_virtual_machine_instancetype**](DefaultApi.md#replace_namespaced_virtual_machine_instancetype) | **PUT** /apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
+[**replace_namespaced_virtual_machine_instancetype**](DefaultApi.md#replace_namespaced_virtual_machine_instancetype) | **PUT** /apis/instancetype.kubevirt.io/v1beta1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
 [**replace_namespaced_virtual_machine_pool**](DefaultApi.md#replace_namespaced_virtual_machine_pool) | **PUT** /apis/pool.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepools/{name:[a-z0-9][a-z0-9\-]*} | 
-[**replace_namespaced_virtual_machine_preference**](DefaultApi.md#replace_namespaced_virtual_machine_preference) | **PUT** /apis/instancetype.kubevirt.io/v1alpha2/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*} | 
+[**replace_namespaced_virtual_machine_preference**](DefaultApi.md#replace_namespaced_virtual_machine_preference) | **PUT** /apis/instancetype.kubevirt.io/v1beta1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences/{name:[a-z0-9][a-z0-9\-]*} | 
 [**replace_namespaced_virtual_machine_restore**](DefaultApi.md#replace_namespaced_virtual_machine_restore) | **PUT** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinerestores/{name:[a-z0-9][a-z0-9\-]*} | 
 [**replace_namespaced_virtual_machine_snapshot**](DefaultApi.md#replace_namespaced_virtual_machine_snapshot) | **PUT** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshots/{name:[a-z0-9][a-z0-9\-]*} | 
 [**replace_namespaced_virtual_machine_snapshot_content**](DefaultApi.md#replace_namespaced_virtual_machine_snapshot_content) | **PUT** /apis/snapshot.kubevirt.io/v1alpha1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshotcontents/{name:[a-z0-9][a-z0-9\-]*} | 
 [**replace_virtual_machine_clone**](DefaultApi.md#replace_virtual_machine_clone) | **PUT** /apis/clone.kubevirt.io/v1alpha1/virtualmachineclones/{name:[a-z0-9][a-z0-9\-]*} | 
-[**replace_virtual_machine_cluster_instancetype**](DefaultApi.md#replace_virtual_machine_cluster_instancetype) | **PUT** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
-[**replace_virtual_machine_cluster_preference**](DefaultApi.md#replace_virtual_machine_cluster_preference) | **PUT** /apis/instancetype.kubevirt.io/v1alpha2/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*} | 
+[**replace_virtual_machine_cluster_instancetype**](DefaultApi.md#replace_virtual_machine_cluster_instancetype) | **PUT** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterinstancetypes/{name:[a-z0-9][a-z0-9\-]*} | 
+[**replace_virtual_machine_cluster_preference**](DefaultApi.md#replace_virtual_machine_cluster_preference) | **PUT** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterpreferences/{name:[a-z0-9][a-z0-9\-]*} | 
 [**v1_check_health**](DefaultApi.md#v1_check_health) | **GET** /apis/subresources.kubevirt.io/v1/healthz | 
 [**v1_console**](DefaultApi.md#v1_console) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/console | 
 [**v1_expand_spec**](DefaultApi.md#v1_expand_spec) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/expand-vm-spec | 
@@ -243,24 +243,24 @@ Method | HTTP request | Description
 [**watch_namespaced_virtual_machine_instance_migration**](DefaultApi.md#watch_namespaced_virtual_machine_instance_migration) | **GET** /apis/kubevirt.io/v1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancemigrations | 
 [**watch_namespaced_virtual_machine_instance_preset**](DefaultApi.md#watch_namespaced_virtual_machine_instance_preset) | **GET** /apis/kubevirt.io/v1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancepresets | 
 [**watch_namespaced_virtual_machine_instance_replica_set**](DefaultApi.md#watch_namespaced_virtual_machine_instance_replica_set) | **GET** /apis/kubevirt.io/v1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancereplicasets | 
-[**watch_namespaced_virtual_machine_instancetype**](DefaultApi.md#watch_namespaced_virtual_machine_instancetype) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes | 
+[**watch_namespaced_virtual_machine_instancetype**](DefaultApi.md#watch_namespaced_virtual_machine_instancetype) | **GET** /apis/instancetype.kubevirt.io/v1beta1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstancetypes | 
 [**watch_namespaced_virtual_machine_pool**](DefaultApi.md#watch_namespaced_virtual_machine_pool) | **GET** /apis/pool.kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepools | 
-[**watch_namespaced_virtual_machine_preference**](DefaultApi.md#watch_namespaced_virtual_machine_preference) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences | 
+[**watch_namespaced_virtual_machine_preference**](DefaultApi.md#watch_namespaced_virtual_machine_preference) | **GET** /apis/instancetype.kubevirt.io/v1beta1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinepreferences | 
 [**watch_namespaced_virtual_machine_restore**](DefaultApi.md#watch_namespaced_virtual_machine_restore) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinerestores | 
 [**watch_namespaced_virtual_machine_snapshot**](DefaultApi.md#watch_namespaced_virtual_machine_snapshot) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshots | 
 [**watch_namespaced_virtual_machine_snapshot_content**](DefaultApi.md#watch_namespaced_virtual_machine_snapshot_content) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/watch/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachinesnapshotcontents | 
 [**watch_virtual_machine_clone_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_clone_list_for_all_namespaces) | **GET** /apis/clone.kubevirt.io/v1alpha1/watch/virtualmachineclones | 
-[**watch_virtual_machine_cluster_instancetype_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_cluster_instancetype_list_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/watch/virtualmachineclusterinstancetypes | 
-[**watch_virtual_machine_cluster_preference_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_cluster_preference_list_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/watch/virtualmachineclusterpreferences | 
+[**watch_virtual_machine_cluster_instancetype_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_cluster_instancetype_list_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1beta1/watch/virtualmachineclusterinstancetypes | 
+[**watch_virtual_machine_cluster_preference_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_cluster_preference_list_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1beta1/watch/virtualmachineclusterpreferences | 
 [**watch_virtual_machine_export_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_export_list_for_all_namespaces) | **GET** /apis/export.kubevirt.io/v1alpha1/watch/virtualmachineexports | 
 [**watch_virtual_machine_instance_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_instance_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/watch/virtualmachineinstances | 
 [**watch_virtual_machine_instance_migration_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_instance_migration_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/watch/virtualmachineinstancemigrations | 
 [**watch_virtual_machine_instance_preset_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_instance_preset_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/watch/virtualmachineinstancepresets | 
 [**watch_virtual_machine_instance_replica_set_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_instance_replica_set_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/watch/virtualmachineinstancereplicasets | 
-[**watch_virtual_machine_instancetype_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_instancetype_list_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/watch/virtualmachineinstancetypes | 
+[**watch_virtual_machine_instancetype_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_instancetype_list_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1beta1/watch/virtualmachineinstancetypes | 
 [**watch_virtual_machine_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/watch/virtualmachines | 
 [**watch_virtual_machine_pool_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_pool_list_for_all_namespaces) | **GET** /apis/pool.kubevirt.io/v1alpha1/watch/virtualmachinepools | 
-[**watch_virtual_machine_preference_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_preference_list_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1alpha2/watch/virtualmachinepreferences | 
+[**watch_virtual_machine_preference_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_preference_list_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1beta1/watch/virtualmachinepreferences | 
 [**watch_virtual_machine_restore_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_restore_list_for_all_namespaces) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/watch/virtualmachinerestores | 
 [**watch_virtual_machine_snapshot_content_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_snapshot_content_list_for_all_namespaces) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/watch/virtualmachinesnapshotcontents | 
 [**watch_virtual_machine_snapshot_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_snapshot_list_for_all_namespaces) | **GET** /apis/snapshot.kubevirt.io/v1alpha1/watch/virtualmachinesnapshots | 
@@ -657,7 +657,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_namespaced_virtual_machine_instancetype**
-> V1alpha2VirtualMachineInstancetype create_namespaced_virtual_machine_instancetype(body, namespace)
+> V1beta1VirtualMachineInstancetype create_namespaced_virtual_machine_instancetype(body, namespace)
 
 
 
@@ -673,7 +673,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
-body = kubevirt.V1alpha2VirtualMachineInstancetype() # V1alpha2VirtualMachineInstancetype | 
+body = kubevirt.V1beta1VirtualMachineInstancetype() # V1beta1VirtualMachineInstancetype | 
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 
 try: 
@@ -687,12 +687,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**V1alpha2VirtualMachineInstancetype**](V1alpha2VirtualMachineInstancetype.md)|  | 
+ **body** | [**V1beta1VirtualMachineInstancetype**](V1beta1VirtualMachineInstancetype.md)|  | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
 
 ### Return type
 
-[**V1alpha2VirtualMachineInstancetype**](V1alpha2VirtualMachineInstancetype.md)
+[**V1beta1VirtualMachineInstancetype**](V1beta1VirtualMachineInstancetype.md)
 
 ### Authorization
 
@@ -755,7 +755,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_namespaced_virtual_machine_preference**
-> V1alpha2VirtualMachinePreference create_namespaced_virtual_machine_preference(body, namespace)
+> V1beta1VirtualMachinePreference create_namespaced_virtual_machine_preference(body, namespace)
 
 
 
@@ -771,7 +771,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
-body = kubevirt.V1alpha2VirtualMachinePreference() # V1alpha2VirtualMachinePreference | 
+body = kubevirt.V1beta1VirtualMachinePreference() # V1beta1VirtualMachinePreference | 
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 
 try: 
@@ -785,12 +785,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**V1alpha2VirtualMachinePreference**](V1alpha2VirtualMachinePreference.md)|  | 
+ **body** | [**V1beta1VirtualMachinePreference**](V1beta1VirtualMachinePreference.md)|  | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
 
 ### Return type
 
-[**V1alpha2VirtualMachinePreference**](V1alpha2VirtualMachinePreference.md)
+[**V1beta1VirtualMachinePreference**](V1beta1VirtualMachinePreference.md)
 
 ### Authorization
 
@@ -998,7 +998,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_virtual_machine_cluster_instancetype**
-> V1alpha2VirtualMachineClusterInstancetype create_virtual_machine_cluster_instancetype(body)
+> V1beta1VirtualMachineClusterInstancetype create_virtual_machine_cluster_instancetype(body)
 
 
 
@@ -1014,7 +1014,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
-body = kubevirt.V1alpha2VirtualMachineClusterInstancetype() # V1alpha2VirtualMachineClusterInstancetype | 
+body = kubevirt.V1beta1VirtualMachineClusterInstancetype() # V1beta1VirtualMachineClusterInstancetype | 
 
 try: 
     api_response = api_instance.create_virtual_machine_cluster_instancetype(body)
@@ -1027,11 +1027,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**V1alpha2VirtualMachineClusterInstancetype**](V1alpha2VirtualMachineClusterInstancetype.md)|  | 
+ **body** | [**V1beta1VirtualMachineClusterInstancetype**](V1beta1VirtualMachineClusterInstancetype.md)|  | 
 
 ### Return type
 
-[**V1alpha2VirtualMachineClusterInstancetype**](V1alpha2VirtualMachineClusterInstancetype.md)
+[**V1beta1VirtualMachineClusterInstancetype**](V1beta1VirtualMachineClusterInstancetype.md)
 
 ### Authorization
 
@@ -1045,7 +1045,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_virtual_machine_cluster_preference**
-> V1alpha2VirtualMachineClusterPreference create_virtual_machine_cluster_preference(body)
+> V1beta1VirtualMachineClusterPreference create_virtual_machine_cluster_preference(body)
 
 
 
@@ -1061,7 +1061,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
-body = kubevirt.V1alpha2VirtualMachineClusterPreference() # V1alpha2VirtualMachineClusterPreference | 
+body = kubevirt.V1beta1VirtualMachineClusterPreference() # V1beta1VirtualMachineClusterPreference | 
 
 try: 
     api_response = api_instance.create_virtual_machine_cluster_preference(body)
@@ -1074,11 +1074,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**V1alpha2VirtualMachineClusterPreference**](V1alpha2VirtualMachineClusterPreference.md)|  | 
+ **body** | [**V1beta1VirtualMachineClusterPreference**](V1beta1VirtualMachineClusterPreference.md)|  | 
 
 ### Return type
 
-[**V1alpha2VirtualMachineClusterPreference**](V1alpha2VirtualMachineClusterPreference.md)
+[**V1beta1VirtualMachineClusterPreference**](V1beta1VirtualMachineClusterPreference.md)
 
 ### Authorization
 
@@ -3601,8 +3601,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_api_resources_instancetype_kubevirt_io_v1alpha2**
-> K8sIoApimachineryPkgApisMetaV1APIResourceList get_api_resources_instancetype_kubevirt_io_v1alpha2()
+# **get_api_resources_instancetype_kubevirt_io_v1beta1**
+> K8sIoApimachineryPkgApisMetaV1APIResourceList get_api_resources_instancetype_kubevirt_io_v1beta1()
 
 
 
@@ -3620,10 +3620,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 
 try: 
-    api_response = api_instance.get_api_resources_instancetype_kubevirt_io_v1alpha2()
+    api_response = api_instance.get_api_resources_instancetype_kubevirt_io_v1beta1()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->get_api_resources_instancetype_kubevirt_io_v1alpha2: %s\n" % e)
+    print("Exception when calling DefaultApi->get_api_resources_instancetype_kubevirt_io_v1beta1: %s\n" % e)
 ```
 
 ### Parameters
@@ -4549,7 +4549,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_namespaced_virtual_machine_instancetype**
-> V1alpha2VirtualMachineInstancetypeList list_namespaced_virtual_machine_instancetype(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> V1beta1VirtualMachineInstancetypeList list_namespaced_virtual_machine_instancetype(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -4598,7 +4598,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha2VirtualMachineInstancetypeList**](V1alpha2VirtualMachineInstancetypeList.md)
+[**V1beta1VirtualMachineInstancetypeList**](V1beta1VirtualMachineInstancetypeList.md)
 
 ### Authorization
 
@@ -4675,7 +4675,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_namespaced_virtual_machine_preference**
-> V1alpha2VirtualMachinePreferenceList list_namespaced_virtual_machine_preference(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> V1beta1VirtualMachinePreferenceList list_namespaced_virtual_machine_preference(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -4724,7 +4724,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha2VirtualMachinePreferenceList**](V1alpha2VirtualMachinePreferenceList.md)
+[**V1beta1VirtualMachinePreferenceList**](V1beta1VirtualMachinePreferenceList.md)
 
 ### Authorization
 
@@ -4988,7 +4988,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_virtual_machine_cluster_instancetype**
-> V1alpha2VirtualMachineClusterInstancetypeList list_virtual_machine_cluster_instancetype(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> V1beta1VirtualMachineClusterInstancetypeList list_virtual_machine_cluster_instancetype(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5035,7 +5035,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha2VirtualMachineClusterInstancetypeList**](V1alpha2VirtualMachineClusterInstancetypeList.md)
+[**V1beta1VirtualMachineClusterInstancetypeList**](V1beta1VirtualMachineClusterInstancetypeList.md)
 
 ### Authorization
 
@@ -5049,7 +5049,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_virtual_machine_cluster_preference**
-> V1alpha2VirtualMachineClusterPreferenceList list_virtual_machine_cluster_preference(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> V1beta1VirtualMachineClusterPreferenceList list_virtual_machine_cluster_preference(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5096,7 +5096,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha2VirtualMachineClusterPreferenceList**](V1alpha2VirtualMachineClusterPreferenceList.md)
+[**V1beta1VirtualMachineClusterPreferenceList**](V1beta1VirtualMachineClusterPreferenceList.md)
 
 ### Authorization
 
@@ -5476,7 +5476,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_virtual_machine_instancetype_for_all_namespaces**
-> V1alpha2VirtualMachineInstancetypeList list_virtual_machine_instancetype_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> V1beta1VirtualMachineInstancetypeList list_virtual_machine_instancetype_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5523,7 +5523,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha2VirtualMachineInstancetypeList**](V1alpha2VirtualMachineInstancetypeList.md)
+[**V1beta1VirtualMachineInstancetypeList**](V1beta1VirtualMachineInstancetypeList.md)
 
 ### Authorization
 
@@ -5598,7 +5598,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_virtual_machine_preference_for_all_namespaces**
-> V1alpha2VirtualMachinePreferenceList list_virtual_machine_preference_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> V1beta1VirtualMachinePreferenceList list_virtual_machine_preference_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5645,7 +5645,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha2VirtualMachinePreferenceList**](V1alpha2VirtualMachinePreferenceList.md)
+[**V1beta1VirtualMachinePreferenceList**](V1beta1VirtualMachinePreferenceList.md)
 
 ### Authorization
 
@@ -6248,7 +6248,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_namespaced_virtual_machine_instancetype**
-> V1alpha2VirtualMachineInstancetype patch_namespaced_virtual_machine_instancetype(name, namespace, body)
+> V1beta1VirtualMachineInstancetype patch_namespaced_virtual_machine_instancetype(name, namespace, body)
 
 
 
@@ -6285,7 +6285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha2VirtualMachineInstancetype**](V1alpha2VirtualMachineInstancetype.md)
+[**V1beta1VirtualMachineInstancetype**](V1beta1VirtualMachineInstancetype.md)
 
 ### Authorization
 
@@ -6350,7 +6350,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_namespaced_virtual_machine_preference**
-> V1alpha2VirtualMachinePreference patch_namespaced_virtual_machine_preference(name, namespace, body)
+> V1beta1VirtualMachinePreference patch_namespaced_virtual_machine_preference(name, namespace, body)
 
 
 
@@ -6387,7 +6387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha2VirtualMachinePreference**](V1alpha2VirtualMachinePreference.md)
+[**V1beta1VirtualMachinePreference**](V1beta1VirtualMachinePreference.md)
 
 ### Authorization
 
@@ -6603,7 +6603,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_virtual_machine_cluster_instancetype**
-> V1alpha2VirtualMachineClusterInstancetype patch_virtual_machine_cluster_instancetype(name, body)
+> V1beta1VirtualMachineClusterInstancetype patch_virtual_machine_cluster_instancetype(name, body)
 
 
 
@@ -6638,7 +6638,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha2VirtualMachineClusterInstancetype**](V1alpha2VirtualMachineClusterInstancetype.md)
+[**V1beta1VirtualMachineClusterInstancetype**](V1beta1VirtualMachineClusterInstancetype.md)
 
 ### Authorization
 
@@ -6652,7 +6652,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_virtual_machine_cluster_preference**
-> V1alpha2VirtualMachineClusterPreference patch_virtual_machine_cluster_preference(name, body)
+> V1beta1VirtualMachineClusterPreference patch_virtual_machine_cluster_preference(name, body)
 
 
 
@@ -6687,7 +6687,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha2VirtualMachineClusterPreference**](V1alpha2VirtualMachineClusterPreference.md)
+[**V1beta1VirtualMachineClusterPreference**](V1beta1VirtualMachineClusterPreference.md)
 
 ### Authorization
 
@@ -7123,7 +7123,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **read_namespaced_virtual_machine_instancetype**
-> V1alpha2VirtualMachineInstancetype read_namespaced_virtual_machine_instancetype(name, namespace, exact=exact, export=export)
+> V1beta1VirtualMachineInstancetype read_namespaced_virtual_machine_instancetype(name, namespace, exact=exact, export=export)
 
 
 
@@ -7162,7 +7162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha2VirtualMachineInstancetype**](V1alpha2VirtualMachineInstancetype.md)
+[**V1beta1VirtualMachineInstancetype**](V1beta1VirtualMachineInstancetype.md)
 
 ### Authorization
 
@@ -7229,7 +7229,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **read_namespaced_virtual_machine_preference**
-> V1alpha2VirtualMachinePreference read_namespaced_virtual_machine_preference(name, namespace, exact=exact, export=export)
+> V1beta1VirtualMachinePreference read_namespaced_virtual_machine_preference(name, namespace, exact=exact, export=export)
 
 
 
@@ -7268,7 +7268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha2VirtualMachinePreference**](V1alpha2VirtualMachinePreference.md)
+[**V1beta1VirtualMachinePreference**](V1beta1VirtualMachinePreference.md)
 
 ### Authorization
 
@@ -7492,7 +7492,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **read_virtual_machine_cluster_instancetype**
-> V1alpha2VirtualMachineClusterInstancetype read_virtual_machine_cluster_instancetype(name, exact=exact, export=export)
+> V1beta1VirtualMachineClusterInstancetype read_virtual_machine_cluster_instancetype(name, exact=exact, export=export)
 
 
 
@@ -7529,7 +7529,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha2VirtualMachineClusterInstancetype**](V1alpha2VirtualMachineClusterInstancetype.md)
+[**V1beta1VirtualMachineClusterInstancetype**](V1beta1VirtualMachineClusterInstancetype.md)
 
 ### Authorization
 
@@ -7543,7 +7543,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **read_virtual_machine_cluster_preference**
-> V1alpha2VirtualMachineClusterPreference read_virtual_machine_cluster_preference(name, exact=exact, export=export)
+> V1beta1VirtualMachineClusterPreference read_virtual_machine_cluster_preference(name, exact=exact, export=export)
 
 
 
@@ -7580,7 +7580,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha2VirtualMachineClusterPreference**](V1alpha2VirtualMachineClusterPreference.md)
+[**V1beta1VirtualMachineClusterPreference**](V1beta1VirtualMachineClusterPreference.md)
 
 ### Authorization
 
@@ -8000,7 +8000,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **replace_namespaced_virtual_machine_instancetype**
-> V1alpha2VirtualMachineInstancetype replace_namespaced_virtual_machine_instancetype(name, namespace, body)
+> V1beta1VirtualMachineInstancetype replace_namespaced_virtual_machine_instancetype(name, namespace, body)
 
 
 
@@ -8018,7 +8018,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1alpha2VirtualMachineInstancetype() # V1alpha2VirtualMachineInstancetype | 
+body = kubevirt.V1beta1VirtualMachineInstancetype() # V1beta1VirtualMachineInstancetype | 
 
 try: 
     api_response = api_instance.replace_namespaced_virtual_machine_instancetype(name, namespace, body)
@@ -8033,11 +8033,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1alpha2VirtualMachineInstancetype**](V1alpha2VirtualMachineInstancetype.md)|  | 
+ **body** | [**V1beta1VirtualMachineInstancetype**](V1beta1VirtualMachineInstancetype.md)|  | 
 
 ### Return type
 
-[**V1alpha2VirtualMachineInstancetype**](V1alpha2VirtualMachineInstancetype.md)
+[**V1beta1VirtualMachineInstancetype**](V1beta1VirtualMachineInstancetype.md)
 
 ### Authorization
 
@@ -8102,7 +8102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **replace_namespaced_virtual_machine_preference**
-> V1alpha2VirtualMachinePreference replace_namespaced_virtual_machine_preference(name, namespace, body)
+> V1beta1VirtualMachinePreference replace_namespaced_virtual_machine_preference(name, namespace, body)
 
 
 
@@ -8120,7 +8120,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1alpha2VirtualMachinePreference() # V1alpha2VirtualMachinePreference | 
+body = kubevirt.V1beta1VirtualMachinePreference() # V1beta1VirtualMachinePreference | 
 
 try: 
     api_response = api_instance.replace_namespaced_virtual_machine_preference(name, namespace, body)
@@ -8135,11 +8135,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1alpha2VirtualMachinePreference**](V1alpha2VirtualMachinePreference.md)|  | 
+ **body** | [**V1beta1VirtualMachinePreference**](V1beta1VirtualMachinePreference.md)|  | 
 
 ### Return type
 
-[**V1alpha2VirtualMachinePreference**](V1alpha2VirtualMachinePreference.md)
+[**V1beta1VirtualMachinePreference**](V1beta1VirtualMachinePreference.md)
 
 ### Authorization
 
@@ -8355,7 +8355,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **replace_virtual_machine_cluster_instancetype**
-> V1alpha2VirtualMachineClusterInstancetype replace_virtual_machine_cluster_instancetype(name, body)
+> V1beta1VirtualMachineClusterInstancetype replace_virtual_machine_cluster_instancetype(name, body)
 
 
 
@@ -8372,7 +8372,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
-body = kubevirt.V1alpha2VirtualMachineClusterInstancetype() # V1alpha2VirtualMachineClusterInstancetype | 
+body = kubevirt.V1beta1VirtualMachineClusterInstancetype() # V1beta1VirtualMachineClusterInstancetype | 
 
 try: 
     api_response = api_instance.replace_virtual_machine_cluster_instancetype(name, body)
@@ -8386,11 +8386,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
- **body** | [**V1alpha2VirtualMachineClusterInstancetype**](V1alpha2VirtualMachineClusterInstancetype.md)|  | 
+ **body** | [**V1beta1VirtualMachineClusterInstancetype**](V1beta1VirtualMachineClusterInstancetype.md)|  | 
 
 ### Return type
 
-[**V1alpha2VirtualMachineClusterInstancetype**](V1alpha2VirtualMachineClusterInstancetype.md)
+[**V1beta1VirtualMachineClusterInstancetype**](V1beta1VirtualMachineClusterInstancetype.md)
 
 ### Authorization
 
@@ -8404,7 +8404,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **replace_virtual_machine_cluster_preference**
-> V1alpha2VirtualMachineClusterPreference replace_virtual_machine_cluster_preference(name, body)
+> V1beta1VirtualMachineClusterPreference replace_virtual_machine_cluster_preference(name, body)
 
 
 
@@ -8421,7 +8421,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
-body = kubevirt.V1alpha2VirtualMachineClusterPreference() # V1alpha2VirtualMachineClusterPreference | 
+body = kubevirt.V1beta1VirtualMachineClusterPreference() # V1beta1VirtualMachineClusterPreference | 
 
 try: 
     api_response = api_instance.replace_virtual_machine_cluster_preference(name, body)
@@ -8435,11 +8435,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
- **body** | [**V1alpha2VirtualMachineClusterPreference**](V1alpha2VirtualMachineClusterPreference.md)|  | 
+ **body** | [**V1beta1VirtualMachineClusterPreference**](V1beta1VirtualMachineClusterPreference.md)|  | 
 
 ### Return type
 
-[**V1alpha2VirtualMachineClusterPreference**](V1alpha2VirtualMachineClusterPreference.md)
+[**V1beta1VirtualMachineClusterPreference**](V1beta1VirtualMachineClusterPreference.md)
 
 ### Authorization
 

@@ -147,6 +147,7 @@ from .v1_interface_masquerade import V1InterfaceMasquerade
 from .v1_interface_passt import V1InterfacePasst
 from .v1_interface_sriov import V1InterfaceSRIOV
 from .v1_interface_slirp import V1InterfaceSlirp
+from .v1_ksm_configuration import V1KSMConfiguration
 from .v1_kvm_timer import V1KVMTimer
 from .v1_kernel_boot import V1KernelBoot
 from .v1_kernel_boot_container import V1KernelBootContainer

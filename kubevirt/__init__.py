@@ -194,6 +194,7 @@ from .models.v1_rtc_timer import V1RTCTimer
 from .models.v1_rate_limiter import V1RateLimiter
 from .models.v1_realtime import V1Realtime
 from .models.v1_reloadable_component_configuration import V1ReloadableComponentConfiguration
+from .models.v1_remove_interface_options import V1RemoveInterfaceOptions
 from .models.v1_remove_volume_options import V1RemoveVolumeOptions
 from .models.v1_resource_requirements import V1ResourceRequirements
 from .models.v1_restart_options import V1RestartOptions

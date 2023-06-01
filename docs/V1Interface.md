@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **ports** | [**list[V1Port]**](V1Port.md) | List of ports to be forwarded to the virtual machine. | [optional] 
 **slirp** | [**V1InterfaceSlirp**](V1InterfaceSlirp.md) |  | [optional] 
 **sriov** | [**V1InterfaceSRIOV**](V1InterfaceSRIOV.md) |  | [optional] 
+**state** | **str** | State represents the requested operational state of the interface. The (only) value supported is &#x60;absent&#x60;, expressing a request to remove the interface. | [optional] 
 **tag** | **str** | If specified, the virtual network interface address and its tag will be provided to the guest via config drive | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

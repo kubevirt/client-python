@@ -45,6 +45,7 @@ class V1Interface(object):
         'ports': 'list[V1Port]',
         'slirp': 'V1InterfaceSlirp',
         'sriov': 'V1InterfaceSRIOV',
+        'state': 'str',
         'tag': 'str'
     }
 
@@ -63,10 +64,11 @@ class V1Interface(object):
         'ports': 'ports',
         'slirp': 'slirp',
         'sriov': 'sriov',
+        'state': 'state',
         'tag': 'tag'
     }
 
-    def __init__(self, acpi_index=None, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name='', passt=None, pci_address=None, ports=None, slirp=None, sriov=None, tag=None):
+    def __init__(self, acpi_index=None, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name='', passt=None, pci_address=None, ports=None, slirp=None, sriov=None, state=None, tag=None):
         """
         V1Interface - a model defined in Swagger
         """
@@ -85,6 +87,7 @@ class V1Interface(object):
         self._ports = None
         self._slirp = None
         self._sriov = None
+        self._state = None
         self._tag = None
 
         if acpi_index is not None:
@@ -114,6 +117,8 @@ class V1Interface(object):
           self.slirp = slirp
         if sriov is not None:
           self.sriov = sriov
+        if state is not None:
+          self.state = state
         if tag is not None:
           self.tag = tag
 
@@ -428,6 +433,29 @@ class V1Interface(object):
         """
 
         self._sriov = sriov
+
+    @property
+    def state(self):
+        """
+        Gets the state of this V1Interface.
+        State represents the requested operational state of the interface. The (only) value supported is `absent`, expressing a request to remove the interface.
+
+        :return: The state of this V1Interface.
+        :rtype: str
+        """
+        return self._state
+
+    @state.setter
+    def state(self, state):
+        """
+        Sets the state of this V1Interface.
+        State represents the requested operational state of the interface. The (only) value supported is `absent`, expressing a request to remove the interface.
+
+        :param state: The state of this V1Interface.
+        :type: str
+        """
+
+        self._state = state
 
     @property
     def tag(self):

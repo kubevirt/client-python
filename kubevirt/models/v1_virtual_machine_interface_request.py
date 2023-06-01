@@ -31,22 +31,27 @@ class V1VirtualMachineInterfaceRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'add_interface_options': 'V1AddInterfaceOptions'
+        'add_interface_options': 'V1AddInterfaceOptions',
+        'remove_interface_options': 'V1RemoveInterfaceOptions'
     }
 
     attribute_map = {
-        'add_interface_options': 'addInterfaceOptions'
+        'add_interface_options': 'addInterfaceOptions',
+        'remove_interface_options': 'removeInterfaceOptions'
     }
 
-    def __init__(self, add_interface_options=None):
+    def __init__(self, add_interface_options=None, remove_interface_options=None):
         """
         V1VirtualMachineInterfaceRequest - a model defined in Swagger
         """
 
         self._add_interface_options = None
+        self._remove_interface_options = None
 
         if add_interface_options is not None:
           self.add_interface_options = add_interface_options
+        if remove_interface_options is not None:
+          self.remove_interface_options = remove_interface_options
 
     @property
     def add_interface_options(self):
@@ -70,6 +75,29 @@ class V1VirtualMachineInterfaceRequest(object):
         """
 
         self._add_interface_options = add_interface_options
+
+    @property
+    def remove_interface_options(self):
+        """
+        Gets the remove_interface_options of this V1VirtualMachineInterfaceRequest.
+        RemoveInterfaceOptions when set indicates a network interface should be removed. The details within this field specify how to remove the interface
+
+        :return: The remove_interface_options of this V1VirtualMachineInterfaceRequest.
+        :rtype: V1RemoveInterfaceOptions
+        """
+        return self._remove_interface_options
+
+    @remove_interface_options.setter
+    def remove_interface_options(self, remove_interface_options):
+        """
+        Sets the remove_interface_options of this V1VirtualMachineInterfaceRequest.
+        RemoveInterfaceOptions when set indicates a network interface should be removed. The details within this field specify how to remove the interface
+
+        :param remove_interface_options: The remove_interface_options of this V1VirtualMachineInterfaceRequest.
+        :type: V1RemoveInterfaceOptions
+        """
+
+        self._remove_interface_options = remove_interface_options
 
     def to_dict(self):
         """

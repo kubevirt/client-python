@@ -1735,6 +1735,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1alpha3vmi_removeinterface(self):
+        """
+        Test case for v1alpha3vmi_removeinterface
+
+        
+        """
+        pass
+
     def test_v1alpha3vmi_removevolume(self):
         """
         Test case for v1alpha3vmi_removevolume
@@ -1858,6 +1866,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1vmi_port_forward_with_protocol(self):
         """
         Test case for v1vmi_port_forward_with_protocol
+
+        
+        """
+        pass
+
+    def test_v1vmi_removeinterface(self):
+        """
+        Test case for v1vmi_removeinterface
 
         
         """

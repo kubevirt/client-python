@@ -194,6 +194,7 @@ from .v1_rtc_timer import V1RTCTimer
 from .v1_rate_limiter import V1RateLimiter
 from .v1_realtime import V1Realtime
 from .v1_reloadable_component_configuration import V1ReloadableComponentConfiguration
+from .v1_remove_interface_options import V1RemoveInterfaceOptions
 from .v1_remove_volume_options import V1RemoveVolumeOptions
 from .v1_resource_requirements import V1ResourceRequirements
 from .v1_restart_options import V1RestartOptions

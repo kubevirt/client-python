@@ -46,6 +46,7 @@ class V1beta1DevicePreferences(object):
         'preferred_disk_io': 'str',
         'preferred_input_bus': 'str',
         'preferred_input_type': 'str',
+        'preferred_interface_masquerade': 'V1InterfaceMasquerade',
         'preferred_interface_model': 'str',
         'preferred_lun_bus': 'str',
         'preferred_network_interface_multi_queue': 'bool',
@@ -72,6 +73,7 @@ class V1beta1DevicePreferences(object):
         'preferred_disk_io': 'preferredDiskIO',
         'preferred_input_bus': 'preferredInputBus',
         'preferred_input_type': 'preferredInputType',
+        'preferred_interface_masquerade': 'preferredInterfaceMasquerade',
         'preferred_interface_model': 'preferredInterfaceModel',
         'preferred_lun_bus': 'preferredLunBus',
         'preferred_network_interface_multi_queue': 'preferredNetworkInterfaceMultiQueue',
@@ -82,7 +84,7 @@ class V1beta1DevicePreferences(object):
         'preferred_virtual_gpu_options': 'preferredVirtualGPUOptions'
     }
 
-    def __init__(self, preferred_autoattach_graphics_device=None, preferred_autoattach_input_device=None, preferred_autoattach_mem_balloon=None, preferred_autoattach_pod_interface=None, preferred_autoattach_serial_console=None, preferred_block_multi_queue=None, preferred_cdrom_bus=None, preferred_disable_hotplug=None, preferred_disk_block_size=None, preferred_disk_bus=None, preferred_disk_cache=None, preferred_disk_dedicated_io_thread=None, preferred_disk_io=None, preferred_input_bus=None, preferred_input_type=None, preferred_interface_model=None, preferred_lun_bus=None, preferred_network_interface_multi_queue=None, preferred_rng=None, preferred_sound_model=None, preferred_tpm=None, preferred_use_virtio_transitional=None, preferred_virtual_gpu_options=None):
+    def __init__(self, preferred_autoattach_graphics_device=None, preferred_autoattach_input_device=None, preferred_autoattach_mem_balloon=None, preferred_autoattach_pod_interface=None, preferred_autoattach_serial_console=None, preferred_block_multi_queue=None, preferred_cdrom_bus=None, preferred_disable_hotplug=None, preferred_disk_block_size=None, preferred_disk_bus=None, preferred_disk_cache=None, preferred_disk_dedicated_io_thread=None, preferred_disk_io=None, preferred_input_bus=None, preferred_input_type=None, preferred_interface_masquerade=None, preferred_interface_model=None, preferred_lun_bus=None, preferred_network_interface_multi_queue=None, preferred_rng=None, preferred_sound_model=None, preferred_tpm=None, preferred_use_virtio_transitional=None, preferred_virtual_gpu_options=None):
         """
         V1beta1DevicePreferences - a model defined in Swagger
         """
@@ -102,6 +104,7 @@ class V1beta1DevicePreferences(object):
         self._preferred_disk_io = None
         self._preferred_input_bus = None
         self._preferred_input_type = None
+        self._preferred_interface_masquerade = None
         self._preferred_interface_model = None
         self._preferred_lun_bus = None
         self._preferred_network_interface_multi_queue = None
@@ -141,6 +144,8 @@ class V1beta1DevicePreferences(object):
           self.preferred_input_bus = preferred_input_bus
         if preferred_input_type is not None:
           self.preferred_input_type = preferred_input_type
+        if preferred_interface_masquerade is not None:
+          self.preferred_interface_masquerade = preferred_interface_masquerade
         if preferred_interface_model is not None:
           self.preferred_interface_model = preferred_interface_model
         if preferred_lun_bus is not None:
@@ -502,6 +507,29 @@ class V1beta1DevicePreferences(object):
         """
 
         self._preferred_input_type = preferred_input_type
+
+    @property
+    def preferred_interface_masquerade(self):
+        """
+        Gets the preferred_interface_masquerade of this V1beta1DevicePreferences.
+        PreferredInterfaceMasquerade optionally defines the preferred masquerade configuration to use with each network interface.
+
+        :return: The preferred_interface_masquerade of this V1beta1DevicePreferences.
+        :rtype: V1InterfaceMasquerade
+        """
+        return self._preferred_interface_masquerade
+
+    @preferred_interface_masquerade.setter
+    def preferred_interface_masquerade(self, preferred_interface_masquerade):
+        """
+        Sets the preferred_interface_masquerade of this V1beta1DevicePreferences.
+        PreferredInterfaceMasquerade optionally defines the preferred masquerade configuration to use with each network interface.
+
+        :param preferred_interface_masquerade: The preferred_interface_masquerade of this V1beta1DevicePreferences.
+        :type: V1InterfaceMasquerade
+        """
+
+        self._preferred_interface_masquerade = preferred_interface_masquerade
 
     @property
     def preferred_interface_model(self):

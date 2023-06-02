@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **preferred_disk_io** | **str** | PreferredIo optionally defines the QEMU disk IO mode to be used by Disk devices. | [optional] 
 **preferred_input_bus** | **str** | PreferredInputBus optionally defines the preferred bus for Input devices. | [optional] 
 **preferred_input_type** | **str** | PreferredInputType optionally defines the preferred type for Input devices. | [optional] 
+**preferred_interface_masquerade** | [**V1InterfaceMasquerade**](V1InterfaceMasquerade.md) | PreferredInterfaceMasquerade optionally defines the preferred masquerade configuration to use with each network interface. | [optional] 
 **preferred_interface_model** | **str** | PreferredInterfaceModel optionally defines the preferred model to be used by Interface devices. | [optional] 
 **preferred_lun_bus** | **str** | PreferredLunBus optionally defines the preferred bus for Lun Disk devices. | [optional] 
 **preferred_network_interface_multi_queue** | **bool** | PreferredNetworkInterfaceMultiQueue optionally enables the vhost multiqueue feature for virtio interfaces. | [optional] 

@@ -34,6 +34,7 @@ class V1KubeVirtConfiguration(object):
         'additional_guest_memory_overhead_ratio': 'str',
         'api_configuration': 'V1ReloadableComponentConfiguration',
         'architecture_configuration': 'V1ArchConfiguration',
+        'auto_cpu_limit_namespace_label_selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
         'controller_configuration': 'V1ReloadableComponentConfiguration',
         'cpu_model': 'str',
         'cpu_request': 'K8sIoApimachineryPkgApiResourceQuantity',
@@ -69,6 +70,7 @@ class V1KubeVirtConfiguration(object):
         'additional_guest_memory_overhead_ratio': 'additionalGuestMemoryOverheadRatio',
         'api_configuration': 'apiConfiguration',
         'architecture_configuration': 'architectureConfiguration',
+        'auto_cpu_limit_namespace_label_selector': 'autoCPULimitNamespaceLabelSelector',
         'controller_configuration': 'controllerConfiguration',
         'cpu_model': 'cpuModel',
         'cpu_request': 'cpuRequest',
@@ -100,7 +102,7 @@ class V1KubeVirtConfiguration(object):
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, ksm_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_state_storage_class=None, webhook_configuration=None):
+    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, ksm_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_state_storage_class=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -108,6 +110,7 @@ class V1KubeVirtConfiguration(object):
         self._additional_guest_memory_overhead_ratio = None
         self._api_configuration = None
         self._architecture_configuration = None
+        self._auto_cpu_limit_namespace_label_selector = None
         self._controller_configuration = None
         self._cpu_model = None
         self._cpu_request = None
@@ -144,6 +147,8 @@ class V1KubeVirtConfiguration(object):
           self.api_configuration = api_configuration
         if architecture_configuration is not None:
           self.architecture_configuration = architecture_configuration
+        if auto_cpu_limit_namespace_label_selector is not None:
+          self.auto_cpu_limit_namespace_label_selector = auto_cpu_limit_namespace_label_selector
         if controller_configuration is not None:
           self.controller_configuration = controller_configuration
         if cpu_model is not None:
@@ -267,6 +272,29 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._architecture_configuration = architecture_configuration
+
+    @property
+    def auto_cpu_limit_namespace_label_selector(self):
+        """
+        Gets the auto_cpu_limit_namespace_label_selector of this V1KubeVirtConfiguration.
+        When set, AutoCPULimitNamespaceLabelSelector will set a CPU limit on virt-launcher for VMIs running inside namespaces that match the label selector. The CPU limit will equal the number of requested vCPUs. This setting does not apply to VMIs with dedicated CPUs.
+
+        :return: The auto_cpu_limit_namespace_label_selector of this V1KubeVirtConfiguration.
+        :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        """
+        return self._auto_cpu_limit_namespace_label_selector
+
+    @auto_cpu_limit_namespace_label_selector.setter
+    def auto_cpu_limit_namespace_label_selector(self, auto_cpu_limit_namespace_label_selector):
+        """
+        Sets the auto_cpu_limit_namespace_label_selector of this V1KubeVirtConfiguration.
+        When set, AutoCPULimitNamespaceLabelSelector will set a CPU limit on virt-launcher for VMIs running inside namespaces that match the label selector. The CPU limit will equal the number of requested vCPUs. This setting does not apply to VMIs with dedicated CPUs.
+
+        :param auto_cpu_limit_namespace_label_selector: The auto_cpu_limit_namespace_label_selector of this V1KubeVirtConfiguration.
+        :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        """
+
+        self._auto_cpu_limit_namespace_label_selector = auto_cpu_limit_namespace_label_selector
 
     @property
     def controller_configuration(self):

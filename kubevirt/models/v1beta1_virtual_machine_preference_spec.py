@@ -37,6 +37,7 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         'features': 'V1beta1FeaturePreferences',
         'firmware': 'V1beta1FirmwarePreferences',
         'machine': 'V1beta1MachinePreferences',
+        'preferred_termination_grace_period_seconds': 'int',
         'volumes': 'V1beta1VolumePreferences'
     }
 
@@ -47,10 +48,11 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         'features': 'features',
         'firmware': 'firmware',
         'machine': 'machine',
+        'preferred_termination_grace_period_seconds': 'preferredTerminationGracePeriodSeconds',
         'volumes': 'volumes'
     }
 
-    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, volumes=None):
+    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, preferred_termination_grace_period_seconds=None, volumes=None):
         """
         V1beta1VirtualMachinePreferenceSpec - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         self._features = None
         self._firmware = None
         self._machine = None
+        self._preferred_termination_grace_period_seconds = None
         self._volumes = None
 
         if clock is not None:
@@ -75,6 +78,8 @@ class V1beta1VirtualMachinePreferenceSpec(object):
           self.firmware = firmware
         if machine is not None:
           self.machine = machine
+        if preferred_termination_grace_period_seconds is not None:
+          self.preferred_termination_grace_period_seconds = preferred_termination_grace_period_seconds
         if volumes is not None:
           self.volumes = volumes
 
@@ -215,6 +220,29 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         """
 
         self._machine = machine
+
+    @property
+    def preferred_termination_grace_period_seconds(self):
+        """
+        Gets the preferred_termination_grace_period_seconds of this V1beta1VirtualMachinePreferenceSpec.
+        Grace period observed after signalling a VirtualMachineInstance to stop after which the VirtualMachineInstance is force terminated.
+
+        :return: The preferred_termination_grace_period_seconds of this V1beta1VirtualMachinePreferenceSpec.
+        :rtype: int
+        """
+        return self._preferred_termination_grace_period_seconds
+
+    @preferred_termination_grace_period_seconds.setter
+    def preferred_termination_grace_period_seconds(self, preferred_termination_grace_period_seconds):
+        """
+        Sets the preferred_termination_grace_period_seconds of this V1beta1VirtualMachinePreferenceSpec.
+        Grace period observed after signalling a VirtualMachineInstance to stop after which the VirtualMachineInstance is force terminated.
+
+        :param preferred_termination_grace_period_seconds: The preferred_termination_grace_period_seconds of this V1beta1VirtualMachinePreferenceSpec.
+        :type: int
+        """
+
+        self._preferred_termination_grace_period_seconds = preferred_termination_grace_period_seconds
 
     @property
     def volumes(self):

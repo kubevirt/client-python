@@ -33,6 +33,7 @@ class V1beta1StorageSpec(object):
     swagger_types = {
         'access_modes': 'list[str]',
         'data_source': 'K8sIoApiCoreV1TypedLocalObjectReference',
+        'data_source_ref': 'K8sIoApiCoreV1TypedLocalObjectReference',
         'resources': 'K8sIoApiCoreV1ResourceRequirements',
         'selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
         'storage_class_name': 'str',
@@ -43,6 +44,7 @@ class V1beta1StorageSpec(object):
     attribute_map = {
         'access_modes': 'accessModes',
         'data_source': 'dataSource',
+        'data_source_ref': 'dataSourceRef',
         'resources': 'resources',
         'selector': 'selector',
         'storage_class_name': 'storageClassName',
@@ -50,13 +52,14 @@ class V1beta1StorageSpec(object):
         'volume_name': 'volumeName'
     }
 
-    def __init__(self, access_modes=None, data_source=None, resources=None, selector=None, storage_class_name=None, volume_mode=None, volume_name=None):
+    def __init__(self, access_modes=None, data_source=None, data_source_ref=None, resources=None, selector=None, storage_class_name=None, volume_mode=None, volume_name=None):
         """
         V1beta1StorageSpec - a model defined in Swagger
         """
 
         self._access_modes = None
         self._data_source = None
+        self._data_source_ref = None
         self._resources = None
         self._selector = None
         self._storage_class_name = None
@@ -67,6 +70,8 @@ class V1beta1StorageSpec(object):
           self.access_modes = access_modes
         if data_source is not None:
           self.data_source = data_source
+        if data_source_ref is not None:
+          self.data_source_ref = data_source_ref
         if resources is not None:
           self.resources = resources
         if selector is not None:
@@ -105,7 +110,7 @@ class V1beta1StorageSpec(object):
     def data_source(self):
         """
         Gets the data_source of this V1beta1StorageSpec.
-        This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.
+        This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
 
         :return: The data_source of this V1beta1StorageSpec.
         :rtype: K8sIoApiCoreV1TypedLocalObjectReference
@@ -116,13 +121,36 @@ class V1beta1StorageSpec(object):
     def data_source(self, data_source):
         """
         Sets the data_source of this V1beta1StorageSpec.
-        This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.
+        This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
 
         :param data_source: The data_source of this V1beta1StorageSpec.
         :type: K8sIoApiCoreV1TypedLocalObjectReference
         """
 
         self._data_source = data_source
+
+    @property
+    def data_source_ref(self):
+        """
+        Gets the data_source_ref of this V1beta1StorageSpec.
+        Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef allows any non-core object, as well as PersistentVolumeClaim objects. * While DataSource ignores disallowed values (dropping them), DataSourceRef preserves all values, and generates an error if a disallowed value is specified. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
+
+        :return: The data_source_ref of this V1beta1StorageSpec.
+        :rtype: K8sIoApiCoreV1TypedLocalObjectReference
+        """
+        return self._data_source_ref
+
+    @data_source_ref.setter
+    def data_source_ref(self, data_source_ref):
+        """
+        Sets the data_source_ref of this V1beta1StorageSpec.
+        Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef allows any non-core object, as well as PersistentVolumeClaim objects. * While DataSource ignores disallowed values (dropping them), DataSourceRef preserves all values, and generates an error if a disallowed value is specified. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
+
+        :param data_source_ref: The data_source_ref of this V1beta1StorageSpec.
+        :type: K8sIoApiCoreV1TypedLocalObjectReference
+        """
+
+        self._data_source_ref = data_source_ref
 
     @property
     def resources(self):

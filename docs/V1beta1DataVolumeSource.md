@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **pvc** | [**V1beta1DataVolumeSourcePVC**](V1beta1DataVolumeSourcePVC.md) |  | [optional] 
 **registry** | [**V1beta1DataVolumeSourceRegistry**](V1beta1DataVolumeSourceRegistry.md) |  | [optional] 
 **s3** | [**V1beta1DataVolumeSourceS3**](V1beta1DataVolumeSourceS3.md) |  | [optional] 
+**snapshot** | [**V1beta1DataVolumeSourceSnapshot**](V1beta1DataVolumeSourceSnapshot.md) |  | [optional] 
 **upload** | [**V1beta1DataVolumeSourceUpload**](V1beta1DataVolumeSourceUpload.md) |  | [optional] 
 **vddk** | [**V1beta1DataVolumeSourceVDDK**](V1beta1DataVolumeSourceVDDK.md) |  | [optional] 
 

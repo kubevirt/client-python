@@ -37,6 +37,7 @@ class V1beta1DataVolumeSource(object):
         'pvc': 'V1beta1DataVolumeSourcePVC',
         'registry': 'V1beta1DataVolumeSourceRegistry',
         's3': 'V1beta1DataVolumeSourceS3',
+        'snapshot': 'V1beta1DataVolumeSourceSnapshot',
         'upload': 'V1beta1DataVolumeSourceUpload',
         'vddk': 'V1beta1DataVolumeSourceVDDK'
     }
@@ -48,11 +49,12 @@ class V1beta1DataVolumeSource(object):
         'pvc': 'pvc',
         'registry': 'registry',
         's3': 's3',
+        'snapshot': 'snapshot',
         'upload': 'upload',
         'vddk': 'vddk'
     }
 
-    def __init__(self, blank=None, http=None, imageio=None, pvc=None, registry=None, s3=None, upload=None, vddk=None):
+    def __init__(self, blank=None, http=None, imageio=None, pvc=None, registry=None, s3=None, snapshot=None, upload=None, vddk=None):
         """
         V1beta1DataVolumeSource - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class V1beta1DataVolumeSource(object):
         self._pvc = None
         self._registry = None
         self._s3 = None
+        self._snapshot = None
         self._upload = None
         self._vddk = None
 
@@ -78,6 +81,8 @@ class V1beta1DataVolumeSource(object):
           self.registry = registry
         if s3 is not None:
           self.s3 = s3
+        if snapshot is not None:
+          self.snapshot = snapshot
         if upload is not None:
           self.upload = upload
         if vddk is not None:
@@ -208,6 +213,27 @@ class V1beta1DataVolumeSource(object):
         """
 
         self._s3 = s3
+
+    @property
+    def snapshot(self):
+        """
+        Gets the snapshot of this V1beta1DataVolumeSource.
+
+        :return: The snapshot of this V1beta1DataVolumeSource.
+        :rtype: V1beta1DataVolumeSourceSnapshot
+        """
+        return self._snapshot
+
+    @snapshot.setter
+    def snapshot(self, snapshot):
+        """
+        Sets the snapshot of this V1beta1DataVolumeSource.
+
+        :param snapshot: The snapshot of this V1beta1DataVolumeSource.
+        :type: V1beta1DataVolumeSourceSnapshot
+        """
+
+        self._snapshot = snapshot
 
     @property
     def upload(self):

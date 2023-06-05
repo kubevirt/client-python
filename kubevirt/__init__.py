@@ -327,6 +327,7 @@ from .models.v1beta1_data_volume_source_pvc import V1beta1DataVolumeSourcePVC
 from .models.v1beta1_data_volume_source_ref import V1beta1DataVolumeSourceRef
 from .models.v1beta1_data_volume_source_registry import V1beta1DataVolumeSourceRegistry
 from .models.v1beta1_data_volume_source_s3 import V1beta1DataVolumeSourceS3
+from .models.v1beta1_data_volume_source_snapshot import V1beta1DataVolumeSourceSnapshot
 from .models.v1beta1_data_volume_source_upload import V1beta1DataVolumeSourceUpload
 from .models.v1beta1_data_volume_source_vddk import V1beta1DataVolumeSourceVDDK
 from .models.v1beta1_data_volume_spec import V1beta1DataVolumeSpec

@@ -36,6 +36,7 @@ class V1MigrationConfiguration(object):
         'bandwidth_per_migration': 'K8sIoApimachineryPkgApiResourceQuantity',
         'completion_timeout_per_gi_b': 'int',
         'disable_tls': 'bool',
+        'match_se_linux_level_on_migration': 'bool',
         'network': 'str',
         'node_drain_taint_key': 'str',
         'parallel_migrations_per_cluster': 'int',
@@ -50,6 +51,7 @@ class V1MigrationConfiguration(object):
         'bandwidth_per_migration': 'bandwidthPerMigration',
         'completion_timeout_per_gi_b': 'completionTimeoutPerGiB',
         'disable_tls': 'disableTLS',
+        'match_se_linux_level_on_migration': 'matchSELinuxLevelOnMigration',
         'network': 'network',
         'node_drain_taint_key': 'nodeDrainTaintKey',
         'parallel_migrations_per_cluster': 'parallelMigrationsPerCluster',
@@ -58,7 +60,7 @@ class V1MigrationConfiguration(object):
         'unsafe_migration_override': 'unsafeMigrationOverride'
     }
 
-    def __init__(self, allow_auto_converge=None, allow_post_copy=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, disable_tls=None, network=None, node_drain_taint_key=None, parallel_migrations_per_cluster=None, parallel_outbound_migrations_per_node=None, progress_timeout=None, unsafe_migration_override=None):
+    def __init__(self, allow_auto_converge=None, allow_post_copy=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, disable_tls=None, match_se_linux_level_on_migration=None, network=None, node_drain_taint_key=None, parallel_migrations_per_cluster=None, parallel_outbound_migrations_per_node=None, progress_timeout=None, unsafe_migration_override=None):
         """
         V1MigrationConfiguration - a model defined in Swagger
         """
@@ -68,6 +70,7 @@ class V1MigrationConfiguration(object):
         self._bandwidth_per_migration = None
         self._completion_timeout_per_gi_b = None
         self._disable_tls = None
+        self._match_se_linux_level_on_migration = None
         self._network = None
         self._node_drain_taint_key = None
         self._parallel_migrations_per_cluster = None
@@ -85,6 +88,8 @@ class V1MigrationConfiguration(object):
           self.completion_timeout_per_gi_b = completion_timeout_per_gi_b
         if disable_tls is not None:
           self.disable_tls = disable_tls
+        if match_se_linux_level_on_migration is not None:
+          self.match_se_linux_level_on_migration = match_se_linux_level_on_migration
         if network is not None:
           self.network = network
         if node_drain_taint_key is not None:
@@ -212,6 +217,29 @@ class V1MigrationConfiguration(object):
         """
 
         self._disable_tls = disable_tls
+
+    @property
+    def match_se_linux_level_on_migration(self):
+        """
+        Gets the match_se_linux_level_on_migration of this V1MigrationConfiguration.
+        By default, the SELinux level of target virt-launcher pods is forced to the level of the source virt-launcher. When set to true, MatchSELinuxLevelOnMigration lets the CRI auto-assign a random level to the target. That will ensure the target virt-launcher doesn't share categories with another pod on the node. However, migrations will fail when using RWX volumes that don't automatically deal with SELinux levels.
+
+        :return: The match_se_linux_level_on_migration of this V1MigrationConfiguration.
+        :rtype: bool
+        """
+        return self._match_se_linux_level_on_migration
+
+    @match_se_linux_level_on_migration.setter
+    def match_se_linux_level_on_migration(self, match_se_linux_level_on_migration):
+        """
+        Sets the match_se_linux_level_on_migration of this V1MigrationConfiguration.
+        By default, the SELinux level of target virt-launcher pods is forced to the level of the source virt-launcher. When set to true, MatchSELinuxLevelOnMigration lets the CRI auto-assign a random level to the target. That will ensure the target virt-launcher doesn't share categories with another pod on the node. However, migrations will fail when using RWX volumes that don't automatically deal with SELinux levels.
+
+        :param match_se_linux_level_on_migration: The match_se_linux_level_on_migration of this V1MigrationConfiguration.
+        :type: bool
+        """
+
+        self._match_se_linux_level_on_migration = match_se_linux_level_on_migration
 
     @property
     def network(self):

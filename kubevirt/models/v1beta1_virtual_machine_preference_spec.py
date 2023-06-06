@@ -37,7 +37,6 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         'features': 'V1beta1FeaturePreferences',
         'firmware': 'V1beta1FirmwarePreferences',
         'machine': 'V1beta1MachinePreferences',
-        'preferred_subdomain': 'str',
         'preferred_termination_grace_period_seconds': 'int',
         'volumes': 'V1beta1VolumePreferences'
     }
@@ -49,12 +48,11 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         'features': 'features',
         'firmware': 'firmware',
         'machine': 'machine',
-        'preferred_subdomain': 'preferredSubdomain',
         'preferred_termination_grace_period_seconds': 'preferredTerminationGracePeriodSeconds',
         'volumes': 'volumes'
     }
 
-    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, preferred_subdomain=None, preferred_termination_grace_period_seconds=None, volumes=None):
+    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, preferred_termination_grace_period_seconds=None, volumes=None):
         """
         V1beta1VirtualMachinePreferenceSpec - a model defined in Swagger
         """
@@ -65,7 +63,6 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         self._features = None
         self._firmware = None
         self._machine = None
-        self._preferred_subdomain = None
         self._preferred_termination_grace_period_seconds = None
         self._volumes = None
 
@@ -81,8 +78,6 @@ class V1beta1VirtualMachinePreferenceSpec(object):
           self.firmware = firmware
         if machine is not None:
           self.machine = machine
-        if preferred_subdomain is not None:
-          self.preferred_subdomain = preferred_subdomain
         if preferred_termination_grace_period_seconds is not None:
           self.preferred_termination_grace_period_seconds = preferred_termination_grace_period_seconds
         if volumes is not None:
@@ -225,29 +220,6 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         """
 
         self._machine = machine
-
-    @property
-    def preferred_subdomain(self):
-        """
-        Gets the preferred_subdomain of this V1beta1VirtualMachinePreferenceSpec.
-        Subdomain of the VirtualMachineInstance
-
-        :return: The preferred_subdomain of this V1beta1VirtualMachinePreferenceSpec.
-        :rtype: str
-        """
-        return self._preferred_subdomain
-
-    @preferred_subdomain.setter
-    def preferred_subdomain(self, preferred_subdomain):
-        """
-        Sets the preferred_subdomain of this V1beta1VirtualMachinePreferenceSpec.
-        Subdomain of the VirtualMachineInstance
-
-        :param preferred_subdomain: The preferred_subdomain of this V1beta1VirtualMachinePreferenceSpec.
-        :type: str
-        """
-
-        self._preferred_subdomain = preferred_subdomain
 
     @property
     def preferred_termination_grace_period_seconds(self):

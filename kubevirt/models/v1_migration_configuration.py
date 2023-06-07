@@ -153,7 +153,7 @@ class V1MigrationConfiguration(object):
     def bandwidth_per_migration(self):
         """
         Gets the bandwidth_per_migration of this V1MigrationConfiguration.
-        BandwidthPerMigration limits the amount of network bandwith live migrations are allowed to use. The value is in quantity per second. Defaults to 0 (no limit)
+        BandwidthPerMigration limits the amount of network bandwidth live migrations are allowed to use. The value is in quantity per second. Defaults to 0 (no limit)
 
         :return: The bandwidth_per_migration of this V1MigrationConfiguration.
         :rtype: K8sIoApimachineryPkgApiResourceQuantity
@@ -164,7 +164,7 @@ class V1MigrationConfiguration(object):
     def bandwidth_per_migration(self, bandwidth_per_migration):
         """
         Sets the bandwidth_per_migration of this V1MigrationConfiguration.
-        BandwidthPerMigration limits the amount of network bandwith live migrations are allowed to use. The value is in quantity per second. Defaults to 0 (no limit)
+        BandwidthPerMigration limits the amount of network bandwidth live migrations are allowed to use. The value is in quantity per second. Defaults to 0 (no limit)
 
         :param bandwidth_per_migration: The bandwidth_per_migration of this V1MigrationConfiguration.
         :type: K8sIoApimachineryPkgApiResourceQuantity

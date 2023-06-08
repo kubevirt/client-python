@@ -31,22 +31,50 @@ class V1beta1CPUPreferences(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'preferred_cpu_features': 'list[V1CPUFeature]',
         'preferred_cpu_topology': 'str'
     }
 
     attribute_map = {
+        'preferred_cpu_features': 'preferredCPUFeatures',
         'preferred_cpu_topology': 'preferredCPUTopology'
     }
 
-    def __init__(self, preferred_cpu_topology=None):
+    def __init__(self, preferred_cpu_features=None, preferred_cpu_topology=None):
         """
         V1beta1CPUPreferences - a model defined in Swagger
         """
 
+        self._preferred_cpu_features = None
         self._preferred_cpu_topology = None
 
+        if preferred_cpu_features is not None:
+          self.preferred_cpu_features = preferred_cpu_features
         if preferred_cpu_topology is not None:
           self.preferred_cpu_topology = preferred_cpu_topology
+
+    @property
+    def preferred_cpu_features(self):
+        """
+        Gets the preferred_cpu_features of this V1beta1CPUPreferences.
+        PreferredCPUFeatures optionally defines a slice of preferred CPU features.
+
+        :return: The preferred_cpu_features of this V1beta1CPUPreferences.
+        :rtype: list[V1CPUFeature]
+        """
+        return self._preferred_cpu_features
+
+    @preferred_cpu_features.setter
+    def preferred_cpu_features(self, preferred_cpu_features):
+        """
+        Sets the preferred_cpu_features of this V1beta1CPUPreferences.
+        PreferredCPUFeatures optionally defines a slice of preferred CPU features.
+
+        :param preferred_cpu_features: The preferred_cpu_features of this V1beta1CPUPreferences.
+        :type: list[V1CPUFeature]
+        """
+
+        self._preferred_cpu_features = preferred_cpu_features
 
     @property
     def preferred_cpu_topology(self):

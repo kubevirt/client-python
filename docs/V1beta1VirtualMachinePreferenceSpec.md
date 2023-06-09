@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **machine** | [**V1beta1MachinePreferences**](V1beta1MachinePreferences.md) | Machine optionally defines preferences associated with the Machine attribute of a VirtualMachineInstance DomainSpec | [optional] 
 **preferred_subdomain** | **str** | Subdomain of the VirtualMachineInstance | [optional] 
 **preferred_termination_grace_period_seconds** | **int** | Grace period observed after signalling a VirtualMachineInstance to stop after which the VirtualMachineInstance is force terminated. | [optional] 
+**requirements** | [**V1beta1PreferenceRequirements**](V1beta1PreferenceRequirements.md) | Requirements defines the minium amount of instance type defined resources required by a set of preferences | [optional] 
 **volumes** | [**V1beta1VolumePreferences**](V1beta1VolumePreferences.md) | Volumes optionally defines preferences associated with the Volumes attribute of a VirtualMachineInstace DomainSpec | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

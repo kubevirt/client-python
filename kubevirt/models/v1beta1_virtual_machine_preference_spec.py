@@ -39,6 +39,7 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         'machine': 'V1beta1MachinePreferences',
         'preferred_subdomain': 'str',
         'preferred_termination_grace_period_seconds': 'int',
+        'requirements': 'V1beta1PreferenceRequirements',
         'volumes': 'V1beta1VolumePreferences'
     }
 
@@ -51,10 +52,11 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         'machine': 'machine',
         'preferred_subdomain': 'preferredSubdomain',
         'preferred_termination_grace_period_seconds': 'preferredTerminationGracePeriodSeconds',
+        'requirements': 'requirements',
         'volumes': 'volumes'
     }
 
-    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, preferred_subdomain=None, preferred_termination_grace_period_seconds=None, volumes=None):
+    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, preferred_subdomain=None, preferred_termination_grace_period_seconds=None, requirements=None, volumes=None):
         """
         V1beta1VirtualMachinePreferenceSpec - a model defined in Swagger
         """
@@ -67,6 +69,7 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         self._machine = None
         self._preferred_subdomain = None
         self._preferred_termination_grace_period_seconds = None
+        self._requirements = None
         self._volumes = None
 
         if clock is not None:
@@ -85,6 +88,8 @@ class V1beta1VirtualMachinePreferenceSpec(object):
           self.preferred_subdomain = preferred_subdomain
         if preferred_termination_grace_period_seconds is not None:
           self.preferred_termination_grace_period_seconds = preferred_termination_grace_period_seconds
+        if requirements is not None:
+          self.requirements = requirements
         if volumes is not None:
           self.volumes = volumes
 
@@ -271,6 +276,29 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         """
 
         self._preferred_termination_grace_period_seconds = preferred_termination_grace_period_seconds
+
+    @property
+    def requirements(self):
+        """
+        Gets the requirements of this V1beta1VirtualMachinePreferenceSpec.
+        Requirements defines the minium amount of instance type defined resources required by a set of preferences
+
+        :return: The requirements of this V1beta1VirtualMachinePreferenceSpec.
+        :rtype: V1beta1PreferenceRequirements
+        """
+        return self._requirements
+
+    @requirements.setter
+    def requirements(self, requirements):
+        """
+        Sets the requirements of this V1beta1VirtualMachinePreferenceSpec.
+        Requirements defines the minium amount of instance type defined resources required by a set of preferences
+
+        :param requirements: The requirements of this V1beta1VirtualMachinePreferenceSpec.
+        :type: V1beta1PreferenceRequirements
+        """
+
+        self._requirements = requirements
 
     @property
     def volumes(self):

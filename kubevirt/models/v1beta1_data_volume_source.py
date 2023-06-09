@@ -32,6 +32,7 @@ class V1beta1DataVolumeSource(object):
     """
     swagger_types = {
         'blank': 'V1beta1DataVolumeBlankImage',
+        'gcs': 'V1beta1DataVolumeSourceGCS',
         'http': 'V1beta1DataVolumeSourceHTTP',
         'imageio': 'V1beta1DataVolumeSourceImageIO',
         'pvc': 'V1beta1DataVolumeSourcePVC',
@@ -44,6 +45,7 @@ class V1beta1DataVolumeSource(object):
 
     attribute_map = {
         'blank': 'blank',
+        'gcs': 'gcs',
         'http': 'http',
         'imageio': 'imageio',
         'pvc': 'pvc',
@@ -54,12 +56,13 @@ class V1beta1DataVolumeSource(object):
         'vddk': 'vddk'
     }
 
-    def __init__(self, blank=None, http=None, imageio=None, pvc=None, registry=None, s3=None, snapshot=None, upload=None, vddk=None):
+    def __init__(self, blank=None, gcs=None, http=None, imageio=None, pvc=None, registry=None, s3=None, snapshot=None, upload=None, vddk=None):
         """
         V1beta1DataVolumeSource - a model defined in Swagger
         """
 
         self._blank = None
+        self._gcs = None
         self._http = None
         self._imageio = None
         self._pvc = None
@@ -71,6 +74,8 @@ class V1beta1DataVolumeSource(object):
 
         if blank is not None:
           self.blank = blank
+        if gcs is not None:
+          self.gcs = gcs
         if http is not None:
           self.http = http
         if imageio is not None:
@@ -108,6 +113,27 @@ class V1beta1DataVolumeSource(object):
         """
 
         self._blank = blank
+
+    @property
+    def gcs(self):
+        """
+        Gets the gcs of this V1beta1DataVolumeSource.
+
+        :return: The gcs of this V1beta1DataVolumeSource.
+        :rtype: V1beta1DataVolumeSourceGCS
+        """
+        return self._gcs
+
+    @gcs.setter
+    def gcs(self, gcs):
+        """
+        Sets the gcs of this V1beta1DataVolumeSource.
+
+        :param gcs: The gcs of this V1beta1DataVolumeSource.
+        :type: V1beta1DataVolumeSourceGCS
+        """
+
+        self._gcs = gcs
 
     @property
     def http(self):

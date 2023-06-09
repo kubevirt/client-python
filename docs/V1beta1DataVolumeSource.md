@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **blank** | [**V1beta1DataVolumeBlankImage**](V1beta1DataVolumeBlankImage.md) |  | [optional] 
-**gcs** | [**V1beta1DataVolumeSourceGCS**](V1beta1DataVolumeSourceGCS.md) |  | [optional] 
 **http** | [**V1beta1DataVolumeSourceHTTP**](V1beta1DataVolumeSourceHTTP.md) |  | [optional] 
 **imageio** | [**V1beta1DataVolumeSourceImageIO**](V1beta1DataVolumeSourceImageIO.md) |  | [optional] 
 **pvc** | [**V1beta1DataVolumeSourcePVC**](V1beta1DataVolumeSourcePVC.md) |  | [optional] 

@@ -321,7 +321,6 @@ from .models.v1beta1_clock_preferences import V1beta1ClockPreferences
 from .models.v1beta1_data_volume_blank_image import V1beta1DataVolumeBlankImage
 from .models.v1beta1_data_volume_checkpoint import V1beta1DataVolumeCheckpoint
 from .models.v1beta1_data_volume_source import V1beta1DataVolumeSource
-from .models.v1beta1_data_volume_source_gcs import V1beta1DataVolumeSourceGCS
 from .models.v1beta1_data_volume_source_http import V1beta1DataVolumeSourceHTTP
 from .models.v1beta1_data_volume_source_image_io import V1beta1DataVolumeSourceImageIO
 from .models.v1beta1_data_volume_source_pvc import V1beta1DataVolumeSourcePVC

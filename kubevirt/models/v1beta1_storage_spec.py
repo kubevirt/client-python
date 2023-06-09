@@ -33,7 +33,7 @@ class V1beta1StorageSpec(object):
     swagger_types = {
         'access_modes': 'list[str]',
         'data_source': 'K8sIoApiCoreV1TypedLocalObjectReference',
-        'data_source_ref': 'K8sIoApiCoreV1TypedObjectReference',
+        'data_source_ref': 'K8sIoApiCoreV1TypedLocalObjectReference',
         'resources': 'K8sIoApiCoreV1ResourceRequirements',
         'selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
         'storage_class_name': 'str',
@@ -136,7 +136,7 @@ class V1beta1StorageSpec(object):
         Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef allows any non-core object, as well as PersistentVolumeClaim objects. * While DataSource ignores disallowed values (dropping them), DataSourceRef preserves all values, and generates an error if a disallowed value is specified. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
 
         :return: The data_source_ref of this V1beta1StorageSpec.
-        :rtype: K8sIoApiCoreV1TypedObjectReference
+        :rtype: K8sIoApiCoreV1TypedLocalObjectReference
         """
         return self._data_source_ref
 
@@ -147,7 +147,7 @@ class V1beta1StorageSpec(object):
         Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef allows any non-core object, as well as PersistentVolumeClaim objects. * While DataSource ignores disallowed values (dropping them), DataSourceRef preserves all values, and generates an error if a disallowed value is specified. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
 
         :param data_source_ref: The data_source_ref of this V1beta1StorageSpec.
-        :type: K8sIoApiCoreV1TypedObjectReference
+        :type: K8sIoApiCoreV1TypedLocalObjectReference
         """
 
         self._data_source_ref = data_source_ref

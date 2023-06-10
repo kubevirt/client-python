@@ -32,25 +32,30 @@ class V1beta1MemoryInstancetype(object):
     """
     swagger_types = {
         'guest': 'K8sIoApimachineryPkgApiResourceQuantity',
-        'hugepages': 'V1Hugepages'
+        'hugepages': 'V1Hugepages',
+        'overcommit_percent': 'int'
     }
 
     attribute_map = {
         'guest': 'guest',
-        'hugepages': 'hugepages'
+        'hugepages': 'hugepages',
+        'overcommit_percent': 'overcommitPercent'
     }
 
-    def __init__(self, guest=None, hugepages=None):
+    def __init__(self, guest=None, hugepages=None, overcommit_percent=None):
         """
         V1beta1MemoryInstancetype - a model defined in Swagger
         """
 
         self._guest = None
         self._hugepages = None
+        self._overcommit_percent = None
 
         self.guest = guest
         if hugepages is not None:
           self.hugepages = hugepages
+        if overcommit_percent is not None:
+          self.overcommit_percent = overcommit_percent
 
     @property
     def guest(self):
@@ -99,6 +104,29 @@ class V1beta1MemoryInstancetype(object):
         """
 
         self._hugepages = hugepages
+
+    @property
+    def overcommit_percent(self):
+        """
+        Gets the overcommit_percent of this V1beta1MemoryInstancetype.
+        OvercommitPercent is the percentage of the guest memory which will be overcommitted. This means that the VMIs parent pod (virt-launcher) will request less physical memory by a factor specified by the OvercommitPercent. Overcommits can lead to memory exhaustion, which in turn can lead to crashes. Use carefully. Defaults to 0
+
+        :return: The overcommit_percent of this V1beta1MemoryInstancetype.
+        :rtype: int
+        """
+        return self._overcommit_percent
+
+    @overcommit_percent.setter
+    def overcommit_percent(self, overcommit_percent):
+        """
+        Sets the overcommit_percent of this V1beta1MemoryInstancetype.
+        OvercommitPercent is the percentage of the guest memory which will be overcommitted. This means that the VMIs parent pod (virt-launcher) will request less physical memory by a factor specified by the OvercommitPercent. Overcommits can lead to memory exhaustion, which in turn can lead to crashes. Use carefully. Defaults to 0
+
+        :param overcommit_percent: The overcommit_percent of this V1beta1MemoryInstancetype.
+        :type: int
+        """
+
+        self._overcommit_percent = overcommit_percent
 
     def to_dict(self):
         """

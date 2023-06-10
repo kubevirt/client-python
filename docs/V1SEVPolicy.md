@@ -1,9 +1,9 @@
-# V1SEV
+# V1SEVPolicy
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**policy** | [**V1SEVPolicy**](V1SEVPolicy.md) | Guest policy flags as defined in AMD SEV API specification. Note: due to security reasons it is not allowed to enable guest debugging. Therefore NoDebug flag is not exposed to users and is always true. | [optional] 
+**encrypted_state** | **bool** | SEV-ES is required. Defaults to false. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

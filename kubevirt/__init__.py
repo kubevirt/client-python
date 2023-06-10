@@ -200,6 +200,7 @@ from .models.v1_resource_requirements import V1ResourceRequirements
 from .models.v1_restart_options import V1RestartOptions
 from .models.v1_rng import V1Rng
 from .models.v1_sev import V1SEV
+from .models.v1_sev_policy import V1SEVPolicy
 from .models.v1_sm_bios_configuration import V1SMBiosConfiguration
 from .models.v1_ssh_public_key_access_credential import V1SSHPublicKeyAccessCredential
 from .models.v1_ssh_public_key_access_credential_propagation_method import V1SSHPublicKeyAccessCredentialPropagationMethod

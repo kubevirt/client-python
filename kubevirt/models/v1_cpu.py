@@ -35,6 +35,7 @@ class V1CPU(object):
         'dedicated_cpu_placement': 'bool',
         'features': 'list[V1CPUFeature]',
         'isolate_emulator_thread': 'bool',
+        'max_sockets': 'int',
         'model': 'str',
         'numa': 'V1NUMA',
         'realtime': 'V1Realtime',
@@ -47,6 +48,7 @@ class V1CPU(object):
         'dedicated_cpu_placement': 'dedicatedCpuPlacement',
         'features': 'features',
         'isolate_emulator_thread': 'isolateEmulatorThread',
+        'max_sockets': 'maxSockets',
         'model': 'model',
         'numa': 'numa',
         'realtime': 'realtime',
@@ -54,7 +56,7 @@ class V1CPU(object):
         'threads': 'threads'
     }
 
-    def __init__(self, cores=None, dedicated_cpu_placement=None, features=None, isolate_emulator_thread=None, model=None, numa=None, realtime=None, sockets=None, threads=None):
+    def __init__(self, cores=None, dedicated_cpu_placement=None, features=None, isolate_emulator_thread=None, max_sockets=None, model=None, numa=None, realtime=None, sockets=None, threads=None):
         """
         V1CPU - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class V1CPU(object):
         self._dedicated_cpu_placement = None
         self._features = None
         self._isolate_emulator_thread = None
+        self._max_sockets = None
         self._model = None
         self._numa = None
         self._realtime = None
@@ -77,6 +80,8 @@ class V1CPU(object):
           self.features = features
         if isolate_emulator_thread is not None:
           self.isolate_emulator_thread = isolate_emulator_thread
+        if max_sockets is not None:
+          self.max_sockets = max_sockets
         if model is not None:
           self.model = model
         if numa is not None:
@@ -179,6 +184,29 @@ class V1CPU(object):
         """
 
         self._isolate_emulator_thread = isolate_emulator_thread
+
+    @property
+    def max_sockets(self):
+        """
+        Gets the max_sockets of this V1CPU.
+        MaxSockets specifies the maximum amount of sockets that can be hotplugged
+
+        :return: The max_sockets of this V1CPU.
+        :rtype: int
+        """
+        return self._max_sockets
+
+    @max_sockets.setter
+    def max_sockets(self, max_sockets):
+        """
+        Sets the max_sockets of this V1CPU.
+        MaxSockets specifies the maximum amount of sockets that can be hotplugged
+
+        :param max_sockets: The max_sockets of this V1CPU.
+        :type: int
+        """
+
+        self._max_sockets = max_sockets
 
     @property
     def model(self):

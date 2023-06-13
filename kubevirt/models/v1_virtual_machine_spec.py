@@ -33,6 +33,7 @@ class V1VirtualMachineSpec(object):
     swagger_types = {
         'data_volume_templates': 'list[V1DataVolumeTemplateSpec]',
         'instancetype': 'V1InstancetypeMatcher',
+        'live_update_features': 'V1LiveUpdateFeatures',
         'preference': 'V1PreferenceMatcher',
         'run_strategy': 'str',
         'running': 'bool',
@@ -42,19 +43,21 @@ class V1VirtualMachineSpec(object):
     attribute_map = {
         'data_volume_templates': 'dataVolumeTemplates',
         'instancetype': 'instancetype',
+        'live_update_features': 'liveUpdateFeatures',
         'preference': 'preference',
         'run_strategy': 'runStrategy',
         'running': 'running',
         'template': 'template'
     }
 
-    def __init__(self, data_volume_templates=None, instancetype=None, preference=None, run_strategy=None, running=None, template=None):
+    def __init__(self, data_volume_templates=None, instancetype=None, live_update_features=None, preference=None, run_strategy=None, running=None, template=None):
         """
         V1VirtualMachineSpec - a model defined in Swagger
         """
 
         self._data_volume_templates = None
         self._instancetype = None
+        self._live_update_features = None
         self._preference = None
         self._run_strategy = None
         self._running = None
@@ -64,6 +67,8 @@ class V1VirtualMachineSpec(object):
           self.data_volume_templates = data_volume_templates
         if instancetype is not None:
           self.instancetype = instancetype
+        if live_update_features is not None:
+          self.live_update_features = live_update_features
         if preference is not None:
           self.preference = preference
         if run_strategy is not None:
@@ -117,6 +122,29 @@ class V1VirtualMachineSpec(object):
         """
 
         self._instancetype = instancetype
+
+    @property
+    def live_update_features(self):
+        """
+        Gets the live_update_features of this V1VirtualMachineSpec.
+        LiveUpdateFeatures references a configuration of hotpluggable resources
+
+        :return: The live_update_features of this V1VirtualMachineSpec.
+        :rtype: V1LiveUpdateFeatures
+        """
+        return self._live_update_features
+
+    @live_update_features.setter
+    def live_update_features(self, live_update_features):
+        """
+        Sets the live_update_features of this V1VirtualMachineSpec.
+        LiveUpdateFeatures references a configuration of hotpluggable resources
+
+        :param live_update_features: The live_update_features of this V1VirtualMachineSpec.
+        :type: V1LiveUpdateFeatures
+        """
+
+        self._live_update_features = live_update_features
 
     @property
     def preference(self):

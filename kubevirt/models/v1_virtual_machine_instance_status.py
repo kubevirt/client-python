@@ -34,6 +34,7 @@ class V1VirtualMachineInstanceStatus(object):
         'vsockcid': 'int',
         'active_pods': 'dict(str, str)',
         'conditions': 'list[V1VirtualMachineInstanceCondition]',
+        'current_cpu_topology': 'V1CPUTopology',
         'evacuation_node_name': 'str',
         'fs_freeze_status': 'str',
         'guest_os_info': 'V1VirtualMachineInstanceGuestOSInfo',
@@ -59,6 +60,7 @@ class V1VirtualMachineInstanceStatus(object):
         'vsockcid': 'VSOCKCID',
         'active_pods': 'activePods',
         'conditions': 'conditions',
+        'current_cpu_topology': 'currentCPUTopology',
         'evacuation_node_name': 'evacuationNodeName',
         'fs_freeze_status': 'fsFreezeStatus',
         'guest_os_info': 'guestOSInfo',
@@ -80,7 +82,7 @@ class V1VirtualMachineInstanceStatus(object):
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, vsockcid=None, active_pods=None, conditions=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, machine=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
+    def __init__(self, vsockcid=None, active_pods=None, conditions=None, current_cpu_topology=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, machine=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -88,6 +90,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._vsockcid = None
         self._active_pods = None
         self._conditions = None
+        self._current_cpu_topology = None
         self._evacuation_node_name = None
         self._fs_freeze_status = None
         self._guest_os_info = None
@@ -114,6 +117,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.active_pods = active_pods
         if conditions is not None:
           self.conditions = conditions
+        if current_cpu_topology is not None:
+          self.current_cpu_topology = current_cpu_topology
         if evacuation_node_name is not None:
           self.evacuation_node_name = evacuation_node_name
         if fs_freeze_status is not None:
@@ -221,6 +226,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._conditions = conditions
+
+    @property
+    def current_cpu_topology(self):
+        """
+        Gets the current_cpu_topology of this V1VirtualMachineInstanceStatus.
+        CurrentCPUTopology specifies the current CPU topology used by the VM workload. Current topology may differ from the desired topology in the spec while CPU hotplug takes place.
+
+        :return: The current_cpu_topology of this V1VirtualMachineInstanceStatus.
+        :rtype: V1CPUTopology
+        """
+        return self._current_cpu_topology
+
+    @current_cpu_topology.setter
+    def current_cpu_topology(self, current_cpu_topology):
+        """
+        Sets the current_cpu_topology of this V1VirtualMachineInstanceStatus.
+        CurrentCPUTopology specifies the current CPU topology used by the VM workload. Current topology may differ from the desired topology in the spec while CPU hotplug takes place.
+
+        :param current_cpu_topology: The current_cpu_topology of this V1VirtualMachineInstanceStatus.
+        :type: V1CPUTopology
+        """
+
+        self._current_cpu_topology = current_cpu_topology
 
     @property
     def evacuation_node_name(self):

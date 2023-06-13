@@ -45,6 +45,7 @@ class V1KubeVirtConfiguration(object):
         'handler_configuration': 'V1ReloadableComponentConfiguration',
         'image_pull_policy': 'str',
         'ksm_configuration': 'V1KSMConfiguration',
+        'live_update_configuration': 'V1LiveUpdateConfiguration',
         'machine_type': 'str',
         'mediated_devices_configuration': 'V1MediatedDevicesConfiguration',
         'mem_balloon_stats_period': 'int',
@@ -81,6 +82,7 @@ class V1KubeVirtConfiguration(object):
         'handler_configuration': 'handlerConfiguration',
         'image_pull_policy': 'imagePullPolicy',
         'ksm_configuration': 'ksmConfiguration',
+        'live_update_configuration': 'liveUpdateConfiguration',
         'machine_type': 'machineType',
         'mediated_devices_configuration': 'mediatedDevicesConfiguration',
         'mem_balloon_stats_period': 'memBalloonStatsPeriod',
@@ -102,7 +104,7 @@ class V1KubeVirtConfiguration(object):
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, ksm_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_state_storage_class=None, webhook_configuration=None):
+    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_state_storage_class=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -121,6 +123,7 @@ class V1KubeVirtConfiguration(object):
         self._handler_configuration = None
         self._image_pull_policy = None
         self._ksm_configuration = None
+        self._live_update_configuration = None
         self._machine_type = None
         self._mediated_devices_configuration = None
         self._mem_balloon_stats_period = None
@@ -169,6 +172,8 @@ class V1KubeVirtConfiguration(object):
           self.image_pull_policy = image_pull_policy
         if ksm_configuration is not None:
           self.ksm_configuration = ksm_configuration
+        if live_update_configuration is not None:
+          self.live_update_configuration = live_update_configuration
         if machine_type is not None:
           self.machine_type = machine_type
         if mediated_devices_configuration is not None:
@@ -517,6 +522,29 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._ksm_configuration = ksm_configuration
+
+    @property
+    def live_update_configuration(self):
+        """
+        Gets the live_update_configuration of this V1KubeVirtConfiguration.
+        LiveUpdateConfiguration holds defaults for live update features
+
+        :return: The live_update_configuration of this V1KubeVirtConfiguration.
+        :rtype: V1LiveUpdateConfiguration
+        """
+        return self._live_update_configuration
+
+    @live_update_configuration.setter
+    def live_update_configuration(self, live_update_configuration):
+        """
+        Sets the live_update_configuration of this V1KubeVirtConfiguration.
+        LiveUpdateConfiguration holds defaults for live update features
+
+        :param live_update_configuration: The live_update_configuration of this V1KubeVirtConfiguration.
+        :type: V1LiveUpdateConfiguration
+        """
+
+        self._live_update_configuration = live_update_configuration
 
     @property
     def machine_type(self):

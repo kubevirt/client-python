@@ -80,6 +80,7 @@ from .v1_bootloader import V1Bootloader
 from .v1_cd_rom_target import V1CDRomTarget
 from .v1_cpu import V1CPU
 from .v1_cpu_feature import V1CPUFeature
+from .v1_cpu_topology import V1CPUTopology
 from .v1_cert_config import V1CertConfig
 from .v1_chassis import V1Chassis
 from .v1_client_passthrough_devices import V1ClientPassthroughDevices
@@ -161,6 +162,9 @@ from .v1_kube_virt_spec import V1KubeVirtSpec
 from .v1_kube_virt_status import V1KubeVirtStatus
 from .v1_kube_virt_workload_update_strategy import V1KubeVirtWorkloadUpdateStrategy
 from .v1_launch_security import V1LaunchSecurity
+from .v1_live_update_cpu import V1LiveUpdateCPU
+from .v1_live_update_configuration import V1LiveUpdateConfiguration
+from .v1_live_update_features import V1LiveUpdateFeatures
 from .v1_log_verbosity import V1LogVerbosity
 from .v1_lun_target import V1LunTarget
 from .v1_machine import V1Machine

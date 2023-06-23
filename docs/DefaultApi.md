@@ -214,11 +214,9 @@ Method | HTTP request | Description
 [**v1alpha3vm_port_forward_with_protocol**](DefaultApi.md#v1alpha3vm_port_forward_with_protocol) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}/{protocol:tcp|udp} | 
 [**v1alpha3vm_removeinterface**](DefaultApi.md#v1alpha3vm_removeinterface) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/removeinterface | 
 [**v1alpha3vm_removevolume**](DefaultApi.md#v1alpha3vm_removevolume) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/removevolume | 
-[**v1alpha3vmi_addinterface**](DefaultApi.md#v1alpha3vmi_addinterface) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/addinterface | 
 [**v1alpha3vmi_addvolume**](DefaultApi.md#v1alpha3vmi_addvolume) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/addvolume | 
 [**v1alpha3vmi_port_forward**](DefaultApi.md#v1alpha3vmi_port_forward) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+} | 
 [**v1alpha3vmi_port_forward_with_protocol**](DefaultApi.md#v1alpha3vmi_port_forward_with_protocol) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}/{protocol:tcp|udp} | 
-[**v1alpha3vmi_removeinterface**](DefaultApi.md#v1alpha3vmi_removeinterface) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/removeinterface | 
 [**v1alpha3vmi_removevolume**](DefaultApi.md#v1alpha3vmi_removevolume) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/removevolume | 
 [**v1dump_cluster_profiler**](DefaultApi.md#v1dump_cluster_profiler) | **GET** /apis/subresources.kubevirt.io/v1/dump-cluster-profiler | 
 [**v1get_api_sub_resources**](DefaultApi.md#v1get_api_sub_resources) | **GET** /apis/subresources.kubevirt.io/v1/ | 
@@ -232,11 +230,9 @@ Method | HTTP request | Description
 [**v1vm_port_forward_with_protocol**](DefaultApi.md#v1vm_port_forward_with_protocol) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}/{protocol:tcp|udp} | 
 [**v1vm_removeinterface**](DefaultApi.md#v1vm_removeinterface) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/removeinterface | 
 [**v1vm_removevolume**](DefaultApi.md#v1vm_removevolume) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachines/{name:[a-z0-9][a-z0-9\-]*}/removevolume | 
-[**v1vmi_addinterface**](DefaultApi.md#v1vmi_addinterface) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/addinterface | 
 [**v1vmi_addvolume**](DefaultApi.md#v1vmi_addvolume) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/addvolume | 
 [**v1vmi_port_forward**](DefaultApi.md#v1vmi_port_forward) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+} | 
 [**v1vmi_port_forward_with_protocol**](DefaultApi.md#v1vmi_port_forward_with_protocol) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/portforward/{port:[0-9]+}/{protocol:tcp|udp} | 
-[**v1vmi_removeinterface**](DefaultApi.md#v1vmi_removeinterface) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/removeinterface | 
 [**v1vmi_removevolume**](DefaultApi.md#v1vmi_removevolume) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace:[a-z0-9][a-z0-9\-]*}/virtualmachineinstances/{name:[a-z0-9][a-z0-9\-]*}/removevolume | 
 [**watch_kube_virt_list_for_all_namespaces**](DefaultApi.md#watch_kube_virt_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/watch/kubevirt | 
 [**watch_migration_policy_list_for_all_namespaces**](DefaultApi.md#watch_migration_policy_list_for_all_namespaces) | **GET** /apis/migrations.kubevirt.io/v1alpha1/watch/migrationpolicies | 
@@ -11175,57 +11171,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1alpha3vmi_addinterface**
-> str v1alpha3vmi_addinterface(name, namespace, body)
-
-
-
-Add a network interface to a running Virtual Machine Instance
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import kubevirt
-from kubevirt.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = kubevirt.DefaultApi()
-name = 'name_example' # str | Name of the resource
-namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1AddInterfaceOptions() # V1AddInterfaceOptions | 
-
-try: 
-    api_response = api_instance.v1alpha3vmi_addinterface(name, namespace, body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->v1alpha3vmi_addinterface: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| Name of the resource | 
- **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1AddInterfaceOptions**](V1AddInterfaceOptions.md)|  | 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **v1alpha3vmi_addvolume**
 > str v1alpha3vmi_addvolume(name, namespace, body)
 
@@ -11367,57 +11312,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **v1alpha3vmi_removeinterface**
-> str v1alpha3vmi_removeinterface(name, namespace, body)
-
-
-
-Remove a network interface from a running Virtual Machine Instance
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import kubevirt
-from kubevirt.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = kubevirt.DefaultApi()
-name = 'name_example' # str | Name of the resource
-namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1RemoveInterfaceOptions() # V1RemoveInterfaceOptions | 
-
-try: 
-    api_response = api_instance.v1alpha3vmi_removeinterface(name, namespace, body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->v1alpha3vmi_removeinterface: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| Name of the resource | 
- **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1RemoveInterfaceOptions**](V1RemoveInterfaceOptions.md)|  | 
-
-### Return type
-
-**str**
 
 ### Authorization
 
@@ -12047,57 +11941,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1vmi_addinterface**
-> str v1vmi_addinterface(name, namespace, body)
-
-
-
-Add a network interface to a running Virtual Machine Instance
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import kubevirt
-from kubevirt.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = kubevirt.DefaultApi()
-name = 'name_example' # str | Name of the resource
-namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1AddInterfaceOptions() # V1AddInterfaceOptions | 
-
-try: 
-    api_response = api_instance.v1vmi_addinterface(name, namespace, body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->v1vmi_addinterface: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| Name of the resource | 
- **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1AddInterfaceOptions**](V1AddInterfaceOptions.md)|  | 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **v1vmi_addvolume**
 > str v1vmi_addvolume(name, namespace, body)
 
@@ -12239,57 +12082,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **v1vmi_removeinterface**
-> str v1vmi_removeinterface(name, namespace, body)
-
-
-
-Remove a network interface from a running Virtual Machine Instance
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import kubevirt
-from kubevirt.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = kubevirt.DefaultApi()
-name = 'name_example' # str | Name of the resource
-namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1RemoveInterfaceOptions() # V1RemoveInterfaceOptions | 
-
-try: 
-    api_response = api_instance.v1vmi_removeinterface(name, namespace, body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->v1vmi_removeinterface: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| Name of the resource | 
- **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1RemoveInterfaceOptions**](V1RemoveInterfaceOptions.md)|  | 
-
-### Return type
-
-**str**
 
 ### Authorization
 

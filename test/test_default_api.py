@@ -1711,14 +1711,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_v1alpha3vmi_addinterface(self):
-        """
-        Test case for v1alpha3vmi_addinterface
-
-        
-        """
-        pass
-
     def test_v1alpha3vmi_addvolume(self):
         """
         Test case for v1alpha3vmi_addvolume
@@ -1738,14 +1730,6 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3vmi_port_forward_with_protocol(self):
         """
         Test case for v1alpha3vmi_port_forward_with_protocol
-
-        
-        """
-        pass
-
-    def test_v1alpha3vmi_removeinterface(self):
-        """
-        Test case for v1alpha3vmi_removeinterface
 
         
         """
@@ -1855,14 +1839,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_v1vmi_addinterface(self):
-        """
-        Test case for v1vmi_addinterface
-
-        
-        """
-        pass
-
     def test_v1vmi_addvolume(self):
         """
         Test case for v1vmi_addvolume
@@ -1882,14 +1858,6 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1vmi_port_forward_with_protocol(self):
         """
         Test case for v1vmi_port_forward_with_protocol
-
-        
-        """
-        pass
-
-    def test_v1vmi_removeinterface(self):
-        """
-        Test case for v1vmi_removeinterface
 
         
         """

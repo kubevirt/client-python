@@ -1359,6 +1359,38 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_sev_fetch_cert_chain(self):
+        """
+        Test case for v1_sev_fetch_cert_chain
+
+        
+        """
+        pass
+
+    def test_v1_sev_inject_launch_secret(self):
+        """
+        Test case for v1_sev_inject_launch_secret
+
+        
+        """
+        pass
+
+    def test_v1_sev_query_launch_measurement(self):
+        """
+        Test case for v1_sev_query_launch_measurement
+
+        
+        """
+        pass
+
+    def test_v1_sev_setup_session(self):
+        """
+        Test case for v1_sev_setup_session
+
+        
+        """
+        pass
+
     def test_v1_soft_reboot(self):
         """
         Test case for v1_soft_reboot
@@ -1530,6 +1562,38 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3_restart(self):
         """
         Test case for v1alpha3_restart
+
+        
+        """
+        pass
+
+    def test_v1alpha3_sev_fetch_cert_chain(self):
+        """
+        Test case for v1alpha3_sev_fetch_cert_chain
+
+        
+        """
+        pass
+
+    def test_v1alpha3_sev_inject_launch_secret(self):
+        """
+        Test case for v1alpha3_sev_inject_launch_secret
+
+        
+        """
+        pass
+
+    def test_v1alpha3_sev_query_launch_measurement(self):
+        """
+        Test case for v1alpha3_sev_query_launch_measurement
+
+        
+        """
+        pass
+
+    def test_v1alpha3_sev_setup_session(self):
+        """
+        Test case for v1alpha3_sev_setup_session
 
         
         """

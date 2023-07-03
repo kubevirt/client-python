@@ -36,7 +36,9 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
         'host_devices': 'list[V1HostDevice]',
         'io_threads_policy': 'str',
         'launch_security': 'V1LaunchSecurity',
-        'memory': 'V1beta1MemoryInstancetype'
+        'memory': 'V1beta1MemoryInstancetype',
+        'node_selector': 'dict(str, str)',
+        'scheduler_name': 'str'
     }
 
     attribute_map = {
@@ -45,10 +47,12 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
         'host_devices': 'hostDevices',
         'io_threads_policy': 'ioThreadsPolicy',
         'launch_security': 'launchSecurity',
-        'memory': 'memory'
+        'memory': 'memory',
+        'node_selector': 'nodeSelector',
+        'scheduler_name': 'schedulerName'
     }
 
-    def __init__(self, cpu=None, gpus=None, host_devices=None, io_threads_policy=None, launch_security=None, memory=None):
+    def __init__(self, cpu=None, gpus=None, host_devices=None, io_threads_policy=None, launch_security=None, memory=None, node_selector=None, scheduler_name=None):
         """
         V1beta1VirtualMachineInstancetypeSpec - a model defined in Swagger
         """
@@ -59,6 +63,8 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
         self._io_threads_policy = None
         self._launch_security = None
         self._memory = None
+        self._node_selector = None
+        self._scheduler_name = None
 
         self.cpu = cpu
         if gpus is not None:
@@ -70,6 +76,10 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
         if launch_security is not None:
           self.launch_security = launch_security
         self.memory = memory
+        if node_selector is not None:
+          self.node_selector = node_selector
+        if scheduler_name is not None:
+          self.scheduler_name = scheduler_name
 
     @property
     def cpu(self):
@@ -212,6 +222,52 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
             raise ValueError("Invalid value for `memory`, must not be `None`")
 
         self._memory = memory
+
+    @property
+    def node_selector(self):
+        """
+        Gets the node_selector of this V1beta1VirtualMachineInstancetypeSpec.
+        NodeSelector is a selector which must be true for the vmi to fit on a node. Selector which must match a node's labels for the vmi to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/  NodeSelector is the name of the custom node selector for the instancetype.
+
+        :return: The node_selector of this V1beta1VirtualMachineInstancetypeSpec.
+        :rtype: dict(str, str)
+        """
+        return self._node_selector
+
+    @node_selector.setter
+    def node_selector(self, node_selector):
+        """
+        Sets the node_selector of this V1beta1VirtualMachineInstancetypeSpec.
+        NodeSelector is a selector which must be true for the vmi to fit on a node. Selector which must match a node's labels for the vmi to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/  NodeSelector is the name of the custom node selector for the instancetype.
+
+        :param node_selector: The node_selector of this V1beta1VirtualMachineInstancetypeSpec.
+        :type: dict(str, str)
+        """
+
+        self._node_selector = node_selector
+
+    @property
+    def scheduler_name(self):
+        """
+        Gets the scheduler_name of this V1beta1VirtualMachineInstancetypeSpec.
+        If specified, the VMI will be dispatched by specified scheduler. If not specified, the VMI will be dispatched by default scheduler.  SchedulerName is the name of the custom K8s scheduler for the instancetype.
+
+        :return: The scheduler_name of this V1beta1VirtualMachineInstancetypeSpec.
+        :rtype: str
+        """
+        return self._scheduler_name
+
+    @scheduler_name.setter
+    def scheduler_name(self, scheduler_name):
+        """
+        Sets the scheduler_name of this V1beta1VirtualMachineInstancetypeSpec.
+        If specified, the VMI will be dispatched by specified scheduler. If not specified, the VMI will be dispatched by default scheduler.  SchedulerName is the name of the custom K8s scheduler for the instancetype.
+
+        :param scheduler_name: The scheduler_name of this V1beta1VirtualMachineInstancetypeSpec.
+        :type: str
+        """
+
+        self._scheduler_name = scheduler_name
 
     def to_dict(self):
         """

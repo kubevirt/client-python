@@ -34,7 +34,6 @@ class V1VirtualMachineStatus(object):
         'conditions': 'list[V1VirtualMachineCondition]',
         'created': 'bool',
         'desired_generation': 'int',
-        'interface_requests': 'list[V1VirtualMachineInterfaceRequest]',
         'memory_dump_request': 'V1VirtualMachineMemoryDumpRequest',
         'observed_generation': 'int',
         'printable_status': 'str',
@@ -51,7 +50,6 @@ class V1VirtualMachineStatus(object):
         'conditions': 'conditions',
         'created': 'created',
         'desired_generation': 'desiredGeneration',
-        'interface_requests': 'interfaceRequests',
         'memory_dump_request': 'memoryDumpRequest',
         'observed_generation': 'observedGeneration',
         'printable_status': 'printableStatus',
@@ -64,7 +62,7 @@ class V1VirtualMachineStatus(object):
         'volume_snapshot_statuses': 'volumeSnapshotStatuses'
     }
 
-    def __init__(self, conditions=None, created=None, desired_generation=None, interface_requests=None, memory_dump_request=None, observed_generation=None, printable_status=None, ready=None, restore_in_progress=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None):
+    def __init__(self, conditions=None, created=None, desired_generation=None, memory_dump_request=None, observed_generation=None, printable_status=None, ready=None, restore_in_progress=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
@@ -72,7 +70,6 @@ class V1VirtualMachineStatus(object):
         self._conditions = None
         self._created = None
         self._desired_generation = None
-        self._interface_requests = None
         self._memory_dump_request = None
         self._observed_generation = None
         self._printable_status = None
@@ -90,8 +87,6 @@ class V1VirtualMachineStatus(object):
           self.created = created
         if desired_generation is not None:
           self.desired_generation = desired_generation
-        if interface_requests is not None:
-          self.interface_requests = interface_requests
         if memory_dump_request is not None:
           self.memory_dump_request = memory_dump_request
         if observed_generation is not None:
@@ -181,29 +176,6 @@ class V1VirtualMachineStatus(object):
         """
 
         self._desired_generation = desired_generation
-
-    @property
-    def interface_requests(self):
-        """
-        Gets the interface_requests of this V1VirtualMachineStatus.
-        InterfaceRequests indicates a list of interfaces added to the VMI template and hot-plugged on an active running VMI.
-
-        :return: The interface_requests of this V1VirtualMachineStatus.
-        :rtype: list[V1VirtualMachineInterfaceRequest]
-        """
-        return self._interface_requests
-
-    @interface_requests.setter
-    def interface_requests(self, interface_requests):
-        """
-        Sets the interface_requests of this V1VirtualMachineStatus.
-        InterfaceRequests indicates a list of interfaces added to the VMI template and hot-plugged on an active running VMI.
-
-        :param interface_requests: The interface_requests of this V1VirtualMachineStatus.
-        :type: list[V1VirtualMachineInterfaceRequest]
-        """
-
-        self._interface_requests = interface_requests
 
     @property
     def memory_dump_request(self):

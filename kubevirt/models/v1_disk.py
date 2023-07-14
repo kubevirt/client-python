@@ -37,6 +37,7 @@ class V1Disk(object):
         'cdrom': 'V1CDRomTarget',
         'dedicated_io_thread': 'bool',
         'disk': 'V1DiskTarget',
+        'error_policy': 'str',
         'io': 'str',
         'lun': 'V1LunTarget',
         'name': 'str',
@@ -52,6 +53,7 @@ class V1Disk(object):
         'cdrom': 'cdrom',
         'dedicated_io_thread': 'dedicatedIOThread',
         'disk': 'disk',
+        'error_policy': 'errorPolicy',
         'io': 'io',
         'lun': 'lun',
         'name': 'name',
@@ -60,7 +62,7 @@ class V1Disk(object):
         'tag': 'tag'
     }
 
-    def __init__(self, block_size=None, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, io=None, lun=None, name='', serial=None, shareable=None, tag=None):
+    def __init__(self, block_size=None, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, error_policy=None, io=None, lun=None, name='', serial=None, shareable=None, tag=None):
         """
         V1Disk - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class V1Disk(object):
         self._cdrom = None
         self._dedicated_io_thread = None
         self._disk = None
+        self._error_policy = None
         self._io = None
         self._lun = None
         self._name = None
@@ -90,6 +93,8 @@ class V1Disk(object):
           self.dedicated_io_thread = dedicated_io_thread
         if disk is not None:
           self.disk = disk
+        if error_policy is not None:
+          self.error_policy = error_policy
         if io is not None:
           self.io = io
         if lun is not None:
@@ -239,6 +244,29 @@ class V1Disk(object):
         """
 
         self._disk = disk
+
+    @property
+    def error_policy(self):
+        """
+        Gets the error_policy of this V1Disk.
+        If specified, it can change the default error policy (stop) for the disk
+
+        :return: The error_policy of this V1Disk.
+        :rtype: str
+        """
+        return self._error_policy
+
+    @error_policy.setter
+    def error_policy(self, error_policy):
+        """
+        Sets the error_policy of this V1Disk.
+        If specified, it can change the default error policy (stop) for the disk
+
+        :param error_policy: The error_policy of this V1Disk.
+        :type: str
+        """
+
+        self._error_policy = error_policy
 
     @property
     def io(self):

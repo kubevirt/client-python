@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **cdrom** | [**V1CDRomTarget**](V1CDRomTarget.md) | Attach a volume as a cdrom to the vmi. | [optional] 
 **dedicated_io_thread** | **bool** | dedicatedIOThread indicates this disk should have an exclusive IO Thread. Enabling this implies useIOThreads &#x3D; true. Defaults to false. | [optional] 
 **disk** | [**V1DiskTarget**](V1DiskTarget.md) | Attach a volume as a disk to the vmi. | [optional] 
+**error_policy** | **str** | If specified, it can change the default error policy (stop) for the disk | [optional] 
 **io** | **str** | IO specifies which QEMU disk IO mode should be used. Supported values are: native, default, threads. | [optional] 
 **lun** | [**V1LunTarget**](V1LunTarget.md) | Attach a volume as a LUN to the vmi. | [optional] 
 **name** | **str** | Name is the device name | [default to '']

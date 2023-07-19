@@ -244,7 +244,7 @@ class V1Devices(object):
     def autoattach_serial_console(self):
         """
         Gets the autoattach_serial_console of this V1Devices.
-        Whether to attach the default serial console or not. Serial console access will not be available if set to false. Defaults to true.
+        Whether to attach the default virtio-serial console or not. Serial console access will not be available if set to false. Defaults to true.
 
         :return: The autoattach_serial_console of this V1Devices.
         :rtype: bool
@@ -255,7 +255,7 @@ class V1Devices(object):
     def autoattach_serial_console(self, autoattach_serial_console):
         """
         Sets the autoattach_serial_console of this V1Devices.
-        Whether to attach the default serial console or not. Serial console access will not be available if set to false. Defaults to true.
+        Whether to attach the default virtio-serial console or not. Serial console access will not be available if set to false. Defaults to true.
 
         :param autoattach_serial_console: The autoattach_serial_console of this V1Devices.
         :type: bool

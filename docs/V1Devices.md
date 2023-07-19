@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **autoattach_input_device** | **bool** | Whether to attach an Input Device. Defaults to false. | [optional] 
 **autoattach_mem_balloon** | **bool** | Whether to attach the Memory balloon device with default period. Period can be adjusted in virt-config. Defaults to true. | [optional] 
 **autoattach_pod_interface** | **bool** | Whether to attach a pod network interface. Defaults to true. | [optional] 
-**autoattach_serial_console** | **bool** | Whether to attach the default serial console or not. Serial console access will not be available if set to false. Defaults to true. | [optional] 
+**autoattach_serial_console** | **bool** | Whether to attach the default virtio-serial console or not. Serial console access will not be available if set to false. Defaults to true. | [optional] 
 **autoattach_vsock** | **bool** | Whether to attach the VSOCK CID to the VM or not. VSOCK access will be available if set to true. Defaults to false. | [optional] 
 **block_multi_queue** | **bool** | Whether or not to enable virtio multi-queue for block devices. Defaults to false. | [optional] 
 **client_passthrough** | [**V1ClientPassthroughDevices**](V1ClientPassthroughDevices.md) | To configure and access client devices such as redirecting USB | [optional] 

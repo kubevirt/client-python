@@ -99,7 +99,7 @@ class V1beta1CPUInstancetype(object):
     def guest(self):
         """
         Gets the guest of this V1beta1CPUInstancetype.
-        Required number of vCPUs to expose to the guest.  The resulting CPU topology being derived from the optional PreferredCPUTopology attribute of CPUPreferences that itself defaults to PreferCores.
+        Required number of vCPUs to expose to the guest.  The resulting CPU topology being derived from the optional PreferredCPUTopology attribute of CPUPreferences that itself defaults to PreferSockets.
 
         :return: The guest of this V1beta1CPUInstancetype.
         :rtype: int
@@ -110,7 +110,7 @@ class V1beta1CPUInstancetype(object):
     def guest(self, guest):
         """
         Sets the guest of this V1beta1CPUInstancetype.
-        Required number of vCPUs to expose to the guest.  The resulting CPU topology being derived from the optional PreferredCPUTopology attribute of CPUPreferences that itself defaults to PreferCores.
+        Required number of vCPUs to expose to the guest.  The resulting CPU topology being derived from the optional PreferredCPUTopology attribute of CPUPreferences that itself defaults to PreferSockets.
 
         :param guest: The guest of this V1beta1CPUInstancetype.
         :type: int

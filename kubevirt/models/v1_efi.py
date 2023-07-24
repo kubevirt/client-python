@@ -31,22 +31,50 @@ class V1EFI(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'persistent': 'bool',
         'secure_boot': 'bool'
     }
 
     attribute_map = {
+        'persistent': 'persistent',
         'secure_boot': 'secureBoot'
     }
 
-    def __init__(self, secure_boot=None):
+    def __init__(self, persistent=None, secure_boot=None):
         """
         V1EFI - a model defined in Swagger
         """
 
+        self._persistent = None
         self._secure_boot = None
 
+        if persistent is not None:
+          self.persistent = persistent
         if secure_boot is not None:
           self.secure_boot = secure_boot
+
+    @property
+    def persistent(self):
+        """
+        Gets the persistent of this V1EFI.
+        If set to true, Persistent will persist the EFI NVRAM across reboots. Defaults to false
+
+        :return: The persistent of this V1EFI.
+        :rtype: bool
+        """
+        return self._persistent
+
+    @persistent.setter
+    def persistent(self, persistent):
+        """
+        Sets the persistent of this V1EFI.
+        If set to true, Persistent will persist the EFI NVRAM across reboots. Defaults to false
+
+        :param persistent: The persistent of this V1EFI.
+        :type: bool
+        """
+
+        self._persistent = persistent
 
     @property
     def secure_boot(self):

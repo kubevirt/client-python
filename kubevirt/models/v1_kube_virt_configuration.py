@@ -550,6 +550,7 @@ class V1KubeVirtConfiguration(object):
     def machine_type(self):
         """
         Gets the machine_type of this V1KubeVirtConfiguration.
+        Deprecated. Use architectureConfiguration instead.
 
         :return: The machine_type of this V1KubeVirtConfiguration.
         :rtype: str
@@ -560,6 +561,7 @@ class V1KubeVirtConfiguration(object):
     def machine_type(self, machine_type):
         """
         Sets the machine_type of this V1KubeVirtConfiguration.
+        Deprecated. Use architectureConfiguration instead.
 
         :param machine_type: The machine_type of this V1KubeVirtConfiguration.
         :type: str

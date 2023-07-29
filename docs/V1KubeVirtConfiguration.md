@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **image_pull_policy** | **str** | Possible enum values:  - &#x60;\&quot;Always\&quot;&#x60; means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.  - &#x60;\&quot;IfNotPresent\&quot;&#x60; means that kubelet pulls if the image isn&#39;t present on disk. Container will fail if the image isn&#39;t present and the pull fails.  - &#x60;\&quot;Never\&quot;&#x60; means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn&#39;t present | [optional] 
 **ksm_configuration** | [**V1KSMConfiguration**](V1KSMConfiguration.md) | KSMConfiguration holds the information regarding the enabling the KSM in the nodes (if available). | [optional] 
 **live_update_configuration** | [**V1LiveUpdateConfiguration**](V1LiveUpdateConfiguration.md) | LiveUpdateConfiguration holds defaults for live update features | [optional] 
-**machine_type** | **str** |  | [optional] 
+**machine_type** | **str** | Deprecated. Use architectureConfiguration instead. | [optional] 
 **mediated_devices_configuration** | [**V1MediatedDevicesConfiguration**](V1MediatedDevicesConfiguration.md) |  | [optional] 
 **mem_balloon_stats_period** | **int** |  | [optional] 
 **migrations** | [**V1MigrationConfiguration**](V1MigrationConfiguration.md) |  | [optional] 

@@ -31,32 +31,58 @@ class V1NetworkConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'binding': 'dict(str, V1InterfaceBindingPlugin)',
         'default_network_interface': 'str',
         'permit_bridge_interface_on_pod_network': 'bool',
         'permit_slirp_interface': 'bool'
     }
 
     attribute_map = {
+        'binding': 'binding',
         'default_network_interface': 'defaultNetworkInterface',
         'permit_bridge_interface_on_pod_network': 'permitBridgeInterfaceOnPodNetwork',
         'permit_slirp_interface': 'permitSlirpInterface'
     }
 
-    def __init__(self, default_network_interface=None, permit_bridge_interface_on_pod_network=None, permit_slirp_interface=None):
+    def __init__(self, binding=None, default_network_interface=None, permit_bridge_interface_on_pod_network=None, permit_slirp_interface=None):
         """
         V1NetworkConfiguration - a model defined in Swagger
         """
 
+        self._binding = None
         self._default_network_interface = None
         self._permit_bridge_interface_on_pod_network = None
         self._permit_slirp_interface = None
 
+        if binding is not None:
+          self.binding = binding
         if default_network_interface is not None:
           self.default_network_interface = default_network_interface
         if permit_bridge_interface_on_pod_network is not None:
           self.permit_bridge_interface_on_pod_network = permit_bridge_interface_on_pod_network
         if permit_slirp_interface is not None:
           self.permit_slirp_interface = permit_slirp_interface
+
+    @property
+    def binding(self):
+        """
+        Gets the binding of this V1NetworkConfiguration.
+
+        :return: The binding of this V1NetworkConfiguration.
+        :rtype: dict(str, V1InterfaceBindingPlugin)
+        """
+        return self._binding
+
+    @binding.setter
+    def binding(self, binding):
+        """
+        Sets the binding of this V1NetworkConfiguration.
+
+        :param binding: The binding of this V1NetworkConfiguration.
+        :type: dict(str, V1InterfaceBindingPlugin)
+        """
+
+        self._binding = binding
 
     @property
     def default_network_interface(self):

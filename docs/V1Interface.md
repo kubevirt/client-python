@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **acpi_index** | **int** | If specified, the ACPI index is used to provide network interface device naming, that is stable across changes in PCI addresses assigned to the device. This value is required to be unique across all devices and be between 1 and (16*1024-1). | [optional] 
+**binding** | [**V1PluginBinding**](V1PluginBinding.md) | Binding specifies the binding plugin that will be used to connect the interface to the guest. It provides an alternative to InterfaceBindingMethod. version: 1alphav1 | [optional] 
 **boot_order** | **int** | BootOrder is an integer value &gt; 0, used to determine ordering of boot devices. Lower values take precedence. Each interface or disk that has a boot order must have a unique value. Interfaces without a boot order are not tried. | [optional] 
 **bridge** | [**V1InterfaceBridge**](V1InterfaceBridge.md) |  | [optional] 
 **dhcp_options** | [**V1DHCPOptions**](V1DHCPOptions.md) | If specified the network interface will pass additional DHCP options to the VMI | [optional] 

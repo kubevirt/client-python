@@ -141,6 +141,7 @@ from .v1_i6300_esb_watchdog import V1I6300ESBWatchdog
 from .v1_input import V1Input
 from .v1_instancetype_matcher import V1InstancetypeMatcher
 from .v1_interface import V1Interface
+from .v1_interface_binding_plugin import V1InterfaceBindingPlugin
 from .v1_interface_bridge import V1InterfaceBridge
 from .v1_interface_macvtap import V1InterfaceMacvtap
 from .v1_interface_masquerade import V1InterfaceMasquerade
@@ -186,6 +187,7 @@ from .v1_pci_host_device import V1PciHostDevice
 from .v1_permitted_host_devices import V1PermittedHostDevices
 from .v1_persistent_volume_claim_info import V1PersistentVolumeClaimInfo
 from .v1_persistent_volume_claim_volume_source import V1PersistentVolumeClaimVolumeSource
+from .v1_plugin_binding import V1PluginBinding
 from .v1_pod_network import V1PodNetwork
 from .v1_port import V1Port
 from .v1_preference_matcher import V1PreferenceMatcher

@@ -32,6 +32,7 @@ class V1Interface(object):
     """
     swagger_types = {
         'acpi_index': 'int',
+        'binding': 'V1PluginBinding',
         'boot_order': 'int',
         'bridge': 'V1InterfaceBridge',
         'dhcp_options': 'V1DHCPOptions',
@@ -51,6 +52,7 @@ class V1Interface(object):
 
     attribute_map = {
         'acpi_index': 'acpiIndex',
+        'binding': 'binding',
         'boot_order': 'bootOrder',
         'bridge': 'bridge',
         'dhcp_options': 'dhcpOptions',
@@ -68,12 +70,13 @@ class V1Interface(object):
         'tag': 'tag'
     }
 
-    def __init__(self, acpi_index=None, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name='', passt=None, pci_address=None, ports=None, slirp=None, sriov=None, state=None, tag=None):
+    def __init__(self, acpi_index=None, binding=None, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name='', passt=None, pci_address=None, ports=None, slirp=None, sriov=None, state=None, tag=None):
         """
         V1Interface - a model defined in Swagger
         """
 
         self._acpi_index = None
+        self._binding = None
         self._boot_order = None
         self._bridge = None
         self._dhcp_options = None
@@ -92,6 +95,8 @@ class V1Interface(object):
 
         if acpi_index is not None:
           self.acpi_index = acpi_index
+        if binding is not None:
+          self.binding = binding
         if boot_order is not None:
           self.boot_order = boot_order
         if bridge is not None:
@@ -144,6 +149,29 @@ class V1Interface(object):
         """
 
         self._acpi_index = acpi_index
+
+    @property
+    def binding(self):
+        """
+        Gets the binding of this V1Interface.
+        Binding specifies the binding plugin that will be used to connect the interface to the guest. It provides an alternative to InterfaceBindingMethod. version: 1alphav1
+
+        :return: The binding of this V1Interface.
+        :rtype: V1PluginBinding
+        """
+        return self._binding
+
+    @binding.setter
+    def binding(self, binding):
+        """
+        Sets the binding of this V1Interface.
+        Binding specifies the binding plugin that will be used to connect the interface to the guest. It provides an alternative to InterfaceBindingMethod. version: 1alphav1
+
+        :param binding: The binding of this V1Interface.
+        :type: V1PluginBinding
+        """
+
+        self._binding = binding
 
     @property
     def boot_order(self):

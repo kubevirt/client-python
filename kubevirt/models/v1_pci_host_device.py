@@ -108,7 +108,7 @@ class V1PciHostDevice(object):
     def resource_name(self):
         """
         Gets the resource_name of this V1PciHostDevice.
-        The name of the resource that is representing the device. Exposed by a device plugin and requested by VMs. Typically of the form vendor.com/product_nameThe name of the resource that is representing the device. Exposed by a device plugin and requested by VMs. Typically of the form vendor.com/product_name
+        The name of the resource that is representing the device. Exposed by a device plugin and requested by VMs. Typically of the form vendor.com/product_name
 
         :return: The resource_name of this V1PciHostDevice.
         :rtype: str
@@ -119,7 +119,7 @@ class V1PciHostDevice(object):
     def resource_name(self, resource_name):
         """
         Sets the resource_name of this V1PciHostDevice.
-        The name of the resource that is representing the device. Exposed by a device plugin and requested by VMs. Typically of the form vendor.com/product_nameThe name of the resource that is representing the device. Exposed by a device plugin and requested by VMs. Typically of the form vendor.com/product_name
+        The name of the resource that is representing the device. Exposed by a device plugin and requested by VMs. Typically of the form vendor.com/product_name
 
         :param resource_name: The resource_name of this V1PciHostDevice.
         :type: str

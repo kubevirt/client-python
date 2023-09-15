@@ -41,6 +41,7 @@ class V1Devices(object):
         'client_passthrough': 'V1ClientPassthroughDevices',
         'disable_hotplug': 'bool',
         'disks': 'list[V1Disk]',
+        'downward_metrics': 'V1DownwardMetrics',
         'filesystems': 'list[V1Filesystem]',
         'gpus': 'list[V1GPU]',
         'host_devices': 'list[V1HostDevice]',
@@ -65,6 +66,7 @@ class V1Devices(object):
         'client_passthrough': 'clientPassthrough',
         'disable_hotplug': 'disableHotplug',
         'disks': 'disks',
+        'downward_metrics': 'downwardMetrics',
         'filesystems': 'filesystems',
         'gpus': 'gpus',
         'host_devices': 'hostDevices',
@@ -78,7 +80,7 @@ class V1Devices(object):
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_input_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, autoattach_vsock=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, sound=None, tpm=None, use_virtio_transitional=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_input_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, autoattach_vsock=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, downward_metrics=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, sound=None, tpm=None, use_virtio_transitional=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -93,6 +95,7 @@ class V1Devices(object):
         self._client_passthrough = None
         self._disable_hotplug = None
         self._disks = None
+        self._downward_metrics = None
         self._filesystems = None
         self._gpus = None
         self._host_devices = None
@@ -125,6 +128,8 @@ class V1Devices(object):
           self.disable_hotplug = disable_hotplug
         if disks is not None:
           self.disks = disks
+        if downward_metrics is not None:
+          self.downward_metrics = downward_metrics
         if filesystems is not None:
           self.filesystems = filesystems
         if gpus is not None:
@@ -377,6 +382,29 @@ class V1Devices(object):
         """
 
         self._disks = disks
+
+    @property
+    def downward_metrics(self):
+        """
+        Gets the downward_metrics of this V1Devices.
+        DownwardMetrics creates a virtio serials for exposing the downward metrics to the vmi.
+
+        :return: The downward_metrics of this V1Devices.
+        :rtype: V1DownwardMetrics
+        """
+        return self._downward_metrics
+
+    @downward_metrics.setter
+    def downward_metrics(self, downward_metrics):
+        """
+        Sets the downward_metrics of this V1Devices.
+        DownwardMetrics creates a virtio serials for exposing the downward metrics to the vmi.
+
+        :param downward_metrics: The downward_metrics of this V1Devices.
+        :type: V1DownwardMetrics
+        """
+
+        self._downward_metrics = downward_metrics
 
     @property
     def filesystems(self):

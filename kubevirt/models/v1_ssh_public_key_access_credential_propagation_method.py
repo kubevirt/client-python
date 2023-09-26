@@ -32,24 +32,29 @@ class V1SSHPublicKeyAccessCredentialPropagationMethod(object):
     """
     swagger_types = {
         'config_drive': 'V1ConfigDriveSSHPublicKeyAccessCredentialPropagation',
+        'no_cloud': 'V1NoCloudSSHPublicKeyAccessCredentialPropagation',
         'qemu_guest_agent': 'V1QemuGuestAgentSSHPublicKeyAccessCredentialPropagation'
     }
 
     attribute_map = {
         'config_drive': 'configDrive',
+        'no_cloud': 'noCloud',
         'qemu_guest_agent': 'qemuGuestAgent'
     }
 
-    def __init__(self, config_drive=None, qemu_guest_agent=None):
+    def __init__(self, config_drive=None, no_cloud=None, qemu_guest_agent=None):
         """
         V1SSHPublicKeyAccessCredentialPropagationMethod - a model defined in Swagger
         """
 
         self._config_drive = None
+        self._no_cloud = None
         self._qemu_guest_agent = None
 
         if config_drive is not None:
           self.config_drive = config_drive
+        if no_cloud is not None:
+          self.no_cloud = no_cloud
         if qemu_guest_agent is not None:
           self.qemu_guest_agent = qemu_guest_agent
 
@@ -75,6 +80,29 @@ class V1SSHPublicKeyAccessCredentialPropagationMethod(object):
         """
 
         self._config_drive = config_drive
+
+    @property
+    def no_cloud(self):
+        """
+        Gets the no_cloud of this V1SSHPublicKeyAccessCredentialPropagationMethod.
+        NoCloudPropagation means that the ssh public keys are injected into the VM using metadata using the noCloud cloud-init provider
+
+        :return: The no_cloud of this V1SSHPublicKeyAccessCredentialPropagationMethod.
+        :rtype: V1NoCloudSSHPublicKeyAccessCredentialPropagation
+        """
+        return self._no_cloud
+
+    @no_cloud.setter
+    def no_cloud(self, no_cloud):
+        """
+        Sets the no_cloud of this V1SSHPublicKeyAccessCredentialPropagationMethod.
+        NoCloudPropagation means that the ssh public keys are injected into the VM using metadata using the noCloud cloud-init provider
+
+        :param no_cloud: The no_cloud of this V1SSHPublicKeyAccessCredentialPropagationMethod.
+        :type: V1NoCloudSSHPublicKeyAccessCredentialPropagation
+        """
+
+        self._no_cloud = no_cloud
 
     @property
     def qemu_guest_agent(self):

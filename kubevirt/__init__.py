@@ -181,6 +181,7 @@ from .models.v1_numa import V1NUMA
 from .models.v1_numa_guest_mapping_passthrough import V1NUMAGuestMappingPassthrough
 from .models.v1_network import V1Network
 from .models.v1_network_configuration import V1NetworkConfiguration
+from .models.v1_no_cloud_ssh_public_key_access_credential_propagation import V1NoCloudSSHPublicKeyAccessCredentialPropagation
 from .models.v1_node_mediated_device_types_config import V1NodeMediatedDeviceTypesConfig
 from .models.v1_node_placement import V1NodePlacement
 from .models.v1_pit_timer import V1PITTimer

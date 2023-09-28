@@ -31,6 +31,7 @@ class V1beta1VirtualMachinePreferenceSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'annotations': 'dict(str, str)',
         'clock': 'V1beta1ClockPreferences',
         'cpu': 'V1beta1CPUPreferences',
         'devices': 'V1beta1DevicePreferences',
@@ -44,6 +45,7 @@ class V1beta1VirtualMachinePreferenceSpec(object):
     }
 
     attribute_map = {
+        'annotations': 'annotations',
         'clock': 'clock',
         'cpu': 'cpu',
         'devices': 'devices',
@@ -56,11 +58,12 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         'volumes': 'volumes'
     }
 
-    def __init__(self, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, preferred_subdomain=None, preferred_termination_grace_period_seconds=None, requirements=None, volumes=None):
+    def __init__(self, annotations=None, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, preferred_subdomain=None, preferred_termination_grace_period_seconds=None, requirements=None, volumes=None):
         """
         V1beta1VirtualMachinePreferenceSpec - a model defined in Swagger
         """
 
+        self._annotations = None
         self._clock = None
         self._cpu = None
         self._devices = None
@@ -72,6 +75,8 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         self._requirements = None
         self._volumes = None
 
+        if annotations is not None:
+          self.annotations = annotations
         if clock is not None:
           self.clock = clock
         if cpu is not None:
@@ -92,6 +97,29 @@ class V1beta1VirtualMachinePreferenceSpec(object):
           self.requirements = requirements
         if volumes is not None:
           self.volumes = volumes
+
+    @property
+    def annotations(self):
+        """
+        Gets the annotations of this V1beta1VirtualMachinePreferenceSpec.
+        Optionally defines preferred Annotations to be applied to the VirtualMachineInstance
+
+        :return: The annotations of this V1beta1VirtualMachinePreferenceSpec.
+        :rtype: dict(str, str)
+        """
+        return self._annotations
+
+    @annotations.setter
+    def annotations(self, annotations):
+        """
+        Sets the annotations of this V1beta1VirtualMachinePreferenceSpec.
+        Optionally defines preferred Annotations to be applied to the VirtualMachineInstance
+
+        :param annotations: The annotations of this V1beta1VirtualMachinePreferenceSpec.
+        :type: dict(str, str)
+        """
+
+        self._annotations = annotations
 
     @property
     def clock(self):

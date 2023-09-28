@@ -31,6 +31,7 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'annotations': 'dict(str, str)',
         'cpu': 'V1beta1CPUInstancetype',
         'gpus': 'list[V1GPU]',
         'host_devices': 'list[V1HostDevice]',
@@ -42,6 +43,7 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
     }
 
     attribute_map = {
+        'annotations': 'annotations',
         'cpu': 'cpu',
         'gpus': 'gpus',
         'host_devices': 'hostDevices',
@@ -52,11 +54,12 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
         'scheduler_name': 'schedulerName'
     }
 
-    def __init__(self, cpu=None, gpus=None, host_devices=None, io_threads_policy=None, launch_security=None, memory=None, node_selector=None, scheduler_name=None):
+    def __init__(self, annotations=None, cpu=None, gpus=None, host_devices=None, io_threads_policy=None, launch_security=None, memory=None, node_selector=None, scheduler_name=None):
         """
         V1beta1VirtualMachineInstancetypeSpec - a model defined in Swagger
         """
 
+        self._annotations = None
         self._cpu = None
         self._gpus = None
         self._host_devices = None
@@ -66,6 +69,8 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
         self._node_selector = None
         self._scheduler_name = None
 
+        if annotations is not None:
+          self.annotations = annotations
         self.cpu = cpu
         if gpus is not None:
           self.gpus = gpus
@@ -80,6 +85,29 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
           self.node_selector = node_selector
         if scheduler_name is not None:
           self.scheduler_name = scheduler_name
+
+    @property
+    def annotations(self):
+        """
+        Gets the annotations of this V1beta1VirtualMachineInstancetypeSpec.
+        Optionally defines the required Annotations to be used by the instance type and applied to the VirtualMachineInstance
+
+        :return: The annotations of this V1beta1VirtualMachineInstancetypeSpec.
+        :rtype: dict(str, str)
+        """
+        return self._annotations
+
+    @annotations.setter
+    def annotations(self, annotations):
+        """
+        Sets the annotations of this V1beta1VirtualMachineInstancetypeSpec.
+        Optionally defines the required Annotations to be used by the instance type and applied to the VirtualMachineInstance
+
+        :param annotations: The annotations of this V1beta1VirtualMachineInstancetypeSpec.
+        :type: dict(str, str)
+        """
+
+        self._annotations = annotations
 
     @property
     def cpu(self):

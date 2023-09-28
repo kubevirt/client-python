@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**annotations** | **dict(str, str)** | Optionally defines preferred Annotations to be applied to the VirtualMachineInstance | [optional] 
 **clock** | [**V1beta1ClockPreferences**](V1beta1ClockPreferences.md) | Clock optionally defines preferences associated with the Clock attribute of a VirtualMachineInstance DomainSpec | [optional] 
 **cpu** | [**V1beta1CPUPreferences**](V1beta1CPUPreferences.md) | CPU optionally defines preferences associated with the CPU attribute of a VirtualMachineInstance DomainSpec | [optional] 
 **devices** | [**V1beta1DevicePreferences**](V1beta1DevicePreferences.md) | Devices optionally defines preferences associated with the Devices attribute of a VirtualMachineInstance DomainSpec | [optional] 

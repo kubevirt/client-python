@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**annotations** | **dict(str, str)** | Optionally defines the required Annotations to be used by the instance type and applied to the VirtualMachineInstance | [optional] 
 **cpu** | [**V1beta1CPUInstancetype**](V1beta1CPUInstancetype.md) | Required CPU related attributes of the instancetype. | 
 **gpus** | [**list[V1GPU]**](V1GPU.md) | Optionally defines any GPU devices associated with the instancetype. | [optional] 
 **host_devices** | [**list[V1HostDevice]**](V1HostDevice.md) | Optionally defines any HostDevices associated with the instancetype. | [optional] 

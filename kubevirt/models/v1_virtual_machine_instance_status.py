@@ -41,6 +41,7 @@ class V1VirtualMachineInstanceStatus(object):
         'interfaces': 'list[V1VirtualMachineInstanceNetworkInterface]',
         'launcher_container_image_version': 'str',
         'machine': 'V1Machine',
+        'memory': 'V1MemoryStatus',
         'migration_method': 'str',
         'migration_state': 'V1VirtualMachineInstanceMigrationState',
         'migration_transport': 'str',
@@ -67,6 +68,7 @@ class V1VirtualMachineInstanceStatus(object):
         'interfaces': 'interfaces',
         'launcher_container_image_version': 'launcherContainerImageVersion',
         'machine': 'machine',
+        'memory': 'memory',
         'migration_method': 'migrationMethod',
         'migration_state': 'migrationState',
         'migration_transport': 'migrationTransport',
@@ -82,7 +84,7 @@ class V1VirtualMachineInstanceStatus(object):
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, vsockcid=None, active_pods=None, conditions=None, current_cpu_topology=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, machine=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
+    def __init__(self, vsockcid=None, active_pods=None, conditions=None, current_cpu_topology=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, machine=None, memory=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -97,6 +99,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._interfaces = None
         self._launcher_container_image_version = None
         self._machine = None
+        self._memory = None
         self._migration_method = None
         self._migration_state = None
         self._migration_transport = None
@@ -131,6 +134,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.launcher_container_image_version = launcher_container_image_version
         if machine is not None:
           self.machine = machine
+        if memory is not None:
+          self.memory = memory
         if migration_method is not None:
           self.migration_method = migration_method
         if migration_state is not None:
@@ -387,6 +392,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._machine = machine
+
+    @property
+    def memory(self):
+        """
+        Gets the memory of this V1VirtualMachineInstanceStatus.
+        Memory shows various informations about the VirtualMachine memory.
+
+        :return: The memory of this V1VirtualMachineInstanceStatus.
+        :rtype: V1MemoryStatus
+        """
+        return self._memory
+
+    @memory.setter
+    def memory(self, memory):
+        """
+        Sets the memory of this V1VirtualMachineInstanceStatus.
+        Memory shows various informations about the VirtualMachine memory.
+
+        :param memory: The memory of this V1VirtualMachineInstanceStatus.
+        :type: V1MemoryStatus
+        """
+
+        self._memory = memory
 
     @property
     def migration_method(self):

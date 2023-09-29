@@ -31,22 +31,32 @@ class V1LiveUpdateConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'max_cpu_sockets': 'int'
+        'max_cpu_sockets': 'int',
+        'max_guest': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'max_hotplug_ratio': 'int'
     }
 
     attribute_map = {
-        'max_cpu_sockets': 'maxCpuSockets'
+        'max_cpu_sockets': 'maxCpuSockets',
+        'max_guest': 'maxGuest',
+        'max_hotplug_ratio': 'maxHotplugRatio'
     }
 
-    def __init__(self, max_cpu_sockets=None):
+    def __init__(self, max_cpu_sockets=None, max_guest=None, max_hotplug_ratio=None):
         """
         V1LiveUpdateConfiguration - a model defined in Swagger
         """
 
         self._max_cpu_sockets = None
+        self._max_guest = None
+        self._max_hotplug_ratio = None
 
         if max_cpu_sockets is not None:
           self.max_cpu_sockets = max_cpu_sockets
+        if max_guest is not None:
+          self.max_guest = max_guest
+        if max_hotplug_ratio is not None:
+          self.max_hotplug_ratio = max_hotplug_ratio
 
     @property
     def max_cpu_sockets(self):
@@ -70,6 +80,52 @@ class V1LiveUpdateConfiguration(object):
         """
 
         self._max_cpu_sockets = max_cpu_sockets
+
+    @property
+    def max_guest(self):
+        """
+        Gets the max_guest of this V1LiveUpdateConfiguration.
+        MaxGuest defines the maximum amount memory that can be allocated to the guest using hotplug.
+
+        :return: The max_guest of this V1LiveUpdateConfiguration.
+        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        """
+        return self._max_guest
+
+    @max_guest.setter
+    def max_guest(self, max_guest):
+        """
+        Sets the max_guest of this V1LiveUpdateConfiguration.
+        MaxGuest defines the maximum amount memory that can be allocated to the guest using hotplug.
+
+        :param max_guest: The max_guest of this V1LiveUpdateConfiguration.
+        :type: K8sIoApimachineryPkgApiResourceQuantity
+        """
+
+        self._max_guest = max_guest
+
+    @property
+    def max_hotplug_ratio(self):
+        """
+        Gets the max_hotplug_ratio of this V1LiveUpdateConfiguration.
+        MaxHotplugRatio is the ratio used to define the max amount of a hotplug resource that can be made available to a VM when the specific Max* setting is not defined (MaxCpuSockets, MaxGuest) Example: VM is configured with 512Mi of guest memory, if MaxGuest is not defined and MaxHotplugRatio is 2 then MaxGuest = 1Gi defaults to 4
+
+        :return: The max_hotplug_ratio of this V1LiveUpdateConfiguration.
+        :rtype: int
+        """
+        return self._max_hotplug_ratio
+
+    @max_hotplug_ratio.setter
+    def max_hotplug_ratio(self, max_hotplug_ratio):
+        """
+        Sets the max_hotplug_ratio of this V1LiveUpdateConfiguration.
+        MaxHotplugRatio is the ratio used to define the max amount of a hotplug resource that can be made available to a VM when the specific Max* setting is not defined (MaxCpuSockets, MaxGuest) Example: VM is configured with 512Mi of guest memory, if MaxGuest is not defined and MaxHotplugRatio is 2 then MaxGuest = 1Gi defaults to 4
+
+        :param max_hotplug_ratio: The max_hotplug_ratio of this V1LiveUpdateConfiguration.
+        :type: int
+        """
+
+        self._max_hotplug_ratio = max_hotplug_ratio
 
     def to_dict(self):
         """

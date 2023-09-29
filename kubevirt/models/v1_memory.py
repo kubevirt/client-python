@@ -32,26 +32,31 @@ class V1Memory(object):
     """
     swagger_types = {
         'guest': 'K8sIoApimachineryPkgApiResourceQuantity',
-        'hugepages': 'V1Hugepages'
+        'hugepages': 'V1Hugepages',
+        'max_guest': 'K8sIoApimachineryPkgApiResourceQuantity'
     }
 
     attribute_map = {
         'guest': 'guest',
-        'hugepages': 'hugepages'
+        'hugepages': 'hugepages',
+        'max_guest': 'maxGuest'
     }
 
-    def __init__(self, guest=None, hugepages=None):
+    def __init__(self, guest=None, hugepages=None, max_guest=None):
         """
         V1Memory - a model defined in Swagger
         """
 
         self._guest = None
         self._hugepages = None
+        self._max_guest = None
 
         if guest is not None:
           self.guest = guest
         if hugepages is not None:
           self.hugepages = hugepages
+        if max_guest is not None:
+          self.max_guest = max_guest
 
     @property
     def guest(self):
@@ -98,6 +103,29 @@ class V1Memory(object):
         """
 
         self._hugepages = hugepages
+
+    @property
+    def max_guest(self):
+        """
+        Gets the max_guest of this V1Memory.
+        MaxGuest allows to specify the maximum amount of memory which is visible inside the Guest OS. The delta between MaxGuest and Guest is the amount of memory that can be hot(un)plugged.
+
+        :return: The max_guest of this V1Memory.
+        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        """
+        return self._max_guest
+
+    @max_guest.setter
+    def max_guest(self, max_guest):
+        """
+        Sets the max_guest of this V1Memory.
+        MaxGuest allows to specify the maximum amount of memory which is visible inside the Guest OS. The delta between MaxGuest and Guest is the amount of memory that can be hot(un)plugged.
+
+        :param max_guest: The max_guest of this V1Memory.
+        :type: K8sIoApimachineryPkgApiResourceQuantity
+        """
+
+        self._max_guest = max_guest
 
     def to_dict(self):
         """

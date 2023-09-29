@@ -32,26 +32,31 @@ class V1LiveUpdateFeatures(object):
     """
     swagger_types = {
         'affinity': 'V1LiveUpdateAffinity',
-        'cpu': 'V1LiveUpdateCPU'
+        'cpu': 'V1LiveUpdateCPU',
+        'memory': 'V1LiveUpdateMemory'
     }
 
     attribute_map = {
         'affinity': 'affinity',
-        'cpu': 'cpu'
+        'cpu': 'cpu',
+        'memory': 'memory'
     }
 
-    def __init__(self, affinity=None, cpu=None):
+    def __init__(self, affinity=None, cpu=None, memory=None):
         """
         V1LiveUpdateFeatures - a model defined in Swagger
         """
 
         self._affinity = None
         self._cpu = None
+        self._memory = None
 
         if affinity is not None:
           self.affinity = affinity
         if cpu is not None:
           self.cpu = cpu
+        if memory is not None:
+          self.memory = memory
 
     @property
     def affinity(self):
@@ -98,6 +103,29 @@ class V1LiveUpdateFeatures(object):
         """
 
         self._cpu = cpu
+
+    @property
+    def memory(self):
+        """
+        Gets the memory of this V1LiveUpdateFeatures.
+        MemoryLiveUpdateConfiguration defines the live update memory features for the VirtualMachine
+
+        :return: The memory of this V1LiveUpdateFeatures.
+        :rtype: V1LiveUpdateMemory
+        """
+        return self._memory
+
+    @memory.setter
+    def memory(self, memory):
+        """
+        Sets the memory of this V1LiveUpdateFeatures.
+        MemoryLiveUpdateConfiguration defines the live update memory features for the VirtualMachine
+
+        :param memory: The memory of this V1LiveUpdateFeatures.
+        :type: V1LiveUpdateMemory
+        """
+
+        self._memory = memory
 
     def to_dict(self):
         """

@@ -167,6 +167,7 @@ from .v1_live_update_affinity import V1LiveUpdateAffinity
 from .v1_live_update_cpu import V1LiveUpdateCPU
 from .v1_live_update_configuration import V1LiveUpdateConfiguration
 from .v1_live_update_features import V1LiveUpdateFeatures
+from .v1_live_update_memory import V1LiveUpdateMemory
 from .v1_log_verbosity import V1LogVerbosity
 from .v1_lun_target import V1LunTarget
 from .v1_machine import V1Machine
@@ -174,6 +175,7 @@ from .v1_mediated_devices_configuration import V1MediatedDevicesConfiguration
 from .v1_mediated_host_device import V1MediatedHostDevice
 from .v1_memory import V1Memory
 from .v1_memory_dump_volume_source import V1MemoryDumpVolumeSource
+from .v1_memory_status import V1MemoryStatus
 from .v1_migrate_options import V1MigrateOptions
 from .v1_migration_configuration import V1MigrationConfiguration
 from .v1_multus_network import V1MultusNetwork

@@ -38,6 +38,7 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         'features': 'V1beta1FeaturePreferences',
         'firmware': 'V1beta1FirmwarePreferences',
         'machine': 'V1beta1MachinePreferences',
+        'prefer_spread_socket_to_core_ratio': 'int',
         'preferred_subdomain': 'str',
         'preferred_termination_grace_period_seconds': 'int',
         'requirements': 'V1beta1PreferenceRequirements',
@@ -52,13 +53,14 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         'features': 'features',
         'firmware': 'firmware',
         'machine': 'machine',
+        'prefer_spread_socket_to_core_ratio': 'preferSpreadSocketToCoreRatio',
         'preferred_subdomain': 'preferredSubdomain',
         'preferred_termination_grace_period_seconds': 'preferredTerminationGracePeriodSeconds',
         'requirements': 'requirements',
         'volumes': 'volumes'
     }
 
-    def __init__(self, annotations=None, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, preferred_subdomain=None, preferred_termination_grace_period_seconds=None, requirements=None, volumes=None):
+    def __init__(self, annotations=None, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, prefer_spread_socket_to_core_ratio=None, preferred_subdomain=None, preferred_termination_grace_period_seconds=None, requirements=None, volumes=None):
         """
         V1beta1VirtualMachinePreferenceSpec - a model defined in Swagger
         """
@@ -70,6 +72,7 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         self._features = None
         self._firmware = None
         self._machine = None
+        self._prefer_spread_socket_to_core_ratio = None
         self._preferred_subdomain = None
         self._preferred_termination_grace_period_seconds = None
         self._requirements = None
@@ -89,6 +92,8 @@ class V1beta1VirtualMachinePreferenceSpec(object):
           self.firmware = firmware
         if machine is not None:
           self.machine = machine
+        if prefer_spread_socket_to_core_ratio is not None:
+          self.prefer_spread_socket_to_core_ratio = prefer_spread_socket_to_core_ratio
         if preferred_subdomain is not None:
           self.preferred_subdomain = preferred_subdomain
         if preferred_termination_grace_period_seconds is not None:
@@ -258,6 +263,29 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         """
 
         self._machine = machine
+
+    @property
+    def prefer_spread_socket_to_core_ratio(self):
+        """
+        Gets the prefer_spread_socket_to_core_ratio of this V1beta1VirtualMachinePreferenceSpec.
+        PreferSpreadSocketToCoreRatio defines the ratio to spread vCPUs between cores and sockets, it defaults to 2.
+
+        :return: The prefer_spread_socket_to_core_ratio of this V1beta1VirtualMachinePreferenceSpec.
+        :rtype: int
+        """
+        return self._prefer_spread_socket_to_core_ratio
+
+    @prefer_spread_socket_to_core_ratio.setter
+    def prefer_spread_socket_to_core_ratio(self, prefer_spread_socket_to_core_ratio):
+        """
+        Sets the prefer_spread_socket_to_core_ratio of this V1beta1VirtualMachinePreferenceSpec.
+        PreferSpreadSocketToCoreRatio defines the ratio to spread vCPUs between cores and sockets, it defaults to 2.
+
+        :param prefer_spread_socket_to_core_ratio: The prefer_spread_socket_to_core_ratio of this V1beta1VirtualMachinePreferenceSpec.
+        :type: int
+        """
+
+        self._prefer_spread_socket_to_core_ratio = prefer_spread_socket_to_core_ratio
 
     @property
     def preferred_subdomain(self):

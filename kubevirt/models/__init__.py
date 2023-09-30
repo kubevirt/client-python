@@ -233,6 +233,8 @@ from .v1_tpm_device import V1TPMDevice
 from .v1_timer import V1Timer
 from .v1_token_bucket_rate_limiter import V1TokenBucketRateLimiter
 from .v1_topology_hints import V1TopologyHints
+from .v1_usb_host_device import V1USBHostDevice
+from .v1_usb_selector import V1USBSelector
 from .v1_unpause_options import V1UnpauseOptions
 from .v1_user_password_access_credential import V1UserPasswordAccessCredential
 from .v1_user_password_access_credential_propagation_method import V1UserPasswordAccessCredentialPropagationMethod

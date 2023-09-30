@@ -32,26 +32,31 @@ class V1PermittedHostDevices(object):
     """
     swagger_types = {
         'mediated_devices': 'list[V1MediatedHostDevice]',
-        'pci_host_devices': 'list[V1PciHostDevice]'
+        'pci_host_devices': 'list[V1PciHostDevice]',
+        'usb': 'list[V1USBHostDevice]'
     }
 
     attribute_map = {
         'mediated_devices': 'mediatedDevices',
-        'pci_host_devices': 'pciHostDevices'
+        'pci_host_devices': 'pciHostDevices',
+        'usb': 'usb'
     }
 
-    def __init__(self, mediated_devices=None, pci_host_devices=None):
+    def __init__(self, mediated_devices=None, pci_host_devices=None, usb=None):
         """
         V1PermittedHostDevices - a model defined in Swagger
         """
 
         self._mediated_devices = None
         self._pci_host_devices = None
+        self._usb = None
 
         if mediated_devices is not None:
           self.mediated_devices = mediated_devices
         if pci_host_devices is not None:
           self.pci_host_devices = pci_host_devices
+        if usb is not None:
+          self.usb = usb
 
     @property
     def mediated_devices(self):
@@ -94,6 +99,27 @@ class V1PermittedHostDevices(object):
         """
 
         self._pci_host_devices = pci_host_devices
+
+    @property
+    def usb(self):
+        """
+        Gets the usb of this V1PermittedHostDevices.
+
+        :return: The usb of this V1PermittedHostDevices.
+        :rtype: list[V1USBHostDevice]
+        """
+        return self._usb
+
+    @usb.setter
+    def usb(self, usb):
+        """
+        Sets the usb of this V1PermittedHostDevices.
+
+        :param usb: The usb of this V1PermittedHostDevices.
+        :type: list[V1USBHostDevice]
+        """
+
+        self._usb = usb
 
     def to_dict(self):
         """

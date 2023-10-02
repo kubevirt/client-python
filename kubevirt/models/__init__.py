@@ -104,6 +104,7 @@ from .v1_data_volume_template_spec import V1DataVolumeTemplateSpec
 from .v1_developer_configuration import V1DeveloperConfiguration
 from .v1_devices import V1Devices
 from .v1_disable_free_page_reporting import V1DisableFreePageReporting
+from .v1_disable_serial_console_log import V1DisableSerialConsoleLog
 from .v1_disk import V1Disk
 from .v1_disk_target import V1DiskTarget
 from .v1_disk_verification import V1DiskVerification

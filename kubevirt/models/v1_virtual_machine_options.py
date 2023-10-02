@@ -31,22 +31,27 @@ class V1VirtualMachineOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'disable_free_page_reporting': 'V1DisableFreePageReporting'
+        'disable_free_page_reporting': 'V1DisableFreePageReporting',
+        'disable_serial_console_log': 'V1DisableSerialConsoleLog'
     }
 
     attribute_map = {
-        'disable_free_page_reporting': 'disableFreePageReporting'
+        'disable_free_page_reporting': 'disableFreePageReporting',
+        'disable_serial_console_log': 'disableSerialConsoleLog'
     }
 
-    def __init__(self, disable_free_page_reporting=None):
+    def __init__(self, disable_free_page_reporting=None, disable_serial_console_log=None):
         """
         V1VirtualMachineOptions - a model defined in Swagger
         """
 
         self._disable_free_page_reporting = None
+        self._disable_serial_console_log = None
 
         if disable_free_page_reporting is not None:
           self.disable_free_page_reporting = disable_free_page_reporting
+        if disable_serial_console_log is not None:
+          self.disable_serial_console_log = disable_serial_console_log
 
     @property
     def disable_free_page_reporting(self):
@@ -70,6 +75,29 @@ class V1VirtualMachineOptions(object):
         """
 
         self._disable_free_page_reporting = disable_free_page_reporting
+
+    @property
+    def disable_serial_console_log(self):
+        """
+        Gets the disable_serial_console_log of this V1VirtualMachineOptions.
+        DisableSerialConsoleLog disables logging the auto-attached default serial console. If not set, serial console logs will be written to a file and then streamed from a container named `guest-console-log`. The value can be individually overridden for each VM, not relevant if AutoattachSerialConsole is disabled.
+
+        :return: The disable_serial_console_log of this V1VirtualMachineOptions.
+        :rtype: V1DisableSerialConsoleLog
+        """
+        return self._disable_serial_console_log
+
+    @disable_serial_console_log.setter
+    def disable_serial_console_log(self, disable_serial_console_log):
+        """
+        Sets the disable_serial_console_log of this V1VirtualMachineOptions.
+        DisableSerialConsoleLog disables logging the auto-attached default serial console. If not set, serial console logs will be written to a file and then streamed from a container named `guest-console-log`. The value can be individually overridden for each VM, not relevant if AutoattachSerialConsole is disabled.
+
+        :param disable_serial_console_log: The disable_serial_console_log of this V1VirtualMachineOptions.
+        :type: V1DisableSerialConsoleLog
+        """
+
+        self._disable_serial_console_log = disable_serial_console_log
 
     def to_dict(self):
         """

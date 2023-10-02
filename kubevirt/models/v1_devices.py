@@ -47,6 +47,7 @@ class V1Devices(object):
         'host_devices': 'list[V1HostDevice]',
         'inputs': 'list[V1Input]',
         'interfaces': 'list[V1Interface]',
+        'log_serial_console': 'bool',
         'network_interface_multiqueue': 'bool',
         'rng': 'V1Rng',
         'sound': 'V1SoundDevice',
@@ -72,6 +73,7 @@ class V1Devices(object):
         'host_devices': 'hostDevices',
         'inputs': 'inputs',
         'interfaces': 'interfaces',
+        'log_serial_console': 'logSerialConsole',
         'network_interface_multiqueue': 'networkInterfaceMultiqueue',
         'rng': 'rng',
         'sound': 'sound',
@@ -80,7 +82,7 @@ class V1Devices(object):
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_input_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, autoattach_vsock=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, downward_metrics=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, network_interface_multiqueue=None, rng=None, sound=None, tpm=None, use_virtio_transitional=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_input_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, autoattach_vsock=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, downward_metrics=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, log_serial_console=None, network_interface_multiqueue=None, rng=None, sound=None, tpm=None, use_virtio_transitional=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -101,6 +103,7 @@ class V1Devices(object):
         self._host_devices = None
         self._inputs = None
         self._interfaces = None
+        self._log_serial_console = None
         self._network_interface_multiqueue = None
         self._rng = None
         self._sound = None
@@ -140,6 +143,8 @@ class V1Devices(object):
           self.inputs = inputs
         if interfaces is not None:
           self.interfaces = interfaces
+        if log_serial_console is not None:
+          self.log_serial_console = log_serial_console
         if network_interface_multiqueue is not None:
           self.network_interface_multiqueue = network_interface_multiqueue
         if rng is not None:
@@ -520,6 +525,29 @@ class V1Devices(object):
         """
 
         self._interfaces = interfaces
+
+    @property
+    def log_serial_console(self):
+        """
+        Gets the log_serial_console of this V1Devices.
+        Whether to log the auto-attached default serial console or not. Serial console logs will be collect to a file and then streamed from a named `guest-console-log`. Not relevant if autoattachSerialConsole is disabled. Defaults to cluster wide setting on VirtualMachineOptions.
+
+        :return: The log_serial_console of this V1Devices.
+        :rtype: bool
+        """
+        return self._log_serial_console
+
+    @log_serial_console.setter
+    def log_serial_console(self, log_serial_console):
+        """
+        Sets the log_serial_console of this V1Devices.
+        Whether to log the auto-attached default serial console or not. Serial console logs will be collect to a file and then streamed from a named `guest-console-log`. Not relevant if autoattachSerialConsole is disabled. Defaults to cluster wide setting on VirtualMachineOptions.
+
+        :param log_serial_console: The log_serial_console of this V1Devices.
+        :type: bool
+        """
+
+        self._log_serial_console = log_serial_console
 
     @property
     def network_interface_multiqueue(self):

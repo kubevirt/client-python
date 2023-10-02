@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **host_devices** | [**list[V1HostDevice]**](V1HostDevice.md) | Whether to attach a host device to the vmi. | [optional] 
 **inputs** | [**list[V1Input]**](V1Input.md) | Inputs describe input devices | [optional] 
 **interfaces** | [**list[V1Interface]**](V1Interface.md) | Interfaces describe network interfaces which are added to the vmi. | [optional] 
+**log_serial_console** | **bool** | Whether to log the auto-attached default serial console or not. Serial console logs will be collect to a file and then streamed from a named &#x60;guest-console-log&#x60;. Not relevant if autoattachSerialConsole is disabled. Defaults to cluster wide setting on VirtualMachineOptions. | [optional] 
 **network_interface_multiqueue** | **bool** | If specified, virtual network interfaces configured with a virtio bus will also enable the vhost multiqueue feature for network devices. The number of queues created depends on additional factors of the VirtualMachineInstance, like the number of guest CPUs. | [optional] 
 **rng** | [**V1Rng**](V1Rng.md) | Whether to have random number generator from host | [optional] 
 **sound** | [**V1SoundDevice**](V1SoundDevice.md) | Whether to emulate a sound device. | [optional] 

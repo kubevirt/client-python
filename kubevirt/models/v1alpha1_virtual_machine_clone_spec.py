@@ -76,6 +76,7 @@ class V1alpha1VirtualMachineCloneSpec(object):
     def annotation_filters(self):
         """
         Gets the annotation_filters of this V1alpha1VirtualMachineCloneSpec.
+        Example use: \"!some/key*\". For a detailed description, please refer to https://kubevirt.io/user-guide/operations/clone_api/#label-annotation-filters.
 
         :return: The annotation_filters of this V1alpha1VirtualMachineCloneSpec.
         :rtype: list[str]
@@ -86,6 +87,7 @@ class V1alpha1VirtualMachineCloneSpec(object):
     def annotation_filters(self, annotation_filters):
         """
         Sets the annotation_filters of this V1alpha1VirtualMachineCloneSpec.
+        Example use: \"!some/key*\". For a detailed description, please refer to https://kubevirt.io/user-guide/operations/clone_api/#label-annotation-filters.
 
         :param annotation_filters: The annotation_filters of this V1alpha1VirtualMachineCloneSpec.
         :type: list[str]
@@ -97,6 +99,7 @@ class V1alpha1VirtualMachineCloneSpec(object):
     def label_filters(self):
         """
         Gets the label_filters of this V1alpha1VirtualMachineCloneSpec.
+        Example use: \"!some/key*\". For a detailed description, please refer to https://kubevirt.io/user-guide/operations/clone_api/#label-annotation-filters.
 
         :return: The label_filters of this V1alpha1VirtualMachineCloneSpec.
         :rtype: list[str]
@@ -107,6 +110,7 @@ class V1alpha1VirtualMachineCloneSpec(object):
     def label_filters(self, label_filters):
         """
         Sets the label_filters of this V1alpha1VirtualMachineCloneSpec.
+        Example use: \"!some/key*\". For a detailed description, please refer to https://kubevirt.io/user-guide/operations/clone_api/#label-annotation-filters.
 
         :param label_filters: The label_filters of this V1alpha1VirtualMachineCloneSpec.
         :type: list[str]
@@ -164,6 +168,7 @@ class V1alpha1VirtualMachineCloneSpec(object):
     def source(self):
         """
         Gets the source of this V1alpha1VirtualMachineCloneSpec.
+        Source is the object that would be cloned. Currently supported source types are: VirtualMachine of kubevirt.io API group, VirtualMachineSnapshot of snapshot.kubevirt.io API group
 
         :return: The source of this V1alpha1VirtualMachineCloneSpec.
         :rtype: K8sIoApiCoreV1TypedLocalObjectReference
@@ -174,6 +179,7 @@ class V1alpha1VirtualMachineCloneSpec(object):
     def source(self, source):
         """
         Sets the source of this V1alpha1VirtualMachineCloneSpec.
+        Source is the object that would be cloned. Currently supported source types are: VirtualMachine of kubevirt.io API group, VirtualMachineSnapshot of snapshot.kubevirt.io API group
 
         :param source: The source of this V1alpha1VirtualMachineCloneSpec.
         :type: K8sIoApiCoreV1TypedLocalObjectReference
@@ -187,7 +193,7 @@ class V1alpha1VirtualMachineCloneSpec(object):
     def target(self):
         """
         Gets the target of this V1alpha1VirtualMachineCloneSpec.
-        If the target is not provided, a random name would be generated for the target. The target's name can be viewed by inspecting status \"TargetName\" field below.
+        Target is the outcome of the cloning process. Currently supported source types are: - VirtualMachine of kubevirt.io API group - Empty (nil). If the target is not provided, the target type would default to VirtualMachine and a random name would be generated for the target. The target's name can be viewed by inspecting status \"TargetName\" field below.
 
         :return: The target of this V1alpha1VirtualMachineCloneSpec.
         :rtype: K8sIoApiCoreV1TypedLocalObjectReference
@@ -198,7 +204,7 @@ class V1alpha1VirtualMachineCloneSpec(object):
     def target(self, target):
         """
         Sets the target of this V1alpha1VirtualMachineCloneSpec.
-        If the target is not provided, a random name would be generated for the target. The target's name can be viewed by inspecting status \"TargetName\" field below.
+        Target is the outcome of the cloning process. Currently supported source types are: - VirtualMachine of kubevirt.io API group - Empty (nil). If the target is not provided, the target type would default to VirtualMachine and a random name would be generated for the target. The target's name can be viewed by inspecting status \"TargetName\" field below.
 
         :param target: The target of this V1alpha1VirtualMachineCloneSpec.
         :type: K8sIoApiCoreV1TypedLocalObjectReference

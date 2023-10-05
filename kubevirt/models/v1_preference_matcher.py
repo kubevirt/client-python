@@ -32,6 +32,7 @@ class V1PreferenceMatcher(object):
     """
     swagger_types = {
         'infer_from_volume': 'str',
+        'infer_from_volume_failure_policy': 'str',
         'kind': 'str',
         'name': 'str',
         'revision_name': 'str'
@@ -39,23 +40,27 @@ class V1PreferenceMatcher(object):
 
     attribute_map = {
         'infer_from_volume': 'inferFromVolume',
+        'infer_from_volume_failure_policy': 'inferFromVolumeFailurePolicy',
         'kind': 'kind',
         'name': 'name',
         'revision_name': 'revisionName'
     }
 
-    def __init__(self, infer_from_volume=None, kind=None, name=None, revision_name=None):
+    def __init__(self, infer_from_volume=None, infer_from_volume_failure_policy=None, kind=None, name=None, revision_name=None):
         """
         V1PreferenceMatcher - a model defined in Swagger
         """
 
         self._infer_from_volume = None
+        self._infer_from_volume_failure_policy = None
         self._kind = None
         self._name = None
         self._revision_name = None
 
         if infer_from_volume is not None:
           self.infer_from_volume = infer_from_volume
+        if infer_from_volume_failure_policy is not None:
+          self.infer_from_volume_failure_policy = infer_from_volume_failure_policy
         if kind is not None:
           self.kind = kind
         if name is not None:
@@ -85,6 +90,29 @@ class V1PreferenceMatcher(object):
         """
 
         self._infer_from_volume = infer_from_volume
+
+    @property
+    def infer_from_volume_failure_policy(self):
+        """
+        Gets the infer_from_volume_failure_policy of this V1PreferenceMatcher.
+        InferFromVolumeFailurePolicy controls what should happen on failure when preference the instancetype. Allowed values are: \"RejectInferFromVolumeFailure\" and \"IgnoreInferFromVolumeFailure\". If not specified, \"RejectInferFromVolumeFailure\" is used by default.
+
+        :return: The infer_from_volume_failure_policy of this V1PreferenceMatcher.
+        :rtype: str
+        """
+        return self._infer_from_volume_failure_policy
+
+    @infer_from_volume_failure_policy.setter
+    def infer_from_volume_failure_policy(self, infer_from_volume_failure_policy):
+        """
+        Sets the infer_from_volume_failure_policy of this V1PreferenceMatcher.
+        InferFromVolumeFailurePolicy controls what should happen on failure when preference the instancetype. Allowed values are: \"RejectInferFromVolumeFailure\" and \"IgnoreInferFromVolumeFailure\". If not specified, \"RejectInferFromVolumeFailure\" is used by default.
+
+        :param infer_from_volume_failure_policy: The infer_from_volume_failure_policy of this V1PreferenceMatcher.
+        :type: str
+        """
+
+        self._infer_from_volume_failure_policy = infer_from_volume_failure_policy
 
     @property
     def kind(self):

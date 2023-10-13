@@ -31,26 +31,54 @@ class V1USBHostDevice(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'external_resource_provider': 'bool',
         'resource_name': 'str',
         'selectors': 'list[V1USBSelector]'
     }
 
     attribute_map = {
+        'external_resource_provider': 'externalResourceProvider',
         'resource_name': 'resourceName',
         'selectors': 'selectors'
     }
 
-    def __init__(self, resource_name='', selectors=None):
+    def __init__(self, external_resource_provider=None, resource_name='', selectors=None):
         """
         V1USBHostDevice - a model defined in Swagger
         """
 
+        self._external_resource_provider = None
         self._resource_name = None
         self._selectors = None
 
+        if external_resource_provider is not None:
+          self.external_resource_provider = external_resource_provider
         self.resource_name = resource_name
         if selectors is not None:
           self.selectors = selectors
+
+    @property
+    def external_resource_provider(self):
+        """
+        Gets the external_resource_provider of this V1USBHostDevice.
+        If true, KubeVirt will leave the allocation and monitoring to an external device plugin
+
+        :return: The external_resource_provider of this V1USBHostDevice.
+        :rtype: bool
+        """
+        return self._external_resource_provider
+
+    @external_resource_provider.setter
+    def external_resource_provider(self, external_resource_provider):
+        """
+        Sets the external_resource_provider of this V1USBHostDevice.
+        If true, KubeVirt will leave the allocation and monitoring to an external device plugin
+
+        :param external_resource_provider: The external_resource_provider of this V1USBHostDevice.
+        :type: bool
+        """
+
+        self._external_resource_provider = external_resource_provider
 
     @property
     def resource_name(self):

@@ -31,22 +31,50 @@ class V1InterfaceBindingPlugin(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'network_attachment_definition': 'str',
         'sidecar_image': 'str'
     }
 
     attribute_map = {
+        'network_attachment_definition': 'networkAttachmentDefinition',
         'sidecar_image': 'sidecarImage'
     }
 
-    def __init__(self, sidecar_image=None):
+    def __init__(self, network_attachment_definition=None, sidecar_image=None):
         """
         V1InterfaceBindingPlugin - a model defined in Swagger
         """
 
+        self._network_attachment_definition = None
         self._sidecar_image = None
 
+        if network_attachment_definition is not None:
+          self.network_attachment_definition = network_attachment_definition
         if sidecar_image is not None:
           self.sidecar_image = sidecar_image
+
+    @property
+    def network_attachment_definition(self):
+        """
+        Gets the network_attachment_definition of this V1InterfaceBindingPlugin.
+        NetworkAttachmentDefinition references to a NetworkAttachmentDefinition CR object. Format: <name>, <namespace>/<name>. If namespace is not specified, VMI namespace is assumed. version: 1alphav1
+
+        :return: The network_attachment_definition of this V1InterfaceBindingPlugin.
+        :rtype: str
+        """
+        return self._network_attachment_definition
+
+    @network_attachment_definition.setter
+    def network_attachment_definition(self, network_attachment_definition):
+        """
+        Sets the network_attachment_definition of this V1InterfaceBindingPlugin.
+        NetworkAttachmentDefinition references to a NetworkAttachmentDefinition CR object. Format: <name>, <namespace>/<name>. If namespace is not specified, VMI namespace is assumed. version: 1alphav1
+
+        :param network_attachment_definition: The network_attachment_definition of this V1InterfaceBindingPlugin.
+        :type: str
+        """
+
+        self._network_attachment_definition = network_attachment_definition
 
     @property
     def sidecar_image(self):

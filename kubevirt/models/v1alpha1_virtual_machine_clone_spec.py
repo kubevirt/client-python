@@ -36,7 +36,8 @@ class V1alpha1VirtualMachineCloneSpec(object):
         'new_mac_addresses': 'dict(str, str)',
         'new_sm_bios_serial': 'str',
         'source': 'K8sIoApiCoreV1TypedLocalObjectReference',
-        'target': 'K8sIoApiCoreV1TypedLocalObjectReference'
+        'target': 'K8sIoApiCoreV1TypedLocalObjectReference',
+        'template': 'V1alpha1VirtualMachineCloneTemplateFilters'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class V1alpha1VirtualMachineCloneSpec(object):
         'new_mac_addresses': 'newMacAddresses',
         'new_sm_bios_serial': 'newSMBiosSerial',
         'source': 'source',
-        'target': 'target'
+        'target': 'target',
+        'template': 'template'
     }
 
-    def __init__(self, annotation_filters=None, label_filters=None, new_mac_addresses=None, new_sm_bios_serial=None, source=None, target=None):
+    def __init__(self, annotation_filters=None, label_filters=None, new_mac_addresses=None, new_sm_bios_serial=None, source=None, target=None, template=None):
         """
         V1alpha1VirtualMachineCloneSpec - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class V1alpha1VirtualMachineCloneSpec(object):
         self._new_sm_bios_serial = None
         self._source = None
         self._target = None
+        self._template = None
 
         if annotation_filters is not None:
           self.annotation_filters = annotation_filters
@@ -71,6 +74,8 @@ class V1alpha1VirtualMachineCloneSpec(object):
         self.source = source
         if target is not None:
           self.target = target
+        if template is not None:
+          self.template = template
 
     @property
     def annotation_filters(self):
@@ -211,6 +216,29 @@ class V1alpha1VirtualMachineCloneSpec(object):
         """
 
         self._target = target
+
+    @property
+    def template(self):
+        """
+        Gets the template of this V1alpha1VirtualMachineCloneSpec.
+        For a detailed description, please refer to https://kubevirt.io/user-guide/operations/clone_api/#label-annotation-filters.
+
+        :return: The template of this V1alpha1VirtualMachineCloneSpec.
+        :rtype: V1alpha1VirtualMachineCloneTemplateFilters
+        """
+        return self._template
+
+    @template.setter
+    def template(self, template):
+        """
+        Sets the template of this V1alpha1VirtualMachineCloneSpec.
+        For a detailed description, please refer to https://kubevirt.io/user-guide/operations/clone_api/#label-annotation-filters.
+
+        :param template: The template of this V1alpha1VirtualMachineCloneSpec.
+        :type: V1alpha1VirtualMachineCloneTemplateFilters
+        """
+
+        self._template = template
 
     def to_dict(self):
         """

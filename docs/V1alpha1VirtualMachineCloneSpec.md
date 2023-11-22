@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **new_sm_bios_serial** | **str** | NewSMBiosSerial manually sets that target&#39;s SMbios serial. If this field is not specified, a new serial will be generated automatically. | [optional] 
 **source** | [**K8sIoApiCoreV1TypedLocalObjectReference**](K8sIoApiCoreV1TypedLocalObjectReference.md) | Source is the object that would be cloned. Currently supported source types are: VirtualMachine of kubevirt.io API group, VirtualMachineSnapshot of snapshot.kubevirt.io API group | 
 **target** | [**K8sIoApiCoreV1TypedLocalObjectReference**](K8sIoApiCoreV1TypedLocalObjectReference.md) | Target is the outcome of the cloning process. Currently supported source types are: - VirtualMachine of kubevirt.io API group - Empty (nil). If the target is not provided, the target type would default to VirtualMachine and a random name would be generated for the target. The target&#39;s name can be viewed by inspecting status \&quot;TargetName\&quot; field below. | [optional] 
+**template** | [**V1alpha1VirtualMachineCloneTemplateFilters**](V1alpha1VirtualMachineCloneTemplateFilters.md) | For a detailed description, please refer to https://kubevirt.io/user-guide/operations/clone_api/#label-annotation-filters. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

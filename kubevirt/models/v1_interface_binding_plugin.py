@@ -31,27 +31,55 @@ class V1InterfaceBindingPlugin(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'domain_attachment_type': 'str',
         'network_attachment_definition': 'str',
         'sidecar_image': 'str'
     }
 
     attribute_map = {
+        'domain_attachment_type': 'domainAttachmentType',
         'network_attachment_definition': 'networkAttachmentDefinition',
         'sidecar_image': 'sidecarImage'
     }
 
-    def __init__(self, network_attachment_definition=None, sidecar_image=None):
+    def __init__(self, domain_attachment_type=None, network_attachment_definition=None, sidecar_image=None):
         """
         V1InterfaceBindingPlugin - a model defined in Swagger
         """
 
+        self._domain_attachment_type = None
         self._network_attachment_definition = None
         self._sidecar_image = None
 
+        if domain_attachment_type is not None:
+          self.domain_attachment_type = domain_attachment_type
         if network_attachment_definition is not None:
           self.network_attachment_definition = network_attachment_definition
         if sidecar_image is not None:
           self.sidecar_image = sidecar_image
+
+    @property
+    def domain_attachment_type(self):
+        """
+        Gets the domain_attachment_type of this V1InterfaceBindingPlugin.
+        DomainAttachmentType is a standard domain network attachment method kubevirt supports. Supported values: \"tap\". The standard domain attachment can be used instead or in addition to the sidecarImage. version: 1alphav1
+
+        :return: The domain_attachment_type of this V1InterfaceBindingPlugin.
+        :rtype: str
+        """
+        return self._domain_attachment_type
+
+    @domain_attachment_type.setter
+    def domain_attachment_type(self, domain_attachment_type):
+        """
+        Sets the domain_attachment_type of this V1InterfaceBindingPlugin.
+        DomainAttachmentType is a standard domain network attachment method kubevirt supports. Supported values: \"tap\". The standard domain attachment can be used instead or in addition to the sidecarImage. version: 1alphav1
+
+        :param domain_attachment_type: The domain_attachment_type of this V1InterfaceBindingPlugin.
+        :type: str
+        """
+
+        self._domain_attachment_type = domain_attachment_type
 
     @property
     def network_attachment_definition(self):

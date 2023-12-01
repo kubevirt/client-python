@@ -31,6 +31,7 @@ class V1Firmware(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'acpi': 'V1ACPI',
         'bootloader': 'V1Bootloader',
         'kernel_boot': 'V1KernelBoot',
         'serial': 'str',
@@ -38,22 +39,26 @@ class V1Firmware(object):
     }
 
     attribute_map = {
+        'acpi': 'acpi',
         'bootloader': 'bootloader',
         'kernel_boot': 'kernelBoot',
         'serial': 'serial',
         'uuid': 'uuid'
     }
 
-    def __init__(self, bootloader=None, kernel_boot=None, serial=None, uuid=None):
+    def __init__(self, acpi=None, bootloader=None, kernel_boot=None, serial=None, uuid=None):
         """
         V1Firmware - a model defined in Swagger
         """
 
+        self._acpi = None
         self._bootloader = None
         self._kernel_boot = None
         self._serial = None
         self._uuid = None
 
+        if acpi is not None:
+          self.acpi = acpi
         if bootloader is not None:
           self.bootloader = bootloader
         if kernel_boot is not None:
@@ -62,6 +67,29 @@ class V1Firmware(object):
           self.serial = serial
         if uuid is not None:
           self.uuid = uuid
+
+    @property
+    def acpi(self):
+        """
+        Gets the acpi of this V1Firmware.
+        Information that can be set in the ACPI table
+
+        :return: The acpi of this V1Firmware.
+        :rtype: V1ACPI
+        """
+        return self._acpi
+
+    @acpi.setter
+    def acpi(self, acpi):
+        """
+        Sets the acpi of this V1Firmware.
+        Information that can be set in the ACPI table
+
+        :param acpi: The acpi of this V1Firmware.
+        :type: V1ACPI
+        """
+
+        self._acpi = acpi
 
     @property
     def bootloader(self):

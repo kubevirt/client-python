@@ -39,6 +39,7 @@ class V1VirtualMachineInstanceStatus(object):
         'fs_freeze_status': 'str',
         'guest_os_info': 'V1VirtualMachineInstanceGuestOSInfo',
         'interfaces': 'list[V1VirtualMachineInstanceNetworkInterface]',
+        'kernel_boot_status': 'V1KernelBootStatus',
         'launcher_container_image_version': 'str',
         'machine': 'V1Machine',
         'memory': 'V1MemoryStatus',
@@ -66,6 +67,7 @@ class V1VirtualMachineInstanceStatus(object):
         'fs_freeze_status': 'fsFreezeStatus',
         'guest_os_info': 'guestOSInfo',
         'interfaces': 'interfaces',
+        'kernel_boot_status': 'kernelBootStatus',
         'launcher_container_image_version': 'launcherContainerImageVersion',
         'machine': 'machine',
         'memory': 'memory',
@@ -84,7 +86,7 @@ class V1VirtualMachineInstanceStatus(object):
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, vsockcid=None, active_pods=None, conditions=None, current_cpu_topology=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, launcher_container_image_version=None, machine=None, memory=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
+    def __init__(self, vsockcid=None, active_pods=None, conditions=None, current_cpu_topology=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, kernel_boot_status=None, launcher_container_image_version=None, machine=None, memory=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -97,6 +99,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._fs_freeze_status = None
         self._guest_os_info = None
         self._interfaces = None
+        self._kernel_boot_status = None
         self._launcher_container_image_version = None
         self._machine = None
         self._memory = None
@@ -130,6 +133,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.guest_os_info = guest_os_info
         if interfaces is not None:
           self.interfaces = interfaces
+        if kernel_boot_status is not None:
+          self.kernel_boot_status = kernel_boot_status
         if launcher_container_image_version is not None:
           self.launcher_container_image_version = launcher_container_image_version
         if machine is not None:
@@ -346,6 +351,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._interfaces = interfaces
+
+    @property
+    def kernel_boot_status(self):
+        """
+        Gets the kernel_boot_status of this V1VirtualMachineInstanceStatus.
+        KernelBootStatus contains info about the kernelBootContainer
+
+        :return: The kernel_boot_status of this V1VirtualMachineInstanceStatus.
+        :rtype: V1KernelBootStatus
+        """
+        return self._kernel_boot_status
+
+    @kernel_boot_status.setter
+    def kernel_boot_status(self, kernel_boot_status):
+        """
+        Sets the kernel_boot_status of this V1VirtualMachineInstanceStatus.
+        KernelBootStatus contains info about the kernelBootContainer
+
+        :param kernel_boot_status: The kernel_boot_status of this V1VirtualMachineInstanceStatus.
+        :type: V1KernelBootStatus
+        """
+
+        self._kernel_boot_status = kernel_boot_status
 
     @property
     def launcher_container_image_version(self):

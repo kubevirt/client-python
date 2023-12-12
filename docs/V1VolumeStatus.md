@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**container_disk_volume** | [**V1ContainerDiskInfo**](V1ContainerDiskInfo.md) | ContainerDiskVolume shows info about the containerdisk, if the volume is a containerdisk | [optional] 
 **hotplug_volume** | [**V1HotplugVolumeStatus**](V1HotplugVolumeStatus.md) | If the volume is hotplug, this will contain the hotplug status. | [optional] 
 **memory_dump_volume** | [**V1DomainMemoryDumpInfo**](V1DomainMemoryDumpInfo.md) | If the volume is memorydump volume, this will contain the memorydump info. | [optional] 
 **message** | **str** | Message is a detailed message about the current hotplug volume phase | [optional] 

@@ -31,6 +31,7 @@ class V1VolumeStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'container_disk_volume': 'V1ContainerDiskInfo',
         'hotplug_volume': 'V1HotplugVolumeStatus',
         'memory_dump_volume': 'V1DomainMemoryDumpInfo',
         'message': 'str',
@@ -43,6 +44,7 @@ class V1VolumeStatus(object):
     }
 
     attribute_map = {
+        'container_disk_volume': 'containerDiskVolume',
         'hotplug_volume': 'hotplugVolume',
         'memory_dump_volume': 'memoryDumpVolume',
         'message': 'message',
@@ -54,11 +56,12 @@ class V1VolumeStatus(object):
         'target': 'target'
     }
 
-    def __init__(self, hotplug_volume=None, memory_dump_volume=None, message=None, name='', persistent_volume_claim_info=None, phase=None, reason=None, size=None, target=''):
+    def __init__(self, container_disk_volume=None, hotplug_volume=None, memory_dump_volume=None, message=None, name='', persistent_volume_claim_info=None, phase=None, reason=None, size=None, target=''):
         """
         V1VolumeStatus - a model defined in Swagger
         """
 
+        self._container_disk_volume = None
         self._hotplug_volume = None
         self._memory_dump_volume = None
         self._message = None
@@ -69,6 +72,8 @@ class V1VolumeStatus(object):
         self._size = None
         self._target = None
 
+        if container_disk_volume is not None:
+          self.container_disk_volume = container_disk_volume
         if hotplug_volume is not None:
           self.hotplug_volume = hotplug_volume
         if memory_dump_volume is not None:
@@ -85,6 +90,29 @@ class V1VolumeStatus(object):
         if size is not None:
           self.size = size
         self.target = target
+
+    @property
+    def container_disk_volume(self):
+        """
+        Gets the container_disk_volume of this V1VolumeStatus.
+        ContainerDiskVolume shows info about the containerdisk, if the volume is a containerdisk
+
+        :return: The container_disk_volume of this V1VolumeStatus.
+        :rtype: V1ContainerDiskInfo
+        """
+        return self._container_disk_volume
+
+    @container_disk_volume.setter
+    def container_disk_volume(self, container_disk_volume):
+        """
+        Sets the container_disk_volume of this V1VolumeStatus.
+        ContainerDiskVolume shows info about the containerdisk, if the volume is a containerdisk
+
+        :param container_disk_volume: The container_disk_volume of this V1VolumeStatus.
+        :type: V1ContainerDiskInfo
+        """
+
+        self._container_disk_volume = container_disk_volume
 
     @property
     def hotplug_volume(self):

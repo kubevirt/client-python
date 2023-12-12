@@ -92,6 +92,7 @@ from .v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
 from .v1_component_config import V1ComponentConfig
 from .v1_config_drive_ssh_public_key_access_credential_propagation import V1ConfigDriveSSHPublicKeyAccessCredentialPropagation
 from .v1_config_map_volume_source import V1ConfigMapVolumeSource
+from .v1_container_disk_info import V1ContainerDiskInfo
 from .v1_container_disk_source import V1ContainerDiskSource
 from .v1_custom_block_size import V1CustomBlockSize
 from .v1_custom_profile import V1CustomProfile
@@ -141,6 +142,7 @@ from .v1_hotplug_volume_status import V1HotplugVolumeStatus
 from .v1_hugepages import V1Hugepages
 from .v1_hyperv_timer import V1HypervTimer
 from .v1_i6300_esb_watchdog import V1I6300ESBWatchdog
+from .v1_initrd_info import V1InitrdInfo
 from .v1_input import V1Input
 from .v1_instancetype_matcher import V1InstancetypeMatcher
 from .v1_interface import V1Interface
@@ -155,6 +157,8 @@ from .v1_ksm_configuration import V1KSMConfiguration
 from .v1_kvm_timer import V1KVMTimer
 from .v1_kernel_boot import V1KernelBoot
 from .v1_kernel_boot_container import V1KernelBootContainer
+from .v1_kernel_boot_status import V1KernelBootStatus
+from .v1_kernel_info import V1KernelInfo
 from .v1_kube_virt import V1KubeVirt
 from .v1_kube_virt_certificate_rotate_strategy import V1KubeVirtCertificateRotateStrategy
 from .v1_kube_virt_condition import V1KubeVirtCondition

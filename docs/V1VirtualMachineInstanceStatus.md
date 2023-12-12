@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **fs_freeze_status** | **str** | FSFreezeStatus is the state of the fs of the guest it can be either frozen or thawed | [optional] 
 **guest_os_info** | [**V1VirtualMachineInstanceGuestOSInfo**](V1VirtualMachineInstanceGuestOSInfo.md) | Guest OS Information | [optional] 
 **interfaces** | [**list[V1VirtualMachineInstanceNetworkInterface]**](V1VirtualMachineInstanceNetworkInterface.md) | Interfaces represent the details of available network interfaces. | [optional] 
+**kernel_boot_status** | [**V1KernelBootStatus**](V1KernelBootStatus.md) | KernelBootStatus contains info about the kernelBootContainer | [optional] 
 **launcher_container_image_version** | **str** | LauncherContainerImageVersion indicates what container image is currently active for the vmi. | [optional] 
 **machine** | [**V1Machine**](V1Machine.md) | Machine shows the final resulting qemu machine type. This can be different than the machine type selected in the spec, due to qemus machine type alias mechanism. | [optional] 
 **memory** | [**V1MemoryStatus**](V1MemoryStatus.md) | Memory shows various informations about the VirtualMachine memory. | [optional] 

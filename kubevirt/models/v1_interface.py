@@ -357,6 +357,7 @@ class V1Interface(object):
     def passt(self):
         """
         Gets the passt of this V1Interface.
+        Deprecated, please refer to Kubevirt user guide for alternatives.
 
         :return: The passt of this V1Interface.
         :rtype: V1InterfacePasst
@@ -367,6 +368,7 @@ class V1Interface(object):
     def passt(self, passt):
         """
         Sets the passt of this V1Interface.
+        Deprecated, please refer to Kubevirt user guide for alternatives.
 
         :param passt: The passt of this V1Interface.
         :type: V1InterfacePasst

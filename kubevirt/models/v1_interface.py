@@ -267,6 +267,7 @@ class V1Interface(object):
     def macvtap(self):
         """
         Gets the macvtap of this V1Interface.
+        Deprecated, please refer to Kubevirt user guide for alternatives.
 
         :return: The macvtap of this V1Interface.
         :rtype: V1InterfaceMacvtap
@@ -277,6 +278,7 @@ class V1Interface(object):
     def macvtap(self, macvtap):
         """
         Sets the macvtap of this V1Interface.
+        Deprecated, please refer to Kubevirt user guide for alternatives.
 
         :param macvtap: The macvtap of this V1Interface.
         :type: V1InterfaceMacvtap

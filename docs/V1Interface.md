@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **bridge** | [**V1InterfaceBridge**](V1InterfaceBridge.md) |  | [optional] 
 **dhcp_options** | [**V1DHCPOptions**](V1DHCPOptions.md) | If specified the network interface will pass additional DHCP options to the VMI | [optional] 
 **mac_address** | **str** | Interface MAC address. For example: de:ad:00:00:be:af or DE-AD-00-00-BE-AF. | [optional] 
-**macvtap** | [**V1InterfaceMacvtap**](V1InterfaceMacvtap.md) |  | [optional] 
+**macvtap** | [**V1InterfaceMacvtap**](V1InterfaceMacvtap.md) | Deprecated, please refer to Kubevirt user guide for alternatives. | [optional] 
 **masquerade** | [**V1InterfaceMasquerade**](V1InterfaceMasquerade.md) |  | [optional] 
 **model** | **str** | Interface model. One of: e1000, e1000e, ne2k_pci, pcnet, rtl8139, virtio. Defaults to virtio. | [optional] 
 **name** | **str** | Logical name of the interface as well as a reference to the associated networks. Must match the Name of a Network. | [default to '']

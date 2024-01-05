@@ -6206,7 +6206,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def func1(self, **kwargs):
+    def func13(self, **kwargs):
         """
         Health endpoint
         This method makes a synchronous HTTP request by default. To make an
@@ -6215,7 +6215,7 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.func1(callback=callback_function)
+        >>> thread = api.func13(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6225,12 +6225,12 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.func1_with_http_info(**kwargs)
+            return self.func13_with_http_info(**kwargs)
         else:
-            (data) = self.func1_with_http_info(**kwargs)
+            (data) = self.func13_with_http_info(**kwargs)
             return data
 
-    def func1_with_http_info(self, **kwargs):
+    def func13_with_http_info(self, **kwargs):
         """
         Health endpoint
         This method makes a synchronous HTTP request by default. To make an
@@ -6239,7 +6239,7 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.func1_with_http_info(callback=callback_function)
+        >>> thread = api.func13_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6259,7 +6259,7 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method func1" % key
+                    " to method func13" % key
                 )
             params[key] = val
         del params['kwargs']

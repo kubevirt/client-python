@@ -55,7 +55,7 @@ Method | HTTP request | Description
 [**delete_virtual_machine_clone**](DefaultApi.md#delete_virtual_machine_clone) | **DELETE** /apis/clone.kubevirt.io/v1alpha1/virtualmachineclones/{name} | 
 [**delete_virtual_machine_cluster_instancetype**](DefaultApi.md#delete_virtual_machine_cluster_instancetype) | **DELETE** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterinstancetypes/{name} | 
 [**delete_virtual_machine_cluster_preference**](DefaultApi.md#delete_virtual_machine_cluster_preference) | **DELETE** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterpreferences/{name} | 
-[**func1**](DefaultApi.md#func1) | **GET** /healthz | 
+[**func13**](DefaultApi.md#func13) | **GET** /healthz | 
 [**func6**](DefaultApi.md#func6) | **GET** /openapi/v2 | 
 [**get_api_group_clone_kubevirt_io**](DefaultApi.md#get_api_group_clone_kubevirt_io) | **GET** /apis/clone.kubevirt.io/ | 
 [**get_api_group_export_kubevirt_io**](DefaultApi.md#get_api_group_export_kubevirt_io) | **GET** /apis/export.kubevirt.io/ | 
@@ -3093,8 +3093,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **func1**
-> func1()
+# **func13**
+> func13()
 
 
 
@@ -3112,9 +3112,9 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 
 try: 
-    api_instance.func1()
+    api_instance.func13()
 except ApiException as e:
-    print("Exception when calling DefaultApi->func1: %s\n" % e)
+    print("Exception when calling DefaultApi->func13: %s\n" % e)
 ```
 
 ### Parameters

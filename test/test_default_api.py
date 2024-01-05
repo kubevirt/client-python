@@ -439,9 +439,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_func1(self):
+    def test_func13(self):
         """
-        Test case for func1
+        Test case for func13
 
         
         """

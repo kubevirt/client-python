@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**disk** | [**list[V1VirtualMachineInstanceFileSystemDisk]**](V1VirtualMachineInstanceFileSystemDisk.md) |  | [optional] 
 **disk_name** | **str** |  | [default to '']
 **file_system_type** | **str** |  | [default to '']
 **mount_point** | **str** |  | [default to '']

@@ -31,6 +31,7 @@ class V1VirtualMachineInstanceFileSystem(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'disk': 'list[V1VirtualMachineInstanceFileSystemDisk]',
         'disk_name': 'str',
         'file_system_type': 'str',
         'mount_point': 'str',
@@ -39,6 +40,7 @@ class V1VirtualMachineInstanceFileSystem(object):
     }
 
     attribute_map = {
+        'disk': 'disk',
         'disk_name': 'diskName',
         'file_system_type': 'fileSystemType',
         'mount_point': 'mountPoint',
@@ -46,22 +48,46 @@ class V1VirtualMachineInstanceFileSystem(object):
         'used_bytes': 'usedBytes'
     }
 
-    def __init__(self, disk_name='', file_system_type='', mount_point='', total_bytes=0, used_bytes=0):
+    def __init__(self, disk=None, disk_name='', file_system_type='', mount_point='', total_bytes=0, used_bytes=0):
         """
         V1VirtualMachineInstanceFileSystem - a model defined in Swagger
         """
 
+        self._disk = None
         self._disk_name = None
         self._file_system_type = None
         self._mount_point = None
         self._total_bytes = None
         self._used_bytes = None
 
+        if disk is not None:
+          self.disk = disk
         self.disk_name = disk_name
         self.file_system_type = file_system_type
         self.mount_point = mount_point
         self.total_bytes = total_bytes
         self.used_bytes = used_bytes
+
+    @property
+    def disk(self):
+        """
+        Gets the disk of this V1VirtualMachineInstanceFileSystem.
+
+        :return: The disk of this V1VirtualMachineInstanceFileSystem.
+        :rtype: list[V1VirtualMachineInstanceFileSystemDisk]
+        """
+        return self._disk
+
+    @disk.setter
+    def disk(self, disk):
+        """
+        Sets the disk of this V1VirtualMachineInstanceFileSystem.
+
+        :param disk: The disk of this V1VirtualMachineInstanceFileSystem.
+        :type: list[V1VirtualMachineInstanceFileSystemDisk]
+        """
+
+        self._disk = disk
 
     @property
     def disk_name(self):

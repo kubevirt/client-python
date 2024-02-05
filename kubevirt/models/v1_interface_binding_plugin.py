@@ -32,27 +32,32 @@ class V1InterfaceBindingPlugin(object):
     """
     swagger_types = {
         'domain_attachment_type': 'str',
+        'migration': 'V1InterfaceBindingMigration',
         'network_attachment_definition': 'str',
         'sidecar_image': 'str'
     }
 
     attribute_map = {
         'domain_attachment_type': 'domainAttachmentType',
+        'migration': 'migration',
         'network_attachment_definition': 'networkAttachmentDefinition',
         'sidecar_image': 'sidecarImage'
     }
 
-    def __init__(self, domain_attachment_type=None, network_attachment_definition=None, sidecar_image=None):
+    def __init__(self, domain_attachment_type=None, migration=None, network_attachment_definition=None, sidecar_image=None):
         """
         V1InterfaceBindingPlugin - a model defined in Swagger
         """
 
         self._domain_attachment_type = None
+        self._migration = None
         self._network_attachment_definition = None
         self._sidecar_image = None
 
         if domain_attachment_type is not None:
           self.domain_attachment_type = domain_attachment_type
+        if migration is not None:
+          self.migration = migration
         if network_attachment_definition is not None:
           self.network_attachment_definition = network_attachment_definition
         if sidecar_image is not None:
@@ -80,6 +85,29 @@ class V1InterfaceBindingPlugin(object):
         """
 
         self._domain_attachment_type = domain_attachment_type
+
+    @property
+    def migration(self):
+        """
+        Gets the migration of this V1InterfaceBindingPlugin.
+        Migration means the VM using the plugin can be safely migrated version: 1alphav1
+
+        :return: The migration of this V1InterfaceBindingPlugin.
+        :rtype: V1InterfaceBindingMigration
+        """
+        return self._migration
+
+    @migration.setter
+    def migration(self, migration):
+        """
+        Sets the migration of this V1InterfaceBindingPlugin.
+        Migration means the VM using the plugin can be safely migrated version: 1alphav1
+
+        :param migration: The migration of this V1InterfaceBindingPlugin.
+        :type: V1InterfaceBindingMigration
+        """
+
+        self._migration = migration
 
     @property
     def network_attachment_definition(self):

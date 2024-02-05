@@ -146,6 +146,7 @@ from .models.v1_initrd_info import V1InitrdInfo
 from .models.v1_input import V1Input
 from .models.v1_instancetype_matcher import V1InstancetypeMatcher
 from .models.v1_interface import V1Interface
+from .models.v1_interface_binding_migration import V1InterfaceBindingMigration
 from .models.v1_interface_binding_plugin import V1InterfaceBindingPlugin
 from .models.v1_interface_bridge import V1InterfaceBridge
 from .models.v1_interface_macvtap import V1InterfaceMacvtap

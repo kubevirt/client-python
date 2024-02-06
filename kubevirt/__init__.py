@@ -170,11 +170,7 @@ from .models.v1_kube_virt_spec import V1KubeVirtSpec
 from .models.v1_kube_virt_status import V1KubeVirtStatus
 from .models.v1_kube_virt_workload_update_strategy import V1KubeVirtWorkloadUpdateStrategy
 from .models.v1_launch_security import V1LaunchSecurity
-from .models.v1_live_update_affinity import V1LiveUpdateAffinity
-from .models.v1_live_update_cpu import V1LiveUpdateCPU
 from .models.v1_live_update_configuration import V1LiveUpdateConfiguration
-from .models.v1_live_update_features import V1LiveUpdateFeatures
-from .models.v1_live_update_memory import V1LiveUpdateMemory
 from .models.v1_log_verbosity import V1LogVerbosity
 from .models.v1_lun_target import V1LunTarget
 from .models.v1_machine import V1Machine

@@ -63,6 +63,7 @@ class V1KubeVirtConfiguration(object):
         'tls_configuration': 'V1TLSConfiguration',
         'virtual_machine_instances_per_node': 'int',
         'virtual_machine_options': 'V1VirtualMachineOptions',
+        'vm_rollout_strategy': 'str',
         'vm_state_storage_class': 'str',
         'webhook_configuration': 'V1ReloadableComponentConfiguration'
     }
@@ -100,11 +101,12 @@ class V1KubeVirtConfiguration(object):
         'tls_configuration': 'tlsConfiguration',
         'virtual_machine_instances_per_node': 'virtualMachineInstancesPerNode',
         'virtual_machine_options': 'virtualMachineOptions',
+        'vm_rollout_strategy': 'vmRolloutStrategy',
         'vm_state_storage_class': 'vmStateStorageClass',
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_state_storage_class=None, webhook_configuration=None):
+    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -141,6 +143,7 @@ class V1KubeVirtConfiguration(object):
         self._tls_configuration = None
         self._virtual_machine_instances_per_node = None
         self._virtual_machine_options = None
+        self._vm_rollout_strategy = None
         self._vm_state_storage_class = None
         self._webhook_configuration = None
 
@@ -208,6 +211,8 @@ class V1KubeVirtConfiguration(object):
           self.virtual_machine_instances_per_node = virtual_machine_instances_per_node
         if virtual_machine_options is not None:
           self.virtual_machine_options = virtual_machine_options
+        if vm_rollout_strategy is not None:
+          self.vm_rollout_strategy = vm_rollout_strategy
         if vm_state_storage_class is not None:
           self.vm_state_storage_class = vm_state_storage_class
         if webhook_configuration is not None:
@@ -908,6 +913,29 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._virtual_machine_options = virtual_machine_options
+
+    @property
+    def vm_rollout_strategy(self):
+        """
+        Gets the vm_rollout_strategy of this V1KubeVirtConfiguration.
+        VMRolloutStrategy defines how changes to a VM object propagate to its VMI
+
+        :return: The vm_rollout_strategy of this V1KubeVirtConfiguration.
+        :rtype: str
+        """
+        return self._vm_rollout_strategy
+
+    @vm_rollout_strategy.setter
+    def vm_rollout_strategy(self, vm_rollout_strategy):
+        """
+        Sets the vm_rollout_strategy of this V1KubeVirtConfiguration.
+        VMRolloutStrategy defines how changes to a VM object propagate to its VMI
+
+        :param vm_rollout_strategy: The vm_rollout_strategy of this V1KubeVirtConfiguration.
+        :type: str
+        """
+
+        self._vm_rollout_strategy = vm_rollout_strategy
 
     @property
     def vm_state_storage_class(self):

@@ -36,11 +36,11 @@ class V1VirtualMachineInstanceFileSystemDisk(object):
     }
 
     attribute_map = {
-        'bus_type': 'bus-type',
+        'bus_type': 'busType',
         'serial': 'serial'
     }
 
-    def __init__(self, bus_type='', serial=''):
+    def __init__(self, bus_type='', serial=None):
         """
         V1VirtualMachineInstanceFileSystemDisk - a model defined in Swagger
         """
@@ -49,7 +49,8 @@ class V1VirtualMachineInstanceFileSystemDisk(object):
         self._serial = None
 
         self.bus_type = bus_type
-        self.serial = serial
+        if serial is not None:
+          self.serial = serial
 
     @property
     def bus_type(self):
@@ -92,8 +93,6 @@ class V1VirtualMachineInstanceFileSystemDisk(object):
         :param serial: The serial of this V1VirtualMachineInstanceFileSystemDisk.
         :type: str
         """
-        if serial is None:
-            raise ValueError("Invalid value for `serial`, must not be `None`")
 
         self._serial = serial
 

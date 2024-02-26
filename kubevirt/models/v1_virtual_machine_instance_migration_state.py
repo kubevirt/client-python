@@ -36,11 +36,13 @@ class V1VirtualMachineInstanceMigrationState(object):
         'completed': 'bool',
         'end_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'failed': 'bool',
+        'failure_reason': 'str',
         'migration_configuration': 'V1MigrationConfiguration',
         'migration_policy_name': 'str',
         'migration_uid': 'str',
         'mode': 'str',
         'source_node': 'str',
+        'source_pod': 'str',
         'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'target_attachment_pod_uid': 'str',
         'target_cpu_set': 'list[int]',
@@ -59,11 +61,13 @@ class V1VirtualMachineInstanceMigrationState(object):
         'completed': 'completed',
         'end_timestamp': 'endTimestamp',
         'failed': 'failed',
+        'failure_reason': 'failureReason',
         'migration_configuration': 'migrationConfiguration',
         'migration_policy_name': 'migrationPolicyName',
         'migration_uid': 'migrationUid',
         'mode': 'mode',
         'source_node': 'sourceNode',
+        'source_pod': 'sourcePod',
         'start_timestamp': 'startTimestamp',
         'target_attachment_pod_uid': 'targetAttachmentPodUID',
         'target_cpu_set': 'targetCPUSet',
@@ -76,7 +80,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'target_pod': 'targetPod'
     }
 
-    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, migration_configuration=None, migration_policy_name=None, migration_uid=None, mode=None, source_node=None, start_timestamp=None, target_attachment_pod_uid=None, target_cpu_set=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_node_domain_ready_timestamp=None, target_node_topology=None, target_pod=None):
+    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, failure_reason=None, migration_configuration=None, migration_policy_name=None, migration_uid=None, mode=None, source_node=None, source_pod=None, start_timestamp=None, target_attachment_pod_uid=None, target_cpu_set=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_node_domain_ready_timestamp=None, target_node_topology=None, target_pod=None):
         """
         V1VirtualMachineInstanceMigrationState - a model defined in Swagger
         """
@@ -86,11 +90,13 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._completed = None
         self._end_timestamp = None
         self._failed = None
+        self._failure_reason = None
         self._migration_configuration = None
         self._migration_policy_name = None
         self._migration_uid = None
         self._mode = None
         self._source_node = None
+        self._source_pod = None
         self._start_timestamp = None
         self._target_attachment_pod_uid = None
         self._target_cpu_set = None
@@ -112,6 +118,8 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.end_timestamp = end_timestamp
         if failed is not None:
           self.failed = failed
+        if failure_reason is not None:
+          self.failure_reason = failure_reason
         if migration_configuration is not None:
           self.migration_configuration = migration_configuration
         if migration_policy_name is not None:
@@ -122,6 +130,8 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.mode = mode
         if source_node is not None:
           self.source_node = source_node
+        if source_pod is not None:
+          self.source_pod = source_pod
         if start_timestamp is not None:
           self.start_timestamp = start_timestamp
         if target_attachment_pod_uid is not None:
@@ -259,6 +269,29 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._failed = failed
 
     @property
+    def failure_reason(self):
+        """
+        Gets the failure_reason of this V1VirtualMachineInstanceMigrationState.
+        Contains the reason why the migration failed
+
+        :return: The failure_reason of this V1VirtualMachineInstanceMigrationState.
+        :rtype: str
+        """
+        return self._failure_reason
+
+    @failure_reason.setter
+    def failure_reason(self, failure_reason):
+        """
+        Sets the failure_reason of this V1VirtualMachineInstanceMigrationState.
+        Contains the reason why the migration failed
+
+        :param failure_reason: The failure_reason of this V1VirtualMachineInstanceMigrationState.
+        :type: str
+        """
+
+        self._failure_reason = failure_reason
+
+    @property
     def migration_configuration(self):
         """
         Gets the migration_configuration of this V1VirtualMachineInstanceMigrationState.
@@ -372,6 +405,27 @@ class V1VirtualMachineInstanceMigrationState(object):
         """
 
         self._source_node = source_node
+
+    @property
+    def source_pod(self):
+        """
+        Gets the source_pod of this V1VirtualMachineInstanceMigrationState.
+
+        :return: The source_pod of this V1VirtualMachineInstanceMigrationState.
+        :rtype: str
+        """
+        return self._source_pod
+
+    @source_pod.setter
+    def source_pod(self, source_pod):
+        """
+        Sets the source_pod of this V1VirtualMachineInstanceMigrationState.
+
+        :param source_pod: The source_pod of this V1VirtualMachineInstanceMigrationState.
+        :type: str
+        """
+
+        self._source_pod = source_pod
 
     @property
     def start_timestamp(self):

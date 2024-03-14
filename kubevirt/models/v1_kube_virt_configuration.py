@@ -415,6 +415,7 @@ class V1KubeVirtConfiguration(object):
     def emulated_machines(self):
         """
         Gets the emulated_machines of this V1KubeVirtConfiguration.
+        Deprecated. Use architectureConfiguration instead.
 
         :return: The emulated_machines of this V1KubeVirtConfiguration.
         :rtype: list[str]
@@ -425,6 +426,7 @@ class V1KubeVirtConfiguration(object):
     def emulated_machines(self, emulated_machines):
         """
         Sets the emulated_machines of this V1KubeVirtConfiguration.
+        Deprecated. Use architectureConfiguration instead.
 
         :param emulated_machines: The emulated_machines of this V1KubeVirtConfiguration.
         :type: list[str]
@@ -704,6 +706,7 @@ class V1KubeVirtConfiguration(object):
     def ovmf_path(self):
         """
         Gets the ovmf_path of this V1KubeVirtConfiguration.
+        Deprecated. Use architectureConfiguration instead.
 
         :return: The ovmf_path of this V1KubeVirtConfiguration.
         :rtype: str
@@ -714,6 +717,7 @@ class V1KubeVirtConfiguration(object):
     def ovmf_path(self, ovmf_path):
         """
         Sets the ovmf_path of this V1KubeVirtConfiguration.
+        Deprecated. Use architectureConfiguration instead.
 
         :param ovmf_path: The ovmf_path of this V1KubeVirtConfiguration.
         :type: str

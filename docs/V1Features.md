@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **acpi** | [**V1FeatureState**](V1FeatureState.md) | ACPI enables/disables ACPI inside the guest. Defaults to enabled. | [optional] 
 **apic** | [**V1FeatureAPIC**](V1FeatureAPIC.md) | Defaults to the machine type setting. | [optional] 
 **hyperv** | [**V1FeatureHyperv**](V1FeatureHyperv.md) | Defaults to the machine type setting. | [optional] 
+**hyperv_passthrough** | [**V1HyperVPassthrough**](V1HyperVPassthrough.md) | This enables all supported hyperv flags automatically. Bear in mind that if this enabled hyperV features cannot be enabled explicitly. In addition, a Virtual Machine using it will be non-migratable. | [optional] 
 **kvm** | [**V1FeatureKVM**](V1FeatureKVM.md) | Configure how KVM presence is exposed to the guest. | [optional] 
 **pvspinlock** | [**V1FeatureState**](V1FeatureState.md) | Notify the guest that the host supports paravirtual spinlocks. For older kernels this feature should be explicitly disabled. | [optional] 
 **smm** | [**V1FeatureState**](V1FeatureState.md) | SMM enables/disables System Management Mode. TSEG not yet implemented. | [optional] 

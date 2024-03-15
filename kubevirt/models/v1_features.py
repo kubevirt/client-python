@@ -34,6 +34,7 @@ class V1Features(object):
         'acpi': 'V1FeatureState',
         'apic': 'V1FeatureAPIC',
         'hyperv': 'V1FeatureHyperv',
+        'hyperv_passthrough': 'V1HyperVPassthrough',
         'kvm': 'V1FeatureKVM',
         'pvspinlock': 'V1FeatureState',
         'smm': 'V1FeatureState'
@@ -43,12 +44,13 @@ class V1Features(object):
         'acpi': 'acpi',
         'apic': 'apic',
         'hyperv': 'hyperv',
+        'hyperv_passthrough': 'hypervPassthrough',
         'kvm': 'kvm',
         'pvspinlock': 'pvspinlock',
         'smm': 'smm'
     }
 
-    def __init__(self, acpi=None, apic=None, hyperv=None, kvm=None, pvspinlock=None, smm=None):
+    def __init__(self, acpi=None, apic=None, hyperv=None, hyperv_passthrough=None, kvm=None, pvspinlock=None, smm=None):
         """
         V1Features - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class V1Features(object):
         self._acpi = None
         self._apic = None
         self._hyperv = None
+        self._hyperv_passthrough = None
         self._kvm = None
         self._pvspinlock = None
         self._smm = None
@@ -66,6 +69,8 @@ class V1Features(object):
           self.apic = apic
         if hyperv is not None:
           self.hyperv = hyperv
+        if hyperv_passthrough is not None:
+          self.hyperv_passthrough = hyperv_passthrough
         if kvm is not None:
           self.kvm = kvm
         if pvspinlock is not None:
@@ -141,6 +146,29 @@ class V1Features(object):
         """
 
         self._hyperv = hyperv
+
+    @property
+    def hyperv_passthrough(self):
+        """
+        Gets the hyperv_passthrough of this V1Features.
+        This enables all supported hyperv flags automatically. Bear in mind that if this enabled hyperV features cannot be enabled explicitly. In addition, a Virtual Machine using it will be non-migratable.
+
+        :return: The hyperv_passthrough of this V1Features.
+        :rtype: V1HyperVPassthrough
+        """
+        return self._hyperv_passthrough
+
+    @hyperv_passthrough.setter
+    def hyperv_passthrough(self, hyperv_passthrough):
+        """
+        Sets the hyperv_passthrough of this V1Features.
+        This enables all supported hyperv flags automatically. Bear in mind that if this enabled hyperV features cannot be enabled explicitly. In addition, a Virtual Machine using it will be non-migratable.
+
+        :param hyperv_passthrough: The hyperv_passthrough of this V1Features.
+        :type: V1HyperVPassthrough
+        """
+
+        self._hyperv_passthrough = hyperv_passthrough
 
     @property
     def kvm(self):

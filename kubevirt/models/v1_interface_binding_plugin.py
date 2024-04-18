@@ -32,6 +32,7 @@ class V1InterfaceBindingPlugin(object):
     """
     swagger_types = {
         'domain_attachment_type': 'str',
+        'downward_api': 'str',
         'migration': 'V1InterfaceBindingMigration',
         'network_attachment_definition': 'str',
         'sidecar_image': 'str'
@@ -39,23 +40,27 @@ class V1InterfaceBindingPlugin(object):
 
     attribute_map = {
         'domain_attachment_type': 'domainAttachmentType',
+        'downward_api': 'downwardAPI',
         'migration': 'migration',
         'network_attachment_definition': 'networkAttachmentDefinition',
         'sidecar_image': 'sidecarImage'
     }
 
-    def __init__(self, domain_attachment_type=None, migration=None, network_attachment_definition=None, sidecar_image=None):
+    def __init__(self, domain_attachment_type=None, downward_api=None, migration=None, network_attachment_definition=None, sidecar_image=None):
         """
         V1InterfaceBindingPlugin - a model defined in Swagger
         """
 
         self._domain_attachment_type = None
+        self._downward_api = None
         self._migration = None
         self._network_attachment_definition = None
         self._sidecar_image = None
 
         if domain_attachment_type is not None:
           self.domain_attachment_type = domain_attachment_type
+        if downward_api is not None:
+          self.downward_api = downward_api
         if migration is not None:
           self.migration = migration
         if network_attachment_definition is not None:
@@ -85,6 +90,29 @@ class V1InterfaceBindingPlugin(object):
         """
 
         self._domain_attachment_type = domain_attachment_type
+
+    @property
+    def downward_api(self):
+        """
+        Gets the downward_api of this V1InterfaceBindingPlugin.
+        DownwardAPI specifies what kind of data should be exposed to the binding plugin sidecar. Supported values: \"device-info\" version: v1alphav1
+
+        :return: The downward_api of this V1InterfaceBindingPlugin.
+        :rtype: str
+        """
+        return self._downward_api
+
+    @downward_api.setter
+    def downward_api(self, downward_api):
+        """
+        Sets the downward_api of this V1InterfaceBindingPlugin.
+        DownwardAPI specifies what kind of data should be exposed to the binding plugin sidecar. Supported values: \"device-info\" version: v1alphav1
+
+        :param downward_api: The downward_api of this V1InterfaceBindingPlugin.
+        :type: str
+        """
+
+        self._downward_api = downward_api
 
     @property
     def migration(self):

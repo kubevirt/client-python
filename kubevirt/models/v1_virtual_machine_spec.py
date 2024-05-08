@@ -36,7 +36,8 @@ class V1VirtualMachineSpec(object):
         'preference': 'V1PreferenceMatcher',
         'run_strategy': 'str',
         'running': 'bool',
-        'template': 'V1VirtualMachineInstanceTemplateSpec'
+        'template': 'V1VirtualMachineInstanceTemplateSpec',
+        'update_volumes_strategy': 'str'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class V1VirtualMachineSpec(object):
         'preference': 'preference',
         'run_strategy': 'runStrategy',
         'running': 'running',
-        'template': 'template'
+        'template': 'template',
+        'update_volumes_strategy': 'updateVolumesStrategy'
     }
 
-    def __init__(self, data_volume_templates=None, instancetype=None, preference=None, run_strategy=None, running=None, template=None):
+    def __init__(self, data_volume_templates=None, instancetype=None, preference=None, run_strategy=None, running=None, template=None, update_volumes_strategy=None):
         """
         V1VirtualMachineSpec - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class V1VirtualMachineSpec(object):
         self._run_strategy = None
         self._running = None
         self._template = None
+        self._update_volumes_strategy = None
 
         if data_volume_templates is not None:
           self.data_volume_templates = data_volume_templates
@@ -71,6 +74,8 @@ class V1VirtualMachineSpec(object):
         if running is not None:
           self.running = running
         self.template = template
+        if update_volumes_strategy is not None:
+          self.update_volumes_strategy = update_volumes_strategy
 
     @property
     def data_volume_templates(self):
@@ -211,6 +216,29 @@ class V1VirtualMachineSpec(object):
             raise ValueError("Invalid value for `template`, must not be `None`")
 
         self._template = template
+
+    @property
+    def update_volumes_strategy(self):
+        """
+        Gets the update_volumes_strategy of this V1VirtualMachineSpec.
+        UpdateVolumesStrategy is the strategy to apply on volumes updates
+
+        :return: The update_volumes_strategy of this V1VirtualMachineSpec.
+        :rtype: str
+        """
+        return self._update_volumes_strategy
+
+    @update_volumes_strategy.setter
+    def update_volumes_strategy(self, update_volumes_strategy):
+        """
+        Sets the update_volumes_strategy of this V1VirtualMachineSpec.
+        UpdateVolumesStrategy is the strategy to apply on volumes updates
+
+        :param update_volumes_strategy: The update_volumes_strategy of this V1VirtualMachineSpec.
+        :type: str
+        """
+
+        self._update_volumes_strategy = update_volumes_strategy
 
     def to_dict(self):
         """

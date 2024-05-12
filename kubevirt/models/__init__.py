@@ -103,6 +103,7 @@ from .v1_dhcp_private_options import V1DHCPPrivateOptions
 from .v1_data_volume_source import V1DataVolumeSource
 from .v1_data_volume_template_dummy_status import V1DataVolumeTemplateDummyStatus
 from .v1_data_volume_template_spec import V1DataVolumeTemplateSpec
+from .v1_deprecated_interface_slirp import V1DeprecatedInterfaceSlirp
 from .v1_developer_configuration import V1DeveloperConfiguration
 from .v1_devices import V1Devices
 from .v1_disable_free_page_reporting import V1DisableFreePageReporting
@@ -154,7 +155,6 @@ from .v1_interface_macvtap import V1InterfaceMacvtap
 from .v1_interface_masquerade import V1InterfaceMasquerade
 from .v1_interface_passt import V1InterfacePasst
 from .v1_interface_sriov import V1InterfaceSRIOV
-from .v1_interface_slirp import V1InterfaceSlirp
 from .v1_ksm_configuration import V1KSMConfiguration
 from .v1_kvm_timer import V1KVMTimer
 from .v1_kernel_boot import V1KernelBoot

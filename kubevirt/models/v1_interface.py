@@ -44,7 +44,7 @@ class V1Interface(object):
         'passt': 'V1InterfacePasst',
         'pci_address': 'str',
         'ports': 'list[V1Port]',
-        'slirp': 'V1InterfaceSlirp',
+        'slirp': 'V1DeprecatedInterfaceSlirp',
         'sriov': 'V1InterfaceSRIOV',
         'state': 'str',
         'tag': 'str'
@@ -428,9 +428,10 @@ class V1Interface(object):
     def slirp(self):
         """
         Gets the slirp of this V1Interface.
+        DeprecatedSlirp is an alias to the deprecated Slirp interface Deprecated: Removed in v1.3
 
         :return: The slirp of this V1Interface.
-        :rtype: V1InterfaceSlirp
+        :rtype: V1DeprecatedInterfaceSlirp
         """
         return self._slirp
 
@@ -438,9 +439,10 @@ class V1Interface(object):
     def slirp(self, slirp):
         """
         Sets the slirp of this V1Interface.
+        DeprecatedSlirp is an alias to the deprecated Slirp interface Deprecated: Removed in v1.3
 
         :param slirp: The slirp of this V1Interface.
-        :type: V1InterfaceSlirp
+        :type: V1DeprecatedInterfaceSlirp
         """
 
         self._slirp = slirp

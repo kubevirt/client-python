@@ -130,6 +130,7 @@ class V1NetworkConfiguration(object):
     def permit_slirp_interface(self):
         """
         Gets the permit_slirp_interface of this V1NetworkConfiguration.
+        DeprecatedPermitSlirpInterface is an alias for the deprecated PermitSlirpInterface. Deprecated: Removed in v1.3.
 
         :return: The permit_slirp_interface of this V1NetworkConfiguration.
         :rtype: bool
@@ -140,6 +141,7 @@ class V1NetworkConfiguration(object):
     def permit_slirp_interface(self, permit_slirp_interface):
         """
         Sets the permit_slirp_interface of this V1NetworkConfiguration.
+        DeprecatedPermitSlirpInterface is an alias for the deprecated PermitSlirpInterface. Deprecated: Removed in v1.3.
 
         :param permit_slirp_interface: The permit_slirp_interface of this V1NetworkConfiguration.
         :type: bool

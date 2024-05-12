@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **passt** | [**V1InterfacePasst**](V1InterfacePasst.md) | Deprecated, please refer to Kubevirt user guide for alternatives. | [optional] 
 **pci_address** | **str** | If specified, the virtual network interface will be placed on the guests pci address with the specified PCI address. For example: 0000:81:01.10 | [optional] 
 **ports** | [**list[V1Port]**](V1Port.md) | List of ports to be forwarded to the virtual machine. | [optional] 
-**slirp** | [**V1InterfaceSlirp**](V1InterfaceSlirp.md) |  | [optional] 
+**slirp** | [**V1DeprecatedInterfaceSlirp**](V1DeprecatedInterfaceSlirp.md) | DeprecatedSlirp is an alias to the deprecated Slirp interface Deprecated: Removed in v1.3 | [optional] 
 **sriov** | [**V1InterfaceSRIOV**](V1InterfaceSRIOV.md) |  | [optional] 
 **state** | **str** | State represents the requested operational state of the interface. The (only) value supported is &#x60;absent&#x60;, expressing a request to remove the interface. | [optional] 
 **tag** | **str** | If specified, the virtual network interface address and its tag will be provided to the guest via config drive | [optional] 

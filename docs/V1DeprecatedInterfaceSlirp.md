@@ -1,4 +1,4 @@
-# V1InterfaceSlirp
+# V1DeprecatedInterfaceSlirp
 
 ## Properties
 Name | Type | Description | Notes

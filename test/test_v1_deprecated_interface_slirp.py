@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1_interface_slirp import V1InterfaceSlirp
+from kubevirt.models.v1_deprecated_interface_slirp import V1DeprecatedInterfaceSlirp
 
 
-class TestV1InterfaceSlirp(unittest.TestCase):
-    """ V1InterfaceSlirp unit test stubs """
+class TestV1DeprecatedInterfaceSlirp(unittest.TestCase):
+    """ V1DeprecatedInterfaceSlirp unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1InterfaceSlirp(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1InterfaceSlirp(self):
+    def testV1DeprecatedInterfaceSlirp(self):
         """
-        Test V1InterfaceSlirp
+        Test V1DeprecatedInterfaceSlirp
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1_interface_slirp.V1InterfaceSlirp()
+        #model = kubevirt.models.v1_deprecated_interface_slirp.V1DeprecatedInterfaceSlirp()
         pass
 
 

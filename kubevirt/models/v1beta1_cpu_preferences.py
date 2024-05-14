@@ -32,26 +32,31 @@ class V1beta1CPUPreferences(object):
     """
     swagger_types = {
         'preferred_cpu_features': 'list[V1CPUFeature]',
-        'preferred_cpu_topology': 'str'
+        'preferred_cpu_topology': 'str',
+        'spread_options': 'V1beta1SpreadOptions'
     }
 
     attribute_map = {
         'preferred_cpu_features': 'preferredCPUFeatures',
-        'preferred_cpu_topology': 'preferredCPUTopology'
+        'preferred_cpu_topology': 'preferredCPUTopology',
+        'spread_options': 'spreadOptions'
     }
 
-    def __init__(self, preferred_cpu_features=None, preferred_cpu_topology=None):
+    def __init__(self, preferred_cpu_features=None, preferred_cpu_topology=None, spread_options=None):
         """
         V1beta1CPUPreferences - a model defined in Swagger
         """
 
         self._preferred_cpu_features = None
         self._preferred_cpu_topology = None
+        self._spread_options = None
 
         if preferred_cpu_features is not None:
           self.preferred_cpu_features = preferred_cpu_features
         if preferred_cpu_topology is not None:
           self.preferred_cpu_topology = preferred_cpu_topology
+        if spread_options is not None:
+          self.spread_options = spread_options
 
     @property
     def preferred_cpu_features(self):
@@ -98,6 +103,27 @@ class V1beta1CPUPreferences(object):
         """
 
         self._preferred_cpu_topology = preferred_cpu_topology
+
+    @property
+    def spread_options(self):
+        """
+        Gets the spread_options of this V1beta1CPUPreferences.
+
+        :return: The spread_options of this V1beta1CPUPreferences.
+        :rtype: V1beta1SpreadOptions
+        """
+        return self._spread_options
+
+    @spread_options.setter
+    def spread_options(self, spread_options):
+        """
+        Sets the spread_options of this V1beta1CPUPreferences.
+
+        :param spread_options: The spread_options of this V1beta1CPUPreferences.
+        :type: V1beta1SpreadOptions
+        """
+
+        self._spread_options = spread_options
 
     def to_dict(self):
         """

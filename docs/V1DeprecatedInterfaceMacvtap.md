@@ -1,4 +1,4 @@
-# V1InterfaceMacvtap
+# V1DeprecatedInterfaceMacvtap
 
 ## Properties
 Name | Type | Description | Notes

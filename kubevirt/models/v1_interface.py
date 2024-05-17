@@ -37,7 +37,7 @@ class V1Interface(object):
         'bridge': 'V1InterfaceBridge',
         'dhcp_options': 'V1DHCPOptions',
         'mac_address': 'str',
-        'macvtap': 'V1InterfaceMacvtap',
+        'macvtap': 'V1DeprecatedInterfaceMacvtap',
         'masquerade': 'V1InterfaceMasquerade',
         'model': 'str',
         'name': 'str',
@@ -267,10 +267,10 @@ class V1Interface(object):
     def macvtap(self):
         """
         Gets the macvtap of this V1Interface.
-        Deprecated, please refer to Kubevirt user guide for alternatives.
+        DeprecatedMacvtap is an alias to the deprecated Macvtap interface, please refer to Kubevirt user guide for alternatives. Deprecated: Removed in v1.3
 
         :return: The macvtap of this V1Interface.
-        :rtype: V1InterfaceMacvtap
+        :rtype: V1DeprecatedInterfaceMacvtap
         """
         return self._macvtap
 
@@ -278,10 +278,10 @@ class V1Interface(object):
     def macvtap(self, macvtap):
         """
         Sets the macvtap of this V1Interface.
-        Deprecated, please refer to Kubevirt user guide for alternatives.
+        DeprecatedMacvtap is an alias to the deprecated Macvtap interface, please refer to Kubevirt user guide for alternatives. Deprecated: Removed in v1.3
 
         :param macvtap: The macvtap of this V1Interface.
-        :type: V1InterfaceMacvtap
+        :type: V1DeprecatedInterfaceMacvtap
         """
 
         self._macvtap = macvtap

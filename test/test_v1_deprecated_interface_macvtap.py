@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1_interface_macvtap import V1InterfaceMacvtap
+from kubevirt.models.v1_deprecated_interface_macvtap import V1DeprecatedInterfaceMacvtap
 
 
-class TestV1InterfaceMacvtap(unittest.TestCase):
-    """ V1InterfaceMacvtap unit test stubs """
+class TestV1DeprecatedInterfaceMacvtap(unittest.TestCase):
+    """ V1DeprecatedInterfaceMacvtap unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1InterfaceMacvtap(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1InterfaceMacvtap(self):
+    def testV1DeprecatedInterfaceMacvtap(self):
         """
-        Test V1InterfaceMacvtap
+        Test V1DeprecatedInterfaceMacvtap
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1_interface_macvtap.V1InterfaceMacvtap()
+        #model = kubevirt.models.v1_deprecated_interface_macvtap.V1DeprecatedInterfaceMacvtap()
         pass
 
 

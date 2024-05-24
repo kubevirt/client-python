@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **printable_status** | **str** | PrintableStatus is a human readable, high-level representation of the status of the virtual machine | [optional] 
 **ready** | **bool** | Ready indicates if the virtual machine is running and ready | [optional] 
 **restore_in_progress** | **str** | RestoreInProgress is the name of the VirtualMachineRestore currently executing | [optional] 
+**run_strategy** | **str** | RunStrategy tracks the last recorded RunStrategy used by the VM. This is needed to correctly process the next strategy (for now only the RerunOnFailure) | [optional] 
 **snapshot_in_progress** | **str** | SnapshotInProgress is the name of the VirtualMachineSnapshot currently executing | [optional] 
 **start_failure** | [**V1VirtualMachineStartFailure**](V1VirtualMachineStartFailure.md) | StartFailure tracks consecutive VMI startup failures for the purposes of crash loop backoffs | [optional] 
 **state_change_requests** | [**list[V1VirtualMachineStateChangeRequest]**](V1VirtualMachineStateChangeRequest.md) | StateChangeRequests indicates a list of actions that should be taken on a VMI e.g. stop a specific VMI then start a new one. | [optional] 

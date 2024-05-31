@@ -1,4 +1,4 @@
-# V1alpha1VirtualMachineExportSpec
+# V1beta1VirtualMachineExportSpec
 
 ## Properties
 Name | Type | Description | Notes

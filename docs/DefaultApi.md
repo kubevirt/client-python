@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**create_migration_policy**](DefaultApi.md#create_migration_policy) | **POST** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies | 
 [**create_namespaced_kube_virt**](DefaultApi.md#create_namespaced_kube_virt) | **POST** /apis/kubevirt.io/v1/namespaces/{namespace}/kubevirt | 
 [**create_namespaced_virtual_machine**](DefaultApi.md#create_namespaced_virtual_machine) | **POST** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines | 
-[**create_namespaced_virtual_machine_export**](DefaultApi.md#create_namespaced_virtual_machine_export) | **POST** /apis/export.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachineexports | 
+[**create_namespaced_virtual_machine_export**](DefaultApi.md#create_namespaced_virtual_machine_export) | **POST** /apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports | 
 [**create_namespaced_virtual_machine_instance**](DefaultApi.md#create_namespaced_virtual_machine_instance) | **POST** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances | 
 [**create_namespaced_virtual_machine_instance_migration**](DefaultApi.md#create_namespaced_virtual_machine_instance_migration) | **POST** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancemigrations | 
 [**create_namespaced_virtual_machine_instance_preset**](DefaultApi.md#create_namespaced_virtual_machine_instance_preset) | **POST** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancepresets | 
@@ -24,7 +24,7 @@ Method | HTTP request | Description
 [**delete_collection_migration_policy**](DefaultApi.md#delete_collection_migration_policy) | **DELETE** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies | 
 [**delete_collection_namespaced_kube_virt**](DefaultApi.md#delete_collection_namespaced_kube_virt) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/kubevirt | 
 [**delete_collection_namespaced_virtual_machine**](DefaultApi.md#delete_collection_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines | 
-[**delete_collection_namespaced_virtual_machine_export**](DefaultApi.md#delete_collection_namespaced_virtual_machine_export) | **DELETE** /apis/export.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachineexports | 
+[**delete_collection_namespaced_virtual_machine_export**](DefaultApi.md#delete_collection_namespaced_virtual_machine_export) | **DELETE** /apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports | 
 [**delete_collection_namespaced_virtual_machine_instance**](DefaultApi.md#delete_collection_namespaced_virtual_machine_instance) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances | 
 [**delete_collection_namespaced_virtual_machine_instance_migration**](DefaultApi.md#delete_collection_namespaced_virtual_machine_instance_migration) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancemigrations | 
 [**delete_collection_namespaced_virtual_machine_instance_preset**](DefaultApi.md#delete_collection_namespaced_virtual_machine_instance_preset) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancepresets | 
@@ -41,7 +41,7 @@ Method | HTTP request | Description
 [**delete_migration_policy**](DefaultApi.md#delete_migration_policy) | **DELETE** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies/{name} | 
 [**delete_namespaced_kube_virt**](DefaultApi.md#delete_namespaced_kube_virt) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/kubevirt/{name} | 
 [**delete_namespaced_virtual_machine**](DefaultApi.md#delete_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | 
-[**delete_namespaced_virtual_machine_export**](DefaultApi.md#delete_namespaced_virtual_machine_export) | **DELETE** /apis/export.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachineexports/{name} | 
+[**delete_namespaced_virtual_machine_export**](DefaultApi.md#delete_namespaced_virtual_machine_export) | **DELETE** /apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports/{name} | 
 [**delete_namespaced_virtual_machine_instance**](DefaultApi.md#delete_namespaced_virtual_machine_instance) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name} | 
 [**delete_namespaced_virtual_machine_instance_migration**](DefaultApi.md#delete_namespaced_virtual_machine_instance_migration) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancemigrations/{name} | 
 [**delete_namespaced_virtual_machine_instance_preset**](DefaultApi.md#delete_namespaced_virtual_machine_instance_preset) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancepresets/{name} | 
@@ -66,7 +66,7 @@ Method | HTTP request | Description
 [**get_api_group_pool_kubevirt_io**](DefaultApi.md#get_api_group_pool_kubevirt_io) | **GET** /apis/pool.kubevirt.io/ | 
 [**get_api_group_snapshot_kubevirt_io**](DefaultApi.md#get_api_group_snapshot_kubevirt_io) | **GET** /apis/snapshot.kubevirt.io/ | 
 [**get_api_resources_clone_kubevirt_io_v1alpha1**](DefaultApi.md#get_api_resources_clone_kubevirt_io_v1alpha1) | **GET** /apis/clone.kubevirt.io/v1alpha1/ | 
-[**get_api_resources_export_kubevirt_io_v1alpha1**](DefaultApi.md#get_api_resources_export_kubevirt_io_v1alpha1) | **GET** /apis/export.kubevirt.io/v1alpha1/ | 
+[**get_api_resources_export_kubevirt_io_v1beta1**](DefaultApi.md#get_api_resources_export_kubevirt_io_v1beta1) | **GET** /apis/export.kubevirt.io/v1beta1/ | 
 [**get_api_resources_instancetype_kubevirt_io_v1beta1**](DefaultApi.md#get_api_resources_instancetype_kubevirt_io_v1beta1) | **GET** /apis/instancetype.kubevirt.io/v1beta1/ | 
 [**get_api_resources_kubevirt_io_v1**](DefaultApi.md#get_api_resources_kubevirt_io_v1) | **GET** /apis/kubevirt.io/v1/ | 
 [**get_api_resources_migrations_kubevirt_io_v1alpha1**](DefaultApi.md#get_api_resources_migrations_kubevirt_io_v1alpha1) | **GET** /apis/migrations.kubevirt.io/v1alpha1/ | 
@@ -80,7 +80,7 @@ Method | HTTP request | Description
 [**list_migration_policy**](DefaultApi.md#list_migration_policy) | **GET** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies | 
 [**list_namespaced_kube_virt**](DefaultApi.md#list_namespaced_kube_virt) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/kubevirt | 
 [**list_namespaced_virtual_machine**](DefaultApi.md#list_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines | 
-[**list_namespaced_virtual_machine_export**](DefaultApi.md#list_namespaced_virtual_machine_export) | **GET** /apis/export.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachineexports | 
+[**list_namespaced_virtual_machine_export**](DefaultApi.md#list_namespaced_virtual_machine_export) | **GET** /apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports | 
 [**list_namespaced_virtual_machine_instance**](DefaultApi.md#list_namespaced_virtual_machine_instance) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances | 
 [**list_namespaced_virtual_machine_instance_migration**](DefaultApi.md#list_namespaced_virtual_machine_instance_migration) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancemigrations | 
 [**list_namespaced_virtual_machine_instance_preset**](DefaultApi.md#list_namespaced_virtual_machine_instance_preset) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancepresets | 
@@ -94,7 +94,7 @@ Method | HTTP request | Description
 [**list_virtual_machine_clone**](DefaultApi.md#list_virtual_machine_clone) | **GET** /apis/clone.kubevirt.io/v1alpha1/virtualmachineclones | 
 [**list_virtual_machine_cluster_instancetype**](DefaultApi.md#list_virtual_machine_cluster_instancetype) | **GET** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterinstancetypes | 
 [**list_virtual_machine_cluster_preference**](DefaultApi.md#list_virtual_machine_cluster_preference) | **GET** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterpreferences | 
-[**list_virtual_machine_export_for_all_namespaces**](DefaultApi.md#list_virtual_machine_export_for_all_namespaces) | **GET** /apis/export.kubevirt.io/v1alpha1/virtualmachineexports | 
+[**list_virtual_machine_export_for_all_namespaces**](DefaultApi.md#list_virtual_machine_export_for_all_namespaces) | **GET** /apis/export.kubevirt.io/v1beta1/virtualmachineexports | 
 [**list_virtual_machine_for_all_namespaces**](DefaultApi.md#list_virtual_machine_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/virtualmachines | 
 [**list_virtual_machine_instance_for_all_namespaces**](DefaultApi.md#list_virtual_machine_instance_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/virtualmachineinstances | 
 [**list_virtual_machine_instance_migration_for_all_namespaces**](DefaultApi.md#list_virtual_machine_instance_migration_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/virtualmachineinstancemigrations | 
@@ -109,7 +109,7 @@ Method | HTTP request | Description
 [**patch_migration_policy**](DefaultApi.md#patch_migration_policy) | **PATCH** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies/{name} | 
 [**patch_namespaced_kube_virt**](DefaultApi.md#patch_namespaced_kube_virt) | **PATCH** /apis/kubevirt.io/v1/namespaces/{namespace}/kubevirt/{name} | 
 [**patch_namespaced_virtual_machine**](DefaultApi.md#patch_namespaced_virtual_machine) | **PATCH** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | 
-[**patch_namespaced_virtual_machine_export**](DefaultApi.md#patch_namespaced_virtual_machine_export) | **PATCH** /apis/export.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachineexports/{name} | 
+[**patch_namespaced_virtual_machine_export**](DefaultApi.md#patch_namespaced_virtual_machine_export) | **PATCH** /apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports/{name} | 
 [**patch_namespaced_virtual_machine_instance**](DefaultApi.md#patch_namespaced_virtual_machine_instance) | **PATCH** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name} | 
 [**patch_namespaced_virtual_machine_instance_migration**](DefaultApi.md#patch_namespaced_virtual_machine_instance_migration) | **PATCH** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancemigrations/{name} | 
 [**patch_namespaced_virtual_machine_instance_preset**](DefaultApi.md#patch_namespaced_virtual_machine_instance_preset) | **PATCH** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancepresets/{name} | 
@@ -126,7 +126,7 @@ Method | HTTP request | Description
 [**read_migration_policy**](DefaultApi.md#read_migration_policy) | **GET** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies/{name} | 
 [**read_namespaced_kube_virt**](DefaultApi.md#read_namespaced_kube_virt) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/kubevirt/{name} | 
 [**read_namespaced_virtual_machine**](DefaultApi.md#read_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | 
-[**read_namespaced_virtual_machine_export**](DefaultApi.md#read_namespaced_virtual_machine_export) | **GET** /apis/export.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachineexports/{name} | 
+[**read_namespaced_virtual_machine_export**](DefaultApi.md#read_namespaced_virtual_machine_export) | **GET** /apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports/{name} | 
 [**read_namespaced_virtual_machine_instance**](DefaultApi.md#read_namespaced_virtual_machine_instance) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name} | 
 [**read_namespaced_virtual_machine_instance_migration**](DefaultApi.md#read_namespaced_virtual_machine_instance_migration) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancemigrations/{name} | 
 [**read_namespaced_virtual_machine_instance_preset**](DefaultApi.md#read_namespaced_virtual_machine_instance_preset) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancepresets/{name} | 
@@ -143,7 +143,7 @@ Method | HTTP request | Description
 [**replace_migration_policy**](DefaultApi.md#replace_migration_policy) | **PUT** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies/{name} | 
 [**replace_namespaced_kube_virt**](DefaultApi.md#replace_namespaced_kube_virt) | **PUT** /apis/kubevirt.io/v1/namespaces/{namespace}/kubevirt/{name} | 
 [**replace_namespaced_virtual_machine**](DefaultApi.md#replace_namespaced_virtual_machine) | **PUT** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | 
-[**replace_namespaced_virtual_machine_export**](DefaultApi.md#replace_namespaced_virtual_machine_export) | **PUT** /apis/export.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachineexports/{name} | 
+[**replace_namespaced_virtual_machine_export**](DefaultApi.md#replace_namespaced_virtual_machine_export) | **PUT** /apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports/{name} | 
 [**replace_namespaced_virtual_machine_instance**](DefaultApi.md#replace_namespaced_virtual_machine_instance) | **PUT** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name} | 
 [**replace_namespaced_virtual_machine_instance_migration**](DefaultApi.md#replace_namespaced_virtual_machine_instance_migration) | **PUT** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancemigrations/{name} | 
 [**replace_namespaced_virtual_machine_instance_preset**](DefaultApi.md#replace_namespaced_virtual_machine_instance_preset) | **PUT** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancepresets/{name} | 
@@ -242,7 +242,7 @@ Method | HTTP request | Description
 [**watch_migration_policy_list_for_all_namespaces**](DefaultApi.md#watch_migration_policy_list_for_all_namespaces) | **GET** /apis/migrations.kubevirt.io/v1alpha1/watch/migrationpolicies | 
 [**watch_namespaced_kube_virt**](DefaultApi.md#watch_namespaced_kube_virt) | **GET** /apis/kubevirt.io/v1/watch/namespaces/{namespace}/kubevirt | 
 [**watch_namespaced_virtual_machine**](DefaultApi.md#watch_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1/watch/namespaces/{namespace}/virtualmachines | 
-[**watch_namespaced_virtual_machine_export**](DefaultApi.md#watch_namespaced_virtual_machine_export) | **GET** /apis/export.kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachineexports | 
+[**watch_namespaced_virtual_machine_export**](DefaultApi.md#watch_namespaced_virtual_machine_export) | **GET** /apis/export.kubevirt.io/v1beta1/watch/namespaces/{namespace}/virtualmachineexports | 
 [**watch_namespaced_virtual_machine_instance**](DefaultApi.md#watch_namespaced_virtual_machine_instance) | **GET** /apis/kubevirt.io/v1/watch/namespaces/{namespace}/virtualmachineinstances | 
 [**watch_namespaced_virtual_machine_instance_migration**](DefaultApi.md#watch_namespaced_virtual_machine_instance_migration) | **GET** /apis/kubevirt.io/v1/watch/namespaces/{namespace}/virtualmachineinstancemigrations | 
 [**watch_namespaced_virtual_machine_instance_preset**](DefaultApi.md#watch_namespaced_virtual_machine_instance_preset) | **GET** /apis/kubevirt.io/v1/watch/namespaces/{namespace}/virtualmachineinstancepresets | 
@@ -256,7 +256,7 @@ Method | HTTP request | Description
 [**watch_virtual_machine_clone_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_clone_list_for_all_namespaces) | **GET** /apis/clone.kubevirt.io/v1alpha1/watch/virtualmachineclones | 
 [**watch_virtual_machine_cluster_instancetype_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_cluster_instancetype_list_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1beta1/watch/virtualmachineclusterinstancetypes | 
 [**watch_virtual_machine_cluster_preference_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_cluster_preference_list_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1beta1/watch/virtualmachineclusterpreferences | 
-[**watch_virtual_machine_export_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_export_list_for_all_namespaces) | **GET** /apis/export.kubevirt.io/v1alpha1/watch/virtualmachineexports | 
+[**watch_virtual_machine_export_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_export_list_for_all_namespaces) | **GET** /apis/export.kubevirt.io/v1beta1/watch/virtualmachineexports | 
 [**watch_virtual_machine_instance_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_instance_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/watch/virtualmachineinstances | 
 [**watch_virtual_machine_instance_migration_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_instance_migration_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/watch/virtualmachineinstancemigrations | 
 [**watch_virtual_machine_instance_preset_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_instance_preset_list_for_all_namespaces) | **GET** /apis/kubevirt.io/v1/watch/virtualmachineinstancepresets | 
@@ -416,7 +416,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_namespaced_virtual_machine_export**
-> V1alpha1VirtualMachineExport create_namespaced_virtual_machine_export(body, namespace)
+> V1beta1VirtualMachineExport create_namespaced_virtual_machine_export(body, namespace)
 
 
 
@@ -432,7 +432,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = kubevirt.DefaultApi()
-body = kubevirt.V1alpha1VirtualMachineExport() # V1alpha1VirtualMachineExport | 
+body = kubevirt.V1beta1VirtualMachineExport() # V1beta1VirtualMachineExport | 
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
 
 try: 
@@ -446,12 +446,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**V1alpha1VirtualMachineExport**](V1alpha1VirtualMachineExport.md)|  | 
+ **body** | [**V1beta1VirtualMachineExport**](V1beta1VirtualMachineExport.md)|  | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
 
 ### Return type
 
-[**V1alpha1VirtualMachineExport**](V1alpha1VirtualMachineExport.md)
+[**V1beta1VirtualMachineExport**](V1beta1VirtualMachineExport.md)
 
 ### Authorization
 
@@ -3562,8 +3562,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_api_resources_export_kubevirt_io_v1alpha1**
-> K8sIoApimachineryPkgApisMetaV1APIResourceList get_api_resources_export_kubevirt_io_v1alpha1()
+# **get_api_resources_export_kubevirt_io_v1beta1**
+> K8sIoApimachineryPkgApisMetaV1APIResourceList get_api_resources_export_kubevirt_io_v1beta1()
 
 
 
@@ -3581,10 +3581,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 
 try: 
-    api_response = api_instance.get_api_resources_export_kubevirt_io_v1alpha1()
+    api_response = api_instance.get_api_resources_export_kubevirt_io_v1beta1()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->get_api_resources_export_kubevirt_io_v1alpha1: %s\n" % e)
+    print("Exception when calling DefaultApi->get_api_resources_export_kubevirt_io_v1beta1: %s\n" % e)
 ```
 
 ### Parameters
@@ -4238,7 +4238,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_namespaced_virtual_machine_export**
-> V1alpha1VirtualMachineExportList list_namespaced_virtual_machine_export(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> V1beta1VirtualMachineExportList list_namespaced_virtual_machine_export(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -4287,7 +4287,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha1VirtualMachineExportList**](V1alpha1VirtualMachineExportList.md)
+[**V1beta1VirtualMachineExportList**](V1beta1VirtualMachineExportList.md)
 
 ### Authorization
 
@@ -5114,7 +5114,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_virtual_machine_export_for_all_namespaces**
-> V1alpha1VirtualMachineExportList list_virtual_machine_export_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+> V1beta1VirtualMachineExportList list_virtual_machine_export_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
 
 
@@ -5161,7 +5161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha1VirtualMachineExportList**](V1alpha1VirtualMachineExportList.md)
+[**V1beta1VirtualMachineExportList**](V1beta1VirtualMachineExportList.md)
 
 ### Authorization
 
@@ -5997,7 +5997,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_namespaced_virtual_machine_export**
-> V1alpha1VirtualMachineExport patch_namespaced_virtual_machine_export(name, namespace, body)
+> V1beta1VirtualMachineExport patch_namespaced_virtual_machine_export(name, namespace, body)
 
 
 
@@ -6034,7 +6034,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha1VirtualMachineExport**](V1alpha1VirtualMachineExport.md)
+[**V1beta1VirtualMachineExport**](V1beta1VirtualMachineExport.md)
 
 ### Authorization
 
@@ -6862,7 +6862,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **read_namespaced_virtual_machine_export**
-> V1alpha1VirtualMachineExport read_namespaced_virtual_machine_export(name, namespace, exact=exact, export=export)
+> V1beta1VirtualMachineExport read_namespaced_virtual_machine_export(name, namespace, exact=exact, export=export)
 
 
 
@@ -6901,7 +6901,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha1VirtualMachineExport**](V1alpha1VirtualMachineExport.md)
+[**V1beta1VirtualMachineExport**](V1beta1VirtualMachineExport.md)
 
 ### Authorization
 
@@ -7749,7 +7749,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **replace_namespaced_virtual_machine_export**
-> V1alpha1VirtualMachineExport replace_namespaced_virtual_machine_export(name, namespace, body)
+> V1beta1VirtualMachineExport replace_namespaced_virtual_machine_export(name, namespace, body)
 
 
 
@@ -7767,7 +7767,7 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
-body = kubevirt.V1alpha1VirtualMachineExport() # V1alpha1VirtualMachineExport | 
+body = kubevirt.V1beta1VirtualMachineExport() # V1beta1VirtualMachineExport | 
 
 try: 
     api_response = api_instance.replace_namespaced_virtual_machine_export(name, namespace, body)
@@ -7782,11 +7782,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
- **body** | [**V1alpha1VirtualMachineExport**](V1alpha1VirtualMachineExport.md)|  | 
+ **body** | [**V1beta1VirtualMachineExport**](V1beta1VirtualMachineExport.md)|  | 
 
 ### Return type
 
-[**V1alpha1VirtualMachineExport**](V1alpha1VirtualMachineExport.md)
+[**V1beta1VirtualMachineExport**](V1beta1VirtualMachineExport.md)
 
 ### Authorization
 

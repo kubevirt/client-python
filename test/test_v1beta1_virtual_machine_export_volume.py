@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1alpha1_virtual_machine_export import V1alpha1VirtualMachineExport
+from kubevirt.models.v1beta1_virtual_machine_export_volume import V1beta1VirtualMachineExportVolume
 
 
-class TestV1alpha1VirtualMachineExport(unittest.TestCase):
-    """ V1alpha1VirtualMachineExport unit test stubs """
+class TestV1beta1VirtualMachineExportVolume(unittest.TestCase):
+    """ V1beta1VirtualMachineExportVolume unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1alpha1VirtualMachineExport(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1alpha1VirtualMachineExport(self):
+    def testV1beta1VirtualMachineExportVolume(self):
         """
-        Test V1alpha1VirtualMachineExport
+        Test V1beta1VirtualMachineExportVolume
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1alpha1_virtual_machine_export.V1alpha1VirtualMachineExport()
+        #model = kubevirt.models.v1beta1_virtual_machine_export_volume.V1beta1VirtualMachineExportVolume()
         pass
 
 

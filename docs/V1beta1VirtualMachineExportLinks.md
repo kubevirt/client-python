@@ -1,10 +1,10 @@
-# V1alpha1VirtualMachineExportVolumeFormat
+# V1beta1VirtualMachineExportLinks
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**format** | **str** | Format is the format of the image at the specified URL | [default to '']
-**url** | **str** | Url is the url that contains the volume in the format specified | [default to '']
+**external** | [**V1beta1VirtualMachineExportLink**](V1beta1VirtualMachineExportLink.md) |  | [optional] 
+**internal** | [**V1beta1VirtualMachineExportLink**](V1beta1VirtualMachineExportLink.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

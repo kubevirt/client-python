@@ -527,9 +527,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_get_api_resources_export_kubevirt_io_v1alpha1(self):
+    def test_get_api_resources_export_kubevirt_io_v1beta1(self):
         """
-        Test case for get_api_resources_export_kubevirt_io_v1alpha1
+        Test case for get_api_resources_export_kubevirt_io_v1beta1
 
         
         """

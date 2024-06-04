@@ -33,6 +33,7 @@ class V1PersistentVolumeClaimInfo(object):
     swagger_types = {
         'access_modes': 'list[str]',
         'capacity': 'dict(str, K8sIoApimachineryPkgApiResourceQuantity)',
+        'claim_name': 'str',
         'filesystem_overhead': 'str',
         'preallocated': 'bool',
         'requests': 'dict(str, K8sIoApimachineryPkgApiResourceQuantity)',
@@ -42,19 +43,21 @@ class V1PersistentVolumeClaimInfo(object):
     attribute_map = {
         'access_modes': 'accessModes',
         'capacity': 'capacity',
+        'claim_name': 'claimName',
         'filesystem_overhead': 'filesystemOverhead',
         'preallocated': 'preallocated',
         'requests': 'requests',
         'volume_mode': 'volumeMode'
     }
 
-    def __init__(self, access_modes=None, capacity=None, filesystem_overhead=None, preallocated=None, requests=None, volume_mode=None):
+    def __init__(self, access_modes=None, capacity=None, claim_name=None, filesystem_overhead=None, preallocated=None, requests=None, volume_mode=None):
         """
         V1PersistentVolumeClaimInfo - a model defined in Swagger
         """
 
         self._access_modes = None
         self._capacity = None
+        self._claim_name = None
         self._filesystem_overhead = None
         self._preallocated = None
         self._requests = None
@@ -64,6 +67,8 @@ class V1PersistentVolumeClaimInfo(object):
           self.access_modes = access_modes
         if capacity is not None:
           self.capacity = capacity
+        if claim_name is not None:
+          self.claim_name = claim_name
         if filesystem_overhead is not None:
           self.filesystem_overhead = filesystem_overhead
         if preallocated is not None:
@@ -118,6 +123,29 @@ class V1PersistentVolumeClaimInfo(object):
         """
 
         self._capacity = capacity
+
+    @property
+    def claim_name(self):
+        """
+        Gets the claim_name of this V1PersistentVolumeClaimInfo.
+        ClaimName is the name of the PVC
+
+        :return: The claim_name of this V1PersistentVolumeClaimInfo.
+        :rtype: str
+        """
+        return self._claim_name
+
+    @claim_name.setter
+    def claim_name(self, claim_name):
+        """
+        Sets the claim_name of this V1PersistentVolumeClaimInfo.
+        ClaimName is the name of the PVC
+
+        :param claim_name: The claim_name of this V1PersistentVolumeClaimInfo.
+        :type: str
+        """
+
+        self._claim_name = claim_name
 
     @property
     def filesystem_overhead(self):

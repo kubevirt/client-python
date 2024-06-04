@@ -43,6 +43,7 @@ class V1VirtualMachineInstanceStatus(object):
         'launcher_container_image_version': 'str',
         'machine': 'V1Machine',
         'memory': 'V1MemoryStatus',
+        'migrated_volumes': 'list[V1StorageMigratedVolumeInfo]',
         'migration_method': 'str',
         'migration_state': 'V1VirtualMachineInstanceMigrationState',
         'migration_transport': 'str',
@@ -71,6 +72,7 @@ class V1VirtualMachineInstanceStatus(object):
         'launcher_container_image_version': 'launcherContainerImageVersion',
         'machine': 'machine',
         'memory': 'memory',
+        'migrated_volumes': 'migratedVolumes',
         'migration_method': 'migrationMethod',
         'migration_state': 'migrationState',
         'migration_transport': 'migrationTransport',
@@ -86,7 +88,7 @@ class V1VirtualMachineInstanceStatus(object):
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, vsockcid=None, active_pods=None, conditions=None, current_cpu_topology=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, kernel_boot_status=None, launcher_container_image_version=None, machine=None, memory=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
+    def __init__(self, vsockcid=None, active_pods=None, conditions=None, current_cpu_topology=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, kernel_boot_status=None, launcher_container_image_version=None, machine=None, memory=None, migrated_volumes=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -103,6 +105,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._launcher_container_image_version = None
         self._machine = None
         self._memory = None
+        self._migrated_volumes = None
         self._migration_method = None
         self._migration_state = None
         self._migration_transport = None
@@ -141,6 +144,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.machine = machine
         if memory is not None:
           self.memory = memory
+        if migrated_volumes is not None:
+          self.migrated_volumes = migrated_volumes
         if migration_method is not None:
           self.migration_method = migration_method
         if migration_state is not None:
@@ -443,6 +448,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._memory = memory
+
+    @property
+    def migrated_volumes(self):
+        """
+        Gets the migrated_volumes of this V1VirtualMachineInstanceStatus.
+        MigratedVolumes lists the source and destination volumes during the volume migration
+
+        :return: The migrated_volumes of this V1VirtualMachineInstanceStatus.
+        :rtype: list[V1StorageMigratedVolumeInfo]
+        """
+        return self._migrated_volumes
+
+    @migrated_volumes.setter
+    def migrated_volumes(self, migrated_volumes):
+        """
+        Sets the migrated_volumes of this V1VirtualMachineInstanceStatus.
+        MigratedVolumes lists the source and destination volumes during the volume migration
+
+        :param migrated_volumes: The migrated_volumes of this V1VirtualMachineInstanceStatus.
+        :type: list[V1StorageMigratedVolumeInfo]
+        """
+
+        self._migrated_volumes = migrated_volumes
 
     @property
     def migration_method(self):

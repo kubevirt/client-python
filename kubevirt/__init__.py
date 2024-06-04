@@ -229,6 +229,7 @@ from .models.v1_service_account_volume_source import V1ServiceAccountVolumeSourc
 from .models.v1_sound_device import V1SoundDevice
 from .models.v1_start_options import V1StartOptions
 from .models.v1_stop_options import V1StopOptions
+from .models.v1_storage_migrated_volume_info import V1StorageMigratedVolumeInfo
 from .models.v1_support_container_resources import V1SupportContainerResources
 from .models.v1_sy_nic_timer import V1SyNICTimer
 from .models.v1_sysprep_source import V1SysprepSource

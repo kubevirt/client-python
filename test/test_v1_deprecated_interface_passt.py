@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1_interface_passt import V1InterfacePasst
+from kubevirt.models.v1_deprecated_interface_passt import V1DeprecatedInterfacePasst
 
 
-class TestV1InterfacePasst(unittest.TestCase):
-    """ V1InterfacePasst unit test stubs """
+class TestV1DeprecatedInterfacePasst(unittest.TestCase):
+    """ V1DeprecatedInterfacePasst unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1InterfacePasst(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1InterfacePasst(self):
+    def testV1DeprecatedInterfacePasst(self):
         """
-        Test V1InterfacePasst
+        Test V1DeprecatedInterfacePasst
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1_interface_passt.V1InterfacePasst()
+        #model = kubevirt.models.v1_deprecated_interface_passt.V1DeprecatedInterfacePasst()
         pass
 
 

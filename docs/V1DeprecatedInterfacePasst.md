@@ -1,4 +1,4 @@
-# V1InterfacePasst
+# V1DeprecatedInterfacePasst
 
 ## Properties
 Name | Type | Description | Notes

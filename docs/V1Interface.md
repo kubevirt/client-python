@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **masquerade** | [**V1InterfaceMasquerade**](V1InterfaceMasquerade.md) |  | [optional] 
 **model** | **str** | Interface model. One of: e1000, e1000e, ne2k_pci, pcnet, rtl8139, virtio. Defaults to virtio. | [optional] 
 **name** | **str** | Logical name of the interface as well as a reference to the associated networks. Must match the Name of a Network. | [default to '']
-**passt** | [**V1InterfacePasst**](V1InterfacePasst.md) | Deprecated, please refer to Kubevirt user guide for alternatives. | [optional] 
+**passt** | [**V1DeprecatedInterfacePasst**](V1DeprecatedInterfacePasst.md) | DeprecatedPasst is an alias to the deprecated Passt interface, please refer to Kubevirt user guide for alternatives. Deprecated: Removed in v1.3 | [optional] 
 **pci_address** | **str** | If specified, the virtual network interface will be placed on the guests pci address with the specified PCI address. For example: 0000:81:01.10 | [optional] 
 **ports** | [**list[V1Port]**](V1Port.md) | List of ports to be forwarded to the virtual machine. | [optional] 
 **slirp** | [**V1DeprecatedInterfaceSlirp**](V1DeprecatedInterfaceSlirp.md) | DeprecatedSlirp is an alias to the deprecated Slirp interface Deprecated: Removed in v1.3 | [optional] 

@@ -41,7 +41,7 @@ class V1Interface(object):
         'masquerade': 'V1InterfaceMasquerade',
         'model': 'str',
         'name': 'str',
-        'passt': 'V1InterfacePasst',
+        'passt': 'V1DeprecatedInterfacePasst',
         'pci_address': 'str',
         'ports': 'list[V1Port]',
         'slirp': 'V1DeprecatedInterfaceSlirp',
@@ -359,10 +359,10 @@ class V1Interface(object):
     def passt(self):
         """
         Gets the passt of this V1Interface.
-        Deprecated, please refer to Kubevirt user guide for alternatives.
+        DeprecatedPasst is an alias to the deprecated Passt interface, please refer to Kubevirt user guide for alternatives. Deprecated: Removed in v1.3
 
         :return: The passt of this V1Interface.
-        :rtype: V1InterfacePasst
+        :rtype: V1DeprecatedInterfacePasst
         """
         return self._passt
 
@@ -370,10 +370,10 @@ class V1Interface(object):
     def passt(self, passt):
         """
         Sets the passt of this V1Interface.
-        Deprecated, please refer to Kubevirt user guide for alternatives.
+        DeprecatedPasst is an alias to the deprecated Passt interface, please refer to Kubevirt user guide for alternatives. Deprecated: Removed in v1.3
 
         :param passt: The passt of this V1Interface.
-        :type: V1InterfacePasst
+        :type: V1DeprecatedInterfacePasst
         """
 
         self._passt = passt

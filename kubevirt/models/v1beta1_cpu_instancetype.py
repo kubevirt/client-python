@@ -34,6 +34,7 @@ class V1beta1CPUInstancetype(object):
         'dedicated_cpu_placement': 'bool',
         'guest': 'int',
         'isolate_emulator_thread': 'bool',
+        'max_sockets': 'int',
         'model': 'str',
         'numa': 'V1NUMA',
         'realtime': 'V1Realtime'
@@ -43,12 +44,13 @@ class V1beta1CPUInstancetype(object):
         'dedicated_cpu_placement': 'dedicatedCPUPlacement',
         'guest': 'guest',
         'isolate_emulator_thread': 'isolateEmulatorThread',
+        'max_sockets': 'maxSockets',
         'model': 'model',
         'numa': 'numa',
         'realtime': 'realtime'
     }
 
-    def __init__(self, dedicated_cpu_placement=None, guest=0, isolate_emulator_thread=None, model=None, numa=None, realtime=None):
+    def __init__(self, dedicated_cpu_placement=None, guest=0, isolate_emulator_thread=None, max_sockets=None, model=None, numa=None, realtime=None):
         """
         V1beta1CPUInstancetype - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class V1beta1CPUInstancetype(object):
         self._dedicated_cpu_placement = None
         self._guest = None
         self._isolate_emulator_thread = None
+        self._max_sockets = None
         self._model = None
         self._numa = None
         self._realtime = None
@@ -65,6 +68,8 @@ class V1beta1CPUInstancetype(object):
         self.guest = guest
         if isolate_emulator_thread is not None:
           self.isolate_emulator_thread = isolate_emulator_thread
+        if max_sockets is not None:
+          self.max_sockets = max_sockets
         if model is not None:
           self.model = model
         if numa is not None:
@@ -142,6 +147,29 @@ class V1beta1CPUInstancetype(object):
         """
 
         self._isolate_emulator_thread = isolate_emulator_thread
+
+    @property
+    def max_sockets(self):
+        """
+        Gets the max_sockets of this V1beta1CPUInstancetype.
+        MaxSockets specifies the maximum amount of sockets that can be hotplugged
+
+        :return: The max_sockets of this V1beta1CPUInstancetype.
+        :rtype: int
+        """
+        return self._max_sockets
+
+    @max_sockets.setter
+    def max_sockets(self, max_sockets):
+        """
+        Sets the max_sockets of this V1beta1CPUInstancetype.
+        MaxSockets specifies the maximum amount of sockets that can be hotplugged
+
+        :param max_sockets: The max_sockets of this V1beta1CPUInstancetype.
+        :type: int
+        """
+
+        self._max_sockets = max_sockets
 
     @property
     def model(self):

@@ -33,27 +33,32 @@ class V1beta1MemoryInstancetype(object):
     swagger_types = {
         'guest': 'K8sIoApimachineryPkgApiResourceQuantity',
         'hugepages': 'V1Hugepages',
+        'max_guest': 'K8sIoApimachineryPkgApiResourceQuantity',
         'overcommit_percent': 'int'
     }
 
     attribute_map = {
         'guest': 'guest',
         'hugepages': 'hugepages',
+        'max_guest': 'maxGuest',
         'overcommit_percent': 'overcommitPercent'
     }
 
-    def __init__(self, guest=None, hugepages=None, overcommit_percent=None):
+    def __init__(self, guest=None, hugepages=None, max_guest=None, overcommit_percent=None):
         """
         V1beta1MemoryInstancetype - a model defined in Swagger
         """
 
         self._guest = None
         self._hugepages = None
+        self._max_guest = None
         self._overcommit_percent = None
 
         self.guest = guest
         if hugepages is not None:
           self.hugepages = hugepages
+        if max_guest is not None:
+          self.max_guest = max_guest
         if overcommit_percent is not None:
           self.overcommit_percent = overcommit_percent
 
@@ -104,6 +109,29 @@ class V1beta1MemoryInstancetype(object):
         """
 
         self._hugepages = hugepages
+
+    @property
+    def max_guest(self):
+        """
+        Gets the max_guest of this V1beta1MemoryInstancetype.
+        MaxGuest allows to specify the maximum amount of memory which is visible inside the Guest OS. The delta between MaxGuest and Guest is the amount of memory that can be hot(un)plugged.
+
+        :return: The max_guest of this V1beta1MemoryInstancetype.
+        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        """
+        return self._max_guest
+
+    @max_guest.setter
+    def max_guest(self, max_guest):
+        """
+        Sets the max_guest of this V1beta1MemoryInstancetype.
+        MaxGuest allows to specify the maximum amount of memory which is visible inside the Guest OS. The delta between MaxGuest and Guest is the amount of memory that can be hot(un)plugged.
+
+        :param max_guest: The max_guest of this V1beta1MemoryInstancetype.
+        :type: K8sIoApimachineryPkgApiResourceQuantity
+        """
+
+        self._max_guest = max_guest
 
     @property
     def overcommit_percent(self):

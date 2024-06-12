@@ -66,7 +66,7 @@ class K8sIoApiCoreV1DownwardAPIVolumeFile(object):
     def field_ref(self):
         """
         Gets the field_ref of this K8sIoApiCoreV1DownwardAPIVolumeFile.
-        Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.
+        Required: Selects a field of the pod: only annotations, labels, name, namespace and uid are supported.
 
         :return: The field_ref of this K8sIoApiCoreV1DownwardAPIVolumeFile.
         :rtype: K8sIoApiCoreV1ObjectFieldSelector
@@ -77,7 +77,7 @@ class K8sIoApiCoreV1DownwardAPIVolumeFile(object):
     def field_ref(self, field_ref):
         """
         Sets the field_ref of this K8sIoApiCoreV1DownwardAPIVolumeFile.
-        Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.
+        Required: Selects a field of the pod: only annotations, labels, name, namespace and uid are supported.
 
         :param field_ref: The field_ref of this K8sIoApiCoreV1DownwardAPIVolumeFile.
         :type: K8sIoApiCoreV1ObjectFieldSelector

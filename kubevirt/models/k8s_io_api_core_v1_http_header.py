@@ -55,7 +55,7 @@ class K8sIoApiCoreV1HTTPHeader(object):
     def name(self):
         """
         Gets the name of this K8sIoApiCoreV1HTTPHeader.
-        The header field name
+        The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.
 
         :return: The name of this K8sIoApiCoreV1HTTPHeader.
         :rtype: str
@@ -66,7 +66,7 @@ class K8sIoApiCoreV1HTTPHeader(object):
     def name(self, name):
         """
         Sets the name of this K8sIoApiCoreV1HTTPHeader.
-        The header field name
+        The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.
 
         :param name: The name of this K8sIoApiCoreV1HTTPHeader.
         :type: str

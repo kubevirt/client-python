@@ -117,7 +117,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def annotations(self):
         """
         Gets the annotations of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+        Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations
 
         :return: The annotations of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :rtype: dict(str, str)
@@ -128,7 +128,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def annotations(self, annotations):
         """
         Sets the annotations of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+        Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations
 
         :param annotations: The annotations of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :type: dict(str, str)
@@ -255,7 +255,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def labels(self):
         """
         Gets the labels of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+        Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels
 
         :return: The labels of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :rtype: dict(str, str)
@@ -266,7 +266,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def labels(self, labels):
         """
         Sets the labels of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels
+        Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels
 
         :param labels: The labels of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :type: dict(str, str)
@@ -301,7 +301,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def name(self):
         """
         Gets the name of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+        Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#names
 
         :return: The name of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :rtype: str
@@ -312,7 +312,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def name(self, name):
         """
         Sets the name of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+        Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#names
 
         :param name: The name of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :type: str
@@ -324,7 +324,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def namespace(self):
         """
         Gets the namespace of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.  Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
+        Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.  Must be a DNS_LABEL. Cannot be updated. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces
 
         :return: The namespace of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :rtype: str
@@ -335,7 +335,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def namespace(self, namespace):
         """
         Sets the namespace of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.  Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces
+        Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.  Must be a DNS_LABEL. Cannot be updated. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces
 
         :param namespace: The namespace of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :type: str
@@ -416,7 +416,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def uid(self):
         """
         Gets the uid of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.  Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+        UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.  Populated by the system. Read-only. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids
 
         :return: The uid of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :rtype: str
@@ -427,7 +427,7 @@ class K8sIoApimachineryPkgApisMetaV1ObjectMeta(object):
     def uid(self, uid):
         """
         Sets the uid of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
-        UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.  Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+        UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.  Populated by the system. Read-only. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids
 
         :param uid: The uid of this K8sIoApimachineryPkgApisMetaV1ObjectMeta.
         :type: str

@@ -32,6 +32,8 @@ class K8sIoApiCoreV1PodAffinityTerm(object):
     """
     swagger_types = {
         'label_selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
+        'match_label_keys': 'list[str]',
+        'mismatch_label_keys': 'list[str]',
         'namespace_selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
         'namespaces': 'list[str]',
         'topology_key': 'str'
@@ -39,23 +41,31 @@ class K8sIoApiCoreV1PodAffinityTerm(object):
 
     attribute_map = {
         'label_selector': 'labelSelector',
+        'match_label_keys': 'matchLabelKeys',
+        'mismatch_label_keys': 'mismatchLabelKeys',
         'namespace_selector': 'namespaceSelector',
         'namespaces': 'namespaces',
         'topology_key': 'topologyKey'
     }
 
-    def __init__(self, label_selector=None, namespace_selector=None, namespaces=None, topology_key=''):
+    def __init__(self, label_selector=None, match_label_keys=None, mismatch_label_keys=None, namespace_selector=None, namespaces=None, topology_key=''):
         """
         K8sIoApiCoreV1PodAffinityTerm - a model defined in Swagger
         """
 
         self._label_selector = None
+        self._match_label_keys = None
+        self._mismatch_label_keys = None
         self._namespace_selector = None
         self._namespaces = None
         self._topology_key = None
 
         if label_selector is not None:
           self.label_selector = label_selector
+        if match_label_keys is not None:
+          self.match_label_keys = match_label_keys
+        if mismatch_label_keys is not None:
+          self.mismatch_label_keys = mismatch_label_keys
         if namespace_selector is not None:
           self.namespace_selector = namespace_selector
         if namespaces is not None:
@@ -66,7 +76,7 @@ class K8sIoApiCoreV1PodAffinityTerm(object):
     def label_selector(self):
         """
         Gets the label_selector of this K8sIoApiCoreV1PodAffinityTerm.
-        A label query over a set of resources, in this case pods.
+        A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.
 
         :return: The label_selector of this K8sIoApiCoreV1PodAffinityTerm.
         :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
@@ -77,13 +87,59 @@ class K8sIoApiCoreV1PodAffinityTerm(object):
     def label_selector(self, label_selector):
         """
         Sets the label_selector of this K8sIoApiCoreV1PodAffinityTerm.
-        A label query over a set of resources, in this case pods.
+        A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.
 
         :param label_selector: The label_selector of this K8sIoApiCoreV1PodAffinityTerm.
         :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
         """
 
         self._label_selector = label_selector
+
+    @property
+    def match_label_keys(self):
+        """
+        Gets the match_label_keys of this K8sIoApiCoreV1PodAffinityTerm.
+        MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key in (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.
+
+        :return: The match_label_keys of this K8sIoApiCoreV1PodAffinityTerm.
+        :rtype: list[str]
+        """
+        return self._match_label_keys
+
+    @match_label_keys.setter
+    def match_label_keys(self, match_label_keys):
+        """
+        Sets the match_label_keys of this K8sIoApiCoreV1PodAffinityTerm.
+        MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key in (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.
+
+        :param match_label_keys: The match_label_keys of this K8sIoApiCoreV1PodAffinityTerm.
+        :type: list[str]
+        """
+
+        self._match_label_keys = match_label_keys
+
+    @property
+    def mismatch_label_keys(self):
+        """
+        Gets the mismatch_label_keys of this K8sIoApiCoreV1PodAffinityTerm.
+        MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key notin (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.
+
+        :return: The mismatch_label_keys of this K8sIoApiCoreV1PodAffinityTerm.
+        :rtype: list[str]
+        """
+        return self._mismatch_label_keys
+
+    @mismatch_label_keys.setter
+    def mismatch_label_keys(self, mismatch_label_keys):
+        """
+        Sets the mismatch_label_keys of this K8sIoApiCoreV1PodAffinityTerm.
+        MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key notin (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.
+
+        :param mismatch_label_keys: The mismatch_label_keys of this K8sIoApiCoreV1PodAffinityTerm.
+        :type: list[str]
+        """
+
+        self._mismatch_label_keys = mismatch_label_keys
 
     @property
     def namespace_selector(self):

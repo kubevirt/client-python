@@ -192,7 +192,7 @@ class K8sIoApimachineryPkgApisMetaV1StatusDetails(object):
     def uid(self):
         """
         Gets the uid of this K8sIoApimachineryPkgApisMetaV1StatusDetails.
-        UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+        UID of the resource. (when there is a single resource which can be described). More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids
 
         :return: The uid of this K8sIoApimachineryPkgApisMetaV1StatusDetails.
         :rtype: str
@@ -203,7 +203,7 @@ class K8sIoApimachineryPkgApisMetaV1StatusDetails(object):
     def uid(self, uid):
         """
         Sets the uid of this K8sIoApimachineryPkgApisMetaV1StatusDetails.
-        UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+        UID of the resource. (when there is a single resource which can be described). More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids
 
         :param uid: The uid of this K8sIoApimachineryPkgApisMetaV1StatusDetails.
         :type: str

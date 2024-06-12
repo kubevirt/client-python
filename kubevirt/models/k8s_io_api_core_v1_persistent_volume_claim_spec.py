@@ -34,9 +34,10 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
         'access_modes': 'list[str]',
         'data_source': 'K8sIoApiCoreV1TypedLocalObjectReference',
         'data_source_ref': 'K8sIoApiCoreV1TypedObjectReference',
-        'resources': 'K8sIoApiCoreV1ResourceRequirements',
+        'resources': 'K8sIoApiCoreV1VolumeResourceRequirements',
         'selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
         'storage_class_name': 'str',
+        'volume_attributes_class_name': 'str',
         'volume_mode': 'str',
         'volume_name': 'str'
     }
@@ -48,11 +49,12 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
         'resources': 'resources',
         'selector': 'selector',
         'storage_class_name': 'storageClassName',
+        'volume_attributes_class_name': 'volumeAttributesClassName',
         'volume_mode': 'volumeMode',
         'volume_name': 'volumeName'
     }
 
-    def __init__(self, access_modes=None, data_source=None, data_source_ref=None, resources=None, selector=None, storage_class_name=None, volume_mode=None, volume_name=None):
+    def __init__(self, access_modes=None, data_source=None, data_source_ref=None, resources=None, selector=None, storage_class_name=None, volume_attributes_class_name=None, volume_mode=None, volume_name=None):
         """
         K8sIoApiCoreV1PersistentVolumeClaimSpec - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
         self._resources = None
         self._selector = None
         self._storage_class_name = None
+        self._volume_attributes_class_name = None
         self._volume_mode = None
         self._volume_name = None
 
@@ -78,6 +81,8 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
           self.selector = selector
         if storage_class_name is not None:
           self.storage_class_name = storage_class_name
+        if volume_attributes_class_name is not None:
+          self.volume_attributes_class_name = volume_attributes_class_name
         if volume_mode is not None:
           self.volume_mode = volume_mode
         if volume_name is not None:
@@ -159,7 +164,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
         resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
 
         :return: The resources of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        :rtype: K8sIoApiCoreV1ResourceRequirements
+        :rtype: K8sIoApiCoreV1VolumeResourceRequirements
         """
         return self._resources
 
@@ -170,7 +175,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
         resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
 
         :param resources: The resources of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        :type: K8sIoApiCoreV1ResourceRequirements
+        :type: K8sIoApiCoreV1VolumeResourceRequirements
         """
 
         self._resources = resources
@@ -220,6 +225,29 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
         """
 
         self._storage_class_name = storage_class_name
+
+    @property
+    def volume_attributes_class_name(self):
+        """
+        Gets the volume_attributes_class_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
+        volumeAttributesClassName may be used to set the VolumeAttributesClass used by this claim. If specified, the CSI driver will create or update the volume with the attributes defined in the corresponding VolumeAttributesClass. This has a different purpose than storageClassName, it can be changed after the claim is created. An empty string value means that no VolumeAttributesClass will be applied to the claim but it's not allowed to reset this field to empty string once it is set. If unspecified and the PersistentVolumeClaim is unbound, the default VolumeAttributesClass will be set by the persistentvolume controller if it exists. If the resource referred to by volumeAttributesClass does not exist, this PersistentVolumeClaim will be set to a Pending state, as reflected by the modifyVolumeStatus field, until such as a resource exists. More info: https://kubernetes.io/docs/concepts/storage/volume-attributes-classes/ (Alpha) Using this field requires the VolumeAttributesClass feature gate to be enabled.
+
+        :return: The volume_attributes_class_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
+        :rtype: str
+        """
+        return self._volume_attributes_class_name
+
+    @volume_attributes_class_name.setter
+    def volume_attributes_class_name(self, volume_attributes_class_name):
+        """
+        Sets the volume_attributes_class_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
+        volumeAttributesClassName may be used to set the VolumeAttributesClass used by this claim. If specified, the CSI driver will create or update the volume with the attributes defined in the corresponding VolumeAttributesClass. This has a different purpose than storageClassName, it can be changed after the claim is created. An empty string value means that no VolumeAttributesClass will be applied to the claim but it's not allowed to reset this field to empty string once it is set. If unspecified and the PersistentVolumeClaim is unbound, the default VolumeAttributesClass will be set by the persistentvolume controller if it exists. If the resource referred to by volumeAttributesClass does not exist, this PersistentVolumeClaim will be set to a Pending state, as reflected by the modifyVolumeStatus field, until such as a resource exists. More info: https://kubernetes.io/docs/concepts/storage/volume-attributes-classes/ (Alpha) Using this field requires the VolumeAttributesClass feature gate to be enabled.
+
+        :param volume_attributes_class_name: The volume_attributes_class_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
+        :type: str
+        """
+
+        self._volume_attributes_class_name = volume_attributes_class_name
 
     @property
     def volume_mode(self):

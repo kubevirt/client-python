@@ -169,7 +169,7 @@ class K8sIoApimachineryPkgApisMetaV1OwnerReference(object):
     def name(self):
         """
         Gets the name of this K8sIoApimachineryPkgApisMetaV1OwnerReference.
-        Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+        Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#names
 
         :return: The name of this K8sIoApimachineryPkgApisMetaV1OwnerReference.
         :rtype: str
@@ -180,7 +180,7 @@ class K8sIoApimachineryPkgApisMetaV1OwnerReference(object):
     def name(self, name):
         """
         Sets the name of this K8sIoApimachineryPkgApisMetaV1OwnerReference.
-        Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+        Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#names
 
         :param name: The name of this K8sIoApimachineryPkgApisMetaV1OwnerReference.
         :type: str
@@ -194,7 +194,7 @@ class K8sIoApimachineryPkgApisMetaV1OwnerReference(object):
     def uid(self):
         """
         Gets the uid of this K8sIoApimachineryPkgApisMetaV1OwnerReference.
-        UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+        UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids
 
         :return: The uid of this K8sIoApimachineryPkgApisMetaV1OwnerReference.
         :rtype: str
@@ -205,7 +205,7 @@ class K8sIoApimachineryPkgApisMetaV1OwnerReference(object):
     def uid(self, uid):
         """
         Sets the uid of this K8sIoApimachineryPkgApisMetaV1OwnerReference.
-        UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+        UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids
 
         :param uid: The uid of this K8sIoApimachineryPkgApisMetaV1OwnerReference.
         :type: str

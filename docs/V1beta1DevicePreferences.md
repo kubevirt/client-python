@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **preferred_disk_block_size** | [**V1BlockSize**](V1BlockSize.md) | PreferredBlockSize optionally defines the block size of Disk devices. | [optional] 
 **preferred_disk_bus** | **str** | PreferredDiskBus optionally defines the preferred bus for Disk Disk devices. | [optional] 
 **preferred_disk_cache** | **str** | PreferredCache optionally defines the DriverCache to be used by Disk devices. | [optional] 
-**preferred_disk_dedicated_io_thread** | **bool** | PreferredDedicatedIoThread optionally enables dedicated IO threads for Disk devices. | [optional] 
+**preferred_disk_dedicated_io_thread** | **bool** | PreferredDedicatedIoThread optionally enables dedicated IO threads for Disk devices using the virtio bus. | [optional] 
 **preferred_disk_io** | **str** | PreferredIo optionally defines the QEMU disk IO mode to be used by Disk devices. | [optional] 
 **preferred_input_bus** | **str** | PreferredInputBus optionally defines the preferred bus for Input devices. | [optional] 
 **preferred_input_type** | **str** | PreferredInputType optionally defines the preferred type for Input devices. | [optional] 

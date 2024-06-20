@@ -420,7 +420,7 @@ class V1beta1DevicePreferences(object):
     def preferred_disk_dedicated_io_thread(self):
         """
         Gets the preferred_disk_dedicated_io_thread of this V1beta1DevicePreferences.
-        PreferredDedicatedIoThread optionally enables dedicated IO threads for Disk devices.
+        PreferredDedicatedIoThread optionally enables dedicated IO threads for Disk devices using the virtio bus.
 
         :return: The preferred_disk_dedicated_io_thread of this V1beta1DevicePreferences.
         :rtype: bool
@@ -431,7 +431,7 @@ class V1beta1DevicePreferences(object):
     def preferred_disk_dedicated_io_thread(self, preferred_disk_dedicated_io_thread):
         """
         Sets the preferred_disk_dedicated_io_thread of this V1beta1DevicePreferences.
-        PreferredDedicatedIoThread optionally enables dedicated IO threads for Disk devices.
+        PreferredDedicatedIoThread optionally enables dedicated IO threads for Disk devices using the virtio bus.
 
         :param preferred_disk_dedicated_io_thread: The preferred_disk_dedicated_io_thread of this V1beta1DevicePreferences.
         :type: bool

@@ -31,6 +31,7 @@ class V1InterfaceBindingPlugin(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'compute_resource_overhead': 'K8sIoApiCoreV1ResourceRequirements',
         'domain_attachment_type': 'str',
         'downward_api': 'str',
         'migration': 'V1InterfaceBindingMigration',
@@ -39,6 +40,7 @@ class V1InterfaceBindingPlugin(object):
     }
 
     attribute_map = {
+        'compute_resource_overhead': 'computeResourceOverhead',
         'domain_attachment_type': 'domainAttachmentType',
         'downward_api': 'downwardAPI',
         'migration': 'migration',
@@ -46,17 +48,20 @@ class V1InterfaceBindingPlugin(object):
         'sidecar_image': 'sidecarImage'
     }
 
-    def __init__(self, domain_attachment_type=None, downward_api=None, migration=None, network_attachment_definition=None, sidecar_image=None):
+    def __init__(self, compute_resource_overhead=None, domain_attachment_type=None, downward_api=None, migration=None, network_attachment_definition=None, sidecar_image=None):
         """
         V1InterfaceBindingPlugin - a model defined in Swagger
         """
 
+        self._compute_resource_overhead = None
         self._domain_attachment_type = None
         self._downward_api = None
         self._migration = None
         self._network_attachment_definition = None
         self._sidecar_image = None
 
+        if compute_resource_overhead is not None:
+          self.compute_resource_overhead = compute_resource_overhead
         if domain_attachment_type is not None:
           self.domain_attachment_type = domain_attachment_type
         if downward_api is not None:
@@ -67,6 +72,29 @@ class V1InterfaceBindingPlugin(object):
           self.network_attachment_definition = network_attachment_definition
         if sidecar_image is not None:
           self.sidecar_image = sidecar_image
+
+    @property
+    def compute_resource_overhead(self):
+        """
+        Gets the compute_resource_overhead of this V1InterfaceBindingPlugin.
+        ComputeResourceOverhead specifies the resource overhead that should be added to the compute container when using the binding. version: v1alphav1
+
+        :return: The compute_resource_overhead of this V1InterfaceBindingPlugin.
+        :rtype: K8sIoApiCoreV1ResourceRequirements
+        """
+        return self._compute_resource_overhead
+
+    @compute_resource_overhead.setter
+    def compute_resource_overhead(self, compute_resource_overhead):
+        """
+        Sets the compute_resource_overhead of this V1InterfaceBindingPlugin.
+        ComputeResourceOverhead specifies the resource overhead that should be added to the compute container when using the binding. version: v1alphav1
+
+        :param compute_resource_overhead: The compute_resource_overhead of this V1InterfaceBindingPlugin.
+        :type: K8sIoApiCoreV1ResourceRequirements
+        """
+
+        self._compute_resource_overhead = compute_resource_overhead
 
     @property
     def domain_attachment_type(self):

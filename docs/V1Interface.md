@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **mac_address** | **str** | Interface MAC address. For example: de:ad:00:00:be:af or DE-AD-00-00-BE-AF. | [optional] 
 **macvtap** | [**V1DeprecatedInterfaceMacvtap**](V1DeprecatedInterfaceMacvtap.md) | DeprecatedMacvtap is an alias to the deprecated Macvtap interface, please refer to Kubevirt user guide for alternatives. Deprecated: Removed in v1.3 | [optional] 
 **masquerade** | [**V1InterfaceMasquerade**](V1InterfaceMasquerade.md) |  | [optional] 
-**model** | **str** | Interface model. One of: e1000, e1000e, ne2k_pci, pcnet, rtl8139, virtio. Defaults to virtio. | [optional] 
+**model** | **str** | Interface model. One of: e1000, e1000e, igb, ne2k_pci, pcnet, rtl8139, virtio. Defaults to virtio. | [optional] 
 **name** | **str** | Logical name of the interface as well as a reference to the associated networks. Must match the Name of a Network. | [default to '']
 **passt** | [**V1DeprecatedInterfacePasst**](V1DeprecatedInterfacePasst.md) | DeprecatedPasst is an alias to the deprecated Passt interface, please refer to Kubevirt user guide for alternatives. Deprecated: Removed in v1.3 | [optional] 
 **pci_address** | **str** | If specified, the virtual network interface will be placed on the guests pci address with the specified PCI address. For example: 0000:81:01.10 | [optional] 

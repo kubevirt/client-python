@@ -311,7 +311,7 @@ class V1Interface(object):
     def model(self):
         """
         Gets the model of this V1Interface.
-        Interface model. One of: e1000, e1000e, ne2k_pci, pcnet, rtl8139, virtio. Defaults to virtio.
+        Interface model. One of: e1000, e1000e, igb, ne2k_pci, pcnet, rtl8139, virtio. Defaults to virtio.
 
         :return: The model of this V1Interface.
         :rtype: str
@@ -322,7 +322,7 @@ class V1Interface(object):
     def model(self, model):
         """
         Sets the model of this V1Interface.
-        Interface model. One of: e1000, e1000e, ne2k_pci, pcnet, rtl8139, virtio. Defaults to virtio.
+        Interface model. One of: e1000, e1000e, igb, ne2k_pci, pcnet, rtl8139, virtio. Defaults to virtio.
 
         :param model: The model of this V1Interface.
         :type: str

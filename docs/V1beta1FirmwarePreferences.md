@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**preferred_efi** | [**V1EFI**](V1EFI.md) | PreferredEfi optionally enables EFI | [optional] 
 **preferred_use_bios** | **bool** | PreferredUseBios optionally enables BIOS | [optional] 
 **preferred_use_bios_serial** | **bool** | PreferredUseBiosSerial optionally transmitts BIOS output over the serial.  Requires PreferredUseBios to be enabled. | [optional] 
 **preferred_use_efi** | **bool** | PreferredUseEfi optionally enables EFI | [optional] 

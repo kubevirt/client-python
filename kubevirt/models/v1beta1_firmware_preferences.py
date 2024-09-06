@@ -31,6 +31,7 @@ class V1beta1FirmwarePreferences(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'preferred_efi': 'V1EFI',
         'preferred_use_bios': 'bool',
         'preferred_use_bios_serial': 'bool',
         'preferred_use_efi': 'bool',
@@ -38,22 +39,26 @@ class V1beta1FirmwarePreferences(object):
     }
 
     attribute_map = {
+        'preferred_efi': 'preferredEfi',
         'preferred_use_bios': 'preferredUseBios',
         'preferred_use_bios_serial': 'preferredUseBiosSerial',
         'preferred_use_efi': 'preferredUseEfi',
         'preferred_use_secure_boot': 'preferredUseSecureBoot'
     }
 
-    def __init__(self, preferred_use_bios=None, preferred_use_bios_serial=None, preferred_use_efi=None, preferred_use_secure_boot=None):
+    def __init__(self, preferred_efi=None, preferred_use_bios=None, preferred_use_bios_serial=None, preferred_use_efi=None, preferred_use_secure_boot=None):
         """
         V1beta1FirmwarePreferences - a model defined in Swagger
         """
 
+        self._preferred_efi = None
         self._preferred_use_bios = None
         self._preferred_use_bios_serial = None
         self._preferred_use_efi = None
         self._preferred_use_secure_boot = None
 
+        if preferred_efi is not None:
+          self.preferred_efi = preferred_efi
         if preferred_use_bios is not None:
           self.preferred_use_bios = preferred_use_bios
         if preferred_use_bios_serial is not None:
@@ -62,6 +67,29 @@ class V1beta1FirmwarePreferences(object):
           self.preferred_use_efi = preferred_use_efi
         if preferred_use_secure_boot is not None:
           self.preferred_use_secure_boot = preferred_use_secure_boot
+
+    @property
+    def preferred_efi(self):
+        """
+        Gets the preferred_efi of this V1beta1FirmwarePreferences.
+        PreferredEfi optionally enables EFI
+
+        :return: The preferred_efi of this V1beta1FirmwarePreferences.
+        :rtype: V1EFI
+        """
+        return self._preferred_efi
+
+    @preferred_efi.setter
+    def preferred_efi(self, preferred_efi):
+        """
+        Sets the preferred_efi of this V1beta1FirmwarePreferences.
+        PreferredEfi optionally enables EFI
+
+        :param preferred_efi: The preferred_efi of this V1beta1FirmwarePreferences.
+        :type: V1EFI
+        """
+
+        self._preferred_efi = preferred_efi
 
     @property
     def preferred_use_bios(self):

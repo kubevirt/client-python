@@ -62,7 +62,7 @@ class V1LiveUpdateConfiguration(object):
     def max_cpu_sockets(self):
         """
         Gets the max_cpu_sockets of this V1LiveUpdateConfiguration.
-        MaxCpuSockets holds the maximum amount of sockets that can be hotplugged
+        MaxCpuSockets provides a MaxSockets value for VMs that do not provide their own. For VMs with more sockets than maximum the MaxSockets will be set to equal number of sockets.
 
         :return: The max_cpu_sockets of this V1LiveUpdateConfiguration.
         :rtype: int
@@ -73,7 +73,7 @@ class V1LiveUpdateConfiguration(object):
     def max_cpu_sockets(self, max_cpu_sockets):
         """
         Sets the max_cpu_sockets of this V1LiveUpdateConfiguration.
-        MaxCpuSockets holds the maximum amount of sockets that can be hotplugged
+        MaxCpuSockets provides a MaxSockets value for VMs that do not provide their own. For VMs with more sockets than maximum the MaxSockets will be set to equal number of sockets.
 
         :param max_cpu_sockets: The max_cpu_sockets of this V1LiveUpdateConfiguration.
         :type: int

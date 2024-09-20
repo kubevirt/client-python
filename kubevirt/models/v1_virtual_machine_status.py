@@ -44,7 +44,8 @@ class V1VirtualMachineStatus(object):
         'start_failure': 'V1VirtualMachineStartFailure',
         'state_change_requests': 'list[V1VirtualMachineStateChangeRequest]',
         'volume_requests': 'list[V1VirtualMachineVolumeRequest]',
-        'volume_snapshot_statuses': 'list[V1VolumeSnapshotStatus]'
+        'volume_snapshot_statuses': 'list[V1VolumeSnapshotStatus]',
+        'volume_update_state': 'V1VolumeUpdateState'
     }
 
     attribute_map = {
@@ -61,10 +62,11 @@ class V1VirtualMachineStatus(object):
         'start_failure': 'startFailure',
         'state_change_requests': 'stateChangeRequests',
         'volume_requests': 'volumeRequests',
-        'volume_snapshot_statuses': 'volumeSnapshotStatuses'
+        'volume_snapshot_statuses': 'volumeSnapshotStatuses',
+        'volume_update_state': 'volumeUpdateState'
     }
 
-    def __init__(self, conditions=None, created=None, desired_generation=None, memory_dump_request=None, observed_generation=None, printable_status=None, ready=None, restore_in_progress=None, run_strategy=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None):
+    def __init__(self, conditions=None, created=None, desired_generation=None, memory_dump_request=None, observed_generation=None, printable_status=None, ready=None, restore_in_progress=None, run_strategy=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None, volume_update_state=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
@@ -83,6 +85,7 @@ class V1VirtualMachineStatus(object):
         self._state_change_requests = None
         self._volume_requests = None
         self._volume_snapshot_statuses = None
+        self._volume_update_state = None
 
         if conditions is not None:
           self.conditions = conditions
@@ -112,6 +115,8 @@ class V1VirtualMachineStatus(object):
           self.volume_requests = volume_requests
         if volume_snapshot_statuses is not None:
           self.volume_snapshot_statuses = volume_snapshot_statuses
+        if volume_update_state is not None:
+          self.volume_update_state = volume_update_state
 
     @property
     def conditions(self):
@@ -434,6 +439,29 @@ class V1VirtualMachineStatus(object):
         """
 
         self._volume_snapshot_statuses = volume_snapshot_statuses
+
+    @property
+    def volume_update_state(self):
+        """
+        Gets the volume_update_state of this V1VirtualMachineStatus.
+        VolumeUpdateState contains the information about the volumes set updates related to the volumeUpdateStrategy
+
+        :return: The volume_update_state of this V1VirtualMachineStatus.
+        :rtype: V1VolumeUpdateState
+        """
+        return self._volume_update_state
+
+    @volume_update_state.setter
+    def volume_update_state(self, volume_update_state):
+        """
+        Sets the volume_update_state of this V1VirtualMachineStatus.
+        VolumeUpdateState contains the information about the volumes set updates related to the volumeUpdateStrategy
+
+        :param volume_update_state: The volume_update_state of this V1VirtualMachineStatus.
+        :type: V1VolumeUpdateState
+        """
+
+        self._volume_update_state = volume_update_state
 
     def to_dict(self):
         """

@@ -290,8 +290,10 @@ from .v1_virtual_machine_state_change_request import V1VirtualMachineStateChange
 from .v1_virtual_machine_status import V1VirtualMachineStatus
 from .v1_virtual_machine_volume_request import V1VirtualMachineVolumeRequest
 from .v1_volume import V1Volume
+from .v1_volume_migration_state import V1VolumeMigrationState
 from .v1_volume_snapshot_status import V1VolumeSnapshotStatus
 from .v1_volume_status import V1VolumeStatus
+from .v1_volume_update_state import V1VolumeUpdateState
 from .v1_watchdog import V1Watchdog
 from .v1alpha1_condition import V1alpha1Condition
 from .v1alpha1_migration_policy import V1alpha1MigrationPolicy

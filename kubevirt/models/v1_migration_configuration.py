@@ -176,7 +176,7 @@ class V1MigrationConfiguration(object):
     def completion_timeout_per_gi_b(self):
         """
         Gets the completion_timeout_per_gi_b of this V1MigrationConfiguration.
-        CompletionTimeoutPerGiB is the maximum number of seconds per GiB a migration is allowed to take. If a live-migration takes longer to migrate than this value multiplied by the size of the VMI, the migration will be cancelled, unless AllowPostCopy is true. Defaults to 800
+        CompletionTimeoutPerGiB is the maximum number of seconds per GiB a migration is allowed to take. If a live-migration takes longer to migrate than this value multiplied by the size of the VMI, the migration will be cancelled, unless AllowPostCopy is true. Defaults to 150
 
         :return: The completion_timeout_per_gi_b of this V1MigrationConfiguration.
         :rtype: int
@@ -187,7 +187,7 @@ class V1MigrationConfiguration(object):
     def completion_timeout_per_gi_b(self, completion_timeout_per_gi_b):
         """
         Sets the completion_timeout_per_gi_b of this V1MigrationConfiguration.
-        CompletionTimeoutPerGiB is the maximum number of seconds per GiB a migration is allowed to take. If a live-migration takes longer to migrate than this value multiplied by the size of the VMI, the migration will be cancelled, unless AllowPostCopy is true. Defaults to 800
+        CompletionTimeoutPerGiB is the maximum number of seconds per GiB a migration is allowed to take. If a live-migration takes longer to migrate than this value multiplied by the size of the VMI, the migration will be cancelled, unless AllowPostCopy is true. Defaults to 150
 
         :param completion_timeout_per_gi_b: The completion_timeout_per_gi_b of this V1MigrationConfiguration.
         :type: int

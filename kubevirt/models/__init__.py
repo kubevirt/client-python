@@ -90,6 +90,7 @@ from .v1_clock_offset import V1ClockOffset
 from .v1_clock_offset_utc import V1ClockOffsetUTC
 from .v1_cloud_init_config_drive_source import V1CloudInitConfigDriveSource
 from .v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
+from .v1_common_instancetypes_deployment import V1CommonInstancetypesDeployment
 from .v1_component_config import V1ComponentConfig
 from .v1_config_drive_ssh_public_key_access_credential_propagation import V1ConfigDriveSSHPublicKeyAccessCredentialPropagation
 from .v1_config_map_volume_source import V1ConfigMapVolumeSource

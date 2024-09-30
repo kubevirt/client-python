@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **instancetype** | [**V1InstancetypeMatcher**](V1InstancetypeMatcher.md) | InstancetypeMatcher references a instancetype that is used to fill fields in Template | [optional] 
 **preference** | [**V1PreferenceMatcher**](V1PreferenceMatcher.md) | PreferenceMatcher references a set of preference that is used to fill fields in Template | [optional] 
 **run_strategy** | **str** | Running state indicates the requested running state of the VirtualMachineInstance mutually exclusive with Running | [optional] 
-**running** | **bool** | Running controls whether the associatied VirtualMachineInstance is created or not Mutually exclusive with RunStrategy | [optional] 
+**running** | **bool** | Running controls whether the associatied VirtualMachineInstance is created or not Mutually exclusive with RunStrategy Deprecated: VirtualMachineInstance field \&quot;Running\&quot; is now deprecated, please use RunStrategy instead. | [optional] 
 **template** | [**V1VirtualMachineInstanceTemplateSpec**](V1VirtualMachineInstanceTemplateSpec.md) | Template is the direct specification of VirtualMachineInstance | 
 **update_volumes_strategy** | **str** | UpdateVolumesStrategy is the strategy to apply on volumes updates | [optional] 
 

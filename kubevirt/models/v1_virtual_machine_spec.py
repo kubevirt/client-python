@@ -173,7 +173,7 @@ class V1VirtualMachineSpec(object):
     def running(self):
         """
         Gets the running of this V1VirtualMachineSpec.
-        Running controls whether the associatied VirtualMachineInstance is created or not Mutually exclusive with RunStrategy
+        Running controls whether the associatied VirtualMachineInstance is created or not Mutually exclusive with RunStrategy Deprecated: VirtualMachineInstance field \"Running\" is now deprecated, please use RunStrategy instead.
 
         :return: The running of this V1VirtualMachineSpec.
         :rtype: bool
@@ -184,7 +184,7 @@ class V1VirtualMachineSpec(object):
     def running(self, running):
         """
         Sets the running of this V1VirtualMachineSpec.
-        Running controls whether the associatied VirtualMachineInstance is created or not Mutually exclusive with RunStrategy
+        Running controls whether the associatied VirtualMachineInstance is created or not Mutually exclusive with RunStrategy Deprecated: VirtualMachineInstance field \"Running\" is now deprecated, please use RunStrategy instead.
 
         :param running: The running of this V1VirtualMachineSpec.
         :type: bool

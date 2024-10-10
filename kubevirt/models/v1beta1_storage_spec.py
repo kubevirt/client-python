@@ -103,6 +103,13 @@ class V1beta1StorageSpec(object):
         :param access_modes: The access_modes of this V1beta1StorageSpec.
         :type: list[str]
         """
+        allowed_values = ["ReadOnlyMany", "ReadWriteMany", "ReadWriteOnce", "ReadWriteOncePod"]
+        if not set(access_modes).issubset(set(allowed_values)):
+            raise ValueError(
+                "Invalid values for `access_modes` [{0}], must be a subset of [{1}]"
+                .format(", ".join(map(str, set(access_modes)-set(allowed_values))),
+                        ", ".join(map(str, allowed_values)))
+            )
 
         self._access_modes = access_modes
 

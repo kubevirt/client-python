@@ -31,7 +31,7 @@ class V1SupportContainerResources(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'resources': 'K8sIoApiCoreV1ResourceRequirements',
+        'resources': 'V1ResourceRequirementsWithoutClaims',
         'type': 'str'
     }
 
@@ -57,7 +57,7 @@ class V1SupportContainerResources(object):
         Gets the resources of this V1SupportContainerResources.
 
         :return: The resources of this V1SupportContainerResources.
-        :rtype: K8sIoApiCoreV1ResourceRequirements
+        :rtype: V1ResourceRequirementsWithoutClaims
         """
         return self._resources
 
@@ -67,7 +67,7 @@ class V1SupportContainerResources(object):
         Sets the resources of this V1SupportContainerResources.
 
         :param resources: The resources of this V1SupportContainerResources.
-        :type: K8sIoApiCoreV1ResourceRequirements
+        :type: V1ResourceRequirementsWithoutClaims
         """
         if resources is None:
             raise ValueError("Invalid value for `resources`, must not be `None`")

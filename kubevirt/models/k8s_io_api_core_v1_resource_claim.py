@@ -31,21 +31,26 @@ class K8sIoApiCoreV1ResourceClaim(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str'
+        'name': 'str',
+        'request': 'str'
     }
 
     attribute_map = {
-        'name': 'name'
+        'name': 'name',
+        'request': 'request'
     }
 
-    def __init__(self, name=''):
+    def __init__(self, name='', request=None):
         """
         K8sIoApiCoreV1ResourceClaim - a model defined in Swagger
         """
 
         self._name = None
+        self._request = None
 
         self.name = name
+        if request is not None:
+          self.request = request
 
     @property
     def name(self):
@@ -71,6 +76,29 @@ class K8sIoApiCoreV1ResourceClaim(object):
             raise ValueError("Invalid value for `name`, must not be `None`")
 
         self._name = name
+
+    @property
+    def request(self):
+        """
+        Gets the request of this K8sIoApiCoreV1ResourceClaim.
+        Request is the name chosen for a request in the referenced claim. If empty, everything from the claim is made available, otherwise only the result of this request.
+
+        :return: The request of this K8sIoApiCoreV1ResourceClaim.
+        :rtype: str
+        """
+        return self._request
+
+    @request.setter
+    def request(self, request):
+        """
+        Sets the request of this K8sIoApiCoreV1ResourceClaim.
+        Request is the name chosen for a request in the referenced claim. If empty, everything from the claim is made available, otherwise only the result of this request.
+
+        :param request: The request of this K8sIoApiCoreV1ResourceClaim.
+        :type: str
+        """
+
+        self._request = request
 
     def to_dict(self):
         """

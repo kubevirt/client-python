@@ -42,7 +42,7 @@ class V1ConfigMapVolumeSource(object):
         'volume_label': 'volumeLabel'
     }
 
-    def __init__(self, name=None, optional=None, volume_label=None):
+    def __init__(self, name='', optional=None, volume_label=None):
         """
         V1ConfigMapVolumeSource - a model defined in Swagger
         """
@@ -62,7 +62,7 @@ class V1ConfigMapVolumeSource(object):
     def name(self):
         """
         Gets the name of this V1ConfigMapVolumeSource.
-        Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+        Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 
         :return: The name of this V1ConfigMapVolumeSource.
         :rtype: str
@@ -73,7 +73,7 @@ class V1ConfigMapVolumeSource(object):
     def name(self, name):
         """
         Sets the name of this V1ConfigMapVolumeSource.
-        Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+        Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 
         :param name: The name of this V1ConfigMapVolumeSource.
         :type: str

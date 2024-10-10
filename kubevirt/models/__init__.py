@@ -212,6 +212,7 @@ from .v1_realtime import V1Realtime
 from .v1_reloadable_component_configuration import V1ReloadableComponentConfiguration
 from .v1_remove_volume_options import V1RemoveVolumeOptions
 from .v1_resource_requirements import V1ResourceRequirements
+from .v1_resource_requirements_without_claims import V1ResourceRequirementsWithoutClaims
 from .v1_restart_options import V1RestartOptions
 from .v1_rng import V1Rng
 from .v1_sev import V1SEV

@@ -31,7 +31,7 @@ class V1InterfaceBindingPlugin(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'compute_resource_overhead': 'K8sIoApiCoreV1ResourceRequirements',
+        'compute_resource_overhead': 'V1ResourceRequirementsWithoutClaims',
         'domain_attachment_type': 'str',
         'downward_api': 'str',
         'migration': 'V1InterfaceBindingMigration',
@@ -80,7 +80,7 @@ class V1InterfaceBindingPlugin(object):
         ComputeResourceOverhead specifies the resource overhead that should be added to the compute container when using the binding. version: v1alphav1
 
         :return: The compute_resource_overhead of this V1InterfaceBindingPlugin.
-        :rtype: K8sIoApiCoreV1ResourceRequirements
+        :rtype: V1ResourceRequirementsWithoutClaims
         """
         return self._compute_resource_overhead
 
@@ -91,7 +91,7 @@ class V1InterfaceBindingPlugin(object):
         ComputeResourceOverhead specifies the resource overhead that should be added to the compute container when using the binding. version: v1alphav1
 
         :param compute_resource_overhead: The compute_resource_overhead of this V1InterfaceBindingPlugin.
-        :type: K8sIoApiCoreV1ResourceRequirements
+        :type: V1ResourceRequirementsWithoutClaims
         """
 
         self._compute_resource_overhead = compute_resource_overhead

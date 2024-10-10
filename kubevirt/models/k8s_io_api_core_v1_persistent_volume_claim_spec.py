@@ -108,6 +108,13 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
         :param access_modes: The access_modes of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :type: list[str]
         """
+        allowed_values = ["ReadOnlyMany", "ReadWriteMany", "ReadWriteOnce", "ReadWriteOncePod"]
+        if not set(access_modes).issubset(set(allowed_values)):
+            raise ValueError(
+                "Invalid values for `access_modes` [{0}], must be a subset of [{1}]"
+                .format(", ".join(map(str, set(access_modes)-set(allowed_values))),
+                        ", ".join(map(str, allowed_values)))
+            )
 
         self._access_modes = access_modes
 
@@ -230,7 +237,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def volume_attributes_class_name(self):
         """
         Gets the volume_attributes_class_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        volumeAttributesClassName may be used to set the VolumeAttributesClass used by this claim. If specified, the CSI driver will create or update the volume with the attributes defined in the corresponding VolumeAttributesClass. This has a different purpose than storageClassName, it can be changed after the claim is created. An empty string value means that no VolumeAttributesClass will be applied to the claim but it's not allowed to reset this field to empty string once it is set. If unspecified and the PersistentVolumeClaim is unbound, the default VolumeAttributesClass will be set by the persistentvolume controller if it exists. If the resource referred to by volumeAttributesClass does not exist, this PersistentVolumeClaim will be set to a Pending state, as reflected by the modifyVolumeStatus field, until such as a resource exists. More info: https://kubernetes.io/docs/concepts/storage/volume-attributes-classes/ (Alpha) Using this field requires the VolumeAttributesClass feature gate to be enabled.
+        volumeAttributesClassName may be used to set the VolumeAttributesClass used by this claim. If specified, the CSI driver will create or update the volume with the attributes defined in the corresponding VolumeAttributesClass. This has a different purpose than storageClassName, it can be changed after the claim is created. An empty string value means that no VolumeAttributesClass will be applied to the claim but it's not allowed to reset this field to empty string once it is set. If unspecified and the PersistentVolumeClaim is unbound, the default VolumeAttributesClass will be set by the persistentvolume controller if it exists. If the resource referred to by volumeAttributesClass does not exist, this PersistentVolumeClaim will be set to a Pending state, as reflected by the modifyVolumeStatus field, until such as a resource exists. More info: https://kubernetes.io/docs/concepts/storage/volume-attributes-classes/ (Beta) Using this field requires the VolumeAttributesClass feature gate to be enabled (off by default).
 
         :return: The volume_attributes_class_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :rtype: str
@@ -241,7 +248,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def volume_attributes_class_name(self, volume_attributes_class_name):
         """
         Sets the volume_attributes_class_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        volumeAttributesClassName may be used to set the VolumeAttributesClass used by this claim. If specified, the CSI driver will create or update the volume with the attributes defined in the corresponding VolumeAttributesClass. This has a different purpose than storageClassName, it can be changed after the claim is created. An empty string value means that no VolumeAttributesClass will be applied to the claim but it's not allowed to reset this field to empty string once it is set. If unspecified and the PersistentVolumeClaim is unbound, the default VolumeAttributesClass will be set by the persistentvolume controller if it exists. If the resource referred to by volumeAttributesClass does not exist, this PersistentVolumeClaim will be set to a Pending state, as reflected by the modifyVolumeStatus field, until such as a resource exists. More info: https://kubernetes.io/docs/concepts/storage/volume-attributes-classes/ (Alpha) Using this field requires the VolumeAttributesClass feature gate to be enabled.
+        volumeAttributesClassName may be used to set the VolumeAttributesClass used by this claim. If specified, the CSI driver will create or update the volume with the attributes defined in the corresponding VolumeAttributesClass. This has a different purpose than storageClassName, it can be changed after the claim is created. An empty string value means that no VolumeAttributesClass will be applied to the claim but it's not allowed to reset this field to empty string once it is set. If unspecified and the PersistentVolumeClaim is unbound, the default VolumeAttributesClass will be set by the persistentvolume controller if it exists. If the resource referred to by volumeAttributesClass does not exist, this PersistentVolumeClaim will be set to a Pending state, as reflected by the modifyVolumeStatus field, until such as a resource exists. More info: https://kubernetes.io/docs/concepts/storage/volume-attributes-classes/ (Beta) Using this field requires the VolumeAttributesClass feature gate to be enabled (off by default).
 
         :param volume_attributes_class_name: The volume_attributes_class_name of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :type: str

@@ -100,7 +100,7 @@ class V1InterfaceBindingPlugin(object):
     def domain_attachment_type(self):
         """
         Gets the domain_attachment_type of this V1InterfaceBindingPlugin.
-        DomainAttachmentType is a standard domain network attachment method kubevirt supports. Supported values: \"tap\", \"managedTap\" (since v1.4). The standard domain attachment can be used instead or in addition to the sidecarImage. version: 1alphav1
+        DomainAttachmentType is a standard domain network attachment method kubevirt supports. Supported values: \"tap\". The standard domain attachment can be used instead or in addition to the sidecarImage. version: 1alphav1
 
         :return: The domain_attachment_type of this V1InterfaceBindingPlugin.
         :rtype: str
@@ -111,7 +111,7 @@ class V1InterfaceBindingPlugin(object):
     def domain_attachment_type(self, domain_attachment_type):
         """
         Sets the domain_attachment_type of this V1InterfaceBindingPlugin.
-        DomainAttachmentType is a standard domain network attachment method kubevirt supports. Supported values: \"tap\", \"managedTap\" (since v1.4). The standard domain attachment can be used instead or in addition to the sidecarImage. version: 1alphav1
+        DomainAttachmentType is a standard domain network attachment method kubevirt supports. Supported values: \"tap\". The standard domain attachment can be used instead or in addition to the sidecarImage. version: 1alphav1
 
         :param domain_attachment_type: The domain_attachment_type of this V1InterfaceBindingPlugin.
         :type: str

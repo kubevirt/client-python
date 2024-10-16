@@ -31,50 +31,22 @@ class V1VolumeMigrationState(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'manual_recovery_required': 'bool',
         'migrated_volumes': 'list[V1StorageMigratedVolumeInfo]'
     }
 
     attribute_map = {
-        'manual_recovery_required': 'manualRecoveryRequired',
         'migrated_volumes': 'migratedVolumes'
     }
 
-    def __init__(self, manual_recovery_required=None, migrated_volumes=None):
+    def __init__(self, migrated_volumes=None):
         """
         V1VolumeMigrationState - a model defined in Swagger
         """
 
-        self._manual_recovery_required = None
         self._migrated_volumes = None
 
-        if manual_recovery_required is not None:
-          self.manual_recovery_required = manual_recovery_required
         if migrated_volumes is not None:
           self.migrated_volumes = migrated_volumes
-
-    @property
-    def manual_recovery_required(self):
-        """
-        Gets the manual_recovery_required of this V1VolumeMigrationState.
-        ManualRecoveryRequired indicates if the update due to the migration failed and the volumes set needs to be manually restored
-
-        :return: The manual_recovery_required of this V1VolumeMigrationState.
-        :rtype: bool
-        """
-        return self._manual_recovery_required
-
-    @manual_recovery_required.setter
-    def manual_recovery_required(self, manual_recovery_required):
-        """
-        Sets the manual_recovery_required of this V1VolumeMigrationState.
-        ManualRecoveryRequired indicates if the update due to the migration failed and the volumes set needs to be manually restored
-
-        :param manual_recovery_required: The manual_recovery_required of this V1VolumeMigrationState.
-        :type: bool
-        """
-
-        self._manual_recovery_required = manual_recovery_required
 
     @property
     def migrated_volumes(self):

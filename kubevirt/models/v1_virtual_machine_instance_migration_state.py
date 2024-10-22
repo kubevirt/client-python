@@ -42,6 +42,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'migration_uid': 'str',
         'mode': 'str',
         'source_node': 'str',
+        'source_persistent_state_pvc_name': 'str',
         'source_pod': 'str',
         'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'target_attachment_pod_uid': 'str',
@@ -52,6 +53,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'target_node_domain_detected': 'bool',
         'target_node_domain_ready_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'target_node_topology': 'str',
+        'target_persistent_state_pvc_name': 'str',
         'target_pod': 'str'
     }
 
@@ -67,6 +69,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'migration_uid': 'migrationUid',
         'mode': 'mode',
         'source_node': 'sourceNode',
+        'source_persistent_state_pvc_name': 'sourcePersistentStatePVCName',
         'source_pod': 'sourcePod',
         'start_timestamp': 'startTimestamp',
         'target_attachment_pod_uid': 'targetAttachmentPodUID',
@@ -77,10 +80,11 @@ class V1VirtualMachineInstanceMigrationState(object):
         'target_node_domain_detected': 'targetNodeDomainDetected',
         'target_node_domain_ready_timestamp': 'targetNodeDomainReadyTimestamp',
         'target_node_topology': 'targetNodeTopology',
+        'target_persistent_state_pvc_name': 'targetPersistentStatePVCName',
         'target_pod': 'targetPod'
     }
 
-    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, failure_reason=None, migration_configuration=None, migration_policy_name=None, migration_uid=None, mode=None, source_node=None, source_pod=None, start_timestamp=None, target_attachment_pod_uid=None, target_cpu_set=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_node_domain_ready_timestamp=None, target_node_topology=None, target_pod=None):
+    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, failure_reason=None, migration_configuration=None, migration_policy_name=None, migration_uid=None, mode=None, source_node=None, source_persistent_state_pvc_name=None, source_pod=None, start_timestamp=None, target_attachment_pod_uid=None, target_cpu_set=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_node_domain_ready_timestamp=None, target_node_topology=None, target_persistent_state_pvc_name=None, target_pod=None):
         """
         V1VirtualMachineInstanceMigrationState - a model defined in Swagger
         """
@@ -96,6 +100,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._migration_uid = None
         self._mode = None
         self._source_node = None
+        self._source_persistent_state_pvc_name = None
         self._source_pod = None
         self._start_timestamp = None
         self._target_attachment_pod_uid = None
@@ -106,6 +111,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._target_node_domain_detected = None
         self._target_node_domain_ready_timestamp = None
         self._target_node_topology = None
+        self._target_persistent_state_pvc_name = None
         self._target_pod = None
 
         if abort_requested is not None:
@@ -130,6 +136,8 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.mode = mode
         if source_node is not None:
           self.source_node = source_node
+        if source_persistent_state_pvc_name is not None:
+          self.source_persistent_state_pvc_name = source_persistent_state_pvc_name
         if source_pod is not None:
           self.source_pod = source_pod
         if start_timestamp is not None:
@@ -150,6 +158,8 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.target_node_domain_ready_timestamp = target_node_domain_ready_timestamp
         if target_node_topology is not None:
           self.target_node_topology = target_node_topology
+        if target_persistent_state_pvc_name is not None:
+          self.target_persistent_state_pvc_name = target_persistent_state_pvc_name
         if target_pod is not None:
           self.target_pod = target_pod
 
@@ -407,6 +417,29 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._source_node = source_node
 
     @property
+    def source_persistent_state_pvc_name(self):
+        """
+        Gets the source_persistent_state_pvc_name of this V1VirtualMachineInstanceMigrationState.
+        If the VMI being migrated uses persistent features (backend-storage), its source PVC name is saved here
+
+        :return: The source_persistent_state_pvc_name of this V1VirtualMachineInstanceMigrationState.
+        :rtype: str
+        """
+        return self._source_persistent_state_pvc_name
+
+    @source_persistent_state_pvc_name.setter
+    def source_persistent_state_pvc_name(self, source_persistent_state_pvc_name):
+        """
+        Sets the source_persistent_state_pvc_name of this V1VirtualMachineInstanceMigrationState.
+        If the VMI being migrated uses persistent features (backend-storage), its source PVC name is saved here
+
+        :param source_persistent_state_pvc_name: The source_persistent_state_pvc_name of this V1VirtualMachineInstanceMigrationState.
+        :type: str
+        """
+
+        self._source_persistent_state_pvc_name = source_persistent_state_pvc_name
+
+    @property
     def source_pod(self):
         """
         Gets the source_pod of this V1VirtualMachineInstanceMigrationState.
@@ -633,6 +666,29 @@ class V1VirtualMachineInstanceMigrationState(object):
         """
 
         self._target_node_topology = target_node_topology
+
+    @property
+    def target_persistent_state_pvc_name(self):
+        """
+        Gets the target_persistent_state_pvc_name of this V1VirtualMachineInstanceMigrationState.
+        If the VMI being migrated uses persistent features (backend-storage), its target PVC name is saved here
+
+        :return: The target_persistent_state_pvc_name of this V1VirtualMachineInstanceMigrationState.
+        :rtype: str
+        """
+        return self._target_persistent_state_pvc_name
+
+    @target_persistent_state_pvc_name.setter
+    def target_persistent_state_pvc_name(self, target_persistent_state_pvc_name):
+        """
+        Sets the target_persistent_state_pvc_name of this V1VirtualMachineInstanceMigrationState.
+        If the VMI being migrated uses persistent features (backend-storage), its target PVC name is saved here
+
+        :param target_persistent_state_pvc_name: The target_persistent_state_pvc_name of this V1VirtualMachineInstanceMigrationState.
+        :type: str
+        """
+
+        self._target_persistent_state_pvc_name = target_persistent_state_pvc_name
 
     @property
     def target_pod(self):

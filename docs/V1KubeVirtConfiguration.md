@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **eviction_strategy** | **str** | EvictionStrategy defines at the cluster level if the VirtualMachineInstance should be migrated instead of shut-off in case of a node drain. If the VirtualMachineInstance specific field is set it overrides the cluster level one. | [optional] 
 **handler_configuration** | [**V1ReloadableComponentConfiguration**](V1ReloadableComponentConfiguration.md) |  | [optional] 
 **image_pull_policy** | **str** | Possible enum values:  - &#x60;\&quot;Always\&quot;&#x60; means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.  - &#x60;\&quot;IfNotPresent\&quot;&#x60; means that kubelet pulls if the image isn&#39;t present on disk. Container will fail if the image isn&#39;t present and the pull fails.  - &#x60;\&quot;Never\&quot;&#x60; means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn&#39;t present | [optional] 
+**instancetype** | [**V1InstancetypeConfiguration**](V1InstancetypeConfiguration.md) | Instancetype configuration | [optional] 
 **ksm_configuration** | [**V1KSMConfiguration**](V1KSMConfiguration.md) | KSMConfiguration holds the information regarding the enabling the KSM in the nodes (if available). | [optional] 
 **live_update_configuration** | [**V1LiveUpdateConfiguration**](V1LiveUpdateConfiguration.md) | LiveUpdateConfiguration holds defaults for live update features | [optional] 
 **machine_type** | **str** | Deprecated. Use architectureConfiguration instead. | [optional] 

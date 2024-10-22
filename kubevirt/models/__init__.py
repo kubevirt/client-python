@@ -150,6 +150,7 @@ from .v1_hyperv_timer import V1HypervTimer
 from .v1_i6300_esb_watchdog import V1I6300ESBWatchdog
 from .v1_initrd_info import V1InitrdInfo
 from .v1_input import V1Input
+from .v1_instancetype_configuration import V1InstancetypeConfiguration
 from .v1_instancetype_matcher import V1InstancetypeMatcher
 from .v1_interface import V1Interface
 from .v1_interface_binding_migration import V1InterfaceBindingMigration

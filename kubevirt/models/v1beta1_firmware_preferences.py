@@ -141,7 +141,7 @@ class V1beta1FirmwarePreferences(object):
     def preferred_use_efi(self):
         """
         Gets the preferred_use_efi of this V1beta1FirmwarePreferences.
-        PreferredUseEfi optionally enables EFI
+        PreferredUseEfi optionally enables EFI  Deprecated: Will be removed with v1beta2 or v1
 
         :return: The preferred_use_efi of this V1beta1FirmwarePreferences.
         :rtype: bool
@@ -152,7 +152,7 @@ class V1beta1FirmwarePreferences(object):
     def preferred_use_efi(self, preferred_use_efi):
         """
         Sets the preferred_use_efi of this V1beta1FirmwarePreferences.
-        PreferredUseEfi optionally enables EFI
+        PreferredUseEfi optionally enables EFI  Deprecated: Will be removed with v1beta2 or v1
 
         :param preferred_use_efi: The preferred_use_efi of this V1beta1FirmwarePreferences.
         :type: bool
@@ -164,7 +164,7 @@ class V1beta1FirmwarePreferences(object):
     def preferred_use_secure_boot(self):
         """
         Gets the preferred_use_secure_boot of this V1beta1FirmwarePreferences.
-        PreferredUseSecureBoot optionally enables SecureBoot and the OVMF roms will be swapped for SecureBoot-enabled ones.  Requires PreferredUseEfi and PreferredSmm to be enabled.
+        PreferredUseSecureBoot optionally enables SecureBoot and the OVMF roms will be swapped for SecureBoot-enabled ones.  Requires PreferredUseEfi and PreferredSmm to be enabled.  Deprecated: Will be removed with v1beta2 or v1
 
         :return: The preferred_use_secure_boot of this V1beta1FirmwarePreferences.
         :rtype: bool
@@ -175,7 +175,7 @@ class V1beta1FirmwarePreferences(object):
     def preferred_use_secure_boot(self, preferred_use_secure_boot):
         """
         Sets the preferred_use_secure_boot of this V1beta1FirmwarePreferences.
-        PreferredUseSecureBoot optionally enables SecureBoot and the OVMF roms will be swapped for SecureBoot-enabled ones.  Requires PreferredUseEfi and PreferredSmm to be enabled.
+        PreferredUseSecureBoot optionally enables SecureBoot and the OVMF roms will be swapped for SecureBoot-enabled ones.  Requires PreferredUseEfi and PreferredSmm to be enabled.  Deprecated: Will be removed with v1beta2 or v1
 
         :param preferred_use_secure_boot: The preferred_use_secure_boot of this V1beta1FirmwarePreferences.
         :type: bool

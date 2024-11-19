@@ -33,27 +33,32 @@ class V1beta1VirtualMachineRestoreSpec(object):
     swagger_types = {
         'patches': 'list[str]',
         'target': 'K8sIoApiCoreV1TypedLocalObjectReference',
+        'target_readiness_policy': 'str',
         'virtual_machine_snapshot_name': 'str'
     }
 
     attribute_map = {
         'patches': 'patches',
         'target': 'target',
+        'target_readiness_policy': 'targetReadinessPolicy',
         'virtual_machine_snapshot_name': 'virtualMachineSnapshotName'
     }
 
-    def __init__(self, patches=None, target=None, virtual_machine_snapshot_name=''):
+    def __init__(self, patches=None, target=None, target_readiness_policy=None, virtual_machine_snapshot_name=''):
         """
         V1beta1VirtualMachineRestoreSpec - a model defined in Swagger
         """
 
         self._patches = None
         self._target = None
+        self._target_readiness_policy = None
         self._virtual_machine_snapshot_name = None
 
         if patches is not None:
           self.patches = patches
         self.target = target
+        if target_readiness_policy is not None:
+          self.target_readiness_policy = target_readiness_policy
         self.virtual_machine_snapshot_name = virtual_machine_snapshot_name
 
     @property
@@ -103,6 +108,27 @@ class V1beta1VirtualMachineRestoreSpec(object):
             raise ValueError("Invalid value for `target`, must not be `None`")
 
         self._target = target
+
+    @property
+    def target_readiness_policy(self):
+        """
+        Gets the target_readiness_policy of this V1beta1VirtualMachineRestoreSpec.
+
+        :return: The target_readiness_policy of this V1beta1VirtualMachineRestoreSpec.
+        :rtype: str
+        """
+        return self._target_readiness_policy
+
+    @target_readiness_policy.setter
+    def target_readiness_policy(self, target_readiness_policy):
+        """
+        Sets the target_readiness_policy of this V1beta1VirtualMachineRestoreSpec.
+
+        :param target_readiness_policy: The target_readiness_policy of this V1beta1VirtualMachineRestoreSpec.
+        :type: str
+        """
+
+        self._target_readiness_policy = target_readiness_policy
 
     @property
     def virtual_machine_snapshot_name(self):

@@ -33,6 +33,7 @@ class V1alpha1MigrationPolicySpec(object):
     swagger_types = {
         'allow_auto_converge': 'bool',
         'allow_post_copy': 'bool',
+        'allow_workload_disruption': 'bool',
         'bandwidth_per_migration': 'K8sIoApimachineryPkgApiResourceQuantity',
         'completion_timeout_per_gi_b': 'int',
         'selectors': 'V1alpha1Selectors'
@@ -41,18 +42,20 @@ class V1alpha1MigrationPolicySpec(object):
     attribute_map = {
         'allow_auto_converge': 'allowAutoConverge',
         'allow_post_copy': 'allowPostCopy',
+        'allow_workload_disruption': 'allowWorkloadDisruption',
         'bandwidth_per_migration': 'bandwidthPerMigration',
         'completion_timeout_per_gi_b': 'completionTimeoutPerGiB',
         'selectors': 'selectors'
     }
 
-    def __init__(self, allow_auto_converge=None, allow_post_copy=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, selectors=None):
+    def __init__(self, allow_auto_converge=None, allow_post_copy=None, allow_workload_disruption=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, selectors=None):
         """
         V1alpha1MigrationPolicySpec - a model defined in Swagger
         """
 
         self._allow_auto_converge = None
         self._allow_post_copy = None
+        self._allow_workload_disruption = None
         self._bandwidth_per_migration = None
         self._completion_timeout_per_gi_b = None
         self._selectors = None
@@ -61,6 +64,8 @@ class V1alpha1MigrationPolicySpec(object):
           self.allow_auto_converge = allow_auto_converge
         if allow_post_copy is not None:
           self.allow_post_copy = allow_post_copy
+        if allow_workload_disruption is not None:
+          self.allow_workload_disruption = allow_workload_disruption
         if bandwidth_per_migration is not None:
           self.bandwidth_per_migration = bandwidth_per_migration
         if completion_timeout_per_gi_b is not None:
@@ -108,6 +113,27 @@ class V1alpha1MigrationPolicySpec(object):
         """
 
         self._allow_post_copy = allow_post_copy
+
+    @property
+    def allow_workload_disruption(self):
+        """
+        Gets the allow_workload_disruption of this V1alpha1MigrationPolicySpec.
+
+        :return: The allow_workload_disruption of this V1alpha1MigrationPolicySpec.
+        :rtype: bool
+        """
+        return self._allow_workload_disruption
+
+    @allow_workload_disruption.setter
+    def allow_workload_disruption(self, allow_workload_disruption):
+        """
+        Sets the allow_workload_disruption of this V1alpha1MigrationPolicySpec.
+
+        :param allow_workload_disruption: The allow_workload_disruption of this V1alpha1MigrationPolicySpec.
+        :type: bool
+        """
+
+        self._allow_workload_disruption = allow_workload_disruption
 
     @property
     def bandwidth_per_migration(self):

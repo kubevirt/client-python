@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **allow_auto_converge** | **bool** |  | [optional] 
 **allow_post_copy** | **bool** |  | [optional] 
+**allow_workload_disruption** | **bool** |  | [optional] 
 **bandwidth_per_migration** | [**K8sIoApimachineryPkgApiResourceQuantity**](K8sIoApimachineryPkgApiResourceQuantity.md) |  | [optional] 
 **completion_timeout_per_gi_b** | **int** |  | [optional] 
 **selectors** | [**V1alpha1Selectors**](V1alpha1Selectors.md) |  | 

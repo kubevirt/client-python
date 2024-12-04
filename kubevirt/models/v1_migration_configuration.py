@@ -33,6 +33,7 @@ class V1MigrationConfiguration(object):
     swagger_types = {
         'allow_auto_converge': 'bool',
         'allow_post_copy': 'bool',
+        'allow_workload_disruption': 'bool',
         'bandwidth_per_migration': 'K8sIoApimachineryPkgApiResourceQuantity',
         'completion_timeout_per_gi_b': 'int',
         'disable_tls': 'bool',
@@ -48,6 +49,7 @@ class V1MigrationConfiguration(object):
     attribute_map = {
         'allow_auto_converge': 'allowAutoConverge',
         'allow_post_copy': 'allowPostCopy',
+        'allow_workload_disruption': 'allowWorkloadDisruption',
         'bandwidth_per_migration': 'bandwidthPerMigration',
         'completion_timeout_per_gi_b': 'completionTimeoutPerGiB',
         'disable_tls': 'disableTLS',
@@ -60,13 +62,14 @@ class V1MigrationConfiguration(object):
         'unsafe_migration_override': 'unsafeMigrationOverride'
     }
 
-    def __init__(self, allow_auto_converge=None, allow_post_copy=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, disable_tls=None, match_se_linux_level_on_migration=None, network=None, node_drain_taint_key=None, parallel_migrations_per_cluster=None, parallel_outbound_migrations_per_node=None, progress_timeout=None, unsafe_migration_override=None):
+    def __init__(self, allow_auto_converge=None, allow_post_copy=None, allow_workload_disruption=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, disable_tls=None, match_se_linux_level_on_migration=None, network=None, node_drain_taint_key=None, parallel_migrations_per_cluster=None, parallel_outbound_migrations_per_node=None, progress_timeout=None, unsafe_migration_override=None):
         """
         V1MigrationConfiguration - a model defined in Swagger
         """
 
         self._allow_auto_converge = None
         self._allow_post_copy = None
+        self._allow_workload_disruption = None
         self._bandwidth_per_migration = None
         self._completion_timeout_per_gi_b = None
         self._disable_tls = None
@@ -82,6 +85,8 @@ class V1MigrationConfiguration(object):
           self.allow_auto_converge = allow_auto_converge
         if allow_post_copy is not None:
           self.allow_post_copy = allow_post_copy
+        if allow_workload_disruption is not None:
+          self.allow_workload_disruption = allow_workload_disruption
         if bandwidth_per_migration is not None:
           self.bandwidth_per_migration = bandwidth_per_migration
         if completion_timeout_per_gi_b is not None:
@@ -150,6 +155,29 @@ class V1MigrationConfiguration(object):
         self._allow_post_copy = allow_post_copy
 
     @property
+    def allow_workload_disruption(self):
+        """
+        Gets the allow_workload_disruption of this V1MigrationConfiguration.
+        AllowWorkloadDisruption indicates that the migration shouldn't be canceled after acceptableCompletionTime is exceeded. Instead, if permitted, migration will be switched to post-copy or the VMI will be paused to allow the migration to complete
+
+        :return: The allow_workload_disruption of this V1MigrationConfiguration.
+        :rtype: bool
+        """
+        return self._allow_workload_disruption
+
+    @allow_workload_disruption.setter
+    def allow_workload_disruption(self, allow_workload_disruption):
+        """
+        Sets the allow_workload_disruption of this V1MigrationConfiguration.
+        AllowWorkloadDisruption indicates that the migration shouldn't be canceled after acceptableCompletionTime is exceeded. Instead, if permitted, migration will be switched to post-copy or the VMI will be paused to allow the migration to complete
+
+        :param allow_workload_disruption: The allow_workload_disruption of this V1MigrationConfiguration.
+        :type: bool
+        """
+
+        self._allow_workload_disruption = allow_workload_disruption
+
+    @property
     def bandwidth_per_migration(self):
         """
         Gets the bandwidth_per_migration of this V1MigrationConfiguration.
@@ -176,7 +204,7 @@ class V1MigrationConfiguration(object):
     def completion_timeout_per_gi_b(self):
         """
         Gets the completion_timeout_per_gi_b of this V1MigrationConfiguration.
-        CompletionTimeoutPerGiB is the maximum number of seconds per GiB a migration is allowed to take. If a live-migration takes longer to migrate than this value multiplied by the size of the VMI, the migration will be cancelled, unless AllowPostCopy is true. Defaults to 150
+        CompletionTimeoutPerGiB is the maximum number of seconds per GiB a migration is allowed to take. If the timeout is reached, the migration will be either paused, switched to post-copy or cancelled depending on other settings. Defaults to 150
 
         :return: The completion_timeout_per_gi_b of this V1MigrationConfiguration.
         :rtype: int
@@ -187,7 +215,7 @@ class V1MigrationConfiguration(object):
     def completion_timeout_per_gi_b(self, completion_timeout_per_gi_b):
         """
         Sets the completion_timeout_per_gi_b of this V1MigrationConfiguration.
-        CompletionTimeoutPerGiB is the maximum number of seconds per GiB a migration is allowed to take. If a live-migration takes longer to migrate than this value multiplied by the size of the VMI, the migration will be cancelled, unless AllowPostCopy is true. Defaults to 150
+        CompletionTimeoutPerGiB is the maximum number of seconds per GiB a migration is allowed to take. If the timeout is reached, the migration will be either paused, switched to post-copy or cancelled depending on other settings. Defaults to 150
 
         :param completion_timeout_per_gi_b: The completion_timeout_per_gi_b of this V1MigrationConfiguration.
         :type: int

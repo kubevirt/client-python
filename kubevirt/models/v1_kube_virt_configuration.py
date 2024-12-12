@@ -978,7 +978,7 @@ class V1KubeVirtConfiguration(object):
     def vm_rollout_strategy(self):
         """
         Gets the vm_rollout_strategy of this V1KubeVirtConfiguration.
-        VMRolloutStrategy defines how changes to a VM object propagate to its VMI
+        VMRolloutStrategy defines how live-updatable fields, like CPU sockets, memory, tolerations, and affinity, are propagated from a VM to its VMI.
 
         :return: The vm_rollout_strategy of this V1KubeVirtConfiguration.
         :rtype: str
@@ -989,7 +989,7 @@ class V1KubeVirtConfiguration(object):
     def vm_rollout_strategy(self, vm_rollout_strategy):
         """
         Sets the vm_rollout_strategy of this V1KubeVirtConfiguration.
-        VMRolloutStrategy defines how changes to a VM object propagate to its VMI
+        VMRolloutStrategy defines how live-updatable fields, like CPU sockets, memory, tolerations, and affinity, are propagated from a VM to its VMI.
 
         :param vm_rollout_strategy: The vm_rollout_strategy of this V1KubeVirtConfiguration.
         :type: str

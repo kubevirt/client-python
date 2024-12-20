@@ -34,7 +34,7 @@ class V1beta1StorageSpec(object):
         'access_modes': 'list[str]',
         'data_source': 'K8sIoApiCoreV1TypedLocalObjectReference',
         'data_source_ref': 'K8sIoApiCoreV1TypedObjectReference',
-        'resources': 'K8sIoApiCoreV1ResourceRequirements',
+        'resources': 'K8sIoApiCoreV1VolumeResourceRequirements',
         'selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
         'storage_class_name': 'str',
         'volume_mode': 'str',
@@ -166,7 +166,7 @@ class V1beta1StorageSpec(object):
         Resources represents the minimum resources the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
 
         :return: The resources of this V1beta1StorageSpec.
-        :rtype: K8sIoApiCoreV1ResourceRequirements
+        :rtype: K8sIoApiCoreV1VolumeResourceRequirements
         """
         return self._resources
 
@@ -177,7 +177,7 @@ class V1beta1StorageSpec(object):
         Resources represents the minimum resources the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
 
         :param resources: The resources of this V1beta1StorageSpec.
-        :type: K8sIoApiCoreV1ResourceRequirements
+        :type: K8sIoApiCoreV1VolumeResourceRequirements
         """
 
         self._resources = resources
@@ -232,7 +232,7 @@ class V1beta1StorageSpec(object):
     def volume_mode(self):
         """
         Gets the volume_mode of this V1beta1StorageSpec.
-        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.  Possible enum values:  - `\"Block\"` means the volume will not be formatted with a filesystem and will remain a raw block device.  - `\"Filesystem\"` means the volume will be or is formatted with a filesystem.
+        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.  Possible enum values:  - `\"Block\"` means the volume will not be formatted with a filesystem and will remain a raw block device.  - `\"Filesystem\"` means the volume will be or is formatted with a filesystem.  - `\"FromStorageProfile\"` means the volume mode will be auto selected by CDI according to a matching StorageProfile
 
         :return: The volume_mode of this V1beta1StorageSpec.
         :rtype: str
@@ -243,12 +243,12 @@ class V1beta1StorageSpec(object):
     def volume_mode(self, volume_mode):
         """
         Sets the volume_mode of this V1beta1StorageSpec.
-        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.  Possible enum values:  - `\"Block\"` means the volume will not be formatted with a filesystem and will remain a raw block device.  - `\"Filesystem\"` means the volume will be or is formatted with a filesystem.
+        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.  Possible enum values:  - `\"Block\"` means the volume will not be formatted with a filesystem and will remain a raw block device.  - `\"Filesystem\"` means the volume will be or is formatted with a filesystem.  - `\"FromStorageProfile\"` means the volume mode will be auto selected by CDI according to a matching StorageProfile
 
         :param volume_mode: The volume_mode of this V1beta1StorageSpec.
         :type: str
         """
-        allowed_values = ["Block", "Filesystem"]
+        allowed_values = ["Block", "Filesystem", "FromStorageProfile"]
         if volume_mode not in allowed_values:
             raise ValueError(
                 "Invalid value for `volume_mode` ({0}), must be one of {1}"

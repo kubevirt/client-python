@@ -260,7 +260,7 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def volume_mode(self):
         """
         Gets the volume_mode of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.  Possible enum values:  - `\"Block\"` means the volume will not be formatted with a filesystem and will remain a raw block device.  - `\"Filesystem\"` means the volume will be or is formatted with a filesystem.
+        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.  Possible enum values:  - `\"Block\"` means the volume will not be formatted with a filesystem and will remain a raw block device.  - `\"Filesystem\"` means the volume will be or is formatted with a filesystem.  - `\"FromStorageProfile\"` means the volume mode will be auto selected by CDI according to a matching StorageProfile
 
         :return: The volume_mode of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :rtype: str
@@ -271,12 +271,12 @@ class K8sIoApiCoreV1PersistentVolumeClaimSpec(object):
     def volume_mode(self, volume_mode):
         """
         Sets the volume_mode of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
-        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.  Possible enum values:  - `\"Block\"` means the volume will not be formatted with a filesystem and will remain a raw block device.  - `\"Filesystem\"` means the volume will be or is formatted with a filesystem.
+        volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.  Possible enum values:  - `\"Block\"` means the volume will not be formatted with a filesystem and will remain a raw block device.  - `\"Filesystem\"` means the volume will be or is formatted with a filesystem.  - `\"FromStorageProfile\"` means the volume mode will be auto selected by CDI according to a matching StorageProfile
 
         :param volume_mode: The volume_mode of this K8sIoApiCoreV1PersistentVolumeClaimSpec.
         :type: str
         """
-        allowed_values = ["Block", "Filesystem"]
+        allowed_values = ["Block", "Filesystem", "FromStorageProfile"]
         if volume_mode not in allowed_values:
             raise ValueError(
                 "Invalid value for `volume_mode` ({0}), must be one of {1}"

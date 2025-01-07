@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **devices** | [**V1Devices**](V1Devices.md) | Devices allows adding disks, network interfaces, and others | 
 **features** | [**V1Features**](V1Features.md) | Features like acpi, apic, hyperv, smm. | [optional] 
 **firmware** | [**V1Firmware**](V1Firmware.md) | Firmware. | [optional] 
+**io_threads** | [**V1DiskIOThreads**](V1DiskIOThreads.md) | IOThreads specifies the IOThreads options. | [optional] 
 **io_threads_policy** | **str** | Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto | [optional] 
 **launch_security** | [**V1LaunchSecurity**](V1LaunchSecurity.md) | Launch Security setting of the vmi. | [optional] 
 **machine** | [**V1Machine**](V1Machine.md) | Machine type. | [optional] 

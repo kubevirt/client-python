@@ -37,6 +37,7 @@ class V1DomainSpec(object):
         'devices': 'V1Devices',
         'features': 'V1Features',
         'firmware': 'V1Firmware',
+        'io_threads': 'V1DiskIOThreads',
         'io_threads_policy': 'str',
         'launch_security': 'V1LaunchSecurity',
         'machine': 'V1Machine',
@@ -51,6 +52,7 @@ class V1DomainSpec(object):
         'devices': 'devices',
         'features': 'features',
         'firmware': 'firmware',
+        'io_threads': 'ioThreads',
         'io_threads_policy': 'ioThreadsPolicy',
         'launch_security': 'launchSecurity',
         'machine': 'machine',
@@ -58,7 +60,7 @@ class V1DomainSpec(object):
         'resources': 'resources'
     }
 
-    def __init__(self, chassis=None, clock=None, cpu=None, devices=None, features=None, firmware=None, io_threads_policy=None, launch_security=None, machine=None, memory=None, resources=None):
+    def __init__(self, chassis=None, clock=None, cpu=None, devices=None, features=None, firmware=None, io_threads=None, io_threads_policy=None, launch_security=None, machine=None, memory=None, resources=None):
         """
         V1DomainSpec - a model defined in Swagger
         """
@@ -69,6 +71,7 @@ class V1DomainSpec(object):
         self._devices = None
         self._features = None
         self._firmware = None
+        self._io_threads = None
         self._io_threads_policy = None
         self._launch_security = None
         self._machine = None
@@ -86,6 +89,8 @@ class V1DomainSpec(object):
           self.features = features
         if firmware is not None:
           self.firmware = firmware
+        if io_threads is not None:
+          self.io_threads = io_threads
         if io_threads_policy is not None:
           self.io_threads_policy = io_threads_policy
         if launch_security is not None:
@@ -236,6 +241,29 @@ class V1DomainSpec(object):
         """
 
         self._firmware = firmware
+
+    @property
+    def io_threads(self):
+        """
+        Gets the io_threads of this V1DomainSpec.
+        IOThreads specifies the IOThreads options.
+
+        :return: The io_threads of this V1DomainSpec.
+        :rtype: V1DiskIOThreads
+        """
+        return self._io_threads
+
+    @io_threads.setter
+    def io_threads(self, io_threads):
+        """
+        Sets the io_threads of this V1DomainSpec.
+        IOThreads specifies the IOThreads options.
+
+        :param io_threads: The io_threads of this V1DomainSpec.
+        :type: V1DiskIOThreads
+        """
+
+        self._io_threads = io_threads
 
     @property
     def io_threads_policy(self):

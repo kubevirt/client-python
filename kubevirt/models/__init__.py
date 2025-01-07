@@ -111,6 +111,7 @@ from .v1_devices import V1Devices
 from .v1_disable_free_page_reporting import V1DisableFreePageReporting
 from .v1_disable_serial_console_log import V1DisableSerialConsoleLog
 from .v1_disk import V1Disk
+from .v1_disk_io_threads import V1DiskIOThreads
 from .v1_disk_target import V1DiskTarget
 from .v1_disk_verification import V1DiskVerification
 from .v1_domain_memory_dump_info import V1DomainMemoryDumpInfo

@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1alpha1_virtual_machine_clone_template_filters import V1alpha1VirtualMachineCloneTemplateFilters
+from kubevirt.models.v1beta1_virtual_machine_clone_template_filters import V1beta1VirtualMachineCloneTemplateFilters
 
 
-class TestV1alpha1VirtualMachineCloneTemplateFilters(unittest.TestCase):
-    """ V1alpha1VirtualMachineCloneTemplateFilters unit test stubs """
+class TestV1beta1VirtualMachineCloneTemplateFilters(unittest.TestCase):
+    """ V1beta1VirtualMachineCloneTemplateFilters unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1alpha1VirtualMachineCloneTemplateFilters(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1alpha1VirtualMachineCloneTemplateFilters(self):
+    def testV1beta1VirtualMachineCloneTemplateFilters(self):
         """
-        Test V1alpha1VirtualMachineCloneTemplateFilters
+        Test V1beta1VirtualMachineCloneTemplateFilters
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1alpha1_virtual_machine_clone_template_filters.V1alpha1VirtualMachineCloneTemplateFilters()
+        #model = kubevirt.models.v1beta1_virtual_machine_clone_template_filters.V1beta1VirtualMachineCloneTemplateFilters()
         pass
 
 

@@ -1,4 +1,4 @@
-# V1alpha1VirtualMachineCloneTemplateFilters
+# V1beta1VirtualMachineCloneTemplateFilters
 
 ## Properties
 Name | Type | Description | Notes

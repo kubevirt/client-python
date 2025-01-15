@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1alpha1_condition import V1alpha1Condition
+from kubevirt.models.v1beta1_virtual_machine_clone import V1beta1VirtualMachineClone
 
 
-class TestV1alpha1Condition(unittest.TestCase):
-    """ V1alpha1Condition unit test stubs """
+class TestV1beta1VirtualMachineClone(unittest.TestCase):
+    """ V1beta1VirtualMachineClone unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1alpha1Condition(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1alpha1Condition(self):
+    def testV1beta1VirtualMachineClone(self):
         """
-        Test V1alpha1Condition
+        Test V1beta1VirtualMachineClone
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1alpha1_condition.V1alpha1Condition()
+        #model = kubevirt.models.v1beta1_virtual_machine_clone.V1beta1VirtualMachineClone()
         pass
 
 

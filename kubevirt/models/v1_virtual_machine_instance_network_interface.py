@@ -35,6 +35,7 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         'interface_name': 'str',
         'ip_address': 'str',
         'ip_addresses': 'list[str]',
+        'link_state': 'str',
         'mac': 'str',
         'name': 'str',
         'pod_interface_name': 'str',
@@ -46,13 +47,14 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         'interface_name': 'interfaceName',
         'ip_address': 'ipAddress',
         'ip_addresses': 'ipAddresses',
+        'link_state': 'linkState',
         'mac': 'mac',
         'name': 'name',
         'pod_interface_name': 'podInterfaceName',
         'queue_count': 'queueCount'
     }
 
-    def __init__(self, info_source=None, interface_name=None, ip_address=None, ip_addresses=None, mac=None, name=None, pod_interface_name=None, queue_count=None):
+    def __init__(self, info_source=None, interface_name=None, ip_address=None, ip_addresses=None, link_state=None, mac=None, name=None, pod_interface_name=None, queue_count=None):
         """
         V1VirtualMachineInstanceNetworkInterface - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         self._interface_name = None
         self._ip_address = None
         self._ip_addresses = None
+        self._link_state = None
         self._mac = None
         self._name = None
         self._pod_interface_name = None
@@ -74,6 +77,8 @@ class V1VirtualMachineInstanceNetworkInterface(object):
           self.ip_address = ip_address
         if ip_addresses is not None:
           self.ip_addresses = ip_addresses
+        if link_state is not None:
+          self.link_state = link_state
         if mac is not None:
           self.mac = mac
         if name is not None:
@@ -174,6 +179,29 @@ class V1VirtualMachineInstanceNetworkInterface(object):
         """
 
         self._ip_addresses = ip_addresses
+
+    @property
+    def link_state(self):
+        """
+        Gets the link_state of this V1VirtualMachineInstanceNetworkInterface.
+        LinkState Reports the current operational link state`. values: up, down.
+
+        :return: The link_state of this V1VirtualMachineInstanceNetworkInterface.
+        :rtype: str
+        """
+        return self._link_state
+
+    @link_state.setter
+    def link_state(self, link_state):
+        """
+        Sets the link_state of this V1VirtualMachineInstanceNetworkInterface.
+        LinkState Reports the current operational link state`. values: up, down.
+
+        :param link_state: The link_state of this V1VirtualMachineInstanceNetworkInterface.
+        :type: str
+        """
+
+        self._link_state = link_state
 
     @property
     def mac(self):

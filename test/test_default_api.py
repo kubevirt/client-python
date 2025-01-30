@@ -1351,6 +1351,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_reset(self):
+        """
+        Test case for v1_reset
+
+        
+        """
+        pass
+
     def test_v1_restart(self):
         """
         Test case for v1_restart
@@ -1554,6 +1562,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3_remove_memory_dump(self):
         """
         Test case for v1alpha3_remove_memory_dump
+
+        
+        """
+        pass
+
+    def test_v1alpha3_reset(self):
+        """
+        Test case for v1alpha3_reset
 
         
         """

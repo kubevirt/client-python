@@ -31,6 +31,7 @@ class V1alpha1VirtualMachinePoolSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'name_generation': 'V1alpha1VirtualMachinePoolNameGeneration',
         'paused': 'bool',
         'replicas': 'int',
         'selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
@@ -38,28 +39,55 @@ class V1alpha1VirtualMachinePoolSpec(object):
     }
 
     attribute_map = {
+        'name_generation': 'nameGeneration',
         'paused': 'paused',
         'replicas': 'replicas',
         'selector': 'selector',
         'virtual_machine_template': 'virtualMachineTemplate'
     }
 
-    def __init__(self, paused=None, replicas=None, selector=None, virtual_machine_template=None):
+    def __init__(self, name_generation=None, paused=None, replicas=None, selector=None, virtual_machine_template=None):
         """
         V1alpha1VirtualMachinePoolSpec - a model defined in Swagger
         """
 
+        self._name_generation = None
         self._paused = None
         self._replicas = None
         self._selector = None
         self._virtual_machine_template = None
 
+        if name_generation is not None:
+          self.name_generation = name_generation
         if paused is not None:
           self.paused = paused
         if replicas is not None:
           self.replicas = replicas
         self.selector = selector
         self.virtual_machine_template = virtual_machine_template
+
+    @property
+    def name_generation(self):
+        """
+        Gets the name_generation of this V1alpha1VirtualMachinePoolSpec.
+        Options for the name generation in a pool.
+
+        :return: The name_generation of this V1alpha1VirtualMachinePoolSpec.
+        :rtype: V1alpha1VirtualMachinePoolNameGeneration
+        """
+        return self._name_generation
+
+    @name_generation.setter
+    def name_generation(self, name_generation):
+        """
+        Sets the name_generation of this V1alpha1VirtualMachinePoolSpec.
+        Options for the name generation in a pool.
+
+        :param name_generation: The name_generation of this V1alpha1VirtualMachinePoolSpec.
+        :type: V1alpha1VirtualMachinePoolNameGeneration
+        """
+
+        self._name_generation = name_generation
 
     @property
     def paused(self):

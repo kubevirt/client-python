@@ -472,7 +472,7 @@ class V1Interface(object):
     def state(self):
         """
         Gets the state of this V1Interface.
-        State represents the requested operational state of the interface. The (only) value supported is `absent`, expressing a request to remove the interface.
+        State represents the requested operational state of the interface. The supported values are: `absent`, expressing a request to remove the interface. `down`, expressing a request to set the link down. `up`, expressing a request to set the link up. Empty value functions as `up`.
 
         :return: The state of this V1Interface.
         :rtype: str
@@ -483,7 +483,7 @@ class V1Interface(object):
     def state(self, state):
         """
         Sets the state of this V1Interface.
-        State represents the requested operational state of the interface. The (only) value supported is `absent`, expressing a request to remove the interface.
+        State represents the requested operational state of the interface. The supported values are: `absent`, expressing a request to remove the interface. `down`, expressing a request to set the link down. `up`, expressing a request to set the link up. Empty value functions as `up`.
 
         :param state: The state of this V1Interface.
         :type: str

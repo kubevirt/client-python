@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **ports** | [**list[V1Port]**](V1Port.md) | List of ports to be forwarded to the virtual machine. | [optional] 
 **slirp** | [**V1DeprecatedInterfaceSlirp**](V1DeprecatedInterfaceSlirp.md) | DeprecatedSlirp is an alias to the deprecated Slirp interface Deprecated: Removed in v1.3 | [optional] 
 **sriov** | [**V1InterfaceSRIOV**](V1InterfaceSRIOV.md) |  | [optional] 
-**state** | **str** | State represents the requested operational state of the interface. The (only) value supported is &#x60;absent&#x60;, expressing a request to remove the interface. | [optional] 
+**state** | **str** | State represents the requested operational state of the interface. The supported values are: &#x60;absent&#x60;, expressing a request to remove the interface. &#x60;down&#x60;, expressing a request to set the link down. &#x60;up&#x60;, expressing a request to set the link up. Empty value functions as &#x60;up&#x60;. | [optional] 
 **tag** | **str** | If specified, the virtual network interface address and its tag will be provided to the guest via config drive | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

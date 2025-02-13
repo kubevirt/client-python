@@ -93,6 +93,7 @@ from .v1_config_drive_ssh_public_key_access_credential_propagation import V1Conf
 from .v1_config_map_volume_source import V1ConfigMapVolumeSource
 from .v1_container_disk_info import V1ContainerDiskInfo
 from .v1_container_disk_source import V1ContainerDiskSource
+from .v1_controller_revision_ref import V1ControllerRevisionRef
 from .v1_custom_block_size import V1CustomBlockSize
 from .v1_custom_profile import V1CustomProfile
 from .v1_customize_components import V1CustomizeComponents
@@ -150,6 +151,7 @@ from .v1_initrd_info import V1InitrdInfo
 from .v1_input import V1Input
 from .v1_instancetype_configuration import V1InstancetypeConfiguration
 from .v1_instancetype_matcher import V1InstancetypeMatcher
+from .v1_instancetype_status_ref import V1InstancetypeStatusRef
 from .v1_interface import V1Interface
 from .v1_interface_binding_migration import V1InterfaceBindingMigration
 from .v1_interface_binding_plugin import V1InterfaceBindingPlugin

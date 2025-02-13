@@ -34,8 +34,10 @@ class V1VirtualMachineStatus(object):
         'conditions': 'list[V1VirtualMachineCondition]',
         'created': 'bool',
         'desired_generation': 'int',
+        'instancetype_ref': 'V1InstancetypeStatusRef',
         'memory_dump_request': 'V1VirtualMachineMemoryDumpRequest',
         'observed_generation': 'int',
+        'preference_ref': 'V1InstancetypeStatusRef',
         'printable_status': 'str',
         'ready': 'bool',
         'restore_in_progress': 'str',
@@ -52,8 +54,10 @@ class V1VirtualMachineStatus(object):
         'conditions': 'conditions',
         'created': 'created',
         'desired_generation': 'desiredGeneration',
+        'instancetype_ref': 'instancetypeRef',
         'memory_dump_request': 'memoryDumpRequest',
         'observed_generation': 'observedGeneration',
+        'preference_ref': 'preferenceRef',
         'printable_status': 'printableStatus',
         'ready': 'ready',
         'restore_in_progress': 'restoreInProgress',
@@ -66,7 +70,7 @@ class V1VirtualMachineStatus(object):
         'volume_update_state': 'volumeUpdateState'
     }
 
-    def __init__(self, conditions=None, created=None, desired_generation=None, memory_dump_request=None, observed_generation=None, printable_status=None, ready=None, restore_in_progress=None, run_strategy=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None, volume_update_state=None):
+    def __init__(self, conditions=None, created=None, desired_generation=None, instancetype_ref=None, memory_dump_request=None, observed_generation=None, preference_ref=None, printable_status=None, ready=None, restore_in_progress=None, run_strategy=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None, volume_update_state=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
@@ -74,8 +78,10 @@ class V1VirtualMachineStatus(object):
         self._conditions = None
         self._created = None
         self._desired_generation = None
+        self._instancetype_ref = None
         self._memory_dump_request = None
         self._observed_generation = None
+        self._preference_ref = None
         self._printable_status = None
         self._ready = None
         self._restore_in_progress = None
@@ -93,10 +99,14 @@ class V1VirtualMachineStatus(object):
           self.created = created
         if desired_generation is not None:
           self.desired_generation = desired_generation
+        if instancetype_ref is not None:
+          self.instancetype_ref = instancetype_ref
         if memory_dump_request is not None:
           self.memory_dump_request = memory_dump_request
         if observed_generation is not None:
           self.observed_generation = observed_generation
+        if preference_ref is not None:
+          self.preference_ref = preference_ref
         if printable_status is not None:
           self.printable_status = printable_status
         if ready is not None:
@@ -188,6 +198,29 @@ class V1VirtualMachineStatus(object):
         self._desired_generation = desired_generation
 
     @property
+    def instancetype_ref(self):
+        """
+        Gets the instancetype_ref of this V1VirtualMachineStatus.
+        InstancetypeRef captures the state of any referenced instance type from the VirtualMachine
+
+        :return: The instancetype_ref of this V1VirtualMachineStatus.
+        :rtype: V1InstancetypeStatusRef
+        """
+        return self._instancetype_ref
+
+    @instancetype_ref.setter
+    def instancetype_ref(self, instancetype_ref):
+        """
+        Sets the instancetype_ref of this V1VirtualMachineStatus.
+        InstancetypeRef captures the state of any referenced instance type from the VirtualMachine
+
+        :param instancetype_ref: The instancetype_ref of this V1VirtualMachineStatus.
+        :type: V1InstancetypeStatusRef
+        """
+
+        self._instancetype_ref = instancetype_ref
+
+    @property
     def memory_dump_request(self):
         """
         Gets the memory_dump_request of this V1VirtualMachineStatus.
@@ -232,6 +265,29 @@ class V1VirtualMachineStatus(object):
         """
 
         self._observed_generation = observed_generation
+
+    @property
+    def preference_ref(self):
+        """
+        Gets the preference_ref of this V1VirtualMachineStatus.
+        PreferenceRef captures the state of any referenced preference from the VirtualMachine
+
+        :return: The preference_ref of this V1VirtualMachineStatus.
+        :rtype: V1InstancetypeStatusRef
+        """
+        return self._preference_ref
+
+    @preference_ref.setter
+    def preference_ref(self, preference_ref):
+        """
+        Sets the preference_ref of this V1VirtualMachineStatus.
+        PreferenceRef captures the state of any referenced preference from the VirtualMachine
+
+        :param preference_ref: The preference_ref of this V1VirtualMachineStatus.
+        :type: V1InstancetypeStatusRef
+        """
+
+        self._preference_ref = preference_ref
 
     @property
     def printable_status(self):

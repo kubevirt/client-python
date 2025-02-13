@@ -31,6 +31,7 @@ class V1DeveloperConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'cluster_profiler': 'bool',
         'cpu_allocation_ratio': 'int',
         'disk_verification': 'V1DiskVerification',
         'feature_gates': 'list[str]',
@@ -44,6 +45,7 @@ class V1DeveloperConfiguration(object):
     }
 
     attribute_map = {
+        'cluster_profiler': 'clusterProfiler',
         'cpu_allocation_ratio': 'cpuAllocationRatio',
         'disk_verification': 'diskVerification',
         'feature_gates': 'featureGates',
@@ -56,11 +58,12 @@ class V1DeveloperConfiguration(object):
         'use_emulation': 'useEmulation'
     }
 
-    def __init__(self, cpu_allocation_ratio=None, disk_verification=None, feature_gates=None, log_verbosity=None, memory_overcommit=None, minimum_cluster_tsc_frequency=None, minimum_reserve_pvc_bytes=None, node_selectors=None, pvc_tolerate_less_space_up_to_percent=None, use_emulation=None):
+    def __init__(self, cluster_profiler=None, cpu_allocation_ratio=None, disk_verification=None, feature_gates=None, log_verbosity=None, memory_overcommit=None, minimum_cluster_tsc_frequency=None, minimum_reserve_pvc_bytes=None, node_selectors=None, pvc_tolerate_less_space_up_to_percent=None, use_emulation=None):
         """
         V1DeveloperConfiguration - a model defined in Swagger
         """
 
+        self._cluster_profiler = None
         self._cpu_allocation_ratio = None
         self._disk_verification = None
         self._feature_gates = None
@@ -72,6 +75,8 @@ class V1DeveloperConfiguration(object):
         self._pvc_tolerate_less_space_up_to_percent = None
         self._use_emulation = None
 
+        if cluster_profiler is not None:
+          self.cluster_profiler = cluster_profiler
         if cpu_allocation_ratio is not None:
           self.cpu_allocation_ratio = cpu_allocation_ratio
         if disk_verification is not None:
@@ -92,6 +97,29 @@ class V1DeveloperConfiguration(object):
           self.pvc_tolerate_less_space_up_to_percent = pvc_tolerate_less_space_up_to_percent
         if use_emulation is not None:
           self.use_emulation = use_emulation
+
+    @property
+    def cluster_profiler(self):
+        """
+        Gets the cluster_profiler of this V1DeveloperConfiguration.
+        Enable the ability to pprof profile KubeVirt control plane
+
+        :return: The cluster_profiler of this V1DeveloperConfiguration.
+        :rtype: bool
+        """
+        return self._cluster_profiler
+
+    @cluster_profiler.setter
+    def cluster_profiler(self, cluster_profiler):
+        """
+        Sets the cluster_profiler of this V1DeveloperConfiguration.
+        Enable the ability to pprof profile KubeVirt control plane
+
+        :param cluster_profiler: The cluster_profiler of this V1DeveloperConfiguration.
+        :type: bool
+        """
+
+        self._cluster_profiler = cluster_profiler
 
     @property
     def cpu_allocation_ratio(self):

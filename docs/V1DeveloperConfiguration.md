@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**cluster_profiler** | **bool** | Enable the ability to pprof profile KubeVirt control plane | [optional] 
 **cpu_allocation_ratio** | **int** | For each requested virtual CPU, CPUAllocationRatio defines how much physical CPU to request per VMI from the hosting node. The value is in fraction of a CPU thread (or core on non-hyperthreaded nodes). For example, a value of 1 means 1 physical CPU thread per VMI CPU thread. A value of 100 would be 1% of a physical thread allocated for each requested VMI thread. This option has no effect on VMIs that request dedicated CPUs. More information at: https://kubevirt.io/user-guide/operations/node_overcommit/#node-cpu-allocation-ratio Defaults to 10 | [optional] 
 **disk_verification** | [**V1DiskVerification**](V1DiskVerification.md) |  | [optional] 
 **feature_gates** | **list[str]** | FeatureGates is the list of experimental features to enable. Defaults to none | [optional] 

@@ -1001,7 +1001,7 @@ class V1KubeVirtConfiguration(object):
     def vm_state_storage_class(self):
         """
         Gets the vm_state_storage_class of this V1KubeVirtConfiguration.
-        VMStateStorageClass is the name of the storage class to use for the PVCs created to preserve VM state, like TPM. The storage class must support RWX in filesystem mode.
+        VMStateStorageClass is the name of the storage class to use for the PVCs created to preserve VM state, like TPM.
 
         :return: The vm_state_storage_class of this V1KubeVirtConfiguration.
         :rtype: str
@@ -1012,7 +1012,7 @@ class V1KubeVirtConfiguration(object):
     def vm_state_storage_class(self, vm_state_storage_class):
         """
         Sets the vm_state_storage_class of this V1KubeVirtConfiguration.
-        VMStateStorageClass is the name of the storage class to use for the PVCs created to preserve VM state, like TPM. The storage class must support RWX in filesystem mode.
+        VMStateStorageClass is the name of the storage class to use for the PVCs created to preserve VM state, like TPM.
 
         :param vm_state_storage_class: The vm_state_storage_class of this V1KubeVirtConfiguration.
         :type: str

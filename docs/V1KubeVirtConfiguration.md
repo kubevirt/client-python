@@ -38,7 +38,7 @@ Name | Type | Description | Notes
 **virtual_machine_instances_per_node** | **int** |  | [optional] 
 **virtual_machine_options** | [**V1VirtualMachineOptions**](V1VirtualMachineOptions.md) |  | [optional] 
 **vm_rollout_strategy** | **str** | VMRolloutStrategy defines how live-updatable fields, like CPU sockets, memory, tolerations, and affinity, are propagated from a VM to its VMI. | [optional] 
-**vm_state_storage_class** | **str** | VMStateStorageClass is the name of the storage class to use for the PVCs created to preserve VM state, like TPM. The storage class must support RWX in filesystem mode. | [optional] 
+**vm_state_storage_class** | **str** | VMStateStorageClass is the name of the storage class to use for the PVCs created to preserve VM state, like TPM. | [optional] 
 **webhook_configuration** | [**V1ReloadableComponentConfiguration**](V1ReloadableComponentConfiguration.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

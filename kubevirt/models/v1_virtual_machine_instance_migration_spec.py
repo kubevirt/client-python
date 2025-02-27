@@ -31,22 +31,50 @@ class V1VirtualMachineInstanceMigrationSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'added_node_selector': 'dict(str, str)',
         'vmi_name': 'str'
     }
 
     attribute_map = {
+        'added_node_selector': 'addedNodeSelector',
         'vmi_name': 'vmiName'
     }
 
-    def __init__(self, vmi_name=None):
+    def __init__(self, added_node_selector=None, vmi_name=None):
         """
         V1VirtualMachineInstanceMigrationSpec - a model defined in Swagger
         """
 
+        self._added_node_selector = None
         self._vmi_name = None
 
+        if added_node_selector is not None:
+          self.added_node_selector = added_node_selector
         if vmi_name is not None:
           self.vmi_name = vmi_name
+
+    @property
+    def added_node_selector(self):
+        """
+        Gets the added_node_selector of this V1VirtualMachineInstanceMigrationSpec.
+        AddedNodeSelector is an additional selector that can be used to complement a NodeSelector or NodeAffinity as set on the VM to restrict the set of allowed target nodes for a migration. In case of key collisions, values set on the VM objects are going to be preserved to ensure that addedNodeSelector can only restrict but not bypass constraints already set on the VM object.
+
+        :return: The added_node_selector of this V1VirtualMachineInstanceMigrationSpec.
+        :rtype: dict(str, str)
+        """
+        return self._added_node_selector
+
+    @added_node_selector.setter
+    def added_node_selector(self, added_node_selector):
+        """
+        Sets the added_node_selector of this V1VirtualMachineInstanceMigrationSpec.
+        AddedNodeSelector is an additional selector that can be used to complement a NodeSelector or NodeAffinity as set on the VM to restrict the set of allowed target nodes for a migration. In case of key collisions, values set on the VM objects are going to be preserved to ensure that addedNodeSelector can only restrict but not bypass constraints already set on the VM object.
+
+        :param added_node_selector: The added_node_selector of this V1VirtualMachineInstanceMigrationSpec.
+        :type: dict(str, str)
+        """
+
+        self._added_node_selector = added_node_selector
 
     @property
     def vmi_name(self):

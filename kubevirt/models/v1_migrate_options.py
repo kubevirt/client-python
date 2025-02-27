@@ -31,32 +31,60 @@ class V1MigrateOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'added_node_selector': 'dict(str, str)',
         'api_version': 'str',
         'dry_run': 'list[str]',
         'kind': 'str'
     }
 
     attribute_map = {
+        'added_node_selector': 'addedNodeSelector',
         'api_version': 'apiVersion',
         'dry_run': 'dryRun',
         'kind': 'kind'
     }
 
-    def __init__(self, api_version=None, dry_run=None, kind=None):
+    def __init__(self, added_node_selector=None, api_version=None, dry_run=None, kind=None):
         """
         V1MigrateOptions - a model defined in Swagger
         """
 
+        self._added_node_selector = None
         self._api_version = None
         self._dry_run = None
         self._kind = None
 
+        if added_node_selector is not None:
+          self.added_node_selector = added_node_selector
         if api_version is not None:
           self.api_version = api_version
         if dry_run is not None:
           self.dry_run = dry_run
         if kind is not None:
           self.kind = kind
+
+    @property
+    def added_node_selector(self):
+        """
+        Gets the added_node_selector of this V1MigrateOptions.
+        AddedNodeSelector is an additional selector that can be used to complement a NodeSelector or NodeAffinity as set on the VM to restrict the set of allowed target nodes for a migration. In case of key collisions, values set on the VM objects are going to be preserved to ensure that addedNodeSelector can only restrict but not bypass constraints already set on the VM object.
+
+        :return: The added_node_selector of this V1MigrateOptions.
+        :rtype: dict(str, str)
+        """
+        return self._added_node_selector
+
+    @added_node_selector.setter
+    def added_node_selector(self, added_node_selector):
+        """
+        Sets the added_node_selector of this V1MigrateOptions.
+        AddedNodeSelector is an additional selector that can be used to complement a NodeSelector or NodeAffinity as set on the VM to restrict the set of allowed target nodes for a migration. In case of key collisions, values set on the VM objects are going to be preserved to ensure that addedNodeSelector can only restrict but not bypass constraints already set on the VM object.
+
+        :param added_node_selector: The added_node_selector of this V1MigrateOptions.
+        :type: dict(str, str)
+        """
+
+        self._added_node_selector = added_node_selector
 
     @property
     def api_version(self):

@@ -31,22 +31,50 @@ class V1TPMDevice(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'enabled': 'bool',
         'persistent': 'bool'
     }
 
     attribute_map = {
+        'enabled': 'enabled',
         'persistent': 'persistent'
     }
 
-    def __init__(self, persistent=None):
+    def __init__(self, enabled=None, persistent=None):
         """
         V1TPMDevice - a model defined in Swagger
         """
 
+        self._enabled = None
         self._persistent = None
 
+        if enabled is not None:
+          self.enabled = enabled
         if persistent is not None:
           self.persistent = persistent
+
+    @property
+    def enabled(self):
+        """
+        Gets the enabled of this V1TPMDevice.
+        Enabled allows a user to explictly disable the vTPM even when one is enabled by a preference referenced by the VirtualMachine Defaults to True
+
+        :return: The enabled of this V1TPMDevice.
+        :rtype: bool
+        """
+        return self._enabled
+
+    @enabled.setter
+    def enabled(self, enabled):
+        """
+        Sets the enabled of this V1TPMDevice.
+        Enabled allows a user to explictly disable the vTPM even when one is enabled by a preference referenced by the VirtualMachine Defaults to True
+
+        :param enabled: The enabled of this V1TPMDevice.
+        :type: bool
+        """
+
+        self._enabled = enabled
 
     @property
     def persistent(self):

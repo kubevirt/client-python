@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Auto-generated client v1.5.0-beta.0-598-gdf334c1863"
+    release_note="Auto-generated client v1.5.0-beta.0-875-geb685565ed"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

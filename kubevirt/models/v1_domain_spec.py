@@ -269,7 +269,7 @@ class V1DomainSpec(object):
     def io_threads_policy(self):
         """
         Gets the io_threads_policy of this V1DomainSpec.
-        Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto
+        Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto, supplementalPool
 
         :return: The io_threads_policy of this V1DomainSpec.
         :rtype: str
@@ -280,7 +280,7 @@ class V1DomainSpec(object):
     def io_threads_policy(self, io_threads_policy):
         """
         Sets the io_threads_policy of this V1DomainSpec.
-        Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto
+        Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto, supplementalPool
 
         :param io_threads_policy: The io_threads_policy of this V1DomainSpec.
         :type: str

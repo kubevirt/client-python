@@ -108,6 +108,7 @@ from .v1_deprecated_interface_passt import V1DeprecatedInterfacePasst
 from .v1_deprecated_interface_slirp import V1DeprecatedInterfaceSlirp
 from .v1_developer_configuration import V1DeveloperConfiguration
 from .v1_devices import V1Devices
+from .v1_diag288_watchdog import V1Diag288Watchdog
 from .v1_disable_free_page_reporting import V1DisableFreePageReporting
 from .v1_disable_serial_console_log import V1DisableSerialConsoleLog
 from .v1_disk import V1Disk

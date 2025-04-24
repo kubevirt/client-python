@@ -120,7 +120,7 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
     def fs_freeze_status(self):
         """
         Gets the fs_freeze_status of this V1VirtualMachineInstanceGuestAgentInfo.
-        FSFreezeStatus indicates whether a freeze operation was requested for the guest filesystem. It will be set to \"frozen\" if the request was made, or unset otherwise. This does not reflect the actual state of the guest filesystem.
+        FSFreezeStatus is the state of the fs of the guest it can be either frozen or thawed
 
         :return: The fs_freeze_status of this V1VirtualMachineInstanceGuestAgentInfo.
         :rtype: str
@@ -131,7 +131,7 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
     def fs_freeze_status(self, fs_freeze_status):
         """
         Sets the fs_freeze_status of this V1VirtualMachineInstanceGuestAgentInfo.
-        FSFreezeStatus indicates whether a freeze operation was requested for the guest filesystem. It will be set to \"frozen\" if the request was made, or unset otherwise. This does not reflect the actual state of the guest filesystem.
+        FSFreezeStatus is the state of the fs of the guest it can be either frozen or thawed
 
         :param fs_freeze_status: The fs_freeze_status of this V1VirtualMachineInstanceGuestAgentInfo.
         :type: str

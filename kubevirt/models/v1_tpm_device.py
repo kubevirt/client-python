@@ -57,7 +57,7 @@ class V1TPMDevice(object):
     def enabled(self):
         """
         Gets the enabled of this V1TPMDevice.
-        Enabled allows a user to explictly disable the vTPM even when one is enabled by a preference referenced by the VirtualMachine Defaults to True
+        Enabled allows a user to explicitly disable the vTPM even when one is enabled by a preference referenced by the VirtualMachine Defaults to True
 
         :return: The enabled of this V1TPMDevice.
         :rtype: bool
@@ -68,7 +68,7 @@ class V1TPMDevice(object):
     def enabled(self, enabled):
         """
         Sets the enabled of this V1TPMDevice.
-        Enabled allows a user to explictly disable the vTPM even when one is enabled by a preference referenced by the VirtualMachine Defaults to True
+        Enabled allows a user to explicitly disable the vTPM even when one is enabled by a preference referenced by the VirtualMachine Defaults to True
 
         :param enabled: The enabled of this V1TPMDevice.
         :type: bool

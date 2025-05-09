@@ -35,7 +35,6 @@ class V1beta1VirtualMachineCloneSpec(object):
         'label_filters': 'list[str]',
         'new_mac_addresses': 'dict(str, str)',
         'new_sm_bios_serial': 'str',
-        'patches': 'list[str]',
         'source': 'K8sIoApiCoreV1TypedLocalObjectReference',
         'target': 'K8sIoApiCoreV1TypedLocalObjectReference',
         'template': 'V1beta1VirtualMachineCloneTemplateFilters'
@@ -46,13 +45,12 @@ class V1beta1VirtualMachineCloneSpec(object):
         'label_filters': 'labelFilters',
         'new_mac_addresses': 'newMacAddresses',
         'new_sm_bios_serial': 'newSMBiosSerial',
-        'patches': 'patches',
         'source': 'source',
         'target': 'target',
         'template': 'template'
     }
 
-    def __init__(self, annotation_filters=None, label_filters=None, new_mac_addresses=None, new_sm_bios_serial=None, patches=None, source=None, target=None, template=None):
+    def __init__(self, annotation_filters=None, label_filters=None, new_mac_addresses=None, new_sm_bios_serial=None, source=None, target=None, template=None):
         """
         V1beta1VirtualMachineCloneSpec - a model defined in Swagger
         """
@@ -61,7 +59,6 @@ class V1beta1VirtualMachineCloneSpec(object):
         self._label_filters = None
         self._new_mac_addresses = None
         self._new_sm_bios_serial = None
-        self._patches = None
         self._source = None
         self._target = None
         self._template = None
@@ -74,8 +71,6 @@ class V1beta1VirtualMachineCloneSpec(object):
           self.new_mac_addresses = new_mac_addresses
         if new_sm_bios_serial is not None:
           self.new_sm_bios_serial = new_sm_bios_serial
-        if patches is not None:
-          self.patches = patches
         self.source = source
         if target is not None:
           self.target = target
@@ -173,29 +168,6 @@ class V1beta1VirtualMachineCloneSpec(object):
         """
 
         self._new_sm_bios_serial = new_sm_bios_serial
-
-    @property
-    def patches(self):
-        """
-        Gets the patches of this V1beta1VirtualMachineCloneSpec.
-        Patches holds JSON patches to apply to target. Patches should fit the target's Kind. Example: '{\"op\": \"add\", \"path\": \"/spec/template/metadata/labels/example\", \"value\": \"new-label\"}'
-
-        :return: The patches of this V1beta1VirtualMachineCloneSpec.
-        :rtype: list[str]
-        """
-        return self._patches
-
-    @patches.setter
-    def patches(self, patches):
-        """
-        Sets the patches of this V1beta1VirtualMachineCloneSpec.
-        Patches holds JSON patches to apply to target. Patches should fit the target's Kind. Example: '{\"op\": \"add\", \"path\": \"/spec/template/metadata/labels/example\", \"value\": \"new-label\"}'
-
-        :param patches: The patches of this V1beta1VirtualMachineCloneSpec.
-        :type: list[str]
-        """
-
-        self._patches = patches
 
     @property
     def source(self):

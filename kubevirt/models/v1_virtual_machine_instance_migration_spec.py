@@ -32,24 +32,34 @@ class V1VirtualMachineInstanceMigrationSpec(object):
     """
     swagger_types = {
         'added_node_selector': 'dict(str, str)',
+        'receive': 'V1VirtualMachineInstanceMigrationTarget',
+        'send_to': 'V1VirtualMachineInstanceMigrationSource',
         'vmi_name': 'str'
     }
 
     attribute_map = {
         'added_node_selector': 'addedNodeSelector',
+        'receive': 'receive',
+        'send_to': 'sendTo',
         'vmi_name': 'vmiName'
     }
 
-    def __init__(self, added_node_selector=None, vmi_name=None):
+    def __init__(self, added_node_selector=None, receive=None, send_to=None, vmi_name=None):
         """
         V1VirtualMachineInstanceMigrationSpec - a model defined in Swagger
         """
 
         self._added_node_selector = None
+        self._receive = None
+        self._send_to = None
         self._vmi_name = None
 
         if added_node_selector is not None:
           self.added_node_selector = added_node_selector
+        if receive is not None:
+          self.receive = receive
+        if send_to is not None:
+          self.send_to = send_to
         if vmi_name is not None:
           self.vmi_name = vmi_name
 
@@ -75,6 +85,52 @@ class V1VirtualMachineInstanceMigrationSpec(object):
         """
 
         self._added_node_selector = added_node_selector
+
+    @property
+    def receive(self):
+        """
+        Gets the receive of this V1VirtualMachineInstanceMigrationSpec.
+        If receieve is specified, this VirtualMachineInstanceMigration will be considered the target
+
+        :return: The receive of this V1VirtualMachineInstanceMigrationSpec.
+        :rtype: V1VirtualMachineInstanceMigrationTarget
+        """
+        return self._receive
+
+    @receive.setter
+    def receive(self, receive):
+        """
+        Sets the receive of this V1VirtualMachineInstanceMigrationSpec.
+        If receieve is specified, this VirtualMachineInstanceMigration will be considered the target
+
+        :param receive: The receive of this V1VirtualMachineInstanceMigrationSpec.
+        :type: V1VirtualMachineInstanceMigrationTarget
+        """
+
+        self._receive = receive
+
+    @property
+    def send_to(self):
+        """
+        Gets the send_to of this V1VirtualMachineInstanceMigrationSpec.
+        If sendTo is specified, this VirtualMachineInstanceMigration will be considered the source
+
+        :return: The send_to of this V1VirtualMachineInstanceMigrationSpec.
+        :rtype: V1VirtualMachineInstanceMigrationSource
+        """
+        return self._send_to
+
+    @send_to.setter
+    def send_to(self, send_to):
+        """
+        Sets the send_to of this V1VirtualMachineInstanceMigrationSpec.
+        If sendTo is specified, this VirtualMachineInstanceMigration will be considered the source
+
+        :param send_to: The send_to of this V1VirtualMachineInstanceMigrationSpec.
+        :type: V1VirtualMachineInstanceMigrationSource
+        """
+
+        self._send_to = send_to
 
     @property
     def vmi_name(self):

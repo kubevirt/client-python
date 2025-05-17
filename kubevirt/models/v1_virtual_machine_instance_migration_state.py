@@ -38,12 +38,14 @@ class V1VirtualMachineInstanceMigrationState(object):
         'failed': 'bool',
         'failure_reason': 'str',
         'migration_configuration': 'V1MigrationConfiguration',
+        'migration_network_type': 'str',
         'migration_policy_name': 'str',
         'migration_uid': 'str',
         'mode': 'str',
         'source_node': 'str',
         'source_persistent_state_pvc_name': 'str',
         'source_pod': 'str',
+        'source_state': 'V1VirtualMachineInstanceMigrationSourceState',
         'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'target_attachment_pod_uid': 'str',
         'target_cpu_set': 'list[int]',
@@ -54,7 +56,8 @@ class V1VirtualMachineInstanceMigrationState(object):
         'target_node_domain_ready_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'target_node_topology': 'str',
         'target_persistent_state_pvc_name': 'str',
-        'target_pod': 'str'
+        'target_pod': 'str',
+        'target_state': 'V1VirtualMachineInstanceMigrationTargetState'
     }
 
     attribute_map = {
@@ -65,12 +68,14 @@ class V1VirtualMachineInstanceMigrationState(object):
         'failed': 'failed',
         'failure_reason': 'failureReason',
         'migration_configuration': 'migrationConfiguration',
+        'migration_network_type': 'migrationNetworkType',
         'migration_policy_name': 'migrationPolicyName',
         'migration_uid': 'migrationUid',
         'mode': 'mode',
         'source_node': 'sourceNode',
         'source_persistent_state_pvc_name': 'sourcePersistentStatePVCName',
         'source_pod': 'sourcePod',
+        'source_state': 'sourceState',
         'start_timestamp': 'startTimestamp',
         'target_attachment_pod_uid': 'targetAttachmentPodUID',
         'target_cpu_set': 'targetCPUSet',
@@ -81,10 +86,11 @@ class V1VirtualMachineInstanceMigrationState(object):
         'target_node_domain_ready_timestamp': 'targetNodeDomainReadyTimestamp',
         'target_node_topology': 'targetNodeTopology',
         'target_persistent_state_pvc_name': 'targetPersistentStatePVCName',
-        'target_pod': 'targetPod'
+        'target_pod': 'targetPod',
+        'target_state': 'targetState'
     }
 
-    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, failure_reason=None, migration_configuration=None, migration_policy_name=None, migration_uid=None, mode=None, source_node=None, source_persistent_state_pvc_name=None, source_pod=None, start_timestamp=None, target_attachment_pod_uid=None, target_cpu_set=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_node_domain_ready_timestamp=None, target_node_topology=None, target_persistent_state_pvc_name=None, target_pod=None):
+    def __init__(self, abort_requested=None, abort_status=None, completed=None, end_timestamp=None, failed=None, failure_reason=None, migration_configuration=None, migration_network_type=None, migration_policy_name=None, migration_uid=None, mode=None, source_node=None, source_persistent_state_pvc_name=None, source_pod=None, source_state=None, start_timestamp=None, target_attachment_pod_uid=None, target_cpu_set=None, target_direct_migration_node_ports=None, target_node=None, target_node_address=None, target_node_domain_detected=None, target_node_domain_ready_timestamp=None, target_node_topology=None, target_persistent_state_pvc_name=None, target_pod=None, target_state=None):
         """
         V1VirtualMachineInstanceMigrationState - a model defined in Swagger
         """
@@ -96,12 +102,14 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._failed = None
         self._failure_reason = None
         self._migration_configuration = None
+        self._migration_network_type = None
         self._migration_policy_name = None
         self._migration_uid = None
         self._mode = None
         self._source_node = None
         self._source_persistent_state_pvc_name = None
         self._source_pod = None
+        self._source_state = None
         self._start_timestamp = None
         self._target_attachment_pod_uid = None
         self._target_cpu_set = None
@@ -113,6 +121,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._target_node_topology = None
         self._target_persistent_state_pvc_name = None
         self._target_pod = None
+        self._target_state = None
 
         if abort_requested is not None:
           self.abort_requested = abort_requested
@@ -128,6 +137,8 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.failure_reason = failure_reason
         if migration_configuration is not None:
           self.migration_configuration = migration_configuration
+        if migration_network_type is not None:
+          self.migration_network_type = migration_network_type
         if migration_policy_name is not None:
           self.migration_policy_name = migration_policy_name
         if migration_uid is not None:
@@ -140,6 +151,8 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.source_persistent_state_pvc_name = source_persistent_state_pvc_name
         if source_pod is not None:
           self.source_pod = source_pod
+        if source_state is not None:
+          self.source_state = source_state
         if start_timestamp is not None:
           self.start_timestamp = start_timestamp
         if target_attachment_pod_uid is not None:
@@ -162,6 +175,8 @@ class V1VirtualMachineInstanceMigrationState(object):
           self.target_persistent_state_pvc_name = target_persistent_state_pvc_name
         if target_pod is not None:
           self.target_pod = target_pod
+        if target_state is not None:
+          self.target_state = target_state
 
     @property
     def abort_requested(self):
@@ -325,6 +340,29 @@ class V1VirtualMachineInstanceMigrationState(object):
         self._migration_configuration = migration_configuration
 
     @property
+    def migration_network_type(self):
+        """
+        Gets the migration_network_type of this V1VirtualMachineInstanceMigrationState.
+        The type of migration network, either 'pod' or 'migration'
+
+        :return: The migration_network_type of this V1VirtualMachineInstanceMigrationState.
+        :rtype: str
+        """
+        return self._migration_network_type
+
+    @migration_network_type.setter
+    def migration_network_type(self, migration_network_type):
+        """
+        Sets the migration_network_type of this V1VirtualMachineInstanceMigrationState.
+        The type of migration network, either 'pod' or 'migration'
+
+        :param migration_network_type: The migration_network_type of this V1VirtualMachineInstanceMigrationState.
+        :type: str
+        """
+
+        self._migration_network_type = migration_network_type
+
+    @property
     def migration_policy_name(self):
         """
         Gets the migration_policy_name of this V1VirtualMachineInstanceMigrationState.
@@ -459,6 +497,29 @@ class V1VirtualMachineInstanceMigrationState(object):
         """
 
         self._source_pod = source_pod
+
+    @property
+    def source_state(self):
+        """
+        Gets the source_state of this V1VirtualMachineInstanceMigrationState.
+        SourceState contains migration state managed by the source virt handler
+
+        :return: The source_state of this V1VirtualMachineInstanceMigrationState.
+        :rtype: V1VirtualMachineInstanceMigrationSourceState
+        """
+        return self._source_state
+
+    @source_state.setter
+    def source_state(self, source_state):
+        """
+        Sets the source_state of this V1VirtualMachineInstanceMigrationState.
+        SourceState contains migration state managed by the source virt handler
+
+        :param source_state: The source_state of this V1VirtualMachineInstanceMigrationState.
+        :type: V1VirtualMachineInstanceMigrationSourceState
+        """
+
+        self._source_state = source_state
 
     @property
     def start_timestamp(self):
@@ -712,6 +773,29 @@ class V1VirtualMachineInstanceMigrationState(object):
         """
 
         self._target_pod = target_pod
+
+    @property
+    def target_state(self):
+        """
+        Gets the target_state of this V1VirtualMachineInstanceMigrationState.
+        TargetState contains migration state managed by the target virt handler
+
+        :return: The target_state of this V1VirtualMachineInstanceMigrationState.
+        :rtype: V1VirtualMachineInstanceMigrationTargetState
+        """
+        return self._target_state
+
+    @target_state.setter
+    def target_state(self, target_state):
+        """
+        Sets the target_state of this V1VirtualMachineInstanceMigrationState.
+        TargetState contains migration state managed by the target virt handler
+
+        :param target_state: The target_state of this V1VirtualMachineInstanceMigrationState.
+        :type: V1VirtualMachineInstanceMigrationTargetState
+        """
+
+        self._target_state = target_state
 
     def to_dict(self):
         """

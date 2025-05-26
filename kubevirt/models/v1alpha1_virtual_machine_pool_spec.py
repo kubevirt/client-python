@@ -31,6 +31,7 @@ class V1alpha1VirtualMachinePoolSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'max_unavailable': 'K8sIoApimachineryPkgUtilIntstrIntOrString',
         'name_generation': 'V1alpha1VirtualMachinePoolNameGeneration',
         'paused': 'bool',
         'replicas': 'int',
@@ -39,6 +40,7 @@ class V1alpha1VirtualMachinePoolSpec(object):
     }
 
     attribute_map = {
+        'max_unavailable': 'maxUnavailable',
         'name_generation': 'nameGeneration',
         'paused': 'paused',
         'replicas': 'replicas',
@@ -46,17 +48,20 @@ class V1alpha1VirtualMachinePoolSpec(object):
         'virtual_machine_template': 'virtualMachineTemplate'
     }
 
-    def __init__(self, name_generation=None, paused=None, replicas=None, selector=None, virtual_machine_template=None):
+    def __init__(self, max_unavailable=None, name_generation=None, paused=None, replicas=None, selector=None, virtual_machine_template=None):
         """
         V1alpha1VirtualMachinePoolSpec - a model defined in Swagger
         """
 
+        self._max_unavailable = None
         self._name_generation = None
         self._paused = None
         self._replicas = None
         self._selector = None
         self._virtual_machine_template = None
 
+        if max_unavailable is not None:
+          self.max_unavailable = max_unavailable
         if name_generation is not None:
           self.name_generation = name_generation
         if paused is not None:
@@ -65,6 +70,29 @@ class V1alpha1VirtualMachinePoolSpec(object):
           self.replicas = replicas
         self.selector = selector
         self.virtual_machine_template = virtual_machine_template
+
+    @property
+    def max_unavailable(self):
+        """
+        Gets the max_unavailable of this V1alpha1VirtualMachinePoolSpec.
+        (Defaults to 100%) Integer or string pointer, that when set represents either a percentage or number of VMs in a pool that can be unavailable (ready condition false) at a time during automated update.
+
+        :return: The max_unavailable of this V1alpha1VirtualMachinePoolSpec.
+        :rtype: K8sIoApimachineryPkgUtilIntstrIntOrString
+        """
+        return self._max_unavailable
+
+    @max_unavailable.setter
+    def max_unavailable(self, max_unavailable):
+        """
+        Sets the max_unavailable of this V1alpha1VirtualMachinePoolSpec.
+        (Defaults to 100%) Integer or string pointer, that when set represents either a percentage or number of VMs in a pool that can be unavailable (ready condition false) at a time during automated update.
+
+        :param max_unavailable: The max_unavailable of this V1alpha1VirtualMachinePoolSpec.
+        :type: K8sIoApimachineryPkgUtilIntstrIntOrString
+        """
+
+        self._max_unavailable = max_unavailable
 
     @property
     def name_generation(self):

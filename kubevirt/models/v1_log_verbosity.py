@@ -36,7 +36,8 @@ class V1LogVerbosity(object):
         'virt_controller': 'int',
         'virt_handler': 'int',
         'virt_launcher': 'int',
-        'virt_operator': 'int'
+        'virt_operator': 'int',
+        'virt_synchronization_controller': 'int'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class V1LogVerbosity(object):
         'virt_controller': 'virtController',
         'virt_handler': 'virtHandler',
         'virt_launcher': 'virtLauncher',
-        'virt_operator': 'virtOperator'
+        'virt_operator': 'virtOperator',
+        'virt_synchronization_controller': 'virtSynchronizationController'
     }
 
-    def __init__(self, node_verbosity=None, virt_api=None, virt_controller=None, virt_handler=None, virt_launcher=None, virt_operator=None):
+    def __init__(self, node_verbosity=None, virt_api=None, virt_controller=None, virt_handler=None, virt_launcher=None, virt_operator=None, virt_synchronization_controller=None):
         """
         V1LogVerbosity - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class V1LogVerbosity(object):
         self._virt_handler = None
         self._virt_launcher = None
         self._virt_operator = None
+        self._virt_synchronization_controller = None
 
         if node_verbosity is not None:
           self.node_verbosity = node_verbosity
@@ -72,6 +75,8 @@ class V1LogVerbosity(object):
           self.virt_launcher = virt_launcher
         if virt_operator is not None:
           self.virt_operator = virt_operator
+        if virt_synchronization_controller is not None:
+          self.virt_synchronization_controller = virt_synchronization_controller
 
     @property
     def node_verbosity(self):
@@ -200,6 +205,27 @@ class V1LogVerbosity(object):
         """
 
         self._virt_operator = virt_operator
+
+    @property
+    def virt_synchronization_controller(self):
+        """
+        Gets the virt_synchronization_controller of this V1LogVerbosity.
+
+        :return: The virt_synchronization_controller of this V1LogVerbosity.
+        :rtype: int
+        """
+        return self._virt_synchronization_controller
+
+    @virt_synchronization_controller.setter
+    def virt_synchronization_controller(self, virt_synchronization_controller):
+        """
+        Sets the virt_synchronization_controller of this V1LogVerbosity.
+
+        :param virt_synchronization_controller: The virt_synchronization_controller of this V1LogVerbosity.
+        :type: int
+        """
+
+        self._virt_synchronization_controller = virt_synchronization_controller
 
     def to_dict(self):
         """

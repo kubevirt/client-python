@@ -45,6 +45,7 @@ class V1KubeVirtSpec(object):
         'product_name': 'str',
         'product_version': 'str',
         'service_monitor_namespace': 'str',
+        'synchronization_port': 'str',
         'uninstall_strategy': 'str',
         'workload_update_strategy': 'V1KubeVirtWorkloadUpdateStrategy',
         'workloads': 'V1ComponentConfig'
@@ -65,12 +66,13 @@ class V1KubeVirtSpec(object):
         'product_name': 'productName',
         'product_version': 'productVersion',
         'service_monitor_namespace': 'serviceMonitorNamespace',
+        'synchronization_port': 'synchronizationPort',
         'uninstall_strategy': 'uninstallStrategy',
         'workload_update_strategy': 'workloadUpdateStrategy',
         'workloads': 'workloads'
     }
 
-    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_pull_secrets=None, image_registry=None, image_tag=None, infra=None, monitor_account=None, monitor_namespace=None, product_component=None, product_name=None, product_version=None, service_monitor_namespace=None, uninstall_strategy=None, workload_update_strategy=None, workloads=None):
+    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_pull_secrets=None, image_registry=None, image_tag=None, infra=None, monitor_account=None, monitor_namespace=None, product_component=None, product_name=None, product_version=None, service_monitor_namespace=None, synchronization_port=None, uninstall_strategy=None, workload_update_strategy=None, workloads=None):
         """
         V1KubeVirtSpec - a model defined in Swagger
         """
@@ -89,6 +91,7 @@ class V1KubeVirtSpec(object):
         self._product_name = None
         self._product_version = None
         self._service_monitor_namespace = None
+        self._synchronization_port = None
         self._uninstall_strategy = None
         self._workload_update_strategy = None
         self._workloads = None
@@ -121,6 +124,8 @@ class V1KubeVirtSpec(object):
           self.product_version = product_version
         if service_monitor_namespace is not None:
           self.service_monitor_namespace = service_monitor_namespace
+        if synchronization_port is not None:
+          self.synchronization_port = synchronization_port
         if uninstall_strategy is not None:
           self.uninstall_strategy = uninstall_strategy
         if workload_update_strategy is not None:
@@ -451,6 +456,29 @@ class V1KubeVirtSpec(object):
         """
 
         self._service_monitor_namespace = service_monitor_namespace
+
+    @property
+    def synchronization_port(self):
+        """
+        Gets the synchronization_port of this V1KubeVirtSpec.
+        Specify the port to listen on for VMI status synchronization traffic. Default is 9185
+
+        :return: The synchronization_port of this V1KubeVirtSpec.
+        :rtype: str
+        """
+        return self._synchronization_port
+
+    @synchronization_port.setter
+    def synchronization_port(self, synchronization_port):
+        """
+        Sets the synchronization_port of this V1KubeVirtSpec.
+        Specify the port to listen on for VMI status synchronization traffic. Default is 9185
+
+        :param synchronization_port: The synchronization_port of this V1KubeVirtSpec.
+        :type: str
+        """
+
+        self._synchronization_port = synchronization_port
 
     @property
     def uninstall_strategy(self):

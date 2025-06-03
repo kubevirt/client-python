@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **virt_handler** | **int** |  | [optional] 
 **virt_launcher** | **int** |  | [optional] 
 **virt_operator** | **int** |  | [optional] 
+**virt_synchronization_controller** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -34,6 +34,7 @@ class K8sIoApimachineryPkgApisMetaV1DeleteOptions(object):
         'api_version': 'str',
         'dry_run': 'list[str]',
         'grace_period_seconds': 'int',
+        'ignore_store_read_error_with_cluster_breaking_potential': 'bool',
         'kind': 'str',
         'orphan_dependents': 'bool',
         'preconditions': 'K8sIoApimachineryPkgApisMetaV1Preconditions',
@@ -44,13 +45,14 @@ class K8sIoApimachineryPkgApisMetaV1DeleteOptions(object):
         'api_version': 'apiVersion',
         'dry_run': 'dryRun',
         'grace_period_seconds': 'gracePeriodSeconds',
+        'ignore_store_read_error_with_cluster_breaking_potential': 'ignoreStoreReadErrorWithClusterBreakingPotential',
         'kind': 'kind',
         'orphan_dependents': 'orphanDependents',
         'preconditions': 'preconditions',
         'propagation_policy': 'propagationPolicy'
     }
 
-    def __init__(self, api_version=None, dry_run=None, grace_period_seconds=None, kind=None, orphan_dependents=None, preconditions=None, propagation_policy=None):
+    def __init__(self, api_version=None, dry_run=None, grace_period_seconds=None, ignore_store_read_error_with_cluster_breaking_potential=None, kind=None, orphan_dependents=None, preconditions=None, propagation_policy=None):
         """
         K8sIoApimachineryPkgApisMetaV1DeleteOptions - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class K8sIoApimachineryPkgApisMetaV1DeleteOptions(object):
         self._api_version = None
         self._dry_run = None
         self._grace_period_seconds = None
+        self._ignore_store_read_error_with_cluster_breaking_potential = None
         self._kind = None
         self._orphan_dependents = None
         self._preconditions = None
@@ -69,6 +72,8 @@ class K8sIoApimachineryPkgApisMetaV1DeleteOptions(object):
           self.dry_run = dry_run
         if grace_period_seconds is not None:
           self.grace_period_seconds = grace_period_seconds
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+          self.ignore_store_read_error_with_cluster_breaking_potential = ignore_store_read_error_with_cluster_breaking_potential
         if kind is not None:
           self.kind = kind
         if orphan_dependents is not None:
@@ -146,6 +151,29 @@ class K8sIoApimachineryPkgApisMetaV1DeleteOptions(object):
         """
 
         self._grace_period_seconds = grace_period_seconds
+
+    @property
+    def ignore_store_read_error_with_cluster_breaking_potential(self):
+        """
+        Gets the ignore_store_read_error_with_cluster_breaking_potential of this K8sIoApimachineryPkgApisMetaV1DeleteOptions.
+        if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+
+        :return: The ignore_store_read_error_with_cluster_breaking_potential of this K8sIoApimachineryPkgApisMetaV1DeleteOptions.
+        :rtype: bool
+        """
+        return self._ignore_store_read_error_with_cluster_breaking_potential
+
+    @ignore_store_read_error_with_cluster_breaking_potential.setter
+    def ignore_store_read_error_with_cluster_breaking_potential(self, ignore_store_read_error_with_cluster_breaking_potential):
+        """
+        Sets the ignore_store_read_error_with_cluster_breaking_potential of this K8sIoApimachineryPkgApisMetaV1DeleteOptions.
+        if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+
+        :param ignore_store_read_error_with_cluster_breaking_potential: The ignore_store_read_error_with_cluster_breaking_potential of this K8sIoApimachineryPkgApisMetaV1DeleteOptions.
+        :type: bool
+        """
+
+        self._ignore_store_read_error_with_cluster_breaking_potential = ignore_store_read_error_with_cluster_breaking_potential
 
     @property
     def kind(self):

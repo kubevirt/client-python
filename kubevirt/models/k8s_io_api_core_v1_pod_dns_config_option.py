@@ -57,7 +57,7 @@ class K8sIoApiCoreV1PodDNSConfigOption(object):
     def name(self):
         """
         Gets the name of this K8sIoApiCoreV1PodDNSConfigOption.
-        Required.
+        Name is this DNS resolver option's name. Required.
 
         :return: The name of this K8sIoApiCoreV1PodDNSConfigOption.
         :rtype: str
@@ -68,7 +68,7 @@ class K8sIoApiCoreV1PodDNSConfigOption(object):
     def name(self, name):
         """
         Sets the name of this K8sIoApiCoreV1PodDNSConfigOption.
-        Required.
+        Name is this DNS resolver option's name. Required.
 
         :param name: The name of this K8sIoApiCoreV1PodDNSConfigOption.
         :type: str
@@ -80,6 +80,7 @@ class K8sIoApiCoreV1PodDNSConfigOption(object):
     def value(self):
         """
         Gets the value of this K8sIoApiCoreV1PodDNSConfigOption.
+        Value is this DNS resolver option's value.
 
         :return: The value of this K8sIoApiCoreV1PodDNSConfigOption.
         :rtype: str
@@ -90,6 +91,7 @@ class K8sIoApiCoreV1PodDNSConfigOption(object):
     def value(self, value):
         """
         Sets the value of this K8sIoApiCoreV1PodDNSConfigOption.
+        Value is this DNS resolver option's value.
 
         :param value: The value of this K8sIoApiCoreV1PodDNSConfigOption.
         :type: str

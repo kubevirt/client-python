@@ -1751,6 +1751,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1alpha3vm_objectgraph(self):
+        """
+        Test case for v1alpha3vm_objectgraph
+
+        
+        """
+        pass
+
     def test_v1alpha3vm_port_forward(self):
         """
         Test case for v1alpha3vm_port_forward
@@ -1778,6 +1786,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3vmi_addvolume(self):
         """
         Test case for v1alpha3vmi_addvolume
+
+        
+        """
+        pass
+
+    def test_v1alpha3vmi_objectgraph(self):
+        """
+        Test case for v1alpha3vmi_objectgraph
 
         
         """
@@ -1863,6 +1879,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1vm_objectgraph(self):
+        """
+        Test case for v1vm_objectgraph
+
+        
+        """
+        pass
+
     def test_v1vm_port_forward(self):
         """
         Test case for v1vm_port_forward
@@ -1890,6 +1914,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1vmi_addvolume(self):
         """
         Test case for v1vmi_addvolume
+
+        
+        """
+        pass
+
+    def test_v1vmi_objectgraph(self):
+        """
+        Test case for v1vmi_objectgraph
 
         
         """

@@ -194,6 +194,8 @@ from .v1_network_configuration import V1NetworkConfiguration
 from .v1_no_cloud_ssh_public_key_access_credential_propagation import V1NoCloudSSHPublicKeyAccessCredentialPropagation
 from .v1_node_mediated_device_types_config import V1NodeMediatedDeviceTypesConfig
 from .v1_node_placement import V1NodePlacement
+from .v1_object_graph_node import V1ObjectGraphNode
+from .v1_object_graph_options import V1ObjectGraphOptions
 from .v1_pit_timer import V1PITTimer
 from .v1_pause_options import V1PauseOptions
 from .v1_pci_host_device import V1PciHostDevice

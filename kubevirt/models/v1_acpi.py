@@ -31,22 +31,50 @@ class V1ACPI(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'msdm_name_ref': 'str',
         'slic_name_ref': 'str'
     }
 
     attribute_map = {
+        'msdm_name_ref': 'msdmNameRef',
         'slic_name_ref': 'slicNameRef'
     }
 
-    def __init__(self, slic_name_ref=None):
+    def __init__(self, msdm_name_ref=None, slic_name_ref=None):
         """
         V1ACPI - a model defined in Swagger
         """
 
+        self._msdm_name_ref = None
         self._slic_name_ref = None
 
+        if msdm_name_ref is not None:
+          self.msdm_name_ref = msdm_name_ref
         if slic_name_ref is not None:
           self.slic_name_ref = slic_name_ref
+
+    @property
+    def msdm_name_ref(self):
+        """
+        Gets the msdm_name_ref of this V1ACPI.
+        Similar to SlicNameRef, another ACPI entry that is used in more recent Windows versions. The above points to the spec of MSDM too.
+
+        :return: The msdm_name_ref of this V1ACPI.
+        :rtype: str
+        """
+        return self._msdm_name_ref
+
+    @msdm_name_ref.setter
+    def msdm_name_ref(self, msdm_name_ref):
+        """
+        Sets the msdm_name_ref of this V1ACPI.
+        Similar to SlicNameRef, another ACPI entry that is used in more recent Windows versions. The above points to the spec of MSDM too.
+
+        :param msdm_name_ref: The msdm_name_ref of this V1ACPI.
+        :type: str
+        """
+
+        self._msdm_name_ref = msdm_name_ref
 
     @property
     def slic_name_ref(self):

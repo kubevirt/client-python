@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **sound** | [**V1SoundDevice**](V1SoundDevice.md) | Whether to emulate a sound device. | [optional] 
 **tpm** | [**V1TPMDevice**](V1TPMDevice.md) | Whether to emulate a TPM device. | [optional] 
 **use_virtio_transitional** | **bool** | Fall back to legacy virtio 0.9 support if virtio bus is selected on devices. This is helpful for old machines like CentOS6 or RHEL6 which do not understand virtio_non_transitional (virtio 1.0). | [optional] 
+**video** | [**V1VideoDevice**](V1VideoDevice.md) | Video describes the video device configuration for the vmi. | [optional] 
 **watchdog** | [**V1Watchdog**](V1Watchdog.md) | Watchdog describes a watchdog device which can be added to the vmi. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

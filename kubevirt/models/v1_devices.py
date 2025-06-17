@@ -53,6 +53,7 @@ class V1Devices(object):
         'sound': 'V1SoundDevice',
         'tpm': 'V1TPMDevice',
         'use_virtio_transitional': 'bool',
+        'video': 'V1VideoDevice',
         'watchdog': 'V1Watchdog'
     }
 
@@ -79,10 +80,11 @@ class V1Devices(object):
         'sound': 'sound',
         'tpm': 'tpm',
         'use_virtio_transitional': 'useVirtioTransitional',
+        'video': 'video',
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_input_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, autoattach_vsock=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, downward_metrics=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, log_serial_console=None, network_interface_multiqueue=None, rng=None, sound=None, tpm=None, use_virtio_transitional=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_input_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, autoattach_vsock=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, downward_metrics=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, log_serial_console=None, network_interface_multiqueue=None, rng=None, sound=None, tpm=None, use_virtio_transitional=None, video=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -109,6 +111,7 @@ class V1Devices(object):
         self._sound = None
         self._tpm = None
         self._use_virtio_transitional = None
+        self._video = None
         self._watchdog = None
 
         if autoattach_graphics_device is not None:
@@ -155,6 +158,8 @@ class V1Devices(object):
           self.tpm = tpm
         if use_virtio_transitional is not None:
           self.use_virtio_transitional = use_virtio_transitional
+        if video is not None:
+          self.video = video
         if watchdog is not None:
           self.watchdog = watchdog
 
@@ -663,6 +668,29 @@ class V1Devices(object):
         """
 
         self._use_virtio_transitional = use_virtio_transitional
+
+    @property
+    def video(self):
+        """
+        Gets the video of this V1Devices.
+        Video describes the video device configuration for the vmi.
+
+        :return: The video of this V1Devices.
+        :rtype: V1VideoDevice
+        """
+        return self._video
+
+    @video.setter
+    def video(self, video):
+        """
+        Sets the video of this V1Devices.
+        Video describes the video device configuration for the vmi.
+
+        :param video: The video of this V1Devices.
+        :type: V1VideoDevice
+        """
+
+        self._video = video
 
     @property
     def watchdog(self):

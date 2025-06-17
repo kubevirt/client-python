@@ -389,6 +389,7 @@ from .v1beta1_virtual_machine_snapshot_status import V1beta1VirtualMachineSnapsh
 from .v1beta1_volume_backup import V1beta1VolumeBackup
 from .v1beta1_volume_preferences import V1beta1VolumePreferences
 from .v1beta1_volume_restore import V1beta1VolumeRestore
+from .v1beta1_volume_restore_override import V1beta1VolumeRestoreOverride
 from .v1beta1_volume_snapshot_status import V1beta1VolumeSnapshotStatus
 from .v1_interface_bridge import V1InterfaceBridge
 from .v1_interface_slirp import V1InterfaceSlirp

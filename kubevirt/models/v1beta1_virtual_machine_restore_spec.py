@@ -34,17 +34,21 @@ class V1beta1VirtualMachineRestoreSpec(object):
         'patches': 'list[str]',
         'target': 'K8sIoApiCoreV1TypedLocalObjectReference',
         'target_readiness_policy': 'str',
-        'virtual_machine_snapshot_name': 'str'
+        'virtual_machine_snapshot_name': 'str',
+        'volume_restore_overrides': 'list[V1beta1VolumeRestoreOverride]',
+        'volume_restore_policy': 'str'
     }
 
     attribute_map = {
         'patches': 'patches',
         'target': 'target',
         'target_readiness_policy': 'targetReadinessPolicy',
-        'virtual_machine_snapshot_name': 'virtualMachineSnapshotName'
+        'virtual_machine_snapshot_name': 'virtualMachineSnapshotName',
+        'volume_restore_overrides': 'volumeRestoreOverrides',
+        'volume_restore_policy': 'volumeRestorePolicy'
     }
 
-    def __init__(self, patches=None, target=None, target_readiness_policy=None, virtual_machine_snapshot_name=''):
+    def __init__(self, patches=None, target=None, target_readiness_policy=None, virtual_machine_snapshot_name='', volume_restore_overrides=None, volume_restore_policy=None):
         """
         V1beta1VirtualMachineRestoreSpec - a model defined in Swagger
         """
@@ -53,6 +57,8 @@ class V1beta1VirtualMachineRestoreSpec(object):
         self._target = None
         self._target_readiness_policy = None
         self._virtual_machine_snapshot_name = None
+        self._volume_restore_overrides = None
+        self._volume_restore_policy = None
 
         if patches is not None:
           self.patches = patches
@@ -60,6 +66,10 @@ class V1beta1VirtualMachineRestoreSpec(object):
         if target_readiness_policy is not None:
           self.target_readiness_policy = target_readiness_policy
         self.virtual_machine_snapshot_name = virtual_machine_snapshot_name
+        if volume_restore_overrides is not None:
+          self.volume_restore_overrides = volume_restore_overrides
+        if volume_restore_policy is not None:
+          self.volume_restore_policy = volume_restore_policy
 
     @property
     def patches(self):
@@ -152,6 +162,50 @@ class V1beta1VirtualMachineRestoreSpec(object):
             raise ValueError("Invalid value for `virtual_machine_snapshot_name`, must not be `None`")
 
         self._virtual_machine_snapshot_name = virtual_machine_snapshot_name
+
+    @property
+    def volume_restore_overrides(self):
+        """
+        Gets the volume_restore_overrides of this V1beta1VirtualMachineRestoreSpec.
+        VolumeRestoreOverrides gives the option to change properties of each restored volume For example, specifying the name of the restored volume, or adding labels/annotations to it
+
+        :return: The volume_restore_overrides of this V1beta1VirtualMachineRestoreSpec.
+        :rtype: list[V1beta1VolumeRestoreOverride]
+        """
+        return self._volume_restore_overrides
+
+    @volume_restore_overrides.setter
+    def volume_restore_overrides(self, volume_restore_overrides):
+        """
+        Sets the volume_restore_overrides of this V1beta1VirtualMachineRestoreSpec.
+        VolumeRestoreOverrides gives the option to change properties of each restored volume For example, specifying the name of the restored volume, or adding labels/annotations to it
+
+        :param volume_restore_overrides: The volume_restore_overrides of this V1beta1VirtualMachineRestoreSpec.
+        :type: list[V1beta1VolumeRestoreOverride]
+        """
+
+        self._volume_restore_overrides = volume_restore_overrides
+
+    @property
+    def volume_restore_policy(self):
+        """
+        Gets the volume_restore_policy of this V1beta1VirtualMachineRestoreSpec.
+
+        :return: The volume_restore_policy of this V1beta1VirtualMachineRestoreSpec.
+        :rtype: str
+        """
+        return self._volume_restore_policy
+
+    @volume_restore_policy.setter
+    def volume_restore_policy(self, volume_restore_policy):
+        """
+        Sets the volume_restore_policy of this V1beta1VirtualMachineRestoreSpec.
+
+        :param volume_restore_policy: The volume_restore_policy of this V1beta1VirtualMachineRestoreSpec.
+        :type: str
+        """
+
+        self._volume_restore_policy = volume_restore_policy
 
     def to_dict(self):
         """

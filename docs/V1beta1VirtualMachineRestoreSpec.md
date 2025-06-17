@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **target** | [**K8sIoApiCoreV1TypedLocalObjectReference**](K8sIoApiCoreV1TypedLocalObjectReference.md) | initially only VirtualMachine type supported | 
 **target_readiness_policy** | **str** |  | [optional] 
 **virtual_machine_snapshot_name** | **str** |  | [default to '']
+**volume_restore_overrides** | [**list[V1beta1VolumeRestoreOverride]**](V1beta1VolumeRestoreOverride.md) | VolumeRestoreOverrides gives the option to change properties of each restored volume For example, specifying the name of the restored volume, or adding labels/annotations to it | [optional] 
+**volume_restore_policy** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

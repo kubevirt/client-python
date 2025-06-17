@@ -389,6 +389,7 @@ from .models.v1beta1_virtual_machine_snapshot_status import V1beta1VirtualMachin
 from .models.v1beta1_volume_backup import V1beta1VolumeBackup
 from .models.v1beta1_volume_preferences import V1beta1VolumePreferences
 from .models.v1beta1_volume_restore import V1beta1VolumeRestore
+from .models.v1beta1_volume_restore_override import V1beta1VolumeRestoreOverride
 from .models.v1beta1_volume_snapshot_status import V1beta1VolumeSnapshotStatus
 
 # import apis into sdk package

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **name_generation** | [**V1alpha1VirtualMachinePoolNameGeneration**](V1alpha1VirtualMachinePoolNameGeneration.md) | Options for the name generation in a pool. | [optional] 
 **paused** | **bool** | Indicates that the pool is paused. | [optional] 
 **replicas** | **int** | Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1. | [optional] 
+**scale_in_strategy** | [**V1alpha1VirtualMachinePoolScaleInStrategy**](V1alpha1VirtualMachinePoolScaleInStrategy.md) | ScaleInStrategy specifies how the VMPool controller manages scaling in VMs within a VMPool | [optional] 
 **selector** | [**K8sIoApimachineryPkgApisMetaV1LabelSelector**](K8sIoApimachineryPkgApisMetaV1LabelSelector.md) | Label selector for pods. Existing Poolss whose pods are selected by this will be the ones affected by this deployment. | 
 **virtual_machine_template** | [**V1alpha1VirtualMachineTemplateSpec**](V1alpha1VirtualMachineTemplateSpec.md) | Template describes the VM that will be created. | 
 

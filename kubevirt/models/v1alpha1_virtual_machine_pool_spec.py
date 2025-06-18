@@ -35,6 +35,7 @@ class V1alpha1VirtualMachinePoolSpec(object):
         'name_generation': 'V1alpha1VirtualMachinePoolNameGeneration',
         'paused': 'bool',
         'replicas': 'int',
+        'scale_in_strategy': 'V1alpha1VirtualMachinePoolScaleInStrategy',
         'selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
         'virtual_machine_template': 'V1alpha1VirtualMachineTemplateSpec'
     }
@@ -44,11 +45,12 @@ class V1alpha1VirtualMachinePoolSpec(object):
         'name_generation': 'nameGeneration',
         'paused': 'paused',
         'replicas': 'replicas',
+        'scale_in_strategy': 'scaleInStrategy',
         'selector': 'selector',
         'virtual_machine_template': 'virtualMachineTemplate'
     }
 
-    def __init__(self, max_unavailable=None, name_generation=None, paused=None, replicas=None, selector=None, virtual_machine_template=None):
+    def __init__(self, max_unavailable=None, name_generation=None, paused=None, replicas=None, scale_in_strategy=None, selector=None, virtual_machine_template=None):
         """
         V1alpha1VirtualMachinePoolSpec - a model defined in Swagger
         """
@@ -57,6 +59,7 @@ class V1alpha1VirtualMachinePoolSpec(object):
         self._name_generation = None
         self._paused = None
         self._replicas = None
+        self._scale_in_strategy = None
         self._selector = None
         self._virtual_machine_template = None
 
@@ -68,6 +71,8 @@ class V1alpha1VirtualMachinePoolSpec(object):
           self.paused = paused
         if replicas is not None:
           self.replicas = replicas
+        if scale_in_strategy is not None:
+          self.scale_in_strategy = scale_in_strategy
         self.selector = selector
         self.virtual_machine_template = virtual_machine_template
 
@@ -162,6 +167,29 @@ class V1alpha1VirtualMachinePoolSpec(object):
         """
 
         self._replicas = replicas
+
+    @property
+    def scale_in_strategy(self):
+        """
+        Gets the scale_in_strategy of this V1alpha1VirtualMachinePoolSpec.
+        ScaleInStrategy specifies how the VMPool controller manages scaling in VMs within a VMPool
+
+        :return: The scale_in_strategy of this V1alpha1VirtualMachinePoolSpec.
+        :rtype: V1alpha1VirtualMachinePoolScaleInStrategy
+        """
+        return self._scale_in_strategy
+
+    @scale_in_strategy.setter
+    def scale_in_strategy(self, scale_in_strategy):
+        """
+        Sets the scale_in_strategy of this V1alpha1VirtualMachinePoolSpec.
+        ScaleInStrategy specifies how the VMPool controller manages scaling in VMs within a VMPool
+
+        :param scale_in_strategy: The scale_in_strategy of this V1alpha1VirtualMachinePoolSpec.
+        :type: V1alpha1VirtualMachinePoolScaleInStrategy
+        """
+
+        self._scale_in_strategy = scale_in_strategy
 
     @property
     def selector(self):

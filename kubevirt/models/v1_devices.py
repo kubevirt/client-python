@@ -49,6 +49,7 @@ class V1Devices(object):
         'interfaces': 'list[V1Interface]',
         'log_serial_console': 'bool',
         'network_interface_multiqueue': 'bool',
+        'panic_devices': 'list[V1PanicDevice]',
         'rng': 'V1Rng',
         'sound': 'V1SoundDevice',
         'tpm': 'V1TPMDevice',
@@ -76,6 +77,7 @@ class V1Devices(object):
         'interfaces': 'interfaces',
         'log_serial_console': 'logSerialConsole',
         'network_interface_multiqueue': 'networkInterfaceMultiqueue',
+        'panic_devices': 'panicDevices',
         'rng': 'rng',
         'sound': 'sound',
         'tpm': 'tpm',
@@ -84,7 +86,7 @@ class V1Devices(object):
         'watchdog': 'watchdog'
     }
 
-    def __init__(self, autoattach_graphics_device=None, autoattach_input_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, autoattach_vsock=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, downward_metrics=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, log_serial_console=None, network_interface_multiqueue=None, rng=None, sound=None, tpm=None, use_virtio_transitional=None, video=None, watchdog=None):
+    def __init__(self, autoattach_graphics_device=None, autoattach_input_device=None, autoattach_mem_balloon=None, autoattach_pod_interface=None, autoattach_serial_console=None, autoattach_vsock=None, block_multi_queue=None, client_passthrough=None, disable_hotplug=None, disks=None, downward_metrics=None, filesystems=None, gpus=None, host_devices=None, inputs=None, interfaces=None, log_serial_console=None, network_interface_multiqueue=None, panic_devices=None, rng=None, sound=None, tpm=None, use_virtio_transitional=None, video=None, watchdog=None):
         """
         V1Devices - a model defined in Swagger
         """
@@ -107,6 +109,7 @@ class V1Devices(object):
         self._interfaces = None
         self._log_serial_console = None
         self._network_interface_multiqueue = None
+        self._panic_devices = None
         self._rng = None
         self._sound = None
         self._tpm = None
@@ -150,6 +153,8 @@ class V1Devices(object):
           self.log_serial_console = log_serial_console
         if network_interface_multiqueue is not None:
           self.network_interface_multiqueue = network_interface_multiqueue
+        if panic_devices is not None:
+          self.panic_devices = panic_devices
         if rng is not None:
           self.rng = rng
         if sound is not None:
@@ -576,6 +581,29 @@ class V1Devices(object):
         """
 
         self._network_interface_multiqueue = network_interface_multiqueue
+
+    @property
+    def panic_devices(self):
+        """
+        Gets the panic_devices of this V1Devices.
+        PanicDevices provides additional crash information when a guest crashes.
+
+        :return: The panic_devices of this V1Devices.
+        :rtype: list[V1PanicDevice]
+        """
+        return self._panic_devices
+
+    @panic_devices.setter
+    def panic_devices(self, panic_devices):
+        """
+        Sets the panic_devices of this V1Devices.
+        PanicDevices provides additional crash information when a guest crashes.
+
+        :param panic_devices: The panic_devices of this V1Devices.
+        :type: list[V1PanicDevice]
+        """
+
+        self._panic_devices = panic_devices
 
     @property
     def rng(self):

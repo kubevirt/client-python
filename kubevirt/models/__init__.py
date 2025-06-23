@@ -197,6 +197,7 @@ from .v1_node_placement import V1NodePlacement
 from .v1_object_graph_node import V1ObjectGraphNode
 from .v1_object_graph_options import V1ObjectGraphOptions
 from .v1_pit_timer import V1PITTimer
+from .v1_panic_device import V1PanicDevice
 from .v1_pause_options import V1PauseOptions
 from .v1_pci_host_device import V1PciHostDevice
 from .v1_permitted_host_devices import V1PermittedHostDevices

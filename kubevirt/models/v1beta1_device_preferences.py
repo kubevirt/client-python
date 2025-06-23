@@ -50,6 +50,7 @@ class V1beta1DevicePreferences(object):
         'preferred_interface_model': 'str',
         'preferred_lun_bus': 'str',
         'preferred_network_interface_multi_queue': 'bool',
+        'preferred_panic_device_model': 'str',
         'preferred_rng': 'V1Rng',
         'preferred_sound_model': 'str',
         'preferred_tpm': 'V1TPMDevice',
@@ -77,6 +78,7 @@ class V1beta1DevicePreferences(object):
         'preferred_interface_model': 'preferredInterfaceModel',
         'preferred_lun_bus': 'preferredLunBus',
         'preferred_network_interface_multi_queue': 'preferredNetworkInterfaceMultiQueue',
+        'preferred_panic_device_model': 'preferredPanicDeviceModel',
         'preferred_rng': 'preferredRng',
         'preferred_sound_model': 'preferredSoundModel',
         'preferred_tpm': 'preferredTPM',
@@ -84,7 +86,7 @@ class V1beta1DevicePreferences(object):
         'preferred_virtual_gpu_options': 'preferredVirtualGPUOptions'
     }
 
-    def __init__(self, preferred_autoattach_graphics_device=None, preferred_autoattach_input_device=None, preferred_autoattach_mem_balloon=None, preferred_autoattach_pod_interface=None, preferred_autoattach_serial_console=None, preferred_block_multi_queue=None, preferred_cdrom_bus=None, preferred_disable_hotplug=None, preferred_disk_block_size=None, preferred_disk_bus=None, preferred_disk_cache=None, preferred_disk_dedicated_io_thread=None, preferred_disk_io=None, preferred_input_bus=None, preferred_input_type=None, preferred_interface_masquerade=None, preferred_interface_model=None, preferred_lun_bus=None, preferred_network_interface_multi_queue=None, preferred_rng=None, preferred_sound_model=None, preferred_tpm=None, preferred_use_virtio_transitional=None, preferred_virtual_gpu_options=None):
+    def __init__(self, preferred_autoattach_graphics_device=None, preferred_autoattach_input_device=None, preferred_autoattach_mem_balloon=None, preferred_autoattach_pod_interface=None, preferred_autoattach_serial_console=None, preferred_block_multi_queue=None, preferred_cdrom_bus=None, preferred_disable_hotplug=None, preferred_disk_block_size=None, preferred_disk_bus=None, preferred_disk_cache=None, preferred_disk_dedicated_io_thread=None, preferred_disk_io=None, preferred_input_bus=None, preferred_input_type=None, preferred_interface_masquerade=None, preferred_interface_model=None, preferred_lun_bus=None, preferred_network_interface_multi_queue=None, preferred_panic_device_model=None, preferred_rng=None, preferred_sound_model=None, preferred_tpm=None, preferred_use_virtio_transitional=None, preferred_virtual_gpu_options=None):
         """
         V1beta1DevicePreferences - a model defined in Swagger
         """
@@ -108,6 +110,7 @@ class V1beta1DevicePreferences(object):
         self._preferred_interface_model = None
         self._preferred_lun_bus = None
         self._preferred_network_interface_multi_queue = None
+        self._preferred_panic_device_model = None
         self._preferred_rng = None
         self._preferred_sound_model = None
         self._preferred_tpm = None
@@ -152,6 +155,8 @@ class V1beta1DevicePreferences(object):
           self.preferred_lun_bus = preferred_lun_bus
         if preferred_network_interface_multi_queue is not None:
           self.preferred_network_interface_multi_queue = preferred_network_interface_multi_queue
+        if preferred_panic_device_model is not None:
+          self.preferred_panic_device_model = preferred_panic_device_model
         if preferred_rng is not None:
           self.preferred_rng = preferred_rng
         if preferred_sound_model is not None:
@@ -599,6 +604,29 @@ class V1beta1DevicePreferences(object):
         """
 
         self._preferred_network_interface_multi_queue = preferred_network_interface_multi_queue
+
+    @property
+    def preferred_panic_device_model(self):
+        """
+        Gets the preferred_panic_device_model of this V1beta1DevicePreferences.
+        PreferredPanicDeviceModel optionally defines the preferred panic device model to use with panic devices.
+
+        :return: The preferred_panic_device_model of this V1beta1DevicePreferences.
+        :rtype: str
+        """
+        return self._preferred_panic_device_model
+
+    @preferred_panic_device_model.setter
+    def preferred_panic_device_model(self, preferred_panic_device_model):
+        """
+        Sets the preferred_panic_device_model of this V1beta1DevicePreferences.
+        PreferredPanicDeviceModel optionally defines the preferred panic device model to use with panic devices.
+
+        :param preferred_panic_device_model: The preferred_panic_device_model of this V1beta1DevicePreferences.
+        :type: str
+        """
+
+        self._preferred_panic_device_model = preferred_panic_device_model
 
     @property
     def preferred_rng(self):

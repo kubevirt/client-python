@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **preferred_interface_model** | **str** | PreferredInterfaceModel optionally defines the preferred model to be used by Interface devices. | [optional] 
 **preferred_lun_bus** | **str** | PreferredLunBus optionally defines the preferred bus for Lun Disk devices. | [optional] 
 **preferred_network_interface_multi_queue** | **bool** | PreferredNetworkInterfaceMultiQueue optionally enables the vhost multiqueue feature for virtio interfaces. | [optional] 
+**preferred_panic_device_model** | **str** | PreferredPanicDeviceModel optionally defines the preferred panic device model to use with panic devices. | [optional] 
 **preferred_rng** | [**V1Rng**](V1Rng.md) | PreferredRng optionally defines the preferred rng device to be used. | [optional] 
 **preferred_sound_model** | **str** | PreferredSoundModel optionally defines the preferred model for Sound devices. | [optional] 
 **preferred_tpm** | [**V1TPMDevice**](V1TPMDevice.md) | PreferredTPM optionally defines the preferred TPM device to be used. | [optional] 

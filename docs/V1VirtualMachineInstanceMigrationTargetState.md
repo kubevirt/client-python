@@ -16,7 +16,9 @@ Name | Type | Description | Notes
 **node_topology** | **str** | If the VMI requires dedicated CPUs, this field will hold the numa topology on the target node | [optional] 
 **persistent_state_pvc_name** | **str** | If the VMI being migrated uses persistent features (backend-storage), its source PVC name is saved here | [optional] 
 **pod** | **str** | The source pod that the VMI is originated on | [optional] 
+**selinux_context** | **str** | SELinuxContext is the actual SELinux context of the pod | [optional] 
 **sync_address** | **str** | The ip address/fqdn:port combination to use to synchronize the VMI with the target. | [optional] 
+**virtual_machine_instance_uid** | **str** | VirtualMachineInstanceUID is the UID of the target virtual machine instance | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

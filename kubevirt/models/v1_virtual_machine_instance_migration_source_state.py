@@ -38,7 +38,9 @@ class V1VirtualMachineInstanceMigrationSourceState(object):
         'node_selectors': 'dict(str, str)',
         'persistent_state_pvc_name': 'str',
         'pod': 'str',
-        'sync_address': 'str'
+        'selinux_context': 'str',
+        'sync_address': 'str',
+        'virtual_machine_instance_uid': 'str'
     }
 
     attribute_map = {
@@ -49,10 +51,12 @@ class V1VirtualMachineInstanceMigrationSourceState(object):
         'node_selectors': 'nodeSelectors',
         'persistent_state_pvc_name': 'persistentStatePVCName',
         'pod': 'pod',
-        'sync_address': 'syncAddress'
+        'selinux_context': 'selinuxContext',
+        'sync_address': 'syncAddress',
+        'virtual_machine_instance_uid': 'virtualMachineInstanceUID'
     }
 
-    def __init__(self, domain_name=None, domain_namespace=None, migration_uid=None, node=None, node_selectors=None, persistent_state_pvc_name=None, pod=None, sync_address=None):
+    def __init__(self, domain_name=None, domain_namespace=None, migration_uid=None, node=None, node_selectors=None, persistent_state_pvc_name=None, pod=None, selinux_context=None, sync_address=None, virtual_machine_instance_uid=None):
         """
         V1VirtualMachineInstanceMigrationSourceState - a model defined in Swagger
         """
@@ -64,7 +68,9 @@ class V1VirtualMachineInstanceMigrationSourceState(object):
         self._node_selectors = None
         self._persistent_state_pvc_name = None
         self._pod = None
+        self._selinux_context = None
         self._sync_address = None
+        self._virtual_machine_instance_uid = None
 
         if domain_name is not None:
           self.domain_name = domain_name
@@ -80,8 +86,12 @@ class V1VirtualMachineInstanceMigrationSourceState(object):
           self.persistent_state_pvc_name = persistent_state_pvc_name
         if pod is not None:
           self.pod = pod
+        if selinux_context is not None:
+          self.selinux_context = selinux_context
         if sync_address is not None:
           self.sync_address = sync_address
+        if virtual_machine_instance_uid is not None:
+          self.virtual_machine_instance_uid = virtual_machine_instance_uid
 
     @property
     def domain_name(self):
@@ -245,6 +255,29 @@ class V1VirtualMachineInstanceMigrationSourceState(object):
         self._pod = pod
 
     @property
+    def selinux_context(self):
+        """
+        Gets the selinux_context of this V1VirtualMachineInstanceMigrationSourceState.
+        SELinuxContext is the actual SELinux context of the pod
+
+        :return: The selinux_context of this V1VirtualMachineInstanceMigrationSourceState.
+        :rtype: str
+        """
+        return self._selinux_context
+
+    @selinux_context.setter
+    def selinux_context(self, selinux_context):
+        """
+        Sets the selinux_context of this V1VirtualMachineInstanceMigrationSourceState.
+        SELinuxContext is the actual SELinux context of the pod
+
+        :param selinux_context: The selinux_context of this V1VirtualMachineInstanceMigrationSourceState.
+        :type: str
+        """
+
+        self._selinux_context = selinux_context
+
+    @property
     def sync_address(self):
         """
         Gets the sync_address of this V1VirtualMachineInstanceMigrationSourceState.
@@ -266,6 +299,29 @@ class V1VirtualMachineInstanceMigrationSourceState(object):
         """
 
         self._sync_address = sync_address
+
+    @property
+    def virtual_machine_instance_uid(self):
+        """
+        Gets the virtual_machine_instance_uid of this V1VirtualMachineInstanceMigrationSourceState.
+        VirtualMachineInstanceUID is the UID of the target virtual machine instance
+
+        :return: The virtual_machine_instance_uid of this V1VirtualMachineInstanceMigrationSourceState.
+        :rtype: str
+        """
+        return self._virtual_machine_instance_uid
+
+    @virtual_machine_instance_uid.setter
+    def virtual_machine_instance_uid(self, virtual_machine_instance_uid):
+        """
+        Sets the virtual_machine_instance_uid of this V1VirtualMachineInstanceMigrationSourceState.
+        VirtualMachineInstanceUID is the UID of the target virtual machine instance
+
+        :param virtual_machine_instance_uid: The virtual_machine_instance_uid of this V1VirtualMachineInstanceMigrationSourceState.
+        :type: str
+        """
+
+        self._virtual_machine_instance_uid = virtual_machine_instance_uid
 
     def to_dict(self):
         """

@@ -32,6 +32,7 @@ from .models.k8s_io_api_core_v1_pod_affinity_term import K8sIoApiCoreV1PodAffini
 from .models.k8s_io_api_core_v1_pod_anti_affinity import K8sIoApiCoreV1PodAntiAffinity
 from .models.k8s_io_api_core_v1_pod_dns_config import K8sIoApiCoreV1PodDNSConfig
 from .models.k8s_io_api_core_v1_pod_dns_config_option import K8sIoApiCoreV1PodDNSConfigOption
+from .models.k8s_io_api_core_v1_pod_resource_claim import K8sIoApiCoreV1PodResourceClaim
 from .models.k8s_io_api_core_v1_preferred_scheduling_term import K8sIoApiCoreV1PreferredSchedulingTerm
 from .models.k8s_io_api_core_v1_resource_field_selector import K8sIoApiCoreV1ResourceFieldSelector
 from .models.k8s_io_api_core_v1_tcp_socket_action import K8sIoApiCoreV1TCPSocketAction
@@ -107,6 +108,10 @@ from .models.v1_deprecated_interface_macvtap import V1DeprecatedInterfaceMacvtap
 from .models.v1_deprecated_interface_passt import V1DeprecatedInterfacePasst
 from .models.v1_deprecated_interface_slirp import V1DeprecatedInterfaceSlirp
 from .models.v1_developer_configuration import V1DeveloperConfiguration
+from .models.v1_device_attribute import V1DeviceAttribute
+from .models.v1_device_resource_claim_status import V1DeviceResourceClaimStatus
+from .models.v1_device_status import V1DeviceStatus
+from .models.v1_device_status_info import V1DeviceStatusInfo
 from .models.v1_devices import V1Devices
 from .models.v1_diag288_watchdog import V1Diag288Watchdog
 from .models.v1_disable_free_page_reporting import V1DisableFreePageReporting

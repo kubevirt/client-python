@@ -44,6 +44,7 @@ class V1VirtualMachineInstanceSpec(object):
         'node_selector': 'dict(str, str)',
         'priority_class_name': 'str',
         'readiness_probe': 'V1Probe',
+        'resource_claims': 'list[K8sIoApiCoreV1PodResourceClaim]',
         'scheduler_name': 'str',
         'start_strategy': 'str',
         'subdomain': 'str',
@@ -67,6 +68,7 @@ class V1VirtualMachineInstanceSpec(object):
         'node_selector': 'nodeSelector',
         'priority_class_name': 'priorityClassName',
         'readiness_probe': 'readinessProbe',
+        'resource_claims': 'resourceClaims',
         'scheduler_name': 'schedulerName',
         'start_strategy': 'startStrategy',
         'subdomain': 'subdomain',
@@ -76,7 +78,7 @@ class V1VirtualMachineInstanceSpec(object):
         'volumes': 'volumes'
     }
 
-    def __init__(self, access_credentials=None, affinity=None, architecture=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, scheduler_name=None, start_strategy=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, topology_spread_constraints=None, volumes=None):
+    def __init__(self, access_credentials=None, affinity=None, architecture=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, resource_claims=None, scheduler_name=None, start_strategy=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, topology_spread_constraints=None, volumes=None):
         """
         V1VirtualMachineInstanceSpec - a model defined in Swagger
         """
@@ -94,6 +96,7 @@ class V1VirtualMachineInstanceSpec(object):
         self._node_selector = None
         self._priority_class_name = None
         self._readiness_probe = None
+        self._resource_claims = None
         self._scheduler_name = None
         self._start_strategy = None
         self._subdomain = None
@@ -127,6 +130,8 @@ class V1VirtualMachineInstanceSpec(object):
           self.priority_class_name = priority_class_name
         if readiness_probe is not None:
           self.readiness_probe = readiness_probe
+        if resource_claims is not None:
+          self.resource_claims = resource_claims
         if scheduler_name is not None:
           self.scheduler_name = scheduler_name
         if start_strategy is not None:
@@ -448,6 +453,29 @@ class V1VirtualMachineInstanceSpec(object):
         """
 
         self._readiness_probe = readiness_probe
+
+    @property
+    def resource_claims(self):
+        """
+        Gets the resource_claims of this V1VirtualMachineInstanceSpec.
+        ResourceClaims define which ResourceClaims must be allocated and reserved before the VMI, hence virt-launcher pod is allowed to start. The resources will be made available to the domain which consumes them by name.  This is an alpha field and requires enabling the DynamicResourceAllocation feature gate in kubernetes  https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/ This field should only be configured if one of the feature-gates GPUsWithDRA or HostDevicesWithDRA is enabled. This feature is in alpha.
+
+        :return: The resource_claims of this V1VirtualMachineInstanceSpec.
+        :rtype: list[K8sIoApiCoreV1PodResourceClaim]
+        """
+        return self._resource_claims
+
+    @resource_claims.setter
+    def resource_claims(self, resource_claims):
+        """
+        Sets the resource_claims of this V1VirtualMachineInstanceSpec.
+        ResourceClaims define which ResourceClaims must be allocated and reserved before the VMI, hence virt-launcher pod is allowed to start. The resources will be made available to the domain which consumes them by name.  This is an alpha field and requires enabling the DynamicResourceAllocation feature gate in kubernetes  https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/ This field should only be configured if one of the feature-gates GPUsWithDRA or HostDevicesWithDRA is enabled. This feature is in alpha.
+
+        :param resource_claims: The resource_claims of this V1VirtualMachineInstanceSpec.
+        :type: list[K8sIoApiCoreV1PodResourceClaim]
+        """
+
+        self._resource_claims = resource_claims
 
     @property
     def scheduler_name(self):

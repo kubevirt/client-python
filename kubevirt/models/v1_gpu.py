@@ -31,40 +31,75 @@ class V1GPU(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'claim_name': 'str',
         'device_name': 'str',
         'name': 'str',
+        'request_name': 'str',
         'tag': 'str',
         'virtual_gpu_options': 'V1VGPUOptions'
     }
 
     attribute_map = {
+        'claim_name': 'claimName',
         'device_name': 'deviceName',
         'name': 'name',
+        'request_name': 'requestName',
         'tag': 'tag',
         'virtual_gpu_options': 'virtualGPUOptions'
     }
 
-    def __init__(self, device_name='', name='', tag=None, virtual_gpu_options=None):
+    def __init__(self, claim_name=None, device_name=None, name='', request_name=None, tag=None, virtual_gpu_options=None):
         """
         V1GPU - a model defined in Swagger
         """
 
+        self._claim_name = None
         self._device_name = None
         self._name = None
+        self._request_name = None
         self._tag = None
         self._virtual_gpu_options = None
 
-        self.device_name = device_name
+        if claim_name is not None:
+          self.claim_name = claim_name
+        if device_name is not None:
+          self.device_name = device_name
         self.name = name
+        if request_name is not None:
+          self.request_name = request_name
         if tag is not None:
           self.tag = tag
         if virtual_gpu_options is not None:
           self.virtual_gpu_options = virtual_gpu_options
 
     @property
+    def claim_name(self):
+        """
+        Gets the claim_name of this V1GPU.
+        ClaimName needs to be provided from the list vmi.spec.resourceClaims[].name where this device is allocated
+
+        :return: The claim_name of this V1GPU.
+        :rtype: str
+        """
+        return self._claim_name
+
+    @claim_name.setter
+    def claim_name(self, claim_name):
+        """
+        Sets the claim_name of this V1GPU.
+        ClaimName needs to be provided from the list vmi.spec.resourceClaims[].name where this device is allocated
+
+        :param claim_name: The claim_name of this V1GPU.
+        :type: str
+        """
+
+        self._claim_name = claim_name
+
+    @property
     def device_name(self):
         """
         Gets the device_name of this V1GPU.
+        DeviceName is the name of the device provisioned by device-plugins
 
         :return: The device_name of this V1GPU.
         :rtype: str
@@ -75,12 +110,11 @@ class V1GPU(object):
     def device_name(self, device_name):
         """
         Sets the device_name of this V1GPU.
+        DeviceName is the name of the device provisioned by device-plugins
 
         :param device_name: The device_name of this V1GPU.
         :type: str
         """
-        if device_name is None:
-            raise ValueError("Invalid value for `device_name`, must not be `None`")
 
         self._device_name = device_name
 
@@ -108,6 +142,29 @@ class V1GPU(object):
             raise ValueError("Invalid value for `name`, must not be `None`")
 
         self._name = name
+
+    @property
+    def request_name(self):
+        """
+        Gets the request_name of this V1GPU.
+        RequestName needs to be provided from resourceClaim.spec.devices.requests[].name where this device is requested
+
+        :return: The request_name of this V1GPU.
+        :rtype: str
+        """
+        return self._request_name
+
+    @request_name.setter
+    def request_name(self, request_name):
+        """
+        Sets the request_name of this V1GPU.
+        RequestName needs to be provided from resourceClaim.spec.devices.requests[].name where this device is requested
+
+        :param request_name: The request_name of this V1GPU.
+        :type: str
+        """
+
+        self._request_name = request_name
 
     @property
     def tag(self):

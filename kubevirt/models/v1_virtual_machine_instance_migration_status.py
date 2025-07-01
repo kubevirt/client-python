@@ -34,17 +34,19 @@ class V1VirtualMachineInstanceMigrationStatus(object):
         'conditions': 'list[V1VirtualMachineInstanceMigrationCondition]',
         'migration_state': 'V1VirtualMachineInstanceMigrationState',
         'phase': 'str',
-        'phase_transition_timestamps': 'list[V1VirtualMachineInstanceMigrationPhaseTransitionTimestamp]'
+        'phase_transition_timestamps': 'list[V1VirtualMachineInstanceMigrationPhaseTransitionTimestamp]',
+        'synchronization_address': 'str'
     }
 
     attribute_map = {
         'conditions': 'conditions',
         'migration_state': 'migrationState',
         'phase': 'phase',
-        'phase_transition_timestamps': 'phaseTransitionTimestamps'
+        'phase_transition_timestamps': 'phaseTransitionTimestamps',
+        'synchronization_address': 'synchronizationAddress'
     }
 
-    def __init__(self, conditions=None, migration_state=None, phase=None, phase_transition_timestamps=None):
+    def __init__(self, conditions=None, migration_state=None, phase=None, phase_transition_timestamps=None, synchronization_address=None):
         """
         V1VirtualMachineInstanceMigrationStatus - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class V1VirtualMachineInstanceMigrationStatus(object):
         self._migration_state = None
         self._phase = None
         self._phase_transition_timestamps = None
+        self._synchronization_address = None
 
         if conditions is not None:
           self.conditions = conditions
@@ -62,6 +65,8 @@ class V1VirtualMachineInstanceMigrationStatus(object):
           self.phase = phase
         if phase_transition_timestamps is not None:
           self.phase_transition_timestamps = phase_transition_timestamps
+        if synchronization_address is not None:
+          self.synchronization_address = synchronization_address
 
     @property
     def conditions(self):
@@ -150,6 +155,29 @@ class V1VirtualMachineInstanceMigrationStatus(object):
         """
 
         self._phase_transition_timestamps = phase_transition_timestamps
+
+    @property
+    def synchronization_address(self):
+        """
+        Gets the synchronization_address of this V1VirtualMachineInstanceMigrationStatus.
+        The synchronization address one can use to connect to the synchronization controller, includes the port
+
+        :return: The synchronization_address of this V1VirtualMachineInstanceMigrationStatus.
+        :rtype: str
+        """
+        return self._synchronization_address
+
+    @synchronization_address.setter
+    def synchronization_address(self, synchronization_address):
+        """
+        Sets the synchronization_address of this V1VirtualMachineInstanceMigrationStatus.
+        The synchronization address one can use to connect to the synchronization controller, includes the port
+
+        :param synchronization_address: The synchronization_address of this V1VirtualMachineInstanceMigrationStatus.
+        :type: str
+        """
+
+        self._synchronization_address = synchronization_address
 
     def to_dict(self):
         """

@@ -35,7 +35,7 @@ class V1VirtualMachineInstanceMigrationStatus(object):
         'migration_state': 'V1VirtualMachineInstanceMigrationState',
         'phase': 'str',
         'phase_transition_timestamps': 'list[V1VirtualMachineInstanceMigrationPhaseTransitionTimestamp]',
-        'synchronization_address': 'str'
+        'synchronization_addresses': 'list[str]'
     }
 
     attribute_map = {
@@ -43,10 +43,10 @@ class V1VirtualMachineInstanceMigrationStatus(object):
         'migration_state': 'migrationState',
         'phase': 'phase',
         'phase_transition_timestamps': 'phaseTransitionTimestamps',
-        'synchronization_address': 'synchronizationAddress'
+        'synchronization_addresses': 'synchronizationAddresses'
     }
 
-    def __init__(self, conditions=None, migration_state=None, phase=None, phase_transition_timestamps=None, synchronization_address=None):
+    def __init__(self, conditions=None, migration_state=None, phase=None, phase_transition_timestamps=None, synchronization_addresses=None):
         """
         V1VirtualMachineInstanceMigrationStatus - a model defined in Swagger
         """
@@ -55,7 +55,7 @@ class V1VirtualMachineInstanceMigrationStatus(object):
         self._migration_state = None
         self._phase = None
         self._phase_transition_timestamps = None
-        self._synchronization_address = None
+        self._synchronization_addresses = None
 
         if conditions is not None:
           self.conditions = conditions
@@ -65,8 +65,8 @@ class V1VirtualMachineInstanceMigrationStatus(object):
           self.phase = phase
         if phase_transition_timestamps is not None:
           self.phase_transition_timestamps = phase_transition_timestamps
-        if synchronization_address is not None:
-          self.synchronization_address = synchronization_address
+        if synchronization_addresses is not None:
+          self.synchronization_addresses = synchronization_addresses
 
     @property
     def conditions(self):
@@ -157,27 +157,27 @@ class V1VirtualMachineInstanceMigrationStatus(object):
         self._phase_transition_timestamps = phase_transition_timestamps
 
     @property
-    def synchronization_address(self):
+    def synchronization_addresses(self):
         """
-        Gets the synchronization_address of this V1VirtualMachineInstanceMigrationStatus.
-        The synchronization address one can use to connect to the synchronization controller, includes the port
+        Gets the synchronization_addresses of this V1VirtualMachineInstanceMigrationStatus.
+        The synchronization addresses one can use to connect to the synchronization controller, includes the port, if multiple addresses are available, the first one is reported in the synchronizationAddress field.
 
-        :return: The synchronization_address of this V1VirtualMachineInstanceMigrationStatus.
-        :rtype: str
+        :return: The synchronization_addresses of this V1VirtualMachineInstanceMigrationStatus.
+        :rtype: list[str]
         """
-        return self._synchronization_address
+        return self._synchronization_addresses
 
-    @synchronization_address.setter
-    def synchronization_address(self, synchronization_address):
+    @synchronization_addresses.setter
+    def synchronization_addresses(self, synchronization_addresses):
         """
-        Sets the synchronization_address of this V1VirtualMachineInstanceMigrationStatus.
-        The synchronization address one can use to connect to the synchronization controller, includes the port
+        Sets the synchronization_addresses of this V1VirtualMachineInstanceMigrationStatus.
+        The synchronization addresses one can use to connect to the synchronization controller, includes the port, if multiple addresses are available, the first one is reported in the synchronizationAddress field.
 
-        :param synchronization_address: The synchronization_address of this V1VirtualMachineInstanceMigrationStatus.
-        :type: str
+        :param synchronization_addresses: The synchronization_addresses of this V1VirtualMachineInstanceMigrationStatus.
+        :type: list[str]
         """
 
-        self._synchronization_address = synchronization_address
+        self._synchronization_addresses = synchronization_addresses
 
     def to_dict(self):
         """

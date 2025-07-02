@@ -42,7 +42,7 @@ class V1KubeVirtStatus(object):
         'operator_version': 'str',
         'outdated_virtual_machine_instance_workloads': 'int',
         'phase': 'str',
-        'synchronization_address': 'str',
+        'synchronization_addresses': 'list[str]',
         'target_deployment_config': 'str',
         'target_deployment_id': 'str',
         'target_kube_virt_registry': 'str',
@@ -61,14 +61,14 @@ class V1KubeVirtStatus(object):
         'operator_version': 'operatorVersion',
         'outdated_virtual_machine_instance_workloads': 'outdatedVirtualMachineInstanceWorkloads',
         'phase': 'phase',
-        'synchronization_address': 'synchronizationAddress',
+        'synchronization_addresses': 'synchronizationAddresses',
         'target_deployment_config': 'targetDeploymentConfig',
         'target_deployment_id': 'targetDeploymentID',
         'target_kube_virt_registry': 'targetKubeVirtRegistry',
         'target_kube_virt_version': 'targetKubeVirtVersion'
     }
 
-    def __init__(self, conditions=None, default_architecture=None, generations=None, observed_deployment_config=None, observed_deployment_id=None, observed_generation=None, observed_kube_virt_registry=None, observed_kube_virt_version=None, operator_version=None, outdated_virtual_machine_instance_workloads=None, phase=None, synchronization_address=None, target_deployment_config=None, target_deployment_id=None, target_kube_virt_registry=None, target_kube_virt_version=None):
+    def __init__(self, conditions=None, default_architecture=None, generations=None, observed_deployment_config=None, observed_deployment_id=None, observed_generation=None, observed_kube_virt_registry=None, observed_kube_virt_version=None, operator_version=None, outdated_virtual_machine_instance_workloads=None, phase=None, synchronization_addresses=None, target_deployment_config=None, target_deployment_id=None, target_kube_virt_registry=None, target_kube_virt_version=None):
         """
         V1KubeVirtStatus - a model defined in Swagger
         """
@@ -84,7 +84,7 @@ class V1KubeVirtStatus(object):
         self._operator_version = None
         self._outdated_virtual_machine_instance_workloads = None
         self._phase = None
-        self._synchronization_address = None
+        self._synchronization_addresses = None
         self._target_deployment_config = None
         self._target_deployment_id = None
         self._target_kube_virt_registry = None
@@ -112,8 +112,8 @@ class V1KubeVirtStatus(object):
           self.outdated_virtual_machine_instance_workloads = outdated_virtual_machine_instance_workloads
         if phase is not None:
           self.phase = phase
-        if synchronization_address is not None:
-          self.synchronization_address = synchronization_address
+        if synchronization_addresses is not None:
+          self.synchronization_addresses = synchronization_addresses
         if target_deployment_config is not None:
           self.target_deployment_config = target_deployment_config
         if target_deployment_id is not None:
@@ -355,25 +355,25 @@ class V1KubeVirtStatus(object):
         self._phase = phase
 
     @property
-    def synchronization_address(self):
+    def synchronization_addresses(self):
         """
-        Gets the synchronization_address of this V1KubeVirtStatus.
+        Gets the synchronization_addresses of this V1KubeVirtStatus.
 
-        :return: The synchronization_address of this V1KubeVirtStatus.
-        :rtype: str
+        :return: The synchronization_addresses of this V1KubeVirtStatus.
+        :rtype: list[str]
         """
-        return self._synchronization_address
+        return self._synchronization_addresses
 
-    @synchronization_address.setter
-    def synchronization_address(self, synchronization_address):
+    @synchronization_addresses.setter
+    def synchronization_addresses(self, synchronization_addresses):
         """
-        Sets the synchronization_address of this V1KubeVirtStatus.
+        Sets the synchronization_addresses of this V1KubeVirtStatus.
 
-        :param synchronization_address: The synchronization_address of this V1KubeVirtStatus.
-        :type: str
+        :param synchronization_addresses: The synchronization_addresses of this V1KubeVirtStatus.
+        :type: list[str]
         """
 
-        self._synchronization_address = synchronization_address
+        self._synchronization_addresses = synchronization_addresses
 
     @property
     def target_deployment_config(self):

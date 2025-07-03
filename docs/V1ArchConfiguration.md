@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **arm64** | [**V1ArchSpecificConfiguration**](V1ArchSpecificConfiguration.md) |  | [optional] 
 **default_architecture** | **str** |  | [optional] 
 **ppc64le** | [**V1ArchSpecificConfiguration**](V1ArchSpecificConfiguration.md) |  | [optional] 
+**s390x** | [**V1ArchSpecificConfiguration**](V1ArchSpecificConfiguration.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

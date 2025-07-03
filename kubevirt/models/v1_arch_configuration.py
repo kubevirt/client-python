@@ -34,17 +34,19 @@ class V1ArchConfiguration(object):
         'amd64': 'V1ArchSpecificConfiguration',
         'arm64': 'V1ArchSpecificConfiguration',
         'default_architecture': 'str',
-        'ppc64le': 'V1ArchSpecificConfiguration'
+        'ppc64le': 'V1ArchSpecificConfiguration',
+        's390x': 'V1ArchSpecificConfiguration'
     }
 
     attribute_map = {
         'amd64': 'amd64',
         'arm64': 'arm64',
         'default_architecture': 'defaultArchitecture',
-        'ppc64le': 'ppc64le'
+        'ppc64le': 'ppc64le',
+        's390x': 's390x'
     }
 
-    def __init__(self, amd64=None, arm64=None, default_architecture=None, ppc64le=None):
+    def __init__(self, amd64=None, arm64=None, default_architecture=None, ppc64le=None, s390x=None):
         """
         V1ArchConfiguration - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class V1ArchConfiguration(object):
         self._arm64 = None
         self._default_architecture = None
         self._ppc64le = None
+        self._s390x = None
 
         if amd64 is not None:
           self.amd64 = amd64
@@ -62,6 +65,8 @@ class V1ArchConfiguration(object):
           self.default_architecture = default_architecture
         if ppc64le is not None:
           self.ppc64le = ppc64le
+        if s390x is not None:
+          self.s390x = s390x
 
     @property
     def amd64(self):
@@ -146,6 +151,27 @@ class V1ArchConfiguration(object):
         """
 
         self._ppc64le = ppc64le
+
+    @property
+    def s390x(self):
+        """
+        Gets the s390x of this V1ArchConfiguration.
+
+        :return: The s390x of this V1ArchConfiguration.
+        :rtype: V1ArchSpecificConfiguration
+        """
+        return self._s390x
+
+    @s390x.setter
+    def s390x(self, s390x):
+        """
+        Sets the s390x of this V1ArchConfiguration.
+
+        :param s390x: The s390x of this V1ArchConfiguration.
+        :type: V1ArchSpecificConfiguration
+        """
+
+        self._s390x = s390x
 
     def to_dict(self):
         """

@@ -82,6 +82,7 @@ class V1VirtualMachineInstanceGuestOSUser(object):
     def login_time(self):
         """
         Gets the login_time of this V1VirtualMachineInstanceGuestOSUser.
+        Time of login of this user on the computer. If multiple instances of the user are logged in, the earliest login time is reported. The value is in fractional seconds since epoch time.
 
         :return: The login_time of this V1VirtualMachineInstanceGuestOSUser.
         :rtype: float
@@ -92,6 +93,7 @@ class V1VirtualMachineInstanceGuestOSUser(object):
     def login_time(self, login_time):
         """
         Sets the login_time of this V1VirtualMachineInstanceGuestOSUser.
+        Time of login of this user on the computer. If multiple instances of the user are logged in, the earliest login time is reported. The value is in fractional seconds since epoch time.
 
         :param login_time: The login_time of this V1VirtualMachineInstanceGuestOSUser.
         :type: float

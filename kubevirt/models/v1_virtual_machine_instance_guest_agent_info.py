@@ -37,6 +37,7 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
         'guest_agent_version': 'str',
         'hostname': 'str',
         'kind': 'str',
+        'load': 'V1VirtualMachineInstanceGuestOSLoad',
         'os': 'V1VirtualMachineInstanceGuestOSInfo',
         'supported_commands': 'list[V1GuestAgentCommandInfo]',
         'timezone': 'str',
@@ -50,13 +51,14 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
         'guest_agent_version': 'guestAgentVersion',
         'hostname': 'hostname',
         'kind': 'kind',
+        'load': 'load',
         'os': 'os',
         'supported_commands': 'supportedCommands',
         'timezone': 'timezone',
         'user_list': 'userList'
     }
 
-    def __init__(self, api_version=None, fs_freeze_status=None, fs_info=None, guest_agent_version=None, hostname=None, kind=None, os=None, supported_commands=None, timezone=None, user_list=None):
+    def __init__(self, api_version=None, fs_freeze_status=None, fs_info=None, guest_agent_version=None, hostname=None, kind=None, load=None, os=None, supported_commands=None, timezone=None, user_list=None):
         """
         V1VirtualMachineInstanceGuestAgentInfo - a model defined in Swagger
         """
@@ -67,6 +69,7 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
         self._guest_agent_version = None
         self._hostname = None
         self._kind = None
+        self._load = None
         self._os = None
         self._supported_commands = None
         self._timezone = None
@@ -84,6 +87,8 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
           self.hostname = hostname
         if kind is not None:
           self.kind = kind
+        if load is not None:
+          self.load = load
         if os is not None:
           self.os = os
         if supported_commands is not None:
@@ -230,6 +235,29 @@ class V1VirtualMachineInstanceGuestAgentInfo(object):
         """
 
         self._kind = kind
+
+    @property
+    def load(self):
+        """
+        Gets the load of this V1VirtualMachineInstanceGuestAgentInfo.
+        Load contains the system load averages (1M, 5M, 15M) from the guest agent
+
+        :return: The load of this V1VirtualMachineInstanceGuestAgentInfo.
+        :rtype: V1VirtualMachineInstanceGuestOSLoad
+        """
+        return self._load
+
+    @load.setter
+    def load(self, load):
+        """
+        Sets the load of this V1VirtualMachineInstanceGuestAgentInfo.
+        Load contains the system load averages (1M, 5M, 15M) from the guest agent
+
+        :param load: The load of this V1VirtualMachineInstanceGuestAgentInfo.
+        :type: V1VirtualMachineInstanceGuestOSLoad
+        """
+
+        self._load = load
 
     @property
     def os(self):

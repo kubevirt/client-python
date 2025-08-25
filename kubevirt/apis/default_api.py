@@ -20539,6 +20539,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param bool preserve_session: Connect only if ongoing session is not disturbed.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -20565,12 +20566,13 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param bool preserve_session: Connect only if ongoing session is not disturbed.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace']
+        all_params = ['name', 'namespace', 'preserve_session']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -20602,6 +20604,8 @@ class DefaultApi(object):
             path_params['namespace'] = params['namespace']
 
         query_params = []
+        if 'preserve_session' in params:
+            query_params.append(('preserveSession', params['preserve_session']))
 
         header_params = {}
 
@@ -23447,6 +23451,7 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param bool preserve_session: Connect only if ongoing session is not disturbed.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -23473,12 +23478,13 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param bool preserve_session: Connect only if ongoing session is not disturbed.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'namespace']
+        all_params = ['name', 'namespace', 'preserve_session']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -23510,6 +23516,8 @@ class DefaultApi(object):
             path_params['namespace'] = params['namespace']
 
         query_params = []
+        if 'preserve_session' in params:
+            query_params.append(('preserveSession', params['preserve_session']))
 
         header_params = {}
 

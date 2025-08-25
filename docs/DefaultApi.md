@@ -9676,7 +9676,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_vnc**
-> v1_vnc(name, namespace)
+> v1_vnc(name, namespace, preserve_session=preserve_session)
 
 
 
@@ -9694,9 +9694,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+preserve_session = true # bool | Connect only if ongoing session is not disturbed. (optional)
 
 try: 
-    api_instance.v1_vnc(name, namespace)
+    api_instance.v1_vnc(name, namespace, preserve_session=preserve_session)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1_vnc: %s\n" % e)
 ```
@@ -9707,6 +9708,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **preserve_session** | **bool**| Connect only if ongoing session is not disturbed. | [optional] 
 
 ### Return type
 
@@ -10996,7 +10998,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1alpha3_vnc**
-> v1alpha3_vnc(name, namespace)
+> v1alpha3_vnc(name, namespace, preserve_session=preserve_session)
 
 
 
@@ -11014,9 +11016,10 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 name = 'name_example' # str | Name of the resource
 namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+preserve_session = true # bool | Connect only if ongoing session is not disturbed. (optional)
 
 try: 
-    api_instance.v1alpha3_vnc(name, namespace)
+    api_instance.v1alpha3_vnc(name, namespace, preserve_session=preserve_session)
 except ApiException as e:
     print("Exception when calling DefaultApi->v1alpha3_vnc: %s\n" % e)
 ```
@@ -11027,6 +11030,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **preserve_session** | **bool**| Connect only if ongoing session is not disturbed. | [optional] 
 
 ### Return type
 

@@ -135,6 +135,7 @@ class V1ArchConfiguration(object):
     def ppc64le(self):
         """
         Gets the ppc64le of this V1ArchConfiguration.
+        Deprecated: ppc64le architecture is no longer supported.
 
         :return: The ppc64le of this V1ArchConfiguration.
         :rtype: V1ArchSpecificConfiguration
@@ -145,6 +146,7 @@ class V1ArchConfiguration(object):
     def ppc64le(self, ppc64le):
         """
         Sets the ppc64le of this V1ArchConfiguration.
+        Deprecated: ppc64le architecture is no longer supported.
 
         :param ppc64le: The ppc64le of this V1ArchConfiguration.
         :type: V1ArchSpecificConfiguration

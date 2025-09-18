@@ -31,6 +31,7 @@ class V1VirtualMachineStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'changed_block_tracking': 'V1ChangedBlockTrackingStatus',
         'conditions': 'list[V1VirtualMachineCondition]',
         'created': 'bool',
         'desired_generation': 'int',
@@ -51,6 +52,7 @@ class V1VirtualMachineStatus(object):
     }
 
     attribute_map = {
+        'changed_block_tracking': 'changedBlockTracking',
         'conditions': 'conditions',
         'created': 'created',
         'desired_generation': 'desiredGeneration',
@@ -70,11 +72,12 @@ class V1VirtualMachineStatus(object):
         'volume_update_state': 'volumeUpdateState'
     }
 
-    def __init__(self, conditions=None, created=None, desired_generation=None, instancetype_ref=None, memory_dump_request=None, observed_generation=None, preference_ref=None, printable_status=None, ready=None, restore_in_progress=None, run_strategy=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None, volume_update_state=None):
+    def __init__(self, changed_block_tracking=None, conditions=None, created=None, desired_generation=None, instancetype_ref=None, memory_dump_request=None, observed_generation=None, preference_ref=None, printable_status=None, ready=None, restore_in_progress=None, run_strategy=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None, volume_update_state=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
 
+        self._changed_block_tracking = None
         self._conditions = None
         self._created = None
         self._desired_generation = None
@@ -93,6 +96,8 @@ class V1VirtualMachineStatus(object):
         self._volume_snapshot_statuses = None
         self._volume_update_state = None
 
+        if changed_block_tracking is not None:
+          self.changed_block_tracking = changed_block_tracking
         if conditions is not None:
           self.conditions = conditions
         if created is not None:
@@ -127,6 +132,29 @@ class V1VirtualMachineStatus(object):
           self.volume_snapshot_statuses = volume_snapshot_statuses
         if volume_update_state is not None:
           self.volume_update_state = volume_update_state
+
+    @property
+    def changed_block_tracking(self):
+        """
+        Gets the changed_block_tracking of this V1VirtualMachineStatus.
+        ChangedBlockTracking represents the status of the changedBlockTracking
+
+        :return: The changed_block_tracking of this V1VirtualMachineStatus.
+        :rtype: V1ChangedBlockTrackingStatus
+        """
+        return self._changed_block_tracking
+
+    @changed_block_tracking.setter
+    def changed_block_tracking(self, changed_block_tracking):
+        """
+        Sets the changed_block_tracking of this V1VirtualMachineStatus.
+        ChangedBlockTracking represents the status of the changedBlockTracking
+
+        :param changed_block_tracking: The changed_block_tracking of this V1VirtualMachineStatus.
+        :type: V1ChangedBlockTrackingStatus
+        """
+
+        self._changed_block_tracking = changed_block_tracking
 
     @property
     def conditions(self):

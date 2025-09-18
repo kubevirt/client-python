@@ -81,6 +81,8 @@ from .models.v1_cpu import V1CPU
 from .models.v1_cpu_feature import V1CPUFeature
 from .models.v1_cpu_topology import V1CPUTopology
 from .models.v1_cert_config import V1CertConfig
+from .models.v1_changed_block_tracking_selectors import V1ChangedBlockTrackingSelectors
+from .models.v1_changed_block_tracking_status import V1ChangedBlockTrackingStatus
 from .models.v1_chassis import V1Chassis
 from .models.v1_client_passthrough_devices import V1ClientPassthroughDevices
 from .models.v1_clock import V1Clock

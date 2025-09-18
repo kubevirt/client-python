@@ -33,6 +33,7 @@ class V1VirtualMachineInstanceStatus(object):
     swagger_types = {
         'vsockcid': 'int',
         'active_pods': 'dict(str, str)',
+        'changed_block_tracking': 'V1ChangedBlockTrackingStatus',
         'conditions': 'list[V1VirtualMachineInstanceCondition]',
         'current_cpu_topology': 'V1CPUTopology',
         'device_status': 'V1DeviceStatus',
@@ -63,6 +64,7 @@ class V1VirtualMachineInstanceStatus(object):
     attribute_map = {
         'vsockcid': 'VSOCKCID',
         'active_pods': 'activePods',
+        'changed_block_tracking': 'changedBlockTracking',
         'conditions': 'conditions',
         'current_cpu_topology': 'currentCPUTopology',
         'device_status': 'deviceStatus',
@@ -90,13 +92,14 @@ class V1VirtualMachineInstanceStatus(object):
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, vsockcid=None, active_pods=None, conditions=None, current_cpu_topology=None, device_status=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, kernel_boot_status=None, launcher_container_image_version=None, machine=None, memory=None, migrated_volumes=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
+    def __init__(self, vsockcid=None, active_pods=None, changed_block_tracking=None, conditions=None, current_cpu_topology=None, device_status=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, kernel_boot_status=None, launcher_container_image_version=None, machine=None, memory=None, migrated_volumes=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
 
         self._vsockcid = None
         self._active_pods = None
+        self._changed_block_tracking = None
         self._conditions = None
         self._current_cpu_topology = None
         self._device_status = None
@@ -127,6 +130,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.vsockcid = vsockcid
         if active_pods is not None:
           self.active_pods = active_pods
+        if changed_block_tracking is not None:
+          self.changed_block_tracking = changed_block_tracking
         if conditions is not None:
           self.conditions = conditions
         if current_cpu_topology is not None:
@@ -223,6 +228,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._active_pods = active_pods
+
+    @property
+    def changed_block_tracking(self):
+        """
+        Gets the changed_block_tracking of this V1VirtualMachineInstanceStatus.
+        ChangedBlockTracking represents the status of the changedBlockTracking
+
+        :return: The changed_block_tracking of this V1VirtualMachineInstanceStatus.
+        :rtype: V1ChangedBlockTrackingStatus
+        """
+        return self._changed_block_tracking
+
+    @changed_block_tracking.setter
+    def changed_block_tracking(self, changed_block_tracking):
+        """
+        Sets the changed_block_tracking of this V1VirtualMachineInstanceStatus.
+        ChangedBlockTracking represents the status of the changedBlockTracking
+
+        :param changed_block_tracking: The changed_block_tracking of this V1VirtualMachineInstanceStatus.
+        :type: V1ChangedBlockTrackingStatus
+        """
+
+        self._changed_block_tracking = changed_block_tracking
 
     @property
     def conditions(self):

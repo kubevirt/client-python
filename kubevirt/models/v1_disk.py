@@ -35,6 +35,7 @@ class V1Disk(object):
         'boot_order': 'int',
         'cache': 'str',
         'cdrom': 'V1CDRomTarget',
+        'changed_block_tracking': 'bool',
         'dedicated_io_thread': 'bool',
         'disk': 'V1DiskTarget',
         'error_policy': 'str',
@@ -51,6 +52,7 @@ class V1Disk(object):
         'boot_order': 'bootOrder',
         'cache': 'cache',
         'cdrom': 'cdrom',
+        'changed_block_tracking': 'changedBlockTracking',
         'dedicated_io_thread': 'dedicatedIOThread',
         'disk': 'disk',
         'error_policy': 'errorPolicy',
@@ -62,7 +64,7 @@ class V1Disk(object):
         'tag': 'tag'
     }
 
-    def __init__(self, block_size=None, boot_order=None, cache=None, cdrom=None, dedicated_io_thread=None, disk=None, error_policy=None, io=None, lun=None, name='', serial=None, shareable=None, tag=None):
+    def __init__(self, block_size=None, boot_order=None, cache=None, cdrom=None, changed_block_tracking=None, dedicated_io_thread=None, disk=None, error_policy=None, io=None, lun=None, name='', serial=None, shareable=None, tag=None):
         """
         V1Disk - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class V1Disk(object):
         self._boot_order = None
         self._cache = None
         self._cdrom = None
+        self._changed_block_tracking = None
         self._dedicated_io_thread = None
         self._disk = None
         self._error_policy = None
@@ -89,6 +92,8 @@ class V1Disk(object):
           self.cache = cache
         if cdrom is not None:
           self.cdrom = cdrom
+        if changed_block_tracking is not None:
+          self.changed_block_tracking = changed_block_tracking
         if dedicated_io_thread is not None:
           self.dedicated_io_thread = dedicated_io_thread
         if disk is not None:
@@ -198,6 +203,29 @@ class V1Disk(object):
         """
 
         self._cdrom = cdrom
+
+    @property
+    def changed_block_tracking(self):
+        """
+        Gets the changed_block_tracking of this V1Disk.
+        ChangedBlockTracking indicates this disk should have CBT option Defaults to false.
+
+        :return: The changed_block_tracking of this V1Disk.
+        :rtype: bool
+        """
+        return self._changed_block_tracking
+
+    @changed_block_tracking.setter
+    def changed_block_tracking(self, changed_block_tracking):
+        """
+        Sets the changed_block_tracking of this V1Disk.
+        ChangedBlockTracking indicates this disk should have CBT option Defaults to false.
+
+        :param changed_block_tracking: The changed_block_tracking of this V1Disk.
+        :type: bool
+        """
+
+        self._changed_block_tracking = changed_block_tracking
 
     @property
     def dedicated_io_thread(self):

@@ -32,6 +32,7 @@ class V1beta1DataVolumeSourceVDDK(object):
     """
     swagger_types = {
         'backing_file': 'str',
+        'extra_args': 'str',
         'init_image_url': 'str',
         'secret_ref': 'str',
         'thumbprint': 'str',
@@ -41,6 +42,7 @@ class V1beta1DataVolumeSourceVDDK(object):
 
     attribute_map = {
         'backing_file': 'backingFile',
+        'extra_args': 'extraArgs',
         'init_image_url': 'initImageURL',
         'secret_ref': 'secretRef',
         'thumbprint': 'thumbprint',
@@ -48,12 +50,13 @@ class V1beta1DataVolumeSourceVDDK(object):
         'uuid': 'uuid'
     }
 
-    def __init__(self, backing_file=None, init_image_url=None, secret_ref=None, thumbprint=None, url=None, uuid=None):
+    def __init__(self, backing_file=None, extra_args=None, init_image_url=None, secret_ref=None, thumbprint=None, url=None, uuid=None):
         """
         V1beta1DataVolumeSourceVDDK - a model defined in Swagger
         """
 
         self._backing_file = None
+        self._extra_args = None
         self._init_image_url = None
         self._secret_ref = None
         self._thumbprint = None
@@ -62,6 +65,8 @@ class V1beta1DataVolumeSourceVDDK(object):
 
         if backing_file is not None:
           self.backing_file = backing_file
+        if extra_args is not None:
+          self.extra_args = extra_args
         if init_image_url is not None:
           self.init_image_url = init_image_url
         if secret_ref is not None:
@@ -95,6 +100,29 @@ class V1beta1DataVolumeSourceVDDK(object):
         """
 
         self._backing_file = backing_file
+
+    @property
+    def extra_args(self):
+        """
+        Gets the extra_args of this V1beta1DataVolumeSourceVDDK.
+        ExtraArgs is a reference to a ConfigMap containing extra arguments to pass directly to the VDDK library
+
+        :return: The extra_args of this V1beta1DataVolumeSourceVDDK.
+        :rtype: str
+        """
+        return self._extra_args
+
+    @extra_args.setter
+    def extra_args(self, extra_args):
+        """
+        Sets the extra_args of this V1beta1DataVolumeSourceVDDK.
+        ExtraArgs is a reference to a ConfigMap containing extra arguments to pass directly to the VDDK library
+
+        :param extra_args: The extra_args of this V1beta1DataVolumeSourceVDDK.
+        :type: str
+        """
+
+        self._extra_args = extra_args
 
     @property
     def init_image_url(self):

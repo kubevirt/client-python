@@ -33,6 +33,7 @@ class V1beta1DataVolumeSourceRegistry(object):
     swagger_types = {
         'cert_config_map': 'str',
         'image_stream': 'str',
+        'platform': 'V1beta1PlatformOptions',
         'pull_method': 'str',
         'secret_ref': 'str',
         'url': 'str'
@@ -41,18 +42,20 @@ class V1beta1DataVolumeSourceRegistry(object):
     attribute_map = {
         'cert_config_map': 'certConfigMap',
         'image_stream': 'imageStream',
+        'platform': 'platform',
         'pull_method': 'pullMethod',
         'secret_ref': 'secretRef',
         'url': 'url'
     }
 
-    def __init__(self, cert_config_map=None, image_stream=None, pull_method=None, secret_ref=None, url=None):
+    def __init__(self, cert_config_map=None, image_stream=None, platform=None, pull_method=None, secret_ref=None, url=None):
         """
         V1beta1DataVolumeSourceRegistry - a model defined in Swagger
         """
 
         self._cert_config_map = None
         self._image_stream = None
+        self._platform = None
         self._pull_method = None
         self._secret_ref = None
         self._url = None
@@ -61,6 +64,8 @@ class V1beta1DataVolumeSourceRegistry(object):
           self.cert_config_map = cert_config_map
         if image_stream is not None:
           self.image_stream = image_stream
+        if platform is not None:
+          self.platform = platform
         if pull_method is not None:
           self.pull_method = pull_method
         if secret_ref is not None:
@@ -113,6 +118,29 @@ class V1beta1DataVolumeSourceRegistry(object):
         """
 
         self._image_stream = image_stream
+
+    @property
+    def platform(self):
+        """
+        Gets the platform of this V1beta1DataVolumeSourceRegistry.
+        Platform describes the minimum runtime requirements of the image
+
+        :return: The platform of this V1beta1DataVolumeSourceRegistry.
+        :rtype: V1beta1PlatformOptions
+        """
+        return self._platform
+
+    @platform.setter
+    def platform(self, platform):
+        """
+        Sets the platform of this V1beta1DataVolumeSourceRegistry.
+        Platform describes the minimum runtime requirements of the image
+
+        :param platform: The platform of this V1beta1DataVolumeSourceRegistry.
+        :type: V1beta1PlatformOptions
+        """
+
+        self._platform = platform
 
     @property
     def pull_method(self):

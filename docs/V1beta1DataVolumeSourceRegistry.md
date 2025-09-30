@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cert_config_map** | **str** | CertConfigMap provides a reference to the Registry certs | [optional] 
 **image_stream** | **str** | ImageStream is the name of image stream for import | [optional] 
+**platform** | [**V1beta1PlatformOptions**](V1beta1PlatformOptions.md) | Platform describes the minimum runtime requirements of the image | [optional] 
 **pull_method** | **str** | PullMethod can be either \&quot;pod\&quot; (default import), or \&quot;node\&quot; (node docker cache based import) | [optional] 
 **secret_ref** | **str** | SecretRef provides the secret reference needed to access the Registry source | [optional] 
 **url** | **str** | URL is the url of the registry source (starting with the scheme: docker, oci-archive) | [optional] 

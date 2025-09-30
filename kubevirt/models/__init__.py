@@ -357,6 +357,7 @@ from .v1beta1_machine_preferences import V1beta1MachinePreferences
 from .v1beta1_memory_instancetype import V1beta1MemoryInstancetype
 from .v1beta1_memory_preference_requirement import V1beta1MemoryPreferenceRequirement
 from .v1beta1_persistent_volume_claim import V1beta1PersistentVolumeClaim
+from .v1beta1_platform_options import V1beta1PlatformOptions
 from .v1beta1_preference_requirements import V1beta1PreferenceRequirements
 from .v1beta1_snapshot_volumes_lists import V1beta1SnapshotVolumesLists
 from .v1beta1_source_spec import V1beta1SourceSpec

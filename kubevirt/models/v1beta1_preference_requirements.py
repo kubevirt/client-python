@@ -31,27 +31,55 @@ class V1beta1PreferenceRequirements(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'architecture': 'str',
         'cpu': 'V1beta1CPUPreferenceRequirement',
         'memory': 'V1beta1MemoryPreferenceRequirement'
     }
 
     attribute_map = {
+        'architecture': 'architecture',
         'cpu': 'cpu',
         'memory': 'memory'
     }
 
-    def __init__(self, cpu=None, memory=None):
+    def __init__(self, architecture=None, cpu=None, memory=None):
         """
         V1beta1PreferenceRequirements - a model defined in Swagger
         """
 
+        self._architecture = None
         self._cpu = None
         self._memory = None
 
+        if architecture is not None:
+          self.architecture = architecture
         if cpu is not None:
           self.cpu = cpu
         if memory is not None:
           self.memory = memory
+
+    @property
+    def architecture(self):
+        """
+        Gets the architecture of this V1beta1PreferenceRequirements.
+        Required Architecture of the VM referencing this preference
+
+        :return: The architecture of this V1beta1PreferenceRequirements.
+        :rtype: str
+        """
+        return self._architecture
+
+    @architecture.setter
+    def architecture(self, architecture):
+        """
+        Sets the architecture of this V1beta1PreferenceRequirements.
+        Required Architecture of the VM referencing this preference
+
+        :param architecture: The architecture of this V1beta1PreferenceRequirements.
+        :type: str
+        """
+
+        self._architecture = architecture
 
     @property
     def cpu(self):

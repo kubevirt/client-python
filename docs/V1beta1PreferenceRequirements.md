@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**architecture** | **str** | Required Architecture of the VM referencing this preference | [optional] 
 **cpu** | [**V1beta1CPUPreferenceRequirement**](V1beta1CPUPreferenceRequirement.md) | Required CPU related attributes of the instancetype. | [optional] 
 **memory** | [**V1beta1MemoryPreferenceRequirement**](V1beta1MemoryPreferenceRequirement.md) | Required Memory related attributes of the instancetype. | [optional] 
 

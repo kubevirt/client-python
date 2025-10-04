@@ -35,6 +35,7 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
         'cpu': 'V1beta1CPUInstancetype',
         'gpus': 'list[V1GPU]',
         'host_devices': 'list[V1HostDevice]',
+        'io_threads': 'V1DiskIOThreads',
         'io_threads_policy': 'str',
         'launch_security': 'V1LaunchSecurity',
         'memory': 'V1beta1MemoryInstancetype',
@@ -47,6 +48,7 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
         'cpu': 'cpu',
         'gpus': 'gpus',
         'host_devices': 'hostDevices',
+        'io_threads': 'ioThreads',
         'io_threads_policy': 'ioThreadsPolicy',
         'launch_security': 'launchSecurity',
         'memory': 'memory',
@@ -54,7 +56,7 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
         'scheduler_name': 'schedulerName'
     }
 
-    def __init__(self, annotations=None, cpu=None, gpus=None, host_devices=None, io_threads_policy=None, launch_security=None, memory=None, node_selector=None, scheduler_name=None):
+    def __init__(self, annotations=None, cpu=None, gpus=None, host_devices=None, io_threads=None, io_threads_policy=None, launch_security=None, memory=None, node_selector=None, scheduler_name=None):
         """
         V1beta1VirtualMachineInstancetypeSpec - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
         self._cpu = None
         self._gpus = None
         self._host_devices = None
+        self._io_threads = None
         self._io_threads_policy = None
         self._launch_security = None
         self._memory = None
@@ -76,6 +79,8 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
           self.gpus = gpus
         if host_devices is not None:
           self.host_devices = host_devices
+        if io_threads is not None:
+          self.io_threads = io_threads
         if io_threads_policy is not None:
           self.io_threads_policy = io_threads_policy
         if launch_security is not None:
@@ -179,6 +184,29 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
         """
 
         self._host_devices = host_devices
+
+    @property
+    def io_threads(self):
+        """
+        Gets the io_threads of this V1beta1VirtualMachineInstancetypeSpec.
+        Optionally specifies the IOThreads options to be used by the instancetype.
+
+        :return: The io_threads of this V1beta1VirtualMachineInstancetypeSpec.
+        :rtype: V1DiskIOThreads
+        """
+        return self._io_threads
+
+    @io_threads.setter
+    def io_threads(self, io_threads):
+        """
+        Sets the io_threads of this V1beta1VirtualMachineInstancetypeSpec.
+        Optionally specifies the IOThreads options to be used by the instancetype.
+
+        :param io_threads: The io_threads of this V1beta1VirtualMachineInstancetypeSpec.
+        :type: V1DiskIOThreads
+        """
+
+        self._io_threads = io_threads
 
     @property
     def io_threads_policy(self):

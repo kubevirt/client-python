@@ -31,25 +31,53 @@ class V1CustomBlockSize(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'discard_granularity': 'int',
         'logical': 'int',
         'physical': 'int'
     }
 
     attribute_map = {
+        'discard_granularity': 'discardGranularity',
         'logical': 'logical',
         'physical': 'physical'
     }
 
-    def __init__(self, logical=0, physical=0):
+    def __init__(self, discard_granularity=None, logical=None, physical=None):
         """
         V1CustomBlockSize - a model defined in Swagger
         """
 
+        self._discard_granularity = None
         self._logical = None
         self._physical = None
 
-        self.logical = logical
-        self.physical = physical
+        if discard_granularity is not None:
+          self.discard_granularity = discard_granularity
+        if logical is not None:
+          self.logical = logical
+        if physical is not None:
+          self.physical = physical
+
+    @property
+    def discard_granularity(self):
+        """
+        Gets the discard_granularity of this V1CustomBlockSize.
+
+        :return: The discard_granularity of this V1CustomBlockSize.
+        :rtype: int
+        """
+        return self._discard_granularity
+
+    @discard_granularity.setter
+    def discard_granularity(self, discard_granularity):
+        """
+        Sets the discard_granularity of this V1CustomBlockSize.
+
+        :param discard_granularity: The discard_granularity of this V1CustomBlockSize.
+        :type: int
+        """
+
+        self._discard_granularity = discard_granularity
 
     @property
     def logical(self):
@@ -69,8 +97,6 @@ class V1CustomBlockSize(object):
         :param logical: The logical of this V1CustomBlockSize.
         :type: int
         """
-        if logical is None:
-            raise ValueError("Invalid value for `logical`, must not be `None`")
 
         self._logical = logical
 
@@ -92,8 +118,6 @@ class V1CustomBlockSize(object):
         :param physical: The physical of this V1CustomBlockSize.
         :type: int
         """
-        if physical is None:
-            raise ValueError("Invalid value for `physical`, must not be `None`")
 
         self._physical = physical
 

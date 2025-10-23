@@ -1,3 +1,6 @@
+**⚠️ This repository is deprecated and no longer maintained.**
+
+
 # kubevirt-py
 This is KubeVirt API an add-on for Kubernetes.
 

@@ -232,6 +232,7 @@ from .v1_sev_attestation import V1SEVAttestation
 from .v1_sev_measurement_info import V1SEVMeasurementInfo
 from .v1_sev_platform_info import V1SEVPlatformInfo
 from .v1_sev_policy import V1SEVPolicy
+from .v1_sevsnp import V1SEVSNP
 from .v1_sev_secret_options import V1SEVSecretOptions
 from .v1_sev_session_options import V1SEVSessionOptions
 from .v1_sm_bios_configuration import V1SMBiosConfiguration

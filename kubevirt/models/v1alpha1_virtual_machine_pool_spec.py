@@ -37,6 +37,7 @@ class V1alpha1VirtualMachinePoolSpec(object):
         'replicas': 'int',
         'scale_in_strategy': 'V1alpha1VirtualMachinePoolScaleInStrategy',
         'selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
+        'update_strategy': 'V1alpha1VirtualMachinePoolUpdateStrategy',
         'virtual_machine_template': 'V1alpha1VirtualMachineTemplateSpec'
     }
 
@@ -47,10 +48,11 @@ class V1alpha1VirtualMachinePoolSpec(object):
         'replicas': 'replicas',
         'scale_in_strategy': 'scaleInStrategy',
         'selector': 'selector',
+        'update_strategy': 'updateStrategy',
         'virtual_machine_template': 'virtualMachineTemplate'
     }
 
-    def __init__(self, max_unavailable=None, name_generation=None, paused=None, replicas=None, scale_in_strategy=None, selector=None, virtual_machine_template=None):
+    def __init__(self, max_unavailable=None, name_generation=None, paused=None, replicas=None, scale_in_strategy=None, selector=None, update_strategy=None, virtual_machine_template=None):
         """
         V1alpha1VirtualMachinePoolSpec - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class V1alpha1VirtualMachinePoolSpec(object):
         self._replicas = None
         self._scale_in_strategy = None
         self._selector = None
+        self._update_strategy = None
         self._virtual_machine_template = None
 
         if max_unavailable is not None:
@@ -74,6 +77,8 @@ class V1alpha1VirtualMachinePoolSpec(object):
         if scale_in_strategy is not None:
           self.scale_in_strategy = scale_in_strategy
         self.selector = selector
+        if update_strategy is not None:
+          self.update_strategy = update_strategy
         self.virtual_machine_template = virtual_machine_template
 
     @property
@@ -215,6 +220,29 @@ class V1alpha1VirtualMachinePoolSpec(object):
             raise ValueError("Invalid value for `selector`, must not be `None`")
 
         self._selector = selector
+
+    @property
+    def update_strategy(self):
+        """
+        Gets the update_strategy of this V1alpha1VirtualMachinePoolSpec.
+        UpdateStrategy specifies how the VMPool controller manages updating VMs within a VMPool
+
+        :return: The update_strategy of this V1alpha1VirtualMachinePoolSpec.
+        :rtype: V1alpha1VirtualMachinePoolUpdateStrategy
+        """
+        return self._update_strategy
+
+    @update_strategy.setter
+    def update_strategy(self, update_strategy):
+        """
+        Sets the update_strategy of this V1alpha1VirtualMachinePoolSpec.
+        UpdateStrategy specifies how the VMPool controller manages updating VMs within a VMPool
+
+        :param update_strategy: The update_strategy of this V1alpha1VirtualMachinePoolSpec.
+        :type: V1alpha1VirtualMachinePoolUpdateStrategy
+        """
+
+        self._update_strategy = update_strategy
 
     @property
     def virtual_machine_template(self):

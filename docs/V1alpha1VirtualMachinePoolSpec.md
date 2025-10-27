@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **replicas** | **int** | Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1. | [optional] 
 **scale_in_strategy** | [**V1alpha1VirtualMachinePoolScaleInStrategy**](V1alpha1VirtualMachinePoolScaleInStrategy.md) | ScaleInStrategy specifies how the VMPool controller manages scaling in VMs within a VMPool | [optional] 
 **selector** | [**K8sIoApimachineryPkgApisMetaV1LabelSelector**](K8sIoApimachineryPkgApisMetaV1LabelSelector.md) | Label selector for pods. Existing Poolss whose pods are selected by this will be the ones affected by this deployment. | 
+**update_strategy** | [**V1alpha1VirtualMachinePoolUpdateStrategy**](V1alpha1VirtualMachinePoolUpdateStrategy.md) | UpdateStrategy specifies how the VMPool controller manages updating VMs within a VMPool | [optional] 
 **virtual_machine_template** | [**V1alpha1VirtualMachineTemplateSpec**](V1alpha1VirtualMachineTemplateSpec.md) | Template describes the VM that will be created. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

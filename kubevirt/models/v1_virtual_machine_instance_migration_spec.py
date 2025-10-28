@@ -32,6 +32,7 @@ class V1VirtualMachineInstanceMigrationSpec(object):
     """
     swagger_types = {
         'added_node_selector': 'dict(str, str)',
+        'priority': 'str',
         'receive': 'V1VirtualMachineInstanceMigrationTarget',
         'send_to': 'V1VirtualMachineInstanceMigrationSource',
         'vmi_name': 'str'
@@ -39,23 +40,27 @@ class V1VirtualMachineInstanceMigrationSpec(object):
 
     attribute_map = {
         'added_node_selector': 'addedNodeSelector',
+        'priority': 'priority',
         'receive': 'receive',
         'send_to': 'sendTo',
         'vmi_name': 'vmiName'
     }
 
-    def __init__(self, added_node_selector=None, receive=None, send_to=None, vmi_name=None):
+    def __init__(self, added_node_selector=None, priority=None, receive=None, send_to=None, vmi_name=None):
         """
         V1VirtualMachineInstanceMigrationSpec - a model defined in Swagger
         """
 
         self._added_node_selector = None
+        self._priority = None
         self._receive = None
         self._send_to = None
         self._vmi_name = None
 
         if added_node_selector is not None:
           self.added_node_selector = added_node_selector
+        if priority is not None:
+          self.priority = priority
         if receive is not None:
           self.receive = receive
         if send_to is not None:
@@ -85,6 +90,29 @@ class V1VirtualMachineInstanceMigrationSpec(object):
         """
 
         self._added_node_selector = added_node_selector
+
+    @property
+    def priority(self):
+        """
+        Gets the priority of this V1VirtualMachineInstanceMigrationSpec.
+        Priority of the migration. This can be one of `system-critical`, `user-triggered`, `system-maintenance`.
+
+        :return: The priority of this V1VirtualMachineInstanceMigrationSpec.
+        :rtype: str
+        """
+        return self._priority
+
+    @priority.setter
+    def priority(self, priority):
+        """
+        Sets the priority of this V1VirtualMachineInstanceMigrationSpec.
+        Priority of the migration. This can be one of `system-critical`, `user-triggered`, `system-maintenance`.
+
+        :param priority: The priority of this V1VirtualMachineInstanceMigrationSpec.
+        :type: str
+        """
+
+        self._priority = priority
 
     @property
     def receive(self):

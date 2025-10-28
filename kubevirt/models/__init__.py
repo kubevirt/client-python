@@ -249,6 +249,7 @@ from .v1_storage_migrated_volume_info import V1StorageMigratedVolumeInfo
 from .v1_support_container_resources import V1SupportContainerResources
 from .v1_sy_nic_timer import V1SyNICTimer
 from .v1_sysprep_source import V1SysprepSource
+from .v1_tdx import V1TDX
 from .v1_tls_configuration import V1TLSConfiguration
 from .v1_tpm_device import V1TPMDevice
 from .v1_timer import V1Timer

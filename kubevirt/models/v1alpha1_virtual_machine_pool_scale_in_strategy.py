@@ -31,22 +31,55 @@ class V1alpha1VirtualMachinePoolScaleInStrategy(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'proactive': 'V1alpha1VirtualMachinePoolProactiveScaleInStrategy'
+        'opportunistic': 'V1alpha1VirtualMachinePoolOpportunisticScaleInStrategy',
+        'proactive': 'V1alpha1VirtualMachinePoolProactiveScaleInStrategy',
+        'unmanaged': 'V1alpha1VirtualMachinePoolUnmanagedStrategy'
     }
 
     attribute_map = {
-        'proactive': 'proactive'
+        'opportunistic': 'opportunistic',
+        'proactive': 'proactive',
+        'unmanaged': 'unmanaged'
     }
 
-    def __init__(self, proactive=None):
+    def __init__(self, opportunistic=None, proactive=None, unmanaged=None):
         """
         V1alpha1VirtualMachinePoolScaleInStrategy - a model defined in Swagger
         """
 
+        self._opportunistic = None
         self._proactive = None
+        self._unmanaged = None
 
+        if opportunistic is not None:
+          self.opportunistic = opportunistic
         if proactive is not None:
           self.proactive = proactive
+        if unmanaged is not None:
+          self.unmanaged = unmanaged
+
+    @property
+    def opportunistic(self):
+        """
+        Gets the opportunistic of this V1alpha1VirtualMachinePoolScaleInStrategy.
+        Opportunistic scale-in is a strategy when vms are deleted by some other means than the scale-in action. For example, when the VM is deleted by the user or when the VM is deleted by the node that is hosting the VM.
+
+        :return: The opportunistic of this V1alpha1VirtualMachinePoolScaleInStrategy.
+        :rtype: V1alpha1VirtualMachinePoolOpportunisticScaleInStrategy
+        """
+        return self._opportunistic
+
+    @opportunistic.setter
+    def opportunistic(self, opportunistic):
+        """
+        Sets the opportunistic of this V1alpha1VirtualMachinePoolScaleInStrategy.
+        Opportunistic scale-in is a strategy when vms are deleted by some other means than the scale-in action. For example, when the VM is deleted by the user or when the VM is deleted by the node that is hosting the VM.
+
+        :param opportunistic: The opportunistic of this V1alpha1VirtualMachinePoolScaleInStrategy.
+        :type: V1alpha1VirtualMachinePoolOpportunisticScaleInStrategy
+        """
+
+        self._opportunistic = opportunistic
 
     @property
     def proactive(self):
@@ -70,6 +103,29 @@ class V1alpha1VirtualMachinePoolScaleInStrategy(object):
         """
 
         self._proactive = proactive
+
+    @property
+    def unmanaged(self):
+        """
+        Gets the unmanaged of this V1alpha1VirtualMachinePoolScaleInStrategy.
+        The VM is never touched after creation. Users are responsible for scaling in the pool manually.
+
+        :return: The unmanaged of this V1alpha1VirtualMachinePoolScaleInStrategy.
+        :rtype: V1alpha1VirtualMachinePoolUnmanagedStrategy
+        """
+        return self._unmanaged
+
+    @unmanaged.setter
+    def unmanaged(self, unmanaged):
+        """
+        Sets the unmanaged of this V1alpha1VirtualMachinePoolScaleInStrategy.
+        The VM is never touched after creation. Users are responsible for scaling in the pool manually.
+
+        :param unmanaged: The unmanaged of this V1alpha1VirtualMachinePoolScaleInStrategy.
+        :type: V1alpha1VirtualMachinePoolUnmanagedStrategy
+        """
+
+        self._unmanaged = unmanaged
 
     def to_dict(self):
         """

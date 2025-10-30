@@ -727,6 +727,7 @@ class V1KubeVirtConfiguration(object):
     def min_cpu_model(self):
         """
         Gets the min_cpu_model of this V1KubeVirtConfiguration.
+        deprecated
 
         :return: The min_cpu_model of this V1KubeVirtConfiguration.
         :rtype: str
@@ -737,6 +738,7 @@ class V1KubeVirtConfiguration(object):
     def min_cpu_model(self, min_cpu_model):
         """
         Sets the min_cpu_model of this V1KubeVirtConfiguration.
+        deprecated
 
         :param min_cpu_model: The min_cpu_model of this V1KubeVirtConfiguration.
         :type: str

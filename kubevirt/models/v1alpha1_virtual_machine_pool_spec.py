@@ -31,6 +31,7 @@ class V1alpha1VirtualMachinePoolSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'autohealing': 'V1alpha1VirtualMachinePoolAutohealingStrategy',
         'max_unavailable': 'K8sIoApimachineryPkgUtilIntstrIntOrString',
         'name_generation': 'V1alpha1VirtualMachinePoolNameGeneration',
         'paused': 'bool',
@@ -42,6 +43,7 @@ class V1alpha1VirtualMachinePoolSpec(object):
     }
 
     attribute_map = {
+        'autohealing': 'autohealing',
         'max_unavailable': 'maxUnavailable',
         'name_generation': 'nameGeneration',
         'paused': 'paused',
@@ -52,11 +54,12 @@ class V1alpha1VirtualMachinePoolSpec(object):
         'virtual_machine_template': 'virtualMachineTemplate'
     }
 
-    def __init__(self, max_unavailable=None, name_generation=None, paused=None, replicas=None, scale_in_strategy=None, selector=None, update_strategy=None, virtual_machine_template=None):
+    def __init__(self, autohealing=None, max_unavailable=None, name_generation=None, paused=None, replicas=None, scale_in_strategy=None, selector=None, update_strategy=None, virtual_machine_template=None):
         """
         V1alpha1VirtualMachinePoolSpec - a model defined in Swagger
         """
 
+        self._autohealing = None
         self._max_unavailable = None
         self._name_generation = None
         self._paused = None
@@ -66,6 +69,8 @@ class V1alpha1VirtualMachinePoolSpec(object):
         self._update_strategy = None
         self._virtual_machine_template = None
 
+        if autohealing is not None:
+          self.autohealing = autohealing
         if max_unavailable is not None:
           self.max_unavailable = max_unavailable
         if name_generation is not None:
@@ -80,6 +85,29 @@ class V1alpha1VirtualMachinePoolSpec(object):
         if update_strategy is not None:
           self.update_strategy = update_strategy
         self.virtual_machine_template = virtual_machine_template
+
+    @property
+    def autohealing(self):
+        """
+        Gets the autohealing of this V1alpha1VirtualMachinePoolSpec.
+        Autohealing specifies when a VMpool should replace a failing VM with a reprovisioned instance
+
+        :return: The autohealing of this V1alpha1VirtualMachinePoolSpec.
+        :rtype: V1alpha1VirtualMachinePoolAutohealingStrategy
+        """
+        return self._autohealing
+
+    @autohealing.setter
+    def autohealing(self, autohealing):
+        """
+        Sets the autohealing of this V1alpha1VirtualMachinePoolSpec.
+        Autohealing specifies when a VMpool should replace a failing VM with a reprovisioned instance
+
+        :param autohealing: The autohealing of this V1alpha1VirtualMachinePoolSpec.
+        :type: V1alpha1VirtualMachinePoolAutohealingStrategy
+        """
+
+        self._autohealing = autohealing
 
     @property
     def max_unavailable(self):

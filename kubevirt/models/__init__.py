@@ -369,6 +369,7 @@ from .v1beta1_persistent_volume_claim import V1beta1PersistentVolumeClaim
 from .v1beta1_platform_options import V1beta1PlatformOptions
 from .v1beta1_preference_requirements import V1beta1PreferenceRequirements
 from .v1beta1_snapshot_volumes_lists import V1beta1SnapshotVolumesLists
+from .v1beta1_source_indication import V1beta1SourceIndication
 from .v1beta1_source_spec import V1beta1SourceSpec
 from .v1beta1_spread_options import V1beta1SpreadOptions
 from .v1beta1_storage_spec import V1beta1StorageSpec

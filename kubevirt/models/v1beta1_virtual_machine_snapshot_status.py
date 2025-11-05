@@ -38,6 +38,7 @@ class V1beta1VirtualMachineSnapshotStatus(object):
         'phase': 'str',
         'ready_to_use': 'bool',
         'snapshot_volumes': 'V1beta1SnapshotVolumesLists',
+        'source_indications': 'list[V1beta1SourceIndication]',
         'source_uid': 'str',
         'virtual_machine_snapshot_content_name': 'str'
     }
@@ -50,11 +51,12 @@ class V1beta1VirtualMachineSnapshotStatus(object):
         'phase': 'phase',
         'ready_to_use': 'readyToUse',
         'snapshot_volumes': 'snapshotVolumes',
+        'source_indications': 'sourceIndications',
         'source_uid': 'sourceUID',
         'virtual_machine_snapshot_content_name': 'virtualMachineSnapshotContentName'
     }
 
-    def __init__(self, conditions=None, creation_time=None, error=None, indications=None, phase=None, ready_to_use=None, snapshot_volumes=None, source_uid=None, virtual_machine_snapshot_content_name=None):
+    def __init__(self, conditions=None, creation_time=None, error=None, indications=None, phase=None, ready_to_use=None, snapshot_volumes=None, source_indications=None, source_uid=None, virtual_machine_snapshot_content_name=None):
         """
         V1beta1VirtualMachineSnapshotStatus - a model defined in Swagger
         """
@@ -66,6 +68,7 @@ class V1beta1VirtualMachineSnapshotStatus(object):
         self._phase = None
         self._ready_to_use = None
         self._snapshot_volumes = None
+        self._source_indications = None
         self._source_uid = None
         self._virtual_machine_snapshot_content_name = None
 
@@ -83,6 +86,8 @@ class V1beta1VirtualMachineSnapshotStatus(object):
           self.ready_to_use = ready_to_use
         if snapshot_volumes is not None:
           self.snapshot_volumes = snapshot_volumes
+        if source_indications is not None:
+          self.source_indications = source_indications
         if source_uid is not None:
           self.source_uid = source_uid
         if virtual_machine_snapshot_content_name is not None:
@@ -155,6 +160,7 @@ class V1beta1VirtualMachineSnapshotStatus(object):
     def indications(self):
         """
         Gets the indications of this V1beta1VirtualMachineSnapshotStatus.
+        Deprecated: Use SourceIndications instead. This field will be removed in a future version.
 
         :return: The indications of this V1beta1VirtualMachineSnapshotStatus.
         :rtype: list[str]
@@ -165,6 +171,7 @@ class V1beta1VirtualMachineSnapshotStatus(object):
     def indications(self, indications):
         """
         Sets the indications of this V1beta1VirtualMachineSnapshotStatus.
+        Deprecated: Use SourceIndications instead. This field will be removed in a future version.
 
         :param indications: The indications of this V1beta1VirtualMachineSnapshotStatus.
         :type: list[str]
@@ -234,6 +241,27 @@ class V1beta1VirtualMachineSnapshotStatus(object):
         """
 
         self._snapshot_volumes = snapshot_volumes
+
+    @property
+    def source_indications(self):
+        """
+        Gets the source_indications of this V1beta1VirtualMachineSnapshotStatus.
+
+        :return: The source_indications of this V1beta1VirtualMachineSnapshotStatus.
+        :rtype: list[V1beta1SourceIndication]
+        """
+        return self._source_indications
+
+    @source_indications.setter
+    def source_indications(self, source_indications):
+        """
+        Sets the source_indications of this V1beta1VirtualMachineSnapshotStatus.
+
+        :param source_indications: The source_indications of this V1beta1VirtualMachineSnapshotStatus.
+        :type: list[V1beta1SourceIndication]
+        """
+
+        self._source_indications = source_indications
 
     @property
     def source_uid(self):

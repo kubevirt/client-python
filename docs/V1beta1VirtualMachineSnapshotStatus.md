@@ -6,10 +6,11 @@ Name | Type | Description | Notes
 **conditions** | [**list[V1beta1Condition]**](V1beta1Condition.md) |  | [optional] 
 **creation_time** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) |  | [optional] 
 **error** | [**V1beta1Error**](V1beta1Error.md) |  | [optional] 
-**indications** | **list[str]** |  | [optional] 
+**indications** | **list[str]** | Deprecated: Use SourceIndications instead. This field will be removed in a future version. | [optional] 
 **phase** | **str** |  | [optional] 
 **ready_to_use** | **bool** |  | [optional] 
 **snapshot_volumes** | [**V1beta1SnapshotVolumesLists**](V1beta1SnapshotVolumesLists.md) |  | [optional] 
+**source_indications** | [**list[V1beta1SourceIndication]**](V1beta1SourceIndication.md) |  | [optional] 
 **source_uid** | **str** |  | [optional] 
 **virtual_machine_snapshot_content_name** | **str** |  | [optional] 
 

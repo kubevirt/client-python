@@ -130,6 +130,7 @@ from .v1_downward_metrics_volume_source import V1DownwardMetricsVolumeSource
 from .v1_efi import V1EFI
 from .v1_empty_disk_source import V1EmptyDiskSource
 from .v1_ephemeral_volume_source import V1EphemeralVolumeSource
+from .v1_evacuate_cancel_options import V1EvacuateCancelOptions
 from .v1_feature_apic import V1FeatureAPIC
 from .v1_feature_hyperv import V1FeatureHyperv
 from .v1_feature_kvm import V1FeatureKVM

@@ -439,9 +439,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_func13(self):
+    def test_func15(self):
         """
-        Test case for func13
+        Test case for func15
 
         
         """
@@ -1743,6 +1743,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1alpha3vm_evacuatecancel(self):
+        """
+        Test case for v1alpha3vm_evacuatecancel
+
+        
+        """
+        pass
+
     def test_v1alpha3vm_expand_spec(self):
         """
         Test case for v1alpha3vm_expand_spec
@@ -1786,6 +1794,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3vmi_addvolume(self):
         """
         Test case for v1alpha3vmi_addvolume
+
+        
+        """
+        pass
+
+    def test_v1alpha3vmi_evacuatecancel(self):
+        """
+        Test case for v1alpha3vmi_evacuatecancel
 
         
         """
@@ -1871,6 +1887,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1vm_evacuatecancel(self):
+        """
+        Test case for v1vm_evacuatecancel
+
+        
+        """
+        pass
+
     def test_v1vm_expand_spec(self):
         """
         Test case for v1vm_expand_spec
@@ -1914,6 +1938,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1vmi_addvolume(self):
         """
         Test case for v1vmi_addvolume
+
+        
+        """
+        pass
+
+    def test_v1vmi_evacuatecancel(self):
+        """
+        Test case for v1vmi_evacuatecancel
 
         
         """

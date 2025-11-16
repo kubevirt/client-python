@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **termination_grace_period_seconds** | **int** | Grace period observed after signalling a VirtualMachineInstance to stop after which the VirtualMachineInstance is force terminated. | [optional] 
 **tolerations** | [**list[K8sIoApiCoreV1Toleration]**](K8sIoApiCoreV1Toleration.md) | If toleration is specified, obey all the toleration rules. | [optional] 
 **topology_spread_constraints** | [**list[K8sIoApiCoreV1TopologySpreadConstraint]**](K8sIoApiCoreV1TopologySpreadConstraint.md) | TopologySpreadConstraints describes how a group of VMIs will be spread across a given topology domains. K8s scheduler will schedule VMI pods in a way which abides by the constraints. | [optional] 
+**utility_volumes** | [**list[V1UtilityVolume]**](V1UtilityVolume.md) | List of utility volumes that can be mounted to the vmi virt-launcher pod without having a matching disk in the domain. Used to collect data for various operational workflows. | [optional] 
 **volumes** | [**list[V1Volume]**](V1Volume.md) | List of volumes that can be mounted by disks belonging to the vmi. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

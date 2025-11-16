@@ -262,6 +262,7 @@ from .v1_unpause_options import V1UnpauseOptions
 from .v1_user_password_access_credential import V1UserPasswordAccessCredential
 from .v1_user_password_access_credential_propagation_method import V1UserPasswordAccessCredentialPropagationMethod
 from .v1_user_password_access_credential_source import V1UserPasswordAccessCredentialSource
+from .v1_utility_volume import V1UtilityVolume
 from .v1_vgpu_display_options import V1VGPUDisplayOptions
 from .v1_vgpu_options import V1VGPUOptions
 from .v1_video_device import V1VideoDevice

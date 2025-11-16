@@ -43,7 +43,8 @@ class V1MigrationConfiguration(object):
         'parallel_migrations_per_cluster': 'int',
         'parallel_outbound_migrations_per_node': 'int',
         'progress_timeout': 'int',
-        'unsafe_migration_override': 'bool'
+        'unsafe_migration_override': 'bool',
+        'utility_volumes_timeout': 'int'
     }
 
     attribute_map = {
@@ -59,10 +60,11 @@ class V1MigrationConfiguration(object):
         'parallel_migrations_per_cluster': 'parallelMigrationsPerCluster',
         'parallel_outbound_migrations_per_node': 'parallelOutboundMigrationsPerNode',
         'progress_timeout': 'progressTimeout',
-        'unsafe_migration_override': 'unsafeMigrationOverride'
+        'unsafe_migration_override': 'unsafeMigrationOverride',
+        'utility_volumes_timeout': 'utilityVolumesTimeout'
     }
 
-    def __init__(self, allow_auto_converge=None, allow_post_copy=None, allow_workload_disruption=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, disable_tls=None, match_se_linux_level_on_migration=None, network=None, node_drain_taint_key=None, parallel_migrations_per_cluster=None, parallel_outbound_migrations_per_node=None, progress_timeout=None, unsafe_migration_override=None):
+    def __init__(self, allow_auto_converge=None, allow_post_copy=None, allow_workload_disruption=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, disable_tls=None, match_se_linux_level_on_migration=None, network=None, node_drain_taint_key=None, parallel_migrations_per_cluster=None, parallel_outbound_migrations_per_node=None, progress_timeout=None, unsafe_migration_override=None, utility_volumes_timeout=None):
         """
         V1MigrationConfiguration - a model defined in Swagger
         """
@@ -80,6 +82,7 @@ class V1MigrationConfiguration(object):
         self._parallel_outbound_migrations_per_node = None
         self._progress_timeout = None
         self._unsafe_migration_override = None
+        self._utility_volumes_timeout = None
 
         if allow_auto_converge is not None:
           self.allow_auto_converge = allow_auto_converge
@@ -107,6 +110,8 @@ class V1MigrationConfiguration(object):
           self.progress_timeout = progress_timeout
         if unsafe_migration_override is not None:
           self.unsafe_migration_override = unsafe_migration_override
+        if utility_volumes_timeout is not None:
+          self.utility_volumes_timeout = utility_volumes_timeout
 
     @property
     def allow_auto_converge(self):
@@ -406,6 +411,29 @@ class V1MigrationConfiguration(object):
         """
 
         self._unsafe_migration_override = unsafe_migration_override
+
+    @property
+    def utility_volumes_timeout(self):
+        """
+        Gets the utility_volumes_timeout of this V1MigrationConfiguration.
+        UtilityVolumesTimeout is the maximum number of seconds a migration can wait in Pending state for utility volumes to be detached. If utility volumes are still present after this timeout, the migration will be marked as Failed. Defaults to 150
+
+        :return: The utility_volumes_timeout of this V1MigrationConfiguration.
+        :rtype: int
+        """
+        return self._utility_volumes_timeout
+
+    @utility_volumes_timeout.setter
+    def utility_volumes_timeout(self, utility_volumes_timeout):
+        """
+        Sets the utility_volumes_timeout of this V1MigrationConfiguration.
+        UtilityVolumesTimeout is the maximum number of seconds a migration can wait in Pending state for utility volumes to be detached. If utility volumes are still present after this timeout, the migration will be marked as Failed. Defaults to 150
+
+        :param utility_volumes_timeout: The utility_volumes_timeout of this V1MigrationConfiguration.
+        :type: int
+        """
+
+        self._utility_volumes_timeout = utility_volumes_timeout
 
     def to_dict(self):
         """

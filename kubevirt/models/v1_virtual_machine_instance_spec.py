@@ -51,6 +51,7 @@ class V1VirtualMachineInstanceSpec(object):
         'termination_grace_period_seconds': 'int',
         'tolerations': 'list[K8sIoApiCoreV1Toleration]',
         'topology_spread_constraints': 'list[K8sIoApiCoreV1TopologySpreadConstraint]',
+        'utility_volumes': 'list[V1UtilityVolume]',
         'volumes': 'list[V1Volume]'
     }
 
@@ -75,10 +76,11 @@ class V1VirtualMachineInstanceSpec(object):
         'termination_grace_period_seconds': 'terminationGracePeriodSeconds',
         'tolerations': 'tolerations',
         'topology_spread_constraints': 'topologySpreadConstraints',
+        'utility_volumes': 'utilityVolumes',
         'volumes': 'volumes'
     }
 
-    def __init__(self, access_credentials=None, affinity=None, architecture=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, resource_claims=None, scheduler_name=None, start_strategy=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, topology_spread_constraints=None, volumes=None):
+    def __init__(self, access_credentials=None, affinity=None, architecture=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, resource_claims=None, scheduler_name=None, start_strategy=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, topology_spread_constraints=None, utility_volumes=None, volumes=None):
         """
         V1VirtualMachineInstanceSpec - a model defined in Swagger
         """
@@ -103,6 +105,7 @@ class V1VirtualMachineInstanceSpec(object):
         self._termination_grace_period_seconds = None
         self._tolerations = None
         self._topology_spread_constraints = None
+        self._utility_volumes = None
         self._volumes = None
 
         if access_credentials is not None:
@@ -144,6 +147,8 @@ class V1VirtualMachineInstanceSpec(object):
           self.tolerations = tolerations
         if topology_spread_constraints is not None:
           self.topology_spread_constraints = topology_spread_constraints
+        if utility_volumes is not None:
+          self.utility_volumes = utility_volumes
         if volumes is not None:
           self.volumes = volumes
 
@@ -614,6 +619,29 @@ class V1VirtualMachineInstanceSpec(object):
         """
 
         self._topology_spread_constraints = topology_spread_constraints
+
+    @property
+    def utility_volumes(self):
+        """
+        Gets the utility_volumes of this V1VirtualMachineInstanceSpec.
+        List of utility volumes that can be mounted to the vmi virt-launcher pod without having a matching disk in the domain. Used to collect data for various operational workflows.
+
+        :return: The utility_volumes of this V1VirtualMachineInstanceSpec.
+        :rtype: list[V1UtilityVolume]
+        """
+        return self._utility_volumes
+
+    @utility_volumes.setter
+    def utility_volumes(self, utility_volumes):
+        """
+        Sets the utility_volumes of this V1VirtualMachineInstanceSpec.
+        List of utility volumes that can be mounted to the vmi virt-launcher pod without having a matching disk in the domain. Used to collect data for various operational workflows.
+
+        :param utility_volumes: The utility_volumes of this V1VirtualMachineInstanceSpec.
+        :type: list[V1UtilityVolume]
+        """
+
+        self._utility_volumes = utility_volumes
 
     @property
     def volumes(self):

@@ -262,6 +262,7 @@ from .models.v1_unpause_options import V1UnpauseOptions
 from .models.v1_user_password_access_credential import V1UserPasswordAccessCredential
 from .models.v1_user_password_access_credential_propagation_method import V1UserPasswordAccessCredentialPropagationMethod
 from .models.v1_user_password_access_credential_source import V1UserPasswordAccessCredentialSource
+from .models.v1_utility_volume import V1UtilityVolume
 from .models.v1_vgpu_display_options import V1VGPUDisplayOptions
 from .models.v1_vgpu_options import V1VGPUOptions
 from .models.v1_video_device import V1VideoDevice

@@ -150,7 +150,7 @@ class V1VirtualMachineSpec(object):
     def run_strategy(self):
         """
         Gets the run_strategy of this V1VirtualMachineSpec.
-        Running state indicates the requested running state of the VirtualMachineInstance mutually exclusive with Running
+        Running state indicates the requested running state of the VirtualMachineInstance mutually exclusive with Running Following are allowed values: - \"Always\": VMI should always be running. - \"Halted\": VMI should never be running. - \"Manual\": VMI can be started/stopped using API endpoints. - \"RerunOnFailure\": VMI will initially be running and restarted if a failure occurs, but will not be restarted upon successful completion. - \"Once\": VMI will run once and not be restarted upon completion regardless if the completion is of phase Failure or Success.
 
         :return: The run_strategy of this V1VirtualMachineSpec.
         :rtype: str
@@ -161,7 +161,7 @@ class V1VirtualMachineSpec(object):
     def run_strategy(self, run_strategy):
         """
         Sets the run_strategy of this V1VirtualMachineSpec.
-        Running state indicates the requested running state of the VirtualMachineInstance mutually exclusive with Running
+        Running state indicates the requested running state of the VirtualMachineInstance mutually exclusive with Running Following are allowed values: - \"Always\": VMI should always be running. - \"Halted\": VMI should never be running. - \"Manual\": VMI can be started/stopped using API endpoints. - \"RerunOnFailure\": VMI will initially be running and restarted if a failure occurs, but will not be restarted upon successful completion. - \"Once\": VMI will run once and not be restarted upon completion regardless if the completion is of phase Failure or Success.
 
         :param run_strategy: The run_strategy of this V1VirtualMachineSpec.
         :type: str

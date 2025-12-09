@@ -269,6 +269,7 @@ from .models.v1_video_device import V1VideoDevice
 from .models.v1_virtual_machine import V1VirtualMachine
 from .models.v1_virtual_machine_condition import V1VirtualMachineCondition
 from .models.v1_virtual_machine_instance import V1VirtualMachineInstance
+from .models.v1_virtual_machine_instance_backup_status import V1VirtualMachineInstanceBackupStatus
 from .models.v1_virtual_machine_instance_condition import V1VirtualMachineInstanceCondition
 from .models.v1_virtual_machine_instance_file_system import V1VirtualMachineInstanceFileSystem
 from .models.v1_virtual_machine_instance_file_system_disk import V1VirtualMachineInstanceFileSystemDisk
@@ -318,11 +319,17 @@ from .models.v1_volume_snapshot_status import V1VolumeSnapshotStatus
 from .models.v1_volume_status import V1VolumeStatus
 from .models.v1_volume_update_state import V1VolumeUpdateState
 from .models.v1_watchdog import V1Watchdog
+from .models.v1alpha1_backup_options import V1alpha1BackupOptions
+from .models.v1alpha1_condition import V1alpha1Condition
 from .models.v1alpha1_migration_policy import V1alpha1MigrationPolicy
 from .models.v1alpha1_migration_policy_list import V1alpha1MigrationPolicyList
 from .models.v1alpha1_migration_policy_spec import V1alpha1MigrationPolicySpec
 from .models.v1alpha1_migration_policy_status import V1alpha1MigrationPolicyStatus
 from .models.v1alpha1_selectors import V1alpha1Selectors
+from .models.v1alpha1_virtual_machine_backup import V1alpha1VirtualMachineBackup
+from .models.v1alpha1_virtual_machine_backup_list import V1alpha1VirtualMachineBackupList
+from .models.v1alpha1_virtual_machine_backup_spec import V1alpha1VirtualMachineBackupSpec
+from .models.v1alpha1_virtual_machine_backup_status import V1alpha1VirtualMachineBackupStatus
 from .models.v1beta1_cpu_instancetype import V1beta1CPUInstancetype
 from .models.v1beta1_cpu_preference_requirement import V1beta1CPUPreferenceRequirement
 from .models.v1beta1_cpu_preferences import V1beta1CPUPreferences

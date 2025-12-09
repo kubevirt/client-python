@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**create_migration_policy**](DefaultApi.md#create_migration_policy) | **POST** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies | 
 [**create_namespaced_kube_virt**](DefaultApi.md#create_namespaced_kube_virt) | **POST** /apis/kubevirt.io/v1/namespaces/{namespace}/kubevirt | 
 [**create_namespaced_virtual_machine**](DefaultApi.md#create_namespaced_virtual_machine) | **POST** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines | 
+[**create_namespaced_virtual_machine_backup**](DefaultApi.md#create_namespaced_virtual_machine_backup) | **POST** /apis/backup.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinebackups | 
 [**create_namespaced_virtual_machine_export**](DefaultApi.md#create_namespaced_virtual_machine_export) | **POST** /apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports | 
 [**create_namespaced_virtual_machine_instance**](DefaultApi.md#create_namespaced_virtual_machine_instance) | **POST** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances | 
 [**create_namespaced_virtual_machine_instance_migration**](DefaultApi.md#create_namespaced_virtual_machine_instance_migration) | **POST** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancemigrations | 
@@ -24,6 +25,7 @@ Method | HTTP request | Description
 [**delete_collection_migration_policy**](DefaultApi.md#delete_collection_migration_policy) | **DELETE** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies | 
 [**delete_collection_namespaced_kube_virt**](DefaultApi.md#delete_collection_namespaced_kube_virt) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/kubevirt | 
 [**delete_collection_namespaced_virtual_machine**](DefaultApi.md#delete_collection_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines | 
+[**delete_collection_namespaced_virtual_machine_backup**](DefaultApi.md#delete_collection_namespaced_virtual_machine_backup) | **DELETE** /apis/backup.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinebackups | 
 [**delete_collection_namespaced_virtual_machine_export**](DefaultApi.md#delete_collection_namespaced_virtual_machine_export) | **DELETE** /apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports | 
 [**delete_collection_namespaced_virtual_machine_instance**](DefaultApi.md#delete_collection_namespaced_virtual_machine_instance) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances | 
 [**delete_collection_namespaced_virtual_machine_instance_migration**](DefaultApi.md#delete_collection_namespaced_virtual_machine_instance_migration) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancemigrations | 
@@ -41,6 +43,7 @@ Method | HTTP request | Description
 [**delete_migration_policy**](DefaultApi.md#delete_migration_policy) | **DELETE** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies/{name} | 
 [**delete_namespaced_kube_virt**](DefaultApi.md#delete_namespaced_kube_virt) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/kubevirt/{name} | 
 [**delete_namespaced_virtual_machine**](DefaultApi.md#delete_namespaced_virtual_machine) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | 
+[**delete_namespaced_virtual_machine_backup**](DefaultApi.md#delete_namespaced_virtual_machine_backup) | **DELETE** /apis/backup.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinebackups/{name} | 
 [**delete_namespaced_virtual_machine_export**](DefaultApi.md#delete_namespaced_virtual_machine_export) | **DELETE** /apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports/{name} | 
 [**delete_namespaced_virtual_machine_instance**](DefaultApi.md#delete_namespaced_virtual_machine_instance) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name} | 
 [**delete_namespaced_virtual_machine_instance_migration**](DefaultApi.md#delete_namespaced_virtual_machine_instance_migration) | **DELETE** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancemigrations/{name} | 
@@ -57,6 +60,7 @@ Method | HTTP request | Description
 [**delete_virtual_machine_cluster_preference**](DefaultApi.md#delete_virtual_machine_cluster_preference) | **DELETE** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterpreferences/{name} | 
 [**func15**](DefaultApi.md#func15) | **GET** /healthz | 
 [**func6**](DefaultApi.md#func6) | **GET** /openapi/v2 | 
+[**get_api_group_backup_kubevirt_io**](DefaultApi.md#get_api_group_backup_kubevirt_io) | **GET** /apis/backup.kubevirt.io/ | 
 [**get_api_group_clone_kubevirt_io**](DefaultApi.md#get_api_group_clone_kubevirt_io) | **GET** /apis/clone.kubevirt.io/ | 
 [**get_api_group_export_kubevirt_io**](DefaultApi.md#get_api_group_export_kubevirt_io) | **GET** /apis/export.kubevirt.io/ | 
 [**get_api_group_instancetype_kubevirt_io**](DefaultApi.md#get_api_group_instancetype_kubevirt_io) | **GET** /apis/instancetype.kubevirt.io/ | 
@@ -65,6 +69,7 @@ Method | HTTP request | Description
 [**get_api_group_migrations_kubevirt_io**](DefaultApi.md#get_api_group_migrations_kubevirt_io) | **GET** /apis/migrations.kubevirt.io/ | 
 [**get_api_group_pool_kubevirt_io**](DefaultApi.md#get_api_group_pool_kubevirt_io) | **GET** /apis/pool.kubevirt.io/ | 
 [**get_api_group_snapshot_kubevirt_io**](DefaultApi.md#get_api_group_snapshot_kubevirt_io) | **GET** /apis/snapshot.kubevirt.io/ | 
+[**get_api_resources_backup_kubevirt_io_v1alpha1**](DefaultApi.md#get_api_resources_backup_kubevirt_io_v1alpha1) | **GET** /apis/backup.kubevirt.io/v1alpha1/ | 
 [**get_api_resources_clone_kubevirt_io_v1beta1**](DefaultApi.md#get_api_resources_clone_kubevirt_io_v1beta1) | **GET** /apis/clone.kubevirt.io/v1beta1/ | 
 [**get_api_resources_export_kubevirt_io_v1beta1**](DefaultApi.md#get_api_resources_export_kubevirt_io_v1beta1) | **GET** /apis/export.kubevirt.io/v1beta1/ | 
 [**get_api_resources_instancetype_kubevirt_io_v1beta1**](DefaultApi.md#get_api_resources_instancetype_kubevirt_io_v1beta1) | **GET** /apis/instancetype.kubevirt.io/v1beta1/ | 
@@ -80,6 +85,7 @@ Method | HTTP request | Description
 [**list_migration_policy**](DefaultApi.md#list_migration_policy) | **GET** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies | 
 [**list_namespaced_kube_virt**](DefaultApi.md#list_namespaced_kube_virt) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/kubevirt | 
 [**list_namespaced_virtual_machine**](DefaultApi.md#list_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines | 
+[**list_namespaced_virtual_machine_backup**](DefaultApi.md#list_namespaced_virtual_machine_backup) | **GET** /apis/backup.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinebackups | 
 [**list_namespaced_virtual_machine_export**](DefaultApi.md#list_namespaced_virtual_machine_export) | **GET** /apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports | 
 [**list_namespaced_virtual_machine_instance**](DefaultApi.md#list_namespaced_virtual_machine_instance) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances | 
 [**list_namespaced_virtual_machine_instance_migration**](DefaultApi.md#list_namespaced_virtual_machine_instance_migration) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancemigrations | 
@@ -91,6 +97,7 @@ Method | HTTP request | Description
 [**list_namespaced_virtual_machine_restore**](DefaultApi.md#list_namespaced_virtual_machine_restore) | **GET** /apis/snapshot.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachinerestores | 
 [**list_namespaced_virtual_machine_snapshot**](DefaultApi.md#list_namespaced_virtual_machine_snapshot) | **GET** /apis/snapshot.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachinesnapshots | 
 [**list_namespaced_virtual_machine_snapshot_content**](DefaultApi.md#list_namespaced_virtual_machine_snapshot_content) | **GET** /apis/snapshot.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachinesnapshotcontents | 
+[**list_virtual_machine_backup_for_all_namespaces**](DefaultApi.md#list_virtual_machine_backup_for_all_namespaces) | **GET** /apis/backup.kubevirt.io/v1alpha1/virtualmachinebackups | 
 [**list_virtual_machine_clone**](DefaultApi.md#list_virtual_machine_clone) | **GET** /apis/clone.kubevirt.io/v1beta1/virtualmachineclones | 
 [**list_virtual_machine_cluster_instancetype**](DefaultApi.md#list_virtual_machine_cluster_instancetype) | **GET** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterinstancetypes | 
 [**list_virtual_machine_cluster_preference**](DefaultApi.md#list_virtual_machine_cluster_preference) | **GET** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterpreferences | 
@@ -109,6 +116,7 @@ Method | HTTP request | Description
 [**patch_migration_policy**](DefaultApi.md#patch_migration_policy) | **PATCH** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies/{name} | 
 [**patch_namespaced_kube_virt**](DefaultApi.md#patch_namespaced_kube_virt) | **PATCH** /apis/kubevirt.io/v1/namespaces/{namespace}/kubevirt/{name} | 
 [**patch_namespaced_virtual_machine**](DefaultApi.md#patch_namespaced_virtual_machine) | **PATCH** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | 
+[**patch_namespaced_virtual_machine_backup**](DefaultApi.md#patch_namespaced_virtual_machine_backup) | **PATCH** /apis/backup.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinebackups/{name} | 
 [**patch_namespaced_virtual_machine_export**](DefaultApi.md#patch_namespaced_virtual_machine_export) | **PATCH** /apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports/{name} | 
 [**patch_namespaced_virtual_machine_instance**](DefaultApi.md#patch_namespaced_virtual_machine_instance) | **PATCH** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name} | 
 [**patch_namespaced_virtual_machine_instance_migration**](DefaultApi.md#patch_namespaced_virtual_machine_instance_migration) | **PATCH** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancemigrations/{name} | 
@@ -126,6 +134,7 @@ Method | HTTP request | Description
 [**read_migration_policy**](DefaultApi.md#read_migration_policy) | **GET** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies/{name} | 
 [**read_namespaced_kube_virt**](DefaultApi.md#read_namespaced_kube_virt) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/kubevirt/{name} | 
 [**read_namespaced_virtual_machine**](DefaultApi.md#read_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | 
+[**read_namespaced_virtual_machine_backup**](DefaultApi.md#read_namespaced_virtual_machine_backup) | **GET** /apis/backup.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinebackups/{name} | 
 [**read_namespaced_virtual_machine_export**](DefaultApi.md#read_namespaced_virtual_machine_export) | **GET** /apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports/{name} | 
 [**read_namespaced_virtual_machine_instance**](DefaultApi.md#read_namespaced_virtual_machine_instance) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name} | 
 [**read_namespaced_virtual_machine_instance_migration**](DefaultApi.md#read_namespaced_virtual_machine_instance_migration) | **GET** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancemigrations/{name} | 
@@ -143,6 +152,7 @@ Method | HTTP request | Description
 [**replace_migration_policy**](DefaultApi.md#replace_migration_policy) | **PUT** /apis/migrations.kubevirt.io/v1alpha1/migrationpolicies/{name} | 
 [**replace_namespaced_kube_virt**](DefaultApi.md#replace_namespaced_kube_virt) | **PUT** /apis/kubevirt.io/v1/namespaces/{namespace}/kubevirt/{name} | 
 [**replace_namespaced_virtual_machine**](DefaultApi.md#replace_namespaced_virtual_machine) | **PUT** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | 
+[**replace_namespaced_virtual_machine_backup**](DefaultApi.md#replace_namespaced_virtual_machine_backup) | **PUT** /apis/backup.kubevirt.io/v1alpha1/namespaces/{namespace}/virtualmachinebackups/{name} | 
 [**replace_namespaced_virtual_machine_export**](DefaultApi.md#replace_namespaced_virtual_machine_export) | **PUT** /apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports/{name} | 
 [**replace_namespaced_virtual_machine_instance**](DefaultApi.md#replace_namespaced_virtual_machine_instance) | **PUT** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name} | 
 [**replace_namespaced_virtual_machine_instance_migration**](DefaultApi.md#replace_namespaced_virtual_machine_instance_migration) | **PUT** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstancemigrations/{name} | 
@@ -157,6 +167,7 @@ Method | HTTP request | Description
 [**replace_virtual_machine_clone**](DefaultApi.md#replace_virtual_machine_clone) | **PUT** /apis/clone.kubevirt.io/v1beta1/virtualmachineclones/{name} | 
 [**replace_virtual_machine_cluster_instancetype**](DefaultApi.md#replace_virtual_machine_cluster_instancetype) | **PUT** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterinstancetypes/{name} | 
 [**replace_virtual_machine_cluster_preference**](DefaultApi.md#replace_virtual_machine_cluster_preference) | **PUT** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterpreferences/{name} | 
+[**v1_backup**](DefaultApi.md#v1_backup) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/backup | 
 [**v1_check_health**](DefaultApi.md#v1_check_health) | **GET** /apis/subresources.kubevirt.io/v1/healthz | 
 [**v1_console**](DefaultApi.md#v1_console) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/console | 
 [**v1_expand_spec**](DefaultApi.md#v1_expand_spec) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/expand-vm-spec | 
@@ -185,6 +196,7 @@ Method | HTTP request | Description
 [**v1_vnc**](DefaultApi.md#v1_vnc) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/vnc | 
 [**v1_vnc_screenshot**](DefaultApi.md#v1_vnc_screenshot) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/vnc/screenshot | 
 [**v1_vsock**](DefaultApi.md#v1_vsock) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/vsock | 
+[**v1alpha3_backup**](DefaultApi.md#v1alpha3_backup) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/backup | 
 [**v1alpha3_check_health**](DefaultApi.md#v1alpha3_check_health) | **GET** /apis/subresources.kubevirt.io/v1alpha3/healthz | 
 [**v1alpha3_console**](DefaultApi.md#v1alpha3_console) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/console | 
 [**v1alpha3_expand_spec**](DefaultApi.md#v1alpha3_expand_spec) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/expand-vm-spec | 
@@ -252,6 +264,7 @@ Method | HTTP request | Description
 [**watch_migration_policy_list_for_all_namespaces**](DefaultApi.md#watch_migration_policy_list_for_all_namespaces) | **GET** /apis/migrations.kubevirt.io/v1alpha1/watch/migrationpolicies | 
 [**watch_namespaced_kube_virt**](DefaultApi.md#watch_namespaced_kube_virt) | **GET** /apis/kubevirt.io/v1/watch/namespaces/{namespace}/kubevirt | 
 [**watch_namespaced_virtual_machine**](DefaultApi.md#watch_namespaced_virtual_machine) | **GET** /apis/kubevirt.io/v1/watch/namespaces/{namespace}/virtualmachines | 
+[**watch_namespaced_virtual_machine_backup**](DefaultApi.md#watch_namespaced_virtual_machine_backup) | **GET** /apis/backup.kubevirt.io/v1alpha1/watch/namespaces/{namespace}/virtualmachinebackups | 
 [**watch_namespaced_virtual_machine_export**](DefaultApi.md#watch_namespaced_virtual_machine_export) | **GET** /apis/export.kubevirt.io/v1beta1/watch/namespaces/{namespace}/virtualmachineexports | 
 [**watch_namespaced_virtual_machine_instance**](DefaultApi.md#watch_namespaced_virtual_machine_instance) | **GET** /apis/kubevirt.io/v1/watch/namespaces/{namespace}/virtualmachineinstances | 
 [**watch_namespaced_virtual_machine_instance_migration**](DefaultApi.md#watch_namespaced_virtual_machine_instance_migration) | **GET** /apis/kubevirt.io/v1/watch/namespaces/{namespace}/virtualmachineinstancemigrations | 
@@ -263,6 +276,7 @@ Method | HTTP request | Description
 [**watch_namespaced_virtual_machine_restore**](DefaultApi.md#watch_namespaced_virtual_machine_restore) | **GET** /apis/snapshot.kubevirt.io/v1beta1/watch/namespaces/{namespace}/virtualmachinerestores | 
 [**watch_namespaced_virtual_machine_snapshot**](DefaultApi.md#watch_namespaced_virtual_machine_snapshot) | **GET** /apis/snapshot.kubevirt.io/v1beta1/watch/namespaces/{namespace}/virtualmachinesnapshots | 
 [**watch_namespaced_virtual_machine_snapshot_content**](DefaultApi.md#watch_namespaced_virtual_machine_snapshot_content) | **GET** /apis/snapshot.kubevirt.io/v1beta1/watch/namespaces/{namespace}/virtualmachinesnapshotcontents | 
+[**watch_virtual_machine_backup_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_backup_list_for_all_namespaces) | **GET** /apis/backup.kubevirt.io/v1alpha1/watch/virtualmachinebackups | 
 [**watch_virtual_machine_clone_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_clone_list_for_all_namespaces) | **GET** /apis/clone.kubevirt.io/v1beta1/watch/virtualmachineclones | 
 [**watch_virtual_machine_cluster_instancetype_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_cluster_instancetype_list_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1beta1/watch/virtualmachineclusterinstancetypes | 
 [**watch_virtual_machine_cluster_preference_list_for_all_namespaces**](DefaultApi.md#watch_virtual_machine_cluster_preference_list_for_all_namespaces) | **GET** /apis/instancetype.kubevirt.io/v1beta1/watch/virtualmachineclusterpreferences | 
@@ -413,6 +427,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V1VirtualMachine**](V1VirtualMachine.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/yaml
+ - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_namespaced_virtual_machine_backup**
+> V1alpha1VirtualMachineBackup create_namespaced_virtual_machine_backup(body, namespace)
+
+
+
+Create a VirtualMachineBackup object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+body = kubevirt.V1alpha1VirtualMachineBackup() # V1alpha1VirtualMachineBackup | 
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+
+try: 
+    api_response = api_instance.create_namespaced_virtual_machine_backup(body, namespace)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->create_namespaced_virtual_machine_backup: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**V1alpha1VirtualMachineBackup**](V1alpha1VirtualMachineBackup.md)|  | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+
+### Return type
+
+[**V1alpha1VirtualMachineBackup**](V1alpha1VirtualMachineBackup.md)
 
 ### Authorization
 
@@ -1258,6 +1321,67 @@ try:
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->delete_collection_namespaced_virtual_machine: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **_continue** | **str**| The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. | [optional] 
+ **field_selector** | **str**| A selector to restrict the list of returned objects by their fields. Defaults to everything. | [optional] 
+ **include_uninitialized** | **bool**| If true, partially initialized resources are included in the response. | [optional] 
+ **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything | [optional] 
+ **limit** | **int**| limit is a maximum number of responses to return for a list call. If more items exist, the server will set the &#x60;continue&#x60; field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. | [optional] 
+ **resource_version** | **str**| When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. | [optional] 
+ **timeout_seconds** | **int**| TimeoutSeconds for the list/watch call. | [optional] 
+ **watch** | **bool**| Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. | [optional] 
+
+### Return type
+
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_collection_namespaced_virtual_machine_backup**
+> K8sIoApimachineryPkgApisMetaV1Status delete_collection_namespaced_virtual_machine_backup(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+
+
+
+Delete a collection of VirtualMachineBackup objects.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+_continue = '_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
+field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
+include_uninitialized = true # bool | If true, partially initialized resources are included in the response. (optional)
+label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
+limit = 56 # int | limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. (optional)
+resource_version = 'resource_version_example' # str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. (optional)
+timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
+watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
+
+try: 
+    api_response = api_instance.delete_collection_namespaced_virtual_machine_backup(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->delete_collection_namespaced_virtual_machine_backup: %s\n" % e)
 ```
 
 ### Parameters
@@ -2311,6 +2435,63 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_namespaced_virtual_machine_backup**
+> K8sIoApimachineryPkgApisMetaV1Status delete_namespaced_virtual_machine_backup(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
+
+
+
+Delete a VirtualMachineBackup object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1DeleteOptions() # K8sIoApimachineryPkgApisMetaV1DeleteOptions | 
+grace_period_seconds = 56 # int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
+orphan_dependents = true # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
+propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
+
+try: 
+    api_response = api_instance.delete_namespaced_virtual_machine_backup(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->delete_namespaced_virtual_machine_backup: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1DeleteOptions**](K8sIoApimachineryPkgApisMetaV1DeleteOptions.md)|  | 
+ **grace_period_seconds** | **int**| The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | [optional] 
+ **orphan_dependents** | **bool**| Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | [optional] 
+ **propagation_policy** | **str**| Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | [optional] 
+
+### Return type
+
+[**K8sIoApimachineryPkgApisMetaV1Status**](K8sIoApimachineryPkgApisMetaV1Status.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/yaml
+ - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **delete_namespaced_virtual_machine_export**
 > K8sIoApimachineryPkgApisMetaV1Status delete_namespaced_virtual_machine_export(name, namespace, body, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy)
 
@@ -3185,6 +3366,49 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_api_group_backup_kubevirt_io**
+> K8sIoApimachineryPkgApisMetaV1APIGroup get_api_group_backup_kubevirt_io()
+
+
+
+Get a KubeVirt API group
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+
+try: 
+    api_response = api_instance.get_api_group_backup_kubevirt_io()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->get_api_group_backup_kubevirt_io: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**K8sIoApimachineryPkgApisMetaV1APIGroup**](K8sIoApimachineryPkgApisMetaV1APIGroup.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_api_group_clone_kubevirt_io**
 > K8sIoApimachineryPkgApisMetaV1APIGroup get_api_group_clone_kubevirt_io()
 
@@ -3517,6 +3741,49 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**K8sIoApimachineryPkgApisMetaV1APIGroup**](K8sIoApimachineryPkgApisMetaV1APIGroup.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_api_resources_backup_kubevirt_io_v1alpha1**
+> K8sIoApimachineryPkgApisMetaV1APIResourceList get_api_resources_backup_kubevirt_io_v1alpha1()
+
+
+
+Get KubeVirt API Resources
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+
+try: 
+    api_response = api_instance.get_api_resources_backup_kubevirt_io_v1alpha1()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->get_api_resources_backup_kubevirt_io_v1alpha1: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**K8sIoApimachineryPkgApisMetaV1APIResourceList**](K8sIoApimachineryPkgApisMetaV1APIResourceList.md)
 
 ### Authorization
 
@@ -4247,6 +4514,69 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **list_namespaced_virtual_machine_backup**
+> V1alpha1VirtualMachineBackupList list_namespaced_virtual_machine_backup(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+
+
+
+Get a list of VirtualMachineBackup objects.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+_continue = '_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
+field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
+include_uninitialized = true # bool | If true, partially initialized resources are included in the response. (optional)
+label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
+limit = 56 # int | limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. (optional)
+resource_version = 'resource_version_example' # str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. (optional)
+timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
+watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
+
+try: 
+    api_response = api_instance.list_namespaced_virtual_machine_backup(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->list_namespaced_virtual_machine_backup: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **_continue** | **str**| The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. | [optional] 
+ **field_selector** | **str**| A selector to restrict the list of returned objects by their fields. Defaults to everything. | [optional] 
+ **include_uninitialized** | **bool**| If true, partially initialized resources are included in the response. | [optional] 
+ **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything | [optional] 
+ **limit** | **int**| limit is a maximum number of responses to return for a list call. If more items exist, the server will set the &#x60;continue&#x60; field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. | [optional] 
+ **resource_version** | **str**| When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. | [optional] 
+ **timeout_seconds** | **int**| TimeoutSeconds for the list/watch call. | [optional] 
+ **watch** | **bool**| Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. | [optional] 
+
+### Return type
+
+[**V1alpha1VirtualMachineBackupList**](V1alpha1VirtualMachineBackupList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/yaml, application/json;stream=watch
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **list_namespaced_virtual_machine_export**
 > V1beta1VirtualMachineExportList list_namespaced_virtual_machine_export(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
@@ -4928,6 +5258,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V1beta1VirtualMachineSnapshotContentList**](V1beta1VirtualMachineSnapshotContentList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/yaml, application/json;stream=watch
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_virtual_machine_backup_for_all_namespaces**
+> V1alpha1VirtualMachineBackupList list_virtual_machine_backup_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+
+
+
+Get a list of all VirtualMachineBackup objects.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+_continue = '_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
+field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
+include_uninitialized = true # bool | If true, partially initialized resources are included in the response. (optional)
+label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
+limit = 56 # int | limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. (optional)
+resource_version = 'resource_version_example' # str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. (optional)
+timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
+watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
+
+try: 
+    api_response = api_instance.list_virtual_machine_backup_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->list_virtual_machine_backup_for_all_namespaces: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **_continue** | **str**| The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. | [optional] 
+ **field_selector** | **str**| A selector to restrict the list of returned objects by their fields. Defaults to everything. | [optional] 
+ **include_uninitialized** | **bool**| If true, partially initialized resources are included in the response. | [optional] 
+ **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything | [optional] 
+ **limit** | **int**| limit is a maximum number of responses to return for a list call. If more items exist, the server will set the &#x60;continue&#x60; field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. | [optional] 
+ **resource_version** | **str**| When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. | [optional] 
+ **timeout_seconds** | **int**| TimeoutSeconds for the list/watch call. | [optional] 
+ **watch** | **bool**| Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. | [optional] 
+
+### Return type
+
+[**V1alpha1VirtualMachineBackupList**](V1alpha1VirtualMachineBackupList.md)
 
 ### Authorization
 
@@ -6006,6 +6397,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **patch_namespaced_virtual_machine_backup**
+> V1alpha1VirtualMachineBackup patch_namespaced_virtual_machine_backup(name, namespace, body)
+
+
+
+Patch a VirtualMachineBackup object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.K8sIoApimachineryPkgApisMetaV1Patch() # K8sIoApimachineryPkgApisMetaV1Patch | 
+
+try: 
+    api_response = api_instance.patch_namespaced_virtual_machine_backup(name, namespace, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->patch_namespaced_virtual_machine_backup: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**K8sIoApimachineryPkgApisMetaV1Patch**](K8sIoApimachineryPkgApisMetaV1Patch.md)|  | 
+
+### Return type
+
+[**V1alpha1VirtualMachineBackup**](V1alpha1VirtualMachineBackup.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json-patch+json, application/merge-patch+json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **patch_namespaced_virtual_machine_export**
 > V1beta1VirtualMachineExport patch_namespaced_virtual_machine_export(name, namespace, body)
 
@@ -6859,6 +7301,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V1VirtualMachine**](V1VirtualMachine.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/yaml, application/json;stream=watch
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **read_namespaced_virtual_machine_backup**
+> V1alpha1VirtualMachineBackup read_namespaced_virtual_machine_backup(name, namespace, exact=exact, export=export)
+
+
+
+Get a VirtualMachineBackup object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+exact = true # bool | Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'. (optional)
+export = true # bool | Should this value be exported. Export strips fields that a user can not specify. (optional)
+
+try: 
+    api_response = api_instance.read_namespaced_virtual_machine_backup(name, namespace, exact=exact, export=export)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->read_namespaced_virtual_machine_backup: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **exact** | **bool**| Should the export be exact. Exact export maintains cluster-specific fields like &#39;Namespace&#39;. | [optional] 
+ **export** | **bool**| Should this value be exported. Export strips fields that a user can not specify. | [optional] 
+
+### Return type
+
+[**V1alpha1VirtualMachineBackup**](V1alpha1VirtualMachineBackup.md)
 
 ### Authorization
 
@@ -7758,6 +8253,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **replace_namespaced_virtual_machine_backup**
+> V1alpha1VirtualMachineBackup replace_namespaced_virtual_machine_backup(name, namespace, body)
+
+
+
+Update a VirtualMachineBackup object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1alpha1VirtualMachineBackup() # V1alpha1VirtualMachineBackup | 
+
+try: 
+    api_response = api_instance.replace_namespaced_virtual_machine_backup(name, namespace, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->replace_namespaced_virtual_machine_backup: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1alpha1VirtualMachineBackup**](V1alpha1VirtualMachineBackup.md)|  | 
+
+### Return type
+
+[**V1alpha1VirtualMachineBackup**](V1alpha1VirtualMachineBackup.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/yaml
+ - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **replace_namespaced_virtual_machine_export**
 > V1beta1VirtualMachineExport replace_namespaced_virtual_machine_export(name, namespace, body)
 
@@ -8463,6 +9009,57 @@ No authorization required
 
  - **Content-Type**: application/json, application/yaml
  - **Accept**: application/json, application/yaml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_backup**
+> str v1_backup(name, namespace, body)
+
+
+
+Initiate a VirtualMachineInstance backup.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1alpha1BackupOptions() # V1alpha1BackupOptions | 
+
+try: 
+    api_response = api_instance.v1_backup(name, namespace, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1_backup: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1alpha1BackupOptions**](V1alpha1BackupOptions.md)|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -9827,6 +10424,57 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1alpha3_backup**
+> str v1alpha3_backup(name, namespace, body)
+
+
+
+Initiate a VirtualMachineInstance backup.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1alpha1BackupOptions() # V1alpha1BackupOptions | 
+
+try: 
+    api_response = api_instance.v1alpha3_backup(name, namespace, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1alpha3_backup: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1alpha1BackupOptions**](V1alpha1BackupOptions.md)|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
  - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -13145,6 +13793,69 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **watch_namespaced_virtual_machine_backup**
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_namespaced_virtual_machine_backup(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+
+
+
+Watch a VirtualMachineBackup object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+_continue = '_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
+field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
+include_uninitialized = true # bool | If true, partially initialized resources are included in the response. (optional)
+label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
+limit = 56 # int | limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. (optional)
+resource_version = 'resource_version_example' # str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. (optional)
+timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
+watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
+
+try: 
+    api_response = api_instance.watch_namespaced_virtual_machine_backup(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->watch_namespaced_virtual_machine_backup: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **_continue** | **str**| The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. | [optional] 
+ **field_selector** | **str**| A selector to restrict the list of returned objects by their fields. Defaults to everything. | [optional] 
+ **include_uninitialized** | **bool**| If true, partially initialized resources are included in the response. | [optional] 
+ **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything | [optional] 
+ **limit** | **int**| limit is a maximum number of responses to return for a list call. If more items exist, the server will set the &#x60;continue&#x60; field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. | [optional] 
+ **resource_version** | **str**| When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. | [optional] 
+ **timeout_seconds** | **int**| TimeoutSeconds for the list/watch call. | [optional] 
+ **watch** | **bool**| Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. | [optional] 
+
+### Return type
+
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **watch_namespaced_virtual_machine_export**
 > K8sIoApimachineryPkgApisMetaV1WatchEvent watch_namespaced_virtual_machine_export(namespace, _continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
 
@@ -13814,6 +14525,67 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **_continue** | **str**| The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. | [optional] 
+ **field_selector** | **str**| A selector to restrict the list of returned objects by their fields. Defaults to everything. | [optional] 
+ **include_uninitialized** | **bool**| If true, partially initialized resources are included in the response. | [optional] 
+ **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything | [optional] 
+ **limit** | **int**| limit is a maximum number of responses to return for a list call. If more items exist, the server will set the &#x60;continue&#x60; field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. | [optional] 
+ **resource_version** | **str**| When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. | [optional] 
+ **timeout_seconds** | **int**| TimeoutSeconds for the list/watch call. | [optional] 
+ **watch** | **bool**| Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. | [optional] 
+
+### Return type
+
+[**K8sIoApimachineryPkgApisMetaV1WatchEvent**](K8sIoApimachineryPkgApisMetaV1WatchEvent.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **watch_virtual_machine_backup_list_for_all_namespaces**
+> K8sIoApimachineryPkgApisMetaV1WatchEvent watch_virtual_machine_backup_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+
+
+
+Watch a VirtualMachineBackupList object.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+_continue = '_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
+field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
+include_uninitialized = true # bool | If true, partially initialized resources are included in the response. (optional)
+label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything (optional)
+limit = 56 # int | limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. (optional)
+resource_version = 'resource_version_example' # str | When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. (optional)
+timeout_seconds = 56 # int | TimeoutSeconds for the list/watch call. (optional)
+watch = true # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
+
+try: 
+    api_response = api_instance.watch_virtual_machine_backup_list_for_all_namespaces(_continue=_continue, field_selector=field_selector, include_uninitialized=include_uninitialized, label_selector=label_selector, limit=limit, resource_version=resource_version, timeout_seconds=timeout_seconds, watch=watch)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->watch_virtual_machine_backup_list_for_all_namespaces: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
  **_continue** | **str**| The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. | [optional] 
  **field_selector** | **str**| A selector to restrict the list of returned objects by their fields. Defaults to everything. | [optional] 
  **include_uninitialized** | **bool**| If true, partially initialized resources are included in the response. | [optional] 

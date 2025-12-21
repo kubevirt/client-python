@@ -31,27 +31,55 @@ class V1alpha1VirtualMachineBackupStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'checkpoint_name': 'str',
         'conditions': 'list[V1alpha1Condition]',
         'type': 'str'
     }
 
     attribute_map = {
+        'checkpoint_name': 'checkpointName',
         'conditions': 'conditions',
         'type': 'type'
     }
 
-    def __init__(self, conditions=None, type=None):
+    def __init__(self, checkpoint_name=None, conditions=None, type=None):
         """
         V1alpha1VirtualMachineBackupStatus - a model defined in Swagger
         """
 
+        self._checkpoint_name = None
         self._conditions = None
         self._type = None
 
+        if checkpoint_name is not None:
+          self.checkpoint_name = checkpoint_name
         if conditions is not None:
           self.conditions = conditions
         if type is not None:
           self.type = type
+
+    @property
+    def checkpoint_name(self):
+        """
+        Gets the checkpoint_name of this V1alpha1VirtualMachineBackupStatus.
+        CheckpointName the name of the checkpoint created for the current backup
+
+        :return: The checkpoint_name of this V1alpha1VirtualMachineBackupStatus.
+        :rtype: str
+        """
+        return self._checkpoint_name
+
+    @checkpoint_name.setter
+    def checkpoint_name(self, checkpoint_name):
+        """
+        Sets the checkpoint_name of this V1alpha1VirtualMachineBackupStatus.
+        CheckpointName the name of the checkpoint created for the current backup
+
+        :param checkpoint_name: The checkpoint_name of this V1alpha1VirtualMachineBackupStatus.
+        :type: str
+        """
+
+        self._checkpoint_name = checkpoint_name
 
     @property
     def conditions(self):

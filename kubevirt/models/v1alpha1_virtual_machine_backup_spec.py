@@ -65,8 +65,7 @@ class V1alpha1VirtualMachineBackupSpec(object):
           self.pvc_name = pvc_name
         if skip_quiesce is not None:
           self.skip_quiesce = skip_quiesce
-        if source is not None:
-          self.source = source
+        self.source = source
 
     @property
     def force_full_backup(self):
@@ -164,7 +163,7 @@ class V1alpha1VirtualMachineBackupSpec(object):
     def source(self):
         """
         Gets the source of this V1alpha1VirtualMachineBackupSpec.
-        Source specifies the VM to backup If not provided, a reference to a VirtualMachineBackupTracker must be specified instead
+        Source specifies the backup source - either a VirtualMachine or a VirtualMachineBackupTracker. When Kind is VirtualMachine: performs a backup of the specified VM. When Kind is VirtualMachineBackupTracker: uses the tracker to get the source VM and the base checkpoint for incremental backup. The tracker will be updated with the new checkpoint after backup completion.
 
         :return: The source of this V1alpha1VirtualMachineBackupSpec.
         :rtype: K8sIoApiCoreV1TypedLocalObjectReference
@@ -175,11 +174,13 @@ class V1alpha1VirtualMachineBackupSpec(object):
     def source(self, source):
         """
         Sets the source of this V1alpha1VirtualMachineBackupSpec.
-        Source specifies the VM to backup If not provided, a reference to a VirtualMachineBackupTracker must be specified instead
+        Source specifies the backup source - either a VirtualMachine or a VirtualMachineBackupTracker. When Kind is VirtualMachine: performs a backup of the specified VM. When Kind is VirtualMachineBackupTracker: uses the tracker to get the source VM and the base checkpoint for incremental backup. The tracker will be updated with the new checkpoint after backup completion.
 
         :param source: The source of this V1alpha1VirtualMachineBackupSpec.
         :type: K8sIoApiCoreV1TypedLocalObjectReference
         """
+        if source is None:
+            raise ValueError("Invalid value for `source`, must not be `None`")
 
         self._source = source
 

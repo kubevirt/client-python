@@ -34,6 +34,7 @@ class V1alpha1BackupOptions(object):
         'backup_name': 'str',
         'backup_start_time': 'K8sIoApimachineryPkgApisMetaV1Time',
         'cmd': 'str',
+        'incremental': 'str',
         'mode': 'str',
         'push_path': 'str',
         'skip_quiesce': 'bool'
@@ -43,12 +44,13 @@ class V1alpha1BackupOptions(object):
         'backup_name': 'backupName',
         'backup_start_time': 'backupStartTime',
         'cmd': 'cmd',
+        'incremental': 'incremental',
         'mode': 'mode',
         'push_path': 'pushPath',
         'skip_quiesce': 'skipQuiesce'
     }
 
-    def __init__(self, backup_name=None, backup_start_time=None, cmd=None, mode=None, push_path=None, skip_quiesce=None):
+    def __init__(self, backup_name=None, backup_start_time=None, cmd=None, incremental=None, mode=None, push_path=None, skip_quiesce=None):
         """
         V1alpha1BackupOptions - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class V1alpha1BackupOptions(object):
         self._backup_name = None
         self._backup_start_time = None
         self._cmd = None
+        self._incremental = None
         self._mode = None
         self._push_path = None
         self._skip_quiesce = None
@@ -66,6 +69,8 @@ class V1alpha1BackupOptions(object):
           self.backup_start_time = backup_start_time
         if cmd is not None:
           self.cmd = cmd
+        if incremental is not None:
+          self.incremental = incremental
         if mode is not None:
           self.mode = mode
         if push_path is not None:
@@ -135,6 +140,27 @@ class V1alpha1BackupOptions(object):
         """
 
         self._cmd = cmd
+
+    @property
+    def incremental(self):
+        """
+        Gets the incremental of this V1alpha1BackupOptions.
+
+        :return: The incremental of this V1alpha1BackupOptions.
+        :rtype: str
+        """
+        return self._incremental
+
+    @incremental.setter
+    def incremental(self, incremental):
+        """
+        Sets the incremental of this V1alpha1BackupOptions.
+
+        :param incremental: The incremental of this V1alpha1BackupOptions.
+        :type: str
+        """
+
+        self._incremental = incremental
 
     @property
     def mode(self):

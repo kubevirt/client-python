@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **backup_name** | **str** |  | [optional] 
 **backup_start_time** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) |  | [optional] 
 **cmd** | **str** |  | [optional] 
+**incremental** | **str** |  | [optional] 
 **mode** | **str** |  | [optional] 
 **push_path** | **str** |  | [optional] 
 **skip_quiesce** | **bool** |  | [optional] 

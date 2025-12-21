@@ -33,6 +33,7 @@ class V1VirtualMachineInstanceBackupStatus(object):
     swagger_types = {
         'backup_msg': 'str',
         'backup_name': 'str',
+        'checkpoint_name': 'str',
         'completed': 'bool',
         'end_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time'
@@ -41,18 +42,20 @@ class V1VirtualMachineInstanceBackupStatus(object):
     attribute_map = {
         'backup_msg': 'backupMsg',
         'backup_name': 'backupName',
+        'checkpoint_name': 'checkpointName',
         'completed': 'completed',
         'end_timestamp': 'endTimestamp',
         'start_timestamp': 'startTimestamp'
     }
 
-    def __init__(self, backup_msg=None, backup_name=None, completed=None, end_timestamp=None, start_timestamp=None):
+    def __init__(self, backup_msg=None, backup_name=None, checkpoint_name=None, completed=None, end_timestamp=None, start_timestamp=None):
         """
         V1VirtualMachineInstanceBackupStatus - a model defined in Swagger
         """
 
         self._backup_msg = None
         self._backup_name = None
+        self._checkpoint_name = None
         self._completed = None
         self._end_timestamp = None
         self._start_timestamp = None
@@ -61,6 +64,8 @@ class V1VirtualMachineInstanceBackupStatus(object):
           self.backup_msg = backup_msg
         if backup_name is not None:
           self.backup_name = backup_name
+        if checkpoint_name is not None:
+          self.checkpoint_name = checkpoint_name
         if completed is not None:
           self.completed = completed
         if end_timestamp is not None:
@@ -113,6 +118,29 @@ class V1VirtualMachineInstanceBackupStatus(object):
         """
 
         self._backup_name = backup_name
+
+    @property
+    def checkpoint_name(self):
+        """
+        Gets the checkpoint_name of this V1VirtualMachineInstanceBackupStatus.
+        CheckpointName is the name of the checkpoint created for the backup
+
+        :return: The checkpoint_name of this V1VirtualMachineInstanceBackupStatus.
+        :rtype: str
+        """
+        return self._checkpoint_name
+
+    @checkpoint_name.setter
+    def checkpoint_name(self, checkpoint_name):
+        """
+        Sets the checkpoint_name of this V1VirtualMachineInstanceBackupStatus.
+        CheckpointName is the name of the checkpoint created for the backup
+
+        :param checkpoint_name: The checkpoint_name of this V1VirtualMachineInstanceBackupStatus.
+        :type: str
+        """
+
+        self._checkpoint_name = checkpoint_name
 
     @property
     def completed(self):

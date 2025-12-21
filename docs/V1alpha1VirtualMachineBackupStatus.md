@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**checkpoint_name** | **str** | CheckpointName the name of the checkpoint created for the current backup | [optional] 
 **conditions** | [**list[V1alpha1Condition]**](V1alpha1Condition.md) |  | [optional] 
 **type** | **str** | Type indicates if the backup was full or incremental | [optional] 
 

@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **backup_msg** | **str** | BackupMsg resturns any relevant information like failure reason unfreeze failed etc... | [optional] 
 **backup_name** | **str** | BackupName is the name of the executed backup | [optional] 
+**checkpoint_name** | **str** | CheckpointName is the name of the checkpoint created for the backup | [optional] 
 **completed** | **bool** | Completed indicates the backup completed | [optional] 
 **end_timestamp** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) | EndTimestamp is the timestamp when the backup ended | [optional] 
 **start_timestamp** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) | StartTimestamp is the timestamp when the backup started | [optional] 

@@ -31,32 +31,60 @@ class V1MediatedDevicesConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'enabled': 'bool',
         'mediated_device_types': 'list[str]',
         'mediated_devices_types': 'list[str]',
         'node_mediated_device_types': 'list[V1NodeMediatedDeviceTypesConfig]'
     }
 
     attribute_map = {
+        'enabled': 'enabled',
         'mediated_device_types': 'mediatedDeviceTypes',
         'mediated_devices_types': 'mediatedDevicesTypes',
         'node_mediated_device_types': 'nodeMediatedDeviceTypes'
     }
 
-    def __init__(self, mediated_device_types=None, mediated_devices_types=None, node_mediated_device_types=None):
+    def __init__(self, enabled=None, mediated_device_types=None, mediated_devices_types=None, node_mediated_device_types=None):
         """
         V1MediatedDevicesConfiguration - a model defined in Swagger
         """
 
+        self._enabled = None
         self._mediated_device_types = None
         self._mediated_devices_types = None
         self._node_mediated_device_types = None
 
+        if enabled is not None:
+          self.enabled = enabled
         if mediated_device_types is not None:
           self.mediated_device_types = mediated_device_types
         if mediated_devices_types is not None:
           self.mediated_devices_types = mediated_devices_types
         if node_mediated_device_types is not None:
           self.node_mediated_device_types = node_mediated_device_types
+
+    @property
+    def enabled(self):
+        """
+        Gets the enabled of this V1MediatedDevicesConfiguration.
+        Enable the creation and removal of mediated devices by virt-handler Replaces the deprecated DisableMDEVConfiguration feature gate Defaults to true
+
+        :return: The enabled of this V1MediatedDevicesConfiguration.
+        :rtype: bool
+        """
+        return self._enabled
+
+    @enabled.setter
+    def enabled(self, enabled):
+        """
+        Sets the enabled of this V1MediatedDevicesConfiguration.
+        Enable the creation and removal of mediated devices by virt-handler Replaces the deprecated DisableMDEVConfiguration feature gate Defaults to true
+
+        :param enabled: The enabled of this V1MediatedDevicesConfiguration.
+        :type: bool
+        """
+
+        self._enabled = enabled
 
     @property
     def mediated_device_types(self):

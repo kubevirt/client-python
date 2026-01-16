@@ -38,7 +38,8 @@ class V1beta1VirtualMachineCloneSpec(object):
         'patches': 'list[str]',
         'source': 'K8sIoApiCoreV1TypedLocalObjectReference',
         'target': 'K8sIoApiCoreV1TypedLocalObjectReference',
-        'template': 'V1beta1VirtualMachineCloneTemplateFilters'
+        'template': 'V1beta1VirtualMachineCloneTemplateFilters',
+        'volume_name_policy': 'str'
     }
 
     attribute_map = {
@@ -49,10 +50,11 @@ class V1beta1VirtualMachineCloneSpec(object):
         'patches': 'patches',
         'source': 'source',
         'target': 'target',
-        'template': 'template'
+        'template': 'template',
+        'volume_name_policy': 'volumeNamePolicy'
     }
 
-    def __init__(self, annotation_filters=None, label_filters=None, new_mac_addresses=None, new_sm_bios_serial=None, patches=None, source=None, target=None, template=None):
+    def __init__(self, annotation_filters=None, label_filters=None, new_mac_addresses=None, new_sm_bios_serial=None, patches=None, source=None, target=None, template=None, volume_name_policy=None):
         """
         V1beta1VirtualMachineCloneSpec - a model defined in Swagger
         """
@@ -65,6 +67,7 @@ class V1beta1VirtualMachineCloneSpec(object):
         self._source = None
         self._target = None
         self._template = None
+        self._volume_name_policy = None
 
         if annotation_filters is not None:
           self.annotation_filters = annotation_filters
@@ -81,6 +84,8 @@ class V1beta1VirtualMachineCloneSpec(object):
           self.target = target
         if template is not None:
           self.template = template
+        if volume_name_policy is not None:
+          self.volume_name_policy = volume_name_policy
 
     @property
     def annotation_filters(self):
@@ -267,6 +272,29 @@ class V1beta1VirtualMachineCloneSpec(object):
         """
 
         self._template = template
+
+    @property
+    def volume_name_policy(self):
+        """
+        Gets the volume_name_policy of this V1beta1VirtualMachineCloneSpec.
+        VolumeNamePolicy defines how to handle volume naming during the clone operation
+
+        :return: The volume_name_policy of this V1beta1VirtualMachineCloneSpec.
+        :rtype: str
+        """
+        return self._volume_name_policy
+
+    @volume_name_policy.setter
+    def volume_name_policy(self, volume_name_policy):
+        """
+        Sets the volume_name_policy of this V1beta1VirtualMachineCloneSpec.
+        VolumeNamePolicy defines how to handle volume naming during the clone operation
+
+        :param volume_name_policy: The volume_name_policy of this V1beta1VirtualMachineCloneSpec.
+        :type: str
+        """
+
+        self._volume_name_policy = volume_name_policy
 
     def to_dict(self):
         """

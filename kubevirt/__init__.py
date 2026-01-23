@@ -155,6 +155,7 @@ from .models.v1_hotplug_volume_status import V1HotplugVolumeStatus
 from .models.v1_hugepages import V1Hugepages
 from .models.v1_hyper_v_passthrough import V1HyperVPassthrough
 from .models.v1_hyperv_timer import V1HypervTimer
+from .models.v1_hypervisor_configuration import V1HypervisorConfiguration
 from .models.v1_i6300_esb_watchdog import V1I6300ESBWatchdog
 from .models.v1_initrd_info import V1InitrdInfo
 from .models.v1_input import V1Input

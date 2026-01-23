@@ -45,6 +45,7 @@ class V1KubeVirtConfiguration(object):
         'emulated_machines': 'list[str]',
         'eviction_strategy': 'str',
         'handler_configuration': 'V1ReloadableComponentConfiguration',
+        'hypervisors': 'list[V1HypervisorConfiguration]',
         'image_pull_policy': 'str',
         'instancetype': 'V1InstancetypeConfiguration',
         'ksm_configuration': 'V1KSMConfiguration',
@@ -86,6 +87,7 @@ class V1KubeVirtConfiguration(object):
         'emulated_machines': 'emulatedMachines',
         'eviction_strategy': 'evictionStrategy',
         'handler_configuration': 'handlerConfiguration',
+        'hypervisors': 'hypervisors',
         'image_pull_policy': 'imagePullPolicy',
         'instancetype': 'instancetype',
         'ksm_configuration': 'ksmConfiguration',
@@ -112,7 +114,7 @@ class V1KubeVirtConfiguration(object):
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, changed_block_tracking_label_selectors=None, common_instancetypes_deployment=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, image_pull_policy=None, instancetype=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
+    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, changed_block_tracking_label_selectors=None, common_instancetypes_deployment=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, hypervisors=None, image_pull_policy=None, instancetype=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -131,6 +133,7 @@ class V1KubeVirtConfiguration(object):
         self._emulated_machines = None
         self._eviction_strategy = None
         self._handler_configuration = None
+        self._hypervisors = None
         self._image_pull_policy = None
         self._instancetype = None
         self._ksm_configuration = None
@@ -184,6 +187,8 @@ class V1KubeVirtConfiguration(object):
           self.eviction_strategy = eviction_strategy
         if handler_configuration is not None:
           self.handler_configuration = handler_configuration
+        if hypervisors is not None:
+          self.hypervisors = hypervisors
         if image_pull_policy is not None:
           self.image_pull_policy = image_pull_policy
         if instancetype is not None:
@@ -538,6 +543,29 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._handler_configuration = handler_configuration
+
+    @property
+    def hypervisors(self):
+        """
+        Gets the hypervisors of this V1KubeVirtConfiguration.
+        Hypervisors holds information regarding the hypervisor configurations supported on this cluster.
+
+        :return: The hypervisors of this V1KubeVirtConfiguration.
+        :rtype: list[V1HypervisorConfiguration]
+        """
+        return self._hypervisors
+
+    @hypervisors.setter
+    def hypervisors(self, hypervisors):
+        """
+        Sets the hypervisors of this V1KubeVirtConfiguration.
+        Hypervisors holds information regarding the hypervisor configurations supported on this cluster.
+
+        :param hypervisors: The hypervisors of this V1KubeVirtConfiguration.
+        :type: list[V1HypervisorConfiguration]
+        """
+
+        self._hypervisors = hypervisors
 
     @property
     def image_pull_policy(self):

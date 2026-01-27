@@ -41,7 +41,7 @@ class V1FeatureHyperv(object):
         'spinlocks': 'V1FeatureSpinlocks',
         'synic': 'V1FeatureState',
         'synictimer': 'V1SyNICTimer',
-        'tlbflush': 'V1FeatureState',
+        'tlbflush': 'V1TLBFlush',
         'vapic': 'V1FeatureState',
         'vendorid': 'V1FeatureVendorID',
         'vpindex': 'V1FeatureState'
@@ -350,7 +350,7 @@ class V1FeatureHyperv(object):
         TLBFlush improves performances in overcommited environments. Requires vpindex. Defaults to the machine type setting.
 
         :return: The tlbflush of this V1FeatureHyperv.
-        :rtype: V1FeatureState
+        :rtype: V1TLBFlush
         """
         return self._tlbflush
 
@@ -361,7 +361,7 @@ class V1FeatureHyperv(object):
         TLBFlush improves performances in overcommited environments. Requires vpindex. Defaults to the machine type setting.
 
         :param tlbflush: The tlbflush of this V1FeatureHyperv.
-        :type: V1FeatureState
+        :type: V1TLBFlush
         """
 
         self._tlbflush = tlbflush

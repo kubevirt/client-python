@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **spinlocks** | [**V1FeatureSpinlocks**](V1FeatureSpinlocks.md) | Spinlocks allows to configure the spinlock retry attempts. | [optional] 
 **synic** | [**V1FeatureState**](V1FeatureState.md) | SyNIC enables the Synthetic Interrupt Controller. Defaults to the machine type setting. | [optional] 
 **synictimer** | [**V1SyNICTimer**](V1SyNICTimer.md) | SyNICTimer enables Synthetic Interrupt Controller Timers, reducing CPU load. Defaults to the machine type setting. | [optional] 
-**tlbflush** | [**V1FeatureState**](V1FeatureState.md) | TLBFlush improves performances in overcommited environments. Requires vpindex. Defaults to the machine type setting. | [optional] 
+**tlbflush** | [**V1TLBFlush**](V1TLBFlush.md) | TLBFlush improves performances in overcommited environments. Requires vpindex. Defaults to the machine type setting. | [optional] 
 **vapic** | [**V1FeatureState**](V1FeatureState.md) | VAPIC improves the paravirtualized handling of interrupts. Defaults to the machine type setting. | [optional] 
 **vendorid** | [**V1FeatureVendorID**](V1FeatureVendorID.md) | VendorID allows setting the hypervisor vendor id. Defaults to the machine type setting. | [optional] 
 **vpindex** | [**V1FeatureState**](V1FeatureState.md) | VPIndex enables the Virtual Processor Index to help windows identifying virtual processors. Defaults to the machine type setting. | [optional] 

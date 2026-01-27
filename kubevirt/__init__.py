@@ -252,6 +252,7 @@ from .models.v1_support_container_resources import V1SupportContainerResources
 from .models.v1_sy_nic_timer import V1SyNICTimer
 from .models.v1_sysprep_source import V1SysprepSource
 from .models.v1_tdx import V1TDX
+from .models.v1_tlb_flush import V1TLBFlush
 from .models.v1_tls_configuration import V1TLSConfiguration
 from .models.v1_tpm_device import V1TPMDevice
 from .models.v1_timer import V1Timer

@@ -33,6 +33,7 @@ class V1DeveloperConfiguration(object):
     swagger_types = {
         'cluster_profiler': 'bool',
         'cpu_allocation_ratio': 'int',
+        'disabled_feature_gates': 'list[str]',
         'disk_verification': 'V1DiskVerification',
         'feature_gates': 'list[str]',
         'log_verbosity': 'V1LogVerbosity',
@@ -47,6 +48,7 @@ class V1DeveloperConfiguration(object):
     attribute_map = {
         'cluster_profiler': 'clusterProfiler',
         'cpu_allocation_ratio': 'cpuAllocationRatio',
+        'disabled_feature_gates': 'disabledFeatureGates',
         'disk_verification': 'diskVerification',
         'feature_gates': 'featureGates',
         'log_verbosity': 'logVerbosity',
@@ -58,13 +60,14 @@ class V1DeveloperConfiguration(object):
         'use_emulation': 'useEmulation'
     }
 
-    def __init__(self, cluster_profiler=None, cpu_allocation_ratio=None, disk_verification=None, feature_gates=None, log_verbosity=None, memory_overcommit=None, minimum_cluster_tsc_frequency=None, minimum_reserve_pvc_bytes=None, node_selectors=None, pvc_tolerate_less_space_up_to_percent=None, use_emulation=None):
+    def __init__(self, cluster_profiler=None, cpu_allocation_ratio=None, disabled_feature_gates=None, disk_verification=None, feature_gates=None, log_verbosity=None, memory_overcommit=None, minimum_cluster_tsc_frequency=None, minimum_reserve_pvc_bytes=None, node_selectors=None, pvc_tolerate_less_space_up_to_percent=None, use_emulation=None):
         """
         V1DeveloperConfiguration - a model defined in Swagger
         """
 
         self._cluster_profiler = None
         self._cpu_allocation_ratio = None
+        self._disabled_feature_gates = None
         self._disk_verification = None
         self._feature_gates = None
         self._log_verbosity = None
@@ -79,6 +82,8 @@ class V1DeveloperConfiguration(object):
           self.cluster_profiler = cluster_profiler
         if cpu_allocation_ratio is not None:
           self.cpu_allocation_ratio = cpu_allocation_ratio
+        if disabled_feature_gates is not None:
+          self.disabled_feature_gates = disabled_feature_gates
         if disk_verification is not None:
           self.disk_verification = disk_verification
         if feature_gates is not None:
@@ -145,6 +150,29 @@ class V1DeveloperConfiguration(object):
         self._cpu_allocation_ratio = cpu_allocation_ratio
 
     @property
+    def disabled_feature_gates(self):
+        """
+        Gets the disabled_feature_gates of this V1DeveloperConfiguration.
+        DisabledFeatureGates specifies a list of experimental feature gates to disable. A feature gate must not appear in both FeatureGates and DisabledFeatureGates.
+
+        :return: The disabled_feature_gates of this V1DeveloperConfiguration.
+        :rtype: list[str]
+        """
+        return self._disabled_feature_gates
+
+    @disabled_feature_gates.setter
+    def disabled_feature_gates(self, disabled_feature_gates):
+        """
+        Sets the disabled_feature_gates of this V1DeveloperConfiguration.
+        DisabledFeatureGates specifies a list of experimental feature gates to disable. A feature gate must not appear in both FeatureGates and DisabledFeatureGates.
+
+        :param disabled_feature_gates: The disabled_feature_gates of this V1DeveloperConfiguration.
+        :type: list[str]
+        """
+
+        self._disabled_feature_gates = disabled_feature_gates
+
+    @property
     def disk_verification(self):
         """
         Gets the disk_verification of this V1DeveloperConfiguration.
@@ -169,7 +197,7 @@ class V1DeveloperConfiguration(object):
     def feature_gates(self):
         """
         Gets the feature_gates of this V1DeveloperConfiguration.
-        FeatureGates is the list of experimental features to enable. Defaults to none
+        FeatureGates specifies a list of experimental feature gates to enable. Defaults to none. A feature gate must not appear in both FeatureGates and DisabledFeatureGates.
 
         :return: The feature_gates of this V1DeveloperConfiguration.
         :rtype: list[str]
@@ -180,7 +208,7 @@ class V1DeveloperConfiguration(object):
     def feature_gates(self, feature_gates):
         """
         Sets the feature_gates of this V1DeveloperConfiguration.
-        FeatureGates is the list of experimental features to enable. Defaults to none
+        FeatureGates specifies a list of experimental feature gates to enable. Defaults to none. A feature gate must not appear in both FeatureGates and DisabledFeatureGates.
 
         :param feature_gates: The feature_gates of this V1DeveloperConfiguration.
         :type: list[str]

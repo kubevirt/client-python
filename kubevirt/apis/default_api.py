@@ -20283,6 +20283,120 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def v1_redefine_checkpoint(self, name, namespace, body, **kwargs):
+        """
+        Redefine a checkpoint for a VirtualMachineInstance.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1_redefine_checkpoint(name, namespace, body, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1alpha1BackupCheckpoint body: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.v1_redefine_checkpoint_with_http_info(name, namespace, body, **kwargs)
+        else:
+            (data) = self.v1_redefine_checkpoint_with_http_info(name, namespace, body, **kwargs)
+            return data
+
+    def v1_redefine_checkpoint_with_http_info(self, name, namespace, body, **kwargs):
+        """
+        Redefine a checkpoint for a VirtualMachineInstance.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1_redefine_checkpoint_with_http_info(name, namespace, body, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1alpha1BackupCheckpoint body: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'namespace', 'body']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1_redefine_checkpoint" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `v1_redefine_checkpoint`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `v1_redefine_checkpoint`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `v1_redefine_checkpoint`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/redefine-checkpoint', 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='str',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def v1_remove_memory_dump(self, name, namespace, **kwargs):
         """
         Remove memory dump association.
@@ -23295,6 +23409,120 @@ class DefaultApi(object):
         auth_settings = []
 
         return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/pause', 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='str',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def v1alpha3_redefine_checkpoint(self, name, namespace, body, **kwargs):
+        """
+        Redefine a checkpoint for a VirtualMachineInstance.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1alpha3_redefine_checkpoint(name, namespace, body, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1alpha1BackupCheckpoint body: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.v1alpha3_redefine_checkpoint_with_http_info(name, namespace, body, **kwargs)
+        else:
+            (data) = self.v1alpha3_redefine_checkpoint_with_http_info(name, namespace, body, **kwargs)
+            return data
+
+    def v1alpha3_redefine_checkpoint_with_http_info(self, name, namespace, body, **kwargs):
+        """
+        Redefine a checkpoint for a VirtualMachineInstance.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.v1alpha3_redefine_checkpoint_with_http_info(name, namespace, body, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str name: Name of the resource (required)
+        :param str namespace: Object name and auth scope, such as for teams and projects (required)
+        :param V1alpha1BackupCheckpoint body: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['name', 'namespace', 'body']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method v1alpha3_redefine_checkpoint" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'name' is set
+        if ('name' not in params) or (params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `v1alpha3_redefine_checkpoint`")
+        # verify the required parameter 'namespace' is set
+        if ('namespace' not in params) or (params['namespace'] is None):
+            raise ValueError("Missing the required parameter `namespace` when calling `v1alpha3_redefine_checkpoint`")
+        # verify the required parameter 'body' is set
+        if ('body' not in params) or (params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `v1alpha3_redefine_checkpoint`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'name' in params:
+            path_params['name'] = params['name']
+        if 'namespace' in params:
+            path_params['namespace'] = params['namespace']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['*/*'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/redefine-checkpoint', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,

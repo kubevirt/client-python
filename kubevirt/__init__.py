@@ -321,7 +321,9 @@ from .models.v1_volume_snapshot_status import V1VolumeSnapshotStatus
 from .models.v1_volume_status import V1VolumeStatus
 from .models.v1_volume_update_state import V1VolumeUpdateState
 from .models.v1_watchdog import V1Watchdog
+from .models.v1alpha1_backup_checkpoint import V1alpha1BackupCheckpoint
 from .models.v1alpha1_backup_options import V1alpha1BackupOptions
+from .models.v1alpha1_backup_volume_info import V1alpha1BackupVolumeInfo
 from .models.v1alpha1_condition import V1alpha1Condition
 from .models.v1alpha1_migration_policy import V1alpha1MigrationPolicy
 from .models.v1alpha1_migration_policy_list import V1alpha1MigrationPolicyList

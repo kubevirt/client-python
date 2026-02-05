@@ -33,28 +33,33 @@ class V1alpha1VirtualMachineBackupStatus(object):
     swagger_types = {
         'checkpoint_name': 'str',
         'conditions': 'list[V1alpha1Condition]',
+        'included_volumes': 'list[V1alpha1BackupVolumeInfo]',
         'type': 'str'
     }
 
     attribute_map = {
         'checkpoint_name': 'checkpointName',
         'conditions': 'conditions',
+        'included_volumes': 'includedVolumes',
         'type': 'type'
     }
 
-    def __init__(self, checkpoint_name=None, conditions=None, type=None):
+    def __init__(self, checkpoint_name=None, conditions=None, included_volumes=None, type=None):
         """
         V1alpha1VirtualMachineBackupStatus - a model defined in Swagger
         """
 
         self._checkpoint_name = None
         self._conditions = None
+        self._included_volumes = None
         self._type = None
 
         if checkpoint_name is not None:
           self.checkpoint_name = checkpoint_name
         if conditions is not None:
           self.conditions = conditions
+        if included_volumes is not None:
+          self.included_volumes = included_volumes
         if type is not None:
           self.type = type
 
@@ -101,6 +106,29 @@ class V1alpha1VirtualMachineBackupStatus(object):
         """
 
         self._conditions = conditions
+
+    @property
+    def included_volumes(self):
+        """
+        Gets the included_volumes of this V1alpha1VirtualMachineBackupStatus.
+        IncludedVolumes lists the volumes that were included in the backup
+
+        :return: The included_volumes of this V1alpha1VirtualMachineBackupStatus.
+        :rtype: list[V1alpha1BackupVolumeInfo]
+        """
+        return self._included_volumes
+
+    @included_volumes.setter
+    def included_volumes(self, included_volumes):
+        """
+        Sets the included_volumes of this V1alpha1VirtualMachineBackupStatus.
+        IncludedVolumes lists the volumes that were included in the backup
+
+        :param included_volumes: The included_volumes of this V1alpha1VirtualMachineBackupStatus.
+        :type: list[V1alpha1BackupVolumeInfo]
+        """
+
+        self._included_volumes = included_volumes
 
     @property
     def type(self):

@@ -36,7 +36,8 @@ class V1VirtualMachineInstanceBackupStatus(object):
         'checkpoint_name': 'str',
         'completed': 'bool',
         'end_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
-        'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time'
+        'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'volumes': 'list[V1alpha1BackupVolumeInfo]'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class V1VirtualMachineInstanceBackupStatus(object):
         'checkpoint_name': 'checkpointName',
         'completed': 'completed',
         'end_timestamp': 'endTimestamp',
-        'start_timestamp': 'startTimestamp'
+        'start_timestamp': 'startTimestamp',
+        'volumes': 'volumes'
     }
 
-    def __init__(self, backup_msg=None, backup_name=None, checkpoint_name=None, completed=None, end_timestamp=None, start_timestamp=None):
+    def __init__(self, backup_msg=None, backup_name=None, checkpoint_name=None, completed=None, end_timestamp=None, start_timestamp=None, volumes=None):
         """
         V1VirtualMachineInstanceBackupStatus - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class V1VirtualMachineInstanceBackupStatus(object):
         self._completed = None
         self._end_timestamp = None
         self._start_timestamp = None
+        self._volumes = None
 
         if backup_msg is not None:
           self.backup_msg = backup_msg
@@ -72,6 +75,8 @@ class V1VirtualMachineInstanceBackupStatus(object):
           self.end_timestamp = end_timestamp
         if start_timestamp is not None:
           self.start_timestamp = start_timestamp
+        if volumes is not None:
+          self.volumes = volumes
 
     @property
     def backup_msg(self):
@@ -210,6 +215,29 @@ class V1VirtualMachineInstanceBackupStatus(object):
         """
 
         self._start_timestamp = start_timestamp
+
+    @property
+    def volumes(self):
+        """
+        Gets the volumes of this V1VirtualMachineInstanceBackupStatus.
+        Volumes lists the volumes included in the backup
+
+        :return: The volumes of this V1VirtualMachineInstanceBackupStatus.
+        :rtype: list[V1alpha1BackupVolumeInfo]
+        """
+        return self._volumes
+
+    @volumes.setter
+    def volumes(self, volumes):
+        """
+        Sets the volumes of this V1VirtualMachineInstanceBackupStatus.
+        Volumes lists the volumes included in the backup
+
+        :param volumes: The volumes of this V1VirtualMachineInstanceBackupStatus.
+        :type: list[V1alpha1BackupVolumeInfo]
+        """
+
+        self._volumes = volumes
 
     def to_dict(self):
         """

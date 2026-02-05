@@ -179,6 +179,7 @@ Method | HTTP request | Description
 [**v1_memory_dump**](DefaultApi.md#v1_memory_dump) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name}/memorydump | 
 [**v1_migrate**](DefaultApi.md#v1_migrate) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name}/migrate | 
 [**v1_pause**](DefaultApi.md#v1_pause) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/pause | 
+[**v1_redefine_checkpoint**](DefaultApi.md#v1_redefine_checkpoint) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/redefine-checkpoint | 
 [**v1_remove_memory_dump**](DefaultApi.md#v1_remove_memory_dump) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name}/removememorydump | 
 [**v1_reset**](DefaultApi.md#v1_reset) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/reset | 
 [**v1_restart**](DefaultApi.md#v1_restart) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name}/restart | 
@@ -207,6 +208,7 @@ Method | HTTP request | Description
 [**v1alpha3_memory_dump**](DefaultApi.md#v1alpha3_memory_dump) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}/memorydump | 
 [**v1alpha3_migrate**](DefaultApi.md#v1alpha3_migrate) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}/migrate | 
 [**v1alpha3_pause**](DefaultApi.md#v1alpha3_pause) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/pause | 
+[**v1alpha3_redefine_checkpoint**](DefaultApi.md#v1alpha3_redefine_checkpoint) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/redefine-checkpoint | 
 [**v1alpha3_remove_memory_dump**](DefaultApi.md#v1alpha3_remove_memory_dump) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}/removememorydump | 
 [**v1alpha3_reset**](DefaultApi.md#v1alpha3_reset) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/reset | 
 [**v1alpha3_restart**](DefaultApi.md#v1alpha3_restart) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachines/{name}/restart | 
@@ -9587,6 +9589,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1_redefine_checkpoint**
+> str v1_redefine_checkpoint(name, namespace, body)
+
+
+
+Redefine a checkpoint for a VirtualMachineInstance.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1alpha1BackupCheckpoint() # V1alpha1BackupCheckpoint | 
+
+try: 
+    api_response = api_instance.v1_redefine_checkpoint(name, namespace, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1_redefine_checkpoint: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1alpha1BackupCheckpoint**](V1alpha1BackupCheckpoint.md)|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1_remove_memory_dump**
 > str v1_remove_memory_dump(name, namespace)
 
@@ -10944,6 +10997,57 @@ Name | Type | Description  | Notes
  **name** | **str**| Name of the resource | 
  **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
  **body** | [**V1PauseOptions**](V1PauseOptions.md)|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1alpha3_redefine_checkpoint**
+> str v1alpha3_redefine_checkpoint(name, namespace, body)
+
+
+
+Redefine a checkpoint for a VirtualMachineInstance.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1alpha1BackupCheckpoint() # V1alpha1BackupCheckpoint | 
+
+try: 
+    api_response = api_instance.v1alpha3_redefine_checkpoint(name, namespace, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1alpha3_redefine_checkpoint: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1alpha1BackupCheckpoint**](V1alpha1BackupCheckpoint.md)|  | 
 
 ### Return type
 

@@ -42,6 +42,7 @@ class V1DomainSpec(object):
         'launch_security': 'V1LaunchSecurity',
         'machine': 'V1Machine',
         'memory': 'V1Memory',
+        'reboot_policy': 'str',
         'resources': 'V1ResourceRequirements'
     }
 
@@ -57,10 +58,11 @@ class V1DomainSpec(object):
         'launch_security': 'launchSecurity',
         'machine': 'machine',
         'memory': 'memory',
+        'reboot_policy': 'rebootPolicy',
         'resources': 'resources'
     }
 
-    def __init__(self, chassis=None, clock=None, cpu=None, devices=None, features=None, firmware=None, io_threads=None, io_threads_policy=None, launch_security=None, machine=None, memory=None, resources=None):
+    def __init__(self, chassis=None, clock=None, cpu=None, devices=None, features=None, firmware=None, io_threads=None, io_threads_policy=None, launch_security=None, machine=None, memory=None, reboot_policy=None, resources=None):
         """
         V1DomainSpec - a model defined in Swagger
         """
@@ -76,6 +78,7 @@ class V1DomainSpec(object):
         self._launch_security = None
         self._machine = None
         self._memory = None
+        self._reboot_policy = None
         self._resources = None
 
         if chassis is not None:
@@ -99,6 +102,8 @@ class V1DomainSpec(object):
           self.machine = machine
         if memory is not None:
           self.memory = memory
+        if reboot_policy is not None:
+          self.reboot_policy = reboot_policy
         if resources is not None:
           self.resources = resources
 
@@ -356,6 +361,29 @@ class V1DomainSpec(object):
         """
 
         self._memory = memory
+
+    @property
+    def reboot_policy(self):
+        """
+        Gets the reboot_policy of this V1DomainSpec.
+        RebootPolicy specifies how the guest should behave on reboot. Reboot (default): The guest is allowed to reboot silently. Terminate: The VMI will be terminated on guest reboot, allowing higher level controllers (such as the VM controller) to recreate the VMI with any updated configuration such as boot order changes.
+
+        :return: The reboot_policy of this V1DomainSpec.
+        :rtype: str
+        """
+        return self._reboot_policy
+
+    @reboot_policy.setter
+    def reboot_policy(self, reboot_policy):
+        """
+        Sets the reboot_policy of this V1DomainSpec.
+        RebootPolicy specifies how the guest should behave on reboot. Reboot (default): The guest is allowed to reboot silently. Terminate: The VMI will be terminated on guest reboot, allowing higher level controllers (such as the VM controller) to recreate the VMI with any updated configuration such as boot order changes.
+
+        :param reboot_policy: The reboot_policy of this V1DomainSpec.
+        :type: str
+        """
+
+        self._reboot_policy = reboot_policy
 
     @property
     def resources(self):

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **launch_security** | [**V1LaunchSecurity**](V1LaunchSecurity.md) | Launch Security setting of the vmi. | [optional] 
 **machine** | [**V1Machine**](V1Machine.md) | Machine type. | [optional] 
 **memory** | [**V1Memory**](V1Memory.md) | Memory allow specifying the VMI memory features. | [optional] 
+**reboot_policy** | **str** | RebootPolicy specifies how the guest should behave on reboot. Reboot (default): The guest is allowed to reboot silently. Terminate: The VMI will be terminated on guest reboot, allowing higher level controllers (such as the VM controller) to recreate the VMI with any updated configuration such as boot order changes. | [optional] 
 **resources** | [**V1ResourceRequirements**](V1ResourceRequirements.md) | Resources describes the Compute Resources required by this vmi. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

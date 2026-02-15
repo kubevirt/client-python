@@ -167,6 +167,7 @@ from .v1_interface_binding_migration import V1InterfaceBindingMigration
 from .v1_interface_binding_plugin import V1InterfaceBindingPlugin
 from .v1_interface_bridge import V1InterfaceBridge
 from .v1_interface_masquerade import V1InterfaceMasquerade
+from .v1_interface_passt_binding import V1InterfacePasstBinding
 from .v1_interface_sriov import V1InterfaceSRIOV
 from .v1_ksm_configuration import V1KSMConfiguration
 from .v1_kvm_timer import V1KVMTimer

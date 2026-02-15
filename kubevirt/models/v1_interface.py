@@ -42,6 +42,7 @@ class V1Interface(object):
         'model': 'str',
         'name': 'str',
         'passt': 'V1DeprecatedInterfacePasst',
+        'passt_binding': 'V1InterfacePasstBinding',
         'pci_address': 'str',
         'ports': 'list[V1Port]',
         'slirp': 'V1DeprecatedInterfaceSlirp',
@@ -62,6 +63,7 @@ class V1Interface(object):
         'model': 'model',
         'name': 'name',
         'passt': 'passt',
+        'passt_binding': 'passtBinding',
         'pci_address': 'pciAddress',
         'ports': 'ports',
         'slirp': 'slirp',
@@ -70,7 +72,7 @@ class V1Interface(object):
         'tag': 'tag'
     }
 
-    def __init__(self, acpi_index=None, binding=None, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name='', passt=None, pci_address=None, ports=None, slirp=None, sriov=None, state=None, tag=None):
+    def __init__(self, acpi_index=None, binding=None, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name='', passt=None, passt_binding=None, pci_address=None, ports=None, slirp=None, sriov=None, state=None, tag=None):
         """
         V1Interface - a model defined in Swagger
         """
@@ -86,6 +88,7 @@ class V1Interface(object):
         self._model = None
         self._name = None
         self._passt = None
+        self._passt_binding = None
         self._pci_address = None
         self._ports = None
         self._slirp = None
@@ -114,6 +117,8 @@ class V1Interface(object):
         self.name = name
         if passt is not None:
           self.passt = passt
+        if passt_binding is not None:
+          self.passt_binding = passt_binding
         if pci_address is not None:
           self.pci_address = pci_address
         if ports is not None:
@@ -377,6 +382,27 @@ class V1Interface(object):
         """
 
         self._passt = passt
+
+    @property
+    def passt_binding(self):
+        """
+        Gets the passt_binding of this V1Interface.
+
+        :return: The passt_binding of this V1Interface.
+        :rtype: V1InterfacePasstBinding
+        """
+        return self._passt_binding
+
+    @passt_binding.setter
+    def passt_binding(self, passt_binding):
+        """
+        Sets the passt_binding of this V1Interface.
+
+        :param passt_binding: The passt_binding of this V1Interface.
+        :type: V1InterfacePasstBinding
+        """
+
+        self._passt_binding = passt_binding
 
     @property
     def pci_address(self):

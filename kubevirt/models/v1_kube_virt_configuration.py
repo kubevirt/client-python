@@ -65,6 +65,7 @@ class V1KubeVirtConfiguration(object):
         'support_container_resources': 'list[V1SupportContainerResources]',
         'supported_guest_agent_versions': 'list[str]',
         'tls_configuration': 'V1TLSConfiguration',
+        'virt_template_deployment': 'V1VirtTemplateDeployment',
         'virtual_machine_instances_per_node': 'int',
         'virtual_machine_options': 'V1VirtualMachineOptions',
         'vm_rollout_strategy': 'str',
@@ -107,6 +108,7 @@ class V1KubeVirtConfiguration(object):
         'support_container_resources': 'supportContainerResources',
         'supported_guest_agent_versions': 'supportedGuestAgentVersions',
         'tls_configuration': 'tlsConfiguration',
+        'virt_template_deployment': 'virtTemplateDeployment',
         'virtual_machine_instances_per_node': 'virtualMachineInstancesPerNode',
         'virtual_machine_options': 'virtualMachineOptions',
         'vm_rollout_strategy': 'vmRolloutStrategy',
@@ -114,7 +116,7 @@ class V1KubeVirtConfiguration(object):
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, changed_block_tracking_label_selectors=None, common_instancetypes_deployment=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, hypervisors=None, image_pull_policy=None, instancetype=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
+    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, changed_block_tracking_label_selectors=None, common_instancetypes_deployment=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, hypervisors=None, image_pull_policy=None, instancetype=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virt_template_deployment=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -153,6 +155,7 @@ class V1KubeVirtConfiguration(object):
         self._support_container_resources = None
         self._supported_guest_agent_versions = None
         self._tls_configuration = None
+        self._virt_template_deployment = None
         self._virtual_machine_instances_per_node = None
         self._virtual_machine_options = None
         self._vm_rollout_strategy = None
@@ -227,6 +230,8 @@ class V1KubeVirtConfiguration(object):
           self.supported_guest_agent_versions = supported_guest_agent_versions
         if tls_configuration is not None:
           self.tls_configuration = tls_configuration
+        if virt_template_deployment is not None:
+          self.virt_template_deployment = virt_template_deployment
         if virtual_machine_instances_per_node is not None:
           self.virtual_machine_instances_per_node = virtual_machine_instances_per_node
         if virtual_machine_options is not None:
@@ -989,6 +994,29 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._tls_configuration = tls_configuration
+
+    @property
+    def virt_template_deployment(self):
+        """
+        Gets the virt_template_deployment of this V1KubeVirtConfiguration.
+        VirtTemplateDeployment controls the deployment of virt-template components
+
+        :return: The virt_template_deployment of this V1KubeVirtConfiguration.
+        :rtype: V1VirtTemplateDeployment
+        """
+        return self._virt_template_deployment
+
+    @virt_template_deployment.setter
+    def virt_template_deployment(self, virt_template_deployment):
+        """
+        Sets the virt_template_deployment of this V1KubeVirtConfiguration.
+        VirtTemplateDeployment controls the deployment of virt-template components
+
+        :param virt_template_deployment: The virt_template_deployment of this V1KubeVirtConfiguration.
+        :type: V1VirtTemplateDeployment
+        """
+
+        self._virt_template_deployment = virt_template_deployment
 
     @property
     def virtual_machine_instances_per_node(self):

@@ -37,6 +37,7 @@ Name | Type | Description | Notes
 **support_container_resources** | [**list[V1SupportContainerResources]**](V1SupportContainerResources.md) | SupportContainerResources specifies the resource requirements for various types of supporting containers such as container disks/virtiofs/sidecars and hotplug attachment pods. If omitted a sensible default will be supplied. | [optional] 
 **supported_guest_agent_versions** | **list[str]** | deprecated | [optional] 
 **tls_configuration** | [**V1TLSConfiguration**](V1TLSConfiguration.md) |  | [optional] 
+**virt_template_deployment** | [**V1VirtTemplateDeployment**](V1VirtTemplateDeployment.md) | VirtTemplateDeployment controls the deployment of virt-template components | [optional] 
 **virtual_machine_instances_per_node** | **int** |  | [optional] 
 **virtual_machine_options** | [**V1VirtualMachineOptions**](V1VirtualMachineOptions.md) |  | [optional] 
 **vm_rollout_strategy** | **str** | VMRolloutStrategy defines how live-updatable fields, like CPU sockets, memory, tolerations, and affinity, are propagated from a VM to its VMI. | [optional] 

@@ -269,6 +269,7 @@ from .v1_utility_volume import V1UtilityVolume
 from .v1_vgpu_display_options import V1VGPUDisplayOptions
 from .v1_vgpu_options import V1VGPUOptions
 from .v1_video_device import V1VideoDevice
+from .v1_virt_template_deployment import V1VirtTemplateDeployment
 from .v1_virtual_machine import V1VirtualMachine
 from .v1_virtual_machine_condition import V1VirtualMachineCondition
 from .v1_virtual_machine_instance import V1VirtualMachineInstance

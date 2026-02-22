@@ -36,6 +36,7 @@ class V1VirtualMachineInstanceBackupStatus(object):
         'checkpoint_name': 'str',
         'completed': 'bool',
         'end_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'failed': 'bool',
         'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'volumes': 'list[V1alpha1BackupVolumeInfo]'
     }
@@ -46,11 +47,12 @@ class V1VirtualMachineInstanceBackupStatus(object):
         'checkpoint_name': 'checkpointName',
         'completed': 'completed',
         'end_timestamp': 'endTimestamp',
+        'failed': 'failed',
         'start_timestamp': 'startTimestamp',
         'volumes': 'volumes'
     }
 
-    def __init__(self, backup_msg=None, backup_name=None, checkpoint_name=None, completed=None, end_timestamp=None, start_timestamp=None, volumes=None):
+    def __init__(self, backup_msg=None, backup_name=None, checkpoint_name=None, completed=None, end_timestamp=None, failed=None, start_timestamp=None, volumes=None):
         """
         V1VirtualMachineInstanceBackupStatus - a model defined in Swagger
         """
@@ -60,6 +62,7 @@ class V1VirtualMachineInstanceBackupStatus(object):
         self._checkpoint_name = None
         self._completed = None
         self._end_timestamp = None
+        self._failed = None
         self._start_timestamp = None
         self._volumes = None
 
@@ -73,6 +76,8 @@ class V1VirtualMachineInstanceBackupStatus(object):
           self.completed = completed
         if end_timestamp is not None:
           self.end_timestamp = end_timestamp
+        if failed is not None:
+          self.failed = failed
         if start_timestamp is not None:
           self.start_timestamp = start_timestamp
         if volumes is not None:
@@ -192,6 +197,29 @@ class V1VirtualMachineInstanceBackupStatus(object):
         """
 
         self._end_timestamp = end_timestamp
+
+    @property
+    def failed(self):
+        """
+        Gets the failed of this V1VirtualMachineInstanceBackupStatus.
+        Failed indicates that the backup failed
+
+        :return: The failed of this V1VirtualMachineInstanceBackupStatus.
+        :rtype: bool
+        """
+        return self._failed
+
+    @failed.setter
+    def failed(self, failed):
+        """
+        Sets the failed of this V1VirtualMachineInstanceBackupStatus.
+        Failed indicates that the backup failed
+
+        :param failed: The failed of this V1VirtualMachineInstanceBackupStatus.
+        :type: bool
+        """
+
+        self._failed = failed
 
     @property
     def start_timestamp(self):

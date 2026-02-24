@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cert_config_map** | **str** | CertConfigMap provides a reference to the CA cert | [optional] 
 **disk_id** | **str** | DiskID provides id of a disk to be imported | [default to '']
+**insecure_skip_verify** | **bool** | InsecureSkipVerify is a flag to skip certificate verification | [optional] 
 **secret_ref** | **str** | SecretRef provides the secret reference needed to access the ovirt-engine | [optional] 
 **url** | **str** | URL is the URL of the ovirt-engine | [default to '']
 

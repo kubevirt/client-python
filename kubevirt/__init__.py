@@ -96,6 +96,7 @@ from .models.v1_config_drive_ssh_public_key_access_credential_propagation import
 from .models.v1_config_map_volume_source import V1ConfigMapVolumeSource
 from .models.v1_container_disk_info import V1ContainerDiskInfo
 from .models.v1_container_disk_source import V1ContainerDiskSource
+from .models.v1_container_path_volume_source import V1ContainerPathVolumeSource
 from .models.v1_controller_revision_ref import V1ControllerRevisionRef
 from .models.v1_custom_block_size import V1CustomBlockSize
 from .models.v1_custom_profile import V1CustomProfile

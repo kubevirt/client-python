@@ -35,6 +35,7 @@ class V1Volume(object):
         'cloud_init_no_cloud': 'V1CloudInitNoCloudSource',
         'config_map': 'V1ConfigMapVolumeSource',
         'container_disk': 'V1ContainerDiskSource',
+        'container_path': 'V1ContainerPathVolumeSource',
         'data_volume': 'V1DataVolumeSource',
         'downward_api': 'V1DownwardAPIVolumeSource',
         'downward_metrics': 'V1DownwardMetricsVolumeSource',
@@ -54,6 +55,7 @@ class V1Volume(object):
         'cloud_init_no_cloud': 'cloudInitNoCloud',
         'config_map': 'configMap',
         'container_disk': 'containerDisk',
+        'container_path': 'containerPath',
         'data_volume': 'dataVolume',
         'downward_api': 'downwardAPI',
         'downward_metrics': 'downwardMetrics',
@@ -68,7 +70,7 @@ class V1Volume(object):
         'sysprep': 'sysprep'
     }
 
-    def __init__(self, cloud_init_config_drive=None, cloud_init_no_cloud=None, config_map=None, container_disk=None, data_volume=None, downward_api=None, downward_metrics=None, empty_disk=None, ephemeral=None, host_disk=None, memory_dump=None, name='', persistent_volume_claim=None, secret=None, service_account=None, sysprep=None):
+    def __init__(self, cloud_init_config_drive=None, cloud_init_no_cloud=None, config_map=None, container_disk=None, container_path=None, data_volume=None, downward_api=None, downward_metrics=None, empty_disk=None, ephemeral=None, host_disk=None, memory_dump=None, name='', persistent_volume_claim=None, secret=None, service_account=None, sysprep=None):
         """
         V1Volume - a model defined in Swagger
         """
@@ -77,6 +79,7 @@ class V1Volume(object):
         self._cloud_init_no_cloud = None
         self._config_map = None
         self._container_disk = None
+        self._container_path = None
         self._data_volume = None
         self._downward_api = None
         self._downward_metrics = None
@@ -98,6 +101,8 @@ class V1Volume(object):
           self.config_map = config_map
         if container_disk is not None:
           self.container_disk = container_disk
+        if container_path is not None:
+          self.container_path = container_path
         if data_volume is not None:
           self.data_volume = data_volume
         if downward_api is not None:
@@ -213,6 +218,29 @@ class V1Volume(object):
         """
 
         self._container_disk = container_disk
+
+    @property
+    def container_path(self):
+        """
+        Gets the container_path of this V1Volume.
+        ContainerPath exposes a path from the virt-launcher container to the VM via virtiofs. The path must correspond to an existing volumeMount in the compute container.
+
+        :return: The container_path of this V1Volume.
+        :rtype: V1ContainerPathVolumeSource
+        """
+        return self._container_path
+
+    @container_path.setter
+    def container_path(self, container_path):
+        """
+        Sets the container_path of this V1Volume.
+        ContainerPath exposes a path from the virt-launcher container to the VM via virtiofs. The path must correspond to an existing volumeMount in the compute container.
+
+        :param container_path: The container_path of this V1Volume.
+        :type: V1ContainerPathVolumeSource
+        """
+
+        self._container_path = container_path
 
     @property
     def data_volume(self):

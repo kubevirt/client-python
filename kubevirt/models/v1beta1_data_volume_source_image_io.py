@@ -33,6 +33,7 @@ class V1beta1DataVolumeSourceImageIO(object):
     swagger_types = {
         'cert_config_map': 'str',
         'disk_id': 'str',
+        'insecure_skip_verify': 'bool',
         'secret_ref': 'str',
         'url': 'str'
     }
@@ -40,23 +41,27 @@ class V1beta1DataVolumeSourceImageIO(object):
     attribute_map = {
         'cert_config_map': 'certConfigMap',
         'disk_id': 'diskId',
+        'insecure_skip_verify': 'insecureSkipVerify',
         'secret_ref': 'secretRef',
         'url': 'url'
     }
 
-    def __init__(self, cert_config_map=None, disk_id='', secret_ref=None, url=''):
+    def __init__(self, cert_config_map=None, disk_id='', insecure_skip_verify=None, secret_ref=None, url=''):
         """
         V1beta1DataVolumeSourceImageIO - a model defined in Swagger
         """
 
         self._cert_config_map = None
         self._disk_id = None
+        self._insecure_skip_verify = None
         self._secret_ref = None
         self._url = None
 
         if cert_config_map is not None:
           self.cert_config_map = cert_config_map
         self.disk_id = disk_id
+        if insecure_skip_verify is not None:
+          self.insecure_skip_verify = insecure_skip_verify
         if secret_ref is not None:
           self.secret_ref = secret_ref
         self.url = url
@@ -108,6 +113,29 @@ class V1beta1DataVolumeSourceImageIO(object):
             raise ValueError("Invalid value for `disk_id`, must not be `None`")
 
         self._disk_id = disk_id
+
+    @property
+    def insecure_skip_verify(self):
+        """
+        Gets the insecure_skip_verify of this V1beta1DataVolumeSourceImageIO.
+        InsecureSkipVerify is a flag to skip certificate verification
+
+        :return: The insecure_skip_verify of this V1beta1DataVolumeSourceImageIO.
+        :rtype: bool
+        """
+        return self._insecure_skip_verify
+
+    @insecure_skip_verify.setter
+    def insecure_skip_verify(self, insecure_skip_verify):
+        """
+        Sets the insecure_skip_verify of this V1beta1DataVolumeSourceImageIO.
+        InsecureSkipVerify is a flag to skip certificate verification
+
+        :param insecure_skip_verify: The insecure_skip_verify of this V1beta1DataVolumeSourceImageIO.
+        :type: bool
+        """
+
+        self._insecure_skip_verify = insecure_skip_verify
 
     @property
     def secret_ref(self):

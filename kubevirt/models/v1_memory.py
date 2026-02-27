@@ -33,16 +33,18 @@ class V1Memory(object):
     swagger_types = {
         'guest': 'K8sIoApimachineryPkgApiResourceQuantity',
         'hugepages': 'V1Hugepages',
-        'max_guest': 'K8sIoApimachineryPkgApiResourceQuantity'
+        'max_guest': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'reserved_overhead': 'V1ReservedOverhead'
     }
 
     attribute_map = {
         'guest': 'guest',
         'hugepages': 'hugepages',
-        'max_guest': 'maxGuest'
+        'max_guest': 'maxGuest',
+        'reserved_overhead': 'reservedOverhead'
     }
 
-    def __init__(self, guest=None, hugepages=None, max_guest=None):
+    def __init__(self, guest=None, hugepages=None, max_guest=None, reserved_overhead=None):
         """
         V1Memory - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class V1Memory(object):
         self._guest = None
         self._hugepages = None
         self._max_guest = None
+        self._reserved_overhead = None
 
         if guest is not None:
           self.guest = guest
@@ -57,6 +60,8 @@ class V1Memory(object):
           self.hugepages = hugepages
         if max_guest is not None:
           self.max_guest = max_guest
+        if reserved_overhead is not None:
+          self.reserved_overhead = reserved_overhead
 
     @property
     def guest(self):
@@ -126,6 +131,29 @@ class V1Memory(object):
         """
 
         self._max_guest = max_guest
+
+    @property
+    def reserved_overhead(self):
+        """
+        Gets the reserved_overhead of this V1Memory.
+        ReservedOverhead configures the memory overhead applied to a VM and its characteristics.
+
+        :return: The reserved_overhead of this V1Memory.
+        :rtype: V1ReservedOverhead
+        """
+        return self._reserved_overhead
+
+    @reserved_overhead.setter
+    def reserved_overhead(self, reserved_overhead):
+        """
+        Sets the reserved_overhead of this V1Memory.
+        ReservedOverhead configures the memory overhead applied to a VM and its characteristics.
+
+        :param reserved_overhead: The reserved_overhead of this V1Memory.
+        :type: V1ReservedOverhead
+        """
+
+        self._reserved_overhead = reserved_overhead
 
     def to_dict(self):
         """

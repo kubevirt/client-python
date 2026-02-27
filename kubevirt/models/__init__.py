@@ -92,6 +92,7 @@ from .v1_cloud_init_config_drive_source import V1CloudInitConfigDriveSource
 from .v1_cloud_init_no_cloud_source import V1CloudInitNoCloudSource
 from .v1_common_instancetypes_deployment import V1CommonInstancetypesDeployment
 from .v1_component_config import V1ComponentConfig
+from .v1_confidential_compute_configuration import V1ConfidentialComputeConfiguration
 from .v1_config_drive_ssh_public_key_access_credential_propagation import V1ConfigDriveSSHPublicKeyAccessCredentialPropagation
 from .v1_config_map_volume_source import V1ConfigMapVolumeSource
 from .v1_container_disk_info import V1ContainerDiskInfo
@@ -255,6 +256,8 @@ from .v1_support_container_resources import V1SupportContainerResources
 from .v1_sy_nic_timer import V1SyNICTimer
 from .v1_sysprep_source import V1SysprepSource
 from .v1_tdx import V1TDX
+from .v1_tdx_attestation_configuration import V1TDXAttestationConfiguration
+from .v1_tdx_configuration import V1TDXConfiguration
 from .v1_tlb_flush import V1TLBFlush
 from .v1_tls_configuration import V1TLSConfiguration
 from .v1_tpm_device import V1TPMDevice

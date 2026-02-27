@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **auto_cpu_limit_namespace_label_selector** | [**K8sIoApimachineryPkgApisMetaV1LabelSelector**](K8sIoApimachineryPkgApisMetaV1LabelSelector.md) | When set, AutoCPULimitNamespaceLabelSelector will set a CPU limit on virt-launcher for VMIs running inside namespaces that match the label selector. The CPU limit will equal the number of requested vCPUs. This setting does not apply to VMIs with dedicated CPUs. | [optional] 
 **changed_block_tracking_label_selectors** | [**V1ChangedBlockTrackingSelectors**](V1ChangedBlockTrackingSelectors.md) | ChangedBlockTrackingLabelSelectors defines label selectors. VMs matching these selectors will have changed block tracking enabled. Enabling changedBlockTracking is mandatory for performing storage-agnostic backups and incremental backups. | [optional] 
 **common_instancetypes_deployment** | [**V1CommonInstancetypesDeployment**](V1CommonInstancetypesDeployment.md) | CommonInstancetypesDeployment controls the deployment of common-instancetypes resources | [optional] 
+**confidential_compute** | [**V1ConfidentialComputeConfiguration**](V1ConfidentialComputeConfiguration.md) | QGS configuration for attestation on the Intel TDX Platform | [optional] 
 **controller_configuration** | [**V1ReloadableComponentConfiguration**](V1ReloadableComponentConfiguration.md) |  | [optional] 
 **cpu_model** | **str** |  | [optional] 
 **cpu_request** | [**K8sIoApimachineryPkgApiResourceQuantity**](K8sIoApimachineryPkgApiResourceQuantity.md) |  | [optional] 

@@ -37,6 +37,7 @@ class V1KubeVirtConfiguration(object):
         'auto_cpu_limit_namespace_label_selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
         'changed_block_tracking_label_selectors': 'V1ChangedBlockTrackingSelectors',
         'common_instancetypes_deployment': 'V1CommonInstancetypesDeployment',
+        'confidential_compute': 'V1ConfidentialComputeConfiguration',
         'controller_configuration': 'V1ReloadableComponentConfiguration',
         'cpu_model': 'str',
         'cpu_request': 'K8sIoApimachineryPkgApiResourceQuantity',
@@ -80,6 +81,7 @@ class V1KubeVirtConfiguration(object):
         'auto_cpu_limit_namespace_label_selector': 'autoCPULimitNamespaceLabelSelector',
         'changed_block_tracking_label_selectors': 'changedBlockTrackingLabelSelectors',
         'common_instancetypes_deployment': 'commonInstancetypesDeployment',
+        'confidential_compute': 'confidentialCompute',
         'controller_configuration': 'controllerConfiguration',
         'cpu_model': 'cpuModel',
         'cpu_request': 'cpuRequest',
@@ -116,7 +118,7 @@ class V1KubeVirtConfiguration(object):
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, changed_block_tracking_label_selectors=None, common_instancetypes_deployment=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, hypervisors=None, image_pull_policy=None, instancetype=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virt_template_deployment=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
+    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, changed_block_tracking_label_selectors=None, common_instancetypes_deployment=None, confidential_compute=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, hypervisors=None, image_pull_policy=None, instancetype=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virt_template_deployment=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -127,6 +129,7 @@ class V1KubeVirtConfiguration(object):
         self._auto_cpu_limit_namespace_label_selector = None
         self._changed_block_tracking_label_selectors = None
         self._common_instancetypes_deployment = None
+        self._confidential_compute = None
         self._controller_configuration = None
         self._cpu_model = None
         self._cpu_request = None
@@ -174,6 +177,8 @@ class V1KubeVirtConfiguration(object):
           self.changed_block_tracking_label_selectors = changed_block_tracking_label_selectors
         if common_instancetypes_deployment is not None:
           self.common_instancetypes_deployment = common_instancetypes_deployment
+        if confidential_compute is not None:
+          self.confidential_compute = confidential_compute
         if controller_configuration is not None:
           self.controller_configuration = controller_configuration
         if cpu_model is not None:
@@ -376,6 +381,29 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._common_instancetypes_deployment = common_instancetypes_deployment
+
+    @property
+    def confidential_compute(self):
+        """
+        Gets the confidential_compute of this V1KubeVirtConfiguration.
+        QGS configuration for attestation on the Intel TDX Platform
+
+        :return: The confidential_compute of this V1KubeVirtConfiguration.
+        :rtype: V1ConfidentialComputeConfiguration
+        """
+        return self._confidential_compute
+
+    @confidential_compute.setter
+    def confidential_compute(self, confidential_compute):
+        """
+        Sets the confidential_compute of this V1KubeVirtConfiguration.
+        QGS configuration for attestation on the Intel TDX Platform
+
+        :param confidential_compute: The confidential_compute of this V1KubeVirtConfiguration.
+        :type: V1ConfidentialComputeConfiguration
+        """
+
+        self._confidential_compute = confidential_compute
 
     @property
     def controller_configuration(self):

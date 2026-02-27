@@ -27,7 +27,6 @@ Name | Type | Description | Notes
 **preferred_sound_model** | **str** | PreferredSoundModel optionally defines the preferred model for Sound devices. | [optional] 
 **preferred_tpm** | [**V1TPMDevice**](V1TPMDevice.md) | PreferredTPM optionally defines the preferred TPM device to be used. | [optional] 
 **preferred_use_virtio_transitional** | **bool** | PreferredUseVirtioTransitional optionally defines the preferred value of UseVirtioTransitional | [optional] 
-**preferred_video_type** | **str** | PreferredVideoType optionally defines the preferred type for Video devices. | [optional] 
 **preferred_virtual_gpu_options** | [**V1VGPUOptions**](V1VGPUOptions.md) | PreferredVirtualGPUOptions optionally defines the preferred value of VirtualGPUOptions | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -55,7 +55,6 @@ class V1beta1DevicePreferences(object):
         'preferred_sound_model': 'str',
         'preferred_tpm': 'V1TPMDevice',
         'preferred_use_virtio_transitional': 'bool',
-        'preferred_video_type': 'str',
         'preferred_virtual_gpu_options': 'V1VGPUOptions'
     }
 
@@ -84,11 +83,10 @@ class V1beta1DevicePreferences(object):
         'preferred_sound_model': 'preferredSoundModel',
         'preferred_tpm': 'preferredTPM',
         'preferred_use_virtio_transitional': 'preferredUseVirtioTransitional',
-        'preferred_video_type': 'preferredVideoType',
         'preferred_virtual_gpu_options': 'preferredVirtualGPUOptions'
     }
 
-    def __init__(self, preferred_autoattach_graphics_device=None, preferred_autoattach_input_device=None, preferred_autoattach_mem_balloon=None, preferred_autoattach_pod_interface=None, preferred_autoattach_serial_console=None, preferred_block_multi_queue=None, preferred_cdrom_bus=None, preferred_disable_hotplug=None, preferred_disk_block_size=None, preferred_disk_bus=None, preferred_disk_cache=None, preferred_disk_dedicated_io_thread=None, preferred_disk_io=None, preferred_input_bus=None, preferred_input_type=None, preferred_interface_masquerade=None, preferred_interface_model=None, preferred_lun_bus=None, preferred_network_interface_multi_queue=None, preferred_panic_device_model=None, preferred_rng=None, preferred_sound_model=None, preferred_tpm=None, preferred_use_virtio_transitional=None, preferred_video_type=None, preferred_virtual_gpu_options=None):
+    def __init__(self, preferred_autoattach_graphics_device=None, preferred_autoattach_input_device=None, preferred_autoattach_mem_balloon=None, preferred_autoattach_pod_interface=None, preferred_autoattach_serial_console=None, preferred_block_multi_queue=None, preferred_cdrom_bus=None, preferred_disable_hotplug=None, preferred_disk_block_size=None, preferred_disk_bus=None, preferred_disk_cache=None, preferred_disk_dedicated_io_thread=None, preferred_disk_io=None, preferred_input_bus=None, preferred_input_type=None, preferred_interface_masquerade=None, preferred_interface_model=None, preferred_lun_bus=None, preferred_network_interface_multi_queue=None, preferred_panic_device_model=None, preferred_rng=None, preferred_sound_model=None, preferred_tpm=None, preferred_use_virtio_transitional=None, preferred_virtual_gpu_options=None):
         """
         V1beta1DevicePreferences - a model defined in Swagger
         """
@@ -117,7 +115,6 @@ class V1beta1DevicePreferences(object):
         self._preferred_sound_model = None
         self._preferred_tpm = None
         self._preferred_use_virtio_transitional = None
-        self._preferred_video_type = None
         self._preferred_virtual_gpu_options = None
 
         if preferred_autoattach_graphics_device is not None:
@@ -168,8 +165,6 @@ class V1beta1DevicePreferences(object):
           self.preferred_tpm = preferred_tpm
         if preferred_use_virtio_transitional is not None:
           self.preferred_use_virtio_transitional = preferred_use_virtio_transitional
-        if preferred_video_type is not None:
-          self.preferred_video_type = preferred_video_type
         if preferred_virtual_gpu_options is not None:
           self.preferred_virtual_gpu_options = preferred_virtual_gpu_options
 
@@ -724,29 +719,6 @@ class V1beta1DevicePreferences(object):
         """
 
         self._preferred_use_virtio_transitional = preferred_use_virtio_transitional
-
-    @property
-    def preferred_video_type(self):
-        """
-        Gets the preferred_video_type of this V1beta1DevicePreferences.
-        PreferredVideoType optionally defines the preferred type for Video devices.
-
-        :return: The preferred_video_type of this V1beta1DevicePreferences.
-        :rtype: str
-        """
-        return self._preferred_video_type
-
-    @preferred_video_type.setter
-    def preferred_video_type(self, preferred_video_type):
-        """
-        Sets the preferred_video_type of this V1beta1DevicePreferences.
-        PreferredVideoType optionally defines the preferred type for Video devices.
-
-        :param preferred_video_type: The preferred_video_type of this V1beta1DevicePreferences.
-        :type: str
-        """
-
-        self._preferred_video_type = preferred_video_type
 
     @property
     def preferred_virtual_gpu_options(self):

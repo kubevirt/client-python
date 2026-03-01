@@ -60,6 +60,7 @@ class V1KubeVirtConfiguration(object):
         'obsolete_cpu_models': 'dict(str, bool)',
         'ovmf_path': 'str',
         'permitted_host_devices': 'V1PermittedHostDevices',
+        'role_aggregation_strategy': 'str',
         'seccomp_configuration': 'V1SeccompConfiguration',
         'selinux_launcher_type': 'str',
         'smbios': 'V1SMBiosConfiguration',
@@ -104,6 +105,7 @@ class V1KubeVirtConfiguration(object):
         'obsolete_cpu_models': 'obsoleteCPUModels',
         'ovmf_path': 'ovmfPath',
         'permitted_host_devices': 'permittedHostDevices',
+        'role_aggregation_strategy': 'roleAggregationStrategy',
         'seccomp_configuration': 'seccompConfiguration',
         'selinux_launcher_type': 'selinuxLauncherType',
         'smbios': 'smbios',
@@ -118,7 +120,7 @@ class V1KubeVirtConfiguration(object):
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, changed_block_tracking_label_selectors=None, common_instancetypes_deployment=None, confidential_compute=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, hypervisors=None, image_pull_policy=None, instancetype=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virt_template_deployment=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
+    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, changed_block_tracking_label_selectors=None, common_instancetypes_deployment=None, confidential_compute=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, hypervisors=None, image_pull_policy=None, instancetype=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, role_aggregation_strategy=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virt_template_deployment=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -152,6 +154,7 @@ class V1KubeVirtConfiguration(object):
         self._obsolete_cpu_models = None
         self._ovmf_path = None
         self._permitted_host_devices = None
+        self._role_aggregation_strategy = None
         self._seccomp_configuration = None
         self._selinux_launcher_type = None
         self._smbios = None
@@ -223,6 +226,8 @@ class V1KubeVirtConfiguration(object):
           self.ovmf_path = ovmf_path
         if permitted_host_devices is not None:
           self.permitted_host_devices = permitted_host_devices
+        if role_aggregation_strategy is not None:
+          self.role_aggregation_strategy = role_aggregation_strategy
         if seccomp_configuration is not None:
           self.seccomp_configuration = seccomp_configuration
         if selinux_launcher_type is not None:
@@ -892,6 +897,29 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._permitted_host_devices = permitted_host_devices
+
+    @property
+    def role_aggregation_strategy(self):
+        """
+        Gets the role_aggregation_strategy of this V1KubeVirtConfiguration.
+        RoleAggregationStrategy controls whether RBAC cluster roles should be aggregated to the default Kubernetes roles (admin, edit, view). When set to \"AggregateToDefault\" (default) or not specified, the aggregate-to-* labels are added to the cluster roles. When set to \"Manual\", the labels are not added, and roles will not be aggregated to the default roles. Setting this field to \"Manual\" requires the OptOutRoleAggregation feature gate to be enabled. This is an Alpha feature and subject to change.
+
+        :return: The role_aggregation_strategy of this V1KubeVirtConfiguration.
+        :rtype: str
+        """
+        return self._role_aggregation_strategy
+
+    @role_aggregation_strategy.setter
+    def role_aggregation_strategy(self, role_aggregation_strategy):
+        """
+        Sets the role_aggregation_strategy of this V1KubeVirtConfiguration.
+        RoleAggregationStrategy controls whether RBAC cluster roles should be aggregated to the default Kubernetes roles (admin, edit, view). When set to \"AggregateToDefault\" (default) or not specified, the aggregate-to-* labels are added to the cluster roles. When set to \"Manual\", the labels are not added, and roles will not be aggregated to the default roles. Setting this field to \"Manual\" requires the OptOutRoleAggregation feature gate to be enabled. This is an Alpha feature and subject to change.
+
+        :param role_aggregation_strategy: The role_aggregation_strategy of this V1KubeVirtConfiguration.
+        :type: str
+        """
+
+        self._role_aggregation_strategy = role_aggregation_strategy
 
     @property
     def seccomp_configuration(self):

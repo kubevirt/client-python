@@ -33,18 +33,16 @@ class V1MemoryStatus(object):
     swagger_types = {
         'guest_at_boot': 'K8sIoApimachineryPkgApiResourceQuantity',
         'guest_current': 'K8sIoApimachineryPkgApiResourceQuantity',
-        'guest_requested': 'K8sIoApimachineryPkgApiResourceQuantity',
-        'memory_overhead': 'K8sIoApimachineryPkgApiResourceQuantity'
+        'guest_requested': 'K8sIoApimachineryPkgApiResourceQuantity'
     }
 
     attribute_map = {
         'guest_at_boot': 'guestAtBoot',
         'guest_current': 'guestCurrent',
-        'guest_requested': 'guestRequested',
-        'memory_overhead': 'memoryOverhead'
+        'guest_requested': 'guestRequested'
     }
 
-    def __init__(self, guest_at_boot=None, guest_current=None, guest_requested=None, memory_overhead=None):
+    def __init__(self, guest_at_boot=None, guest_current=None, guest_requested=None):
         """
         V1MemoryStatus - a model defined in Swagger
         """
@@ -52,7 +50,6 @@ class V1MemoryStatus(object):
         self._guest_at_boot = None
         self._guest_current = None
         self._guest_requested = None
-        self._memory_overhead = None
 
         if guest_at_boot is not None:
           self.guest_at_boot = guest_at_boot
@@ -60,8 +57,6 @@ class V1MemoryStatus(object):
           self.guest_current = guest_current
         if guest_requested is not None:
           self.guest_requested = guest_requested
-        if memory_overhead is not None:
-          self.memory_overhead = memory_overhead
 
     @property
     def guest_at_boot(self):
@@ -131,29 +126,6 @@ class V1MemoryStatus(object):
         """
 
         self._guest_requested = guest_requested
-
-    @property
-    def memory_overhead(self):
-        """
-        Gets the memory_overhead of this V1MemoryStatus.
-        MemoryOverhead specifies the memory overhead added by the virtualization infrastructure for the virt-launcher pod.
-
-        :return: The memory_overhead of this V1MemoryStatus.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
-        """
-        return self._memory_overhead
-
-    @memory_overhead.setter
-    def memory_overhead(self, memory_overhead):
-        """
-        Sets the memory_overhead of this V1MemoryStatus.
-        MemoryOverhead specifies the memory overhead added by the virtualization infrastructure for the virt-launcher pod.
-
-        :param memory_overhead: The memory_overhead of this V1MemoryStatus.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
-        """
-
-        self._memory_overhead = memory_overhead
 
     def to_dict(self):
         """

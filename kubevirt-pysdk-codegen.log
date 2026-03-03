@@ -1729,6 +1729,24 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/apis/default_api.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_default_api.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/DefaultApi.md

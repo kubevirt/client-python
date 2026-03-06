@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**backups** | [**list[V1beta1VirtualMachineExportBackup]**](V1beta1VirtualMachineExportBackup.md) | Backups is a list of available backups for the export | [optional] 
 **cert** | **str** | Cert is the public CA certificate base64 encoded | [default to '']
 **manifests** | [**list[V1beta1VirtualMachineExportManifest]**](V1beta1VirtualMachineExportManifest.md) | Manifests is a list of available manifests for the export | [optional] 
 **volumes** | [**list[V1beta1VirtualMachineExportVolume]**](V1beta1VirtualMachineExportVolume.md) | Volumes is a list of available volumes to export | [optional] 

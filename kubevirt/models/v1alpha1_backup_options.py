@@ -31,52 +31,119 @@ class V1alpha1BackupOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'backup_cert': 'str',
+        'backup_key': 'str',
         'backup_name': 'str',
         'backup_start_time': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'ca_cert': 'str',
         'cmd': 'str',
+        'export_server_addr': 'str',
+        'export_server_name': 'str',
         'incremental': 'str',
         'mode': 'str',
-        'push_path': 'str',
-        'skip_quiesce': 'bool'
+        'skip_quiesce': 'bool',
+        'target_path': 'str'
     }
 
     attribute_map = {
+        'backup_cert': 'backupCert',
+        'backup_key': 'backupKey',
         'backup_name': 'backupName',
         'backup_start_time': 'backupStartTime',
+        'ca_cert': 'caCert',
         'cmd': 'cmd',
+        'export_server_addr': 'exportServerAddr',
+        'export_server_name': 'exportServerName',
         'incremental': 'incremental',
         'mode': 'mode',
-        'push_path': 'pushPath',
-        'skip_quiesce': 'skipQuiesce'
+        'skip_quiesce': 'skipQuiesce',
+        'target_path': 'targetPath'
     }
 
-    def __init__(self, backup_name=None, backup_start_time=None, cmd=None, incremental=None, mode=None, push_path=None, skip_quiesce=None):
+    def __init__(self, backup_cert=None, backup_key=None, backup_name=None, backup_start_time=None, ca_cert=None, cmd=None, export_server_addr=None, export_server_name=None, incremental=None, mode=None, skip_quiesce=None, target_path=None):
         """
         V1alpha1BackupOptions - a model defined in Swagger
         """
 
+        self._backup_cert = None
+        self._backup_key = None
         self._backup_name = None
         self._backup_start_time = None
+        self._ca_cert = None
         self._cmd = None
+        self._export_server_addr = None
+        self._export_server_name = None
         self._incremental = None
         self._mode = None
-        self._push_path = None
         self._skip_quiesce = None
+        self._target_path = None
 
+        if backup_cert is not None:
+          self.backup_cert = backup_cert
+        if backup_key is not None:
+          self.backup_key = backup_key
         if backup_name is not None:
           self.backup_name = backup_name
         if backup_start_time is not None:
           self.backup_start_time = backup_start_time
+        if ca_cert is not None:
+          self.ca_cert = ca_cert
         if cmd is not None:
           self.cmd = cmd
+        if export_server_addr is not None:
+          self.export_server_addr = export_server_addr
+        if export_server_name is not None:
+          self.export_server_name = export_server_name
         if incremental is not None:
           self.incremental = incremental
         if mode is not None:
           self.mode = mode
-        if push_path is not None:
-          self.push_path = push_path
         if skip_quiesce is not None:
           self.skip_quiesce = skip_quiesce
+        if target_path is not None:
+          self.target_path = target_path
+
+    @property
+    def backup_cert(self):
+        """
+        Gets the backup_cert of this V1alpha1BackupOptions.
+
+        :return: The backup_cert of this V1alpha1BackupOptions.
+        :rtype: str
+        """
+        return self._backup_cert
+
+    @backup_cert.setter
+    def backup_cert(self, backup_cert):
+        """
+        Sets the backup_cert of this V1alpha1BackupOptions.
+
+        :param backup_cert: The backup_cert of this V1alpha1BackupOptions.
+        :type: str
+        """
+
+        self._backup_cert = backup_cert
+
+    @property
+    def backup_key(self):
+        """
+        Gets the backup_key of this V1alpha1BackupOptions.
+
+        :return: The backup_key of this V1alpha1BackupOptions.
+        :rtype: str
+        """
+        return self._backup_key
+
+    @backup_key.setter
+    def backup_key(self, backup_key):
+        """
+        Sets the backup_key of this V1alpha1BackupOptions.
+
+        :param backup_key: The backup_key of this V1alpha1BackupOptions.
+        :type: str
+        """
+
+        self._backup_key = backup_key
 
     @property
     def backup_name(self):
@@ -121,6 +188,27 @@ class V1alpha1BackupOptions(object):
         self._backup_start_time = backup_start_time
 
     @property
+    def ca_cert(self):
+        """
+        Gets the ca_cert of this V1alpha1BackupOptions.
+
+        :return: The ca_cert of this V1alpha1BackupOptions.
+        :rtype: str
+        """
+        return self._ca_cert
+
+    @ca_cert.setter
+    def ca_cert(self, ca_cert):
+        """
+        Sets the ca_cert of this V1alpha1BackupOptions.
+
+        :param ca_cert: The ca_cert of this V1alpha1BackupOptions.
+        :type: str
+        """
+
+        self._ca_cert = ca_cert
+
+    @property
     def cmd(self):
         """
         Gets the cmd of this V1alpha1BackupOptions.
@@ -140,6 +228,48 @@ class V1alpha1BackupOptions(object):
         """
 
         self._cmd = cmd
+
+    @property
+    def export_server_addr(self):
+        """
+        Gets the export_server_addr of this V1alpha1BackupOptions.
+
+        :return: The export_server_addr of this V1alpha1BackupOptions.
+        :rtype: str
+        """
+        return self._export_server_addr
+
+    @export_server_addr.setter
+    def export_server_addr(self, export_server_addr):
+        """
+        Sets the export_server_addr of this V1alpha1BackupOptions.
+
+        :param export_server_addr: The export_server_addr of this V1alpha1BackupOptions.
+        :type: str
+        """
+
+        self._export_server_addr = export_server_addr
+
+    @property
+    def export_server_name(self):
+        """
+        Gets the export_server_name of this V1alpha1BackupOptions.
+
+        :return: The export_server_name of this V1alpha1BackupOptions.
+        :rtype: str
+        """
+        return self._export_server_name
+
+    @export_server_name.setter
+    def export_server_name(self, export_server_name):
+        """
+        Sets the export_server_name of this V1alpha1BackupOptions.
+
+        :param export_server_name: The export_server_name of this V1alpha1BackupOptions.
+        :type: str
+        """
+
+        self._export_server_name = export_server_name
 
     @property
     def incremental(self):
@@ -184,27 +314,6 @@ class V1alpha1BackupOptions(object):
         self._mode = mode
 
     @property
-    def push_path(self):
-        """
-        Gets the push_path of this V1alpha1BackupOptions.
-
-        :return: The push_path of this V1alpha1BackupOptions.
-        :rtype: str
-        """
-        return self._push_path
-
-    @push_path.setter
-    def push_path(self, push_path):
-        """
-        Sets the push_path of this V1alpha1BackupOptions.
-
-        :param push_path: The push_path of this V1alpha1BackupOptions.
-        :type: str
-        """
-
-        self._push_path = push_path
-
-    @property
     def skip_quiesce(self):
         """
         Gets the skip_quiesce of this V1alpha1BackupOptions.
@@ -224,6 +333,27 @@ class V1alpha1BackupOptions(object):
         """
 
         self._skip_quiesce = skip_quiesce
+
+    @property
+    def target_path(self):
+        """
+        Gets the target_path of this V1alpha1BackupOptions.
+
+        :return: The target_path of this V1alpha1BackupOptions.
+        :rtype: str
+        """
+        return self._target_path
+
+    @target_path.setter
+    def target_path(self, target_path):
+        """
+        Sets the target_path of this V1alpha1BackupOptions.
+
+        :param target_path: The target_path of this V1alpha1BackupOptions.
+        :type: str
+        """
+
+        self._target_path = target_path
 
     def to_dict(self):
         """

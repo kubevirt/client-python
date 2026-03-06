@@ -31,31 +31,59 @@ class V1beta1VirtualMachineExportLink(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'backups': 'list[V1beta1VirtualMachineExportBackup]',
         'cert': 'str',
         'manifests': 'list[V1beta1VirtualMachineExportManifest]',
         'volumes': 'list[V1beta1VirtualMachineExportVolume]'
     }
 
     attribute_map = {
+        'backups': 'backups',
         'cert': 'cert',
         'manifests': 'manifests',
         'volumes': 'volumes'
     }
 
-    def __init__(self, cert='', manifests=None, volumes=None):
+    def __init__(self, backups=None, cert='', manifests=None, volumes=None):
         """
         V1beta1VirtualMachineExportLink - a model defined in Swagger
         """
 
+        self._backups = None
         self._cert = None
         self._manifests = None
         self._volumes = None
 
+        if backups is not None:
+          self.backups = backups
         self.cert = cert
         if manifests is not None:
           self.manifests = manifests
         if volumes is not None:
           self.volumes = volumes
+
+    @property
+    def backups(self):
+        """
+        Gets the backups of this V1beta1VirtualMachineExportLink.
+        Backups is a list of available backups for the export
+
+        :return: The backups of this V1beta1VirtualMachineExportLink.
+        :rtype: list[V1beta1VirtualMachineExportBackup]
+        """
+        return self._backups
+
+    @backups.setter
+    def backups(self, backups):
+        """
+        Sets the backups of this V1beta1VirtualMachineExportLink.
+        Backups is a list of available backups for the export
+
+        :param backups: The backups of this V1beta1VirtualMachineExportLink.
+        :type: list[V1beta1VirtualMachineExportBackup]
+        """
+
+        self._backups = backups
 
     @property
     def cert(self):

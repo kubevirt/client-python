@@ -31,25 +31,58 @@ class V1alpha1BackupVolumeInfo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'data_endpoint': 'str',
         'disk_target': 'str',
+        'map_endpoint': 'str',
         'volume_name': 'str'
     }
 
     attribute_map = {
+        'data_endpoint': 'dataEndpoint',
         'disk_target': 'diskTarget',
+        'map_endpoint': 'mapEndpoint',
         'volume_name': 'volumeName'
     }
 
-    def __init__(self, disk_target='', volume_name=''):
+    def __init__(self, data_endpoint=None, disk_target='', map_endpoint=None, volume_name=''):
         """
         V1alpha1BackupVolumeInfo - a model defined in Swagger
         """
 
+        self._data_endpoint = None
         self._disk_target = None
+        self._map_endpoint = None
         self._volume_name = None
 
+        if data_endpoint is not None:
+          self.data_endpoint = data_endpoint
         self.disk_target = disk_target
+        if map_endpoint is not None:
+          self.map_endpoint = map_endpoint
         self.volume_name = volume_name
+
+    @property
+    def data_endpoint(self):
+        """
+        Gets the data_endpoint of this V1alpha1BackupVolumeInfo.
+        DataEndpoint is the URL of the endpoint for read for pull mode
+
+        :return: The data_endpoint of this V1alpha1BackupVolumeInfo.
+        :rtype: str
+        """
+        return self._data_endpoint
+
+    @data_endpoint.setter
+    def data_endpoint(self, data_endpoint):
+        """
+        Sets the data_endpoint of this V1alpha1BackupVolumeInfo.
+        DataEndpoint is the URL of the endpoint for read for pull mode
+
+        :param data_endpoint: The data_endpoint of this V1alpha1BackupVolumeInfo.
+        :type: str
+        """
+
+        self._data_endpoint = data_endpoint
 
     @property
     def disk_target(self):
@@ -75,6 +108,29 @@ class V1alpha1BackupVolumeInfo(object):
             raise ValueError("Invalid value for `disk_target`, must not be `None`")
 
         self._disk_target = disk_target
+
+    @property
+    def map_endpoint(self):
+        """
+        Gets the map_endpoint of this V1alpha1BackupVolumeInfo.
+        MapEndpoint is the URL of the endpoint for map for pull mode
+
+        :return: The map_endpoint of this V1alpha1BackupVolumeInfo.
+        :rtype: str
+        """
+        return self._map_endpoint
+
+    @map_endpoint.setter
+    def map_endpoint(self, map_endpoint):
+        """
+        Sets the map_endpoint of this V1alpha1BackupVolumeInfo.
+        MapEndpoint is the URL of the endpoint for map for pull mode
+
+        :param map_endpoint: The map_endpoint of this V1alpha1BackupVolumeInfo.
+        :type: str
+        """
+
+        self._map_endpoint = map_endpoint
 
     @property
     def volume_name(self):

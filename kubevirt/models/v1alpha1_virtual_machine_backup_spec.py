@@ -35,7 +35,9 @@ class V1alpha1VirtualMachineBackupSpec(object):
         'mode': 'str',
         'pvc_name': 'str',
         'skip_quiesce': 'bool',
-        'source': 'K8sIoApiCoreV1TypedLocalObjectReference'
+        'source': 'K8sIoApiCoreV1TypedLocalObjectReference',
+        'token_secret_ref': 'str',
+        'ttl_duration': 'K8sIoApimachineryPkgApisMetaV1Duration'
     }
 
     attribute_map = {
@@ -43,10 +45,12 @@ class V1alpha1VirtualMachineBackupSpec(object):
         'mode': 'mode',
         'pvc_name': 'pvcName',
         'skip_quiesce': 'skipQuiesce',
-        'source': 'source'
+        'source': 'source',
+        'token_secret_ref': 'tokenSecretRef',
+        'ttl_duration': 'ttlDuration'
     }
 
-    def __init__(self, force_full_backup=None, mode=None, pvc_name=None, skip_quiesce=None, source=None):
+    def __init__(self, force_full_backup=None, mode=None, pvc_name=None, skip_quiesce=None, source=None, token_secret_ref=None, ttl_duration=None):
         """
         V1alpha1VirtualMachineBackupSpec - a model defined in Swagger
         """
@@ -56,6 +60,8 @@ class V1alpha1VirtualMachineBackupSpec(object):
         self._pvc_name = None
         self._skip_quiesce = None
         self._source = None
+        self._token_secret_ref = None
+        self._ttl_duration = None
 
         if force_full_backup is not None:
           self.force_full_backup = force_full_backup
@@ -66,6 +72,10 @@ class V1alpha1VirtualMachineBackupSpec(object):
         if skip_quiesce is not None:
           self.skip_quiesce = skip_quiesce
         self.source = source
+        if token_secret_ref is not None:
+          self.token_secret_ref = token_secret_ref
+        if ttl_duration is not None:
+          self.ttl_duration = ttl_duration
 
     @property
     def force_full_backup(self):
@@ -183,6 +193,52 @@ class V1alpha1VirtualMachineBackupSpec(object):
             raise ValueError("Invalid value for `source`, must not be `None`")
 
         self._source = source
+
+    @property
+    def token_secret_ref(self):
+        """
+        Gets the token_secret_ref of this V1alpha1VirtualMachineBackupSpec.
+        TokenSecretRef is the name of the secret that will be used to pull the backup from an associated endpoint
+
+        :return: The token_secret_ref of this V1alpha1VirtualMachineBackupSpec.
+        :rtype: str
+        """
+        return self._token_secret_ref
+
+    @token_secret_ref.setter
+    def token_secret_ref(self, token_secret_ref):
+        """
+        Sets the token_secret_ref of this V1alpha1VirtualMachineBackupSpec.
+        TokenSecretRef is the name of the secret that will be used to pull the backup from an associated endpoint
+
+        :param token_secret_ref: The token_secret_ref of this V1alpha1VirtualMachineBackupSpec.
+        :type: str
+        """
+
+        self._token_secret_ref = token_secret_ref
+
+    @property
+    def ttl_duration(self):
+        """
+        Gets the ttl_duration of this V1alpha1VirtualMachineBackupSpec.
+        TtlDuration limits the lifetime of a pull mode backup and its export If this field is set, after this duration has passed from counting from CreationTimestamp, the backup is eligible to be automatically considered as complete. If this field is omitted, a reasonable default is applied.
+
+        :return: The ttl_duration of this V1alpha1VirtualMachineBackupSpec.
+        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
+        """
+        return self._ttl_duration
+
+    @ttl_duration.setter
+    def ttl_duration(self, ttl_duration):
+        """
+        Sets the ttl_duration of this V1alpha1VirtualMachineBackupSpec.
+        TtlDuration limits the lifetime of a pull mode backup and its export If this field is set, after this duration has passed from counting from CreationTimestamp, the backup is eligible to be automatically considered as complete. If this field is omitted, a reasonable default is applied.
+
+        :param ttl_duration: The ttl_duration of this V1alpha1VirtualMachineBackupSpec.
+        :type: K8sIoApimachineryPkgApisMetaV1Duration
+        """
+
+        self._ttl_duration = ttl_duration
 
     def to_dict(self):
         """

@@ -112,10 +112,6 @@ from .models.v1_deprecated_interface_macvtap import V1DeprecatedInterfaceMacvtap
 from .models.v1_deprecated_interface_passt import V1DeprecatedInterfacePasst
 from .models.v1_deprecated_interface_slirp import V1DeprecatedInterfaceSlirp
 from .models.v1_developer_configuration import V1DeveloperConfiguration
-from .models.v1_device_attribute import V1DeviceAttribute
-from .models.v1_device_resource_claim_status import V1DeviceResourceClaimStatus
-from .models.v1_device_status import V1DeviceStatus
-from .models.v1_device_status_info import V1DeviceStatusInfo
 from .models.v1_devices import V1Devices
 from .models.v1_diag288_watchdog import V1Diag288Watchdog
 from .models.v1_disable_free_page_reporting import V1DisableFreePageReporting

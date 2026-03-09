@@ -36,7 +36,6 @@ class V1VirtualMachineInstanceStatus(object):
         'changed_block_tracking': 'V1ChangedBlockTrackingStatus',
         'conditions': 'list[V1VirtualMachineInstanceCondition]',
         'current_cpu_topology': 'V1CPUTopology',
-        'device_status': 'V1DeviceStatus',
         'evacuation_node_name': 'str',
         'fs_freeze_status': 'str',
         'guest_os_info': 'V1VirtualMachineInstanceGuestOSInfo',
@@ -67,7 +66,6 @@ class V1VirtualMachineInstanceStatus(object):
         'changed_block_tracking': 'changedBlockTracking',
         'conditions': 'conditions',
         'current_cpu_topology': 'currentCPUTopology',
-        'device_status': 'deviceStatus',
         'evacuation_node_name': 'evacuationNodeName',
         'fs_freeze_status': 'fsFreezeStatus',
         'guest_os_info': 'guestOSInfo',
@@ -92,7 +90,7 @@ class V1VirtualMachineInstanceStatus(object):
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, vsockcid=None, active_pods=None, changed_block_tracking=None, conditions=None, current_cpu_topology=None, device_status=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, kernel_boot_status=None, launcher_container_image_version=None, machine=None, memory=None, migrated_volumes=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
+    def __init__(self, vsockcid=None, active_pods=None, changed_block_tracking=None, conditions=None, current_cpu_topology=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, kernel_boot_status=None, launcher_container_image_version=None, machine=None, memory=None, migrated_volumes=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -102,7 +100,6 @@ class V1VirtualMachineInstanceStatus(object):
         self._changed_block_tracking = None
         self._conditions = None
         self._current_cpu_topology = None
-        self._device_status = None
         self._evacuation_node_name = None
         self._fs_freeze_status = None
         self._guest_os_info = None
@@ -136,8 +133,6 @@ class V1VirtualMachineInstanceStatus(object):
           self.conditions = conditions
         if current_cpu_topology is not None:
           self.current_cpu_topology = current_cpu_topology
-        if device_status is not None:
-          self.device_status = device_status
         if evacuation_node_name is not None:
           self.evacuation_node_name = evacuation_node_name
         if fs_freeze_status is not None:
@@ -297,29 +292,6 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._current_cpu_topology = current_cpu_topology
-
-    @property
-    def device_status(self):
-        """
-        Gets the device_status of this V1VirtualMachineInstanceStatus.
-        DeviceStatus reflects the state of devices requested in spec.domain.devices. This is an optional field available only when DRA feature gate is enabled This field will only be populated if one of the feature-gates GPUsWithDRA or HostDevicesWithDRA is enabled. This feature is in alpha.
-
-        :return: The device_status of this V1VirtualMachineInstanceStatus.
-        :rtype: V1DeviceStatus
-        """
-        return self._device_status
-
-    @device_status.setter
-    def device_status(self, device_status):
-        """
-        Sets the device_status of this V1VirtualMachineInstanceStatus.
-        DeviceStatus reflects the state of devices requested in spec.domain.devices. This is an optional field available only when DRA feature gate is enabled This field will only be populated if one of the feature-gates GPUsWithDRA or HostDevicesWithDRA is enabled. This feature is in alpha.
-
-        :param device_status: The device_status of this V1VirtualMachineInstanceStatus.
-        :type: V1DeviceStatus
-        """
-
-        self._device_status = device_status
 
     @property
     def evacuation_node_name(self):

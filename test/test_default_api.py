@@ -463,9 +463,9 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_func15(self):
+    def test_func17(self):
         """
-        Test case for func15
+        Test case for func17
 
         
         """
@@ -610,6 +610,30 @@ class TestDefaultApi(unittest.TestCase):
     def test_get_api_resources_snapshot_kubevirt_io_v1beta1(self):
         """
         Test case for get_api_resources_snapshot_kubevirt_io_v1beta1
+
+        
+        """
+        pass
+
+    def test_get_open_apiv3_discovery(self):
+        """
+        Test case for get_open_apiv3_discovery
+
+        
+        """
+        pass
+
+    def test_get_open_apiv3_spec_subresources_kubevirt_io_v1(self):
+        """
+        Test case for get_open_apiv3_spec_subresources_kubevirt_io_v1
+
+        
+        """
+        pass
+
+    def test_get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3(self):
+        """
+        Test case for get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3
 
         
         """

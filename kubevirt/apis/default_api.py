@@ -6572,7 +6572,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def func15(self, **kwargs):
+    def func17(self, **kwargs):
         """
         Health endpoint
         This method makes a synchronous HTTP request by default. To make an
@@ -6581,7 +6581,7 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.func15(callback=callback_function)
+        >>> thread = api.func17(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6591,12 +6591,12 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.func15_with_http_info(**kwargs)
+            return self.func17_with_http_info(**kwargs)
         else:
-            (data) = self.func15_with_http_info(**kwargs)
+            (data) = self.func17_with_http_info(**kwargs)
             return data
 
-    def func15_with_http_info(self, **kwargs):
+    def func17_with_http_info(self, **kwargs):
         """
         Health endpoint
         This method makes a synchronous HTTP request by default. To make an
@@ -6605,7 +6605,7 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.func15_with_http_info(callback=callback_function)
+        >>> thread = api.func17_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -6625,7 +6625,7 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method func15" % key
+                    " to method func17" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -8311,6 +8311,282 @@ class DefaultApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='K8sIoApimachineryPkgApisMetaV1APIResourceList',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_open_apiv3_discovery(self, **kwargs):
+        """
+        Get OpenAPI v3 discovery
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_open_apiv3_discovery(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_open_apiv3_discovery_with_http_info(**kwargs)
+        else:
+            (data) = self.get_open_apiv3_discovery_with_http_info(**kwargs)
+            return data
+
+    def get_open_apiv3_discovery_with_http_info(self, **kwargs):
+        """
+        Get OpenAPI v3 discovery
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_open_apiv3_discovery_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_open_apiv3_discovery" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/openapi/v3', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_open_apiv3_spec_subresources_kubevirt_io_v1(self, **kwargs):
+        """
+        Get OpenAPI v3 specification for subresources.kubevirt.io/v1
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_open_apiv3_spec_subresources_kubevirt_io_v1(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_open_apiv3_spec_subresources_kubevirt_io_v1_with_http_info(**kwargs)
+        else:
+            (data) = self.get_open_apiv3_spec_subresources_kubevirt_io_v1_with_http_info(**kwargs)
+            return data
+
+    def get_open_apiv3_spec_subresources_kubevirt_io_v1_with_http_info(self, **kwargs):
+        """
+        Get OpenAPI v3 specification for subresources.kubevirt.io/v1
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_open_apiv3_spec_subresources_kubevirt_io_v1_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_open_apiv3_spec_subresources_kubevirt_io_v1" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/openapi/v3/apis/subresources.kubevirt.io/v1', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='str',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3(self, **kwargs):
+        """
+        Get OpenAPI v3 specification for subresources.kubevirt.io/v1alpha3
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3_with_http_info(**kwargs)
+        else:
+            (data) = self.get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3_with_http_info(**kwargs)
+            return data
+
+    def get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3_with_http_info(self, **kwargs):
+        """
+        Get OpenAPI v3 specification for subresources.kubevirt.io/v1alpha3
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api('/openapi/v3/apis/subresources.kubevirt.io/v1alpha3', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='str',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

@@ -58,7 +58,7 @@ Method | HTTP request | Description
 [**delete_virtual_machine_clone**](DefaultApi.md#delete_virtual_machine_clone) | **DELETE** /apis/clone.kubevirt.io/v1beta1/virtualmachineclones/{name} | 
 [**delete_virtual_machine_cluster_instancetype**](DefaultApi.md#delete_virtual_machine_cluster_instancetype) | **DELETE** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterinstancetypes/{name} | 
 [**delete_virtual_machine_cluster_preference**](DefaultApi.md#delete_virtual_machine_cluster_preference) | **DELETE** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterpreferences/{name} | 
-[**func15**](DefaultApi.md#func15) | **GET** /healthz | 
+[**func17**](DefaultApi.md#func17) | **GET** /healthz | 
 [**func6**](DefaultApi.md#func6) | **GET** /openapi/v2 | 
 [**get_api_group_backup_kubevirt_io**](DefaultApi.md#get_api_group_backup_kubevirt_io) | **GET** /apis/backup.kubevirt.io/ | 
 [**get_api_group_clone_kubevirt_io**](DefaultApi.md#get_api_group_clone_kubevirt_io) | **GET** /apis/clone.kubevirt.io/ | 
@@ -77,6 +77,9 @@ Method | HTTP request | Description
 [**get_api_resources_migrations_kubevirt_io_v1alpha1**](DefaultApi.md#get_api_resources_migrations_kubevirt_io_v1alpha1) | **GET** /apis/migrations.kubevirt.io/v1alpha1/ | 
 [**get_api_resources_pool_kubevirt_io_v1beta1**](DefaultApi.md#get_api_resources_pool_kubevirt_io_v1beta1) | **GET** /apis/pool.kubevirt.io/v1beta1/ | 
 [**get_api_resources_snapshot_kubevirt_io_v1beta1**](DefaultApi.md#get_api_resources_snapshot_kubevirt_io_v1beta1) | **GET** /apis/snapshot.kubevirt.io/v1beta1/ | 
+[**get_open_apiv3_discovery**](DefaultApi.md#get_open_apiv3_discovery) | **GET** /openapi/v3 | 
+[**get_open_apiv3_spec_subresources_kubevirt_io_v1**](DefaultApi.md#get_open_apiv3_spec_subresources_kubevirt_io_v1) | **GET** /openapi/v3/apis/subresources.kubevirt.io/v1 | 
+[**get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3**](DefaultApi.md#get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3) | **GET** /openapi/v3/apis/subresources.kubevirt.io/v1alpha3 | 
 [**get_root_paths**](DefaultApi.md#get_root_paths) | **GET** / | 
 [**handle_dump_profiler**](DefaultApi.md#handle_dump_profiler) | **GET** /dump-profiler | 
 [**handle_start_profiler**](DefaultApi.md#handle_start_profiler) | **GET** /start-profiler | 
@@ -3286,8 +3289,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **func15**
-> func15()
+# **func17**
+> func17()
 
 
 
@@ -3305,9 +3308,9 @@ from pprint import pprint
 api_instance = kubevirt.DefaultApi()
 
 try: 
-    api_instance.func15()
+    api_instance.func17()
 except ApiException as e:
-    print("Exception when calling DefaultApi->func15: %s\n" % e)
+    print("Exception when calling DefaultApi->func17: %s\n" % e)
 ```
 
 ### Parameters
@@ -4087,6 +4090,134 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**K8sIoApimachineryPkgApisMetaV1APIResourceList**](K8sIoApimachineryPkgApisMetaV1APIResourceList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_open_apiv3_discovery**
+> get_open_apiv3_discovery()
+
+
+
+Get OpenAPI v3 discovery
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+
+try: 
+    api_instance.get_open_apiv3_discovery()
+except ApiException as e:
+    print("Exception when calling DefaultApi->get_open_apiv3_discovery: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_open_apiv3_spec_subresources_kubevirt_io_v1**
+> str get_open_apiv3_spec_subresources_kubevirt_io_v1()
+
+
+
+Get OpenAPI v3 specification for subresources.kubevirt.io/v1
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+
+try: 
+    api_response = api_instance.get_open_apiv3_spec_subresources_kubevirt_io_v1()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->get_open_apiv3_spec_subresources_kubevirt_io_v1: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3**
+> str get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3()
+
+
+
+Get OpenAPI v3 specification for subresources.kubevirt.io/v1alpha3
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+
+try: 
+    api_response = api_instance.get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->get_open_apiv3_spec_subresources_kubevirt_io_v1alpha3: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**str**
 
 ### Authorization
 

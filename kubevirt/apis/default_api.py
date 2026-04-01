@@ -490,9 +490,9 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1beta1VirtualMachineExport body: (required)
+        :param V1VirtualMachineExport body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1beta1VirtualMachineExport
+        :return: V1VirtualMachineExport
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -516,9 +516,9 @@ class DefaultApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param V1beta1VirtualMachineExport body: (required)
+        :param V1VirtualMachineExport body: (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :return: V1beta1VirtualMachineExport
+        :return: V1VirtualMachineExport
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -573,14 +573,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports', 'POST',
+        return self.api_client.call_api('/apis/export.kubevirt.io/v1/namespaces/{namespace}/virtualmachineexports', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1beta1VirtualMachineExport',
+                                        response_type='V1VirtualMachineExport',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2620,7 +2620,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports', 'DELETE',
+        return self.api_client.call_api('/apis/export.kubevirt.io/v1/namespaces/{namespace}/virtualmachineexports', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -4888,7 +4888,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports/{name}', 'DELETE',
+        return self.api_client.call_api('/apis/export.kubevirt.io/v1/namespaces/{namespace}/virtualmachineexports/{name}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -7766,7 +7766,7 @@ class DefaultApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_api_resources_export_kubevirt_io_v1beta1(self, **kwargs):
+    def get_api_resources_export_kubevirt_io_v1(self, **kwargs):
         """
         Get KubeVirt API Resources
         This method makes a synchronous HTTP request by default. To make an
@@ -7775,7 +7775,7 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_api_resources_export_kubevirt_io_v1beta1(callback=callback_function)
+        >>> thread = api.get_api_resources_export_kubevirt_io_v1(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7785,12 +7785,12 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_api_resources_export_kubevirt_io_v1beta1_with_http_info(**kwargs)
+            return self.get_api_resources_export_kubevirt_io_v1_with_http_info(**kwargs)
         else:
-            (data) = self.get_api_resources_export_kubevirt_io_v1beta1_with_http_info(**kwargs)
+            (data) = self.get_api_resources_export_kubevirt_io_v1_with_http_info(**kwargs)
             return data
 
-    def get_api_resources_export_kubevirt_io_v1beta1_with_http_info(self, **kwargs):
+    def get_api_resources_export_kubevirt_io_v1_with_http_info(self, **kwargs):
         """
         Get KubeVirt API Resources
         This method makes a synchronous HTTP request by default. To make an
@@ -7799,7 +7799,7 @@ class DefaultApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_api_resources_export_kubevirt_io_v1beta1_with_http_info(callback=callback_function)
+        >>> thread = api.get_api_resources_export_kubevirt_io_v1_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -7819,7 +7819,7 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_api_resources_export_kubevirt_io_v1beta1" % key
+                    " to method get_api_resources_export_kubevirt_io_v1" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -7843,7 +7843,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/export.kubevirt.io/v1beta1/', 'GET',
+        return self.api_client.call_api('/apis/export.kubevirt.io/v1/', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -9618,7 +9618,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1beta1VirtualMachineExportList
+        :return: V1VirtualMachineExportList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -9651,7 +9651,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1beta1VirtualMachineExportList
+        :return: V1VirtualMachineExportList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -9713,14 +9713,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports', 'GET',
+        return self.api_client.call_api('/apis/export.kubevirt.io/v1/namespaces/{namespace}/virtualmachineexports', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1beta1VirtualMachineExportList',
+                                        response_type='V1VirtualMachineExportList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -11569,7 +11569,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1beta1VirtualMachineExportList
+        :return: V1VirtualMachineExportList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11601,7 +11601,7 @@ class DefaultApi(object):
         :param str resource_version: When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history.
         :param int timeout_seconds: TimeoutSeconds for the list/watch call.
         :param bool watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :return: V1beta1VirtualMachineExportList
+        :return: V1VirtualMachineExportList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -11658,14 +11658,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/export.kubevirt.io/v1beta1/virtualmachineexports', 'GET',
+        return self.api_client.call_api('/apis/export.kubevirt.io/v1/virtualmachineexports', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1beta1VirtualMachineExportList',
+                                        response_type='V1VirtualMachineExportList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -13529,7 +13529,7 @@ class DefaultApi(object):
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
-        :return: V1beta1VirtualMachineExport
+        :return: V1VirtualMachineExport
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13556,7 +13556,7 @@ class DefaultApi(object):
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param K8sIoApimachineryPkgApisMetaV1Patch body: (required)
-        :return: V1beta1VirtualMachineExport
+        :return: V1VirtualMachineExport
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -13616,14 +13616,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports/{name}', 'PATCH',
+        return self.api_client.call_api('/apis/export.kubevirt.io/v1/namespaces/{namespace}/virtualmachineexports/{name}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1beta1VirtualMachineExport',
+                                        response_type='V1VirtualMachineExport',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -15614,7 +15614,7 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1beta1VirtualMachineExport
+        :return: V1VirtualMachineExport
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -15642,7 +15642,7 @@ class DefaultApi(object):
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
         :param bool exact: Should the export be exact. Exact export maintains cluster-specific fields like 'Namespace'.
         :param bool export: Should this value be exported. Export strips fields that a user can not specify.
-        :return: V1beta1VirtualMachineExport
+        :return: V1VirtualMachineExport
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -15697,14 +15697,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports/{name}', 'GET',
+        return self.api_client.call_api('/apis/export.kubevirt.io/v1/namespaces/{namespace}/virtualmachineexports/{name}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1beta1VirtualMachineExport',
+                                        response_type='V1VirtualMachineExport',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -17666,8 +17666,8 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1beta1VirtualMachineExport body: (required)
-        :return: V1beta1VirtualMachineExport
+        :param V1VirtualMachineExport body: (required)
+        :return: V1VirtualMachineExport
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -17693,8 +17693,8 @@ class DefaultApi(object):
             for asynchronous request. (optional)
         :param str name: Name of the resource (required)
         :param str namespace: Object name and auth scope, such as for teams and projects (required)
-        :param V1beta1VirtualMachineExport body: (required)
-        :return: V1beta1VirtualMachineExport
+        :param V1VirtualMachineExport body: (required)
+        :return: V1VirtualMachineExport
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -17754,14 +17754,14 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/export.kubevirt.io/v1beta1/namespaces/{namespace}/virtualmachineexports/{name}', 'PUT',
+        return self.api_client.call_api('/apis/export.kubevirt.io/v1/namespaces/{namespace}/virtualmachineexports/{name}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='V1beta1VirtualMachineExport',
+                                        response_type='V1VirtualMachineExport',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -30309,7 +30309,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/export.kubevirt.io/v1beta1/watch/namespaces/{namespace}/virtualmachineexports', 'GET',
+        return self.api_client.call_api('/apis/export.kubevirt.io/v1/watch/namespaces/{namespace}/virtualmachineexports', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -32254,7 +32254,7 @@ class DefaultApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/apis/export.kubevirt.io/v1beta1/watch/virtualmachineexports', 'GET',
+        return self.api_client.call_api('/apis/export.kubevirt.io/v1/watch/virtualmachineexports', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **checkpoint_name** | **str** | CheckpointName the name of the checkpoint created for the current backup | [optional] 
-**conditions** | [**list[V1alpha1Condition]**](V1alpha1Condition.md) |  | [optional] 
+**conditions** | [**list[K8sIoApimachineryPkgApisMetaV1Condition]**](K8sIoApimachineryPkgApisMetaV1Condition.md) |  | [optional] 
 **endpoint_cert** | **str** | EndpointCert is the raw CACert that is to be used when connecting to an exported backup endpoint in pull mode. | [optional] 
 **included_volumes** | [**list[V1alpha1BackupVolumeInfo]**](V1alpha1BackupVolumeInfo.md) | IncludedVolumes lists the volumes that were included in the backup | [optional] 
 **type** | **str** | Type indicates if the backup was full or incremental | [optional] 

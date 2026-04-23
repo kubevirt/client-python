@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1alpha1_condition import V1alpha1Condition
+from kubevirt.models.k8s_io_apimachinery_pkg_apis_meta_v1_condition import K8sIoApimachineryPkgApisMetaV1Condition
 
 
-class TestV1alpha1Condition(unittest.TestCase):
-    """ V1alpha1Condition unit test stubs """
+class TestK8sIoApimachineryPkgApisMetaV1Condition(unittest.TestCase):
+    """ K8sIoApimachineryPkgApisMetaV1Condition unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1alpha1Condition(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1alpha1Condition(self):
+    def testK8sIoApimachineryPkgApisMetaV1Condition(self):
         """
-        Test V1alpha1Condition
+        Test K8sIoApimachineryPkgApisMetaV1Condition
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1alpha1_condition.V1alpha1Condition()
+        #model = kubevirt.models.k8s_io_apimachinery_pkg_apis_meta_v1_condition.K8sIoApimachineryPkgApisMetaV1Condition()
         pass
 
 

@@ -138,7 +138,7 @@ class V1Probe(object):
     def guest_agent_ping(self):
         """
         Gets the guest_agent_ping of this V1Probe.
-        GuestAgentPing contacts the qemu-guest-agent for availability checks.
+        GuestAgentPing contacts the qemu-guest-agent for availability checks. Probe failures are automatically suppressed when the guest agent is unreachable for a non-fault reason: during live migration (guest paused on one pod while memory is transferred) and whenever the VM is paused for an intentional or transient reason such as a user pause, snapshot, save, or dump. Failures are not suppressed when the VM is paused due to a fault (IO error, crash, or postcopy failure).
 
         :return: The guest_agent_ping of this V1Probe.
         :rtype: V1GuestAgentPing
@@ -149,7 +149,7 @@ class V1Probe(object):
     def guest_agent_ping(self, guest_agent_ping):
         """
         Sets the guest_agent_ping of this V1Probe.
-        GuestAgentPing contacts the qemu-guest-agent for availability checks.
+        GuestAgentPing contacts the qemu-guest-agent for availability checks. Probe failures are automatically suppressed when the guest agent is unreachable for a non-fault reason: during live migration (guest paused on one pod while memory is transferred) and whenever the VM is paused for an intentional or transient reason such as a user pause, snapshot, save, or dump. Failures are not suppressed when the VM is paused due to a fault (IO error, crash, or postcopy failure).
 
         :param guest_agent_ping: The guest_agent_ping of this V1Probe.
         :type: V1GuestAgentPing

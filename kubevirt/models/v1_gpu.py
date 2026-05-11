@@ -76,7 +76,7 @@ class V1GPU(object):
     def claim_name(self):
         """
         Gets the claim_name of this V1GPU.
-        ClaimName needs to be provided from the list vmi.spec.resourceClaims[].name where this device is allocated
+        ClaimName references the name of an entry in the VMI's spec.resourceClaims[] array. The referenced entry may use either resourceClaimName or resourceClaimTemplateName.
 
         :return: The claim_name of this V1GPU.
         :rtype: str
@@ -87,7 +87,7 @@ class V1GPU(object):
     def claim_name(self, claim_name):
         """
         Sets the claim_name of this V1GPU.
-        ClaimName needs to be provided from the list vmi.spec.resourceClaims[].name where this device is allocated
+        ClaimName references the name of an entry in the VMI's spec.resourceClaims[] array. The referenced entry may use either resourceClaimName or resourceClaimTemplateName.
 
         :param claim_name: The claim_name of this V1GPU.
         :type: str
@@ -147,7 +147,7 @@ class V1GPU(object):
     def request_name(self):
         """
         Gets the request_name of this V1GPU.
-        RequestName needs to be provided from resourceClaim.spec.devices.requests[].name where this device is requested
+        RequestName specifies which request from the ResourceClaim/ResourceClaimTemplate spec.devices.requests array this claim request corresponds to.
 
         :return: The request_name of this V1GPU.
         :rtype: str
@@ -158,7 +158,7 @@ class V1GPU(object):
     def request_name(self, request_name):
         """
         Sets the request_name of this V1GPU.
-        RequestName needs to be provided from resourceClaim.spec.devices.requests[].name where this device is requested
+        RequestName specifies which request from the ResourceClaim/ResourceClaimTemplate spec.devices.requests array this claim request corresponds to.
 
         :param request_name: The request_name of this V1GPU.
         :type: str

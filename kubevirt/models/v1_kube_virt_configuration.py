@@ -60,6 +60,7 @@ class V1KubeVirtConfiguration(object):
         'obsolete_cpu_models': 'dict(str, bool)',
         'ovmf_path': 'str',
         'permitted_host_devices': 'V1PermittedHostDevices',
+        'persistent_reservation_configuration': 'V1PersistentReservationConfiguration',
         'role_aggregation_strategy': 'str',
         'seccomp_configuration': 'V1SeccompConfiguration',
         'selinux_launcher_type': 'str',
@@ -105,6 +106,7 @@ class V1KubeVirtConfiguration(object):
         'obsolete_cpu_models': 'obsoleteCPUModels',
         'ovmf_path': 'ovmfPath',
         'permitted_host_devices': 'permittedHostDevices',
+        'persistent_reservation_configuration': 'persistentReservationConfiguration',
         'role_aggregation_strategy': 'roleAggregationStrategy',
         'seccomp_configuration': 'seccompConfiguration',
         'selinux_launcher_type': 'selinuxLauncherType',
@@ -120,7 +122,7 @@ class V1KubeVirtConfiguration(object):
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, changed_block_tracking_label_selectors=None, common_instancetypes_deployment=None, confidential_compute=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, hypervisors=None, image_pull_policy=None, instancetype=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, role_aggregation_strategy=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virt_template_deployment=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
+    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, changed_block_tracking_label_selectors=None, common_instancetypes_deployment=None, confidential_compute=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, hypervisors=None, image_pull_policy=None, instancetype=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, persistent_reservation_configuration=None, role_aggregation_strategy=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virt_template_deployment=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -154,6 +156,7 @@ class V1KubeVirtConfiguration(object):
         self._obsolete_cpu_models = None
         self._ovmf_path = None
         self._permitted_host_devices = None
+        self._persistent_reservation_configuration = None
         self._role_aggregation_strategy = None
         self._seccomp_configuration = None
         self._selinux_launcher_type = None
@@ -226,6 +229,8 @@ class V1KubeVirtConfiguration(object):
           self.ovmf_path = ovmf_path
         if permitted_host_devices is not None:
           self.permitted_host_devices = permitted_host_devices
+        if persistent_reservation_configuration is not None:
+          self.persistent_reservation_configuration = persistent_reservation_configuration
         if role_aggregation_strategy is not None:
           self.role_aggregation_strategy = role_aggregation_strategy
         if seccomp_configuration is not None:
@@ -897,6 +902,29 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._permitted_host_devices = permitted_host_devices
+
+    @property
+    def persistent_reservation_configuration(self):
+        """
+        Gets the persistent_reservation_configuration of this V1KubeVirtConfiguration.
+        PersistentReservationConfiguration controls the deployment of additional resources required for using SCSI persistent reservation in VMs
+
+        :return: The persistent_reservation_configuration of this V1KubeVirtConfiguration.
+        :rtype: V1PersistentReservationConfiguration
+        """
+        return self._persistent_reservation_configuration
+
+    @persistent_reservation_configuration.setter
+    def persistent_reservation_configuration(self, persistent_reservation_configuration):
+        """
+        Sets the persistent_reservation_configuration of this V1KubeVirtConfiguration.
+        PersistentReservationConfiguration controls the deployment of additional resources required for using SCSI persistent reservation in VMs
+
+        :param persistent_reservation_configuration: The persistent_reservation_configuration of this V1KubeVirtConfiguration.
+        :type: V1PersistentReservationConfiguration
+        """
+
+        self._persistent_reservation_configuration = persistent_reservation_configuration
 
     @property
     def role_aggregation_strategy(self):

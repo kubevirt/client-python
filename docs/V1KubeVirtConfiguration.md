@@ -32,6 +32,7 @@ Name | Type | Description | Notes
 **obsolete_cpu_models** | **dict(str, bool)** |  | [optional] 
 **ovmf_path** | **str** | Deprecated. Use architectureConfiguration instead. | [optional] 
 **permitted_host_devices** | [**V1PermittedHostDevices**](V1PermittedHostDevices.md) |  | [optional] 
+**persistent_reservation_configuration** | [**V1PersistentReservationConfiguration**](V1PersistentReservationConfiguration.md) | PersistentReservationConfiguration controls the deployment of additional resources required for using SCSI persistent reservation in VMs | [optional] 
 **role_aggregation_strategy** | **str** | RoleAggregationStrategy controls whether RBAC cluster roles should be aggregated to the default Kubernetes roles (admin, edit, view). When set to \&quot;AggregateToDefault\&quot; (default) or not specified, the aggregate-to-* labels are added to the cluster roles. When set to \&quot;Manual\&quot;, the labels are not added, and roles will not be aggregated to the default roles. Setting this field to \&quot;Manual\&quot; requires the OptOutRoleAggregation feature gate to be enabled. This is an Alpha feature and subject to change. | [optional] 
 **seccomp_configuration** | [**V1SeccompConfiguration**](V1SeccompConfiguration.md) |  | [optional] 
 **selinux_launcher_type** | **str** |  | [optional] 

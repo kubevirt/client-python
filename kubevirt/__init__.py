@@ -211,6 +211,7 @@ from .models.v1_panic_device import V1PanicDevice
 from .models.v1_pause_options import V1PauseOptions
 from .models.v1_pci_host_device import V1PciHostDevice
 from .models.v1_permitted_host_devices import V1PermittedHostDevices
+from .models.v1_persistent_reservation_configuration import V1PersistentReservationConfiguration
 from .models.v1_persistent_volume_claim_info import V1PersistentVolumeClaimInfo
 from .models.v1_persistent_volume_claim_volume_source import V1PersistentVolumeClaimVolumeSource
 from .models.v1_plugin_binding import V1PluginBinding

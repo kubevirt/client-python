@@ -85,6 +85,7 @@ from .v1_cert_config import V1CertConfig
 from .v1_changed_block_tracking_selectors import V1ChangedBlockTrackingSelectors
 from .v1_changed_block_tracking_status import V1ChangedBlockTrackingStatus
 from .v1_chassis import V1Chassis
+from .v1_claim_request import V1ClaimRequest
 from .v1_client_passthrough_devices import V1ClientPassthroughDevices
 from .v1_clock import V1Clock
 from .v1_clock_offset import V1ClockOffset

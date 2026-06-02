@@ -463,7 +463,7 @@ class V1VirtualMachineInstanceSpec(object):
     def resource_claims(self):
         """
         Gets the resource_claims of this V1VirtualMachineInstanceSpec.
-        ResourceClaims define which ResourceClaims must be allocated and reserved before the VMI, hence virt-launcher pod is allowed to start. The resources will be made available to the domain which consumes them by name.  This is an alpha field and requires enabling the DynamicResourceAllocation feature gate in kubernetes  https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/ This field should only be configured if one of the feature-gates GPUsWithDRA or HostDevicesWithDRA is enabled. This feature is in alpha.
+        ResourceClaims define which ResourceClaims must be allocated and reserved before the VMI, hence virt-launcher pod is allowed to start. The resources will be made available to the domain which consumes them by name.  This is an alpha field and requires enabling the DynamicResourceAllocation feature gate in kubernetes  https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/ This field should only be configured if one of the feature-gates GPUsWithDRA, HostDevicesWithDRA, or NetworkDevicesWithDRA is enabled. This feature is in alpha.
 
         :return: The resource_claims of this V1VirtualMachineInstanceSpec.
         :rtype: list[K8sIoApiCoreV1PodResourceClaim]
@@ -474,7 +474,7 @@ class V1VirtualMachineInstanceSpec(object):
     def resource_claims(self, resource_claims):
         """
         Sets the resource_claims of this V1VirtualMachineInstanceSpec.
-        ResourceClaims define which ResourceClaims must be allocated and reserved before the VMI, hence virt-launcher pod is allowed to start. The resources will be made available to the domain which consumes them by name.  This is an alpha field and requires enabling the DynamicResourceAllocation feature gate in kubernetes  https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/ This field should only be configured if one of the feature-gates GPUsWithDRA or HostDevicesWithDRA is enabled. This feature is in alpha.
+        ResourceClaims define which ResourceClaims must be allocated and reserved before the VMI, hence virt-launcher pod is allowed to start. The resources will be made available to the domain which consumes them by name.  This is an alpha field and requires enabling the DynamicResourceAllocation feature gate in kubernetes  https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/ This field should only be configured if one of the feature-gates GPUsWithDRA, HostDevicesWithDRA, or NetworkDevicesWithDRA is enabled. This feature is in alpha.
 
         :param resource_claims: The resource_claims of this V1VirtualMachineInstanceSpec.
         :type: list[K8sIoApiCoreV1PodResourceClaim]

@@ -33,16 +33,18 @@ class V1Network(object):
     swagger_types = {
         'multus': 'V1MultusNetwork',
         'name': 'str',
-        'pod': 'V1PodNetwork'
+        'pod': 'V1PodNetwork',
+        'resource_claim': 'V1ClaimRequest'
     }
 
     attribute_map = {
         'multus': 'multus',
         'name': 'name',
-        'pod': 'pod'
+        'pod': 'pod',
+        'resource_claim': 'resourceClaim'
     }
 
-    def __init__(self, multus=None, name='', pod=None):
+    def __init__(self, multus=None, name='', pod=None, resource_claim=None):
         """
         V1Network - a model defined in Swagger
         """
@@ -50,12 +52,15 @@ class V1Network(object):
         self._multus = None
         self._name = None
         self._pod = None
+        self._resource_claim = None
 
         if multus is not None:
           self.multus = multus
         self.name = name
         if pod is not None:
           self.pod = pod
+        if resource_claim is not None:
+          self.resource_claim = resource_claim
 
     @property
     def multus(self):
@@ -123,6 +128,29 @@ class V1Network(object):
         """
 
         self._pod = pod
+
+    @property
+    def resource_claim(self):
+        """
+        Gets the resource_claim of this V1Network.
+        ResourceClaim represents a network resource requested via a VMI spec.resourceClaims[] entry, backed by either a Kubernetes ResourceClaim or ResourceClaimTemplate. This field should only be configured if the NetworkDevicesWithDRA feature-gate is enabled. This feature is in alpha.
+
+        :return: The resource_claim of this V1Network.
+        :rtype: V1ClaimRequest
+        """
+        return self._resource_claim
+
+    @resource_claim.setter
+    def resource_claim(self, resource_claim):
+        """
+        Sets the resource_claim of this V1Network.
+        ResourceClaim represents a network resource requested via a VMI spec.resourceClaims[] entry, backed by either a Kubernetes ResourceClaim or ResourceClaimTemplate. This field should only be configured if the NetworkDevicesWithDRA feature-gate is enabled. This feature is in alpha.
+
+        :param resource_claim: The resource_claim of this V1Network.
+        :type: V1ClaimRequest
+        """
+
+        self._resource_claim = resource_claim
 
     def to_dict(self):
         """

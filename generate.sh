@@ -5,7 +5,9 @@ KUBEVIRT_SPEC=https://raw.githubusercontent.com/kubevirt/kubevirt/master/api/ope
 
 wget -O "$SWAGGER_CODEGEN_CLI" "$SWAGGER_CODEGEN_CLI_SRC"
 
-java -jar swagger-codegen-cli.jar generate  \
+java -jar "$SWAGGER_CODEGEN_CLI" generate  \
      -i "$KUBEVIRT_SPEC" \
      -l python \
      -c swagger-codegen-config.json &> kubevirt-pysdk-codegen.log
+
+python3 scripts/normalize_setup_version.py

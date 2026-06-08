@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.k8s_io_api_core_v1_pod_resource_claim import K8sIoApiCoreV1PodResourceClaim
+from kubevirt.models.v1_virtual_machine_instance_resource_claim import V1VirtualMachineInstanceResourceClaim
 
 
-class TestK8sIoApiCoreV1PodResourceClaim(unittest.TestCase):
-    """ K8sIoApiCoreV1PodResourceClaim unit test stubs """
+class TestV1VirtualMachineInstanceResourceClaim(unittest.TestCase):
+    """ V1VirtualMachineInstanceResourceClaim unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestK8sIoApiCoreV1PodResourceClaim(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testK8sIoApiCoreV1PodResourceClaim(self):
+    def testV1VirtualMachineInstanceResourceClaim(self):
         """
-        Test K8sIoApiCoreV1PodResourceClaim
+        Test V1VirtualMachineInstanceResourceClaim
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.k8s_io_api_core_v1_pod_resource_claim.K8sIoApiCoreV1PodResourceClaim()
+        #model = kubevirt.models.v1_virtual_machine_instance_resource_claim.V1VirtualMachineInstanceResourceClaim()
         pass
 
 

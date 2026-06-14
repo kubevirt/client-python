@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **host_devices** | [**list[V1HostDevice]**](V1HostDevice.md) | Optionally defines any HostDevices associated with the instancetype. | [optional] 
 **io_threads** | [**V1DiskIOThreads**](V1DiskIOThreads.md) | Optionally specifies the IOThreads options to be used by the instancetype. | [optional] 
 **io_threads_policy** | **str** | Optionally defines the IOThreadsPolicy to be used by the instancetype. | [optional] 
-**launch_security** | [**V1LaunchSecurity**](V1LaunchSecurity.md) | Optionally defines the LaunchSecurity to be used by the instancetype. | [optional] 
+**launch_security** | [**V1LaunchSecurity**](V1LaunchSecurity.md) | Optionally defines the LaunchSecurity to be used by the instancetype.  Deprecated: Will be removed with v1beta2 or v1 | [optional] 
 **memory** | [**V1beta1MemoryInstancetype**](V1beta1MemoryInstancetype.md) | Required Memory related attributes of the instancetype. | 
 **node_selector** | **dict(str, str)** | NodeSelector is a selector which must be true for the vmi to fit on a node. Selector which must match a node&#39;s labels for the vmi to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/  NodeSelector is the name of the custom node selector for the instancetype. | [optional] 
 **scheduler_name** | **str** | If specified, the VMI will be dispatched by specified scheduler. If not specified, the VMI will be dispatched by default scheduler.  SchedulerName is the name of the custom K8s scheduler for the instancetype. | [optional] 

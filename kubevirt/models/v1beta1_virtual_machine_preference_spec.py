@@ -40,6 +40,7 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         'machine': 'V1beta1MachinePreferences',
         'prefer_spread_socket_to_core_ratio': 'int',
         'preferred_architecture': 'str',
+        'preferred_launch_security': 'V1LaunchSecurity',
         'preferred_subdomain': 'str',
         'preferred_termination_grace_period_seconds': 'int',
         'requirements': 'V1beta1PreferenceRequirements',
@@ -56,13 +57,14 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         'machine': 'machine',
         'prefer_spread_socket_to_core_ratio': 'preferSpreadSocketToCoreRatio',
         'preferred_architecture': 'preferredArchitecture',
+        'preferred_launch_security': 'preferredLaunchSecurity',
         'preferred_subdomain': 'preferredSubdomain',
         'preferred_termination_grace_period_seconds': 'preferredTerminationGracePeriodSeconds',
         'requirements': 'requirements',
         'volumes': 'volumes'
     }
 
-    def __init__(self, annotations=None, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, prefer_spread_socket_to_core_ratio=None, preferred_architecture=None, preferred_subdomain=None, preferred_termination_grace_period_seconds=None, requirements=None, volumes=None):
+    def __init__(self, annotations=None, clock=None, cpu=None, devices=None, features=None, firmware=None, machine=None, prefer_spread_socket_to_core_ratio=None, preferred_architecture=None, preferred_launch_security=None, preferred_subdomain=None, preferred_termination_grace_period_seconds=None, requirements=None, volumes=None):
         """
         V1beta1VirtualMachinePreferenceSpec - a model defined in Swagger
         """
@@ -76,6 +78,7 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         self._machine = None
         self._prefer_spread_socket_to_core_ratio = None
         self._preferred_architecture = None
+        self._preferred_launch_security = None
         self._preferred_subdomain = None
         self._preferred_termination_grace_period_seconds = None
         self._requirements = None
@@ -99,6 +102,8 @@ class V1beta1VirtualMachinePreferenceSpec(object):
           self.prefer_spread_socket_to_core_ratio = prefer_spread_socket_to_core_ratio
         if preferred_architecture is not None:
           self.preferred_architecture = preferred_architecture
+        if preferred_launch_security is not None:
+          self.preferred_launch_security = preferred_launch_security
         if preferred_subdomain is not None:
           self.preferred_subdomain = preferred_subdomain
         if preferred_termination_grace_period_seconds is not None:
@@ -314,6 +319,29 @@ class V1beta1VirtualMachinePreferenceSpec(object):
         """
 
         self._preferred_architecture = preferred_architecture
+
+    @property
+    def preferred_launch_security(self):
+        """
+        Gets the preferred_launch_security of this V1beta1VirtualMachinePreferenceSpec.
+        Optionally defines the preferred LaunchSecurity
+
+        :return: The preferred_launch_security of this V1beta1VirtualMachinePreferenceSpec.
+        :rtype: V1LaunchSecurity
+        """
+        return self._preferred_launch_security
+
+    @preferred_launch_security.setter
+    def preferred_launch_security(self, preferred_launch_security):
+        """
+        Sets the preferred_launch_security of this V1beta1VirtualMachinePreferenceSpec.
+        Optionally defines the preferred LaunchSecurity
+
+        :param preferred_launch_security: The preferred_launch_security of this V1beta1VirtualMachinePreferenceSpec.
+        :type: V1LaunchSecurity
+        """
+
+        self._preferred_launch_security = preferred_launch_security
 
     @property
     def preferred_subdomain(self):

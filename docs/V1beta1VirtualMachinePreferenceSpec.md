@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **machine** | [**V1beta1MachinePreferences**](V1beta1MachinePreferences.md) | Machine optionally defines preferences associated with the Machine attribute of a VirtualMachineInstance DomainSpec | [optional] 
 **prefer_spread_socket_to_core_ratio** | **int** | PreferSpreadSocketToCoreRatio defines the ratio to spread vCPUs between cores and sockets, it defaults to 2. | [optional] 
 **preferred_architecture** | **str** | PreferredArchitecture defines a prefeerred architecture for the VirtualMachine | [optional] 
+**preferred_launch_security** | [**V1LaunchSecurity**](V1LaunchSecurity.md) | Optionally defines the preferred LaunchSecurity | [optional] 
 **preferred_subdomain** | **str** | Subdomain of the VirtualMachineInstance | [optional] 
 **preferred_termination_grace_period_seconds** | **int** | Grace period observed after signalling a VirtualMachineInstance to stop after which the VirtualMachineInstance is force terminated. | [optional] 
 **requirements** | [**V1beta1PreferenceRequirements**](V1beta1PreferenceRequirements.md) | Requirements defines the minium amount of instance type defined resources required by a set of preferences | [optional] 

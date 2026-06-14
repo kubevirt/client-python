@@ -235,7 +235,7 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
     def launch_security(self):
         """
         Gets the launch_security of this V1beta1VirtualMachineInstancetypeSpec.
-        Optionally defines the LaunchSecurity to be used by the instancetype.
+        Optionally defines the LaunchSecurity to be used by the instancetype.  Deprecated: Will be removed with v1beta2 or v1
 
         :return: The launch_security of this V1beta1VirtualMachineInstancetypeSpec.
         :rtype: V1LaunchSecurity
@@ -246,7 +246,7 @@ class V1beta1VirtualMachineInstancetypeSpec(object):
     def launch_security(self, launch_security):
         """
         Sets the launch_security of this V1beta1VirtualMachineInstancetypeSpec.
-        Optionally defines the LaunchSecurity to be used by the instancetype.
+        Optionally defines the LaunchSecurity to be used by the instancetype.  Deprecated: Will be removed with v1beta2 or v1
 
         :param launch_security: The launch_security of this V1beta1VirtualMachineInstancetypeSpec.
         :type: V1LaunchSecurity

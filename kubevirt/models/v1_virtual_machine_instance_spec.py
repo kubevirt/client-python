@@ -46,6 +46,7 @@ class V1VirtualMachineInstanceSpec(object):
         'readiness_probe': 'V1Probe',
         'resource_claims': 'list[V1VirtualMachineInstanceResourceClaim]',
         'scheduler_name': 'str',
+        'service_account_name': 'str',
         'start_strategy': 'str',
         'subdomain': 'str',
         'termination_grace_period_seconds': 'int',
@@ -71,6 +72,7 @@ class V1VirtualMachineInstanceSpec(object):
         'readiness_probe': 'readinessProbe',
         'resource_claims': 'resourceClaims',
         'scheduler_name': 'schedulerName',
+        'service_account_name': 'serviceAccountName',
         'start_strategy': 'startStrategy',
         'subdomain': 'subdomain',
         'termination_grace_period_seconds': 'terminationGracePeriodSeconds',
@@ -80,7 +82,7 @@ class V1VirtualMachineInstanceSpec(object):
         'volumes': 'volumes'
     }
 
-    def __init__(self, access_credentials=None, affinity=None, architecture=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, resource_claims=None, scheduler_name=None, start_strategy=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, topology_spread_constraints=None, utility_volumes=None, volumes=None):
+    def __init__(self, access_credentials=None, affinity=None, architecture=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, resource_claims=None, scheduler_name=None, service_account_name=None, start_strategy=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, topology_spread_constraints=None, utility_volumes=None, volumes=None):
         """
         V1VirtualMachineInstanceSpec - a model defined in Swagger
         """
@@ -100,6 +102,7 @@ class V1VirtualMachineInstanceSpec(object):
         self._readiness_probe = None
         self._resource_claims = None
         self._scheduler_name = None
+        self._service_account_name = None
         self._start_strategy = None
         self._subdomain = None
         self._termination_grace_period_seconds = None
@@ -137,6 +140,8 @@ class V1VirtualMachineInstanceSpec(object):
           self.resource_claims = resource_claims
         if scheduler_name is not None:
           self.scheduler_name = scheduler_name
+        if service_account_name is not None:
+          self.service_account_name = service_account_name
         if start_strategy is not None:
           self.start_strategy = start_strategy
         if subdomain is not None:
@@ -504,6 +509,29 @@ class V1VirtualMachineInstanceSpec(object):
         """
 
         self._scheduler_name = scheduler_name
+
+    @property
+    def service_account_name(self):
+        """
+        Gets the service_account_name of this V1VirtualMachineInstanceSpec.
+        ServiceAccountName is the name of the ServiceAccount to use to run the virt-launcher pod. This sets pod.spec.serviceAccountName but does NOT automatically expose the service account token to the VM guest. To expose the token to the VM, use a serviceAccount volume.
+
+        :return: The service_account_name of this V1VirtualMachineInstanceSpec.
+        :rtype: str
+        """
+        return self._service_account_name
+
+    @service_account_name.setter
+    def service_account_name(self, service_account_name):
+        """
+        Sets the service_account_name of this V1VirtualMachineInstanceSpec.
+        ServiceAccountName is the name of the ServiceAccount to use to run the virt-launcher pod. This sets pod.spec.serviceAccountName but does NOT automatically expose the service account token to the VM guest. To expose the token to the VM, use a serviceAccount volume.
+
+        :param service_account_name: The service_account_name of this V1VirtualMachineInstanceSpec.
+        :type: str
+        """
+
+        self._service_account_name = service_account_name
 
     @property
     def start_strategy(self):

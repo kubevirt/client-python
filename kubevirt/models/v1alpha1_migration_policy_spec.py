@@ -36,6 +36,7 @@ class V1alpha1MigrationPolicySpec(object):
         'allow_workload_disruption': 'bool',
         'bandwidth_per_migration': 'K8sIoApimachineryPkgApiResourceQuantity',
         'completion_timeout_per_gi_b': 'int',
+        'max_downtime_ms': 'int',
         'selectors': 'V1alpha1Selectors'
     }
 
@@ -45,10 +46,11 @@ class V1alpha1MigrationPolicySpec(object):
         'allow_workload_disruption': 'allowWorkloadDisruption',
         'bandwidth_per_migration': 'bandwidthPerMigration',
         'completion_timeout_per_gi_b': 'completionTimeoutPerGiB',
+        'max_downtime_ms': 'maxDowntimeMs',
         'selectors': 'selectors'
     }
 
-    def __init__(self, allow_auto_converge=None, allow_post_copy=None, allow_workload_disruption=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, selectors=None):
+    def __init__(self, allow_auto_converge=None, allow_post_copy=None, allow_workload_disruption=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, max_downtime_ms=None, selectors=None):
         """
         V1alpha1MigrationPolicySpec - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class V1alpha1MigrationPolicySpec(object):
         self._allow_workload_disruption = None
         self._bandwidth_per_migration = None
         self._completion_timeout_per_gi_b = None
+        self._max_downtime_ms = None
         self._selectors = None
 
         if allow_auto_converge is not None:
@@ -70,6 +73,8 @@ class V1alpha1MigrationPolicySpec(object):
           self.bandwidth_per_migration = bandwidth_per_migration
         if completion_timeout_per_gi_b is not None:
           self.completion_timeout_per_gi_b = completion_timeout_per_gi_b
+        if max_downtime_ms is not None:
+          self.max_downtime_ms = max_downtime_ms
         self.selectors = selectors
 
     @property
@@ -176,6 +181,27 @@ class V1alpha1MigrationPolicySpec(object):
         """
 
         self._completion_timeout_per_gi_b = completion_timeout_per_gi_b
+
+    @property
+    def max_downtime_ms(self):
+        """
+        Gets the max_downtime_ms of this V1alpha1MigrationPolicySpec.
+
+        :return: The max_downtime_ms of this V1alpha1MigrationPolicySpec.
+        :rtype: int
+        """
+        return self._max_downtime_ms
+
+    @max_downtime_ms.setter
+    def max_downtime_ms(self, max_downtime_ms):
+        """
+        Sets the max_downtime_ms of this V1alpha1MigrationPolicySpec.
+
+        :param max_downtime_ms: The max_downtime_ms of this V1alpha1MigrationPolicySpec.
+        :type: int
+        """
+
+        self._max_downtime_ms = max_downtime_ms
 
     @property
     def selectors(self):

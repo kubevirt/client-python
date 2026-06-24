@@ -38,6 +38,7 @@ class V1MigrationConfiguration(object):
         'completion_timeout_per_gi_b': 'int',
         'disable_tls': 'bool',
         'match_se_linux_level_on_migration': 'bool',
+        'max_downtime_ms': 'int',
         'network': 'str',
         'node_drain_taint_key': 'str',
         'parallel_migrations_per_cluster': 'int',
@@ -55,6 +56,7 @@ class V1MigrationConfiguration(object):
         'completion_timeout_per_gi_b': 'completionTimeoutPerGiB',
         'disable_tls': 'disableTLS',
         'match_se_linux_level_on_migration': 'matchSELinuxLevelOnMigration',
+        'max_downtime_ms': 'maxDowntimeMs',
         'network': 'network',
         'node_drain_taint_key': 'nodeDrainTaintKey',
         'parallel_migrations_per_cluster': 'parallelMigrationsPerCluster',
@@ -64,7 +66,7 @@ class V1MigrationConfiguration(object):
         'utility_volumes_timeout': 'utilityVolumesTimeout'
     }
 
-    def __init__(self, allow_auto_converge=None, allow_post_copy=None, allow_workload_disruption=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, disable_tls=None, match_se_linux_level_on_migration=None, network=None, node_drain_taint_key=None, parallel_migrations_per_cluster=None, parallel_outbound_migrations_per_node=None, progress_timeout=None, unsafe_migration_override=None, utility_volumes_timeout=None):
+    def __init__(self, allow_auto_converge=None, allow_post_copy=None, allow_workload_disruption=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, disable_tls=None, match_se_linux_level_on_migration=None, max_downtime_ms=None, network=None, node_drain_taint_key=None, parallel_migrations_per_cluster=None, parallel_outbound_migrations_per_node=None, progress_timeout=None, unsafe_migration_override=None, utility_volumes_timeout=None):
         """
         V1MigrationConfiguration - a model defined in Swagger
         """
@@ -76,6 +78,7 @@ class V1MigrationConfiguration(object):
         self._completion_timeout_per_gi_b = None
         self._disable_tls = None
         self._match_se_linux_level_on_migration = None
+        self._max_downtime_ms = None
         self._network = None
         self._node_drain_taint_key = None
         self._parallel_migrations_per_cluster = None
@@ -98,6 +101,8 @@ class V1MigrationConfiguration(object):
           self.disable_tls = disable_tls
         if match_se_linux_level_on_migration is not None:
           self.match_se_linux_level_on_migration = match_se_linux_level_on_migration
+        if max_downtime_ms is not None:
+          self.max_downtime_ms = max_downtime_ms
         if network is not None:
           self.network = network
         if node_drain_taint_key is not None:
@@ -273,6 +278,29 @@ class V1MigrationConfiguration(object):
         """
 
         self._match_se_linux_level_on_migration = match_se_linux_level_on_migration
+
+    @property
+    def max_downtime_ms(self):
+        """
+        Gets the max_downtime_ms of this V1MigrationConfiguration.
+        MaxDowntimeMs specifies the maximum tolerable downtime (in milliseconds) during switchover. Defaults to 900
+
+        :return: The max_downtime_ms of this V1MigrationConfiguration.
+        :rtype: int
+        """
+        return self._max_downtime_ms
+
+    @max_downtime_ms.setter
+    def max_downtime_ms(self, max_downtime_ms):
+        """
+        Sets the max_downtime_ms of this V1MigrationConfiguration.
+        MaxDowntimeMs specifies the maximum tolerable downtime (in milliseconds) during switchover. Defaults to 900
+
+        :param max_downtime_ms: The max_downtime_ms of this V1MigrationConfiguration.
+        :type: int
+        """
+
+        self._max_downtime_ms = max_downtime_ms
 
     @property
     def network(self):

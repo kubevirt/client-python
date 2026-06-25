@@ -36,6 +36,7 @@ class V1alpha1MigrationPolicySpec(object):
         'allow_workload_disruption': 'bool',
         'bandwidth_per_migration': 'K8sIoApimachineryPkgApiResourceQuantity',
         'completion_timeout_per_gi_b': 'int',
+        'experimental': 'V1ExperimentalMigrationOptions',
         'max_downtime_ms': 'int',
         'selectors': 'V1alpha1Selectors'
     }
@@ -46,11 +47,12 @@ class V1alpha1MigrationPolicySpec(object):
         'allow_workload_disruption': 'allowWorkloadDisruption',
         'bandwidth_per_migration': 'bandwidthPerMigration',
         'completion_timeout_per_gi_b': 'completionTimeoutPerGiB',
+        'experimental': 'experimental',
         'max_downtime_ms': 'maxDowntimeMs',
         'selectors': 'selectors'
     }
 
-    def __init__(self, allow_auto_converge=None, allow_post_copy=None, allow_workload_disruption=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, max_downtime_ms=None, selectors=None):
+    def __init__(self, allow_auto_converge=None, allow_post_copy=None, allow_workload_disruption=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, experimental=None, max_downtime_ms=None, selectors=None):
         """
         V1alpha1MigrationPolicySpec - a model defined in Swagger
         """
@@ -60,6 +62,7 @@ class V1alpha1MigrationPolicySpec(object):
         self._allow_workload_disruption = None
         self._bandwidth_per_migration = None
         self._completion_timeout_per_gi_b = None
+        self._experimental = None
         self._max_downtime_ms = None
         self._selectors = None
 
@@ -73,6 +76,8 @@ class V1alpha1MigrationPolicySpec(object):
           self.bandwidth_per_migration = bandwidth_per_migration
         if completion_timeout_per_gi_b is not None:
           self.completion_timeout_per_gi_b = completion_timeout_per_gi_b
+        if experimental is not None:
+          self.experimental = experimental
         if max_downtime_ms is not None:
           self.max_downtime_ms = max_downtime_ms
         self.selectors = selectors
@@ -181,6 +186,29 @@ class V1alpha1MigrationPolicySpec(object):
         """
 
         self._completion_timeout_per_gi_b = completion_timeout_per_gi_b
+
+    @property
+    def experimental(self):
+        """
+        Gets the experimental of this V1alpha1MigrationPolicySpec.
+        ExperimentalMigrationOptions is an alpha API. It is intended for experimental purposes only and will be removed in the future.
+
+        :return: The experimental of this V1alpha1MigrationPolicySpec.
+        :rtype: V1ExperimentalMigrationOptions
+        """
+        return self._experimental
+
+    @experimental.setter
+    def experimental(self, experimental):
+        """
+        Sets the experimental of this V1alpha1MigrationPolicySpec.
+        ExperimentalMigrationOptions is an alpha API. It is intended for experimental purposes only and will be removed in the future.
+
+        :param experimental: The experimental of this V1alpha1MigrationPolicySpec.
+        :type: V1ExperimentalMigrationOptions
+        """
+
+        self._experimental = experimental
 
     @property
     def max_downtime_ms(self):

@@ -930,7 +930,7 @@ class V1KubeVirtConfiguration(object):
     def role_aggregation_strategy(self):
         """
         Gets the role_aggregation_strategy of this V1KubeVirtConfiguration.
-        RoleAggregationStrategy controls whether RBAC cluster roles should be aggregated to the default Kubernetes roles (admin, edit, view). When set to \"AggregateToDefault\" (default) or not specified, the aggregate-to-* labels are added to the cluster roles. When set to \"Manual\", the labels are not added, and roles will not be aggregated to the default roles. Setting this field to \"Manual\" requires the OptOutRoleAggregation feature gate to be enabled. This is an Alpha feature and subject to change.
+        RoleAggregationStrategy controls whether RBAC cluster roles should be aggregated to the default Kubernetes roles (admin, edit, view). When set to \"AggregateToDefault\" (default) or not specified, the aggregate-to-* labels are added to the cluster roles. When set to \"Manual\", the labels are not added, and roles will not be aggregated to the default roles. Setting RoleAggregationStrategy to \"Manual\" requires the OptOutRoleAggregation feature gate to be enabled (Beta, enabled by default since v1.9.0).
 
         :return: The role_aggregation_strategy of this V1KubeVirtConfiguration.
         :rtype: str
@@ -941,7 +941,7 @@ class V1KubeVirtConfiguration(object):
     def role_aggregation_strategy(self, role_aggregation_strategy):
         """
         Sets the role_aggregation_strategy of this V1KubeVirtConfiguration.
-        RoleAggregationStrategy controls whether RBAC cluster roles should be aggregated to the default Kubernetes roles (admin, edit, view). When set to \"AggregateToDefault\" (default) or not specified, the aggregate-to-* labels are added to the cluster roles. When set to \"Manual\", the labels are not added, and roles will not be aggregated to the default roles. Setting this field to \"Manual\" requires the OptOutRoleAggregation feature gate to be enabled. This is an Alpha feature and subject to change.
+        RoleAggregationStrategy controls whether RBAC cluster roles should be aggregated to the default Kubernetes roles (admin, edit, view). When set to \"AggregateToDefault\" (default) or not specified, the aggregate-to-* labels are added to the cluster roles. When set to \"Manual\", the labels are not added, and roles will not be aggregated to the default roles. Setting RoleAggregationStrategy to \"Manual\" requires the OptOutRoleAggregation feature gate to be enabled (Beta, enabled by default since v1.9.0).
 
         :param role_aggregation_strategy: The role_aggregation_strategy of this V1KubeVirtConfiguration.
         :type: str

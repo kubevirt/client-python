@@ -37,7 +37,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'end_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'failed': 'bool',
         'failure_reason': 'str',
-        'migration_configuration': 'V1VMIMConfigurationOptions',
+        'migration_configuration': 'V1MigrationConfiguration',
         'migration_network_type': 'str',
         'migration_policy_name': 'str',
         'migration_uid': 'str',
@@ -328,7 +328,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         Migration configurations to apply
 
         :return: The migration_configuration of this V1VirtualMachineInstanceMigrationState.
-        :rtype: V1VMIMConfigurationOptions
+        :rtype: V1MigrationConfiguration
         """
         return self._migration_configuration
 
@@ -339,7 +339,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         Migration configurations to apply
 
         :param migration_configuration: The migration_configuration of this V1VirtualMachineInstanceMigrationState.
-        :type: V1VMIMConfigurationOptions
+        :type: V1MigrationConfiguration
         """
 
         self._migration_configuration = migration_configuration

@@ -131,7 +131,6 @@ from .models.v1_efi import V1EFI
 from .models.v1_empty_disk_source import V1EmptyDiskSource
 from .models.v1_ephemeral_volume_source import V1EphemeralVolumeSource
 from .models.v1_evacuate_cancel_options import V1EvacuateCancelOptions
-from .models.v1_experimental_migration_options import V1ExperimentalMigrationOptions
 from .models.v1_feature_apic import V1FeatureAPIC
 from .models.v1_feature_hyperv import V1FeatureHyperv
 from .models.v1_feature_kvm import V1FeatureKVM
@@ -273,7 +272,6 @@ from .models.v1_user_password_access_credential_source import V1UserPasswordAcce
 from .models.v1_utility_volume import V1UtilityVolume
 from .models.v1_vgpu_display_options import V1VGPUDisplayOptions
 from .models.v1_vgpu_options import V1VGPUOptions
-from .models.v1_vmim_configuration_options import V1VMIMConfigurationOptions
 from .models.v1_video_device import V1VideoDevice
 from .models.v1_virt_template_deployment import V1VirtTemplateDeployment
 from .models.v1_virtual_machine import V1VirtualMachine

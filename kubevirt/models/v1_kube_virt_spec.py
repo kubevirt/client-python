@@ -202,7 +202,7 @@ class V1KubeVirtSpec(object):
     def image_pull_policy(self):
         """
         Gets the image_pull_policy of this V1KubeVirtSpec.
-        The ImagePullPolicy to use.  Possible enum values:  - `\"Always\"` means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.  - `\"IfNotPresent\"` means that kubelet pulls if the image isn't present on disk. Container will fail if the image isn't present and the pull fails.  - `\"Never\"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
+        The ImagePullPolicy to use for KubeVirt operator-managed infrastructure images (virt-api, virt-controller, virt-handler, virt-exportproxy, etc.). For pull policy of user workload pods, see spec.configuration.imagePullPolicy.  Possible enum values:  - `\"Always\"` means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.  - `\"IfNotPresent\"` means that kubelet pulls if the image isn't present on disk. Container will fail if the image isn't present and the pull fails.  - `\"Never\"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
 
         :return: The image_pull_policy of this V1KubeVirtSpec.
         :rtype: str
@@ -213,7 +213,7 @@ class V1KubeVirtSpec(object):
     def image_pull_policy(self, image_pull_policy):
         """
         Sets the image_pull_policy of this V1KubeVirtSpec.
-        The ImagePullPolicy to use.  Possible enum values:  - `\"Always\"` means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.  - `\"IfNotPresent\"` means that kubelet pulls if the image isn't present on disk. Container will fail if the image isn't present and the pull fails.  - `\"Never\"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
+        The ImagePullPolicy to use for KubeVirt operator-managed infrastructure images (virt-api, virt-controller, virt-handler, virt-exportproxy, etc.). For pull policy of user workload pods, see spec.configuration.imagePullPolicy.  Possible enum values:  - `\"Always\"` means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.  - `\"IfNotPresent\"` means that kubelet pulls if the image isn't present on disk. Container will fail if the image isn't present and the pull fails.  - `\"Never\"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
 
         :param image_pull_policy: The image_pull_policy of this V1KubeVirtSpec.
         :type: str

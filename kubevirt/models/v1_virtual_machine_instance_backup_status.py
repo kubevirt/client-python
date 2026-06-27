@@ -37,6 +37,7 @@ class V1VirtualMachineInstanceBackupStatus(object):
         'completed': 'bool',
         'end_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'failed': 'bool',
+        'quiesce_status': 'str',
         'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
         'volumes': 'list[V1alpha1BackupVolumeInfo]'
     }
@@ -48,11 +49,12 @@ class V1VirtualMachineInstanceBackupStatus(object):
         'completed': 'completed',
         'end_timestamp': 'endTimestamp',
         'failed': 'failed',
+        'quiesce_status': 'quiesceStatus',
         'start_timestamp': 'startTimestamp',
         'volumes': 'volumes'
     }
 
-    def __init__(self, backup_msg=None, backup_name=None, checkpoint_name=None, completed=None, end_timestamp=None, failed=None, start_timestamp=None, volumes=None):
+    def __init__(self, backup_msg=None, backup_name=None, checkpoint_name=None, completed=None, end_timestamp=None, failed=None, quiesce_status=None, start_timestamp=None, volumes=None):
         """
         V1VirtualMachineInstanceBackupStatus - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class V1VirtualMachineInstanceBackupStatus(object):
         self._completed = None
         self._end_timestamp = None
         self._failed = None
+        self._quiesce_status = None
         self._start_timestamp = None
         self._volumes = None
 
@@ -78,6 +81,8 @@ class V1VirtualMachineInstanceBackupStatus(object):
           self.end_timestamp = end_timestamp
         if failed is not None:
           self.failed = failed
+        if quiesce_status is not None:
+          self.quiesce_status = quiesce_status
         if start_timestamp is not None:
           self.start_timestamp = start_timestamp
         if volumes is not None:
@@ -220,6 +225,29 @@ class V1VirtualMachineInstanceBackupStatus(object):
         """
 
         self._failed = failed
+
+    @property
+    def quiesce_status(self):
+        """
+        Gets the quiesce_status of this V1VirtualMachineInstanceBackupStatus.
+        QuiesceStatus indicates whether filesystem freeze succeeded, failed, or was skipped.
+
+        :return: The quiesce_status of this V1VirtualMachineInstanceBackupStatus.
+        :rtype: str
+        """
+        return self._quiesce_status
+
+    @quiesce_status.setter
+    def quiesce_status(self, quiesce_status):
+        """
+        Sets the quiesce_status of this V1VirtualMachineInstanceBackupStatus.
+        QuiesceStatus indicates whether filesystem freeze succeeded, failed, or was skipped.
+
+        :param quiesce_status: The quiesce_status of this V1VirtualMachineInstanceBackupStatus.
+        :type: str
+        """
+
+        self._quiesce_status = quiesce_status
 
     @property
     def start_timestamp(self):

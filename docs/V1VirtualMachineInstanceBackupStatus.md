@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **completed** | **bool** | Completed indicates the backup completed | [optional] 
 **end_timestamp** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) | EndTimestamp is the timestamp when the backup ended | [optional] 
 **failed** | **bool** | Failed indicates that the backup failed | [optional] 
+**quiesce_status** | **str** | QuiesceStatus indicates whether filesystem freeze succeeded, failed, or was skipped. | [optional] 
 **start_timestamp** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) | StartTimestamp is the timestamp when the backup started | [optional] 
 **volumes** | [**list[V1alpha1BackupVolumeInfo]**](V1alpha1BackupVolumeInfo.md) | Volumes lists the volumes included in the backup | [optional] 
 

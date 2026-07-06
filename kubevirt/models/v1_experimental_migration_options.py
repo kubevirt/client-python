@@ -31,19 +31,71 @@ class V1ExperimentalMigrationOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        
+        'compression': 'str',
+        'stall_detector': 'V1StallDetectorOptions'
     }
 
     attribute_map = {
-        
+        'compression': 'compression',
+        'stall_detector': 'stallDetector'
     }
 
-    def __init__(self):
+    def __init__(self, compression=None, stall_detector=None):
         """
         V1ExperimentalMigrationOptions - a model defined in Swagger
         """
 
+        self._compression = None
+        self._stall_detector = None
 
+        if compression is not None:
+          self.compression = compression
+        if stall_detector is not None:
+          self.stall_detector = stall_detector
+
+    @property
+    def compression(self):
+        """
+        Gets the compression of this V1ExperimentalMigrationOptions.
+        Compression selects the algorithm for compressing the live migration data stream. When omitted (nil) or set to \"none\", compression is disabled.
+
+        :return: The compression of this V1ExperimentalMigrationOptions.
+        :rtype: str
+        """
+        return self._compression
+
+    @compression.setter
+    def compression(self, compression):
+        """
+        Sets the compression of this V1ExperimentalMigrationOptions.
+        Compression selects the algorithm for compressing the live migration data stream. When omitted (nil) or set to \"none\", compression is disabled.
+
+        :param compression: The compression of this V1ExperimentalMigrationOptions.
+        :type: str
+        """
+
+        self._compression = compression
+
+    @property
+    def stall_detector(self):
+        """
+        Gets the stall_detector of this V1ExperimentalMigrationOptions.
+
+        :return: The stall_detector of this V1ExperimentalMigrationOptions.
+        :rtype: V1StallDetectorOptions
+        """
+        return self._stall_detector
+
+    @stall_detector.setter
+    def stall_detector(self, stall_detector):
+        """
+        Sets the stall_detector of this V1ExperimentalMigrationOptions.
+
+        :param stall_detector: The stall_detector of this V1ExperimentalMigrationOptions.
+        :type: V1StallDetectorOptions
+        """
+
+        self._stall_detector = stall_detector
 
     def to_dict(self):
         """

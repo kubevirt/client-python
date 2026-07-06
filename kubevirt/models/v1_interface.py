@@ -44,6 +44,7 @@ class V1Interface(object):
         'passt': 'V1DeprecatedInterfacePasst',
         'passt_binding': 'V1InterfacePasstBinding',
         'pci_address': 'str',
+        'port_ranges': 'list[V1PortRange]',
         'ports': 'list[V1Port]',
         'slirp': 'V1DeprecatedInterfaceSlirp',
         'sriov': 'V1InterfaceSRIOV',
@@ -65,6 +66,7 @@ class V1Interface(object):
         'passt': 'passt',
         'passt_binding': 'passtBinding',
         'pci_address': 'pciAddress',
+        'port_ranges': 'portRanges',
         'ports': 'ports',
         'slirp': 'slirp',
         'sriov': 'sriov',
@@ -72,7 +74,7 @@ class V1Interface(object):
         'tag': 'tag'
     }
 
-    def __init__(self, acpi_index=None, binding=None, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name='', passt=None, passt_binding=None, pci_address=None, ports=None, slirp=None, sriov=None, state=None, tag=None):
+    def __init__(self, acpi_index=None, binding=None, boot_order=None, bridge=None, dhcp_options=None, mac_address=None, macvtap=None, masquerade=None, model=None, name='', passt=None, passt_binding=None, pci_address=None, port_ranges=None, ports=None, slirp=None, sriov=None, state=None, tag=None):
         """
         V1Interface - a model defined in Swagger
         """
@@ -90,6 +92,7 @@ class V1Interface(object):
         self._passt = None
         self._passt_binding = None
         self._pci_address = None
+        self._port_ranges = None
         self._ports = None
         self._slirp = None
         self._sriov = None
@@ -121,6 +124,8 @@ class V1Interface(object):
           self.passt_binding = passt_binding
         if pci_address is not None:
           self.pci_address = pci_address
+        if port_ranges is not None:
+          self.port_ranges = port_ranges
         if ports is not None:
           self.ports = ports
         if slirp is not None:
@@ -428,10 +433,33 @@ class V1Interface(object):
         self._pci_address = pci_address
 
     @property
+    def port_ranges(self):
+        """
+        Gets the port_ranges of this V1Interface.
+        List of port ranges to be forwarded to the virtual machine. Mutually exclusive with ports. Only supported on masquerade interfaces. This feature is in Alpha.
+
+        :return: The port_ranges of this V1Interface.
+        :rtype: list[V1PortRange]
+        """
+        return self._port_ranges
+
+    @port_ranges.setter
+    def port_ranges(self, port_ranges):
+        """
+        Sets the port_ranges of this V1Interface.
+        List of port ranges to be forwarded to the virtual machine. Mutually exclusive with ports. Only supported on masquerade interfaces. This feature is in Alpha.
+
+        :param port_ranges: The port_ranges of this V1Interface.
+        :type: list[V1PortRange]
+        """
+
+        self._port_ranges = port_ranges
+
+    @property
     def ports(self):
         """
         Gets the ports of this V1Interface.
-        List of ports to be forwarded to the virtual machine.
+        List of ports to be forwarded to the virtual machine. Mutually exclusive with portRanges.
 
         :return: The ports of this V1Interface.
         :rtype: list[V1Port]
@@ -442,7 +470,7 @@ class V1Interface(object):
     def ports(self, ports):
         """
         Sets the ports of this V1Interface.
-        List of ports to be forwarded to the virtual machine.
+        List of ports to be forwarded to the virtual machine. Mutually exclusive with portRanges.
 
         :param ports: The ports of this V1Interface.
         :type: list[V1Port]

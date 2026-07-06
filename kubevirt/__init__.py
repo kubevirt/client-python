@@ -218,6 +218,7 @@ from .models.v1_persistent_volume_claim_volume_source import V1PersistentVolumeC
 from .models.v1_plugin_binding import V1PluginBinding
 from .models.v1_pod_network import V1PodNetwork
 from .models.v1_port import V1Port
+from .models.v1_port_range import V1PortRange
 from .models.v1_preference_matcher import V1PreferenceMatcher
 from .models.v1_probe import V1Probe
 from .models.v1_qemu_guest_agent_ssh_public_key_access_credential_propagation import V1QemuGuestAgentSSHPublicKeyAccessCredentialPropagation
@@ -249,6 +250,7 @@ from .models.v1_seccomp_configuration import V1SeccompConfiguration
 from .models.v1_secret_volume_source import V1SecretVolumeSource
 from .models.v1_service_account_volume_source import V1ServiceAccountVolumeSource
 from .models.v1_sound_device import V1SoundDevice
+from .models.v1_stall_detector_options import V1StallDetectorOptions
 from .models.v1_start_options import V1StartOptions
 from .models.v1_stop_options import V1StopOptions
 from .models.v1_storage_migrated_volume_info import V1StorageMigratedVolumeInfo

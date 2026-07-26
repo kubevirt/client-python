@@ -39,7 +39,7 @@ class V1VirtualMachineInstanceBackupStatus(object):
         'failed': 'bool',
         'quiesce_status': 'str',
         'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
-        'volumes': 'list[V1alpha1BackupVolumeInfo]'
+        'volumes': 'list[V1VirtualMachineInstanceBackupVolumeInfo]'
     }
 
     attribute_map = {
@@ -279,7 +279,7 @@ class V1VirtualMachineInstanceBackupStatus(object):
         Volumes lists the volumes included in the backup
 
         :return: The volumes of this V1VirtualMachineInstanceBackupStatus.
-        :rtype: list[V1alpha1BackupVolumeInfo]
+        :rtype: list[V1VirtualMachineInstanceBackupVolumeInfo]
         """
         return self._volumes
 
@@ -290,7 +290,7 @@ class V1VirtualMachineInstanceBackupStatus(object):
         Volumes lists the volumes included in the backup
 
         :param volumes: The volumes of this V1VirtualMachineInstanceBackupStatus.
-        :type: list[V1alpha1BackupVolumeInfo]
+        :type: list[V1VirtualMachineInstanceBackupVolumeInfo]
         """
 
         self._volumes = volumes

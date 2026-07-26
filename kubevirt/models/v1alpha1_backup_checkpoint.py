@@ -104,7 +104,7 @@ class V1alpha1BackupCheckpoint(object):
     def volumes(self):
         """
         Gets the volumes of this V1alpha1BackupCheckpoint.
-        Volumes lists volumes and their disk targets at backup time
+        Volumes lists volumes included in the backup
 
         :return: The volumes of this V1alpha1BackupCheckpoint.
         :rtype: list[V1alpha1BackupVolumeInfo]
@@ -115,7 +115,7 @@ class V1alpha1BackupCheckpoint(object):
     def volumes(self, volumes):
         """
         Sets the volumes of this V1alpha1BackupCheckpoint.
-        Volumes lists volumes and their disk targets at backup time
+        Volumes lists volumes included in the backup
 
         :param volumes: The volumes of this V1alpha1BackupCheckpoint.
         :type: list[V1alpha1BackupVolumeInfo]

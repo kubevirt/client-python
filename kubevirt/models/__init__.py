@@ -124,6 +124,7 @@ from .v1_disk_target import V1DiskTarget
 from .v1_disk_verification import V1DiskVerification
 from .v1_domain_memory_dump_info import V1DomainMemoryDumpInfo
 from .v1_domain_spec import V1DomainSpec
+from .v1_downtime_tuning_options import V1DowntimeTuningOptions
 from .v1_downward_api_volume_source import V1DownwardAPIVolumeSource
 from .v1_downward_metrics import V1DownwardMetrics
 from .v1_downward_metrics_volume_source import V1DownwardMetricsVolumeSource

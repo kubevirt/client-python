@@ -32,24 +32,29 @@ class V1ExperimentalMigrationOptions(object):
     """
     swagger_types = {
         'compression': 'str',
+        'downtime_tuning': 'V1DowntimeTuningOptions',
         'stall_detector': 'V1StallDetectorOptions'
     }
 
     attribute_map = {
         'compression': 'compression',
+        'downtime_tuning': 'downtimeTuning',
         'stall_detector': 'stallDetector'
     }
 
-    def __init__(self, compression=None, stall_detector=None):
+    def __init__(self, compression=None, downtime_tuning=None, stall_detector=None):
         """
         V1ExperimentalMigrationOptions - a model defined in Swagger
         """
 
         self._compression = None
+        self._downtime_tuning = None
         self._stall_detector = None
 
         if compression is not None:
           self.compression = compression
+        if downtime_tuning is not None:
+          self.downtime_tuning = downtime_tuning
         if stall_detector is not None:
           self.stall_detector = stall_detector
 
@@ -75,6 +80,29 @@ class V1ExperimentalMigrationOptions(object):
         """
 
         self._compression = compression
+
+    @property
+    def downtime_tuning(self):
+        """
+        Gets the downtime_tuning of this V1ExperimentalMigrationOptions.
+        DowntimeTuning configures iteration-aware downtime ramping for live migration convergence.
+
+        :return: The downtime_tuning of this V1ExperimentalMigrationOptions.
+        :rtype: V1DowntimeTuningOptions
+        """
+        return self._downtime_tuning
+
+    @downtime_tuning.setter
+    def downtime_tuning(self, downtime_tuning):
+        """
+        Sets the downtime_tuning of this V1ExperimentalMigrationOptions.
+        DowntimeTuning configures iteration-aware downtime ramping for live migration convergence.
+
+        :param downtime_tuning: The downtime_tuning of this V1ExperimentalMigrationOptions.
+        :type: V1DowntimeTuningOptions
+        """
+
+        self._downtime_tuning = downtime_tuning
 
     @property
     def stall_detector(self):

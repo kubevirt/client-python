@@ -52,7 +52,7 @@ class V1ContainerDiskInfo(object):
     def checksum(self):
         """
         Gets the checksum of this V1ContainerDiskInfo.
-        Checksum is the checksum of the rootdisk or kernel artifacts inside the containerdisk
+        deprecated; Checksum is the checksum of the rootdisk or kernel artifacts inside the containerdisk
 
         :return: The checksum of this V1ContainerDiskInfo.
         :rtype: int
@@ -63,7 +63,7 @@ class V1ContainerDiskInfo(object):
     def checksum(self, checksum):
         """
         Sets the checksum of this V1ContainerDiskInfo.
-        Checksum is the checksum of the rootdisk or kernel artifacts inside the containerdisk
+        deprecated; Checksum is the checksum of the rootdisk or kernel artifacts inside the containerdisk
 
         :param checksum: The checksum of this V1ContainerDiskInfo.
         :type: int

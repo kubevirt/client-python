@@ -52,7 +52,7 @@ class V1KernelInfo(object):
     def checksum(self):
         """
         Gets the checksum of this V1KernelInfo.
-        Checksum is the checksum of the kernel image
+        deprecated; Checksum is the checksum of the kernel image
 
         :return: The checksum of this V1KernelInfo.
         :rtype: int
@@ -63,7 +63,7 @@ class V1KernelInfo(object):
     def checksum(self, checksum):
         """
         Sets the checksum of this V1KernelInfo.
-        Checksum is the checksum of the kernel image
+        deprecated; Checksum is the checksum of the kernel image
 
         :param checksum: The checksum of this V1KernelInfo.
         :type: int

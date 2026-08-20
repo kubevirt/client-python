@@ -52,7 +52,7 @@ class V1InitrdInfo(object):
     def checksum(self):
         """
         Gets the checksum of this V1InitrdInfo.
-        deprecated; Checksum is the checksum of the initrd file
+        Checksum is the checksum of the initrd file
 
         :return: The checksum of this V1InitrdInfo.
         :rtype: int
@@ -63,7 +63,7 @@ class V1InitrdInfo(object):
     def checksum(self, checksum):
         """
         Sets the checksum of this V1InitrdInfo.
-        deprecated; Checksum is the checksum of the initrd file
+        Checksum is the checksum of the initrd file
 
         :param checksum: The checksum of this V1InitrdInfo.
         :type: int

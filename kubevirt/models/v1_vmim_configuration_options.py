@@ -242,7 +242,7 @@ class V1VMIMConfigurationOptions(object):
     def disable_tls(self):
         """
         Gets the disable_tls of this V1VMIMConfigurationOptions.
-        When set to true, DisableTLS will disable the additional layer of live migration encryption provided by KubeVirt. This is usually a bad idea. Defaults to false
+        DisableTLS disables both TLS encryption and mutual TLS authentication on the migration proxy when set to true. This removes all cryptographic protection from the migration data stream. When disabled, implement network-level access controls to restrict migration traffic to trusted sources only. Defaults to false.
 
         :return: The disable_tls of this V1VMIMConfigurationOptions.
         :rtype: bool
@@ -253,7 +253,7 @@ class V1VMIMConfigurationOptions(object):
     def disable_tls(self, disable_tls):
         """
         Sets the disable_tls of this V1VMIMConfigurationOptions.
-        When set to true, DisableTLS will disable the additional layer of live migration encryption provided by KubeVirt. This is usually a bad idea. Defaults to false
+        DisableTLS disables both TLS encryption and mutual TLS authentication on the migration proxy when set to true. This removes all cryptographic protection from the migration data stream. When disabled, implement network-level access controls to restrict migration traffic to trusted sources only. Defaults to false.
 
         :param disable_tls: The disable_tls of this V1VMIMConfigurationOptions.
         :type: bool

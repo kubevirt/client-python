@@ -31,9 +31,9 @@ class V1beta1MemoryInstancetype(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'guest': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'guest': 'IoK8sApimachineryPkgApiResourceQuantity',
         'hugepages': 'V1Hugepages',
-        'max_guest': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'max_guest': 'IoK8sApimachineryPkgApiResourceQuantity',
         'overcommit_percent': 'int'
     }
 
@@ -69,7 +69,7 @@ class V1beta1MemoryInstancetype(object):
         Required amount of memory which is visible inside the guest OS.
 
         :return: The guest of this V1beta1MemoryInstancetype.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._guest
 
@@ -80,7 +80,7 @@ class V1beta1MemoryInstancetype(object):
         Required amount of memory which is visible inside the guest OS.
 
         :param guest: The guest of this V1beta1MemoryInstancetype.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
         if guest is None:
             raise ValueError("Invalid value for `guest`, must not be `None`")
@@ -117,7 +117,7 @@ class V1beta1MemoryInstancetype(object):
         MaxGuest allows to specify the maximum amount of memory which is visible inside the Guest OS. The delta between MaxGuest and Guest is the amount of memory that can be hot(un)plugged.
 
         :return: The max_guest of this V1beta1MemoryInstancetype.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._max_guest
 
@@ -128,7 +128,7 @@ class V1beta1MemoryInstancetype(object):
         MaxGuest allows to specify the maximum amount of memory which is visible inside the Guest OS. The delta between MaxGuest and Guest is the amount of memory that can be hot(un)plugged.
 
         :param max_guest: The max_guest of this V1beta1MemoryInstancetype.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._max_guest = max_guest

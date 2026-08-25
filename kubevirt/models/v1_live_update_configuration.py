@@ -32,7 +32,7 @@ class V1LiveUpdateConfiguration(object):
     """
     swagger_types = {
         'max_cpu_sockets': 'int',
-        'max_guest': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'max_guest': 'IoK8sApimachineryPkgApiResourceQuantity',
         'max_hotplug_ratio': 'int'
     }
 
@@ -88,7 +88,7 @@ class V1LiveUpdateConfiguration(object):
         MaxGuest defines the maximum amount memory that can be allocated to the guest using hotplug.
 
         :return: The max_guest of this V1LiveUpdateConfiguration.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._max_guest
 
@@ -99,7 +99,7 @@ class V1LiveUpdateConfiguration(object):
         MaxGuest defines the maximum amount memory that can be allocated to the guest using hotplug.
 
         :param max_guest: The max_guest of this V1LiveUpdateConfiguration.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._max_guest = max_guest

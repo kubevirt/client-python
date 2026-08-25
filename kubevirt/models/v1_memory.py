@@ -31,9 +31,9 @@ class V1Memory(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'guest': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'guest': 'IoK8sApimachineryPkgApiResourceQuantity',
         'hugepages': 'V1Hugepages',
-        'max_guest': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'max_guest': 'IoK8sApimachineryPkgApiResourceQuantity',
         'reserved_overhead': 'V1ReservedOverhead'
     }
 
@@ -70,7 +70,7 @@ class V1Memory(object):
         Guest allows to specifying the amount of memory which is visible inside the Guest OS. The Guest must lie between Requests and Limits from the resources section. Defaults to the requested memory in the resources section if not specified.
 
         :return: The guest of this V1Memory.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._guest
 
@@ -81,7 +81,7 @@ class V1Memory(object):
         Guest allows to specifying the amount of memory which is visible inside the Guest OS. The Guest must lie between Requests and Limits from the resources section. Defaults to the requested memory in the resources section if not specified.
 
         :param guest: The guest of this V1Memory.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._guest = guest
@@ -116,7 +116,7 @@ class V1Memory(object):
         MaxGuest allows to specify the maximum amount of memory which is visible inside the Guest OS. The delta between MaxGuest and Guest is the amount of memory that can be hot(un)plugged.
 
         :return: The max_guest of this V1Memory.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._max_guest
 
@@ -127,7 +127,7 @@ class V1Memory(object):
         MaxGuest allows to specify the maximum amount of memory which is visible inside the Guest OS. The delta between MaxGuest and Guest is the amount of memory that can be hot(un)plugged.
 
         :param max_guest: The max_guest of this V1Memory.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._max_guest = max_guest

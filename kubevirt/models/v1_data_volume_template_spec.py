@@ -33,7 +33,7 @@ class V1DataVolumeTemplateSpec(object):
     swagger_types = {
         'api_version': 'str',
         'kind': 'str',
-        'metadata': 'K8sIoApimachineryPkgApisMetaV1ObjectMeta',
+        'metadata': 'IoK8sApimachineryPkgApisMetaV1ObjectMeta',
         'spec': 'V1beta1DataVolumeSpec',
         'status': 'V1DataVolumeTemplateDummyStatus'
     }
@@ -119,7 +119,7 @@ class V1DataVolumeTemplateSpec(object):
         Gets the metadata of this V1DataVolumeTemplateSpec.
 
         :return: The metadata of this V1DataVolumeTemplateSpec.
-        :rtype: K8sIoApimachineryPkgApisMetaV1ObjectMeta
+        :rtype: IoK8sApimachineryPkgApisMetaV1ObjectMeta
         """
         return self._metadata
 
@@ -129,7 +129,7 @@ class V1DataVolumeTemplateSpec(object):
         Sets the metadata of this V1DataVolumeTemplateSpec.
 
         :param metadata: The metadata of this V1DataVolumeTemplateSpec.
-        :type: K8sIoApimachineryPkgApisMetaV1ObjectMeta
+        :type: IoK8sApimachineryPkgApisMetaV1ObjectMeta
         """
 
         self._metadata = metadata

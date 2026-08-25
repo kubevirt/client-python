@@ -34,7 +34,7 @@ class V1beta1VirtualMachinePreferenceList(object):
         'api_version': 'str',
         'items': 'list[V1beta1VirtualMachinePreference]',
         'kind': 'str',
-        'metadata': 'K8sIoApimachineryPkgApisMetaV1ListMeta'
+        'metadata': 'IoK8sApimachineryPkgApisMetaV1ListMeta'
     }
 
     attribute_map = {
@@ -137,7 +137,7 @@ class V1beta1VirtualMachinePreferenceList(object):
         Gets the metadata of this V1beta1VirtualMachinePreferenceList.
 
         :return: The metadata of this V1beta1VirtualMachinePreferenceList.
-        :rtype: K8sIoApimachineryPkgApisMetaV1ListMeta
+        :rtype: IoK8sApimachineryPkgApisMetaV1ListMeta
         """
         return self._metadata
 
@@ -147,7 +147,7 @@ class V1beta1VirtualMachinePreferenceList(object):
         Sets the metadata of this V1beta1VirtualMachinePreferenceList.
 
         :param metadata: The metadata of this V1beta1VirtualMachinePreferenceList.
-        :type: K8sIoApimachineryPkgApisMetaV1ListMeta
+        :type: IoK8sApimachineryPkgApisMetaV1ListMeta
         """
 
         self._metadata = metadata

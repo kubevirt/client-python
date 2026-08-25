@@ -35,7 +35,7 @@ class V1KubeVirtSpec(object):
         'configuration': 'V1KubeVirtConfiguration',
         'customize_components': 'V1CustomizeComponents',
         'image_pull_policy': 'str',
-        'image_pull_secrets': 'list[K8sIoApiCoreV1LocalObjectReference]',
+        'image_pull_secrets': 'list[IoK8sApiCoreV1LocalObjectReference]',
         'image_registry': 'str',
         'image_tag': 'str',
         'infra': 'V1ComponentConfig',
@@ -234,7 +234,7 @@ class V1KubeVirtSpec(object):
         The imagePullSecrets to pull the container images from Defaults to none
 
         :return: The image_pull_secrets of this V1KubeVirtSpec.
-        :rtype: list[K8sIoApiCoreV1LocalObjectReference]
+        :rtype: list[IoK8sApiCoreV1LocalObjectReference]
         """
         return self._image_pull_secrets
 
@@ -245,7 +245,7 @@ class V1KubeVirtSpec(object):
         The imagePullSecrets to pull the container images from Defaults to none
 
         :param image_pull_secrets: The image_pull_secrets of this V1KubeVirtSpec.
-        :type: list[K8sIoApiCoreV1LocalObjectReference]
+        :type: list[IoK8sApiCoreV1LocalObjectReference]
         """
 
         self._image_pull_secrets = image_pull_secrets

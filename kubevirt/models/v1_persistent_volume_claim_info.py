@@ -32,11 +32,11 @@ class V1PersistentVolumeClaimInfo(object):
     """
     swagger_types = {
         'access_modes': 'list[str]',
-        'capacity': 'dict(str, K8sIoApimachineryPkgApiResourceQuantity)',
+        'capacity': 'dict(str, IoK8sApimachineryPkgApiResourceQuantity)',
         'claim_name': 'str',
         'filesystem_overhead': 'str',
         'preallocated': 'bool',
-        'requests': 'dict(str, K8sIoApimachineryPkgApiResourceQuantity)',
+        'requests': 'dict(str, IoK8sApimachineryPkgApiResourceQuantity)',
         'volume_mode': 'str'
     }
 
@@ -115,7 +115,7 @@ class V1PersistentVolumeClaimInfo(object):
         Capacity represents the capacity set on the corresponding PVC status
 
         :return: The capacity of this V1PersistentVolumeClaimInfo.
-        :rtype: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
+        :rtype: dict(str, IoK8sApimachineryPkgApiResourceQuantity)
         """
         return self._capacity
 
@@ -126,7 +126,7 @@ class V1PersistentVolumeClaimInfo(object):
         Capacity represents the capacity set on the corresponding PVC status
 
         :param capacity: The capacity of this V1PersistentVolumeClaimInfo.
-        :type: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
+        :type: dict(str, IoK8sApimachineryPkgApiResourceQuantity)
         """
 
         self._capacity = capacity
@@ -207,7 +207,7 @@ class V1PersistentVolumeClaimInfo(object):
         Requests represents the resources requested by the corresponding PVC spec
 
         :return: The requests of this V1PersistentVolumeClaimInfo.
-        :rtype: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
+        :rtype: dict(str, IoK8sApimachineryPkgApiResourceQuantity)
         """
         return self._requests
 
@@ -218,7 +218,7 @@ class V1PersistentVolumeClaimInfo(object):
         Requests represents the resources requested by the corresponding PVC spec
 
         :param requests: The requests of this V1PersistentVolumeClaimInfo.
-        :type: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
+        :type: dict(str, IoK8sApimachineryPkgApiResourceQuantity)
         """
 
         self._requests = requests

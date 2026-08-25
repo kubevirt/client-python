@@ -36,7 +36,7 @@ class V1VirtualMachineExportStatus(object):
         'phase': 'str',
         'service_name': 'str',
         'token_secret_ref': 'str',
-        'ttl_expiration_time': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'ttl_expiration_time': 'IoK8sApimachineryPkgApisMetaV1Time',
         'virtual_machine_name': 'str'
     }
 
@@ -194,7 +194,7 @@ class V1VirtualMachineExportStatus(object):
         The time at which the VM Export will be completely removed according to specified TTL Formula is CreationTimestamp + TTL
 
         :return: The ttl_expiration_time of this V1VirtualMachineExportStatus.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._ttl_expiration_time
 
@@ -205,7 +205,7 @@ class V1VirtualMachineExportStatus(object):
         The time at which the VM Export will be completely removed according to specified TTL Formula is CreationTimestamp + TTL
 
         :param ttl_expiration_time: The ttl_expiration_time of this V1VirtualMachineExportStatus.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._ttl_expiration_time = ttl_expiration_time

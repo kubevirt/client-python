@@ -32,7 +32,7 @@ class V1VirtualMachineInstancePhaseTransitionTimestamp(object):
     """
     swagger_types = {
         'phase': 'str',
-        'phase_transition_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time'
+        'phase_transition_timestamp': 'IoK8sApimachineryPkgApisMetaV1Time'
     }
 
     attribute_map = {
@@ -83,7 +83,7 @@ class V1VirtualMachineInstancePhaseTransitionTimestamp(object):
         PhaseTransitionTimestamp is the timestamp of when the phase change occurred
 
         :return: The phase_transition_timestamp of this V1VirtualMachineInstancePhaseTransitionTimestamp.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._phase_transition_timestamp
 
@@ -94,7 +94,7 @@ class V1VirtualMachineInstancePhaseTransitionTimestamp(object):
         PhaseTransitionTimestamp is the timestamp of when the phase change occurred
 
         :param phase_transition_timestamp: The phase_transition_timestamp of this V1VirtualMachineInstancePhaseTransitionTimestamp.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._phase_transition_timestamp = phase_transition_timestamp

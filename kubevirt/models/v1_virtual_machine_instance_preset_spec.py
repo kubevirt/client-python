@@ -32,7 +32,7 @@ class V1VirtualMachineInstancePresetSpec(object):
     """
     swagger_types = {
         'domain': 'V1DomainSpec',
-        'selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector'
+        'selector': 'IoK8sApimachineryPkgApisMetaV1LabelSelector'
     }
 
     attribute_map = {
@@ -82,7 +82,7 @@ class V1VirtualMachineInstancePresetSpec(object):
         Selector is a label query over a set of VMIs. Required.
 
         :return: The selector of this V1VirtualMachineInstancePresetSpec.
-        :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :rtype: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
         return self._selector
 
@@ -93,7 +93,7 @@ class V1VirtualMachineInstancePresetSpec(object):
         Selector is a label query over a set of VMIs. Required.
 
         :param selector: The selector of this V1VirtualMachineInstancePresetSpec.
-        :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :type: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
         if selector is None:
             raise ValueError("Invalid value for `selector`, must not be `None`")

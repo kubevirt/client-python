@@ -34,7 +34,7 @@ class V1alpha1BackupOptions(object):
         'backup_cert': 'str',
         'backup_key': 'str',
         'backup_name': 'str',
-        'backup_start_time': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'backup_start_time': 'IoK8sApimachineryPkgApisMetaV1Time',
         'ca_cert': 'str',
         'cmd': 'str',
         'export_server_addr': 'str',
@@ -172,7 +172,7 @@ class V1alpha1BackupOptions(object):
         Gets the backup_start_time of this V1alpha1BackupOptions.
 
         :return: The backup_start_time of this V1alpha1BackupOptions.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._backup_start_time
 
@@ -182,7 +182,7 @@ class V1alpha1BackupOptions(object):
         Sets the backup_start_time of this V1alpha1BackupOptions.
 
         :param backup_start_time: The backup_start_time of this V1alpha1BackupOptions.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._backup_start_time = backup_start_time

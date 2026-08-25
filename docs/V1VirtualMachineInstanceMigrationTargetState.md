@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **domain_detected** | **bool** | The Target Node has seen the Domain Start Event | [optional] 
 **domain_name** | **str** | The name of the domain on the source libvirt domain | [optional] 
 **domain_namespace** | **str** | Namespace used in the name of the source libvirt domain. Can be used to find and modify paths in the domain | [optional] 
-**domain_ready_timestamp** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) | The timestamp at which the target node detects the domain is active | [optional] 
+**domain_ready_timestamp** | [**IoK8sApimachineryPkgApisMetaV1Time**](IoK8sApimachineryPkgApisMetaV1Time.md) | The timestamp at which the target node detects the domain is active | [optional] 
 **migration_uid** | **str** | The Source VirtualMachineInstanceMigration object associated with this migration | [optional] 
 **node** | **str** | The source node that the VMI originated on | [optional] 
 **node_address** | **str** | The address of the target node to use for the migration | [optional] 

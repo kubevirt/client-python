@@ -32,8 +32,8 @@ class V1beta1VirtualMachineSnapshotSpec(object):
     """
     swagger_types = {
         'deletion_policy': 'str',
-        'failure_deadline': 'K8sIoApimachineryPkgApisMetaV1Duration',
-        'source': 'K8sIoApiCoreV1TypedLocalObjectReference'
+        'failure_deadline': 'IoK8sApimachineryPkgApisMetaV1Duration',
+        'source': 'IoK8sApiCoreV1TypedLocalObjectReference'
     }
 
     attribute_map = {
@@ -85,7 +85,7 @@ class V1beta1VirtualMachineSnapshotSpec(object):
         This time represents the number of seconds we permit the vm snapshot to take. In case we pass this deadline we mark this snapshot as failed. Defaults to DefaultFailureDeadline - 5min
 
         :return: The failure_deadline of this V1beta1VirtualMachineSnapshotSpec.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
+        :rtype: IoK8sApimachineryPkgApisMetaV1Duration
         """
         return self._failure_deadline
 
@@ -96,7 +96,7 @@ class V1beta1VirtualMachineSnapshotSpec(object):
         This time represents the number of seconds we permit the vm snapshot to take. In case we pass this deadline we mark this snapshot as failed. Defaults to DefaultFailureDeadline - 5min
 
         :param failure_deadline: The failure_deadline of this V1beta1VirtualMachineSnapshotSpec.
-        :type: K8sIoApimachineryPkgApisMetaV1Duration
+        :type: IoK8sApimachineryPkgApisMetaV1Duration
         """
 
         self._failure_deadline = failure_deadline
@@ -107,7 +107,7 @@ class V1beta1VirtualMachineSnapshotSpec(object):
         Gets the source of this V1beta1VirtualMachineSnapshotSpec.
 
         :return: The source of this V1beta1VirtualMachineSnapshotSpec.
-        :rtype: K8sIoApiCoreV1TypedLocalObjectReference
+        :rtype: IoK8sApiCoreV1TypedLocalObjectReference
         """
         return self._source
 
@@ -117,7 +117,7 @@ class V1beta1VirtualMachineSnapshotSpec(object):
         Sets the source of this V1beta1VirtualMachineSnapshotSpec.
 
         :param source: The source of this V1beta1VirtualMachineSnapshotSpec.
-        :type: K8sIoApiCoreV1TypedLocalObjectReference
+        :type: IoK8sApiCoreV1TypedLocalObjectReference
         """
         if source is None:
             raise ValueError("Invalid value for `source`, must not be `None`")

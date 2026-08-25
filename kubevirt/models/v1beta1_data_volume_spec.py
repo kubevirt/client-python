@@ -36,7 +36,7 @@ class V1beta1DataVolumeSpec(object):
         'final_checkpoint': 'bool',
         'preallocation': 'bool',
         'priority_class_name': 'str',
-        'pvc': 'K8sIoApiCoreV1PersistentVolumeClaimSpec',
+        'pvc': 'IoK8sApiCoreV1PersistentVolumeClaimSpec',
         'source': 'V1beta1DataVolumeSource',
         'source_ref': 'V1beta1DataVolumeSourceRef',
         'storage': 'V1beta1StorageSpec'
@@ -210,7 +210,7 @@ class V1beta1DataVolumeSpec(object):
         PVC is the PVC specification
 
         :return: The pvc of this V1beta1DataVolumeSpec.
-        :rtype: K8sIoApiCoreV1PersistentVolumeClaimSpec
+        :rtype: IoK8sApiCoreV1PersistentVolumeClaimSpec
         """
         return self._pvc
 
@@ -221,7 +221,7 @@ class V1beta1DataVolumeSpec(object):
         PVC is the PVC specification
 
         :param pvc: The pvc of this V1beta1DataVolumeSpec.
-        :type: K8sIoApiCoreV1PersistentVolumeClaimSpec
+        :type: IoK8sApiCoreV1PersistentVolumeClaimSpec
         """
 
         self._pvc = pvc

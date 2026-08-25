@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **allow_auto_converge** | **bool** |  | [optional] 
 **allow_post_copy** | **bool** |  | [optional] 
 **allow_workload_disruption** | **bool** |  | [optional] 
-**bandwidth_per_migration** | [**K8sIoApimachineryPkgApiResourceQuantity**](K8sIoApimachineryPkgApiResourceQuantity.md) |  | [optional] 
+**bandwidth_per_migration** | [**IoK8sApimachineryPkgApiResourceQuantity**](IoK8sApimachineryPkgApiResourceQuantity.md) |  | [optional] 
 **completion_timeout_per_gi_b** | **int** |  | [optional] 
 **experimental** | [**V1ExperimentalMigrationOptions**](V1ExperimentalMigrationOptions.md) | ExperimentalMigrationOptions is an alpha API. It is intended for experimental purposes only and will be removed in the future. | [optional] 
 **max_downtime_ms** | **int** |  | [optional] 

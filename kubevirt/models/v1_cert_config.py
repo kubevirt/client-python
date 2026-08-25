@@ -31,8 +31,8 @@ class V1CertConfig(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'duration': 'K8sIoApimachineryPkgApisMetaV1Duration',
-        'renew_before': 'K8sIoApimachineryPkgApisMetaV1Duration'
+        'duration': 'IoK8sApimachineryPkgApisMetaV1Duration',
+        'renew_before': 'IoK8sApimachineryPkgApisMetaV1Duration'
     }
 
     attribute_map = {
@@ -60,7 +60,7 @@ class V1CertConfig(object):
         The requested 'duration' (i.e. lifetime) of the Certificate.
 
         :return: The duration of this V1CertConfig.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
+        :rtype: IoK8sApimachineryPkgApisMetaV1Duration
         """
         return self._duration
 
@@ -71,7 +71,7 @@ class V1CertConfig(object):
         The requested 'duration' (i.e. lifetime) of the Certificate.
 
         :param duration: The duration of this V1CertConfig.
-        :type: K8sIoApimachineryPkgApisMetaV1Duration
+        :type: IoK8sApimachineryPkgApisMetaV1Duration
         """
 
         self._duration = duration
@@ -83,7 +83,7 @@ class V1CertConfig(object):
         The amount of time before the currently issued certificate's \"notAfter\" time that we will begin to attempt to renew the certificate.
 
         :return: The renew_before of this V1CertConfig.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
+        :rtype: IoK8sApimachineryPkgApisMetaV1Duration
         """
         return self._renew_before
 
@@ -94,7 +94,7 @@ class V1CertConfig(object):
         The amount of time before the currently issued certificate's \"notAfter\" time that we will begin to attempt to renew the certificate.
 
         :param renew_before: The renew_before of this V1CertConfig.
-        :type: K8sIoApimachineryPkgApisMetaV1Duration
+        :type: IoK8sApimachineryPkgApisMetaV1Duration
         """
 
         self._renew_before = renew_before

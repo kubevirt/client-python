@@ -34,7 +34,7 @@ class V1MigrationConfiguration(object):
         'allow_auto_converge': 'bool',
         'allow_post_copy': 'bool',
         'allow_workload_disruption': 'bool',
-        'bandwidth_per_migration': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'bandwidth_per_migration': 'IoK8sApimachineryPkgApiResourceQuantity',
         'completion_timeout_per_gi_b': 'int',
         'disable_tls': 'bool',
         'match_se_linux_level_on_migration': 'bool',
@@ -194,7 +194,7 @@ class V1MigrationConfiguration(object):
         BandwidthPerMigration limits the amount of network bandwidth live migrations are allowed to use. The value is in quantity per second. Defaults to 0 (no limit)
 
         :return: The bandwidth_per_migration of this V1MigrationConfiguration.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._bandwidth_per_migration
 
@@ -205,7 +205,7 @@ class V1MigrationConfiguration(object):
         BandwidthPerMigration limits the amount of network bandwidth live migrations are allowed to use. The value is in quantity per second. Defaults to 0 (no limit)
 
         :param bandwidth_per_migration: The bandwidth_per_migration of this V1MigrationConfiguration.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._bandwidth_per_migration = bandwidth_per_migration

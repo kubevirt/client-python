@@ -31,7 +31,7 @@ class V1beta1MemoryPreferenceRequirement(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'guest': 'K8sIoApimachineryPkgApiResourceQuantity'
+        'guest': 'IoK8sApimachineryPkgApiResourceQuantity'
     }
 
     attribute_map = {
@@ -54,7 +54,7 @@ class V1beta1MemoryPreferenceRequirement(object):
         Minimal amount of memory required by the preference.
 
         :return: The guest of this V1beta1MemoryPreferenceRequirement.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._guest
 
@@ -65,7 +65,7 @@ class V1beta1MemoryPreferenceRequirement(object):
         Minimal amount of memory required by the preference.
 
         :param guest: The guest of this V1beta1MemoryPreferenceRequirement.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
         if guest is None:
             raise ValueError("Invalid value for `guest`, must not be `None`")

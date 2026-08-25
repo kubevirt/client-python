@@ -31,7 +31,7 @@ class V1KSMConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'node_label_selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector'
+        'node_label_selector': 'IoK8sApimachineryPkgApisMetaV1LabelSelector'
     }
 
     attribute_map = {
@@ -55,7 +55,7 @@ class V1KSMConfiguration(object):
         NodeLabelSelector is a selector that filters in which nodes the KSM will be enabled. Empty NodeLabelSelector will enable ksm for every node.
 
         :return: The node_label_selector of this V1KSMConfiguration.
-        :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :rtype: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
         return self._node_label_selector
 
@@ -66,7 +66,7 @@ class V1KSMConfiguration(object):
         NodeLabelSelector is a selector that filters in which nodes the KSM will be enabled. Empty NodeLabelSelector will enable ksm for every node.
 
         :param node_label_selector: The node_label_selector of this V1KSMConfiguration.
-        :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :type: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
 
         self._node_label_selector = node_label_selector

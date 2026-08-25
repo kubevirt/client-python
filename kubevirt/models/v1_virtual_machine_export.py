@@ -33,7 +33,7 @@ class V1VirtualMachineExport(object):
     swagger_types = {
         'api_version': 'str',
         'kind': 'str',
-        'metadata': 'K8sIoApimachineryPkgApisMetaV1ObjectMeta',
+        'metadata': 'IoK8sApimachineryPkgApisMetaV1ObjectMeta',
         'spec': 'V1VirtualMachineExportSpec',
         'status': 'V1VirtualMachineExportStatus'
     }
@@ -119,7 +119,7 @@ class V1VirtualMachineExport(object):
         Gets the metadata of this V1VirtualMachineExport.
 
         :return: The metadata of this V1VirtualMachineExport.
-        :rtype: K8sIoApimachineryPkgApisMetaV1ObjectMeta
+        :rtype: IoK8sApimachineryPkgApisMetaV1ObjectMeta
         """
         return self._metadata
 
@@ -129,7 +129,7 @@ class V1VirtualMachineExport(object):
         Sets the metadata of this V1VirtualMachineExport.
 
         :param metadata: The metadata of this V1VirtualMachineExport.
-        :type: K8sIoApimachineryPkgApisMetaV1ObjectMeta
+        :type: IoK8sApimachineryPkgApisMetaV1ObjectMeta
         """
 
         self._metadata = metadata

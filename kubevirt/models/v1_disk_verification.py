@@ -31,7 +31,7 @@ class V1DiskVerification(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'memory_limit': 'K8sIoApimachineryPkgApiResourceQuantity'
+        'memory_limit': 'IoK8sApimachineryPkgApiResourceQuantity'
     }
 
     attribute_map = {
@@ -53,7 +53,7 @@ class V1DiskVerification(object):
         Gets the memory_limit of this V1DiskVerification.
 
         :return: The memory_limit of this V1DiskVerification.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._memory_limit
 
@@ -63,7 +63,7 @@ class V1DiskVerification(object):
         Sets the memory_limit of this V1DiskVerification.
 
         :param memory_limit: The memory_limit of this V1DiskVerification.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
         if memory_limit is None:
             raise ValueError("Invalid value for `memory_limit`, must not be `None`")

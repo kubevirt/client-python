@@ -34,7 +34,7 @@ class V1beta1VirtualMachinePoolList(object):
         'api_version': 'str',
         'items': 'list[V1beta1VirtualMachinePool]',
         'kind': 'str',
-        'metadata': 'K8sIoApimachineryPkgApisMetaV1ListMeta'
+        'metadata': 'IoK8sApimachineryPkgApisMetaV1ListMeta'
     }
 
     attribute_map = {
@@ -137,7 +137,7 @@ class V1beta1VirtualMachinePoolList(object):
         Gets the metadata of this V1beta1VirtualMachinePoolList.
 
         :return: The metadata of this V1beta1VirtualMachinePoolList.
-        :rtype: K8sIoApimachineryPkgApisMetaV1ListMeta
+        :rtype: IoK8sApimachineryPkgApisMetaV1ListMeta
         """
         return self._metadata
 
@@ -147,7 +147,7 @@ class V1beta1VirtualMachinePoolList(object):
         Sets the metadata of this V1beta1VirtualMachinePoolList.
 
         :param metadata: The metadata of this V1beta1VirtualMachinePoolList.
-        :type: K8sIoApimachineryPkgApisMetaV1ListMeta
+        :type: IoK8sApimachineryPkgApisMetaV1ListMeta
         """
 
         self._metadata = metadata

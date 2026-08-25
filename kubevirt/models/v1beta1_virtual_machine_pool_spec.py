@@ -32,12 +32,12 @@ class V1beta1VirtualMachinePoolSpec(object):
     """
     swagger_types = {
         'autohealing': 'V1beta1VirtualMachinePoolAutohealingStrategy',
-        'max_unavailable': 'K8sIoApimachineryPkgUtilIntstrIntOrString',
+        'max_unavailable': 'IoK8sApimachineryPkgUtilIntstrIntOrString',
         'name_generation': 'V1beta1VirtualMachinePoolNameGeneration',
         'paused': 'bool',
         'replicas': 'int',
         'scale_in_strategy': 'V1beta1VirtualMachinePoolScaleInStrategy',
-        'selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
+        'selector': 'IoK8sApimachineryPkgApisMetaV1LabelSelector',
         'update_strategy': 'V1beta1VirtualMachinePoolUpdateStrategy',
         'virtual_machine_template': 'V1beta1VirtualMachineTemplateSpec'
     }
@@ -116,7 +116,7 @@ class V1beta1VirtualMachinePoolSpec(object):
         (Defaults to 100%) Integer or string pointer, that when set represents either a percentage or number of VMs in a pool that can be unavailable (ready condition false) at a time during automated update.
 
         :return: The max_unavailable of this V1beta1VirtualMachinePoolSpec.
-        :rtype: K8sIoApimachineryPkgUtilIntstrIntOrString
+        :rtype: IoK8sApimachineryPkgUtilIntstrIntOrString
         """
         return self._max_unavailable
 
@@ -127,7 +127,7 @@ class V1beta1VirtualMachinePoolSpec(object):
         (Defaults to 100%) Integer or string pointer, that when set represents either a percentage or number of VMs in a pool that can be unavailable (ready condition false) at a time during automated update.
 
         :param max_unavailable: The max_unavailable of this V1beta1VirtualMachinePoolSpec.
-        :type: K8sIoApimachineryPkgUtilIntstrIntOrString
+        :type: IoK8sApimachineryPkgUtilIntstrIntOrString
         """
 
         self._max_unavailable = max_unavailable
@@ -231,7 +231,7 @@ class V1beta1VirtualMachinePoolSpec(object):
         Label selector for pods. Existing Poolss whose pods are selected by this will be the ones affected by this deployment.
 
         :return: The selector of this V1beta1VirtualMachinePoolSpec.
-        :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :rtype: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
         return self._selector
 
@@ -242,7 +242,7 @@ class V1beta1VirtualMachinePoolSpec(object):
         Label selector for pods. Existing Poolss whose pods are selected by this will be the ones affected by this deployment.
 
         :param selector: The selector of this V1beta1VirtualMachinePoolSpec.
-        :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :type: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
         if selector is None:
             raise ValueError("Invalid value for `selector`, must not be `None`")

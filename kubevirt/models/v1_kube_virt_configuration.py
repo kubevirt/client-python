@@ -34,13 +34,13 @@ class V1KubeVirtConfiguration(object):
         'additional_guest_memory_overhead_ratio': 'str',
         'api_configuration': 'V1ReloadableComponentConfiguration',
         'architecture_configuration': 'V1ArchConfiguration',
-        'auto_cpu_limit_namespace_label_selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
+        'auto_cpu_limit_namespace_label_selector': 'IoK8sApimachineryPkgApisMetaV1LabelSelector',
         'changed_block_tracking_label_selectors': 'V1ChangedBlockTrackingSelectors',
         'common_instancetypes_deployment': 'V1CommonInstancetypesDeployment',
         'confidential_compute': 'V1ConfidentialComputeConfiguration',
         'controller_configuration': 'V1ReloadableComponentConfiguration',
         'cpu_model': 'str',
-        'cpu_request': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'cpu_request': 'IoK8sApimachineryPkgApiResourceQuantity',
         'default_runtime_class': 'str',
         'developer_configuration': 'V1DeveloperConfiguration',
         'emulated_machines': 'list[str]',
@@ -330,7 +330,7 @@ class V1KubeVirtConfiguration(object):
         When set, AutoCPULimitNamespaceLabelSelector will set a CPU limit on virt-launcher for VMIs running inside namespaces that match the label selector. The CPU limit will equal the number of requested vCPUs. This setting does not apply to VMIs with dedicated CPUs.
 
         :return: The auto_cpu_limit_namespace_label_selector of this V1KubeVirtConfiguration.
-        :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :rtype: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
         return self._auto_cpu_limit_namespace_label_selector
 
@@ -341,7 +341,7 @@ class V1KubeVirtConfiguration(object):
         When set, AutoCPULimitNamespaceLabelSelector will set a CPU limit on virt-launcher for VMIs running inside namespaces that match the label selector. The CPU limit will equal the number of requested vCPUs. This setting does not apply to VMIs with dedicated CPUs.
 
         :param auto_cpu_limit_namespace_label_selector: The auto_cpu_limit_namespace_label_selector of this V1KubeVirtConfiguration.
-        :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :type: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
 
         self._auto_cpu_limit_namespace_label_selector = auto_cpu_limit_namespace_label_selector
@@ -463,7 +463,7 @@ class V1KubeVirtConfiguration(object):
         Gets the cpu_request of this V1KubeVirtConfiguration.
 
         :return: The cpu_request of this V1KubeVirtConfiguration.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._cpu_request
 
@@ -473,7 +473,7 @@ class V1KubeVirtConfiguration(object):
         Sets the cpu_request of this V1KubeVirtConfiguration.
 
         :param cpu_request: The cpu_request of this V1KubeVirtConfiguration.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._cpu_request = cpu_request

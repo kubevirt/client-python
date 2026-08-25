@@ -36,8 +36,8 @@ class V1beta1VirtualMachineCloneSpec(object):
         'new_mac_addresses': 'dict(str, str)',
         'new_sm_bios_serial': 'str',
         'patches': 'list[str]',
-        'source': 'K8sIoApiCoreV1TypedLocalObjectReference',
-        'target': 'K8sIoApiCoreV1TypedLocalObjectReference',
+        'source': 'IoK8sApiCoreV1TypedLocalObjectReference',
+        'target': 'IoK8sApiCoreV1TypedLocalObjectReference',
         'template': 'V1beta1VirtualMachineCloneTemplateFilters',
         'volume_name_policy': 'str'
     }
@@ -209,7 +209,7 @@ class V1beta1VirtualMachineCloneSpec(object):
         Source is the object that would be cloned. Currently supported source types are: VirtualMachine of kubevirt.io API group, VirtualMachineSnapshot of snapshot.kubevirt.io API group
 
         :return: The source of this V1beta1VirtualMachineCloneSpec.
-        :rtype: K8sIoApiCoreV1TypedLocalObjectReference
+        :rtype: IoK8sApiCoreV1TypedLocalObjectReference
         """
         return self._source
 
@@ -220,7 +220,7 @@ class V1beta1VirtualMachineCloneSpec(object):
         Source is the object that would be cloned. Currently supported source types are: VirtualMachine of kubevirt.io API group, VirtualMachineSnapshot of snapshot.kubevirt.io API group
 
         :param source: The source of this V1beta1VirtualMachineCloneSpec.
-        :type: K8sIoApiCoreV1TypedLocalObjectReference
+        :type: IoK8sApiCoreV1TypedLocalObjectReference
         """
         if source is None:
             raise ValueError("Invalid value for `source`, must not be `None`")
@@ -234,7 +234,7 @@ class V1beta1VirtualMachineCloneSpec(object):
         Target is the outcome of the cloning process. Currently supported source types are: - VirtualMachine of kubevirt.io API group - Empty (nil). If the target is not provided, the target type would default to VirtualMachine and a random name would be generated for the target. The target's name can be viewed by inspecting status \"TargetName\" field below.
 
         :return: The target of this V1beta1VirtualMachineCloneSpec.
-        :rtype: K8sIoApiCoreV1TypedLocalObjectReference
+        :rtype: IoK8sApiCoreV1TypedLocalObjectReference
         """
         return self._target
 
@@ -245,7 +245,7 @@ class V1beta1VirtualMachineCloneSpec(object):
         Target is the outcome of the cloning process. Currently supported source types are: - VirtualMachine of kubevirt.io API group - Empty (nil). If the target is not provided, the target type would default to VirtualMachine and a random name would be generated for the target. The target's name can be viewed by inspecting status \"TargetName\" field below.
 
         :param target: The target of this V1beta1VirtualMachineCloneSpec.
-        :type: K8sIoApiCoreV1TypedLocalObjectReference
+        :type: IoK8sApiCoreV1TypedLocalObjectReference
         """
 
         self._target = target

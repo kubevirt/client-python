@@ -33,7 +33,7 @@ class V1KubeVirt(object):
     swagger_types = {
         'api_version': 'str',
         'kind': 'str',
-        'metadata': 'K8sIoApimachineryPkgApisMetaV1ObjectMeta',
+        'metadata': 'IoK8sApimachineryPkgApisMetaV1ObjectMeta',
         'spec': 'V1KubeVirtSpec',
         'status': 'V1KubeVirtStatus'
     }
@@ -119,7 +119,7 @@ class V1KubeVirt(object):
         Gets the metadata of this V1KubeVirt.
 
         :return: The metadata of this V1KubeVirt.
-        :rtype: K8sIoApimachineryPkgApisMetaV1ObjectMeta
+        :rtype: IoK8sApimachineryPkgApisMetaV1ObjectMeta
         """
         return self._metadata
 
@@ -129,7 +129,7 @@ class V1KubeVirt(object):
         Sets the metadata of this V1KubeVirt.
 
         :param metadata: The metadata of this V1KubeVirt.
-        :type: K8sIoApimachineryPkgApisMetaV1ObjectMeta
+        :type: IoK8sApimachineryPkgApisMetaV1ObjectMeta
         """
 
         self._metadata = metadata

@@ -32,8 +32,8 @@ class V1DomainMemoryDumpInfo(object):
     """
     swagger_types = {
         'claim_name': 'str',
-        'end_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
-        'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'end_timestamp': 'IoK8sApimachineryPkgApisMetaV1Time',
+        'start_timestamp': 'IoK8sApimachineryPkgApisMetaV1Time',
         'target_file_name': 'str'
     }
 
@@ -93,7 +93,7 @@ class V1DomainMemoryDumpInfo(object):
         EndTimestamp is the time when the memory dump completed
 
         :return: The end_timestamp of this V1DomainMemoryDumpInfo.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._end_timestamp
 
@@ -104,7 +104,7 @@ class V1DomainMemoryDumpInfo(object):
         EndTimestamp is the time when the memory dump completed
 
         :param end_timestamp: The end_timestamp of this V1DomainMemoryDumpInfo.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._end_timestamp = end_timestamp
@@ -116,7 +116,7 @@ class V1DomainMemoryDumpInfo(object):
         StartTimestamp is the time when the memory dump started
 
         :return: The start_timestamp of this V1DomainMemoryDumpInfo.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._start_timestamp
 
@@ -127,7 +127,7 @@ class V1DomainMemoryDumpInfo(object):
         StartTimestamp is the time when the memory dump started
 
         :param start_timestamp: The start_timestamp of this V1DomainMemoryDumpInfo.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._start_timestamp = start_timestamp

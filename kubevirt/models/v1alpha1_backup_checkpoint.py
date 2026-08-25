@@ -31,7 +31,7 @@ class V1alpha1BackupCheckpoint(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'creation_time': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'creation_time': 'IoK8sApimachineryPkgApisMetaV1Time',
         'name': 'str',
         'volumes': 'list[V1alpha1BackupVolumeInfo]'
     }
@@ -64,7 +64,7 @@ class V1alpha1BackupCheckpoint(object):
         Gets the creation_time of this V1alpha1BackupCheckpoint.
 
         :return: The creation_time of this V1alpha1BackupCheckpoint.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._creation_time
 
@@ -74,7 +74,7 @@ class V1alpha1BackupCheckpoint(object):
         Sets the creation_time of this V1alpha1BackupCheckpoint.
 
         :param creation_time: The creation_time of this V1alpha1BackupCheckpoint.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._creation_time = creation_time

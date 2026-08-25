@@ -34,7 +34,7 @@ class V1VirtualMachineInstanceGuestOSUserList(object):
         'api_version': 'str',
         'items': 'list[V1VirtualMachineInstanceGuestOSUser]',
         'kind': 'str',
-        'metadata': 'K8sIoApimachineryPkgApisMetaV1ListMeta'
+        'metadata': 'IoK8sApimachineryPkgApisMetaV1ListMeta'
     }
 
     attribute_map = {
@@ -137,7 +137,7 @@ class V1VirtualMachineInstanceGuestOSUserList(object):
         Gets the metadata of this V1VirtualMachineInstanceGuestOSUserList.
 
         :return: The metadata of this V1VirtualMachineInstanceGuestOSUserList.
-        :rtype: K8sIoApimachineryPkgApisMetaV1ListMeta
+        :rtype: IoK8sApimachineryPkgApisMetaV1ListMeta
         """
         return self._metadata
 
@@ -147,7 +147,7 @@ class V1VirtualMachineInstanceGuestOSUserList(object):
         Sets the metadata of this V1VirtualMachineInstanceGuestOSUserList.
 
         :param metadata: The metadata of this V1VirtualMachineInstanceGuestOSUserList.
-        :type: K8sIoApimachineryPkgApisMetaV1ListMeta
+        :type: IoK8sApimachineryPkgApisMetaV1ListMeta
         """
 
         self._metadata = metadata

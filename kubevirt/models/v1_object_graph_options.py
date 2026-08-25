@@ -32,7 +32,7 @@ class V1ObjectGraphOptions(object):
     """
     swagger_types = {
         'include_optional_nodes': 'bool',
-        'label_selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector'
+        'label_selector': 'IoK8sApimachineryPkgApisMetaV1LabelSelector'
     }
 
     attribute_map = {
@@ -83,7 +83,7 @@ class V1ObjectGraphOptions(object):
         LabelSelector is used to filter nodes in the graph based on their labels.
 
         :return: The label_selector of this V1ObjectGraphOptions.
-        :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :rtype: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
         return self._label_selector
 
@@ -94,7 +94,7 @@ class V1ObjectGraphOptions(object):
         LabelSelector is used to filter nodes in the graph based on their labels.
 
         :param label_selector: The label_selector of this V1ObjectGraphOptions.
-        :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :type: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
 
         self._label_selector = label_selector

@@ -31,9 +31,9 @@ class V1VirtualMachineExportSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'source': 'K8sIoApiCoreV1TypedLocalObjectReference',
+        'source': 'IoK8sApiCoreV1TypedLocalObjectReference',
         'token_secret_ref': 'str',
-        'ttl_duration': 'K8sIoApimachineryPkgApisMetaV1Duration'
+        'ttl_duration': 'IoK8sApimachineryPkgApisMetaV1Duration'
     }
 
     attribute_map = {
@@ -63,7 +63,7 @@ class V1VirtualMachineExportSpec(object):
         Gets the source of this V1VirtualMachineExportSpec.
 
         :return: The source of this V1VirtualMachineExportSpec.
-        :rtype: K8sIoApiCoreV1TypedLocalObjectReference
+        :rtype: IoK8sApiCoreV1TypedLocalObjectReference
         """
         return self._source
 
@@ -73,7 +73,7 @@ class V1VirtualMachineExportSpec(object):
         Sets the source of this V1VirtualMachineExportSpec.
 
         :param source: The source of this V1VirtualMachineExportSpec.
-        :type: K8sIoApiCoreV1TypedLocalObjectReference
+        :type: IoK8sApiCoreV1TypedLocalObjectReference
         """
         if source is None:
             raise ValueError("Invalid value for `source`, must not be `None`")
@@ -110,7 +110,7 @@ class V1VirtualMachineExportSpec(object):
         ttlDuration limits the lifetime of an export If this field is set, after this duration has passed from counting from CreationTimestamp, the export is eligible to be automatically deleted. If this field is omitted, a reasonable default is applied.
 
         :return: The ttl_duration of this V1VirtualMachineExportSpec.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
+        :rtype: IoK8sApimachineryPkgApisMetaV1Duration
         """
         return self._ttl_duration
 
@@ -121,7 +121,7 @@ class V1VirtualMachineExportSpec(object):
         ttlDuration limits the lifetime of an export If this field is set, after this duration has passed from counting from CreationTimestamp, the export is eligible to be automatically deleted. If this field is omitted, a reasonable default is applied.
 
         :param ttl_duration: The ttl_duration of this V1VirtualMachineExportSpec.
-        :type: K8sIoApimachineryPkgApisMetaV1Duration
+        :type: IoK8sApimachineryPkgApisMetaV1Duration
         """
 
         self._ttl_duration = ttl_duration

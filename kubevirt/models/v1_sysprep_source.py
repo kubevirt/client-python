@@ -31,8 +31,8 @@ class V1SysprepSource(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'config_map': 'K8sIoApiCoreV1LocalObjectReference',
-        'secret': 'K8sIoApiCoreV1LocalObjectReference'
+        'config_map': 'IoK8sApiCoreV1LocalObjectReference',
+        'secret': 'IoK8sApiCoreV1LocalObjectReference'
     }
 
     attribute_map = {
@@ -60,7 +60,7 @@ class V1SysprepSource(object):
         ConfigMap references a ConfigMap that contains Sysprep answer file named autounattend.xml that should be attached as disk of CDROM type.
 
         :return: The config_map of this V1SysprepSource.
-        :rtype: K8sIoApiCoreV1LocalObjectReference
+        :rtype: IoK8sApiCoreV1LocalObjectReference
         """
         return self._config_map
 
@@ -71,7 +71,7 @@ class V1SysprepSource(object):
         ConfigMap references a ConfigMap that contains Sysprep answer file named autounattend.xml that should be attached as disk of CDROM type.
 
         :param config_map: The config_map of this V1SysprepSource.
-        :type: K8sIoApiCoreV1LocalObjectReference
+        :type: IoK8sApiCoreV1LocalObjectReference
         """
 
         self._config_map = config_map
@@ -83,7 +83,7 @@ class V1SysprepSource(object):
         Secret references a k8s Secret that contains Sysprep answer file named autounattend.xml that should be attached as disk of CDROM type.
 
         :return: The secret of this V1SysprepSource.
-        :rtype: K8sIoApiCoreV1LocalObjectReference
+        :rtype: IoK8sApiCoreV1LocalObjectReference
         """
         return self._secret
 
@@ -94,7 +94,7 @@ class V1SysprepSource(object):
         Secret references a k8s Secret that contains Sysprep answer file named autounattend.xml that should be attached as disk of CDROM type.
 
         :param secret: The secret of this V1SysprepSource.
-        :type: K8sIoApiCoreV1LocalObjectReference
+        :type: IoK8sApiCoreV1LocalObjectReference
         """
 
         self._secret = secret

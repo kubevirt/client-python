@@ -31,7 +31,7 @@ class V1beta1VirtualMachinePoolAutohealingStrategy(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'min_failing_to_start_duration': 'K8sIoApimachineryPkgApisMetaV1Duration',
+        'min_failing_to_start_duration': 'IoK8sApimachineryPkgApisMetaV1Duration',
         'start_up_failure_threshold': 'int'
     }
 
@@ -60,7 +60,7 @@ class V1beta1VirtualMachinePoolAutohealingStrategy(object):
         MinFailingToStartDuration is the minimum time a VM must be in a failing status (applies to status conditions like CrashLoopBackOff, Unschedulable) before being replaced. It measures the duration since the VM's Ready condition transitioned to False. Defaults to 5 minutes
 
         :return: The min_failing_to_start_duration of this V1beta1VirtualMachinePoolAutohealingStrategy.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
+        :rtype: IoK8sApimachineryPkgApisMetaV1Duration
         """
         return self._min_failing_to_start_duration
 
@@ -71,7 +71,7 @@ class V1beta1VirtualMachinePoolAutohealingStrategy(object):
         MinFailingToStartDuration is the minimum time a VM must be in a failing status (applies to status conditions like CrashLoopBackOff, Unschedulable) before being replaced. It measures the duration since the VM's Ready condition transitioned to False. Defaults to 5 minutes
 
         :param min_failing_to_start_duration: The min_failing_to_start_duration of this V1beta1VirtualMachinePoolAutohealingStrategy.
-        :type: K8sIoApimachineryPkgApisMetaV1Duration
+        :type: IoK8sApimachineryPkgApisMetaV1Duration
         """
 
         self._min_failing_to_start_duration = min_failing_to_start_duration

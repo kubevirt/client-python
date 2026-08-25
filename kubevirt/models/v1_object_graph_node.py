@@ -35,7 +35,7 @@ class V1ObjectGraphNode(object):
         'children': 'list[V1ObjectGraphNode]',
         'kind': 'str',
         'labels': 'dict(str, str)',
-        'object_reference': 'K8sIoApiCoreV1TypedObjectReference',
+        'object_reference': 'IoK8sApiCoreV1TypedObjectReference',
         'optional': 'bool'
     }
 
@@ -166,7 +166,7 @@ class V1ObjectGraphNode(object):
         Gets the object_reference of this V1ObjectGraphNode.
 
         :return: The object_reference of this V1ObjectGraphNode.
-        :rtype: K8sIoApiCoreV1TypedObjectReference
+        :rtype: IoK8sApiCoreV1TypedObjectReference
         """
         return self._object_reference
 
@@ -176,7 +176,7 @@ class V1ObjectGraphNode(object):
         Sets the object_reference of this V1ObjectGraphNode.
 
         :param object_reference: The object_reference of this V1ObjectGraphNode.
-        :type: K8sIoApiCoreV1TypedObjectReference
+        :type: IoK8sApiCoreV1TypedObjectReference
         """
         if object_reference is None:
             raise ValueError("Invalid value for `object_reference`, must not be `None`")

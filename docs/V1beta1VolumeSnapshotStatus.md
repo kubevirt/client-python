@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**creation_time** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) |  | [optional] 
+**creation_time** | [**IoK8sApimachineryPkgApisMetaV1Time**](IoK8sApimachineryPkgApisMetaV1Time.md) |  | [optional] 
 **error** | [**V1beta1Error**](V1beta1Error.md) |  | [optional] 
 **ready_to_use** | **bool** |  | [optional] 
 **volume_snapshot_name** | **str** |  | [default to '']

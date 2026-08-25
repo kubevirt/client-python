@@ -33,8 +33,8 @@ class V1CloudInitConfigDriveSource(object):
     swagger_types = {
         'network_data': 'str',
         'network_data_base64': 'str',
-        'network_data_secret_ref': 'K8sIoApiCoreV1LocalObjectReference',
-        'secret_ref': 'K8sIoApiCoreV1LocalObjectReference',
+        'network_data_secret_ref': 'IoK8sApiCoreV1LocalObjectReference',
+        'secret_ref': 'IoK8sApiCoreV1LocalObjectReference',
         'user_data': 'str',
         'user_data_base64': 'str'
     }
@@ -126,7 +126,7 @@ class V1CloudInitConfigDriveSource(object):
         NetworkDataSecretRef references a k8s secret that contains config drive networkdata.
 
         :return: The network_data_secret_ref of this V1CloudInitConfigDriveSource.
-        :rtype: K8sIoApiCoreV1LocalObjectReference
+        :rtype: IoK8sApiCoreV1LocalObjectReference
         """
         return self._network_data_secret_ref
 
@@ -137,7 +137,7 @@ class V1CloudInitConfigDriveSource(object):
         NetworkDataSecretRef references a k8s secret that contains config drive networkdata.
 
         :param network_data_secret_ref: The network_data_secret_ref of this V1CloudInitConfigDriveSource.
-        :type: K8sIoApiCoreV1LocalObjectReference
+        :type: IoK8sApiCoreV1LocalObjectReference
         """
 
         self._network_data_secret_ref = network_data_secret_ref
@@ -149,7 +149,7 @@ class V1CloudInitConfigDriveSource(object):
         UserDataSecretRef references a k8s secret that contains config drive userdata.
 
         :return: The secret_ref of this V1CloudInitConfigDriveSource.
-        :rtype: K8sIoApiCoreV1LocalObjectReference
+        :rtype: IoK8sApiCoreV1LocalObjectReference
         """
         return self._secret_ref
 
@@ -160,7 +160,7 @@ class V1CloudInitConfigDriveSource(object):
         UserDataSecretRef references a k8s secret that contains config drive userdata.
 
         :param secret_ref: The secret_ref of this V1CloudInitConfigDriveSource.
-        :type: K8sIoApiCoreV1LocalObjectReference
+        :type: IoK8sApiCoreV1LocalObjectReference
         """
 
         self._secret_ref = secret_ref

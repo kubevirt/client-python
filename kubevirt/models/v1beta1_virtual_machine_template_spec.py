@@ -31,7 +31,7 @@ class V1beta1VirtualMachineTemplateSpec(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'metadata': 'K8sIoApimachineryPkgApisMetaV1ObjectMeta',
+        'metadata': 'IoK8sApimachineryPkgApisMetaV1ObjectMeta',
         'spec': 'V1VirtualMachineSpec'
     }
 
@@ -59,7 +59,7 @@ class V1beta1VirtualMachineTemplateSpec(object):
         Gets the metadata of this V1beta1VirtualMachineTemplateSpec.
 
         :return: The metadata of this V1beta1VirtualMachineTemplateSpec.
-        :rtype: K8sIoApimachineryPkgApisMetaV1ObjectMeta
+        :rtype: IoK8sApimachineryPkgApisMetaV1ObjectMeta
         """
         return self._metadata
 
@@ -69,7 +69,7 @@ class V1beta1VirtualMachineTemplateSpec(object):
         Sets the metadata of this V1beta1VirtualMachineTemplateSpec.
 
         :param metadata: The metadata of this V1beta1VirtualMachineTemplateSpec.
-        :type: K8sIoApimachineryPkgApisMetaV1ObjectMeta
+        :type: IoK8sApimachineryPkgApisMetaV1ObjectMeta
         """
 
         self._metadata = metadata

@@ -32,10 +32,10 @@ class V1beta1StorageSpec(object):
     """
     swagger_types = {
         'access_modes': 'list[str]',
-        'data_source': 'K8sIoApiCoreV1TypedLocalObjectReference',
-        'data_source_ref': 'K8sIoApiCoreV1TypedObjectReference',
-        'resources': 'K8sIoApiCoreV1VolumeResourceRequirements',
-        'selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
+        'data_source': 'IoK8sApiCoreV1TypedLocalObjectReference',
+        'data_source_ref': 'IoK8sApiCoreV1TypedObjectReference',
+        'resources': 'IoK8sApiCoreV1VolumeResourceRequirements',
+        'selector': 'IoK8sApimachineryPkgApisMetaV1LabelSelector',
         'storage_class_name': 'str',
         'volume_mode': 'str',
         'volume_name': 'str'
@@ -120,7 +120,7 @@ class V1beta1StorageSpec(object):
         This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
 
         :return: The data_source of this V1beta1StorageSpec.
-        :rtype: K8sIoApiCoreV1TypedLocalObjectReference
+        :rtype: IoK8sApiCoreV1TypedLocalObjectReference
         """
         return self._data_source
 
@@ -131,7 +131,7 @@ class V1beta1StorageSpec(object):
         This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
 
         :param data_source: The data_source of this V1beta1StorageSpec.
-        :type: K8sIoApiCoreV1TypedLocalObjectReference
+        :type: IoK8sApiCoreV1TypedLocalObjectReference
         """
 
         self._data_source = data_source
@@ -143,7 +143,7 @@ class V1beta1StorageSpec(object):
         Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef allows any non-core object, as well as PersistentVolumeClaim objects. * While DataSource ignores disallowed values (dropping them), DataSourceRef preserves all values, and generates an error if a disallowed value is specified. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
 
         :return: The data_source_ref of this V1beta1StorageSpec.
-        :rtype: K8sIoApiCoreV1TypedObjectReference
+        :rtype: IoK8sApiCoreV1TypedObjectReference
         """
         return self._data_source_ref
 
@@ -154,7 +154,7 @@ class V1beta1StorageSpec(object):
         Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef allows any non-core object, as well as PersistentVolumeClaim objects. * While DataSource ignores disallowed values (dropping them), DataSourceRef preserves all values, and generates an error if a disallowed value is specified. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
 
         :param data_source_ref: The data_source_ref of this V1beta1StorageSpec.
-        :type: K8sIoApiCoreV1TypedObjectReference
+        :type: IoK8sApiCoreV1TypedObjectReference
         """
 
         self._data_source_ref = data_source_ref
@@ -166,7 +166,7 @@ class V1beta1StorageSpec(object):
         Resources represents the minimum resources the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
 
         :return: The resources of this V1beta1StorageSpec.
-        :rtype: K8sIoApiCoreV1VolumeResourceRequirements
+        :rtype: IoK8sApiCoreV1VolumeResourceRequirements
         """
         return self._resources
 
@@ -177,7 +177,7 @@ class V1beta1StorageSpec(object):
         Resources represents the minimum resources the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
 
         :param resources: The resources of this V1beta1StorageSpec.
-        :type: K8sIoApiCoreV1VolumeResourceRequirements
+        :type: IoK8sApiCoreV1VolumeResourceRequirements
         """
 
         self._resources = resources
@@ -189,7 +189,7 @@ class V1beta1StorageSpec(object):
         A label query over volumes to consider for binding.
 
         :return: The selector of this V1beta1StorageSpec.
-        :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :rtype: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
         return self._selector
 
@@ -200,7 +200,7 @@ class V1beta1StorageSpec(object):
         A label query over volumes to consider for binding.
 
         :param selector: The selector of this V1beta1StorageSpec.
-        :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :type: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
 
         self._selector = selector

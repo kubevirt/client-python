@@ -31,14 +31,14 @@ class V1Probe(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        '_exec': 'K8sIoApiCoreV1ExecAction',
+        '_exec': 'IoK8sApiCoreV1ExecAction',
         'failure_threshold': 'int',
         'guest_agent_ping': 'V1GuestAgentPing',
-        'http_get': 'K8sIoApiCoreV1HTTPGetAction',
+        'http_get': 'IoK8sApiCoreV1HTTPGetAction',
         'initial_delay_seconds': 'int',
         'period_seconds': 'int',
         'success_threshold': 'int',
-        'tcp_socket': 'K8sIoApiCoreV1TCPSocketAction',
+        'tcp_socket': 'IoK8sApiCoreV1TCPSocketAction',
         'timeout_seconds': 'int'
     }
 
@@ -95,7 +95,7 @@ class V1Probe(object):
         One and only one of the following should be specified. Exec specifies the action to take, it will be executed on the guest through the qemu-guest-agent. If the guest agent is not available, this probe will fail.
 
         :return: The _exec of this V1Probe.
-        :rtype: K8sIoApiCoreV1ExecAction
+        :rtype: IoK8sApiCoreV1ExecAction
         """
         return self.__exec
 
@@ -106,7 +106,7 @@ class V1Probe(object):
         One and only one of the following should be specified. Exec specifies the action to take, it will be executed on the guest through the qemu-guest-agent. If the guest agent is not available, this probe will fail.
 
         :param _exec: The _exec of this V1Probe.
-        :type: K8sIoApiCoreV1ExecAction
+        :type: IoK8sApiCoreV1ExecAction
         """
 
         self.__exec = _exec
@@ -164,7 +164,7 @@ class V1Probe(object):
         HTTPGet specifies the http request to perform.
 
         :return: The http_get of this V1Probe.
-        :rtype: K8sIoApiCoreV1HTTPGetAction
+        :rtype: IoK8sApiCoreV1HTTPGetAction
         """
         return self._http_get
 
@@ -175,7 +175,7 @@ class V1Probe(object):
         HTTPGet specifies the http request to perform.
 
         :param http_get: The http_get of this V1Probe.
-        :type: K8sIoApiCoreV1HTTPGetAction
+        :type: IoK8sApiCoreV1HTTPGetAction
         """
 
         self._http_get = http_get
@@ -256,7 +256,7 @@ class V1Probe(object):
         TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported
 
         :return: The tcp_socket of this V1Probe.
-        :rtype: K8sIoApiCoreV1TCPSocketAction
+        :rtype: IoK8sApiCoreV1TCPSocketAction
         """
         return self._tcp_socket
 
@@ -267,7 +267,7 @@ class V1Probe(object):
         TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported
 
         :param tcp_socket: The tcp_socket of this V1Probe.
-        :type: K8sIoApiCoreV1TCPSocketAction
+        :type: IoK8sApiCoreV1TCPSocketAction
         """
 
         self._tcp_socket = tcp_socket

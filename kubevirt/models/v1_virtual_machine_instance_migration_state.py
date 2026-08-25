@@ -34,7 +34,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         'abort_requested': 'bool',
         'abort_status': 'str',
         'completed': 'bool',
-        'end_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'end_timestamp': 'IoK8sApimachineryPkgApisMetaV1Time',
         'failed': 'bool',
         'failure_reason': 'str',
         'migration_configuration': 'V1VMIMConfigurationOptions',
@@ -46,15 +46,15 @@ class V1VirtualMachineInstanceMigrationState(object):
         'source_persistent_state_pvc_name': 'str',
         'source_pod': 'str',
         'source_state': 'V1VirtualMachineInstanceMigrationSourceState',
-        'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'start_timestamp': 'IoK8sApimachineryPkgApisMetaV1Time',
         'target_attachment_pod_uid': 'str',
         'target_cpu_set': 'list[int]',
         'target_direct_migration_node_ports': 'dict(str, int)',
-        'target_memory_overhead': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'target_memory_overhead': 'IoK8sApimachineryPkgApiResourceQuantity',
         'target_node': 'str',
         'target_node_address': 'str',
         'target_node_domain_detected': 'bool',
-        'target_node_domain_ready_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'target_node_domain_ready_timestamp': 'IoK8sApimachineryPkgApisMetaV1Time',
         'target_node_topology': 'str',
         'target_persistent_state_pvc_name': 'str',
         'target_pod': 'str',
@@ -259,7 +259,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The time the migration action ended
 
         :return: The end_timestamp of this V1VirtualMachineInstanceMigrationState.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._end_timestamp
 
@@ -270,7 +270,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The time the migration action ended
 
         :param end_timestamp: The end_timestamp of this V1VirtualMachineInstanceMigrationState.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._end_timestamp = end_timestamp
@@ -533,7 +533,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The time the migration action began
 
         :return: The start_timestamp of this V1VirtualMachineInstanceMigrationState.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._start_timestamp
 
@@ -544,7 +544,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The time the migration action began
 
         :param start_timestamp: The start_timestamp of this V1VirtualMachineInstanceMigrationState.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._start_timestamp = start_timestamp
@@ -625,7 +625,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         TargetMemoryOverhead is the memory overhead of the target virt-launcher pod
 
         :return: The target_memory_overhead of this V1VirtualMachineInstanceMigrationState.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._target_memory_overhead
 
@@ -636,7 +636,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         TargetMemoryOverhead is the memory overhead of the target virt-launcher pod
 
         :param target_memory_overhead: The target_memory_overhead of this V1VirtualMachineInstanceMigrationState.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._target_memory_overhead = target_memory_overhead
@@ -717,7 +717,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The timestamp at which the target node detects the domain is active
 
         :return: The target_node_domain_ready_timestamp of this V1VirtualMachineInstanceMigrationState.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._target_node_domain_ready_timestamp
 
@@ -728,7 +728,7 @@ class V1VirtualMachineInstanceMigrationState(object):
         The timestamp at which the target node detects the domain is active
 
         :param target_node_domain_ready_timestamp: The target_node_domain_ready_timestamp of this V1VirtualMachineInstanceMigrationState.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._target_node_domain_ready_timestamp = target_node_domain_ready_timestamp

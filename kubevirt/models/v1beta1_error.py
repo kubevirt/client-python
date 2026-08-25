@@ -32,7 +32,7 @@ class V1beta1Error(object):
     """
     swagger_types = {
         'message': 'str',
-        'time': 'K8sIoApimachineryPkgApisMetaV1Time'
+        'time': 'IoK8sApimachineryPkgApisMetaV1Time'
     }
 
     attribute_map = {
@@ -80,7 +80,7 @@ class V1beta1Error(object):
         Gets the time of this V1beta1Error.
 
         :return: The time of this V1beta1Error.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._time
 
@@ -90,7 +90,7 @@ class V1beta1Error(object):
         Sets the time of this V1beta1Error.
 
         :param time: The time of this V1beta1Error.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._time = time

@@ -34,7 +34,7 @@ class V1alpha1MigrationPolicySpec(object):
         'allow_auto_converge': 'bool',
         'allow_post_copy': 'bool',
         'allow_workload_disruption': 'bool',
-        'bandwidth_per_migration': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'bandwidth_per_migration': 'IoK8sApimachineryPkgApiResourceQuantity',
         'completion_timeout_per_gi_b': 'int',
         'experimental': 'V1ExperimentalMigrationOptions',
         'max_downtime_ms': 'int',
@@ -151,7 +151,7 @@ class V1alpha1MigrationPolicySpec(object):
         Gets the bandwidth_per_migration of this V1alpha1MigrationPolicySpec.
 
         :return: The bandwidth_per_migration of this V1alpha1MigrationPolicySpec.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._bandwidth_per_migration
 
@@ -161,7 +161,7 @@ class V1alpha1MigrationPolicySpec(object):
         Sets the bandwidth_per_migration of this V1alpha1MigrationPolicySpec.
 
         :param bandwidth_per_migration: The bandwidth_per_migration of this V1alpha1MigrationPolicySpec.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._bandwidth_per_migration = bandwidth_per_migration

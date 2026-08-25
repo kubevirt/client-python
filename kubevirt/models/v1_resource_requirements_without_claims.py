@@ -31,8 +31,8 @@ class V1ResourceRequirementsWithoutClaims(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'limits': 'dict(str, K8sIoApimachineryPkgApiResourceQuantity)',
-        'requests': 'dict(str, K8sIoApimachineryPkgApiResourceQuantity)'
+        'limits': 'dict(str, IoK8sApimachineryPkgApiResourceQuantity)',
+        'requests': 'dict(str, IoK8sApimachineryPkgApiResourceQuantity)'
     }
 
     attribute_map = {
@@ -60,7 +60,7 @@ class V1ResourceRequirementsWithoutClaims(object):
         Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
 
         :return: The limits of this V1ResourceRequirementsWithoutClaims.
-        :rtype: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
+        :rtype: dict(str, IoK8sApimachineryPkgApiResourceQuantity)
         """
         return self._limits
 
@@ -71,7 +71,7 @@ class V1ResourceRequirementsWithoutClaims(object):
         Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
 
         :param limits: The limits of this V1ResourceRequirementsWithoutClaims.
-        :type: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
+        :type: dict(str, IoK8sApimachineryPkgApiResourceQuantity)
         """
 
         self._limits = limits
@@ -83,7 +83,7 @@ class V1ResourceRequirementsWithoutClaims(object):
         Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
 
         :return: The requests of this V1ResourceRequirementsWithoutClaims.
-        :rtype: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
+        :rtype: dict(str, IoK8sApimachineryPkgApiResourceQuantity)
         """
         return self._requests
 
@@ -94,7 +94,7 @@ class V1ResourceRequirementsWithoutClaims(object):
         Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
 
         :param requests: The requests of this V1ResourceRequirementsWithoutClaims.
-        :type: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
+        :type: dict(str, IoK8sApimachineryPkgApiResourceQuantity)
         """
 
         self._requests = requests

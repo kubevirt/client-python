@@ -31,10 +31,10 @@ class V1MemoryStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'guest_at_boot': 'K8sIoApimachineryPkgApiResourceQuantity',
-        'guest_current': 'K8sIoApimachineryPkgApiResourceQuantity',
-        'guest_requested': 'K8sIoApimachineryPkgApiResourceQuantity',
-        'memory_overhead': 'K8sIoApimachineryPkgApiResourceQuantity'
+        'guest_at_boot': 'IoK8sApimachineryPkgApiResourceQuantity',
+        'guest_current': 'IoK8sApimachineryPkgApiResourceQuantity',
+        'guest_requested': 'IoK8sApimachineryPkgApiResourceQuantity',
+        'memory_overhead': 'IoK8sApimachineryPkgApiResourceQuantity'
     }
 
     attribute_map = {
@@ -70,7 +70,7 @@ class V1MemoryStatus(object):
         GuestAtBoot specifies with how much memory the VirtualMachine intiallly booted with.
 
         :return: The guest_at_boot of this V1MemoryStatus.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._guest_at_boot
 
@@ -81,7 +81,7 @@ class V1MemoryStatus(object):
         GuestAtBoot specifies with how much memory the VirtualMachine intiallly booted with.
 
         :param guest_at_boot: The guest_at_boot of this V1MemoryStatus.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._guest_at_boot = guest_at_boot
@@ -93,7 +93,7 @@ class V1MemoryStatus(object):
         GuestCurrent specifies how much memory is currently available for the VirtualMachine.
 
         :return: The guest_current of this V1MemoryStatus.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._guest_current
 
@@ -104,7 +104,7 @@ class V1MemoryStatus(object):
         GuestCurrent specifies how much memory is currently available for the VirtualMachine.
 
         :param guest_current: The guest_current of this V1MemoryStatus.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._guest_current = guest_current
@@ -116,7 +116,7 @@ class V1MemoryStatus(object):
         GuestRequested specifies how much memory was requested (hotplug) for the VirtualMachine.
 
         :return: The guest_requested of this V1MemoryStatus.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._guest_requested
 
@@ -127,7 +127,7 @@ class V1MemoryStatus(object):
         GuestRequested specifies how much memory was requested (hotplug) for the VirtualMachine.
 
         :param guest_requested: The guest_requested of this V1MemoryStatus.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._guest_requested = guest_requested
@@ -139,7 +139,7 @@ class V1MemoryStatus(object):
         MemoryOverhead specifies the memory overhead added by the virtualization infrastructure for the virt-launcher pod.
 
         :return: The memory_overhead of this V1MemoryStatus.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._memory_overhead
 
@@ -150,7 +150,7 @@ class V1MemoryStatus(object):
         MemoryOverhead specifies the memory overhead added by the virtualization infrastructure for the virt-launcher pod.
 
         :param memory_overhead: The memory_overhead of this V1MemoryStatus.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._memory_overhead = memory_overhead

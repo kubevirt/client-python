@@ -31,7 +31,7 @@ class V1FreezeUnfreezeTimeout(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'unfreeze_timeout': 'K8sIoApimachineryPkgApisMetaV1Duration'
+        'unfreeze_timeout': 'IoK8sApimachineryPkgApisMetaV1Duration'
     }
 
     attribute_map = {
@@ -53,7 +53,7 @@ class V1FreezeUnfreezeTimeout(object):
         Gets the unfreeze_timeout of this V1FreezeUnfreezeTimeout.
 
         :return: The unfreeze_timeout of this V1FreezeUnfreezeTimeout.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
+        :rtype: IoK8sApimachineryPkgApisMetaV1Duration
         """
         return self._unfreeze_timeout
 
@@ -63,7 +63,7 @@ class V1FreezeUnfreezeTimeout(object):
         Sets the unfreeze_timeout of this V1FreezeUnfreezeTimeout.
 
         :param unfreeze_timeout: The unfreeze_timeout of this V1FreezeUnfreezeTimeout.
-        :type: K8sIoApimachineryPkgApisMetaV1Duration
+        :type: IoK8sApimachineryPkgApisMetaV1Duration
         """
         if unfreeze_timeout is None:
             raise ValueError("Invalid value for `unfreeze_timeout`, must not be `None`")

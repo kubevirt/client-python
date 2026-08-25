@@ -31,7 +31,7 @@ class V1HostDisk(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'capacity': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'capacity': 'IoK8sApimachineryPkgApiResourceQuantity',
         'path': 'str',
         'shared': 'bool',
         'type': 'str'
@@ -68,7 +68,7 @@ class V1HostDisk(object):
         Capacity of the sparse disk
 
         :return: The capacity of this V1HostDisk.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._capacity
 
@@ -79,7 +79,7 @@ class V1HostDisk(object):
         Capacity of the sparse disk
 
         :param capacity: The capacity of this V1HostDisk.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._capacity = capacity

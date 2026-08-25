@@ -31,8 +31,8 @@ class V1beta1PersistentVolumeClaim(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'metadata': 'K8sIoApimachineryPkgApisMetaV1ObjectMeta',
-        'spec': 'K8sIoApiCoreV1PersistentVolumeClaimSpec'
+        'metadata': 'IoK8sApimachineryPkgApisMetaV1ObjectMeta',
+        'spec': 'IoK8sApiCoreV1PersistentVolumeClaimSpec'
     }
 
     attribute_map = {
@@ -60,7 +60,7 @@ class V1beta1PersistentVolumeClaim(object):
         Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
         :return: The metadata of this V1beta1PersistentVolumeClaim.
-        :rtype: K8sIoApimachineryPkgApisMetaV1ObjectMeta
+        :rtype: IoK8sApimachineryPkgApisMetaV1ObjectMeta
         """
         return self._metadata
 
@@ -71,7 +71,7 @@ class V1beta1PersistentVolumeClaim(object):
         Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
         :param metadata: The metadata of this V1beta1PersistentVolumeClaim.
-        :type: K8sIoApimachineryPkgApisMetaV1ObjectMeta
+        :type: IoK8sApimachineryPkgApisMetaV1ObjectMeta
         """
 
         self._metadata = metadata
@@ -83,7 +83,7 @@ class V1beta1PersistentVolumeClaim(object):
         Spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
         :return: The spec of this V1beta1PersistentVolumeClaim.
-        :rtype: K8sIoApiCoreV1PersistentVolumeClaimSpec
+        :rtype: IoK8sApiCoreV1PersistentVolumeClaimSpec
         """
         return self._spec
 
@@ -94,7 +94,7 @@ class V1beta1PersistentVolumeClaim(object):
         Spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
         :param spec: The spec of this V1beta1PersistentVolumeClaim.
-        :type: K8sIoApiCoreV1PersistentVolumeClaimSpec
+        :type: IoK8sApiCoreV1PersistentVolumeClaimSpec
         """
 
         self._spec = spec

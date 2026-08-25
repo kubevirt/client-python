@@ -31,7 +31,7 @@ class V1ReservedOverhead(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'added_overhead': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'added_overhead': 'IoK8sApimachineryPkgApiResourceQuantity',
         'mem_lock': 'str'
     }
 
@@ -60,7 +60,7 @@ class V1ReservedOverhead(object):
         AddedOverhead determines the memory overhead that will be reserved for the VM. It increases the virt-launcher pod memory limit.
 
         :return: The added_overhead of this V1ReservedOverhead.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._added_overhead
 
@@ -71,7 +71,7 @@ class V1ReservedOverhead(object):
         AddedOverhead determines the memory overhead that will be reserved for the VM. It increases the virt-launcher pod memory limit.
 
         :param added_overhead: The added_overhead of this V1ReservedOverhead.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._added_overhead = added_overhead

@@ -31,10 +31,10 @@ class V1StallDetectorOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'completion_timeout_factor': 'K8sIoApimachineryPkgApiResourceQuantity',
-        'ewma_alpha': 'K8sIoApimachineryPkgApiResourceQuantity',
-        'patience_window_decay_factor': 'K8sIoApimachineryPkgApiResourceQuantity',
-        'precopy_possible_factor': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'completion_timeout_factor': 'IoK8sApimachineryPkgApiResourceQuantity',
+        'ewma_alpha': 'IoK8sApimachineryPkgApiResourceQuantity',
+        'patience_window_decay_factor': 'IoK8sApimachineryPkgApiResourceQuantity',
+        'precopy_possible_factor': 'IoK8sApimachineryPkgApiResourceQuantity',
         'search_local_minima': 'bool',
         'stall_margin': 'int',
         'stall_progress_timeout': 'int',
@@ -90,7 +90,7 @@ class V1StallDetectorOptions(object):
         CompletionTimeoutFactor multiplies the computed migration completion timeout to determine the total time budget for deciding whether a forced switchover can still finish in time, and to extend the abort deadline after initiating a completion-timeout-driven switchover. Defaults to 2.
 
         :return: The completion_timeout_factor of this V1StallDetectorOptions.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._completion_timeout_factor
 
@@ -101,7 +101,7 @@ class V1StallDetectorOptions(object):
         CompletionTimeoutFactor multiplies the computed migration completion timeout to determine the total time budget for deciding whether a forced switchover can still finish in time, and to extend the abort deadline after initiating a completion-timeout-driven switchover. Defaults to 2.
 
         :param completion_timeout_factor: The completion_timeout_factor of this V1StallDetectorOptions.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._completion_timeout_factor = completion_timeout_factor
@@ -113,7 +113,7 @@ class V1StallDetectorOptions(object):
         EwmaAlpha is the smoothing factor for the exponentially weighted moving average of observed migration bandwidth. Must be in the range (0, 1]; zero is invalid because the estimate would never incorporate new samples. Higher values weight recent samples more heavily. Defaults to 0.4.
 
         :return: The ewma_alpha of this V1StallDetectorOptions.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._ewma_alpha
 
@@ -124,7 +124,7 @@ class V1StallDetectorOptions(object):
         EwmaAlpha is the smoothing factor for the exponentially weighted moving average of observed migration bandwidth. Must be in the range (0, 1]; zero is invalid because the estimate would never incorporate new samples. Higher values weight recent samples more heavily. Defaults to 0.4.
 
         :param ewma_alpha: The ewma_alpha of this V1StallDetectorOptions.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._ewma_alpha = ewma_alpha
@@ -136,7 +136,7 @@ class V1StallDetectorOptions(object):
         PatienceWindowDecayFactor is the factor by which the relaxation patience window is multiplied after each best-remaining-bytes relaxation step. Defaults to 0.5.
 
         :return: The patience_window_decay_factor of this V1StallDetectorOptions.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._patience_window_decay_factor
 
@@ -147,7 +147,7 @@ class V1StallDetectorOptions(object):
         PatienceWindowDecayFactor is the factor by which the relaxation patience window is multiplied after each best-remaining-bytes relaxation step. Defaults to 0.5.
 
         :param patience_window_decay_factor: The patience_window_decay_factor of this V1StallDetectorOptions.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._patience_window_decay_factor = patience_window_decay_factor
@@ -159,7 +159,7 @@ class V1StallDetectorOptions(object):
         PrecopyPossibleFactor is the maximum factor by which estimated downtime may exceed MaxDowntime while still attempting a soft stop-and-copy instead of aborting the migration. Defaults to 1.5.
 
         :return: The precopy_possible_factor of this V1StallDetectorOptions.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._precopy_possible_factor
 
@@ -170,7 +170,7 @@ class V1StallDetectorOptions(object):
         PrecopyPossibleFactor is the maximum factor by which estimated downtime may exceed MaxDowntime while still attempting a soft stop-and-copy instead of aborting the migration. Defaults to 1.5.
 
         :param precopy_possible_factor: The precopy_possible_factor of this V1StallDetectorOptions.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._precopy_possible_factor = precopy_possible_factor

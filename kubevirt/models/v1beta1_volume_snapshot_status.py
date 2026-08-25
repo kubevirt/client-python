@@ -31,7 +31,7 @@ class V1beta1VolumeSnapshotStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'creation_time': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'creation_time': 'IoK8sApimachineryPkgApisMetaV1Time',
         'error': 'V1beta1Error',
         'ready_to_use': 'bool',
         'volume_snapshot_name': 'str'
@@ -68,7 +68,7 @@ class V1beta1VolumeSnapshotStatus(object):
         Gets the creation_time of this V1beta1VolumeSnapshotStatus.
 
         :return: The creation_time of this V1beta1VolumeSnapshotStatus.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._creation_time
 
@@ -78,7 +78,7 @@ class V1beta1VolumeSnapshotStatus(object):
         Sets the creation_time of this V1beta1VolumeSnapshotStatus.
 
         :param creation_time: The creation_time of this V1beta1VolumeSnapshotStatus.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._creation_time = creation_time

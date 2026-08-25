@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **conditions** | [**list[V1beta1Condition]**](V1beta1Condition.md) |  | [optional] 
-**creation_time** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) |  | [optional] 
+**creation_time** | [**IoK8sApimachineryPkgApisMetaV1Time**](IoK8sApimachineryPkgApisMetaV1Time.md) |  | [optional] 
 **error** | [**V1beta1Error**](V1beta1Error.md) |  | [optional] 
 **indications** | **list[str]** | Deprecated: Use SourceIndications instead. This field will be removed in a future version. | [optional] 
 **phase** | **str** |  | [optional] 

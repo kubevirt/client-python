@@ -32,7 +32,7 @@ class V1beta1VirtualMachineCloneStatus(object):
     """
     swagger_types = {
         'conditions': 'list[V1beta1Condition]',
-        'creation_time': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'creation_time': 'IoK8sApimachineryPkgApisMetaV1Time',
         'phase': 'str',
         'restore_name': 'str',
         'snapshot_name': 'str',
@@ -100,7 +100,7 @@ class V1beta1VirtualMachineCloneStatus(object):
         Gets the creation_time of this V1beta1VirtualMachineCloneStatus.
 
         :return: The creation_time of this V1beta1VirtualMachineCloneStatus.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._creation_time
 
@@ -110,7 +110,7 @@ class V1beta1VirtualMachineCloneStatus(object):
         Sets the creation_time of this V1beta1VirtualMachineCloneStatus.
 
         :param creation_time: The creation_time of this V1beta1VirtualMachineCloneStatus.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._creation_time = creation_time

@@ -33,7 +33,7 @@ class V1VirtualMachineStartFailure(object):
     swagger_types = {
         'consecutive_fail_count': 'int',
         'last_failed_vmiuid': 'str',
-        'retry_after_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time'
+        'retry_after_timestamp': 'IoK8sApimachineryPkgApisMetaV1Time'
     }
 
     attribute_map = {
@@ -106,7 +106,7 @@ class V1VirtualMachineStartFailure(object):
         Gets the retry_after_timestamp of this V1VirtualMachineStartFailure.
 
         :return: The retry_after_timestamp of this V1VirtualMachineStartFailure.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._retry_after_timestamp
 
@@ -116,7 +116,7 @@ class V1VirtualMachineStartFailure(object):
         Sets the retry_after_timestamp of this V1VirtualMachineStartFailure.
 
         :param retry_after_timestamp: The retry_after_timestamp of this V1VirtualMachineStartFailure.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._retry_after_timestamp = retry_after_timestamp

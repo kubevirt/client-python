@@ -32,7 +32,7 @@ class V1alpha1VirtualMachineBackupStatus(object):
     """
     swagger_types = {
         'checkpoint_name': 'str',
-        'conditions': 'list[K8sIoApimachineryPkgApisMetaV1Condition]',
+        'conditions': 'list[IoK8sApimachineryPkgApisMetaV1Condition]',
         'endpoint_cert': 'str',
         'export_uid': 'str',
         'included_volumes': 'list[V1alpha1BackupVolumeInfo]',
@@ -102,7 +102,7 @@ class V1alpha1VirtualMachineBackupStatus(object):
         Gets the conditions of this V1alpha1VirtualMachineBackupStatus.
 
         :return: The conditions of this V1alpha1VirtualMachineBackupStatus.
-        :rtype: list[K8sIoApimachineryPkgApisMetaV1Condition]
+        :rtype: list[IoK8sApimachineryPkgApisMetaV1Condition]
         """
         return self._conditions
 
@@ -112,7 +112,7 @@ class V1alpha1VirtualMachineBackupStatus(object):
         Sets the conditions of this V1alpha1VirtualMachineBackupStatus.
 
         :param conditions: The conditions of this V1alpha1VirtualMachineBackupStatus.
-        :type: list[K8sIoApimachineryPkgApisMetaV1Condition]
+        :type: list[IoK8sApimachineryPkgApisMetaV1Condition]
         """
 
         self._conditions = conditions

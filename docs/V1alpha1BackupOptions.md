@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **backup_cert** | **str** |  | [optional] 
 **backup_key** | **str** |  | [optional] 
 **backup_name** | **str** |  | [optional] 
-**backup_start_time** | [**K8sIoApimachineryPkgApisMetaV1Time**](K8sIoApimachineryPkgApisMetaV1Time.md) |  | [optional] 
+**backup_start_time** | [**IoK8sApimachineryPkgApisMetaV1Time**](IoK8sApimachineryPkgApisMetaV1Time.md) |  | [optional] 
 **ca_cert** | **str** |  | [optional] 
 **cmd** | **str** |  | [optional] 
 **export_server_addr** | **str** |  | [optional] 

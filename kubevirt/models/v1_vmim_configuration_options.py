@@ -34,7 +34,7 @@ class V1VMIMConfigurationOptions(object):
         'allow_auto_converge': 'bool',
         'allow_post_copy': 'bool',
         'allow_workload_disruption': 'bool',
-        'bandwidth_per_migration': 'K8sIoApimachineryPkgApiResourceQuantity',
+        'bandwidth_per_migration': 'IoK8sApimachineryPkgApiResourceQuantity',
         'completion_timeout_per_gi_b': 'int',
         'disable_tls': 'bool',
         'experimental': 'V1ExperimentalMigrationOptions',
@@ -199,7 +199,7 @@ class V1VMIMConfigurationOptions(object):
         BandwidthPerMigration limits the amount of network bandwidth live migrations are allowed to use. The value is in quantity per second. Defaults to 0 (no limit)
 
         :return: The bandwidth_per_migration of this V1VMIMConfigurationOptions.
-        :rtype: K8sIoApimachineryPkgApiResourceQuantity
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
         """
         return self._bandwidth_per_migration
 
@@ -210,7 +210,7 @@ class V1VMIMConfigurationOptions(object):
         BandwidthPerMigration limits the amount of network bandwidth live migrations are allowed to use. The value is in quantity per second. Defaults to 0 (no limit)
 
         :param bandwidth_per_migration: The bandwidth_per_migration of this V1VMIMConfigurationOptions.
-        :type: K8sIoApimachineryPkgApiResourceQuantity
+        :type: IoK8sApimachineryPkgApiResourceQuantity
         """
 
         self._bandwidth_per_migration = bandwidth_per_migration

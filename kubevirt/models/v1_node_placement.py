@@ -31,9 +31,9 @@ class V1NodePlacement(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'affinity': 'K8sIoApiCoreV1Affinity',
+        'affinity': 'IoK8sApiCoreV1Affinity',
         'node_selector': 'dict(str, str)',
-        'tolerations': 'list[K8sIoApiCoreV1Toleration]'
+        'tolerations': 'list[IoK8sApiCoreV1Toleration]'
     }
 
     attribute_map = {
@@ -65,7 +65,7 @@ class V1NodePlacement(object):
         affinity enables pod affinity/anti-affinity placement expanding the types of constraints that can be expressed with nodeSelector. affinity is going to be applied to the relevant kind of pods in parallel with nodeSelector See https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity
 
         :return: The affinity of this V1NodePlacement.
-        :rtype: K8sIoApiCoreV1Affinity
+        :rtype: IoK8sApiCoreV1Affinity
         """
         return self._affinity
 
@@ -76,7 +76,7 @@ class V1NodePlacement(object):
         affinity enables pod affinity/anti-affinity placement expanding the types of constraints that can be expressed with nodeSelector. affinity is going to be applied to the relevant kind of pods in parallel with nodeSelector See https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity
 
         :param affinity: The affinity of this V1NodePlacement.
-        :type: K8sIoApiCoreV1Affinity
+        :type: IoK8sApiCoreV1Affinity
         """
 
         self._affinity = affinity
@@ -111,7 +111,7 @@ class V1NodePlacement(object):
         tolerations is a list of tolerations applied to the relevant kind of pods See https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/ for more info. These are additional tolerations other than default ones.
 
         :return: The tolerations of this V1NodePlacement.
-        :rtype: list[K8sIoApiCoreV1Toleration]
+        :rtype: list[IoK8sApiCoreV1Toleration]
         """
         return self._tolerations
 
@@ -122,7 +122,7 @@ class V1NodePlacement(object):
         tolerations is a list of tolerations applied to the relevant kind of pods See https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/ for more info. These are additional tolerations other than default ones.
 
         :param tolerations: The tolerations of this V1NodePlacement.
-        :type: list[K8sIoApiCoreV1Toleration]
+        :type: list[IoK8sApiCoreV1Toleration]
         """
 
         self._tolerations = tolerations

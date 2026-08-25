@@ -35,10 +35,10 @@ class V1VirtualMachineInstanceBackupStatus(object):
         'backup_name': 'str',
         'checkpoint_name': 'str',
         'completed': 'bool',
-        'end_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'end_timestamp': 'IoK8sApimachineryPkgApisMetaV1Time',
         'failed': 'bool',
         'quiesce_status': 'str',
-        'start_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'start_timestamp': 'IoK8sApimachineryPkgApisMetaV1Time',
         'volumes': 'list[V1VirtualMachineInstanceBackupVolumeInfo]'
     }
 
@@ -187,7 +187,7 @@ class V1VirtualMachineInstanceBackupStatus(object):
         EndTimestamp is the timestamp when the backup ended
 
         :return: The end_timestamp of this V1VirtualMachineInstanceBackupStatus.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._end_timestamp
 
@@ -198,7 +198,7 @@ class V1VirtualMachineInstanceBackupStatus(object):
         EndTimestamp is the timestamp when the backup ended
 
         :param end_timestamp: The end_timestamp of this V1VirtualMachineInstanceBackupStatus.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._end_timestamp = end_timestamp
@@ -256,7 +256,7 @@ class V1VirtualMachineInstanceBackupStatus(object):
         StartTimestamp is the timestamp when the backup started
 
         :return: The start_timestamp of this V1VirtualMachineInstanceBackupStatus.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._start_timestamp
 
@@ -267,7 +267,7 @@ class V1VirtualMachineInstanceBackupStatus(object):
         StartTimestamp is the timestamp when the backup started
 
         :param start_timestamp: The start_timestamp of this V1VirtualMachineInstanceBackupStatus.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._start_timestamp = start_timestamp

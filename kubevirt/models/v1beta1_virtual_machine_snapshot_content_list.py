@@ -34,7 +34,7 @@ class V1beta1VirtualMachineSnapshotContentList(object):
         'api_version': 'str',
         'items': 'list[V1beta1VirtualMachineSnapshotContent]',
         'kind': 'str',
-        'metadata': 'K8sIoApimachineryPkgApisMetaV1ListMeta'
+        'metadata': 'IoK8sApimachineryPkgApisMetaV1ListMeta'
     }
 
     attribute_map = {
@@ -136,7 +136,7 @@ class V1beta1VirtualMachineSnapshotContentList(object):
         Gets the metadata of this V1beta1VirtualMachineSnapshotContentList.
 
         :return: The metadata of this V1beta1VirtualMachineSnapshotContentList.
-        :rtype: K8sIoApimachineryPkgApisMetaV1ListMeta
+        :rtype: IoK8sApimachineryPkgApisMetaV1ListMeta
         """
         return self._metadata
 
@@ -146,7 +146,7 @@ class V1beta1VirtualMachineSnapshotContentList(object):
         Sets the metadata of this V1beta1VirtualMachineSnapshotContentList.
 
         :param metadata: The metadata of this V1beta1VirtualMachineSnapshotContentList.
-        :type: K8sIoApimachineryPkgApisMetaV1ListMeta
+        :type: IoK8sApimachineryPkgApisMetaV1ListMeta
         """
         if metadata is None:
             raise ValueError("Invalid value for `metadata`, must not be `None`")

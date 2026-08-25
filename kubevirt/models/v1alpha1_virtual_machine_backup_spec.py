@@ -35,9 +35,9 @@ class V1alpha1VirtualMachineBackupSpec(object):
         'mode': 'str',
         'pvc_name': 'str',
         'skip_quiesce': 'bool',
-        'source': 'K8sIoApiCoreV1TypedLocalObjectReference',
+        'source': 'IoK8sApiCoreV1TypedLocalObjectReference',
         'token_secret_ref': 'str',
-        'ttl_duration': 'K8sIoApimachineryPkgApisMetaV1Duration'
+        'ttl_duration': 'IoK8sApimachineryPkgApisMetaV1Duration'
     }
 
     attribute_map = {
@@ -176,7 +176,7 @@ class V1alpha1VirtualMachineBackupSpec(object):
         Source specifies the backup source - either a VirtualMachine or a VirtualMachineBackupTracker. When Kind is VirtualMachine: performs a backup of the specified VM. When Kind is VirtualMachineBackupTracker: uses the tracker to get the source VM and the base checkpoint for incremental backup. The tracker will be updated with the new checkpoint after backup completion.
 
         :return: The source of this V1alpha1VirtualMachineBackupSpec.
-        :rtype: K8sIoApiCoreV1TypedLocalObjectReference
+        :rtype: IoK8sApiCoreV1TypedLocalObjectReference
         """
         return self._source
 
@@ -187,7 +187,7 @@ class V1alpha1VirtualMachineBackupSpec(object):
         Source specifies the backup source - either a VirtualMachine or a VirtualMachineBackupTracker. When Kind is VirtualMachine: performs a backup of the specified VM. When Kind is VirtualMachineBackupTracker: uses the tracker to get the source VM and the base checkpoint for incremental backup. The tracker will be updated with the new checkpoint after backup completion.
 
         :param source: The source of this V1alpha1VirtualMachineBackupSpec.
-        :type: K8sIoApiCoreV1TypedLocalObjectReference
+        :type: IoK8sApiCoreV1TypedLocalObjectReference
         """
         if source is None:
             raise ValueError("Invalid value for `source`, must not be `None`")
@@ -224,7 +224,7 @@ class V1alpha1VirtualMachineBackupSpec(object):
         TtlDuration limits the lifetime of a pull mode backup and its export If this field is set, after this duration has passed from counting from CreationTimestamp, the backup is eligible to be automatically considered as complete. If this field is omitted, a reasonable default is applied.
 
         :return: The ttl_duration of this V1alpha1VirtualMachineBackupSpec.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
+        :rtype: IoK8sApimachineryPkgApisMetaV1Duration
         """
         return self._ttl_duration
 
@@ -235,7 +235,7 @@ class V1alpha1VirtualMachineBackupSpec(object):
         TtlDuration limits the lifetime of a pull mode backup and its export If this field is set, after this duration has passed from counting from CreationTimestamp, the backup is eligible to be automatically considered as complete. If this field is omitted, a reasonable default is applied.
 
         :param ttl_duration: The ttl_duration of this V1alpha1VirtualMachineBackupSpec.
-        :type: K8sIoApimachineryPkgApisMetaV1Duration
+        :type: IoK8sApimachineryPkgApisMetaV1Duration
         """
 
         self._ttl_duration = ttl_duration

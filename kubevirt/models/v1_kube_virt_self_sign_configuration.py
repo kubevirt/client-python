@@ -32,9 +32,9 @@ class V1KubeVirtSelfSignConfiguration(object):
     """
     swagger_types = {
         'ca': 'V1CertConfig',
-        'ca_overlap_interval': 'K8sIoApimachineryPkgApisMetaV1Duration',
-        'ca_rotate_interval': 'K8sIoApimachineryPkgApisMetaV1Duration',
-        'cert_rotate_interval': 'K8sIoApimachineryPkgApisMetaV1Duration',
+        'ca_overlap_interval': 'IoK8sApimachineryPkgApisMetaV1Duration',
+        'ca_rotate_interval': 'IoK8sApimachineryPkgApisMetaV1Duration',
+        'cert_rotate_interval': 'IoK8sApimachineryPkgApisMetaV1Duration',
         'server': 'V1CertConfig'
     }
 
@@ -98,7 +98,7 @@ class V1KubeVirtSelfSignConfiguration(object):
         Deprecated. Use CA.Duration and CA.RenewBefore instead
 
         :return: The ca_overlap_interval of this V1KubeVirtSelfSignConfiguration.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
+        :rtype: IoK8sApimachineryPkgApisMetaV1Duration
         """
         return self._ca_overlap_interval
 
@@ -109,7 +109,7 @@ class V1KubeVirtSelfSignConfiguration(object):
         Deprecated. Use CA.Duration and CA.RenewBefore instead
 
         :param ca_overlap_interval: The ca_overlap_interval of this V1KubeVirtSelfSignConfiguration.
-        :type: K8sIoApimachineryPkgApisMetaV1Duration
+        :type: IoK8sApimachineryPkgApisMetaV1Duration
         """
 
         self._ca_overlap_interval = ca_overlap_interval
@@ -121,7 +121,7 @@ class V1KubeVirtSelfSignConfiguration(object):
         Deprecated. Use CA.Duration instead
 
         :return: The ca_rotate_interval of this V1KubeVirtSelfSignConfiguration.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
+        :rtype: IoK8sApimachineryPkgApisMetaV1Duration
         """
         return self._ca_rotate_interval
 
@@ -132,7 +132,7 @@ class V1KubeVirtSelfSignConfiguration(object):
         Deprecated. Use CA.Duration instead
 
         :param ca_rotate_interval: The ca_rotate_interval of this V1KubeVirtSelfSignConfiguration.
-        :type: K8sIoApimachineryPkgApisMetaV1Duration
+        :type: IoK8sApimachineryPkgApisMetaV1Duration
         """
 
         self._ca_rotate_interval = ca_rotate_interval
@@ -144,7 +144,7 @@ class V1KubeVirtSelfSignConfiguration(object):
         Deprecated. Use Server.Duration instead
 
         :return: The cert_rotate_interval of this V1KubeVirtSelfSignConfiguration.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
+        :rtype: IoK8sApimachineryPkgApisMetaV1Duration
         """
         return self._cert_rotate_interval
 
@@ -155,7 +155,7 @@ class V1KubeVirtSelfSignConfiguration(object):
         Deprecated. Use Server.Duration instead
 
         :param cert_rotate_interval: The cert_rotate_interval of this V1KubeVirtSelfSignConfiguration.
-        :type: K8sIoApimachineryPkgApisMetaV1Duration
+        :type: IoK8sApimachineryPkgApisMetaV1Duration
         """
 
         self._cert_rotate_interval = cert_rotate_interval

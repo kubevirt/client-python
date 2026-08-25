@@ -31,7 +31,7 @@ class V1DownwardAPIVolumeSource(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'fields': 'list[K8sIoApiCoreV1DownwardAPIVolumeFile]',
+        'fields': 'list[IoK8sApiCoreV1DownwardAPIVolumeFile]',
         'volume_label': 'str'
     }
 
@@ -60,7 +60,7 @@ class V1DownwardAPIVolumeSource(object):
         Fields is a list of downward API volume file
 
         :return: The fields of this V1DownwardAPIVolumeSource.
-        :rtype: list[K8sIoApiCoreV1DownwardAPIVolumeFile]
+        :rtype: list[IoK8sApiCoreV1DownwardAPIVolumeFile]
         """
         return self._fields
 
@@ -71,7 +71,7 @@ class V1DownwardAPIVolumeSource(object):
         Fields is a list of downward API volume file
 
         :param fields: The fields of this V1DownwardAPIVolumeSource.
-        :type: list[K8sIoApiCoreV1DownwardAPIVolumeFile]
+        :type: list[IoK8sApiCoreV1DownwardAPIVolumeFile]
         """
 
         self._fields = fields

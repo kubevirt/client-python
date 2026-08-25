@@ -31,9 +31,9 @@ class V1ResourceRequirements(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'limits': 'dict(str, K8sIoApimachineryPkgApiResourceQuantity)',
+        'limits': 'dict(str, IoK8sApimachineryPkgApiResourceQuantity)',
         'overcommit_guest_overhead': 'bool',
-        'requests': 'dict(str, K8sIoApimachineryPkgApiResourceQuantity)'
+        'requests': 'dict(str, IoK8sApimachineryPkgApiResourceQuantity)'
     }
 
     attribute_map = {
@@ -65,7 +65,7 @@ class V1ResourceRequirements(object):
         Limits describes the maximum amount of compute resources allowed. Valid resource keys are \"memory\" and \"cpu\".
 
         :return: The limits of this V1ResourceRequirements.
-        :rtype: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
+        :rtype: dict(str, IoK8sApimachineryPkgApiResourceQuantity)
         """
         return self._limits
 
@@ -76,7 +76,7 @@ class V1ResourceRequirements(object):
         Limits describes the maximum amount of compute resources allowed. Valid resource keys are \"memory\" and \"cpu\".
 
         :param limits: The limits of this V1ResourceRequirements.
-        :type: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
+        :type: dict(str, IoK8sApimachineryPkgApiResourceQuantity)
         """
 
         self._limits = limits
@@ -111,7 +111,7 @@ class V1ResourceRequirements(object):
         Requests is a description of the initial vmi resources. Valid resource keys are \"memory\" and \"cpu\".
 
         :return: The requests of this V1ResourceRequirements.
-        :rtype: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
+        :rtype: dict(str, IoK8sApimachineryPkgApiResourceQuantity)
         """
         return self._requests
 
@@ -122,7 +122,7 @@ class V1ResourceRequirements(object):
         Requests is a description of the initial vmi resources. Valid resource keys are \"memory\" and \"cpu\".
 
         :param requests: The requests of this V1ResourceRequirements.
-        :type: dict(str, K8sIoApimachineryPkgApiResourceQuantity)
+        :type: dict(str, IoK8sApimachineryPkgApiResourceQuantity)
         """
 
         self._requests = requests

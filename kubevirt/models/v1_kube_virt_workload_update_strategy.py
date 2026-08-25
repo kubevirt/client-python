@@ -31,7 +31,7 @@ class V1KubeVirtWorkloadUpdateStrategy(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'batch_eviction_interval': 'K8sIoApimachineryPkgApisMetaV1Duration',
+        'batch_eviction_interval': 'IoK8sApimachineryPkgApisMetaV1Duration',
         'batch_eviction_size': 'int',
         'workload_update_methods': 'list[str]'
     }
@@ -65,7 +65,7 @@ class V1KubeVirtWorkloadUpdateStrategy(object):
         BatchEvictionInterval Represents the interval to wait before issuing the next batch of shutdowns  Defaults to 1 minute
 
         :return: The batch_eviction_interval of this V1KubeVirtWorkloadUpdateStrategy.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Duration
+        :rtype: IoK8sApimachineryPkgApisMetaV1Duration
         """
         return self._batch_eviction_interval
 
@@ -76,7 +76,7 @@ class V1KubeVirtWorkloadUpdateStrategy(object):
         BatchEvictionInterval Represents the interval to wait before issuing the next batch of shutdowns  Defaults to 1 minute
 
         :param batch_eviction_interval: The batch_eviction_interval of this V1KubeVirtWorkloadUpdateStrategy.
-        :type: K8sIoApimachineryPkgApisMetaV1Duration
+        :type: IoK8sApimachineryPkgApisMetaV1Duration
         """
 
         self._batch_eviction_interval = batch_eviction_interval

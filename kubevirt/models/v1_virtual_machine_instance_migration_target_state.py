@@ -37,7 +37,7 @@ class V1VirtualMachineInstanceMigrationTargetState(object):
         'domain_detected': 'bool',
         'domain_name': 'str',
         'domain_namespace': 'str',
-        'domain_ready_timestamp': 'K8sIoApimachineryPkgApisMetaV1Time',
+        'domain_ready_timestamp': 'IoK8sApimachineryPkgApisMetaV1Time',
         'migration_uid': 'str',
         'node': 'str',
         'node_address': 'str',
@@ -268,7 +268,7 @@ class V1VirtualMachineInstanceMigrationTargetState(object):
         The timestamp at which the target node detects the domain is active
 
         :return: The domain_ready_timestamp of this V1VirtualMachineInstanceMigrationTargetState.
-        :rtype: K8sIoApimachineryPkgApisMetaV1Time
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
         return self._domain_ready_timestamp
 
@@ -279,7 +279,7 @@ class V1VirtualMachineInstanceMigrationTargetState(object):
         The timestamp at which the target node detects the domain is active
 
         :param domain_ready_timestamp: The domain_ready_timestamp of this V1VirtualMachineInstanceMigrationTargetState.
-        :type: K8sIoApimachineryPkgApisMetaV1Time
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
         self._domain_ready_timestamp = domain_ready_timestamp

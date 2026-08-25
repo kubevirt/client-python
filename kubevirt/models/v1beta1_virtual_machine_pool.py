@@ -33,7 +33,7 @@ class V1beta1VirtualMachinePool(object):
     swagger_types = {
         'api_version': 'str',
         'kind': 'str',
-        'metadata': 'K8sIoApimachineryPkgApisMetaV1ObjectMeta',
+        'metadata': 'IoK8sApimachineryPkgApisMetaV1ObjectMeta',
         'spec': 'V1beta1VirtualMachinePoolSpec',
         'status': 'V1beta1VirtualMachinePoolStatus'
     }
@@ -119,7 +119,7 @@ class V1beta1VirtualMachinePool(object):
         Gets the metadata of this V1beta1VirtualMachinePool.
 
         :return: The metadata of this V1beta1VirtualMachinePool.
-        :rtype: K8sIoApimachineryPkgApisMetaV1ObjectMeta
+        :rtype: IoK8sApimachineryPkgApisMetaV1ObjectMeta
         """
         return self._metadata
 
@@ -129,7 +129,7 @@ class V1beta1VirtualMachinePool(object):
         Sets the metadata of this V1beta1VirtualMachinePool.
 
         :param metadata: The metadata of this V1beta1VirtualMachinePool.
-        :type: K8sIoApimachineryPkgApisMetaV1ObjectMeta
+        :type: IoK8sApimachineryPkgApisMetaV1ObjectMeta
         """
 
         self._metadata = metadata

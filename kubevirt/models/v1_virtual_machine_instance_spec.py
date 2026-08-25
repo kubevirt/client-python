@@ -32,9 +32,9 @@ class V1VirtualMachineInstanceSpec(object):
     """
     swagger_types = {
         'access_credentials': 'list[V1AccessCredential]',
-        'affinity': 'K8sIoApiCoreV1Affinity',
+        'affinity': 'IoK8sApiCoreV1Affinity',
         'architecture': 'str',
-        'dns_config': 'K8sIoApiCoreV1PodDNSConfig',
+        'dns_config': 'IoK8sApiCoreV1PodDNSConfig',
         'dns_policy': 'str',
         'domain': 'V1DomainSpec',
         'eviction_strategy': 'str',
@@ -50,8 +50,8 @@ class V1VirtualMachineInstanceSpec(object):
         'start_strategy': 'str',
         'subdomain': 'str',
         'termination_grace_period_seconds': 'int',
-        'tolerations': 'list[K8sIoApiCoreV1Toleration]',
-        'topology_spread_constraints': 'list[K8sIoApiCoreV1TopologySpreadConstraint]',
+        'tolerations': 'list[IoK8sApiCoreV1Toleration]',
+        'topology_spread_constraints': 'list[IoK8sApiCoreV1TopologySpreadConstraint]',
         'utility_volumes': 'list[V1UtilityVolume]',
         'volumes': 'list[V1Volume]'
     }
@@ -187,7 +187,7 @@ class V1VirtualMachineInstanceSpec(object):
         If affinity is specifies, obey all the affinity rules
 
         :return: The affinity of this V1VirtualMachineInstanceSpec.
-        :rtype: K8sIoApiCoreV1Affinity
+        :rtype: IoK8sApiCoreV1Affinity
         """
         return self._affinity
 
@@ -198,7 +198,7 @@ class V1VirtualMachineInstanceSpec(object):
         If affinity is specifies, obey all the affinity rules
 
         :param affinity: The affinity of this V1VirtualMachineInstanceSpec.
-        :type: K8sIoApiCoreV1Affinity
+        :type: IoK8sApiCoreV1Affinity
         """
 
         self._affinity = affinity
@@ -233,7 +233,7 @@ class V1VirtualMachineInstanceSpec(object):
         Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.
 
         :return: The dns_config of this V1VirtualMachineInstanceSpec.
-        :rtype: K8sIoApiCoreV1PodDNSConfig
+        :rtype: IoK8sApiCoreV1PodDNSConfig
         """
         return self._dns_config
 
@@ -244,7 +244,7 @@ class V1VirtualMachineInstanceSpec(object):
         Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.
 
         :param dns_config: The dns_config of this V1VirtualMachineInstanceSpec.
-        :type: K8sIoApiCoreV1PodDNSConfig
+        :type: IoK8sApiCoreV1PodDNSConfig
         """
 
         self._dns_config = dns_config
@@ -609,7 +609,7 @@ class V1VirtualMachineInstanceSpec(object):
         If toleration is specified, obey all the toleration rules.
 
         :return: The tolerations of this V1VirtualMachineInstanceSpec.
-        :rtype: list[K8sIoApiCoreV1Toleration]
+        :rtype: list[IoK8sApiCoreV1Toleration]
         """
         return self._tolerations
 
@@ -620,7 +620,7 @@ class V1VirtualMachineInstanceSpec(object):
         If toleration is specified, obey all the toleration rules.
 
         :param tolerations: The tolerations of this V1VirtualMachineInstanceSpec.
-        :type: list[K8sIoApiCoreV1Toleration]
+        :type: list[IoK8sApiCoreV1Toleration]
         """
 
         self._tolerations = tolerations
@@ -632,7 +632,7 @@ class V1VirtualMachineInstanceSpec(object):
         TopologySpreadConstraints describes how a group of VMIs will be spread across a given topology domains. K8s scheduler will schedule VMI pods in a way which abides by the constraints.
 
         :return: The topology_spread_constraints of this V1VirtualMachineInstanceSpec.
-        :rtype: list[K8sIoApiCoreV1TopologySpreadConstraint]
+        :rtype: list[IoK8sApiCoreV1TopologySpreadConstraint]
         """
         return self._topology_spread_constraints
 
@@ -643,7 +643,7 @@ class V1VirtualMachineInstanceSpec(object):
         TopologySpreadConstraints describes how a group of VMIs will be spread across a given topology domains. K8s scheduler will schedule VMI pods in a way which abides by the constraints.
 
         :param topology_spread_constraints: The topology_spread_constraints of this V1VirtualMachineInstanceSpec.
-        :type: list[K8sIoApiCoreV1TopologySpreadConstraint]
+        :type: list[IoK8sApiCoreV1TopologySpreadConstraint]
         """
 
         self._topology_spread_constraints = topology_spread_constraints

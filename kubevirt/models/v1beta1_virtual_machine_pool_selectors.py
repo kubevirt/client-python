@@ -31,8 +31,8 @@ class V1beta1VirtualMachinePoolSelectors(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'label_selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
-        'node_selector_requirement_matcher': 'list[K8sIoApiCoreV1NodeSelectorRequirement]'
+        'label_selector': 'IoK8sApimachineryPkgApisMetaV1LabelSelector',
+        'node_selector_requirement_matcher': 'list[IoK8sApiCoreV1NodeSelectorRequirement]'
     }
 
     attribute_map = {
@@ -60,7 +60,7 @@ class V1beta1VirtualMachinePoolSelectors(object):
         LabelSelector is a list of label selector for VMs.
 
         :return: The label_selector of this V1beta1VirtualMachinePoolSelectors.
-        :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :rtype: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
         return self._label_selector
 
@@ -71,7 +71,7 @@ class V1beta1VirtualMachinePoolSelectors(object):
         LabelSelector is a list of label selector for VMs.
 
         :param label_selector: The label_selector of this V1beta1VirtualMachinePoolSelectors.
-        :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :type: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
 
         self._label_selector = label_selector
@@ -83,7 +83,7 @@ class V1beta1VirtualMachinePoolSelectors(object):
         NodeSelectorRequirementMatcher is a list of node selector requirement for VMs.
 
         :return: The node_selector_requirement_matcher of this V1beta1VirtualMachinePoolSelectors.
-        :rtype: list[K8sIoApiCoreV1NodeSelectorRequirement]
+        :rtype: list[IoK8sApiCoreV1NodeSelectorRequirement]
         """
         return self._node_selector_requirement_matcher
 
@@ -94,7 +94,7 @@ class V1beta1VirtualMachinePoolSelectors(object):
         NodeSelectorRequirementMatcher is a list of node selector requirement for VMs.
 
         :param node_selector_requirement_matcher: The node_selector_requirement_matcher of this V1beta1VirtualMachinePoolSelectors.
-        :type: list[K8sIoApiCoreV1NodeSelectorRequirement]
+        :type: list[IoK8sApiCoreV1NodeSelectorRequirement]
         """
 
         self._node_selector_requirement_matcher = node_selector_requirement_matcher

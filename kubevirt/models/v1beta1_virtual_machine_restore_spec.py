@@ -32,7 +32,7 @@ class V1beta1VirtualMachineRestoreSpec(object):
     """
     swagger_types = {
         'patches': 'list[str]',
-        'target': 'K8sIoApiCoreV1TypedLocalObjectReference',
+        'target': 'IoK8sApiCoreV1TypedLocalObjectReference',
         'target_readiness_policy': 'str',
         'virtual_machine_snapshot_name': 'str',
         'volume_ownership_policy': 'str',
@@ -106,7 +106,7 @@ class V1beta1VirtualMachineRestoreSpec(object):
         initially only VirtualMachine type supported
 
         :return: The target of this V1beta1VirtualMachineRestoreSpec.
-        :rtype: K8sIoApiCoreV1TypedLocalObjectReference
+        :rtype: IoK8sApiCoreV1TypedLocalObjectReference
         """
         return self._target
 
@@ -117,7 +117,7 @@ class V1beta1VirtualMachineRestoreSpec(object):
         initially only VirtualMachine type supported
 
         :param target: The target of this V1beta1VirtualMachineRestoreSpec.
-        :type: K8sIoApiCoreV1TypedLocalObjectReference
+        :type: IoK8sApiCoreV1TypedLocalObjectReference
         """
         if target is None:
             raise ValueError("Invalid value for `target`, must not be `None`")

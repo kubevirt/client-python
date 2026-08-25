@@ -31,8 +31,8 @@ class V1ChangedBlockTrackingSelectors(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'namespace_label_selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector',
-        'virtual_machine_label_selector': 'K8sIoApimachineryPkgApisMetaV1LabelSelector'
+        'namespace_label_selector': 'IoK8sApimachineryPkgApisMetaV1LabelSelector',
+        'virtual_machine_label_selector': 'IoK8sApimachineryPkgApisMetaV1LabelSelector'
     }
 
     attribute_map = {
@@ -60,7 +60,7 @@ class V1ChangedBlockTrackingSelectors(object):
         NamespaceSelector will enable changedBlockTracking on all VMs running inside namespaces that match the label selector.
 
         :return: The namespace_label_selector of this V1ChangedBlockTrackingSelectors.
-        :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :rtype: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
         return self._namespace_label_selector
 
@@ -71,7 +71,7 @@ class V1ChangedBlockTrackingSelectors(object):
         NamespaceSelector will enable changedBlockTracking on all VMs running inside namespaces that match the label selector.
 
         :param namespace_label_selector: The namespace_label_selector of this V1ChangedBlockTrackingSelectors.
-        :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :type: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
 
         self._namespace_label_selector = namespace_label_selector
@@ -83,7 +83,7 @@ class V1ChangedBlockTrackingSelectors(object):
         VirtualMachineSelector will enable changedBlockTracking on all VMs that match the label selector.
 
         :return: The virtual_machine_label_selector of this V1ChangedBlockTrackingSelectors.
-        :rtype: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :rtype: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
         return self._virtual_machine_label_selector
 
@@ -94,7 +94,7 @@ class V1ChangedBlockTrackingSelectors(object):
         VirtualMachineSelector will enable changedBlockTracking on all VMs that match the label selector.
 
         :param virtual_machine_label_selector: The virtual_machine_label_selector of this V1ChangedBlockTrackingSelectors.
-        :type: K8sIoApimachineryPkgApisMetaV1LabelSelector
+        :type: IoK8sApimachineryPkgApisMetaV1LabelSelector
         """
 
         self._virtual_machine_label_selector = virtual_machine_label_selector

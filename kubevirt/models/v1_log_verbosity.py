@@ -82,7 +82,7 @@ class V1LogVerbosity(object):
     def node_verbosity(self):
         """
         Gets the node_verbosity of this V1LogVerbosity.
-        NodeVerbosity represents a map of nodes with a specific verbosity level
+        NodeVerbosity represents a map of node names to specific log verbosity levels. Allows overriding verbosity on specific nodes without altering cluster-wide settings. Changes take effect on the fly without triggering a pod restart.
 
         :return: The node_verbosity of this V1LogVerbosity.
         :rtype: dict(str, int)
@@ -93,7 +93,7 @@ class V1LogVerbosity(object):
     def node_verbosity(self, node_verbosity):
         """
         Sets the node_verbosity of this V1LogVerbosity.
-        NodeVerbosity represents a map of nodes with a specific verbosity level
+        NodeVerbosity represents a map of node names to specific log verbosity levels. Allows overriding verbosity on specific nodes without altering cluster-wide settings. Changes take effect on the fly without triggering a pod restart.
 
         :param node_verbosity: The node_verbosity of this V1LogVerbosity.
         :type: dict(str, int)
@@ -105,6 +105,7 @@ class V1LogVerbosity(object):
     def virt_api(self):
         """
         Gets the virt_api of this V1LogVerbosity.
+        VirtAPI specifies the log verbosity level for the virt-api deployment. A higher value increases the amount of logged information. Changes take effect on the fly without triggering a pod restart. Default: 2. Levels up to 9 produce progressively more detailed logs.
 
         :return: The virt_api of this V1LogVerbosity.
         :rtype: int
@@ -115,6 +116,7 @@ class V1LogVerbosity(object):
     def virt_api(self, virt_api):
         """
         Sets the virt_api of this V1LogVerbosity.
+        VirtAPI specifies the log verbosity level for the virt-api deployment. A higher value increases the amount of logged information. Changes take effect on the fly without triggering a pod restart. Default: 2. Levels up to 9 produce progressively more detailed logs.
 
         :param virt_api: The virt_api of this V1LogVerbosity.
         :type: int
@@ -126,6 +128,7 @@ class V1LogVerbosity(object):
     def virt_controller(self):
         """
         Gets the virt_controller of this V1LogVerbosity.
+        VirtController specifies the log verbosity level for the virt-controller deployment. A higher value increases the amount of logged information. Changes take effect on the fly without triggering a pod restart. Default: 2. Levels up to 9 produce progressively more detailed logs.
 
         :return: The virt_controller of this V1LogVerbosity.
         :rtype: int
@@ -136,6 +139,7 @@ class V1LogVerbosity(object):
     def virt_controller(self, virt_controller):
         """
         Sets the virt_controller of this V1LogVerbosity.
+        VirtController specifies the log verbosity level for the virt-controller deployment. A higher value increases the amount of logged information. Changes take effect on the fly without triggering a pod restart. Default: 2. Levels up to 9 produce progressively more detailed logs.
 
         :param virt_controller: The virt_controller of this V1LogVerbosity.
         :type: int
@@ -147,6 +151,7 @@ class V1LogVerbosity(object):
     def virt_handler(self):
         """
         Gets the virt_handler of this V1LogVerbosity.
+        VirtHandler specifies the log verbosity level for the virt-handler DaemonSet. A higher value increases the amount of logged information. Changes take effect on the fly without triggering a pod restart. Default: 2. Levels up to 9 produce progressively more detailed logs.
 
         :return: The virt_handler of this V1LogVerbosity.
         :rtype: int
@@ -157,6 +162,7 @@ class V1LogVerbosity(object):
     def virt_handler(self, virt_handler):
         """
         Sets the virt_handler of this V1LogVerbosity.
+        VirtHandler specifies the log verbosity level for the virt-handler DaemonSet. A higher value increases the amount of logged information. Changes take effect on the fly without triggering a pod restart. Default: 2. Levels up to 9 produce progressively more detailed logs.
 
         :param virt_handler: The virt_handler of this V1LogVerbosity.
         :type: int
@@ -168,6 +174,7 @@ class V1LogVerbosity(object):
     def virt_launcher(self):
         """
         Gets the virt_launcher of this V1LogVerbosity.
+        VirtLauncher specifies the log verbosity level for virt-launcher pods managing VMI workloads. A higher value increases the amount of logged information. Changes apply to newly created virt-launcher pods. Existing pods retain their original verbosity. Default: 2. Levels up to 9 produce progressively more detailed logs.
 
         :return: The virt_launcher of this V1LogVerbosity.
         :rtype: int
@@ -178,6 +185,7 @@ class V1LogVerbosity(object):
     def virt_launcher(self, virt_launcher):
         """
         Sets the virt_launcher of this V1LogVerbosity.
+        VirtLauncher specifies the log verbosity level for virt-launcher pods managing VMI workloads. A higher value increases the amount of logged information. Changes apply to newly created virt-launcher pods. Existing pods retain their original verbosity. Default: 2. Levels up to 9 produce progressively more detailed logs.
 
         :param virt_launcher: The virt_launcher of this V1LogVerbosity.
         :type: int
@@ -189,6 +197,7 @@ class V1LogVerbosity(object):
     def virt_operator(self):
         """
         Gets the virt_operator of this V1LogVerbosity.
+        VirtOperator specifies the log verbosity level for the virt-operator deployment. A higher value increases the amount of logged information. Changes take effect on the fly without triggering a pod restart. Default: 2. Levels up to 9 produce progressively more detailed logs.
 
         :return: The virt_operator of this V1LogVerbosity.
         :rtype: int
@@ -199,6 +208,7 @@ class V1LogVerbosity(object):
     def virt_operator(self, virt_operator):
         """
         Sets the virt_operator of this V1LogVerbosity.
+        VirtOperator specifies the log verbosity level for the virt-operator deployment. A higher value increases the amount of logged information. Changes take effect on the fly without triggering a pod restart. Default: 2. Levels up to 9 produce progressively more detailed logs.
 
         :param virt_operator: The virt_operator of this V1LogVerbosity.
         :type: int
@@ -210,6 +220,7 @@ class V1LogVerbosity(object):
     def virt_synchronization_controller(self):
         """
         Gets the virt_synchronization_controller of this V1LogVerbosity.
+        VirtSynchronizationController specifies the log verbosity level for the virt-synchronization-controller component. A higher value increases the amount of logged information. Changes take effect on the fly without triggering a pod restart. Default: 2. Levels up to 9 produce progressively more detailed logs.
 
         :return: The virt_synchronization_controller of this V1LogVerbosity.
         :rtype: int
@@ -220,6 +231,7 @@ class V1LogVerbosity(object):
     def virt_synchronization_controller(self, virt_synchronization_controller):
         """
         Sets the virt_synchronization_controller of this V1LogVerbosity.
+        VirtSynchronizationController specifies the log verbosity level for the virt-synchronization-controller component. A higher value increases the amount of logged information. Changes take effect on the fly without triggering a pod restart. Default: 2. Levels up to 9 produce progressively more detailed logs.
 
         :param virt_synchronization_controller: The virt_synchronization_controller of this V1LogVerbosity.
         :type: int

@@ -36,6 +36,8 @@ class V1MigrationConfiguration(object):
         'allow_workload_disruption': 'bool',
         'bandwidth_per_migration': 'IoK8sApimachineryPkgApiResourceQuantity',
         'completion_timeout_per_gi_b': 'int',
+        'cross_cluster_network': 'str',
+        'decentralized_live_migration_datapath': 'str',
         'disable_tls': 'bool',
         'match_se_linux_level_on_migration': 'bool',
         'max_downtime_ms': 'int',
@@ -54,6 +56,8 @@ class V1MigrationConfiguration(object):
         'allow_workload_disruption': 'allowWorkloadDisruption',
         'bandwidth_per_migration': 'bandwidthPerMigration',
         'completion_timeout_per_gi_b': 'completionTimeoutPerGiB',
+        'cross_cluster_network': 'crossClusterNetwork',
+        'decentralized_live_migration_datapath': 'decentralizedLiveMigrationDatapath',
         'disable_tls': 'disableTLS',
         'match_se_linux_level_on_migration': 'matchSELinuxLevelOnMigration',
         'max_downtime_ms': 'maxDowntimeMs',
@@ -66,7 +70,7 @@ class V1MigrationConfiguration(object):
         'utility_volumes_timeout': 'utilityVolumesTimeout'
     }
 
-    def __init__(self, allow_auto_converge=None, allow_post_copy=None, allow_workload_disruption=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, disable_tls=None, match_se_linux_level_on_migration=None, max_downtime_ms=None, network=None, node_drain_taint_key=None, parallel_migrations_per_cluster=None, parallel_outbound_migrations_per_node=None, progress_timeout=None, unsafe_migration_override=None, utility_volumes_timeout=None):
+    def __init__(self, allow_auto_converge=None, allow_post_copy=None, allow_workload_disruption=None, bandwidth_per_migration=None, completion_timeout_per_gi_b=None, cross_cluster_network=None, decentralized_live_migration_datapath=None, disable_tls=None, match_se_linux_level_on_migration=None, max_downtime_ms=None, network=None, node_drain_taint_key=None, parallel_migrations_per_cluster=None, parallel_outbound_migrations_per_node=None, progress_timeout=None, unsafe_migration_override=None, utility_volumes_timeout=None):
         """
         V1MigrationConfiguration - a model defined in Swagger
         """
@@ -76,6 +80,8 @@ class V1MigrationConfiguration(object):
         self._allow_workload_disruption = None
         self._bandwidth_per_migration = None
         self._completion_timeout_per_gi_b = None
+        self._cross_cluster_network = None
+        self._decentralized_live_migration_datapath = None
         self._disable_tls = None
         self._match_se_linux_level_on_migration = None
         self._max_downtime_ms = None
@@ -97,6 +103,10 @@ class V1MigrationConfiguration(object):
           self.bandwidth_per_migration = bandwidth_per_migration
         if completion_timeout_per_gi_b is not None:
           self.completion_timeout_per_gi_b = completion_timeout_per_gi_b
+        if cross_cluster_network is not None:
+          self.cross_cluster_network = cross_cluster_network
+        if decentralized_live_migration_datapath is not None:
+          self.decentralized_live_migration_datapath = decentralized_live_migration_datapath
         if disable_tls is not None:
           self.disable_tls = disable_tls
         if match_se_linux_level_on_migration is not None:
@@ -234,6 +244,52 @@ class V1MigrationConfiguration(object):
         self._completion_timeout_per_gi_b = completion_timeout_per_gi_b
 
     @property
+    def cross_cluster_network(self):
+        """
+        Gets the cross_cluster_network of this V1MigrationConfiguration.
+        CrossClusterNetwork is the name of the CNI network used for synchronization-controller peer traffic when decentralizedLiveMigrationDatapath is Proxy. When set, sync controllers attach to this network as crosscluster0 and bind the sync gRPC port only there. When omitted with Proxy, peer traffic uses the pod network. Must not be set when decentralizedLiveMigrationDatapath is Direct (or unset).
+
+        :return: The cross_cluster_network of this V1MigrationConfiguration.
+        :rtype: str
+        """
+        return self._cross_cluster_network
+
+    @cross_cluster_network.setter
+    def cross_cluster_network(self, cross_cluster_network):
+        """
+        Sets the cross_cluster_network of this V1MigrationConfiguration.
+        CrossClusterNetwork is the name of the CNI network used for synchronization-controller peer traffic when decentralizedLiveMigrationDatapath is Proxy. When set, sync controllers attach to this network as crosscluster0 and bind the sync gRPC port only there. When omitted with Proxy, peer traffic uses the pod network. Must not be set when decentralizedLiveMigrationDatapath is Direct (or unset).
+
+        :param cross_cluster_network: The cross_cluster_network of this V1MigrationConfiguration.
+        :type: str
+        """
+
+        self._cross_cluster_network = cross_cluster_network
+
+    @property
+    def decentralized_live_migration_datapath(self):
+        """
+        Gets the decentralized_live_migration_datapath of this V1MigrationConfiguration.
+        DecentralizedLiveMigrationDatapath selects how live-migration traffic moves for decentralized live migrations (cross-namespace or cross-cluster). Direct (default when unset): no synchronization-controller migration-data proxy. Proxy: sync controllers proxy migration traffic on a single gRPC port. Requires the CrossClusterMigrationProxy feature gate while Alpha.
+
+        :return: The decentralized_live_migration_datapath of this V1MigrationConfiguration.
+        :rtype: str
+        """
+        return self._decentralized_live_migration_datapath
+
+    @decentralized_live_migration_datapath.setter
+    def decentralized_live_migration_datapath(self, decentralized_live_migration_datapath):
+        """
+        Sets the decentralized_live_migration_datapath of this V1MigrationConfiguration.
+        DecentralizedLiveMigrationDatapath selects how live-migration traffic moves for decentralized live migrations (cross-namespace or cross-cluster). Direct (default when unset): no synchronization-controller migration-data proxy. Proxy: sync controllers proxy migration traffic on a single gRPC port. Requires the CrossClusterMigrationProxy feature gate while Alpha.
+
+        :param decentralized_live_migration_datapath: The decentralized_live_migration_datapath of this V1MigrationConfiguration.
+        :type: str
+        """
+
+        self._decentralized_live_migration_datapath = decentralized_live_migration_datapath
+
+    @property
     def disable_tls(self):
         """
         Gets the disable_tls of this V1MigrationConfiguration.
@@ -306,7 +362,7 @@ class V1MigrationConfiguration(object):
     def network(self):
         """
         Gets the network of this V1MigrationConfiguration.
-        Network is the name of the CNI network to use for live migrations. By default, migrations go through the pod network.
+        Network is the name of the CNI network to use for live migrations. By default, migrations go through the pod network. When decentralizedLiveMigrationDatapath is Proxy, this network is also used for virt-handler ↔ synchronization-controller migration listeners (omit = pod IP). If set with Proxy, synchronization controllers require the migration0 interface at startup and will fail to start if it is missing.
 
         :return: The network of this V1MigrationConfiguration.
         :rtype: str
@@ -317,7 +373,7 @@ class V1MigrationConfiguration(object):
     def network(self, network):
         """
         Sets the network of this V1MigrationConfiguration.
-        Network is the name of the CNI network to use for live migrations. By default, migrations go through the pod network.
+        Network is the name of the CNI network to use for live migrations. By default, migrations go through the pod network. When decentralizedLiveMigrationDatapath is Proxy, this network is also used for virt-handler ↔ synchronization-controller migration listeners (omit = pod IP). If set with Proxy, synchronization controllers require the migration0 interface at startup and will fail to start if it is missing.
 
         :param network: The network of this V1MigrationConfiguration.
         :type: str

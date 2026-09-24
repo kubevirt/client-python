@@ -45,6 +45,7 @@ class V1KubeVirtSpec(object):
         'product_name': 'str',
         'product_version': 'str',
         'service_monitor_namespace': 'str',
+        'synchronization_placement': 'V1ComponentConfig',
         'synchronization_port': 'str',
         'uninstall_strategy': 'str',
         'workload_update_strategy': 'V1KubeVirtWorkloadUpdateStrategy',
@@ -66,13 +67,14 @@ class V1KubeVirtSpec(object):
         'product_name': 'productName',
         'product_version': 'productVersion',
         'service_monitor_namespace': 'serviceMonitorNamespace',
+        'synchronization_placement': 'synchronizationPlacement',
         'synchronization_port': 'synchronizationPort',
         'uninstall_strategy': 'uninstallStrategy',
         'workload_update_strategy': 'workloadUpdateStrategy',
         'workloads': 'workloads'
     }
 
-    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_pull_secrets=None, image_registry=None, image_tag=None, infra=None, monitor_account=None, monitor_namespace=None, product_component=None, product_name=None, product_version=None, service_monitor_namespace=None, synchronization_port=None, uninstall_strategy=None, workload_update_strategy=None, workloads=None):
+    def __init__(self, certificate_rotate_strategy=None, configuration=None, customize_components=None, image_pull_policy=None, image_pull_secrets=None, image_registry=None, image_tag=None, infra=None, monitor_account=None, monitor_namespace=None, product_component=None, product_name=None, product_version=None, service_monitor_namespace=None, synchronization_placement=None, synchronization_port=None, uninstall_strategy=None, workload_update_strategy=None, workloads=None):
         """
         V1KubeVirtSpec - a model defined in Swagger
         """
@@ -91,6 +93,7 @@ class V1KubeVirtSpec(object):
         self._product_name = None
         self._product_version = None
         self._service_monitor_namespace = None
+        self._synchronization_placement = None
         self._synchronization_port = None
         self._uninstall_strategy = None
         self._workload_update_strategy = None
@@ -124,6 +127,8 @@ class V1KubeVirtSpec(object):
           self.product_version = product_version
         if service_monitor_namespace is not None:
           self.service_monitor_namespace = service_monitor_namespace
+        if synchronization_placement is not None:
+          self.synchronization_placement = synchronization_placement
         if synchronization_port is not None:
           self.synchronization_port = synchronization_port
         if uninstall_strategy is not None:
@@ -456,6 +461,29 @@ class V1KubeVirtSpec(object):
         """
 
         self._service_monitor_namespace = service_monitor_namespace
+
+    @property
+    def synchronization_placement(self):
+        """
+        Gets the synchronization_placement of this V1KubeVirtSpec.
+        SynchronizationPlacement allows customization of node placement for synchronization controllers. This can be used to schedule sync controllers on specific nodes (e.g., nodes with access to the cross-cluster migration network). By default, sync controllers use control-plane placement.
+
+        :return: The synchronization_placement of this V1KubeVirtSpec.
+        :rtype: V1ComponentConfig
+        """
+        return self._synchronization_placement
+
+    @synchronization_placement.setter
+    def synchronization_placement(self, synchronization_placement):
+        """
+        Sets the synchronization_placement of this V1KubeVirtSpec.
+        SynchronizationPlacement allows customization of node placement for synchronization controllers. This can be used to schedule sync controllers on specific nodes (e.g., nodes with access to the cross-cluster migration network). By default, sync controllers use control-plane placement.
+
+        :param synchronization_placement: The synchronization_placement of this V1KubeVirtSpec.
+        :type: V1ComponentConfig
+        """
+
+        self._synchronization_placement = synchronization_placement
 
     @property
     def synchronization_port(self):

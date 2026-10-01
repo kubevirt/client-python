@@ -347,8 +347,11 @@ from .v1_volume_status import V1VolumeStatus
 from .v1_volume_update_state import V1VolumeUpdateState
 from .v1_watchdog import V1Watchdog
 from .v1alpha1_backup_checkpoint import V1alpha1BackupCheckpoint
+from .v1alpha1_backup_link import V1alpha1BackupLink
+from .v1alpha1_backup_links import V1alpha1BackupLinks
 from .v1alpha1_backup_options import V1alpha1BackupOptions
 from .v1alpha1_backup_volume_info import V1alpha1BackupVolumeInfo
+from .v1alpha1_backup_volume_link import V1alpha1BackupVolumeLink
 from .v1alpha1_migration_policy import V1alpha1MigrationPolicy
 from .v1alpha1_migration_policy_list import V1alpha1MigrationPolicyList
 from .v1alpha1_migration_policy_spec import V1alpha1MigrationPolicySpec

@@ -33,43 +33,43 @@ class V1alpha1VirtualMachineBackupStatus(object):
     swagger_types = {
         'checkpoint_name': 'str',
         'conditions': 'list[IoK8sApimachineryPkgApisMetaV1Condition]',
-        'endpoint_cert': 'str',
         'export_uid': 'str',
         'included_volumes': 'list[V1alpha1BackupVolumeInfo]',
+        'links': 'V1alpha1BackupLinks',
         'type': 'str'
     }
 
     attribute_map = {
         'checkpoint_name': 'checkpointName',
         'conditions': 'conditions',
-        'endpoint_cert': 'endpointCert',
         'export_uid': 'exportUID',
         'included_volumes': 'includedVolumes',
+        'links': 'links',
         'type': 'type'
     }
 
-    def __init__(self, checkpoint_name=None, conditions=None, endpoint_cert=None, export_uid=None, included_volumes=None, type=None):
+    def __init__(self, checkpoint_name=None, conditions=None, export_uid=None, included_volumes=None, links=None, type=None):
         """
         V1alpha1VirtualMachineBackupStatus - a model defined in Swagger
         """
 
         self._checkpoint_name = None
         self._conditions = None
-        self._endpoint_cert = None
         self._export_uid = None
         self._included_volumes = None
+        self._links = None
         self._type = None
 
         if checkpoint_name is not None:
           self.checkpoint_name = checkpoint_name
         if conditions is not None:
           self.conditions = conditions
-        if endpoint_cert is not None:
-          self.endpoint_cert = endpoint_cert
         if export_uid is not None:
           self.export_uid = export_uid
         if included_volumes is not None:
           self.included_volumes = included_volumes
+        if links is not None:
+          self.links = links
         if type is not None:
           self.type = type
 
@@ -118,29 +118,6 @@ class V1alpha1VirtualMachineBackupStatus(object):
         self._conditions = conditions
 
     @property
-    def endpoint_cert(self):
-        """
-        Gets the endpoint_cert of this V1alpha1VirtualMachineBackupStatus.
-        EndpointCert is the raw CACert that is to be used when connecting to an exported backup endpoint in pull mode.
-
-        :return: The endpoint_cert of this V1alpha1VirtualMachineBackupStatus.
-        :rtype: str
-        """
-        return self._endpoint_cert
-
-    @endpoint_cert.setter
-    def endpoint_cert(self, endpoint_cert):
-        """
-        Sets the endpoint_cert of this V1alpha1VirtualMachineBackupStatus.
-        EndpointCert is the raw CACert that is to be used when connecting to an exported backup endpoint in pull mode.
-
-        :param endpoint_cert: The endpoint_cert of this V1alpha1VirtualMachineBackupStatus.
-        :type: str
-        """
-
-        self._endpoint_cert = endpoint_cert
-
-    @property
     def export_uid(self):
         """
         Gets the export_uid of this V1alpha1VirtualMachineBackupStatus.
@@ -185,6 +162,29 @@ class V1alpha1VirtualMachineBackupStatus(object):
         """
 
         self._included_volumes = included_volumes
+
+    @property
+    def links(self):
+        """
+        Gets the links of this V1alpha1VirtualMachineBackupStatus.
+        Links exposes internal (in-cluster) and external (Ingress/Route) endpoints for pull-mode backups, each with a CA certificate and per-volume URLs. Contains per-volume data and map endpoint URLs for each network path.
+
+        :return: The links of this V1alpha1VirtualMachineBackupStatus.
+        :rtype: V1alpha1BackupLinks
+        """
+        return self._links
+
+    @links.setter
+    def links(self, links):
+        """
+        Sets the links of this V1alpha1VirtualMachineBackupStatus.
+        Links exposes internal (in-cluster) and external (Ingress/Route) endpoints for pull-mode backups, each with a CA certificate and per-volume URLs. Contains per-volume data and map endpoint URLs for each network path.
+
+        :param links: The links of this V1alpha1VirtualMachineBackupStatus.
+        :type: V1alpha1BackupLinks
+        """
+
+        self._links = links
 
     @property
     def type(self):

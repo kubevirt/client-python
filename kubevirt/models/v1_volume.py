@@ -200,7 +200,7 @@ class V1Volume(object):
     def container_disk(self):
         """
         Gets the container_disk of this V1Volume.
-        ContainerDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html
+        ContainerDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.io/user-guide/storage/disks_and_volumes/#containerdisk
 
         :return: The container_disk of this V1Volume.
         :rtype: V1ContainerDiskSource
@@ -211,7 +211,7 @@ class V1Volume(object):
     def container_disk(self, container_disk):
         """
         Sets the container_disk of this V1Volume.
-        ContainerDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.gitbooks.io/user-guide/registry-disk.html
+        ContainerDisk references a docker image, embedding a qcow or raw disk. More info: https://kubevirt.io/user-guide/storage/disks_and_volumes/#containerdisk
 
         :param container_disk: The container_disk of this V1Volume.
         :type: V1ContainerDiskSource
@@ -315,7 +315,7 @@ class V1Volume(object):
     def empty_disk(self):
         """
         Gets the empty_disk of this V1Volume.
-        EmptyDisk represents a temporary disk which shares the vmis lifecycle. More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html
+        EmptyDisk represents a temporary disk which shares the vmis lifecycle. More info: https://kubevirt.io/user-guide/storage/disks_and_volumes/#emptydisk
 
         :return: The empty_disk of this V1Volume.
         :rtype: V1EmptyDiskSource
@@ -326,7 +326,7 @@ class V1Volume(object):
     def empty_disk(self, empty_disk):
         """
         Sets the empty_disk of this V1Volume.
-        EmptyDisk represents a temporary disk which shares the vmis lifecycle. More info: https://kubevirt.gitbooks.io/user-guide/disks-and-volumes.html
+        EmptyDisk represents a temporary disk which shares the vmis lifecycle. More info: https://kubevirt.io/user-guide/storage/disks_and_volumes/#emptydisk
 
         :param empty_disk: The empty_disk of this V1Volume.
         :type: V1EmptyDiskSource

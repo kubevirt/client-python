@@ -33,7 +33,6 @@ class V1alpha1VirtualMachineBackupStatus(object):
     swagger_types = {
         'checkpoint_name': 'str',
         'conditions': 'list[IoK8sApimachineryPkgApisMetaV1Condition]',
-        'export_uid': 'str',
         'included_volumes': 'list[V1alpha1BackupVolumeInfo]',
         'links': 'V1alpha1BackupLinks',
         'type': 'str'
@@ -42,20 +41,18 @@ class V1alpha1VirtualMachineBackupStatus(object):
     attribute_map = {
         'checkpoint_name': 'checkpointName',
         'conditions': 'conditions',
-        'export_uid': 'exportUID',
         'included_volumes': 'includedVolumes',
         'links': 'links',
         'type': 'type'
     }
 
-    def __init__(self, checkpoint_name=None, conditions=None, export_uid=None, included_volumes=None, links=None, type=None):
+    def __init__(self, checkpoint_name=None, conditions=None, included_volumes=None, links=None, type=None):
         """
         V1alpha1VirtualMachineBackupStatus - a model defined in Swagger
         """
 
         self._checkpoint_name = None
         self._conditions = None
-        self._export_uid = None
         self._included_volumes = None
         self._links = None
         self._type = None
@@ -64,8 +61,6 @@ class V1alpha1VirtualMachineBackupStatus(object):
           self.checkpoint_name = checkpoint_name
         if conditions is not None:
           self.conditions = conditions
-        if export_uid is not None:
-          self.export_uid = export_uid
         if included_volumes is not None:
           self.included_volumes = included_volumes
         if links is not None:
@@ -116,29 +111,6 @@ class V1alpha1VirtualMachineBackupStatus(object):
         """
 
         self._conditions = conditions
-
-    @property
-    def export_uid(self):
-        """
-        Gets the export_uid of this V1alpha1VirtualMachineBackupStatus.
-        ExportUID tracks the UID of the associated VMExport for pull-mode backups used to detect VMExport recreation and re-initiate the export handshake
-
-        :return: The export_uid of this V1alpha1VirtualMachineBackupStatus.
-        :rtype: str
-        """
-        return self._export_uid
-
-    @export_uid.setter
-    def export_uid(self, export_uid):
-        """
-        Sets the export_uid of this V1alpha1VirtualMachineBackupStatus.
-        ExportUID tracks the UID of the associated VMExport for pull-mode backups used to detect VMExport recreation and re-initiate the export handshake
-
-        :param export_uid: The export_uid of this V1alpha1VirtualMachineBackupStatus.
-        :type: str
-        """
-
-        self._export_uid = export_uid
 
     @property
     def included_volumes(self):

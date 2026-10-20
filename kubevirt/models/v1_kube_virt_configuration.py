@@ -44,6 +44,7 @@ class V1KubeVirtConfiguration(object):
         'default_runtime_class': 'str',
         'developer_configuration': 'V1DeveloperConfiguration',
         'emulated_machines': 'list[str]',
+        'emulation_policy': 'str',
         'eviction_strategy': 'str',
         'handler_configuration': 'V1ReloadableComponentConfiguration',
         'hypervisors': 'list[V1HypervisorConfiguration]',
@@ -90,6 +91,7 @@ class V1KubeVirtConfiguration(object):
         'default_runtime_class': 'defaultRuntimeClass',
         'developer_configuration': 'developerConfiguration',
         'emulated_machines': 'emulatedMachines',
+        'emulation_policy': 'emulationPolicy',
         'eviction_strategy': 'evictionStrategy',
         'handler_configuration': 'handlerConfiguration',
         'hypervisors': 'hypervisors',
@@ -122,7 +124,7 @@ class V1KubeVirtConfiguration(object):
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, changed_block_tracking_label_selectors=None, common_instancetypes_deployment=None, confidential_compute=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, eviction_strategy=None, handler_configuration=None, hypervisors=None, image_pull_policy=None, instancetype=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, persistent_reservation_configuration=None, role_aggregation_strategy=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virt_template_deployment=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
+    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, changed_block_tracking_label_selectors=None, common_instancetypes_deployment=None, confidential_compute=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, emulation_policy=None, eviction_strategy=None, handler_configuration=None, hypervisors=None, image_pull_policy=None, instancetype=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, persistent_reservation_configuration=None, role_aggregation_strategy=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virt_template_deployment=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -140,6 +142,7 @@ class V1KubeVirtConfiguration(object):
         self._default_runtime_class = None
         self._developer_configuration = None
         self._emulated_machines = None
+        self._emulation_policy = None
         self._eviction_strategy = None
         self._handler_configuration = None
         self._hypervisors = None
@@ -197,6 +200,8 @@ class V1KubeVirtConfiguration(object):
           self.developer_configuration = developer_configuration
         if emulated_machines is not None:
           self.emulated_machines = emulated_machines
+        if emulation_policy is not None:
+          self.emulation_policy = emulation_policy
         if eviction_strategy is not None:
           self.eviction_strategy = eviction_strategy
         if handler_configuration is not None:
@@ -542,6 +547,29 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._emulated_machines = emulated_machines
+
+    @property
+    def emulation_policy(self):
+        """
+        Gets the emulation_policy of this V1KubeVirtConfiguration.
+        EmulationPolicy is the default emulation policy for VMs that do not set spec.emulationPolicy. A VM may set a more permissive policy.  Valid Options from least to most permissive are: - None: Only native-kvm - Hardware: Not yet implemented - Software: Qemu TCG cross-architecture emulation Default policy is 'None'  This is an alpha field and should only be configured if the feature-gate CrossArchitectureVirtualization is enabled. This feature is in alpha.
+
+        :return: The emulation_policy of this V1KubeVirtConfiguration.
+        :rtype: str
+        """
+        return self._emulation_policy
+
+    @emulation_policy.setter
+    def emulation_policy(self, emulation_policy):
+        """
+        Sets the emulation_policy of this V1KubeVirtConfiguration.
+        EmulationPolicy is the default emulation policy for VMs that do not set spec.emulationPolicy. A VM may set a more permissive policy.  Valid Options from least to most permissive are: - None: Only native-kvm - Hardware: Not yet implemented - Software: Qemu TCG cross-architecture emulation Default policy is 'None'  This is an alpha field and should only be configured if the feature-gate CrossArchitectureVirtualization is enabled. This feature is in alpha.
+
+        :param emulation_policy: The emulation_policy of this V1KubeVirtConfiguration.
+        :type: str
+        """
+
+        self._emulation_policy = emulation_policy
 
     @property
     def eviction_strategy(self):

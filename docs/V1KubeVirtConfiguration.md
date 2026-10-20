@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **default_runtime_class** | **str** |  | [optional] 
 **developer_configuration** | [**V1DeveloperConfiguration**](V1DeveloperConfiguration.md) |  | [optional] 
 **emulated_machines** | **list[str]** | Deprecated. Use architectureConfiguration instead. | [optional] 
+**emulation_policy** | **str** | EmulationPolicy is the default emulation policy for VMs that do not set spec.emulationPolicy. A VM may set a more permissive policy.  Valid Options from least to most permissive are: - None: Only native-kvm - Hardware: Not yet implemented - Software: Qemu TCG cross-architecture emulation Default policy is &#39;None&#39;  This is an alpha field and should only be configured if the feature-gate CrossArchitectureVirtualization is enabled. This feature is in alpha. | [optional] 
 **eviction_strategy** | **str** | EvictionStrategy defines at the cluster level if the VirtualMachineInstance should be migrated instead of shut-off in case of a node drain. If the VirtualMachineInstance specific field is set it overrides the cluster level one. | [optional] 
 **handler_configuration** | [**V1ReloadableComponentConfiguration**](V1ReloadableComponentConfiguration.md) |  | [optional] 
 **hypervisors** | [**list[V1HypervisorConfiguration]**](V1HypervisorConfiguration.md) | Hypervisors holds information regarding the hypervisor configurations supported on this cluster. | [optional] 

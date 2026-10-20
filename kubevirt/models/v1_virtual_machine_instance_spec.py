@@ -37,6 +37,7 @@ class V1VirtualMachineInstanceSpec(object):
         'dns_config': 'IoK8sApiCoreV1PodDNSConfig',
         'dns_policy': 'str',
         'domain': 'V1DomainSpec',
+        'emulation_policy': 'str',
         'eviction_strategy': 'str',
         'hostname': 'str',
         'liveness_probe': 'V1Probe',
@@ -63,6 +64,7 @@ class V1VirtualMachineInstanceSpec(object):
         'dns_config': 'dnsConfig',
         'dns_policy': 'dnsPolicy',
         'domain': 'domain',
+        'emulation_policy': 'emulationPolicy',
         'eviction_strategy': 'evictionStrategy',
         'hostname': 'hostname',
         'liveness_probe': 'livenessProbe',
@@ -82,7 +84,7 @@ class V1VirtualMachineInstanceSpec(object):
         'volumes': 'volumes'
     }
 
-    def __init__(self, access_credentials=None, affinity=None, architecture=None, dns_config=None, dns_policy=None, domain=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, resource_claims=None, scheduler_name=None, service_account_name=None, start_strategy=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, topology_spread_constraints=None, utility_volumes=None, volumes=None):
+    def __init__(self, access_credentials=None, affinity=None, architecture=None, dns_config=None, dns_policy=None, domain=None, emulation_policy=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, resource_claims=None, scheduler_name=None, service_account_name=None, start_strategy=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, topology_spread_constraints=None, utility_volumes=None, volumes=None):
         """
         V1VirtualMachineInstanceSpec - a model defined in Swagger
         """
@@ -93,6 +95,7 @@ class V1VirtualMachineInstanceSpec(object):
         self._dns_config = None
         self._dns_policy = None
         self._domain = None
+        self._emulation_policy = None
         self._eviction_strategy = None
         self._hostname = None
         self._liveness_probe = None
@@ -122,6 +125,8 @@ class V1VirtualMachineInstanceSpec(object):
         if dns_policy is not None:
           self.dns_policy = dns_policy
         self.domain = domain
+        if emulation_policy is not None:
+          self.emulation_policy = emulation_policy
         if eviction_strategy is not None:
           self.eviction_strategy = eviction_strategy
         if hostname is not None:
@@ -302,6 +307,29 @@ class V1VirtualMachineInstanceSpec(object):
             raise ValueError("Invalid value for `domain`, must not be `None`")
 
         self._domain = domain
+
+    @property
+    def emulation_policy(self):
+        """
+        Gets the emulation_policy of this V1VirtualMachineInstanceSpec.
+        The most permissive emulation backend this VM may use. Takes precedence over spec.configuration.emulationPolicy in the KubeVirt CR.  Valid Options from least to most permissive are: - None: Only native-kvm - Hardware: Not yet implemented - Software: Qemu TCG cross-architecture emulation Default policy is 'None'  This is an alpha field and should only be configured if the feature-gate CrossArchitectureVirtualization is enabled. This feature is in alpha.
+
+        :return: The emulation_policy of this V1VirtualMachineInstanceSpec.
+        :rtype: str
+        """
+        return self._emulation_policy
+
+    @emulation_policy.setter
+    def emulation_policy(self, emulation_policy):
+        """
+        Sets the emulation_policy of this V1VirtualMachineInstanceSpec.
+        The most permissive emulation backend this VM may use. Takes precedence over spec.configuration.emulationPolicy in the KubeVirt CR.  Valid Options from least to most permissive are: - None: Only native-kvm - Hardware: Not yet implemented - Software: Qemu TCG cross-architecture emulation Default policy is 'None'  This is an alpha field and should only be configured if the feature-gate CrossArchitectureVirtualization is enabled. This feature is in alpha.
+
+        :param emulation_policy: The emulation_policy of this V1VirtualMachineInstanceSpec.
+        :type: str
+        """
+
+        self._emulation_policy = emulation_policy
 
     @property
     def eviction_strategy(self):

@@ -32,29 +32,24 @@ class V1TLSConfiguration(object):
     """
     swagger_types = {
         'ciphers': 'list[str]',
-        'groups': 'list[str]',
         'min_tls_version': 'str'
     }
 
     attribute_map = {
         'ciphers': 'ciphers',
-        'groups': 'groups',
         'min_tls_version': 'minTLSVersion'
     }
 
-    def __init__(self, ciphers=None, groups=None, min_tls_version=None):
+    def __init__(self, ciphers=None, min_tls_version=None):
         """
         V1TLSConfiguration - a model defined in Swagger
         """
 
         self._ciphers = None
-        self._groups = None
         self._min_tls_version = None
 
         if ciphers is not None:
           self.ciphers = ciphers
-        if groups is not None:
-          self.groups = groups
         if min_tls_version is not None:
           self.min_tls_version = min_tls_version
 
@@ -78,29 +73,6 @@ class V1TLSConfiguration(object):
         """
 
         self._ciphers = ciphers
-
-    @property
-    def groups(self):
-        """
-        Gets the groups of this V1TLSConfiguration.
-        Groups defines the set of allowed TLS supported groups (elliptic curves) on all TLS server endpoints. Group names follow the IANA TLS Supported Groups registry (e.g. X25519, secp256r1, X25519MLKEM768). Unrecognised names are silently ignored at TLS setup time, so an older component tolerates group names added in a newer release. When empty or when the TLSGroupPreferences feature gate is disabled, Go's default curve preferences apply. MaxItems bounds the CEL cost estimate for the exists() validation rule on TLSConfiguration; without it the CRD is rejected at creation time.
-
-        :return: The groups of this V1TLSConfiguration.
-        :rtype: list[str]
-        """
-        return self._groups
-
-    @groups.setter
-    def groups(self, groups):
-        """
-        Sets the groups of this V1TLSConfiguration.
-        Groups defines the set of allowed TLS supported groups (elliptic curves) on all TLS server endpoints. Group names follow the IANA TLS Supported Groups registry (e.g. X25519, secp256r1, X25519MLKEM768). Unrecognised names are silently ignored at TLS setup time, so an older component tolerates group names added in a newer release. When empty or when the TLSGroupPreferences feature gate is disabled, Go's default curve preferences apply. MaxItems bounds the CEL cost estimate for the exists() validation rule on TLSConfiguration; without it the CRD is rejected at creation time.
-
-        :param groups: The groups of this V1TLSConfiguration.
-        :type: list[str]
-        """
-
-        self._groups = groups
 
     @property
     def min_tls_version(self):

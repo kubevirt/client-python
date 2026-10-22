@@ -54,6 +54,7 @@ class V1VirtualMachineInstanceSpec(object):
         'tolerations': 'list[IoK8sApiCoreV1Toleration]',
         'topology_spread_constraints': 'list[IoK8sApiCoreV1TopologySpreadConstraint]',
         'utility_volumes': 'list[V1UtilityVolume]',
+        'virtual_machine_state': 'V1VirtualMachineStateSpec',
         'volumes': 'list[V1Volume]'
     }
 
@@ -81,10 +82,11 @@ class V1VirtualMachineInstanceSpec(object):
         'tolerations': 'tolerations',
         'topology_spread_constraints': 'topologySpreadConstraints',
         'utility_volumes': 'utilityVolumes',
+        'virtual_machine_state': 'virtualMachineState',
         'volumes': 'volumes'
     }
 
-    def __init__(self, access_credentials=None, affinity=None, architecture=None, dns_config=None, dns_policy=None, domain=None, emulation_policy=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, resource_claims=None, scheduler_name=None, service_account_name=None, start_strategy=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, topology_spread_constraints=None, utility_volumes=None, volumes=None):
+    def __init__(self, access_credentials=None, affinity=None, architecture=None, dns_config=None, dns_policy=None, domain=None, emulation_policy=None, eviction_strategy=None, hostname=None, liveness_probe=None, networks=None, node_selector=None, priority_class_name=None, readiness_probe=None, resource_claims=None, scheduler_name=None, service_account_name=None, start_strategy=None, subdomain=None, termination_grace_period_seconds=None, tolerations=None, topology_spread_constraints=None, utility_volumes=None, virtual_machine_state=None, volumes=None):
         """
         V1VirtualMachineInstanceSpec - a model defined in Swagger
         """
@@ -112,6 +114,7 @@ class V1VirtualMachineInstanceSpec(object):
         self._tolerations = None
         self._topology_spread_constraints = None
         self._utility_volumes = None
+        self._virtual_machine_state = None
         self._volumes = None
 
         if access_credentials is not None:
@@ -159,6 +162,8 @@ class V1VirtualMachineInstanceSpec(object):
           self.topology_spread_constraints = topology_spread_constraints
         if utility_volumes is not None:
           self.utility_volumes = utility_volumes
+        if virtual_machine_state is not None:
+          self.virtual_machine_state = virtual_machine_state
         if volumes is not None:
           self.volumes = volumes
 
@@ -698,6 +703,29 @@ class V1VirtualMachineInstanceSpec(object):
         """
 
         self._utility_volumes = utility_volumes
+
+    @property
+    def virtual_machine_state(self):
+        """
+        Gets the virtual_machine_state of this V1VirtualMachineInstanceSpec.
+        VirtualMachineState references or templates the PVC that backs the VirtualMachineState (persistent UEFI, TPM and CBT state). When set, it takes precedence over the implicit VirtualMachineState PVC creation that happens when persistent TPM/EFI or CBT is enabled, and any enabled TPM or EFI feature is treated as persistent unless explicitly opted out via Persistent: false.
+
+        :return: The virtual_machine_state of this V1VirtualMachineInstanceSpec.
+        :rtype: V1VirtualMachineStateSpec
+        """
+        return self._virtual_machine_state
+
+    @virtual_machine_state.setter
+    def virtual_machine_state(self, virtual_machine_state):
+        """
+        Sets the virtual_machine_state of this V1VirtualMachineInstanceSpec.
+        VirtualMachineState references or templates the PVC that backs the VirtualMachineState (persistent UEFI, TPM and CBT state). When set, it takes precedence over the implicit VirtualMachineState PVC creation that happens when persistent TPM/EFI or CBT is enabled, and any enabled TPM or EFI feature is treated as persistent unless explicitly opted out via Persistent: false.
+
+        :param virtual_machine_state: The virtual_machine_state of this V1VirtualMachineInstanceSpec.
+        :type: V1VirtualMachineStateSpec
+        """
+
+        self._virtual_machine_state = virtual_machine_state
 
     @property
     def volumes(self):

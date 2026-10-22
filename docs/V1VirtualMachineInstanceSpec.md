@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **tolerations** | [**list[IoK8sApiCoreV1Toleration]**](IoK8sApiCoreV1Toleration.md) | If toleration is specified, obey all the toleration rules. | [optional] 
 **topology_spread_constraints** | [**list[IoK8sApiCoreV1TopologySpreadConstraint]**](IoK8sApiCoreV1TopologySpreadConstraint.md) | TopologySpreadConstraints describes how a group of VMIs will be spread across a given topology domains. K8s scheduler will schedule VMI pods in a way which abides by the constraints. | [optional] 
 **utility_volumes** | [**list[V1UtilityVolume]**](V1UtilityVolume.md) | List of utility volumes that can be mounted to the vmi virt-launcher pod without having a matching disk in the domain. Used to collect data for various operational workflows. | [optional] 
+**virtual_machine_state** | [**V1VirtualMachineStateSpec**](V1VirtualMachineStateSpec.md) | VirtualMachineState references or templates the PVC that backs the VirtualMachineState (persistent UEFI, TPM and CBT state). When set, it takes precedence over the implicit VirtualMachineState PVC creation that happens when persistent TPM/EFI or CBT is enabled, and any enabled TPM or EFI feature is treated as persistent unless explicitly opted out via Persistent: false. | [optional] 
 **volumes** | [**list[V1Volume]**](V1Volume.md) | List of volumes that can be mounted by disks belonging to the vmi. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

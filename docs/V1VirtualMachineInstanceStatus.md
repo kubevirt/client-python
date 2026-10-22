@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **selinux_context** | **str** | SELinuxContext is the actual SELinux context of the virt-launcher pod | [optional] 
 **topology_hints** | [**V1TopologyHints**](V1TopologyHints.md) |  | [optional] 
 **virtual_machine_revision_name** | **str** | VirtualMachineRevisionName is used to get the vm revision of the vmi when doing an online vm snapshot | [optional] 
+**virtual_machine_state_volume** | [**V1VolumeStatus**](V1VolumeStatus.md) | VirtualMachineStateVolume tracks the live VirtualMachineState PVC (persistent UEFI, TPM and CBT state). It is the source of truth for the PVC name, which may differ from the referenced source after a migration. It is populated for both the declarative and the implicit paths. | [optional] 
 **volume_status** | [**list[V1VolumeStatus]**](V1VolumeStatus.md) | VolumeStatus contains the statuses of all the volumes | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

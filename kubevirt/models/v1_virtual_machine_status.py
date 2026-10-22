@@ -46,6 +46,7 @@ class V1VirtualMachineStatus(object):
         'snapshot_in_progress': 'str',
         'start_failure': 'V1VirtualMachineStartFailure',
         'state_change_requests': 'list[V1VirtualMachineStateChangeRequest]',
+        'virtual_machine_state_volume': 'V1VolumeStatus',
         'volume_requests': 'list[V1VirtualMachineVolumeRequest]',
         'volume_snapshot_statuses': 'list[V1VolumeSnapshotStatus]',
         'volume_update_state': 'V1VolumeUpdateState'
@@ -67,12 +68,13 @@ class V1VirtualMachineStatus(object):
         'snapshot_in_progress': 'snapshotInProgress',
         'start_failure': 'startFailure',
         'state_change_requests': 'stateChangeRequests',
+        'virtual_machine_state_volume': 'virtualMachineStateVolume',
         'volume_requests': 'volumeRequests',
         'volume_snapshot_statuses': 'volumeSnapshotStatuses',
         'volume_update_state': 'volumeUpdateState'
     }
 
-    def __init__(self, changed_block_tracking=None, conditions=None, created=None, desired_generation=None, instancetype_ref=None, memory_dump_request=None, observed_generation=None, preference_ref=None, printable_status=None, ready=None, restore_in_progress=None, run_strategy=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, volume_requests=None, volume_snapshot_statuses=None, volume_update_state=None):
+    def __init__(self, changed_block_tracking=None, conditions=None, created=None, desired_generation=None, instancetype_ref=None, memory_dump_request=None, observed_generation=None, preference_ref=None, printable_status=None, ready=None, restore_in_progress=None, run_strategy=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, virtual_machine_state_volume=None, volume_requests=None, volume_snapshot_statuses=None, volume_update_state=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
@@ -92,6 +94,7 @@ class V1VirtualMachineStatus(object):
         self._snapshot_in_progress = None
         self._start_failure = None
         self._state_change_requests = None
+        self._virtual_machine_state_volume = None
         self._volume_requests = None
         self._volume_snapshot_statuses = None
         self._volume_update_state = None
@@ -126,6 +129,8 @@ class V1VirtualMachineStatus(object):
           self.start_failure = start_failure
         if state_change_requests is not None:
           self.state_change_requests = state_change_requests
+        if virtual_machine_state_volume is not None:
+          self.virtual_machine_state_volume = virtual_machine_state_volume
         if volume_requests is not None:
           self.volume_requests = volume_requests
         if volume_snapshot_statuses is not None:
@@ -477,6 +482,29 @@ class V1VirtualMachineStatus(object):
         """
 
         self._state_change_requests = state_change_requests
+
+    @property
+    def virtual_machine_state_volume(self):
+        """
+        Gets the virtual_machine_state_volume of this V1VirtualMachineStatus.
+        VirtualMachineStateVolume tracks the live VirtualMachineState PVC (persistent UEFI, TPM and CBT state). It is the source of truth for the PVC name, which may differ from the referenced source after a migration. It is populated for both the declarative and the implicit paths.
+
+        :return: The virtual_machine_state_volume of this V1VirtualMachineStatus.
+        :rtype: V1VolumeStatus
+        """
+        return self._virtual_machine_state_volume
+
+    @virtual_machine_state_volume.setter
+    def virtual_machine_state_volume(self, virtual_machine_state_volume):
+        """
+        Sets the virtual_machine_state_volume of this V1VirtualMachineStatus.
+        VirtualMachineStateVolume tracks the live VirtualMachineState PVC (persistent UEFI, TPM and CBT state). It is the source of truth for the PVC name, which may differ from the referenced source after a migration. It is populated for both the declarative and the implicit paths.
+
+        :param virtual_machine_state_volume: The virtual_machine_state_volume of this V1VirtualMachineStatus.
+        :type: V1VolumeStatus
+        """
+
+        self._virtual_machine_state_volume = virtual_machine_state_volume
 
     @property
     def volume_requests(self):

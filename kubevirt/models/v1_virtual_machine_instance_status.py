@@ -57,6 +57,7 @@ class V1VirtualMachineInstanceStatus(object):
         'selinux_context': 'str',
         'topology_hints': 'V1TopologyHints',
         'virtual_machine_revision_name': 'str',
+        'virtual_machine_state_volume': 'V1VolumeStatus',
         'volume_status': 'list[V1VolumeStatus]'
     }
 
@@ -87,10 +88,11 @@ class V1VirtualMachineInstanceStatus(object):
         'selinux_context': 'selinuxContext',
         'topology_hints': 'topologyHints',
         'virtual_machine_revision_name': 'virtualMachineRevisionName',
+        'virtual_machine_state_volume': 'virtualMachineStateVolume',
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, vsockcid=None, active_pods=None, changed_block_tracking=None, conditions=None, current_cpu_topology=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, kernel_boot_status=None, launcher_container_image_version=None, machine=None, memory=None, migrated_volumes=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, volume_status=None):
+    def __init__(self, vsockcid=None, active_pods=None, changed_block_tracking=None, conditions=None, current_cpu_topology=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, kernel_boot_status=None, launcher_container_image_version=None, machine=None, memory=None, migrated_volumes=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, virtual_machine_state_volume=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -121,6 +123,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._selinux_context = None
         self._topology_hints = None
         self._virtual_machine_revision_name = None
+        self._virtual_machine_state_volume = None
         self._volume_status = None
 
         if vsockcid is not None:
@@ -175,6 +178,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.topology_hints = topology_hints
         if virtual_machine_revision_name is not None:
           self.virtual_machine_revision_name = virtual_machine_revision_name
+        if virtual_machine_state_volume is not None:
+          self.virtual_machine_state_volume = virtual_machine_state_volume
         if volume_status is not None:
           self.volume_status = volume_status
 
@@ -779,6 +784,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._virtual_machine_revision_name = virtual_machine_revision_name
+
+    @property
+    def virtual_machine_state_volume(self):
+        """
+        Gets the virtual_machine_state_volume of this V1VirtualMachineInstanceStatus.
+        VirtualMachineStateVolume tracks the live VirtualMachineState PVC (persistent UEFI, TPM and CBT state). It is the source of truth for the PVC name, which may differ from the referenced source after a migration. It is populated for both the declarative and the implicit paths.
+
+        :return: The virtual_machine_state_volume of this V1VirtualMachineInstanceStatus.
+        :rtype: V1VolumeStatus
+        """
+        return self._virtual_machine_state_volume
+
+    @virtual_machine_state_volume.setter
+    def virtual_machine_state_volume(self, virtual_machine_state_volume):
+        """
+        Sets the virtual_machine_state_volume of this V1VirtualMachineInstanceStatus.
+        VirtualMachineStateVolume tracks the live VirtualMachineState PVC (persistent UEFI, TPM and CBT state). It is the source of truth for the PVC name, which may differ from the referenced source after a migration. It is populated for both the declarative and the implicit paths.
+
+        :param virtual_machine_state_volume: The virtual_machine_state_volume of this V1VirtualMachineInstanceStatus.
+        :type: V1VolumeStatus
+        """
+
+        self._virtual_machine_state_volume = virtual_machine_state_volume
 
     @property
     def volume_status(self):

@@ -61,6 +61,9 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/io_k8s_api_core_v1_persistent_volume_claim_spec.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_io_k8s_api_core_v1_persistent_volume_claim_spec.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/IoK8sApiCoreV1PersistentVolumeClaimSpec.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/io_k8s_api_core_v1_persistent_volume_claim_template.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_io_k8s_api_core_v1_persistent_volume_claim_template.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/IoK8sApiCoreV1PersistentVolumeClaimTemplate.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/io_k8s_api_core_v1_persistent_volume_claim_volume_source.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_io_k8s_api_core_v1_persistent_volume_claim_volume_source.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/IoK8sApiCoreV1PersistentVolumeClaimVolumeSource.md
@@ -1000,6 +1003,12 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_virtual_machine_state_change_request.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_virtual_machine_state_change_request.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1VirtualMachineStateChangeRequest.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_virtual_machine_state_source.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_virtual_machine_state_source.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1VirtualMachineStateSource.md
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_virtual_machine_state_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_virtual_machine_state_spec.py
+[main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1VirtualMachineStateSpec.md
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1_virtual_machine_status.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1_virtual_machine_status.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1VirtualMachineStatus.md
@@ -1321,6 +1330,30 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/kubevirt/models/v1beta1_volume_snapshot_status.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/test/test_v1beta1_volume_snapshot_status.py
 [main] INFO io.swagger.codegen.AbstractGenerator - writing file /root/go/src/kubevirt.io/kubevirt/_out/client-python/docs/V1beta1VolumeSnapshotStatus.md
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
+[main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.
 [main] WARN io.swagger.codegen.examples.ExampleGenerator - Ref property with empty model.

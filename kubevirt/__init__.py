@@ -199,6 +199,7 @@ from .models.v1_memory_dump_volume_source import V1MemoryDumpVolumeSource
 from .models.v1_memory_status import V1MemoryStatus
 from .models.v1_migrate_options import V1MigrateOptions
 from .models.v1_migration_configuration import V1MigrationConfiguration
+from .models.v1_multi_io_thread_auto_policy import V1MultiIOThreadAutoPolicy
 from .models.v1_multus_network import V1MultusNetwork
 from .models.v1_numa import V1NUMA
 from .models.v1_numa_guest_mapping_passthrough import V1NUMAGuestMappingPassthrough

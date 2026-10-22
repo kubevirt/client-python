@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **mem_balloon_stats_period** | **int** |  | [optional] 
 **migrations** | [**V1MigrationConfiguration**](V1MigrationConfiguration.md) |  | [optional] 
 **min_cpu_model** | **str** | deprecated | [optional] 
+**multi_io_thread_auto_policy** | [**V1MultiIOThreadAutoPolicy**](V1MultiIOThreadAutoPolicy.md) | MultiIOThreadAutoPolicy, when used in conjunction with SCSIMultiIOThread feature gate, will enable the auto IOThreadPolicy to allocate a pool of iothreads (capped at 8 threads) to each virtio-blk disk instead of a single iothread per disk. This setting has no effect unless the SCSIMultiIOThread feature gate is enabled. | [optional] 
 **network** | [**V1NetworkConfiguration**](V1NetworkConfiguration.md) |  | [optional] 
 **obsolete_cpu_models** | **dict(str, bool)** |  | [optional] 
 **ovmf_path** | **str** | Deprecated. Use architectureConfiguration instead. | [optional] 

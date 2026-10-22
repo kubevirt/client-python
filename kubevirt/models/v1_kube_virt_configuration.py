@@ -57,6 +57,7 @@ class V1KubeVirtConfiguration(object):
         'mem_balloon_stats_period': 'int',
         'migrations': 'V1MigrationConfiguration',
         'min_cpu_model': 'str',
+        'multi_io_thread_auto_policy': 'V1MultiIOThreadAutoPolicy',
         'network': 'V1NetworkConfiguration',
         'obsolete_cpu_models': 'dict(str, bool)',
         'ovmf_path': 'str',
@@ -104,6 +105,7 @@ class V1KubeVirtConfiguration(object):
         'mem_balloon_stats_period': 'memBalloonStatsPeriod',
         'migrations': 'migrations',
         'min_cpu_model': 'minCPUModel',
+        'multi_io_thread_auto_policy': 'multiIOThreadAutoPolicy',
         'network': 'network',
         'obsolete_cpu_models': 'obsoleteCPUModels',
         'ovmf_path': 'ovmfPath',
@@ -124,7 +126,7 @@ class V1KubeVirtConfiguration(object):
         'webhook_configuration': 'webhookConfiguration'
     }
 
-    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, changed_block_tracking_label_selectors=None, common_instancetypes_deployment=None, confidential_compute=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, emulation_policy=None, eviction_strategy=None, handler_configuration=None, hypervisors=None, image_pull_policy=None, instancetype=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, persistent_reservation_configuration=None, role_aggregation_strategy=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virt_template_deployment=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
+    def __init__(self, additional_guest_memory_overhead_ratio=None, api_configuration=None, architecture_configuration=None, auto_cpu_limit_namespace_label_selector=None, changed_block_tracking_label_selectors=None, common_instancetypes_deployment=None, confidential_compute=None, controller_configuration=None, cpu_model=None, cpu_request=None, default_runtime_class=None, developer_configuration=None, emulated_machines=None, emulation_policy=None, eviction_strategy=None, handler_configuration=None, hypervisors=None, image_pull_policy=None, instancetype=None, ksm_configuration=None, live_update_configuration=None, machine_type=None, mediated_devices_configuration=None, mem_balloon_stats_period=None, migrations=None, min_cpu_model=None, multi_io_thread_auto_policy=None, network=None, obsolete_cpu_models=None, ovmf_path=None, permitted_host_devices=None, persistent_reservation_configuration=None, role_aggregation_strategy=None, seccomp_configuration=None, selinux_launcher_type=None, smbios=None, support_container_resources=None, supported_guest_agent_versions=None, tls_configuration=None, virt_template_deployment=None, virtual_machine_instances_per_node=None, virtual_machine_options=None, vm_rollout_strategy=None, vm_state_storage_class=None, webhook_configuration=None):
         """
         V1KubeVirtConfiguration - a model defined in Swagger
         """
@@ -155,6 +157,7 @@ class V1KubeVirtConfiguration(object):
         self._mem_balloon_stats_period = None
         self._migrations = None
         self._min_cpu_model = None
+        self._multi_io_thread_auto_policy = None
         self._network = None
         self._obsolete_cpu_models = None
         self._ovmf_path = None
@@ -226,6 +229,8 @@ class V1KubeVirtConfiguration(object):
           self.migrations = migrations
         if min_cpu_model is not None:
           self.min_cpu_model = min_cpu_model
+        if multi_io_thread_auto_policy is not None:
+          self.multi_io_thread_auto_policy = multi_io_thread_auto_policy
         if network is not None:
           self.network = network
         if obsolete_cpu_models is not None:
@@ -844,6 +849,29 @@ class V1KubeVirtConfiguration(object):
         """
 
         self._min_cpu_model = min_cpu_model
+
+    @property
+    def multi_io_thread_auto_policy(self):
+        """
+        Gets the multi_io_thread_auto_policy of this V1KubeVirtConfiguration.
+        MultiIOThreadAutoPolicy, when used in conjunction with SCSIMultiIOThread feature gate, will enable the auto IOThreadPolicy to allocate a pool of iothreads (capped at 8 threads) to each virtio-blk disk instead of a single iothread per disk. This setting has no effect unless the SCSIMultiIOThread feature gate is enabled.
+
+        :return: The multi_io_thread_auto_policy of this V1KubeVirtConfiguration.
+        :rtype: V1MultiIOThreadAutoPolicy
+        """
+        return self._multi_io_thread_auto_policy
+
+    @multi_io_thread_auto_policy.setter
+    def multi_io_thread_auto_policy(self, multi_io_thread_auto_policy):
+        """
+        Sets the multi_io_thread_auto_policy of this V1KubeVirtConfiguration.
+        MultiIOThreadAutoPolicy, when used in conjunction with SCSIMultiIOThread feature gate, will enable the auto IOThreadPolicy to allocate a pool of iothreads (capped at 8 threads) to each virtio-blk disk instead of a single iothread per disk. This setting has no effect unless the SCSIMultiIOThread feature gate is enabled.
+
+        :param multi_io_thread_auto_policy: The multi_io_thread_auto_policy of this V1KubeVirtConfiguration.
+        :type: V1MultiIOThreadAutoPolicy
+        """
+
+        self._multi_io_thread_auto_policy = multi_io_thread_auto_policy
 
     @property
     def network(self):

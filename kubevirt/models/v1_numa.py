@@ -52,7 +52,7 @@ class V1NUMA(object):
     def guest_mapping_passthrough(self):
         """
         Gets the guest_mapping_passthrough of this V1NUMA.
-        GuestMappingPassthrough will create an efficient guest topology based on host CPUs exclusively assigned to a pod. The created topology ensures that memory and CPUs on the virtual numa nodes never cross boundaries of host numa nodes.
+        GuestMappingPassthrough will create an efficient guest topology based on host CPUs exclusively assigned to a pod. The created topology ensures that memory and CPUs on the virtual numa nodes never cross boundaries of host numa nodes. It is not supported on a VMI with dedicatedCPUPlacement while the CPUsWithDRA feature gate is enabled, because the host CPUs are then assigned by the DRA driver instead of by kubelet's CPU manager.
 
         :return: The guest_mapping_passthrough of this V1NUMA.
         :rtype: V1NUMAGuestMappingPassthrough
@@ -63,7 +63,7 @@ class V1NUMA(object):
     def guest_mapping_passthrough(self, guest_mapping_passthrough):
         """
         Sets the guest_mapping_passthrough of this V1NUMA.
-        GuestMappingPassthrough will create an efficient guest topology based on host CPUs exclusively assigned to a pod. The created topology ensures that memory and CPUs on the virtual numa nodes never cross boundaries of host numa nodes.
+        GuestMappingPassthrough will create an efficient guest topology based on host CPUs exclusively assigned to a pod. The created topology ensures that memory and CPUs on the virtual numa nodes never cross boundaries of host numa nodes. It is not supported on a VMI with dedicatedCPUPlacement while the CPUsWithDRA feature gate is enabled, because the host CPUs are then assigned by the DRA driver instead of by kubelet's CPU manager.
 
         :param guest_mapping_passthrough: The guest_mapping_passthrough of this V1NUMA.
         :type: V1NUMAGuestMappingPassthrough

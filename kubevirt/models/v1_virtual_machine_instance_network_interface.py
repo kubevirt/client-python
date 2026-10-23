@@ -92,7 +92,7 @@ class V1VirtualMachineInstanceNetworkInterface(object):
     def info_source(self):
         """
         Gets the info_source of this V1VirtualMachineInstanceNetworkInterface.
-        Specifies the origin of the interface data collected. values: domain, guest-agent, multus-status.
+        Specifies the origin of the interface data collected. values: domain, guest-agent, multus-status, pod-status.
 
         :return: The info_source of this V1VirtualMachineInstanceNetworkInterface.
         :rtype: str
@@ -103,7 +103,7 @@ class V1VirtualMachineInstanceNetworkInterface(object):
     def info_source(self, info_source):
         """
         Sets the info_source of this V1VirtualMachineInstanceNetworkInterface.
-        Specifies the origin of the interface data collected. values: domain, guest-agent, multus-status.
+        Specifies the origin of the interface data collected. values: domain, guest-agent, multus-status, pod-status.
 
         :param info_source: The info_source of this V1VirtualMachineInstanceNetworkInterface.
         :type: str

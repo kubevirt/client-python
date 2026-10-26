@@ -35,7 +35,7 @@ class V1alpha1VirtualMachineBackupStatus(object):
         'conditions': 'list[IoK8sApimachineryPkgApisMetaV1Condition]',
         'included_volumes': 'list[V1alpha1BackupVolumeInfo]',
         'links': 'V1alpha1BackupLinks',
-        'type': 'str'
+        'start_timestamp': 'IoK8sApimachineryPkgApisMetaV1Time'
     }
 
     attribute_map = {
@@ -43,10 +43,10 @@ class V1alpha1VirtualMachineBackupStatus(object):
         'conditions': 'conditions',
         'included_volumes': 'includedVolumes',
         'links': 'links',
-        'type': 'type'
+        'start_timestamp': 'startTimestamp'
     }
 
-    def __init__(self, checkpoint_name=None, conditions=None, included_volumes=None, links=None, type=None):
+    def __init__(self, checkpoint_name=None, conditions=None, included_volumes=None, links=None, start_timestamp=None):
         """
         V1alpha1VirtualMachineBackupStatus - a model defined in Swagger
         """
@@ -55,7 +55,7 @@ class V1alpha1VirtualMachineBackupStatus(object):
         self._conditions = None
         self._included_volumes = None
         self._links = None
-        self._type = None
+        self._start_timestamp = None
 
         if checkpoint_name is not None:
           self.checkpoint_name = checkpoint_name
@@ -65,8 +65,8 @@ class V1alpha1VirtualMachineBackupStatus(object):
           self.included_volumes = included_volumes
         if links is not None:
           self.links = links
-        if type is not None:
-          self.type = type
+        if start_timestamp is not None:
+          self.start_timestamp = start_timestamp
 
     @property
     def checkpoint_name(self):
@@ -159,27 +159,27 @@ class V1alpha1VirtualMachineBackupStatus(object):
         self._links = links
 
     @property
-    def type(self):
+    def start_timestamp(self):
         """
-        Gets the type of this V1alpha1VirtualMachineBackupStatus.
-        Type indicates if the backup was full or incremental
+        Gets the start_timestamp of this V1alpha1VirtualMachineBackupStatus.
+        StartTimestamp is the timestamp when the backup started
 
-        :return: The type of this V1alpha1VirtualMachineBackupStatus.
-        :rtype: str
+        :return: The start_timestamp of this V1alpha1VirtualMachineBackupStatus.
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
         """
-        return self._type
+        return self._start_timestamp
 
-    @type.setter
-    def type(self, type):
+    @start_timestamp.setter
+    def start_timestamp(self, start_timestamp):
         """
-        Sets the type of this V1alpha1VirtualMachineBackupStatus.
-        Type indicates if the backup was full or incremental
+        Sets the start_timestamp of this V1alpha1VirtualMachineBackupStatus.
+        StartTimestamp is the timestamp when the backup started
 
-        :param type: The type of this V1alpha1VirtualMachineBackupStatus.
-        :type: str
+        :param start_timestamp: The start_timestamp of this V1alpha1VirtualMachineBackupStatus.
+        :type: IoK8sApimachineryPkgApisMetaV1Time
         """
 
-        self._type = type
+        self._start_timestamp = start_timestamp
 
     def to_dict(self):
         """

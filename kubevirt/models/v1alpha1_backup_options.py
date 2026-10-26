@@ -35,6 +35,7 @@ class V1alpha1BackupOptions(object):
         'backup_start_time': 'IoK8sApimachineryPkgApisMetaV1Time',
         'cmd': 'str',
         'incremental': 'str',
+        'incremental_creation_time': 'IoK8sApimachineryPkgApisMetaV1Time',
         'mode': 'str',
         'skip_quiesce': 'bool',
         'target_path': 'str'
@@ -45,12 +46,13 @@ class V1alpha1BackupOptions(object):
         'backup_start_time': 'backupStartTime',
         'cmd': 'cmd',
         'incremental': 'incremental',
+        'incremental_creation_time': 'incrementalCreationTime',
         'mode': 'mode',
         'skip_quiesce': 'skipQuiesce',
         'target_path': 'targetPath'
     }
 
-    def __init__(self, backup_name=None, backup_start_time=None, cmd=None, incremental=None, mode=None, skip_quiesce=None, target_path=None):
+    def __init__(self, backup_name=None, backup_start_time=None, cmd=None, incremental=None, incremental_creation_time=None, mode=None, skip_quiesce=None, target_path=None):
         """
         V1alpha1BackupOptions - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class V1alpha1BackupOptions(object):
         self._backup_start_time = None
         self._cmd = None
         self._incremental = None
+        self._incremental_creation_time = None
         self._mode = None
         self._skip_quiesce = None
         self._target_path = None
@@ -71,6 +74,8 @@ class V1alpha1BackupOptions(object):
           self.cmd = cmd
         if incremental is not None:
           self.incremental = incremental
+        if incremental_creation_time is not None:
+          self.incremental_creation_time = incremental_creation_time
         if mode is not None:
           self.mode = mode
         if skip_quiesce is not None:
@@ -161,6 +166,27 @@ class V1alpha1BackupOptions(object):
         """
 
         self._incremental = incremental
+
+    @property
+    def incremental_creation_time(self):
+        """
+        Gets the incremental_creation_time of this V1alpha1BackupOptions.
+
+        :return: The incremental_creation_time of this V1alpha1BackupOptions.
+        :rtype: IoK8sApimachineryPkgApisMetaV1Time
+        """
+        return self._incremental_creation_time
+
+    @incremental_creation_time.setter
+    def incremental_creation_time(self, incremental_creation_time):
+        """
+        Sets the incremental_creation_time of this V1alpha1BackupOptions.
+
+        :param incremental_creation_time: The incremental_creation_time of this V1alpha1BackupOptions.
+        :type: IoK8sApimachineryPkgApisMetaV1Time
+        """
+
+        self._incremental_creation_time = incremental_creation_time
 
     @property
     def mode(self):

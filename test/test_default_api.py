@@ -1455,14 +1455,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_v1_redefine_checkpoint(self):
-        """
-        Test case for v1_redefine_checkpoint
-
-        
-        """
-        pass
-
     def test_v1_remove_memory_dump(self):
         """
         Test case for v1_remove_memory_dump
@@ -1682,14 +1674,6 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3_pause(self):
         """
         Test case for v1alpha3_pause
-
-        
-        """
-        pass
-
-    def test_v1alpha3_redefine_checkpoint(self):
-        """
-        Test case for v1alpha3_redefine_checkpoint
 
         
         """

@@ -384,7 +384,7 @@ class V1Volume(object):
     def memory_dump(self):
         """
         Gets the memory_dump of this V1Volume.
-        MemoryDump is attached to the virt launcher and is populated with a memory dump of the vmi
+        MemoryDump is attached to the virt launcher and is populated with a memory dump of the vmi Deprecated: memory dumps are attached as utility volumes of type MemoryDump.
 
         :return: The memory_dump of this V1Volume.
         :rtype: V1MemoryDumpVolumeSource
@@ -395,7 +395,7 @@ class V1Volume(object):
     def memory_dump(self, memory_dump):
         """
         Sets the memory_dump of this V1Volume.
-        MemoryDump is attached to the virt launcher and is populated with a memory dump of the vmi
+        MemoryDump is attached to the virt launcher and is populated with a memory dump of the vmi Deprecated: memory dumps are attached as utility volumes of type MemoryDump.
 
         :param memory_dump: The memory_dump of this V1Volume.
         :type: V1MemoryDumpVolumeSource

@@ -350,7 +350,6 @@ from .v1_volume_snapshot_status import V1VolumeSnapshotStatus
 from .v1_volume_status import V1VolumeStatus
 from .v1_volume_update_state import V1VolumeUpdateState
 from .v1_watchdog import V1Watchdog
-from .v1alpha1_backup_checkpoint import V1alpha1BackupCheckpoint
 from .v1alpha1_backup_link import V1alpha1BackupLink
 from .v1alpha1_backup_links import V1alpha1BackupLinks
 from .v1alpha1_backup_options import V1alpha1BackupOptions

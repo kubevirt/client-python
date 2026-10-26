@@ -31,21 +31,49 @@ class V1VirtualMachineInstanceBackupVolumeInfo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'type': 'str',
         'volume_name': 'str'
     }
 
     attribute_map = {
+        'type': 'type',
         'volume_name': 'volumeName'
     }
 
-    def __init__(self, volume_name=''):
+    def __init__(self, type=None, volume_name=''):
         """
         V1VirtualMachineInstanceBackupVolumeInfo - a model defined in Swagger
         """
 
+        self._type = None
         self._volume_name = None
 
+        if type is not None:
+          self.type = type
         self.volume_name = volume_name
+
+    @property
+    def type(self):
+        """
+        Gets the type of this V1VirtualMachineInstanceBackupVolumeInfo.
+        Type is how the volume was backed up, either Full or Incremental.
+
+        :return: The type of this V1VirtualMachineInstanceBackupVolumeInfo.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this V1VirtualMachineInstanceBackupVolumeInfo.
+        Type is how the volume was backed up, either Full or Incremental.
+
+        :param type: The type of this V1VirtualMachineInstanceBackupVolumeInfo.
+        :type: str
+        """
+
+        self._type = type
 
     @property
     def volume_name(self):

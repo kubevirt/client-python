@@ -33,28 +33,38 @@ class V1beta1VirtualMachineSnapshotSpec(object):
     swagger_types = {
         'deletion_policy': 'str',
         'failure_deadline': 'IoK8sApimachineryPkgApisMetaV1Duration',
+        'overlay_scratch_size': 'IoK8sApimachineryPkgApiResourceQuantity',
+        'snapshot_mode': 'str',
         'source': 'IoK8sApiCoreV1TypedLocalObjectReference'
     }
 
     attribute_map = {
         'deletion_policy': 'deletionPolicy',
         'failure_deadline': 'failureDeadline',
+        'overlay_scratch_size': 'overlayScratchSize',
+        'snapshot_mode': 'snapshotMode',
         'source': 'source'
     }
 
-    def __init__(self, deletion_policy=None, failure_deadline=None, source=None):
+    def __init__(self, deletion_policy=None, failure_deadline=None, overlay_scratch_size=None, snapshot_mode=None, source=None):
         """
         V1beta1VirtualMachineSnapshotSpec - a model defined in Swagger
         """
 
         self._deletion_policy = None
         self._failure_deadline = None
+        self._overlay_scratch_size = None
+        self._snapshot_mode = None
         self._source = None
 
         if deletion_policy is not None:
           self.deletion_policy = deletion_policy
         if failure_deadline is not None:
           self.failure_deadline = failure_deadline
+        if overlay_scratch_size is not None:
+          self.overlay_scratch_size = overlay_scratch_size
+        if snapshot_mode is not None:
+          self.snapshot_mode = snapshot_mode
         self.source = source
 
     @property
@@ -100,6 +110,52 @@ class V1beta1VirtualMachineSnapshotSpec(object):
         """
 
         self._failure_deadline = failure_deadline
+
+    @property
+    def overlay_scratch_size(self):
+        """
+        Gets the overlay_scratch_size of this V1beta1VirtualMachineSnapshotSpec.
+        OverlayScratchSize overrides the size of the scratch volume holding the copy-on-write overlays for the duration of an External mode snapshot. When not set, the size is derived from FailureDeadline, capped by the size of the snapshotted disks. This field can only be set when SnapshotMode is External
+
+        :return: The overlay_scratch_size of this V1beta1VirtualMachineSnapshotSpec.
+        :rtype: IoK8sApimachineryPkgApiResourceQuantity
+        """
+        return self._overlay_scratch_size
+
+    @overlay_scratch_size.setter
+    def overlay_scratch_size(self, overlay_scratch_size):
+        """
+        Sets the overlay_scratch_size of this V1beta1VirtualMachineSnapshotSpec.
+        OverlayScratchSize overrides the size of the scratch volume holding the copy-on-write overlays for the duration of an External mode snapshot. When not set, the size is derived from FailureDeadline, capped by the size of the snapshotted disks. This field can only be set when SnapshotMode is External
+
+        :param overlay_scratch_size: The overlay_scratch_size of this V1beta1VirtualMachineSnapshotSpec.
+        :type: IoK8sApimachineryPkgApiResourceQuantity
+        """
+
+        self._overlay_scratch_size = overlay_scratch_size
+
+    @property
+    def snapshot_mode(self):
+        """
+        Gets the snapshot_mode of this V1beta1VirtualMachineSnapshotSpec.
+        SnapshotMode selects the flow used to snapshot a running VM. Only meaningful for online snapshots; offline snapshots are unaffected. External requires the ExternalVMSnapshot feature gate. Defaults to Direct
+
+        :return: The snapshot_mode of this V1beta1VirtualMachineSnapshotSpec.
+        :rtype: str
+        """
+        return self._snapshot_mode
+
+    @snapshot_mode.setter
+    def snapshot_mode(self, snapshot_mode):
+        """
+        Sets the snapshot_mode of this V1beta1VirtualMachineSnapshotSpec.
+        SnapshotMode selects the flow used to snapshot a running VM. Only meaningful for online snapshots; offline snapshots are unaffected. External requires the ExternalVMSnapshot feature gate. Defaults to Direct
+
+        :param snapshot_mode: The snapshot_mode of this V1beta1VirtualMachineSnapshotSpec.
+        :type: str
+        """
+
+        self._snapshot_mode = snapshot_mode
 
     @property
     def source(self):

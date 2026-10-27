@@ -172,8 +172,10 @@ Method | HTTP request | Description
 [**replace_virtual_machine_cluster_preference**](DefaultApi.md#replace_virtual_machine_cluster_preference) | **PUT** /apis/instancetype.kubevirt.io/v1beta1/virtualmachineclusterpreferences/{name} | 
 [**v1_backup**](DefaultApi.md#v1_backup) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/backup | 
 [**v1_check_health**](DefaultApi.md#v1_check_health) | **GET** /apis/subresources.kubevirt.io/v1/healthz | 
+[**v1_commit_snapshot**](DefaultApi.md#v1_commit_snapshot) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/commitsnapshot | 
 [**v1_console**](DefaultApi.md#v1_console) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/console | 
 [**v1_expand_spec**](DefaultApi.md#v1_expand_spec) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/expand-vm-spec | 
+[**v1_external_snapshot**](DefaultApi.md#v1_external_snapshot) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/externalsnapshot | 
 [**v1_filesystemlist**](DefaultApi.md#v1_filesystemlist) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/filesystemlist | 
 [**v1_freeze**](DefaultApi.md#v1_freeze) | **PUT** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/freeze | 
 [**v1_get_sub_api_group**](DefaultApi.md#v1_get_sub_api_group) | **GET** /apis/subresources.kubevirt.io | 
@@ -201,8 +203,10 @@ Method | HTTP request | Description
 [**v1_vsock**](DefaultApi.md#v1_vsock) | **GET** /apis/subresources.kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name}/vsock | 
 [**v1alpha3_backup**](DefaultApi.md#v1alpha3_backup) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/backup | 
 [**v1alpha3_check_health**](DefaultApi.md#v1alpha3_check_health) | **GET** /apis/subresources.kubevirt.io/v1alpha3/healthz | 
+[**v1alpha3_commit_snapshot**](DefaultApi.md#v1alpha3_commit_snapshot) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/commitsnapshot | 
 [**v1alpha3_console**](DefaultApi.md#v1alpha3_console) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/console | 
 [**v1alpha3_expand_spec**](DefaultApi.md#v1alpha3_expand_spec) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/expand-vm-spec | 
+[**v1alpha3_external_snapshot**](DefaultApi.md#v1alpha3_external_snapshot) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/externalsnapshot | 
 [**v1alpha3_filesystemlist**](DefaultApi.md#v1alpha3_filesystemlist) | **GET** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/filesystemlist | 
 [**v1alpha3_freeze**](DefaultApi.md#v1alpha3_freeze) | **PUT** /apis/subresources.kubevirt.io/v1alpha3/namespaces/{namespace}/virtualmachineinstances/{name}/freeze | 
 [**v1alpha3_guestfs**](DefaultApi.md#v1alpha3_guestfs) | **GET** /apis/subresources.kubevirt.io/v1alpha3/guestfs | 
@@ -9237,6 +9241,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1_commit_snapshot**
+> str v1_commit_snapshot(name, namespace, body)
+
+
+
+Commit the copy-on-write overlays of a VirtualMachineInstance back into their base images.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1SnapshotOverlayOptions() # V1SnapshotOverlayOptions | 
+
+try: 
+    api_response = api_instance.v1_commit_snapshot(name, namespace, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1_commit_snapshot: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1SnapshotOverlayOptions**](V1SnapshotOverlayOptions.md)|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1_console**
 > v1_console(name, namespace)
 
@@ -9329,6 +9384,57 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_external_snapshot**
+> str v1_external_snapshot(name, namespace, body)
+
+
+
+Redirect the disks of a VirtualMachineInstance to copy-on-write overlays.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1SnapshotOverlayOptions() # V1SnapshotOverlayOptions | 
+
+try: 
+    api_response = api_instance.v1_external_snapshot(name, namespace, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1_external_snapshot: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1SnapshotOverlayOptions**](V1SnapshotOverlayOptions.md)|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -10653,6 +10759,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1alpha3_commit_snapshot**
+> str v1alpha3_commit_snapshot(name, namespace, body)
+
+
+
+Commit the copy-on-write overlays of a VirtualMachineInstance back into their base images.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1SnapshotOverlayOptions() # V1SnapshotOverlayOptions | 
+
+try: 
+    api_response = api_instance.v1alpha3_commit_snapshot(name, namespace, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1alpha3_commit_snapshot: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1SnapshotOverlayOptions**](V1SnapshotOverlayOptions.md)|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1alpha3_console**
 > v1alpha3_console(name, namespace)
 
@@ -10745,6 +10902,57 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1alpha3_external_snapshot**
+> str v1alpha3_external_snapshot(name, namespace, body)
+
+
+
+Redirect the disks of a VirtualMachineInstance to copy-on-write overlays.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import kubevirt
+from kubevirt.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = kubevirt.DefaultApi()
+name = 'name_example' # str | Name of the resource
+namespace = 'namespace_example' # str | Object name and auth scope, such as for teams and projects
+body = kubevirt.V1SnapshotOverlayOptions() # V1SnapshotOverlayOptions | 
+
+try: 
+    api_response = api_instance.v1alpha3_external_snapshot(name, namespace, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->v1alpha3_external_snapshot: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| Name of the resource | 
+ **namespace** | **str**| Object name and auth scope, such as for teams and projects | 
+ **body** | [**V1SnapshotOverlayOptions**](V1SnapshotOverlayOptions.md)|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

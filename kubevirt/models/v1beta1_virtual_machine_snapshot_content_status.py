@@ -34,6 +34,7 @@ class V1beta1VirtualMachineSnapshotContentStatus(object):
         'creation_time': 'IoK8sApimachineryPkgApisMetaV1Time',
         'error': 'V1beta1Error',
         'ready_to_use': 'bool',
+        'snapshot_mode': 'str',
         'volume_snapshot_status': 'list[V1beta1VolumeSnapshotStatus]'
     }
 
@@ -41,10 +42,11 @@ class V1beta1VirtualMachineSnapshotContentStatus(object):
         'creation_time': 'creationTime',
         'error': 'error',
         'ready_to_use': 'readyToUse',
+        'snapshot_mode': 'snapshotMode',
         'volume_snapshot_status': 'volumeSnapshotStatus'
     }
 
-    def __init__(self, creation_time=None, error=None, ready_to_use=None, volume_snapshot_status=None):
+    def __init__(self, creation_time=None, error=None, ready_to_use=None, snapshot_mode=None, volume_snapshot_status=None):
         """
         V1beta1VirtualMachineSnapshotContentStatus - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class V1beta1VirtualMachineSnapshotContentStatus(object):
         self._creation_time = None
         self._error = None
         self._ready_to_use = None
+        self._snapshot_mode = None
         self._volume_snapshot_status = None
 
         if creation_time is not None:
@@ -60,6 +63,8 @@ class V1beta1VirtualMachineSnapshotContentStatus(object):
           self.error = error
         if ready_to_use is not None:
           self.ready_to_use = ready_to_use
+        if snapshot_mode is not None:
+          self.snapshot_mode = snapshot_mode
         if volume_snapshot_status is not None:
           self.volume_snapshot_status = volume_snapshot_status
 
@@ -125,6 +130,29 @@ class V1beta1VirtualMachineSnapshotContentStatus(object):
         """
 
         self._ready_to_use = ready_to_use
+
+    @property
+    def snapshot_mode(self):
+        """
+        Gets the snapshot_mode of this V1beta1VirtualMachineSnapshotContentStatus.
+        SnapshotMode is the actual mode the snapshot is taken with
+
+        :return: The snapshot_mode of this V1beta1VirtualMachineSnapshotContentStatus.
+        :rtype: str
+        """
+        return self._snapshot_mode
+
+    @snapshot_mode.setter
+    def snapshot_mode(self, snapshot_mode):
+        """
+        Sets the snapshot_mode of this V1beta1VirtualMachineSnapshotContentStatus.
+        SnapshotMode is the actual mode the snapshot is taken with
+
+        :param snapshot_mode: The snapshot_mode of this V1beta1VirtualMachineSnapshotContentStatus.
+        :type: str
+        """
+
+        self._snapshot_mode = snapshot_mode
 
     @property
     def volume_snapshot_status(self):

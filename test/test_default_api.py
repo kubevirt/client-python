@@ -1375,6 +1375,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_commit_snapshot(self):
+        """
+        Test case for v1_commit_snapshot
+
+        
+        """
+        pass
+
     def test_v1_console(self):
         """
         Test case for v1_console
@@ -1386,6 +1394,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1_expand_spec(self):
         """
         Test case for v1_expand_spec
+
+        
+        """
+        pass
+
+    def test_v1_external_snapshot(self):
+        """
+        Test case for v1_external_snapshot
 
         
         """
@@ -1607,6 +1623,14 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_v1alpha3_commit_snapshot(self):
+        """
+        Test case for v1alpha3_commit_snapshot
+
+        
+        """
+        pass
+
     def test_v1alpha3_console(self):
         """
         Test case for v1alpha3_console
@@ -1618,6 +1642,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_v1alpha3_expand_spec(self):
         """
         Test case for v1alpha3_expand_spec
+
+        
+        """
+        pass
+
+    def test_v1alpha3_external_snapshot(self):
+        """
+        Test case for v1alpha3_external_snapshot
 
         
         """

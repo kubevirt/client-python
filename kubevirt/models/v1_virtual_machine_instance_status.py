@@ -55,6 +55,7 @@ class V1VirtualMachineInstanceStatus(object):
         'reason': 'str',
         'runtime_user': 'int',
         'selinux_context': 'str',
+        'snapshot_overlay_pvcuid': 'str',
         'topology_hints': 'V1TopologyHints',
         'virtual_machine_revision_name': 'str',
         'virtual_machine_state_volume': 'V1VolumeStatus',
@@ -86,13 +87,14 @@ class V1VirtualMachineInstanceStatus(object):
         'reason': 'reason',
         'runtime_user': 'runtimeUser',
         'selinux_context': 'selinuxContext',
+        'snapshot_overlay_pvcuid': 'snapshotOverlayPVCUID',
         'topology_hints': 'topologyHints',
         'virtual_machine_revision_name': 'virtualMachineRevisionName',
         'virtual_machine_state_volume': 'virtualMachineStateVolume',
         'volume_status': 'volumeStatus'
     }
 
-    def __init__(self, vsockcid=None, active_pods=None, changed_block_tracking=None, conditions=None, current_cpu_topology=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, kernel_boot_status=None, launcher_container_image_version=None, machine=None, memory=None, migrated_volumes=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, topology_hints=None, virtual_machine_revision_name=None, virtual_machine_state_volume=None, volume_status=None):
+    def __init__(self, vsockcid=None, active_pods=None, changed_block_tracking=None, conditions=None, current_cpu_topology=None, evacuation_node_name=None, fs_freeze_status=None, guest_os_info=None, interfaces=None, kernel_boot_status=None, launcher_container_image_version=None, machine=None, memory=None, migrated_volumes=None, migration_method=None, migration_state=None, migration_transport=None, node_name=None, phase=None, phase_transition_timestamps=None, qos_class=None, reason=None, runtime_user=0, selinux_context=None, snapshot_overlay_pvcuid=None, topology_hints=None, virtual_machine_revision_name=None, virtual_machine_state_volume=None, volume_status=None):
         """
         V1VirtualMachineInstanceStatus - a model defined in Swagger
         """
@@ -121,6 +123,7 @@ class V1VirtualMachineInstanceStatus(object):
         self._reason = None
         self._runtime_user = None
         self._selinux_context = None
+        self._snapshot_overlay_pvcuid = None
         self._topology_hints = None
         self._virtual_machine_revision_name = None
         self._virtual_machine_state_volume = None
@@ -174,6 +177,8 @@ class V1VirtualMachineInstanceStatus(object):
           self.runtime_user = runtime_user
         if selinux_context is not None:
           self.selinux_context = selinux_context
+        if snapshot_overlay_pvcuid is not None:
+          self.snapshot_overlay_pvcuid = snapshot_overlay_pvcuid
         if topology_hints is not None:
           self.topology_hints = topology_hints
         if virtual_machine_revision_name is not None:
@@ -740,6 +745,29 @@ class V1VirtualMachineInstanceStatus(object):
         """
 
         self._selinux_context = selinux_context
+
+    @property
+    def snapshot_overlay_pvcuid(self):
+        """
+        Gets the snapshot_overlay_pvcuid of this V1VirtualMachineInstanceStatus.
+        SnapshotOverlayPVCUID identifies the scratch PVC verified for the OverlaySnapshotActive condition. Updated together with that condition.
+
+        :return: The snapshot_overlay_pvcuid of this V1VirtualMachineInstanceStatus.
+        :rtype: str
+        """
+        return self._snapshot_overlay_pvcuid
+
+    @snapshot_overlay_pvcuid.setter
+    def snapshot_overlay_pvcuid(self, snapshot_overlay_pvcuid):
+        """
+        Sets the snapshot_overlay_pvcuid of this V1VirtualMachineInstanceStatus.
+        SnapshotOverlayPVCUID identifies the scratch PVC verified for the OverlaySnapshotActive condition. Updated together with that condition.
+
+        :param snapshot_overlay_pvcuid: The snapshot_overlay_pvcuid of this V1VirtualMachineInstanceStatus.
+        :type: str
+        """
+
+        self._snapshot_overlay_pvcuid = snapshot_overlay_pvcuid
 
     @property
     def topology_hints(self):

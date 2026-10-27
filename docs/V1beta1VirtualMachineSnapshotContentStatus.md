@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **creation_time** | [**IoK8sApimachineryPkgApisMetaV1Time**](IoK8sApimachineryPkgApisMetaV1Time.md) |  | [optional] 
 **error** | [**V1beta1Error**](V1beta1Error.md) |  | [optional] 
 **ready_to_use** | **bool** |  | [optional] 
+**snapshot_mode** | **str** | SnapshotMode is the actual mode the snapshot is taken with | [optional] 
 **volume_snapshot_status** | [**list[V1beta1VolumeSnapshotStatus]**](V1beta1VolumeSnapshotStatus.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **reason** | **str** | A brief CamelCase message indicating details about why the VMI is in this state. e.g. &#39;NodeUnresponsive&#39; | [optional] 
 **runtime_user** | **int** | RuntimeUser is used to determine what user will be used in launcher | [optional] [default to 0]
 **selinux_context** | **str** | SELinuxContext is the actual SELinux context of the virt-launcher pod | [optional] 
+**snapshot_overlay_pvcuid** | **str** | SnapshotOverlayPVCUID identifies the scratch PVC verified for the OverlaySnapshotActive condition. Updated together with that condition. | [optional] 
 **topology_hints** | [**V1TopologyHints**](V1TopologyHints.md) |  | [optional] 
 **virtual_machine_revision_name** | **str** | VirtualMachineRevisionName is used to get the vm revision of the vmi when doing an online vm snapshot | [optional] 
 **virtual_machine_state_volume** | [**V1VolumeStatus**](V1VolumeStatus.md) | VirtualMachineStateVolume tracks the live VirtualMachineState PVC (persistent UEFI, TPM and CBT state). It is the source of truth for the PVC name, which may differ from the referenced source after a migration. It is populated for both the declarative and the implicit paths. | [optional] 

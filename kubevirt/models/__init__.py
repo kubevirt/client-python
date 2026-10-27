@@ -253,6 +253,7 @@ from .v1_ssh_public_key_access_credential_source import V1SSHPublicKeyAccessCred
 from .v1_seccomp_configuration import V1SeccompConfiguration
 from .v1_secret_volume_source import V1SecretVolumeSource
 from .v1_service_account_volume_source import V1ServiceAccountVolumeSource
+from .v1_snapshot_overlay_options import V1SnapshotOverlayOptions
 from .v1_sound_device import V1SoundDevice
 from .v1_stall_detector_options import V1StallDetectorOptions
 from .v1_start_options import V1StartOptions

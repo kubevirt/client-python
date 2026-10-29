@@ -31,6 +31,7 @@ class V1VirtualMachineStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'backup_in_progress': 'str',
         'changed_block_tracking': 'V1ChangedBlockTrackingStatus',
         'conditions': 'list[V1VirtualMachineCondition]',
         'created': 'bool',
@@ -53,6 +54,7 @@ class V1VirtualMachineStatus(object):
     }
 
     attribute_map = {
+        'backup_in_progress': 'backupInProgress',
         'changed_block_tracking': 'changedBlockTracking',
         'conditions': 'conditions',
         'created': 'created',
@@ -74,11 +76,12 @@ class V1VirtualMachineStatus(object):
         'volume_update_state': 'volumeUpdateState'
     }
 
-    def __init__(self, changed_block_tracking=None, conditions=None, created=None, desired_generation=None, instancetype_ref=None, memory_dump_request=None, observed_generation=None, preference_ref=None, printable_status=None, ready=None, restore_in_progress=None, run_strategy=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, virtual_machine_state_volume=None, volume_requests=None, volume_snapshot_statuses=None, volume_update_state=None):
+    def __init__(self, backup_in_progress=None, changed_block_tracking=None, conditions=None, created=None, desired_generation=None, instancetype_ref=None, memory_dump_request=None, observed_generation=None, preference_ref=None, printable_status=None, ready=None, restore_in_progress=None, run_strategy=None, snapshot_in_progress=None, start_failure=None, state_change_requests=None, virtual_machine_state_volume=None, volume_requests=None, volume_snapshot_statuses=None, volume_update_state=None):
         """
         V1VirtualMachineStatus - a model defined in Swagger
         """
 
+        self._backup_in_progress = None
         self._changed_block_tracking = None
         self._conditions = None
         self._created = None
@@ -99,6 +102,8 @@ class V1VirtualMachineStatus(object):
         self._volume_snapshot_statuses = None
         self._volume_update_state = None
 
+        if backup_in_progress is not None:
+          self.backup_in_progress = backup_in_progress
         if changed_block_tracking is not None:
           self.changed_block_tracking = changed_block_tracking
         if conditions is not None:
@@ -137,6 +142,29 @@ class V1VirtualMachineStatus(object):
           self.volume_snapshot_statuses = volume_snapshot_statuses
         if volume_update_state is not None:
           self.volume_update_state = volume_update_state
+
+    @property
+    def backup_in_progress(self):
+        """
+        Gets the backup_in_progress of this V1VirtualMachineStatus.
+        BackupInProgress is the name of the VirtualMachineBackup currently executing
+
+        :return: The backup_in_progress of this V1VirtualMachineStatus.
+        :rtype: str
+        """
+        return self._backup_in_progress
+
+    @backup_in_progress.setter
+    def backup_in_progress(self, backup_in_progress):
+        """
+        Sets the backup_in_progress of this V1VirtualMachineStatus.
+        BackupInProgress is the name of the VirtualMachineBackup currently executing
+
+        :param backup_in_progress: The backup_in_progress of this V1VirtualMachineStatus.
+        :type: str
+        """
+
+        self._backup_in_progress = backup_in_progress
 
     @property
     def changed_block_tracking(self):

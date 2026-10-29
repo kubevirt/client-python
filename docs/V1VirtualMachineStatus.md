@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**backup_in_progress** | **str** | BackupInProgress is the name of the VirtualMachineBackup currently executing | [optional] 
 **changed_block_tracking** | [**V1ChangedBlockTrackingStatus**](V1ChangedBlockTrackingStatus.md) | ChangedBlockTracking represents the status of the changedBlockTracking | [optional] 
 **conditions** | [**list[V1VirtualMachineCondition]**](V1VirtualMachineCondition.md) | Hold the state information of the VirtualMachine and its VirtualMachineInstance | [optional] 
 **created** | **bool** | Created indicates if the virtual machine is created in the cluster | [optional] 

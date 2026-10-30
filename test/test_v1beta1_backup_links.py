@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1alpha1_backup_volume_info import V1alpha1BackupVolumeInfo
+from kubevirt.models.v1beta1_backup_links import V1beta1BackupLinks
 
 
-class TestV1alpha1BackupVolumeInfo(unittest.TestCase):
-    """ V1alpha1BackupVolumeInfo unit test stubs """
+class TestV1beta1BackupLinks(unittest.TestCase):
+    """ V1beta1BackupLinks unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1alpha1BackupVolumeInfo(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1alpha1BackupVolumeInfo(self):
+    def testV1beta1BackupLinks(self):
         """
-        Test V1alpha1BackupVolumeInfo
+        Test V1beta1BackupLinks
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1alpha1_backup_volume_info.V1alpha1BackupVolumeInfo()
+        #model = kubevirt.models.v1beta1_backup_links.V1beta1BackupLinks()
         pass
 
 

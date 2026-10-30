@@ -19,11 +19,11 @@ import unittest
 
 import kubevirt
 from kubevirt.rest import ApiException
-from kubevirt.models.v1alpha1_virtual_machine_backup_status import V1alpha1VirtualMachineBackupStatus
+from kubevirt.models.v1beta1_backup_options import V1beta1BackupOptions
 
 
-class TestV1alpha1VirtualMachineBackupStatus(unittest.TestCase):
-    """ V1alpha1VirtualMachineBackupStatus unit test stubs """
+class TestV1beta1BackupOptions(unittest.TestCase):
+    """ V1beta1BackupOptions unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestV1alpha1VirtualMachineBackupStatus(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testV1alpha1VirtualMachineBackupStatus(self):
+    def testV1beta1BackupOptions(self):
         """
-        Test V1alpha1VirtualMachineBackupStatus
+        Test V1beta1BackupOptions
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = kubevirt.models.v1alpha1_virtual_machine_backup_status.V1alpha1VirtualMachineBackupStatus()
+        #model = kubevirt.models.v1beta1_backup_options.V1beta1BackupOptions()
         pass
 
 

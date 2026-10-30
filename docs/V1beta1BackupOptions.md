@@ -1,4 +1,4 @@
-# V1alpha1BackupOptions
+# V1beta1BackupOptions
 
 ## Properties
 Name | Type | Description | Notes

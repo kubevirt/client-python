@@ -1,4 +1,4 @@
-# V1alpha1VirtualMachineBackupSpec
+# V1beta1VirtualMachineBackupSpec
 
 ## Properties
 Name | Type | Description | Notes

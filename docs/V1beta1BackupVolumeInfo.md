@@ -1,4 +1,4 @@
-# V1alpha1BackupVolumeInfo
+# V1beta1BackupVolumeInfo
 
 ## Properties
 Name | Type | Description | Notes

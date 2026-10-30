@@ -1,4 +1,4 @@
-# V1alpha1BackupVolumeLink
+# V1beta1BackupVolumeLink
 
 ## Properties
 Name | Type | Description | Notes

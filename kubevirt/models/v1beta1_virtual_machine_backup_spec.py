@@ -104,7 +104,7 @@ class V1beta1VirtualMachineBackupSpec(object):
     def mode(self):
         """
         Gets the mode of this V1beta1VirtualMachineBackupSpec.
-        Mode specifies the way the backup output will be recieved
+        Mode specifies the way the backup output will be received. Deleting an in-progress Pull backup finalizes it as Complete (client finished pulling). TTL expiry, or deleting an in-progress Push backup, cancels the job and marks the backup Failed.
 
         :return: The mode of this V1beta1VirtualMachineBackupSpec.
         :rtype: str
@@ -115,7 +115,7 @@ class V1beta1VirtualMachineBackupSpec(object):
     def mode(self, mode):
         """
         Sets the mode of this V1beta1VirtualMachineBackupSpec.
-        Mode specifies the way the backup output will be recieved
+        Mode specifies the way the backup output will be received. Deleting an in-progress Pull backup finalizes it as Complete (client finished pulling). TTL expiry, or deleting an in-progress Push backup, cancels the job and marks the backup Failed.
 
         :param mode: The mode of this V1beta1VirtualMachineBackupSpec.
         :type: str
@@ -221,7 +221,7 @@ class V1beta1VirtualMachineBackupSpec(object):
     def ttl_duration(self):
         """
         Gets the ttl_duration of this V1beta1VirtualMachineBackupSpec.
-        TtlDuration limits the lifetime of a pull mode backup and its export If this field is set, after this duration has passed from counting from CreationTimestamp, the backup is eligible to be automatically considered as complete. If this field is omitted, a reasonable default is applied.
+        TTLDuration limits the lifetime of a pull mode backup and its export. When set, an in-progress backup past this duration (counting from CreationTimestamp) is cancelled and marked as Failed. Deleting the VirtualMachineBackup after a successful client pull still finalizes the backup as Complete. When omitted, a reasonable default is applied.
 
         :return: The ttl_duration of this V1beta1VirtualMachineBackupSpec.
         :rtype: IoK8sApimachineryPkgApisMetaV1Duration
@@ -232,7 +232,7 @@ class V1beta1VirtualMachineBackupSpec(object):
     def ttl_duration(self, ttl_duration):
         """
         Sets the ttl_duration of this V1beta1VirtualMachineBackupSpec.
-        TtlDuration limits the lifetime of a pull mode backup and its export If this field is set, after this duration has passed from counting from CreationTimestamp, the backup is eligible to be automatically considered as complete. If this field is omitted, a reasonable default is applied.
+        TTLDuration limits the lifetime of a pull mode backup and its export. When set, an in-progress backup past this duration (counting from CreationTimestamp) is cancelled and marked as Failed. Deleting the VirtualMachineBackup after a successful client pull still finalizes the backup as Complete. When omitted, a reasonable default is applied.
 
         :param ttl_duration: The ttl_duration of this V1beta1VirtualMachineBackupSpec.
         :type: IoK8sApimachineryPkgApisMetaV1Duration

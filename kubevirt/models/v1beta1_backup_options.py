@@ -31,6 +31,7 @@ class V1beta1BackupOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'abort_reason': 'str',
         'backup_name': 'str',
         'backup_start_time': 'IoK8sApimachineryPkgApisMetaV1Time',
         'cmd': 'str',
@@ -42,6 +43,7 @@ class V1beta1BackupOptions(object):
     }
 
     attribute_map = {
+        'abort_reason': 'abortReason',
         'backup_name': 'backupName',
         'backup_start_time': 'backupStartTime',
         'cmd': 'cmd',
@@ -52,11 +54,12 @@ class V1beta1BackupOptions(object):
         'target_path': 'targetPath'
     }
 
-    def __init__(self, backup_name=None, backup_start_time=None, cmd=None, incremental=None, incremental_creation_time=None, mode=None, skip_quiesce=None, target_path=None):
+    def __init__(self, abort_reason=None, backup_name=None, backup_start_time=None, cmd=None, incremental=None, incremental_creation_time=None, mode=None, skip_quiesce=None, target_path=None):
         """
         V1beta1BackupOptions - a model defined in Swagger
         """
 
+        self._abort_reason = None
         self._backup_name = None
         self._backup_start_time = None
         self._cmd = None
@@ -66,6 +69,8 @@ class V1beta1BackupOptions(object):
         self._skip_quiesce = None
         self._target_path = None
 
+        if abort_reason is not None:
+          self.abort_reason = abort_reason
         if backup_name is not None:
           self.backup_name = backup_name
         if backup_start_time is not None:
@@ -82,6 +87,29 @@ class V1beta1BackupOptions(object):
           self.skip_quiesce = skip_quiesce
         if target_path is not None:
           self.target_path = target_path
+
+    @property
+    def abort_reason(self):
+        """
+        Gets the abort_reason of this V1beta1BackupOptions.
+        AbortReason is set when Cmd is Abort. Cancel marks the backup Failed (TTL expiry, or deleting a push-mode backup). Finalize marks a pull-mode backup Complete after the client finished pulling.
+
+        :return: The abort_reason of this V1beta1BackupOptions.
+        :rtype: str
+        """
+        return self._abort_reason
+
+    @abort_reason.setter
+    def abort_reason(self, abort_reason):
+        """
+        Sets the abort_reason of this V1beta1BackupOptions.
+        AbortReason is set when Cmd is Abort. Cancel marks the backup Failed (TTL expiry, or deleting a push-mode backup). Finalize marks a pull-mode backup Complete after the client finished pulling.
+
+        :param abort_reason: The abort_reason of this V1beta1BackupOptions.
+        :type: str
+        """
+
+        self._abort_reason = abort_reason
 
     @property
     def backup_name(self):
